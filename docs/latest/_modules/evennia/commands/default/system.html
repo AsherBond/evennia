@@ -71,13 +71,15 @@
   
     <li><a href="system.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -94,7 +96,6 @@
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-
 <span class="kn">import</span> <span class="nn">code</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -104,6 +105,7 @@
 
 <span class="kn">import</span> <span class="nn">django</span>
 <span class="kn">import</span> <span class="nn">evennia</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
 <span class="kn">import</span> <span class="nn">twisted</span>
 <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 <span class="kn">from</span> <span class="nn">evennia.accounts.models</span> <span class="kn">import</span> <span class="n">AccountDB</span>
@@ -136,6 +138,11 @@
     <span class="s2">&quot;CmdTasks&quot;</span><span class="p">,</span>
     <span class="s2">&quot;CmdTickers&quot;</span><span class="p">,</span>
 <span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">PrintRecursionError</span><span class="p">(</span><span class="ne">RecursionError</span><span class="p">):</span>
+    <span class="c1"># custom error for recursion in print</span>
+    <span class="k">pass</span>
 
 
 <div class="viewcode-block" id="CmdReload"><a class="viewcode-back" href="../../../../api/evennia.commands.default.system.html#evennia.commands.default.system.CmdReload">[docs]</a><span class="k">class</span> <span class="nc">CmdReload</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
@@ -189,7 +196,6 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;@reset&quot;</span>
-    <span class="n">aliases</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@reboot&quot;</span><span class="p">]</span>
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(reload) or perm(Developer)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;System&quot;</span>
 
@@ -202,7 +208,6 @@
 
 
 <div class="viewcode-block" id="CmdShutdown"><a class="viewcode-back" href="../../../../api/evennia.commands.default.system.html#evennia.commands.default.system.CmdShutdown">[docs]</a><span class="k">class</span> <span class="nc">CmdShutdown</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    stop the server completely</span>
 
@@ -295,7 +300,14 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">caller</span> <span class="o">=</span> <span class="n">caller</span>
 
             <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;py_output&quot;</span><span class="p">}))</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;py_output&quot;</span><span class="p">}))</span>
+                <span class="k">except</span> <span class="ne">RecursionError</span><span class="p">:</span>
+                    <span class="n">tb</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">extract_tb</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">])</span>
+                    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="s2">&quot;print(&quot;</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">line</span> <span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="n">tb</span><span class="p">):</span>
+                        <span class="c1"># We are in a print loop (likely because msg() contains a print),</span>
+                        <span class="c1"># exit the stdout reroute prematurely</span>
+                        <span class="k">raise</span> <span class="n">PrintRecursionError</span>
 
         <span class="n">fake_std</span> <span class="o">=</span> <span class="n">FakeStd</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">fake_std</span>
@@ -317,6 +329,12 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">ret</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">pycode_compiled</span><span class="p">,</span> <span class="p">{},</span> <span class="n">available_vars</span><span class="p">)</span>
 
+    <span class="k">except</span> <span class="n">PrintRecursionError</span><span class="p">:</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;&lt;&lt;&lt; Error: Recursive print() found (probably in custom msg()). &quot;</span>
+            <span class="s2">&quot;Since `py` reroutes `print` to `msg()`, this causes a loop. Remove `print()` &quot;</span>
+            <span class="s2">&quot;from msg-related code to resolve.&quot;</span>
+        <span class="p">)</span>
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
         <span class="n">errlist</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">errlist</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
@@ -367,7 +385,6 @@
 
 
 <span class="k">class</span> <span class="nc">EvenniaPythonConsole</span><span class="p">(</span><span class="n">code</span><span class="o">.</span><span class="n">InteractiveConsole</span><span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Evennia wrapper around a Python interactive console.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caller</span><span class="p">):</span>
@@ -938,16 +955,26 @@
             <span class="k">if</span> <span class="ow">not</span> <span class="n">_RESOURCE</span><span class="p">:</span>
                 <span class="kn">import</span> <span class="nn">resource</span> <span class="k">as</span> <span class="nn">_RESOURCE</span>
 
+            <span class="n">env</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">env</span><span class="p">[</span><span class="s2">&quot;LC_NUMERIC&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span>  <span class="c1"># use default locale instead of system locale</span>
             <span class="n">loadavg</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getloadavg</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-            <span class="n">rmem</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="nb">float</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&quot;ps -p </span><span class="si">%d</span><span class="s2"> -o </span><span class="si">%s</span><span class="s2"> | tail -1&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="s2">&quot;rss&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">())</span> <span class="o">/</span> <span class="mf">1000.0</span>
-            <span class="p">)</span>  <span class="c1"># resident memory</span>
-            <span class="n">vmem</span> <span class="o">=</span> <span class="p">(</span>
-                <span class="nb">float</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&quot;ps -p </span><span class="si">%d</span><span class="s2"> -o </span><span class="si">%s</span><span class="s2"> | tail -1&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="s2">&quot;vsz&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">())</span> <span class="o">/</span> <span class="mf">1000.0</span>
-            <span class="p">)</span>  <span class="c1"># virtual memory</span>
-            <span class="n">pmem</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
-                <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&quot;ps -p </span><span class="si">%d</span><span class="s2"> -o </span><span class="si">%s</span><span class="s2"> | tail -1&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="s2">&quot;%mem&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-            <span class="p">)</span>  <span class="c1"># % of resident memory to total</span>
+
+            <span class="c1"># Helper function to run the ps command with a modified environment</span>
+            <span class="k">def</span> <span class="nf">run_ps_command</span><span class="p">(</span><span class="n">command</span><span class="p">):</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+                    <span class="n">command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+                <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+            <span class="c1"># Resident memory</span>
+            <span class="n">rmem</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">run_ps_command</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ps -p </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> -o rss | tail -1&quot;</span><span class="p">))</span> <span class="o">/</span> <span class="mf">1000.0</span>
+
+            <span class="c1"># Virtual memory</span>
+            <span class="n">vmem</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">run_ps_command</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ps -p </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> -o vsz | tail -1&quot;</span><span class="p">))</span> <span class="o">/</span> <span class="mf">1000.0</span>
+
+            <span class="c1"># Percentage of resident memory to total</span>
+            <span class="n">pmem</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">run_ps_command</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ps -p </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> -o %mem | tail -1&quot;</span><span class="p">))</span>
+
             <span class="n">rusage</span> <span class="o">=</span> <span class="n">_RESOURCE</span><span class="o">.</span><span class="n">getrusage</span><span class="p">(</span><span class="n">_RESOURCE</span><span class="o">.</span><span class="n">RUSAGE_SELF</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="s2">&quot;mem&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
@@ -1300,7 +1327,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

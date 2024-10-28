@@ -71,13 +71,15 @@
   
     <li><a href="sessionhandler.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -102,12 +104,14 @@
 <span class="sd">     handle network communication but holds no game info.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">codecs</span> <span class="kn">import</span> <span class="n">decode</span> <span class="k">as</span> <span class="n">codecs_decode</span>
 
-<span class="kn">import</span> <span class="nn">evennia</span>
 <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 <span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">gettext</span> <span class="k">as</span> <span class="n">_</span>
+
+<span class="kn">import</span> <span class="nn">evennia</span>
 <span class="kn">from</span> <span class="nn">evennia.commands.cmdhandler</span> <span class="kn">import</span> <span class="n">CMD_LOGINSTART</span>
 <span class="kn">from</span> <span class="nn">evennia.server.portal</span> <span class="kn">import</span> <span class="n">amp</span>
 <span class="kn">from</span> <span class="nn">evennia.server.signals</span> <span class="kn">import</span> <span class="p">(</span>
@@ -117,7 +121,13 @@
     <span class="n">SIGNAL_ACCOUNT_POST_LOGOUT</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">evennia.utils.logger</span> <span class="kn">import</span> <span class="n">log_trace</span>
-<span class="kn">from</span> <span class="nn">evennia.utils.utils</span> <span class="kn">import</span> <span class="n">callables_from_module</span><span class="p">,</span> <span class="n">class_from_module</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">is_iter</span><span class="p">,</span> <span class="n">make_iter</span>
+<span class="kn">from</span> <span class="nn">evennia.utils.utils</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">callables_from_module</span><span class="p">,</span>
+    <span class="n">class_from_module</span><span class="p">,</span>
+    <span class="n">delay</span><span class="p">,</span>
+    <span class="n">is_iter</span><span class="p">,</span>
+    <span class="n">make_iter</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="n">_FUNCPARSER_PARSE_OUTGOING_MESSAGES_ENABLED</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">FUNCPARSER_PARSE_OUTGOING_MESSAGES_ENABLED</span>
 <span class="n">_BROADCAST_SERVER_RESTART_MESSAGES</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">BROADCAST_SERVER_RESTART_MESSAGES</span>
@@ -992,7 +1002,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

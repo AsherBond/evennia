@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1. Code structure and Utilities" href="Beginner-Tutorial-Utilities.html" />
+    <link rel="next" title="1. Code Structure and Utilities" href="Beginner-Tutorial-Utilities.html" />
     <link rel="prev" title="3. Planning our tutorial game" href="../Part2/Beginner-Tutorial-Planning-The-Tutorial-Game.html" /> 
   </head><body>
 
@@ -34,7 +34,7 @@
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Beginner-Tutorial-Utilities.html" title="1. Code structure and Utilities"
+          <a href="Beginner-Tutorial-Utilities.html" title="1. Code Structure and Utilities"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../Part2/Beginner-Tutorial-Planning-The-Tutorial-Game.html" title="3. Planning our tutorial game"
@@ -77,7 +77,7 @@
                         title="previous chapter"><span class="section-number">3. </span>Planning our tutorial game</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="Beginner-Tutorial-Utilities.html"
-                        title="next chapter"><span class="section-number">1. </span>Code structure and Utilities</a></p>
+                        title="next chapter"><span class="section-number">1. </span>Code Structure and Utilities</a></p>
   <div role="note" aria-label="source link">
     <!--h3>This Page</h3-->
     <ul class="this-page-menu">
@@ -101,13 +101,15 @@
   
     <li><a href="Beginner-Tutorial-Part3-Overview.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -158,10 +160,10 @@ of experience using Evennia and be really helpful for doing your own thing later
 <h2>Lessons<a class="headerlink" href="#lessons" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Utilities.html">1. Code structure and Utilities</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Utilities.html#folder-structure">1.1. Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Utilities.html">1. Code Structure and Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Utilities.html#folder-structure">1.1. Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Utilities.html#enums">1.2. Enums</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Utilities.html#utility-module">1.3. Utility module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Utilities.html#utility-module">1.3. Utility Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Utilities.html#testing">1.4. Testing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Utilities.html#summary">1.5. Summary</a></li>
 </ul>
@@ -269,9 +271,35 @@ of experience using Evennia and be really helpful for doing your own thing later
 <li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Combat-Turnbased.html#conclusions">11.9. Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-AI.html">12. NPC and monster AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html">13. Dynamically generated Dungeon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Quests.html">14. Game Quests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-AI.html">12. NPC and monster AI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-AI.html#our-requirements">12.1. Our requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-AI.html#the-aihandler">12.2. The AIHandler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-AI.html#adding-ai-to-an-entity">12.3. Adding AI to an entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-AI.html#unit-testing">12.4. Unit Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-AI.html#conclusions">12.5. Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html">13. Procedurally generated Dungeon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#design-concept">13.1. Design Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#start-implementation">13.2. Start Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#basic-dungeon-rooms">13.3. Basic Dungeon rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#dungeon-exits">13.4. Dungeon exits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#dungeon-branch-and-the-xy-grid">13.5. Dungeon Branch and the xy grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#back-to-the-dungeon-exit-class">13.6. Back to the dungeon exit class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#starting-room-exits">13.7. Starting room exits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#utility-scripts">13.8. Utility scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#starting-room">13.9. Starting room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#testing">13.10. Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Dungeon.html#conclusions">13.11. Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Quests.html">14. Game Quests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Quests.html#the-quest-handler">14.1. The Quest Handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Quests.html#the-quest-class">14.2. The Quest class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Quests.html#testing">14.3. Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Beginner-Tutorial-Quests.html#conclusions">14.4. Conclusions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Shops.html">15. In-game Shops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Beginner-Tutorial-Commands.html">16. In-game Commands</a></li>
 </ul>
@@ -295,7 +323,7 @@ of experience using Evennia and be really helpful for doing your own thing later
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Beginner-Tutorial-Utilities.html" title="1. Code structure and Utilities"
+          <a href="Beginner-Tutorial-Utilities.html" title="1. Code Structure and Utilities"
              >next</a> |</li>
         <li class="right" >
           <a href="../Part2/Beginner-Tutorial-Planning-The-Tutorial-Game.html" title="3. Planning our tutorial game"
@@ -310,7 +338,7 @@ of experience using Evennia and be really helpful for doing your own thing later
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

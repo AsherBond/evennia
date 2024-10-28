@@ -103,13 +103,15 @@
   
     <li><a href="evennia.utils.ansi.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -183,7 +185,7 @@ to ANSI command sequences</p>
 by prepending with an extra <strong>|</strong>.</p>
 <dl class="py attribute">
 <dt id="evennia.utils.ansi.ANSIParser.ansi_map">
-<code class="sig-name descname">ansi_map</code><em class="property"> = [('|n', '\x1b[0m'), ('|/', '\r\n'), ('|-', '\t'), ('|&gt;', '    '), ('|_', ' '), ('|*', '\x1b[7m'), ('|^', '\x1b[5m'), ('|u', '\x1b[4m'), ('|r', '\x1b[1m\x1b[31m'), ('|g', '\x1b[1m\x1b[32m'), ('|y', '\x1b[1m\x1b[33m'), ('|b', '\x1b[1m\x1b[34m'), ('|m', '\x1b[1m\x1b[35m'), ('|c', '\x1b[1m\x1b[36m'), ('|w', '\x1b[1m\x1b[37m'), ('|x', '\x1b[1m\x1b[30m'), ('|R', '\x1b[22m\x1b[31m'), ('|G', '\x1b[22m\x1b[32m'), ('|Y', '\x1b[22m\x1b[33m'), ('|B', '\x1b[22m\x1b[34m'), ('|M', '\x1b[22m\x1b[35m'), ('|C', '\x1b[22m\x1b[36m'), ('|W', '\x1b[22m\x1b[37m'), ('|X', '\x1b[22m\x1b[30m'), ('|h', '\x1b[1m'), ('|H', '\x1b[22m'), ('|!R', '\x1b[31m'), ('|!G', '\x1b[32m'), ('|!Y', '\x1b[33m'), ('|!B', '\x1b[34m'), ('|!M', '\x1b[35m'), ('|!C', '\x1b[36m'), ('|!W', '\x1b[37m'), ('|!X', '\x1b[30m'), ('|[R', '\x1b[41m'), ('|[G', '\x1b[42m'), ('|[Y', '\x1b[43m'), ('|[B', '\x1b[44m'), ('|[M', '\x1b[45m'), ('|[C', '\x1b[46m'), ('|[W', '\x1b[47m'), ('|[X', '\x1b[40m')]</em><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.ansi_map" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ansi_map</code><em class="property"> = [('|n', '\x1b[0m'), ('|/', '\r\n'), ('|-', '\t'), ('|&gt;', '    '), ('|_', ' '), ('|*', '\x1b[7m'), ('|^', '\x1b[5m'), ('|u', '\x1b[4m'), ('|U', '\x1b[24m'), ('|i', '\x1b[3m'), ('|I', '\x1b[23m'), ('|s', '\x1b[9m'), ('|S', '\x1b[29m'), ('|r', '\x1b[1m\x1b[31m'), ('|g', '\x1b[1m\x1b[32m'), ('|y', '\x1b[1m\x1b[33m'), ('|b', '\x1b[1m\x1b[34m'), ('|m', '\x1b[1m\x1b[35m'), ('|c', '\x1b[1m\x1b[36m'), ('|w', '\x1b[1m\x1b[37m'), ('|x', '\x1b[1m\x1b[30m'), ('|R', '\x1b[22m\x1b[31m'), ('|G', '\x1b[22m\x1b[32m'), ('|Y', '\x1b[22m\x1b[33m'), ('|B', '\x1b[22m\x1b[34m'), ('|M', '\x1b[22m\x1b[35m'), ('|C', '\x1b[22m\x1b[36m'), ('|W', '\x1b[22m\x1b[37m'), ('|X', '\x1b[22m\x1b[30m'), ('|h', '\x1b[1m'), ('|H', '\x1b[22m'), ('|!R', '\x1b[31m'), ('|!G', '\x1b[32m'), ('|!Y', '\x1b[33m'), ('|!B', '\x1b[34m'), ('|!M', '\x1b[35m'), ('|!C', '\x1b[36m'), ('|!W', '\x1b[37m'), ('|!X', '\x1b[30m'), ('|[R', '\x1b[41m'), ('|[G', '\x1b[42m'), ('|[Y', '\x1b[43m'), ('|[B', '\x1b[44m'), ('|[M', '\x1b[45m'), ('|[C', '\x1b[46m'), ('|[W', '\x1b[47m'), ('|[X', '\x1b[40m')]</em><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.ansi_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -248,7 +250,7 @@ by prepending with an extra <strong>|</strong>.</p>
 
 <dl class="py attribute">
 <dt id="evennia.utils.ansi.ANSIParser.ansi_sub">
-<code class="sig-name descname">ansi_sub</code><em class="property"> = re.compile('\\|n|\\|/|\\|\\-|\\|&gt;|\\|_|\\|\\*|\\|\\^|\\|u|\\|r|\\|g|\\|y|\\|b|\\|m|\\|c|\\|w|\\|x|\\|R|\\|G|\\|Y|\\|B|\\|M|\\|C|\\|W|\\|X|\\|h|\\|H|\\|!R|\\|!G|\\|!Y|\\|!B|\\|!M|\\|!C|\\|!W|\\|!X|\\|\\[R|\\|\\[G, re.DOTALL)</em><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.ansi_sub" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ansi_sub</code><em class="property"> = re.compile('\\|n|\\|/|\\|\\-|\\|&gt;|\\|_|\\|\\*|\\|\\^|\\|u|\\|U|\\|i|\\|I|\\|s|\\|S|\\|r|\\|g|\\|y|\\|b|\\|m|\\|c|\\|w|\\|x|\\|R|\\|G|\\|Y|\\|B|\\|M|\\|C|\\|W|\\|X|\\|h|\\|H|\\|!R|\\|!G|\\|!Y|\\|!B|\\|!M|\\|!C|\\, re.DOTALL)</em><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.ansi_sub" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -263,7 +265,7 @@ by prepending with an extra <strong>|</strong>.</p>
 
 <dl class="py attribute">
 <dt id="evennia.utils.ansi.ANSIParser.ansi_map_dict">
-<code class="sig-name descname">ansi_map_dict</code><em class="property"> = {'|!B': '\x1b[34m', '|!C': '\x1b[36m', '|!G': '\x1b[32m', '|!M': '\x1b[35m', '|!R': '\x1b[31m', '|!W': '\x1b[37m', '|!X': '\x1b[30m', '|!Y': '\x1b[33m', '|*': '\x1b[7m', '|-': '\t', '|/': '\r\n', '|&gt;': '    ', '|B': '\x1b[22m\x1b[34m', '|C': '\x1b[22m\x1b[36m', '|G': '\x1b[22m\x1b[32m', '|H': '\x1b[22m', '|M': '\x1b[22m\x1b[35m', '|R': '\x1b[22m\x1b[31m', '|W': '\x1b[22m\x1b[37m', '|X': '\x1b[22m\x1b[30m', '|Y': '\x1b[22m\x1b[33m', '|[B': '\x1b[44m', '|[C': '\x1b[46m', '|[G': '\x1b[42m', '|[M': '\x1b[45m', '|[R': '\x1b[41m', '|[W': '\x1b[47m', '|[X': '\x1b[40m', '|[Y': '\x1b[43m', '|^': '\x1b[5m', '|_': ' ', '|b': '\x1b[1m\x1b[34m', '|c': '\x1b[1m\x1b[36m', '|g': '\x1b[1m\x1b[32m', '|h': '\x1b[1m', '|m': '\x1b[1m\x1b[35m', '|n': '\x1b[0m', '|r': '\x1b[1m\x1b[31m', '|u': '\x1b[4m', '|w': '\x1b[1m\x1b[37m', '|x': '\x1b[1m\x1b[30m', '|y': '\x1b[1m\x1b[33m'}</em><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.ansi_map_dict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ansi_map_dict</code><em class="property"> = {'|!B': '\x1b[34m', '|!C': '\x1b[36m', '|!G': '\x1b[32m', '|!M': '\x1b[35m', '|!R': '\x1b[31m', '|!W': '\x1b[37m', '|!X': '\x1b[30m', '|!Y': '\x1b[33m', '|*': '\x1b[7m', '|-': '\t', '|/': '\r\n', '|&gt;': '    ', '|B': '\x1b[22m\x1b[34m', '|C': '\x1b[22m\x1b[36m', '|G': '\x1b[22m\x1b[32m', '|H': '\x1b[22m', '|I': '\x1b[23m', '|M': '\x1b[22m\x1b[35m', '|R': '\x1b[22m\x1b[31m', '|S': '\x1b[29m', '|U': '\x1b[24m', '|W': '\x1b[22m\x1b[37m', '|X': '\x1b[22m\x1b[30m', '|Y': '\x1b[22m\x1b[33m', '|[B': '\x1b[44m', '|[C': '\x1b[46m', '|[G': '\x1b[42m', '|[M': '\x1b[45m', '|[R': '\x1b[41m', '|[W': '\x1b[47m', '|[X': '\x1b[40m', '|[Y': '\x1b[43m', '|^': '\x1b[5m', '|_': ' ', '|b': '\x1b[1m\x1b[34m', '|c': '\x1b[1m\x1b[36m', '|g': '\x1b[1m\x1b[32m', '|h': '\x1b[1m', '|i': '\x1b[3m', '|m': '\x1b[1m\x1b[35m', '|n': '\x1b[0m', '|r': '\x1b[1m\x1b[31m', '|s': '\x1b[9m', '|u': '\x1b[4m', '|w': '\x1b[1m\x1b[37m', '|x': '\x1b[1m\x1b[30m', '|y': '\x1b[1m\x1b[33m'}</em><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.ansi_map_dict" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -378,7 +380,7 @@ to standard ANSI should be done or not.</p>
 
 <dl class="py method">
 <dt id="evennia.utils.ansi.ANSIParser.parse_ansi">
-<code class="sig-name descname">parse_ansi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">string</span></em>, <em class="sig-param"><span class="n">strip_ansi</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">xterm256</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">mxp</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/ansi.html#ANSIParser.parse_ansi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.parse_ansi" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parse_ansi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">string</span></em>, <em class="sig-param"><span class="n">strip_ansi</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">xterm256</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">mxp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">truecolor</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/ansi.html#ANSIParser.parse_ansi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.ansi.ANSIParser.parse_ansi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parses a string, subbing color codes according to the stored
 mapping.</p>
 <dl class="field-list simple">
@@ -401,7 +403,7 @@ these values should be converted to 16-color ANSI.</p></li>
 
 <dl class="py function">
 <dt id="evennia.utils.ansi.parse_ansi">
-<code class="sig-prename descclassname">evennia.utils.ansi.</code><code class="sig-name descname">parse_ansi</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">strip_ansi=False</em>, <em class="sig-param">parser=&lt;evennia.utils.ansi.ANSIParser object&gt;</em>, <em class="sig-param">xterm256=False</em>, <em class="sig-param">mxp=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/ansi.html#parse_ansi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.ansi.parse_ansi" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">evennia.utils.ansi.</code><code class="sig-name descname">parse_ansi</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">strip_ansi=False</em>, <em class="sig-param">parser=&lt;evennia.utils.ansi.ANSIParser object&gt;</em>, <em class="sig-param">xterm256=False</em>, <em class="sig-param">mxp=False</em>, <em class="sig-param">truecolor=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/ansi.html#parse_ansi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.ansi.parse_ansi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parses a string, subbing color codes as needed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -411,6 +413,7 @@ these values should be converted to 16-color ANSI.</p></li>
 <li><p><strong>parser</strong> (<em>ansi.AnsiParser</em><em>, </em><em>optional</em>) – A parser instance to use.</p></li>
 <li><p><strong>xterm256</strong> (<em>bool</em><em>, </em><em>optional</em>) – Support xterm256 or not.</p></li>
 <li><p><strong>mxp</strong> (<em>bool</em><em>, </em><em>optional</em>) – Support MXP markup or not.</p></li>
+<li><p><strong>truecolor</strong> (<em>bool</em><em>, </em><em>optional</em>) – Support for truecolor or not.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1038,7 +1041,7 @@ with.</p></li>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

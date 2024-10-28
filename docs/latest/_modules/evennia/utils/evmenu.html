@@ -71,13 +71,15 @@
   
     <li><a href="evmenu.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -376,13 +378,13 @@
 <span class="kn">from</span> <span class="nn">evennia.utils.utils</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">crop</span><span class="p">,</span>
     <span class="n">dedent</span><span class="p">,</span>
+    <span class="n">inherits_from</span><span class="p">,</span>
     <span class="n">is_iter</span><span class="p">,</span>
     <span class="n">m_len</span><span class="p">,</span>
     <span class="n">make_iter</span><span class="p">,</span>
     <span class="n">mod_import</span><span class="p">,</span>
     <span class="n">pad</span><span class="p">,</span>
     <span class="n">to_str</span><span class="p">,</span>
-    <span class="n">inherits_from</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="c1"># read from protocol NAWS later?</span>
@@ -610,13 +612,15 @@
 <span class="sd">            startnode (str, optional): The starting node name in the menufile.</span>
 <span class="sd">            cmdset_mergetype (str, optional): &#39;Replace&#39; (default) means the menu</span>
 <span class="sd">                commands will be exclusive - no other normal commands will</span>
-<span class="sd">                be usable while the user is in the menu. &#39;Union&#39; means the</span>
-<span class="sd">                menu commands will be integrated with the existing commands</span>
-<span class="sd">                (it will merge with `merge_priority`), if so, make sure that</span>
-<span class="sd">                the menu&#39;s command names don&#39;t collide with existing commands</span>
-<span class="sd">                in an unexpected way. Also the CMD_NOMATCH and CMD_NOINPUT will</span>
-<span class="sd">                be overloaded by the menu cmdset. Other cmdser mergetypes</span>
-<span class="sd">                has little purpose for the menu.</span>
+<span class="sd">                be usable while the user is in the menu. &#39;Union&#39; does merge the menu</span>
+<span class="sd">                command, but note that the only command used in EvMenu has key/alias</span>
+<span class="sd">                of NOINPUT/NOMATCH. So if you merge with &#39;Union&#39; and a high `cmdset_prio`</span>
+<span class="sd">                (below), you won&#39;t replace individual normal commands as you may</span>
+<span class="sd">                expect. Instead commands will work normally and you&#39;ll only always fall</span>
+<span class="sd">                back to menu commands when no other command is found. There is no way</span>
+<span class="sd">                to partially replace normal commands with EvMenu actions - to do this,</span>
+<span class="sd">                remove the normal command from the caller&#39;s cmdset - if not found</span>
+<span class="sd">                the menu&#39;s version will kick in instead.</span>
 <span class="sd">            cmdset_priority (int, optional): The merge priority for the</span>
 <span class="sd">                menu command set. The default (1) is usually enough for most</span>
 <span class="sd">                types of menus.</span>
@@ -1299,10 +1303,12 @@
 
         <span class="c1"># check if the caller is using a screenreader</span>
         <span class="n">screenreader_mode</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">if</span> <span class="n">sessions</span> <span class="o">:=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">,</span> <span class="s1">&#39;sessions&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
-            <span class="n">screenreader_mode</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">protocol_flags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;SCREENREADER&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">sess</span> <span class="ow">in</span> <span class="n">sessions</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">sessions</span> <span class="o">:=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">,</span> <span class="s2">&quot;sessions&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="n">screenreader_mode</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span>
+                <span class="n">sess</span><span class="o">.</span><span class="n">protocol_flags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;SCREENREADER&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">sess</span> <span class="ow">in</span> <span class="n">sessions</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+            <span class="p">)</span>
         <span class="c1"># the caller doesn&#39;t have a session; check it directly</span>
-        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">,</span> <span class="s1">&#39;protocol_flags&#39;</span><span class="p">):</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">,</span> <span class="s2">&quot;protocol_flags&quot;</span><span class="p">):</span>
             <span class="n">screenreader_mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">protocol_flags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;SCREENREADER&quot;</span><span class="p">)</span>
 
         <span class="n">ncols</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">screenreader_mode</span> <span class="k">else</span> <span class="n">_MAX_TEXT_WIDTH</span> <span class="o">//</span> <span class="n">table_width_max</span>
@@ -1500,21 +1506,21 @@
                     <span class="p">{</span>
                         <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;|Wcurrent|n&quot;</span><span class="p">),</span> <span class="s2">&quot;c&quot;</span><span class="p">),</span>
                         <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;|W(</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">)|n&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">npages</span><span class="p">),</span>
-                        <span class="s2">&quot;goto&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">caller</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;optionpage_index&quot;</span><span class="p">:</span> <span class="n">page_index</span><span class="p">}),</span>
+                        <span class="s2">&quot;goto&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">caller</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">kwargs</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;optionpage_index&quot;</span><span class="p">:</span> <span class="n">page_index</span><span class="p">}),</span>
                     <span class="p">}</span>
                 <span class="p">)</span>
                 <span class="k">if</span> <span class="n">page_index</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
                         <span class="p">{</span>
                             <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;|wp|Wrevious page|n&quot;</span><span class="p">),</span> <span class="s2">&quot;p&quot;</span><span class="p">),</span>
-                            <span class="s2">&quot;goto&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">caller</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;optionpage_index&quot;</span><span class="p">:</span> <span class="n">page_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">}),</span>
+                            <span class="s2">&quot;goto&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">caller</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">kwargs</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;optionpage_index&quot;</span><span class="p">:</span> <span class="n">page_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">}),</span>
                         <span class="p">}</span>
                     <span class="p">)</span>
                 <span class="k">if</span> <span class="n">page_index</span> <span class="o">&lt;</span> <span class="n">npages</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
                     <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
                         <span class="p">{</span>
                             <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;|wn|Wext page|n&quot;</span><span class="p">),</span> <span class="s2">&quot;n&quot;</span><span class="p">),</span>
-                            <span class="s2">&quot;goto&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">caller</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;optionpage_index&quot;</span><span class="p">:</span> <span class="n">page_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}),</span>
+                            <span class="s2">&quot;goto&quot;</span><span class="p">:</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">caller</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">kwargs</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;optionpage_index&quot;</span><span class="p">:</span> <span class="n">page_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}),</span>
                         <span class="p">}</span>
                     <span class="p">)</span>
 
@@ -2228,7 +2234,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

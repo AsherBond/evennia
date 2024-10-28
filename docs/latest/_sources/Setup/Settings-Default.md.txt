@@ -31,6 +31,7 @@ value - which may change as Evennia is developed. This way you can
 always be sure of what you have changed and what is default behaviour.
 
 """
+
 import os
 import sys
 
@@ -257,7 +258,7 @@ MXP_OUTGOING_ONLY = True
 # time depends very much on your game so some experimentation may
 # be necessary (use @server to see how many objects are in the idmapper
 # cache at any time). Setting this to None disables the cache cap.
-IDMAPPER_CACHE_MAXSIZE = 200  # (MB)
+IDMAPPER_CACHE_MAXSIZE = 400  # (MB)
 # This determines how many connections per second the Portal should
 # accept, as a DoS countermeasure. If the rate exceeds this number, incoming
 # connections will be queued to this rate, so none will be lost.
@@ -318,6 +319,16 @@ DATABASES = {
         "PORT": "",
     }
 }
+# PRAGMA (directives) for the default Sqlite3 database operations. This can be used to tweak
+# performance for your setup. Don't change this unless you know what you are doing. Also
+# be careful to change for an already populated database.
+SQLITE3_PRAGMAS = (
+    "PRAGMA cache_size=10000",
+    "PRAGMA synchronous=OFF",
+    "PRAGMA count_changes=OFF",
+    "PRAGMA temp_store=2",
+)
+
 # How long the django-database connection should be kept open, in seconds.
 # If you get errors about the database having gone away after long idle
 # periods, shorten this value (e.g. MySQL defaults to a timeout of 8 hrs)
@@ -1115,7 +1126,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
-    {"NAME": "evennia.server.validators.EvenniaPasswordValidator"},
 ]
 
 # Username validation plugins

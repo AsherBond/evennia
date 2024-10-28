@@ -131,13 +131,15 @@
   
     <li><a href="Beginner-Tutorial-Combat-Turnbased.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -225,7 +227,7 @@ You<span class="w"> </span>use<span class="w"> </span>Potion<span class="w"> </s
 <section id="general-principle">
 <h2><span class="section-number">11.1. </span>General Principle<a class="headerlink" href="#general-principle" title="Permalink to this headline">¶</a></h2>
 <aside class="sidebar">
-<p>An example of an implemented Turnbased combat system can be found in <a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.combat_turnbased.html#evennia-contrib-tutorials-evadventure-combat-turnbased"><span class="std std-ref">evennia/contrib/tutorials/evadventure/combat_turnbased.py</span></a>.</p>
+<p>An example of an implemented Turnbased combat system can be found under <code class="docutils literal notranslate"><span class="pre">evennia/contrib/tutorials/evadventure/</span></code>, in <a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.combat_turnbased.html#evennia-contrib-tutorials-evadventure-combat-turnbased"><span class="std std-ref">combat_turnbased.py</span></a>.</p>
 </aside>
 <p>Here is the general principle of the Turnbased combat handler:</p>
 <ul class="simple">
@@ -1485,7 +1487,7 @@ This is new compared to the base handler.</p>
 <section id="testing">
 <h2><span class="section-number">11.7. </span>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
 <aside class="sidebar">
-<p>See <a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.tests.test_combat.html#evennia-contrib-tutorials-evadventure-tests-test-combat"><span class="std std-ref">evennia/contrib/tutorials/evadventure/tests/test_combat.py</span></a></p>
+<p>See an example tests in <code class="docutils literal notranslate"><span class="pre">evennia/contrib/tutorials</span></code>, in  <a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.tests.test_combat.html#evennia-contrib-tutorials-evadventure-tests-test-combat"><span class="std std-ref">evadventure/tests/test_combat.py</span></a></p>
 </aside>
 <p>Unit testing of the Turnbased combat handler is straight forward, you follow the process of earlier lessons to test that each method on the handler returns what you expect with mocked inputs.</p>
 <p>Unit-testing the menu is more complex. You will find examples of doing this in <a class="reference external" href="https://github.com/evennia/evennia/blob/main/evennia/utils/testss/test_evmenu.py">evennia.utils.tests.test_evmenu</a>.</p>
@@ -1501,7 +1503,7 @@ This is new compared to the base handler.</p>
 <li><p>An item (like a potion) we can <code class="docutils literal notranslate"><span class="pre">use</span></code>.</p></li>
 </ul>
 <aside class="sidebar">
-<p>You can find an example batch-code script in <a class="reference external" href="https://github.com/evennia/evennia/blob/main/evennia/contrib/tutorials/evadventure/batchscripts/turnbased_combat_demo.py">evennia/contrib/tutorials/evadventure/batchscripts/turnbased_combat_demo.py</a></p>
+<p>You can find an example combat batch-code script in <code class="docutils literal notranslate"><span class="pre">evennia/contrib/tutorials/evadventure/</span></code>, in  <a class="reference external" href="https://github.com/evennia/evennia/blob/main/evennia/contrib/tutorials/evadventure/batchscripts/turnbased_combat_demo.py">batchscripts/turnbased_combat_demo.py</a></p>
 </aside>
 <p>In <a class="reference internal" href="Beginner-Tutorial-Combat-Twitch.html"><span class="doc std std-doc">The Twitch combat lesson</span></a> we used a <a class="reference internal" href="../../../Components/Batch-Command-Processor.html"><span class="doc std std-doc">batch-command script</span></a> to create the testing environment in game. This runs in-game Evennia commands in sequence. For demonstration  purposes we’ll instead use a  <a class="reference internal" href="../../../Components/Batch-Code-Processor.html"><span class="doc std std-doc">batch-code script</span></a>, which runs raw Python code in a repeatable way. A batch-code script is much more flexible than a batch-command script.</p>
 <blockquote>
@@ -1621,7 +1623,7 @@ This is new compared to the base handler.</p>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

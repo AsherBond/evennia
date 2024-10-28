@@ -98,13 +98,15 @@
   
     <li><a href="index.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -116,7 +118,7 @@
             
   <section class="tex2jax_ignore mathjax_ignore" id="evennia-documentation">
 <h1>Evennia Documentation<a class="headerlink" href="#evennia-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This is the manual of <a class="reference external" href="https://www.evennia.com">Evennia</a>, the open source Python <code class="docutils literal notranslate"><span class="pre">MU*</span></code> creation system. Use the Search bar on the left to find or discover interesting articles.</p>
+<p>This is the manual of <a class="reference external" href="https://www.evennia.com">Evennia</a>, the open source Python <code class="docutils literal notranslate"><span class="pre">MU*</span></code> creation system. Use the Search bar on the left to find or discover interesting articles. This manual was last updated outubro 26, 2024, see the <a class="reference internal" href="Coding/Changelog.html"><span class="doc std std-doc">Evennia Changelog</span></a>. Latest released Evennia version is 4.4.1.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="Evennia-Introduction.html"><span class="doc std std-doc">Introduction</span></a> - what is this Evennia thing?</p></li>
 <li><p><a class="reference internal" href="Evennia-In-Pictures.html"><span class="doc std std-doc">Evennia in Pictures</span></a> - a visual overview of Evennia</p></li>
@@ -402,6 +404,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Concepts/Concepts-Overview.html#extending-the-server">Extending the Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Concepts/Server-Lifecycle.html">Evennia Server Lifecycle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Concepts/Protocols.html">Protocols</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Concepts/Models.html">New Models</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Concepts/Zones.html">Zones</a></li>
@@ -449,8 +452,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Coding/Setting-up-PyCharm.html">Setting up PyCharm with Evennia</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Coding/Setting-up-PyCharm.html#from-an-existing-project">From an existing project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Coding/Setting-up-PyCharm.html#from-a-new-project">From a new project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Coding/Setting-up-PyCharm.html#debug-evennia-from-inside-pycharm">Debug Evennia from inside PyCharm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Coding/Setting-up-PyCharm.html#run-evennia-from-inside-pycharm">Run Evennia from inside PyCharm</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Coding/Coding-Overview.html#evennia-changelog">Evennia Changelog</a><ul>
@@ -472,6 +476,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Email-Login.html">Email-based login system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Godotwebsocket.html">Godot Websocket</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Ingame-Python.html">Evennia in-game Python system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Ingame-Reports.html">In-Game Reporting System</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Menu-Login.html">Menu-based login system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Mux-Comms-Cmds.html">Legacy Comms-commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Unixcommand.html">Unix-like Command style</a></li>
@@ -483,6 +488,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#email-login"><code class="docutils literal notranslate"><span class="pre">email_login</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#godotwebsocket"><code class="docutils literal notranslate"><span class="pre">godotwebsocket</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#ingame-python"><code class="docutils literal notranslate"><span class="pre">ingame_python</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#ingame-reports"><code class="docutils literal notranslate"><span class="pre">ingame_reports</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#menu-login"><code class="docutils literal notranslate"><span class="pre">menu_login</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#mux-comms-cmds"><code class="docutils literal notranslate"><span class="pre">mux_comms_cmds</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#unixcommand"><code class="docutils literal notranslate"><span class="pre">unixcommand</span></code></a></li>
@@ -494,6 +500,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Contribs/Contribs-Overview.html#game-systems">game_systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Achievements.html">Achievements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Barter.html">Barter system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Clothing.html">Clothing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Containers.html">Containers</a></li>
@@ -503,7 +510,9 @@
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Mail.html">In-Game Mail system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Multidescer.html">Evennia Multidescer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Puzzles.html">Puzzles System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Storage.html">Item Storage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Turnbattle.html">Turn based battle system framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#achievements"><code class="docutils literal notranslate"><span class="pre">achievements</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#barter"><code class="docutils literal notranslate"><span class="pre">barter</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#clothing"><code class="docutils literal notranslate"><span class="pre">clothing</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#containers"><code class="docutils literal notranslate"><span class="pre">containers</span></code></a></li>
@@ -516,6 +525,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#mail"><code class="docutils literal notranslate"><span class="pre">mail</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#multidescer"><code class="docutils literal notranslate"><span class="pre">multidescer</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#puzzles"><code class="docutils literal notranslate"><span class="pre">puzzles</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#storage"><code class="docutils literal notranslate"><span class="pre">storage</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#turnbattle"><code class="docutils literal notranslate"><span class="pre">turnbattle</span></code></a></li>
 </ul>
 </li>
@@ -544,6 +554,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Llm.html">Large Language Model (“Chat-bot AI”) integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-RPSystem.html">Roleplaying base system for Evennia</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Traits.html">Traits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Contribs/Contrib-Traits.html#as-traitproperty">as TraitProperty</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#buffs"><code class="docutils literal notranslate"><span class="pre">buffs</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#character-creator"><code class="docutils literal notranslate"><span class="pre">character_creator</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contribs/Contribs-Overview.html#dice"><code class="docutils literal notranslate"><span class="pre">dice</span></code></a></li>
@@ -599,6 +610,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Contributing-Docs.html">Contributing to Evennia Docs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Contributing-Docs.html#source-file-structure">Source file structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Contributing-Docs.html#automatically-generated-doc-pages">Automatically generated doc pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Contributing-Docs.html#editing-syntax">Editing syntax</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Contributing-Docs.html#italic-bold">Italic/Bold</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contributing-Docs.html#headings">Headings</a></li>
@@ -679,7 +691,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

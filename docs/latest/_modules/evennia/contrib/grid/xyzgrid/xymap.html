@@ -71,13 +71,15 @@
   
     <li><a href="xymap.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -182,6 +184,7 @@
 
 <span class="sd">----</span>
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">pickle</span>
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">mkdir</span>
@@ -189,7 +192,7 @@
 <span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span> <span class="k">as</span> <span class="n">pathjoin</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">zeros</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">zeros</span>
     <span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">csr_matrix</span>
     <span class="kn">from</span> <span class="nn">scipy.sparse.csgraph</span> <span class="kn">import</span> <span class="n">dijkstra</span>
 <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
@@ -263,6 +266,7 @@
 <span class="sd">    but recommended for readability!</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">mapcorner_symbol</span> <span class="o">=</span> <span class="s2">&quot;+&quot;</span>
     <span class="n">max_pathfinding_length</span> <span class="o">=</span> <span class="mi">500</span>
     <span class="n">empty_symbol</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
@@ -566,10 +570,10 @@
                     <span class="n">max_X</span><span class="p">,</span> <span class="n">max_Y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_X</span><span class="p">,</span> <span class="n">iX</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_Y</span><span class="p">,</span> <span class="n">iY</span><span class="p">)</span>
                     <span class="n">node_index</span> <span class="o">+=</span> <span class="mi">1</span>
 
-                    <span class="n">xygrid</span><span class="p">[</span><span class="n">ix</span><span class="p">][</span><span class="n">iy</span><span class="p">]</span> <span class="o">=</span> <span class="n">XYgrid</span><span class="p">[</span><span class="n">iX</span><span class="p">][</span><span class="n">iY</span><span class="p">]</span> <span class="o">=</span> <span class="n">node_index_map</span><span class="p">[</span>
-                        <span class="n">node_index</span>
-                    <span class="p">]</span> <span class="o">=</span> <span class="n">mapnode_or_link_class</span><span class="p">(</span>
-                        <span class="n">x</span><span class="o">=</span><span class="n">ix</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">iy</span><span class="p">,</span> <span class="n">Z</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">,</span> <span class="n">node_index</span><span class="o">=</span><span class="n">node_index</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="n">char</span><span class="p">,</span> <span class="n">xymap</span><span class="o">=</span><span class="bp">self</span>
+                    <span class="n">xygrid</span><span class="p">[</span><span class="n">ix</span><span class="p">][</span><span class="n">iy</span><span class="p">]</span> <span class="o">=</span> <span class="n">XYgrid</span><span class="p">[</span><span class="n">iX</span><span class="p">][</span><span class="n">iY</span><span class="p">]</span> <span class="o">=</span> <span class="n">node_index_map</span><span class="p">[</span><span class="n">node_index</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="n">mapnode_or_link_class</span><span class="p">(</span>
+                            <span class="n">x</span><span class="o">=</span><span class="n">ix</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">iy</span><span class="p">,</span> <span class="n">Z</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">,</span> <span class="n">node_index</span><span class="o">=</span><span class="n">node_index</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="n">char</span><span class="p">,</span> <span class="n">xymap</span><span class="o">=</span><span class="bp">self</span>
+                        <span class="p">)</span>
                     <span class="p">)</span>
 
                 <span class="k">else</span><span class="p">:</span>
@@ -1104,7 +1108,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

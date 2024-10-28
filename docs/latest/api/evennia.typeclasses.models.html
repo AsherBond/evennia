@@ -95,13 +95,15 @@
   
     <li><a href="evennia.typeclasses.models.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -324,6 +326,12 @@ by fetching them once.</p>
 <dt id="evennia.typeclasses.models.TypedObject.key">
 <em class="property">property </em><code class="sig-name descname">key</code><a class="headerlink" href="#evennia.typeclasses.models.TypedObject.key" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt id="evennia.typeclasses.models.TypedObject.date_created">
+<em class="property">property </em><code class="sig-name descname">date_created</code><a class="headerlink" href="#evennia.typeclasses.models.TypedObject.date_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the localized date created, based on settings.TIME_ZONE.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt id="evennia.typeclasses.models.TypedObject.dbid">
@@ -634,12 +642,6 @@ developer’s responsibility.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.typeclasses.models.TypedObject.date_created">
-<em class="property">property </em><code class="sig-name descname">date_created</code><a class="headerlink" href="#evennia.typeclasses.models.TypedObject.date_created" title="Permalink to this definition">¶</a></dt>
-<dd><p>A wrapper for getting database field <strong>db_date_created</strong>.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt id="evennia.typeclasses.models.TypedObject.get_next_by_db_date_created">
 <code class="sig-name descname">get_next_by_db_date_created</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">field=&lt;django.db.models.fields.DateTimeField: db_date_created&gt;</em>, <em class="sig-param">is_next=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#evennia.typeclasses.models.TypedObject.get_next_by_db_date_created" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -848,7 +850,7 @@ developer’s responsibility.</p>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

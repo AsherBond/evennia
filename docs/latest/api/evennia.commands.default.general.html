@@ -96,13 +96,15 @@
   
     <li><a href="evennia.commands.default.general.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -335,7 +337,7 @@ inv</p>
 
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdInventory.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['i', 'inv']</em><a class="headerlink" href="#evennia.commands.default.general.CmdInventory.aliases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">aliases</code><em class="property"> = ['inv', 'i']</em><a class="headerlink" href="#evennia.commands.default.general.CmdInventory.aliases" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -366,7 +368,7 @@ inv</p>
 
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdInventory.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'i inv', 'category': 'general', 'key': 'inventory', 'no_prefix': ' i inv', 'tags': '', 'text': '\n    view inventory\n\n    Usage:\n      inventory\n      inv\n\n    Shows your inventory.\n    '}</em><a class="headerlink" href="#evennia.commands.default.general.CmdInventory.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'inv i', 'category': 'general', 'key': 'inventory', 'no_prefix': ' inv i', 'tags': '', 'text': '\n    view inventory\n\n    Usage:\n      inventory\n      inv\n\n    Shows your inventory.\n    '}</em><a class="headerlink" href="#evennia.commands.default.general.CmdInventory.search_index_entry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -429,14 +431,13 @@ look at you.</p>
 <dl class="py class">
 <dt id="evennia.commands.default.general.CmdGet">
 <em class="property">class </em><code class="sig-prename descclassname">evennia.commands.default.general.</code><code class="sig-name descname">CmdGet</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/commands/default/general.html#CmdGet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.commands.default.general.CmdGet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.muxcommand.MuxCommand</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.general.NumberedTargetCommand</span></code></p>
 <p>pick up something</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>get &lt;obj&gt;</p>
 </dd>
 </dl>
-<p>Picks up an object from your location and puts it in
-your inventory.</p>
+<p>Picks up an object from your location and puts it in your inventory.</p>
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdGet.key">
 <code class="sig-name descname">key</code><em class="property"> = 'get'</em><a class="headerlink" href="#evennia.commands.default.general.CmdGet.key" title="Permalink to this definition">¶</a></dt>
@@ -449,7 +450,7 @@ your inventory.</p>
 
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdGet.locks">
-<code class="sig-name descname">locks</code><em class="property"> = 'cmd:all();view:perm(Developer);read:perm(Developer)'</em><a class="headerlink" href="#evennia.commands.default.general.CmdGet.locks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">locks</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.commands.default.general.CmdGet.locks" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -470,12 +471,12 @@ your inventory.</p>
 
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdGet.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all();view:perm(Developer);read:perm(Developer)'</em><a class="headerlink" href="#evennia.commands.default.general.CmdGet.lock_storage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.commands.default.general.CmdGet.lock_storage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdGet.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'grab', 'category': 'general', 'key': 'get', 'no_prefix': ' grab', 'tags': '', 'text': '\n    pick up something\n\n    Usage:\n      get &lt;obj&gt;\n\n    Picks up an object from your location and puts it in\n    your inventory.\n    '}</em><a class="headerlink" href="#evennia.commands.default.general.CmdGet.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'grab', 'category': 'general', 'key': 'get', 'no_prefix': ' grab', 'tags': '', 'text': '\n    pick up something\n\n    Usage:\n      get &lt;obj&gt;\n\n    Picks up an object from your location and puts it in your inventory.\n    '}</em><a class="headerlink" href="#evennia.commands.default.general.CmdGet.search_index_entry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -483,7 +484,7 @@ your inventory.</p>
 <dl class="py class">
 <dt id="evennia.commands.default.general.CmdDrop">
 <em class="property">class </em><code class="sig-prename descclassname">evennia.commands.default.general.</code><code class="sig-name descname">CmdDrop</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/commands/default/general.html#CmdDrop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.commands.default.general.CmdDrop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.muxcommand.MuxCommand</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.general.NumberedTargetCommand</span></code></p>
 <p>drop something</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>drop &lt;obj&gt;</p>
@@ -537,7 +538,7 @@ location you are currently in.</p>
 <dl class="py class">
 <dt id="evennia.commands.default.general.CmdGive">
 <em class="property">class </em><code class="sig-prename descclassname">evennia.commands.default.general.</code><code class="sig-name descname">CmdGive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/commands/default/general.html#CmdGive"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.commands.default.general.CmdGive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.muxcommand.MuxCommand</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.general.NumberedTargetCommand</span></code></p>
 <p>give away something to someone</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>give &lt;inventory obj&gt; &lt;to||=&gt; &lt;target&gt;</p>
@@ -610,7 +611,7 @@ placing it in their inventory.</p>
 
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdSay.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['&quot;', &quot;'&quot;]</em><a class="headerlink" href="#evennia.commands.default.general.CmdSay.aliases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">aliases</code><em class="property"> = [&quot;'&quot;, '&quot;']</em><a class="headerlink" href="#evennia.commands.default.general.CmdSay.aliases" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -641,7 +642,7 @@ placing it in their inventory.</p>
 
 <dl class="py attribute">
 <dt id="evennia.commands.default.general.CmdSay.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '&quot; \'', 'category': 'general', 'key': 'say', 'no_prefix': ' &quot; \'', 'tags': '', 'text': '\n    speak as your character\n\n    Usage:\n      say &lt;message&gt;\n\n    Talk to those in your current location.\n    '}</em><a class="headerlink" href="#evennia.commands.default.general.CmdSay.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '\' &quot;', 'category': 'general', 'key': 'say', 'no_prefix': ' \' &quot;', 'tags': '', 'text': '\n    speak as your character\n\n    Usage:\n      say &lt;message&gt;\n\n    Talk to those in your current location.\n    '}</em><a class="headerlink" href="#evennia.commands.default.general.CmdSay.search_index_entry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -857,7 +858,7 @@ which permission groups you are a member of.</p>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

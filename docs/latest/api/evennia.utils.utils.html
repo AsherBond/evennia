@@ -95,13 +95,15 @@
   
     <li><a href="evennia.utils.utils.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -423,6 +425,24 @@ values with double quotes.</p></li>
 <span class="go">&#39;&quot;1&quot;, &quot;2&quot;, and &quot;3&quot;&#39;</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="evennia.utils.utils.compress_whitespace">
+<code class="sig-prename descclassname">evennia.utils.utils.</code><code class="sig-name descname">compress_whitespace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">max_linebreaks</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">max_spacing</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/utils.html#compress_whitespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.utils.compress_whitespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes extra sequential whitespace in a block of text. This will also remove any trailing
+whitespace at the end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – A string which may contain excess internal whitespace.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>max_linebreaks</strong> (<em>int</em>) – How many linebreak characters are allowed to occur in a row.</p></li>
+<li><p><strong>max_spacing</strong> (<em>int</em>) – How many spaces are allowed to occur in a row.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -1249,6 +1269,31 @@ array) instead of strings.</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt id="evennia.utils.utils.group_objects_by_key_and_desc">
+<code class="sig-prename descclassname">evennia.utils.utils.</code><code class="sig-name descname">group_objects_by_key_and_desc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">objects</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/utils.html#group_objects_by_key_and_desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.utils.group_objects_by_key_and_desc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Groups a list of objects by their key and description. This is used to group
+visibly identical objects together, for example for inventory listings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objects</strong> (<em>list</em>) – A list of objects to group. These must be DefaultObject.</p></li>
+<li><p><strong>caller</strong> (<em>Object</em><em>, </em><em>optional</em>) – The object looking at the objects, used to get the
+description and key of each object.</p></li>
+<li><p><strong>**kwargs</strong> – Passed into each object’s <strong>get_display_name/desc</strong> methods.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><em>iterable</em> –</p>
+<dl class="simple">
+<dt>An iterable of tuples, where each tuple is on the form</dt><dd><p><strong>(numbered_name, description, [objects])</strong>.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="evennia.utils.utils.format_table">
 <code class="sig-prename descclassname">evennia.utils.utils.</code><code class="sig-name descname">format_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table</span></em>, <em class="sig-param"><span class="n">extra_space</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/utils.html#format_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.utils.format_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Format a 2D array of strings into a multi-column table.</p>
@@ -1791,7 +1836,7 @@ up until 12, after which it will be ‘13’, ‘14’ etc.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>number</strong> (<em>int</em>) – The number to convert. Floats will be converted to ints.</p></li>
-<li><p><strong>adjective</strong> (<em>int</em>) – If set, map 1-&gt;1st, 2-&gt;2nd etc. If unset, map 1-&gt;one, 2-&gt;two etc.
+<li><p><strong>adjective</strong> (<em>bool</em>) – If True, map 1-&gt;1st, 2-&gt;2nd etc. If unset or False, map 1-&gt;one, 2-&gt;two etc.
 up to twelve.</p></li>
 </ul>
 </dd>
@@ -1853,6 +1898,20 @@ then settings.UPSTREAM_IPS will be used.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt id="evennia.utils.utils.value_is_integer">
+<code class="sig-prename descclassname">evennia.utils.utils.</code><code class="sig-name descname">value_is_integer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/utils.html#value_is_integer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.utils.value_is_integer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if a value can be type-cast to an integer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>any</em>) – The value to check.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>result (bool)</em> – Whether it can be type-cast to an integer or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
@@ -1888,7 +1947,7 @@ then settings.UPSTREAM_IPS will be used.</p></li>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

@@ -71,13 +71,15 @@
   
     <li><a href="inputfuncs.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -265,6 +267,7 @@
     <span class="s2">&quot;MCCP&quot;</span><span class="p">,</span>
     <span class="s2">&quot;SCREENHEIGHT&quot;</span><span class="p">,</span>
     <span class="s2">&quot;SCREENWIDTH&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;AUTORESIZE&quot;</span><span class="p">,</span>
     <span class="s2">&quot;INPUTDEBUG&quot;</span><span class="p">,</span>
     <span class="s2">&quot;RAW&quot;</span><span class="p">,</span>
     <span class="s2">&quot;NOCOLOR&quot;</span><span class="p">,</span>
@@ -291,6 +294,7 @@
 <span class="sd">        mccp (bool): MCCP compression on/off</span>
 <span class="sd">        screenheight (int): Screen height in lines</span>
 <span class="sd">        screenwidth (int): Screen width in characters</span>
+<span class="sd">        autoresize (bool): Use NAWS updates to dynamically adjust format</span>
 <span class="sd">        inputdebug (bool): Debug input functions</span>
 <span class="sd">        nocolor (bool): Strip color</span>
 <span class="sd">        raw (bool): Turn off parsing</span>
@@ -346,6 +350,8 @@
             <span class="n">flags</span><span class="p">[</span><span class="s2">&quot;SCREENHEIGHT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_size</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;screenwidth&quot;</span><span class="p">:</span>
             <span class="n">flags</span><span class="p">[</span><span class="s2">&quot;SCREENWIDTH&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_size</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;autoresize&quot;</span><span class="p">:</span>
+            <span class="n">flags</span><span class="p">[</span><span class="s2">&quot;AUTORESIZE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_size</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;inputdebug&quot;</span><span class="p">:</span>
             <span class="n">flags</span><span class="p">[</span><span class="s2">&quot;INPUTDEBUG&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;nocolor&quot;</span><span class="p">:</span>
@@ -515,7 +521,7 @@
     <span class="c1"># the object as &quot;db_value&quot; with a separate &quot;category&quot; field.</span>
     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;db_category&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">obj</span><span class="o">.</span><span class="n">db_category</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">category</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">db_category</span>
-        <span class="n">fieldname</span> <span class="o">=</span> <span class="n">fieldname</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;[</span><span class="si">{}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">db_category</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">fieldname</span> <span class="o">=</span> <span class="n">fieldname</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;[</span><span class="si">{}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">db_category</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 
     <span class="c1"># the session may be None if the char quits and someone</span>
     <span class="c1"># else then edits the object</span>
@@ -525,9 +531,9 @@
             <span class="n">outputfunc_name</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
                 <span class="o">**</span><span class="p">({</span><span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">category</span><span class="p">}</span> <span class="k">if</span> <span class="n">category</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">{}),</span>
-                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">_GA</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">fieldname</span><span class="p">)</span>
-                <span class="p">}</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">_GA</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">fieldname</span><span class="p">),</span>
             <span class="p">}</span>
+        <span class="p">}</span>
         <span class="n">session</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="o">**</span><span class="n">callsign</span><span class="p">)</span>
 
 
@@ -784,7 +790,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

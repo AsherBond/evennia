@@ -97,13 +97,15 @@
   
     <li><a href="evennia.contrib.rpg.rpsystem.rpsystem.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -734,7 +736,7 @@ commands the caller can use.</p>
 
 <dl class="py attribute">
 <dt id="evennia.contrib.rpg.rpsystem.rpsystem.CmdSay.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['&quot;', &quot;'&quot;]</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdSay.aliases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">aliases</code><em class="property"> = [&quot;'&quot;, '&quot;']</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdSay.aliases" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -765,7 +767,7 @@ commands the caller can use.</p>
 
 <dl class="py attribute">
 <dt id="evennia.contrib.rpg.rpsystem.rpsystem.CmdSay.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '&quot; \'', 'category': 'general', 'key': 'say', 'no_prefix': ' &quot; \'', 'tags': '', 'text': '\n    speak as your character\n\n    Usage:\n      say &lt;message&gt;\n\n    Talk to those in your current location.\n    '}</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdSay.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '\' &quot;', 'category': 'general', 'key': 'say', 'no_prefix': ' \' &quot;', 'tags': '', 'text': '\n    speak as your character\n\n    Usage:\n      say &lt;message&gt;\n\n    Talk to those in your current location.\n    '}</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdSay.search_index_entry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -906,7 +908,7 @@ Using the command without arguments will list all current recogs.</p>
 
 <dl class="py attribute">
 <dt id="evennia.contrib.rpg.rpsystem.rpsystem.CmdRecog.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['recognize', 'forget']</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdRecog.aliases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">aliases</code><em class="property"> = ['forget', 'recognize']</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdRecog.aliases" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -933,7 +935,7 @@ Using the command without arguments will list all current recogs.</p>
 
 <dl class="py attribute">
 <dt id="evennia.contrib.rpg.rpsystem.rpsystem.CmdRecog.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'recognize forget', 'category': 'general', 'key': 'recog', 'no_prefix': ' recognize forget', 'tags': '', 'text': '\n    Recognize another person in the same room.\n\n    Usage:\n      recog\n      recog sdesc as alias\n      forget alias\n\n    Example:\n        recog tall man as Griatch\n        forget griatch\n\n    This will assign a personal alias for a person, or forget said alias.\n    Using the command without arguments will list all current recogs.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdRecog.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'forget recognize', 'category': 'general', 'key': 'recog', 'no_prefix': ' forget recognize', 'tags': '', 'text': '\n    Recognize another person in the same room.\n\n    Usage:\n      recog\n      recog sdesc as alias\n      forget alias\n\n    Example:\n        recog tall man as Griatch\n        forget griatch\n\n    This will assign a personal alias for a person, or forget said alias.\n    Using the command without arguments will list all current recogs.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.CmdRecog.search_index_entry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -992,6 +994,11 @@ set in self.parse())</p>
 <em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.rpsystem.rpsystem.</code><code class="sig-name descname">RPSystemCmdSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmdsetobj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/rpsystem/rpsystem.html#RPSystemCmdSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.RPSystemCmdSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.cmdset.CmdSet</span></code></a></p>
 <p>Mix-in for adding rp-commands to default cmdset.</p>
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.rpsystem.rpsystem.RPSystemCmdSet.key">
+<code class="sig-name descname">key</code><em class="property"> = 'rpsystem_cmdset'</em><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.RPSystemCmdSet.key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt id="evennia.contrib.rpg.rpsystem.rpsystem.RPSystemCmdSet.at_cmdset_creation">
 <code class="sig-name descname">at_cmdset_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/rpsystem/rpsystem.html#RPSystemCmdSet.at_cmdset_creation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.RPSystemCmdSet.at_cmdset_creation" title="Permalink to this definition">¶</a></dt>
@@ -1025,85 +1032,10 @@ rp-heavy game. It implements the base functionality for poses.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.rpsystem.rpsystem.ContribRPObject.search">
-<code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">searchdata</span></em>, <em class="sig-param"><span class="n">global_search</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">use_nicks</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">typeclass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribute_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">quiet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">exact</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">candidates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nofound_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">multimatch_string</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_dbref</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/rpsystem/rpsystem.html#ContribRPObject.search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.ContribRPObject.search" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns an Object matching a search string/condition, taking
-sdescs into account.</p>
-<p>Perform a standard object search in the database, handling
-multiple results and lack thereof gracefully. By default, only
-objects in the current <strong>location</strong> of <strong>self</strong> or its inventory are searched for.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>searchdata</strong> (<em>str</em><em> or </em><em>obj</em>) – <p>Primary search criterion. Will be matched
-against <strong>object.key</strong> (with <strong>object.aliases</strong> second) unless
-the keyword attribute_name specifies otherwise.
-<strong>Special strings:</strong>
-- <strong>#&lt;num&gt;</strong>: search by unique dbref. This is always</p>
-<blockquote>
-<div><p>a global search.</p>
-</div></blockquote>
-<ul>
-<li><p><strong>me,self</strong>: self-reference to this object</p></li>
-<li><dl class="simple">
-<dt><strong>&lt;num&gt;-&lt;string&gt;</strong> - can be used to differentiate</dt><dd><p>between multiple same-named matches</p>
-</dd>
-</dl>
-</li>
-</ul>
-</p></li>
-<li><p><strong>global_search</strong> (<em>bool</em>) – Search all objects globally. This is overruled
-by <strong>location</strong> keyword.</p></li>
-<li><p><strong>use_nicks</strong> (<em>bool</em>) – Use nickname-replace (nicktype “object”) on <strong>searchdata</strong>.</p></li>
-<li><p><strong>typeclass</strong> (<em>str</em><em> or </em><em>Typeclass</em><em>, or </em><em>list of either</em>) – Limit search only
-to <strong>Objects</strong> with this typeclass. May be a list of typeclasses
-for a broader search.</p></li>
-<li><p><strong>location</strong> (<em>Object</em><em> or </em><em>list</em>) – Specify a location or multiple locations
-to search. Note that this is used to query the <em>contents</em> of a
-location and will not match for the location itself -
-if you want that, don’t set this or use <strong>candidates</strong> to specify
-exactly which objects should be searched.</p></li>
-<li><p><strong>attribute_name</strong> (<em>str</em>) – Define which property to search. If set, no
-key+alias search will be performed. This can be used
-to search database fields (<a href="#id1"><span class="problematic" id="id2">db_</span></a> will be automatically
-appended), and if that fails, it will try to return
-objects having Attributes with this name and value
-equal to searchdata. A special use is to search for
-“key” here if you want to do a key-search without
-including aliases.</p></li>
-<li><p><strong>quiet</strong> (<em>bool</em>) – don’t display default error messages - this tells the
-search method that the user wants to handle all errors
-themselves. It also changes the return value type, see
-below.</p></li>
-<li><p><strong>exact</strong> (<em>bool</em>) – if unset (default) - prefers to match to beginning of
-string rather than not matching at all. If set, requires
-exact matching of entire string.</p></li>
-<li><p><strong>candidates</strong> (<em>list of objects</em>) – this is an optional custom list of objects
-to search (filter) between. It is ignored if <strong>global_search</strong>
-is given. If not set, this list will automatically be defined
-to include the location, the contents of location and the
-caller’s contents (inventory).</p></li>
-<li><p><strong>nofound_string</strong> (<em>str</em>) – optional custom string for not-found error message.</p></li>
-<li><p><strong>multimatch_string</strong> (<em>str</em>) – optional custom string for multimatch error header.</p></li>
-<li><p><strong>use_dbref</strong> (<em>bool</em><em> or </em><em>None</em>) – If None, only turn off use_dbref if we are of a lower
-permission than Builder. Otherwise, honor the True/False value.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><p><em>match (Object, None or list)</em> –</p>
-<dl class="simple">
-<dt>will return an Object/None if <strong>quiet=False</strong>,</dt><dd><p>otherwise it will return a list of 0, 1 or more matches.</p>
-</dd>
-</dl>
-</p>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>To find Accounts, use eg. <strong>evennia.account_search</strong>. If
-<strong>quiet=False</strong>, error messages will be handled by
-<strong>settings.SEARCH_AT_RESULT</strong> and echoed automatically (on
-error, return will be <strong>None</strong>). If <strong>quiet=True</strong>, the error
-messaging is assumed to be handled by the caller.</p>
+<dt id="evennia.contrib.rpg.rpsystem.rpsystem.ContribRPObject.get_search_result">
+<code class="sig-name descname">get_search_result</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">searchdata</span></em>, <em class="sig-param"><span class="n">candidates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/rpsystem/rpsystem.html#ContribRPObject.get_search_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.rpsystem.rpsystem.ContribRPObject.get_search_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override of the parent method for producing search results that understands sdescs.
+These are used in the main .search() method of the parent class.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1465,7 +1397,7 @@ the evennia.contrib.rpg.rplanguage module.</p>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

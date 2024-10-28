@@ -71,6 +71,7 @@
 <li><a class="reference internal" href="#a-fresh-game-dir">A Fresh Game-Dir?</a></li>
 <li><a class="reference internal" href="#a-mud-client">A MUD Client</a></li>
 <li><a class="reference internal" href="#a-text-editor-or-ide">A Text Editor or IDE</a></li>
+<li><a class="reference internal" href="#running-python-commands-outside-game-optional">Running python commands outside game (optional)</a></li>
 </ul>
 </li>
 </ul>
@@ -106,13 +107,15 @@
   
     <li><a href="Beginner-Tutorial-Overview.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -186,6 +189,22 @@
 <p>Use Spaces, Not Tabs&lt; br/&gt;
 Make sure to configure your text editor so that pressing the ‘Tab’ key inserts <em>4 spaces</em> rather than a tab-character. Because Python is whitespace-aware, this simple practice will make your life much easier.</p>
 </div>
+</section>
+<section id="running-python-commands-outside-game-optional">
+<h3>Running python commands outside game (optional)<a class="headerlink" href="#running-python-commands-outside-game-optional" title="Permalink to this headline">¶</a></h3>
+<p>This tutorial will primarily assume you are experimenting with Python through your game client, using the in-game <code class="docutils literal notranslate"><span class="pre">py</span></code> command. But you can also explore Python instructions outside of the game. Run the following from your game dir folder:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ evennia shell 
+</pre></div>
+</div>
+<aside class="sidebar">
+<p>The <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">shell</span></code> console is convenient for experimenting with Python. But note that if you manipulate database objects from <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">shell</span></code>, those changes will not be visible from inside the game until you reload the server. Similarly changes in-game may not visible to the <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">shell</span></code> console until restarting it. As a guideline, use <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">shell</span></code> for testing things out. Don’t use it to change the state of a running game. The beginner tutorial uses the in-game <code class="docutils literal notranslate"><span class="pre">py</span></code> command to avoid confusion.</p>
+</aside>
+<p>This will open an Evennia/Django aware python shell. You should use this instead of just running vanilla <code class="docutils literal notranslate"><span class="pre">python</span></code> since the latter won’t set up Django for you and you won’t be able to import <code class="docutils literal notranslate"><span class="pre">evennia</span></code> without a lot of extra setup. For an even nicer experience, it’s recommended you install the <code class="docutils literal notranslate"><span class="pre">ipython</span></code> program:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> $ pip install ipython3
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">shell</span></code> command will use <code class="docutils literal notranslate"><span class="pre">ipython</span></code> automatically if installed.</p>
+<hr class="docutils" />
 <p>You should now be ready to move on to the <a class="reference internal" href="Part1/Beginner-Tutorial-Part1-Overview.html"><span class="doc std std-doc">first part of the Beginner Tutorial</span></a>! (In the future, use the <code class="docutils literal notranslate"><span class="pre">previous</span> <span class="pre">|</span> <span class="pre">next</span></code> buttons on the top/bottom of the page to progress.)</p>
 <details>
 <summary>
@@ -331,17 +350,17 @@ Click here to see the full index of all parts and lessons of the Beginner-Tutori
 <li class="toctree-l3"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html">11. Searching for things</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#searching-using-object-search">11.1. Searching using Object.search</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#main-search-functions">11.2. Main search functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#what-can-be-searched-for">11.3. What can be searched for</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-key">11.3.1. Search by key</a></li>
-<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-aliases">11.3.2. Search by aliases</a></li>
-<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-location">11.3.3. Search by location</a></li>
-<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-tags">11.3.4. Search by Tags</a></li>
-<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-attribute">11.3.5. Search by Attribute</a></li>
-<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-typeclass">11.3.6. Search by Typeclass</a></li>
-<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-dbref">11.3.7. Search by dbref</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#understanding-object-relationships">11.3. Understanding object relationships</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#what-can-be-searched-for">11.4. What can be searched for</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-key">11.4.1. Search by key</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-aliases">11.4.2. Search by aliases</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-location">11.4.3. Search by location</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-tags">11.4.4. Search by Tags</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-attribute">11.4.5. Search by Attribute</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-typeclass">11.4.6. Search by Typeclass</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#search-by-dbref">11.4.7. Search by dbref</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#finding-objects-relative-each-other">11.4. Finding objects relative each other</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Part1/Beginner-Tutorial-Searching-Things.html#summary">11.5. Summary</a></li>
 </ul>
 </li>
@@ -467,12 +486,12 @@ Click here to see the full index of all parts and lessons of the Beginner-Tutori
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Part3/Beginner-Tutorial-Part3-Overview.html">Part 3: How We Get There (Example Game)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Part3/Beginner-Tutorial-Part3-Overview.html#lessons">Lessons</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html">1. Code structure and Utilities</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#folder-structure">1.1. Folder structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html">1. Code Structure and Utilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#folder-structure">1.1. Folder Structure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#enums">1.2. Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#utility-module">1.3. Utility module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#utility-module">1.3. Utility Module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#testing">1.4. Testing</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#running-your-test">1.4.1. Running your test</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#running-your-test">1.4.1. Running your Test</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Utilities.html#summary">1.5. Summary</a></li>
@@ -665,9 +684,63 @@ Click here to see the full index of all parts and lessons of the Beginner-Tutori
 <li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Combat-Turnbased.html#conclusions">11.9. Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html">12. NPC and monster AI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html">13. Dynamically generated Dungeon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html">14. Game Quests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html">12. NPC and monster AI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#our-requirements">12.1. Our requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#the-aihandler">12.2. The AIHandler</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#more-helpers-on-the-ai-handler">12.2.1. More helpers on the AI handler</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#adding-ai-to-an-entity">12.3. Adding AI to an entity</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#idle-state">12.3.1. Idle state</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#roam-state">12.3.2. Roam state</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#flee-state">12.3.3. Flee state</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#combat-state">12.3.4. Combat state</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#unit-testing">12.4. Unit Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-AI.html#conclusions">12.5. Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html">13. Procedurally generated Dungeon</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#design-concept">13.1. Design Concept</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#the-starting-room">13.1.1. The starting room</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#generating-new-branch-rooms">13.1.2. Generating new branch rooms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#making-the-dungeon-dangerous">13.1.3. Making the dungeon dangerous</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#difficulty-scaling">13.1.4. Difficulty scaling</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#start-implementation">13.2. Start Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#basic-dungeon-rooms">13.3. Basic Dungeon rooms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#dungeon-exits">13.4. Dungeon exits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#dungeon-branch-and-the-xy-grid">13.5. Dungeon Branch and the xy grid</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#grid-coordinates-and-exit-mappings">13.5.1. Grid coordinates and exit mappings</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#base-structure-of-the-dungeon-branch-script">13.5.1.1. Base structure of the Dungeon branch script</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#a-note-about-the-room-generator">13.5.2. A note about the room-generator</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#deleting-a-dungeon-branch">13.5.3. Deleting a dungeon branch</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#creating-a-new-dungeon-room">13.5.4. Creating a new dungeon room</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#back-to-the-dungeon-exit-class">13.6. Back to the dungeon exit class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#starting-room-exits">13.7. Starting room exits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#utility-scripts">13.8. Utility scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#starting-room">13.9. Starting room</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#testing">13.10. Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Dungeon.html#conclusions">13.11. Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html">14. Game Quests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html#the-quest-handler">14.1. The Quest Handler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html#the-quest-class">14.2. The Quest class</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html#example-quest">14.2.1. Example quest</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html#a-useful-command">14.2.2. A useful Command</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html#testing">14.3. Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Part3/Beginner-Tutorial-Quests.html#conclusions">14.4. Conclusions</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Shops.html">15. In-game Shops</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Part3/Beginner-Tutorial-Commands.html">16. In-game Commands</a></li>
 </ul>
@@ -730,7 +803,7 @@ Click here to see the full index of all parts and lessons of the Beginner-Tutori
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

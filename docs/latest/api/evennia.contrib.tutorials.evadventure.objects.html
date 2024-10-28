@@ -97,13 +97,15 @@
   
     <li><a href="evennia.contrib.tutorials.evadventure.objects.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -171,7 +173,7 @@ normal hook to overload for most object types.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>looker</strong> (<em>Object</em>) – Object doing the looking.</p></li>
+<li><p><strong>looker</strong> (<a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultObject" title="evennia.objects.objects.DefaultObject"><em>DefaultObject</em></a>) – Object doing the looking.</p></li>
 <li><p><strong>**kwargs</strong> – Arbitrary data for use when overriding.</p></li>
 </ul>
 </dd>
@@ -188,7 +190,7 @@ normal hook to overload for most object types.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>looker</strong> (<em>Object</em>) – Object doing the looking.</p></li>
+<li><p><strong>looker</strong> (<a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultObject" title="evennia.objects.objects.DefaultObject"><em>DefaultObject</em></a>) – Object doing the looking.</p></li>
 <li><p><strong>**kwargs</strong> – Arbitrary data for use when overriding.</p></li>
 </ul>
 </dd>
@@ -505,24 +507,16 @@ have a limited usage in this way.</p>
 <dd><p>Displays the name of the object in a viewer-aware manner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>looker</strong> (<a class="reference internal" href="evennia.typeclasses.models.html#evennia.typeclasses.models.TypedObject" title="evennia.typeclasses.models.TypedObject"><em>TypedObject</em></a>) – The object or account that is looking
-at/getting inforamtion for this object. If not given, <strong>.name</strong> will be
-returned, which can in turn be used to display colored data.</p>
+<dd class="field-odd"><p><strong>looker</strong> (<a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultObject" title="evennia.objects.objects.DefaultObject"><em>DefaultObject</em></a>) – The object or account that is looking at or getting information
+for this object.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><p><em>str</em> –</p>
-<dl class="simple">
-<dt>A name to display for this object. This can contain color codes and may</dt><dd><p>be customized based on <strong>looker</strong>. By default this contains the <strong>.key</strong> of the object,
-followed by the DBREF if this user is privileged to control said object.</p>
-</dd>
-</dl>
-</p>
+<dd class="field-even"><p><em>str</em> – A name to display for this object. By default this returns the <strong>.name</strong> of the object.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>This function could be extended to change how object names appear to users in character,
-but be wary. This function does not change an object’s keys or aliases when searching,
-and is expected to produce something useful for builders.</p>
+<p>This function can be extended to change how object names appear to users in character,
+but it does not change an object’s keys or aliases when searching.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -938,7 +932,7 @@ they are quite powerful (and scales with caster level).</p>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

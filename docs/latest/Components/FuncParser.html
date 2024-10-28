@@ -113,13 +113,15 @@
   
     <li><a href="FuncParser.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -142,7 +144,7 @@ You<span class="w"> </span>say<span class="w"> </span><span class="s2">&quot;I g
 </pre></div>
 </div>
 <p>To escape the inlinefunc (e.g. to explain to someone how it works, use <code class="docutils literal notranslate"><span class="pre">$$</span></code>)</p>
-<p>While <code class="docutils literal notranslate"><span class="pre">randint</span></code> may look and work just like <code class="docutils literal notranslate"><span class="pre">random.randint</span></code> from the standard Python library, it is <em>not</em>. Instead it’s a <code class="docutils literal notranslate"><span class="pre">inlinefunc</span></code> named <code class="docutils literal notranslate"><span class="pre">randint</span></code> made available to Evennia (which in turn uses the standard library function). For security reasons, only functions explicitly assigned to be used as inlinefuncs are viable.</p>
+<p>While <code class="docutils literal notranslate"><span class="pre">randint</span></code> may look and work just like <code class="docutils literal notranslate"><span class="pre">random.randint</span></code> from the standard Python library, it is <em>not</em>. Instead it’s an <code class="docutils literal notranslate"><span class="pre">inlinefunc</span></code> named <code class="docutils literal notranslate"><span class="pre">randint</span></code> made available to Evennia (which in turn uses the standard library function). For security reasons, only functions explicitly assigned to be used as inlinefuncs are viable.</p>
 <p>You can apply the <code class="docutils literal notranslate"><span class="pre">FuncParser</span></code>  manually. The parser is initialized with the inlinefunc(s) it’s supposed to recognize in that string. Below is an example of a parser only understanding a single <code class="docutils literal notranslate"><span class="pre">$pow</span></code> inlinefunc:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">evennia.utils.funcparser</span> <span class="kn">import</span> <span class="n">FuncParser</span>
 
@@ -197,7 +199,7 @@ should see “You” or the character’s name.</p></li>
 <p>Here, <code class="docutils literal notranslate"><span class="pre">callables</span></code> points to a collection of normal Python functions (see next section) for you to make
 available to the parser as you parse strings with it. It can either be</p>
 <ul class="simple">
-<li><p>A <code class="docutils literal notranslate"><span class="pre">dict</span></code> of <code class="docutils literal notranslate"><span class="pre">{&quot;functionname&quot;:</span> <span class="pre">callable,</span> <span class="pre">...}</span></code>. This allows you do pick and choose exactly which callables
+<li><p>A <code class="docutils literal notranslate"><span class="pre">dict</span></code> of <code class="docutils literal notranslate"><span class="pre">{&quot;functionname&quot;:</span> <span class="pre">callable,</span> <span class="pre">...}</span></code>. This allows you to pick and choose exactly which callables
 to include and how they should be named. Do you want a callable to be available under more than one name?
 Just add it multiple times to the dict, with a different key.</p></li>
 <li><p>A <code class="docutils literal notranslate"><span class="pre">module</span></code> or (more commonly) a <code class="docutils literal notranslate"><span class="pre">python-path</span></code> to a module. This module can define a dict
@@ -335,7 +337,7 @@ them with <code class="docutils literal notranslate"><span class="pre">\&quot;</
 <h3>Safe convertion of inputs<a class="headerlink" href="#safe-convertion-of-inputs" title="Permalink to this headline">¶</a></h3>
 <p>Since you don’t know in which order users may use your callables, they should
 always check the types of its inputs and convert to the type the callable needs.
-Note also that when converting from strings, there are limits what inputs you
+Note also that when converting from strings, there are limits on what inputs you
 can support. This is because FunctionParser strings can be used by
 non-developer players/builders and some things (such as complex
 classes/callables etc) are just not safe/possible to convert from string
@@ -431,13 +433,17 @@ be replaced either with the string <code class="docutils literal notranslate"><s
 result of <code class="docutils literal notranslate"><span class="pre">you_obj.get_display_name(looker=receiver)</span></code>. This allows for a single string to echo differently
 depending on who sees it, and also to reference other people in the same way.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">$You([key])</span></code> - same as <code class="docutils literal notranslate"><span class="pre">$you</span></code> but always capitalized.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">$conj(verb)</span></code> (<a class="reference internal" href="../api/evennia.utils.funcparser.html#evennia.utils.funcparser.funcparser_callable_conjugate" title="evennia.utils.funcparser.funcparser_callable_conjugate"><span class="xref myst py py-func">code</span></a>) - conjugates a verb
-between 2nd person presens to 3rd person presence depending on who
+<li><p><code class="docutils literal notranslate"><span class="pre">$conj(verb</span> <span class="pre">[,key])</span></code> (<a class="reference internal" href="../api/evennia.utils.funcparser.html#evennia.utils.funcparser.funcparser_callable_conjugate" title="evennia.utils.funcparser.funcparser_callable_conjugate"><span class="xref myst py py-func">code</span></a>) - conjugates a verb
+between 2nd person presence to 3rd person presence depending on who
 sees the string. For example <code class="docutils literal notranslate"><span class="pre">&quot;$You()</span> <span class="pre">$conj(smiles)&quot;.</span></code> will show as “You smile.” and “Tom smiles.” depending
 on who sees it. This makes use of the tools in <a class="reference internal" href="../api/evennia.utils.verb_conjugation.html#evennia-utils-verb-conjugation"><span class="std std-ref">evennia.utils.verb_conjugation</span></a>
 to do this, and only works for English verbs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">$pron(pronoun</span> <span class="pre">[,options])</span></code> (<a class="reference internal" href="../api/evennia.utils.funcparser.html#evennia.utils.funcparser.funcparser_callable_pronoun" title="evennia.utils.funcparser.funcparser_callable_pronoun"><span class="xref myst py py-func">code</span></a>) - Dynamically
+<li><p><code class="docutils literal notranslate"><span class="pre">$pron(pronoun</span> <span class="pre">[,options]</span> <span class="pre">[,key])</span></code> (<a class="reference internal" href="../api/evennia.utils.funcparser.html#evennia.utils.funcparser.funcparser_callable_pronoun" title="evennia.utils.funcparser.funcparser_callable_pronoun"><span class="xref myst py py-func">code</span></a>) - Dynamically
 map pronouns (like his, herself, you, its etc) between 1st/2nd person to 3rd person.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$pconj(verb,</span> <span class="pre">[,key])</span></code> (<a class="reference internal" href="../api/evennia.utils.funcparser.html#evennia.utils.funcparser.funcparser_callable_conjugate_for_pronouns" title="evennia.utils.funcparser.funcparser_callable_conjugate_for_pronouns"><span class="xref myst py py-func">code</span></a>) - conjugates
+a verb between 2nd and 3rd person, like <code class="docutils literal notranslate"><span class="pre">$conj</span></code>, but for pronouns instead of nouns to account for plural
+gendering. For example <code class="docutils literal notranslate"><span class="pre">&quot;$Pron(you)</span> <span class="pre">$pconj(smiles)&quot;</span></code> will show to others as “He smiles” for a gender of “male”, or
+“They smile” for a gender of “plural”.</p></li>
 </ul>
 </section>
 <section id="evennia-prototypes-protfuncs">
@@ -520,7 +526,7 @@ all the defaults (like <code class="docutils literal notranslate"><span class="p
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

@@ -71,13 +71,15 @@
   
     <li><a href="ttype.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -101,6 +103,8 @@
 <span class="sd">under the &#39;TTYPE&#39; key.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">weakref</span>
 
 <span class="c1"># telnet option codes</span>
 <span class="n">TTYPE</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">([</span><span class="mi">24</span><span class="p">])</span>  <span class="c1"># b&quot;\x18&quot;</span>
@@ -134,7 +138,7 @@
 <div class="viewcode-block" id="Ttype.__init__"><a class="viewcode-back" href="../../../../api/evennia.server.portal.ttype.html#evennia.server.portal.ttype.Ttype.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize ttype by storing protocol on ourselves and calling</span>
-<span class="sd">        the client to see if it supporst ttype.</span>
+<span class="sd">        the client to see if it supports ttype.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            protocol (Protocol): The protocol instance.</span>
@@ -145,16 +149,16 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ttype_step</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="n">protocol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="n">protocol</span><span class="p">)</span>
         <span class="c1"># we set FORCEDENDLINE for clients not supporting ttype</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;FORCEDENDLINE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TTYPE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;FORCEDENDLINE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TTYPE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="c1"># is it a safe bet to assume ANSI is always supported?</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;ANSI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;ANSI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="c1"># setup protocol to handle ttype initialization and negotiation</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">negotiationMap</span><span class="p">[</span><span class="n">TTYPE</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">will_ttype</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">negotiationMap</span><span class="p">[</span><span class="n">TTYPE</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">will_ttype</span>
         <span class="c1"># ask if client will ttype, connect callback if it does.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">)</span><span class="o">.</span><span class="n">addCallbacks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">will_ttype</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">wont_ttype</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">)</span><span class="o">.</span><span class="n">addCallbacks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">will_ttype</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">wont_ttype</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Ttype.wont_ttype"><a class="viewcode-back" href="../../../../api/evennia.server.portal.ttype.html#evennia.server.portal.ttype.Ttype.wont_ttype">[docs]</a>    <span class="k">def</span> <span class="nf">wont_ttype</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">option</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -164,8 +168,8 @@
 <span class="sd">            option (Option): Not used.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TTYPE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">handshake_done</span><span class="p">()</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TTYPE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">handshake_done</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Ttype.will_ttype"><a class="viewcode-back" href="../../../../api/evennia.server.portal.ttype.html#evennia.server.portal.ttype.Ttype.will_ttype">[docs]</a>    <span class="k">def</span> <span class="nf">will_ttype</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">option</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -181,7 +185,7 @@
 <span class="sd">            stored on protocol.protocol_flags under the TTYPE key.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span>
 
         <span class="k">if</span> <span class="n">options</span> <span class="ow">and</span> <span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;TTYPE&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">ttype_step</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
             <span class="k">return</span>
@@ -194,7 +198,7 @@
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ttype_step</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># just start the request chain</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">requestNegotiation</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">,</span> <span class="n">SEND</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">requestNegotiation</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">,</span> <span class="n">SEND</span><span class="p">)</span>
 
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ttype_step</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="c1"># this is supposed to be the name of the client/terminal.</span>
@@ -215,9 +219,9 @@
                 <span class="n">xterm256</span> <span class="o">=</span> <span class="n">clientname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;MUDLET&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s2">&quot;1.1&quot;</span>
                 <span class="c1"># Mudlet likes GA&#39;s on a prompt line for the prompt trigger to</span>
                 <span class="c1"># match, if it&#39;s not wanting NOGOAHEAD.</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;NOGOAHEAD&quot;</span><span class="p">]:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;NOGOAHEAD&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;NOPROMPTGOAHEAD&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;NOGOAHEAD&quot;</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;NOGOAHEAD&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;NOPROMPTGOAHEAD&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 
             <span class="k">if</span> <span class="p">(</span>
                 <span class="n">clientname</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;XTERM&quot;</span><span class="p">)</span>
@@ -237,11 +241,17 @@
             <span class="p">):</span>
                 <span class="n">xterm256</span> <span class="o">=</span> <span class="kc">True</span>
 
+            <span class="c1"># use name to identify support for xterm truecolor</span>
+            <span class="n">truecolor</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">clientname</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;-TRUECOLOR&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">clientname</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;AXMUD&quot;</span><span class="p">,</span> <span class="s2">&quot;TINTIN&quot;</span><span class="p">):</span>
+                <span class="n">truecolor</span> <span class="o">=</span> <span class="kc">True</span>
+
             <span class="c1"># all clients supporting TTYPE at all seem to support ANSI</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;ANSI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;XTERM256&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xterm256</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;CLIENTNAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clientname</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">requestNegotiation</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">,</span> <span class="n">SEND</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;ANSI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;XTERM256&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xterm256</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TRUECOLOR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">truecolor</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;CLIENTNAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clientname</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">requestNegotiation</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">,</span> <span class="n">SEND</span><span class="p">)</span>
 
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ttype_step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
             <span class="c1"># this is a term capabilities flag</span>
@@ -254,11 +264,11 @@
                 <span class="ow">and</span> <span class="ow">not</span> <span class="n">tupper</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;-COLOR&quot;</span><span class="p">)</span>  <span class="c1"># old Tintin, Putty</span>
             <span class="p">)</span>
             <span class="k">if</span> <span class="n">xterm256</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;ANSI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;XTERM256&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xterm256</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TERM&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">term</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;ANSI&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;XTERM256&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xterm256</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TERM&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">term</span>
             <span class="c1"># request next information</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">requestNegotiation</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">,</span> <span class="n">SEND</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">requestNegotiation</span><span class="p">(</span><span class="n">TTYPE</span><span class="p">,</span> <span class="n">SEND</span><span class="p">)</span>
 
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ttype_step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
             <span class="c1"># the MTTS bitstring identifying term capabilities</span>
@@ -270,14 +280,14 @@
                     <span class="n">support</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
                         <span class="p">(</span><span class="n">capability</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">bitval</span><span class="p">,</span> <span class="n">capability</span> <span class="ow">in</span> <span class="n">MTTS</span> <span class="k">if</span> <span class="n">option</span> <span class="o">&amp;</span> <span class="n">bitval</span> <span class="o">&gt;</span> <span class="mi">0</span>
                     <span class="p">)</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">support</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">support</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="c1"># some clients send erroneous MTTS as a string. Add directly.</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="n">option</span><span class="o">.</span><span class="n">upper</span><span class="p">()]</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="n">option</span><span class="o">.</span><span class="n">upper</span><span class="p">()]</span> <span class="o">=</span> <span class="kc">True</span>
 
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TTYPE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">protocol_flags</span><span class="p">[</span><span class="s2">&quot;TTYPE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="c1"># we must sync ttype once it&#39;d done</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">handshake_done</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">()</span><span class="o">.</span><span class="n">handshake_done</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ttype_step</span> <span class="o">+=</span> <span class="mi">1</span></div></div>
 </pre></div>
 
@@ -305,7 +315,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

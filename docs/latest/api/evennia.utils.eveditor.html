@@ -95,13 +95,15 @@
   
     <li><a href="evennia.utils.eveditor.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -269,6 +271,12 @@ command was given specifically as “no” or “n”.</p>
 </ul>
 </dd></dl>
 
+<dl class="py method">
+<dt id="evennia.utils.eveditor.CmdEditorBase.insert_raw_string_into_buffer">
+<code class="sig-name descname">insert_raw_string_into_buffer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/eveditor.html#CmdEditorBase.insert_raw_string_into_buffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.eveditor.CmdEditorBase.insert_raw_string_into_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a line into the buffer. Used by both CmdLineInput and CmdEditorGroup.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="evennia.utils.eveditor.CmdEditorBase.aliases">
 <code class="sig-name descname">aliases</code><em class="property"> = []</em><a class="headerlink" href="#evennia.utils.eveditor.CmdEditorBase.aliases" title="Permalink to this definition">¶</a></dt>
@@ -348,7 +356,7 @@ indentation.</p>
 
 <dl class="py attribute">
 <dt id="evennia.utils.eveditor.CmdEditorGroup.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = [':x', ':&lt;', ':dd', ':y', ':DD', ':::', ':dw', ':p', ':i', ':s', ':q!', ':f', ':=', ':q', ':j', '::', ':echo', ':A', ':!', ':h', ':I', ':', ':fd', ':w', ':r', ':u', ':fi', ':UU', ':wq', ':S', ':uu', ':&gt;']</em><a class="headerlink" href="#evennia.utils.eveditor.CmdEditorGroup.aliases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">aliases</code><em class="property"> = [':uu', ':echo', ':s', ':DD', ':I', ':&lt;', ':j', ':UU', '::', ':', ':!', ':q!', ':p', ':i', ':r', ':A', ':S', ':w', ':::', ':h', ':wq', ':q', ':&gt;', ':dw', ':x', ':=', ':dd', ':y', ':fd', ':fi', ':f', ':u']</em><a class="headerlink" href="#evennia.utils.eveditor.CmdEditorGroup.aliases" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -376,7 +384,7 @@ efficient presentation.</p>
 
 <dl class="py attribute">
 <dt id="evennia.utils.eveditor.CmdEditorGroup.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': ':x :&lt; :dd :y :DD ::: :dw :p :i :s :q! :f := :q :j :: :echo :A :! :h :I : :fd :w :r :u :fi :UU :wq :S :uu :&gt;', 'category': 'general', 'key': ':editor_command_group', 'no_prefix': ' :x :&lt; :dd :y :DD ::: :dw :p :i :s :q! :f := :q :j :: :echo :A :! :h :I : :fd :w :r :u :fi :UU :wq :S :uu :&gt;', 'tags': '', 'text': '\n    Commands for the editor\n    '}</em><a class="headerlink" href="#evennia.utils.eveditor.CmdEditorGroup.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': ':uu :echo :s :DD :I :&lt; :j :UU :: : :! :q! :p :i :r :A :S :w ::: :h :wq :q :&gt; :dw :x := :dd :y :fd :fi :f :u', 'category': 'general', 'key': ':editor_command_group', 'no_prefix': ' :uu :echo :s :DD :I :&lt; :j :UU :: : :! :q! :p :i :r :A :S :w ::: :h :wq :q :&gt; :dw :x := :dd :y :fd :fi :f :u', 'tags': '', 'text': '\n    Commands for the editor\n    '}</em><a class="headerlink" href="#evennia.utils.eveditor.CmdEditorGroup.search_index_entry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -389,6 +397,11 @@ efficient presentation.</p>
 <dl class="py attribute">
 <dt id="evennia.utils.eveditor.EvEditorCmdSet.key">
 <code class="sig-name descname">key</code><em class="property"> = 'editorcmdset'</em><a class="headerlink" href="#evennia.utils.eveditor.EvEditorCmdSet.key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="evennia.utils.eveditor.EvEditorCmdSet.priority">
+<code class="sig-name descname">priority</code><em class="property"> = 150</em><a class="headerlink" href="#evennia.utils.eveditor.EvEditorCmdSet.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -597,7 +610,7 @@ formatting information.</p></li>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

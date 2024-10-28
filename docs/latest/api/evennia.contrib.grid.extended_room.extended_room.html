@@ -97,13 +97,15 @@
   
     <li><a href="evennia.contrib.grid.extended_room.extended_room.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -143,8 +145,8 @@ self.add(extended_room.ExtendedRoomCmdSet)  # &lt;—</p>
 </div></blockquote>
 </dd>
 </dl>
-<p>Then reload to make the bew commands available. Note that they only work
-on rooms with the typeclass <strong>ExtendedRoom</strong>. Create new rooms with the right
+<p>Then, reload to make the new commands available. Note that they only work
+on rooms with the <strong>ExtendedRoom</strong> typeclass. Create new rooms with the correct
 typeclass or use the <strong>typeclass</strong> command to swap existing rooms.</p>
 <dl class="py function">
 <dt id="evennia.contrib.grid.extended_room.extended_room.func_state">
@@ -693,7 +695,7 @@ del - Delete the description of an object. If another state is given, its descri
 <blockquote>
 <div><p>will be deleted.</p>
 </div></blockquote>
-<p>spring|summer|autumn|winter - room description to use in respective in-game season
+<p>spring||summer||autumn||winter - room description to use in respective in-game season
 &lt;other&gt; - room description to use with an arbitrary room state.</p>
 </dd>
 </dl>
@@ -829,7 +831,7 @@ strings, but case is preserved.</p>
 
 <dl class="py attribute">
 <dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '', 'category': 'building', 'key': '&#64;desc', 'no_prefix': 'desc ', 'tags': '', 'text': '\n    describe an object or the current room.\n\n    Usage:\n      &#64;desc[/switch] [&lt;obj&gt; =] &lt;description&gt;\n\n    Switches:\n      edit - Open up a line editor for more advanced editing.\n      del - Delete the description of an object. If another state is given, its description\n        will be deleted.\n      spring|summer|autumn|winter - room description to use in respective in-game season\n      &lt;other&gt; - room description to use with an arbitrary room state.\n\n    Sets the description an object. If an object is not given,\n    describe the current room, potentially showing any additional stateful descriptions. The room\n    states only work with rooms.\n\n    Examples:\n        &#64;desc/winter A cold winter scene.\n        &#64;desc/edit/summer\n        &#64;desc/burning This room is burning!\n        &#64;desc A normal room with no state.\n        &#64;desc/del/burning\n\n    Rooms will automatically change season as the in-game time changes. You can\n    set a specific room-state with the |wroomstate|n command.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '', 'category': 'building', 'key': '&#64;desc', 'no_prefix': 'desc ', 'tags': '', 'text': '\n    describe an object or the current room.\n\n    Usage:\n      &#64;desc[/switch] [&lt;obj&gt; =] &lt;description&gt;\n\n    Switches:\n      edit - Open up a line editor for more advanced editing.\n      del - Delete the description of an object. If another state is given, its description\n        will be deleted.\n      spring||summer||autumn||winter - room description to use in respective in-game season\n      &lt;other&gt; - room description to use with an arbitrary room state.\n\n    Sets the description an object. If an object is not given,\n    describe the current room, potentially showing any additional stateful descriptions. The room\n    states only work with rooms.\n\n    Examples:\n        &#64;desc/winter A cold winter scene.\n        &#64;desc/edit/summer\n        &#64;desc/burning This room is burning!\n        &#64;desc A normal room with no state.\n        &#64;desc/del/burning\n\n    Rooms will automatically change season as the in-game time changes. You can\n    set a specific room-state with the |wroomstate|n command.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1205,7 +1207,7 @@ self.add().</p>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

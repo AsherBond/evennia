@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Barter system" href="Contrib-Barter.html" />
+    <link rel="next" title="Achievements" href="Contrib-Achievements.html" />
     <link rel="prev" title="Unix-like Command style" href="Contrib-Unixcommand.html" /> 
   </head><body>
 
@@ -34,7 +34,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Contrib-Barter.html" title="Barter system"
+          <a href="Contrib-Achievements.html" title="Achievements"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="Contrib-Unixcommand.html" title="Unix-like Command style"
@@ -83,8 +83,8 @@
   <p class="topless"><a href="Contrib-Unixcommand.html"
                         title="previous chapter">Unix-like Command style</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Barter.html"
-                        title="next chapter">Barter system</a></p>
+  <p class="topless"><a href="Contrib-Achievements.html"
+                        title="next chapter">Achievements</a></p>
   <div role="note" aria-label="source link">
     <!--h3>This Page</h3-->
     <ul class="this-page-menu">
@@ -108,13 +108,15 @@
   
     <li><a href="Contrib-Evscaperoom.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -130,20 +132,24 @@
 <p>A full engine for creating multiplayer escape-rooms in Evennia. Allows players to
 spawn and join puzzle rooms that track their state independently. Any number of players
 can join to solve a room together. This is the engine created for ‘EvscapeRoom’, which won
-the MUD Coders Guild “One Room” Game Jam in April-May, 2019. The contrib has no game
-content but contains the utilities and base classes and an empty example room.</p>
-<p>The original code for the contest is found at
-<a class="reference external" href="https://github.com/Griatch/evscaperoom">https://github.com/Griatch/evscaperoom</a> but the version on the public Evennia
-demo is more updated, so if you really want the latest bug fixes etc you should
-rather look at <a class="reference external" href="https://github.com/evennia/evdemo/tree/master/evdemo/evscaperoom">https://github.com/evennia/evdemo/tree/master/evdemo/evscaperoom</a>
-instead. A copy of the full game can also be played on the Evennia demo server
-at <a class="reference external" href="https://demo.evennia.com">https://demo.evennia.com</a> - just connect to the server and write <code class="docutils literal notranslate"><span class="pre">evscaperoom</span></code>
-in the first room to start!</p>
+the MUD Coders Guild “One Room” Game Jam in April-May, 2019. The contrib has only
+very minimal game content, it contains the utilities and base classes and an empty example room.</p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Evscaperoom is, as it sounds, an escaperoom in text form. You start locked into
-a room and have to figure out how to get out. This engine contains everything
-needed to make a fully-featured puzzle game of this type!</p>
+<p>Evscaperoom is, as it sounds, an <a class="reference external" href="https://en.wikipedia.org/wiki/Escape_room">escape room</a> in text form. You start locked into
+a room and have to figure out how to get out. This contrib contains everything
+needed to make a fully-featured puzzle game of this type. It also contains a
+‘lobby’ for creating new rooms, allowing players to join another person’s room
+to collaborate solving it!</p>
+<p>This is the game engine for the original <em>EvscapeRoom</em>. It
+allows you to recreate the same game experience, but it doesn’t contain any of
+the story content created for the game jam. If you want to see the full game
+(where you must escape the cottage of a very tricky jester girl or lose the
+village’s pie-eating contest…), you can find it at Griatch’s github page <a class="reference external" href="https://github.com/Griatch/evscaperoom">here</a>,
+(but the recommended version is the one that used to run on the Evennia demo server which has
+some more bug fixes, found <a class="reference external" href="https://github.com/evennia/evdemo/tree/master/evdemo/evscaperoom">here instead</a>).</p>
+<p>If you want to read more about how <em>EvscapeRoom</em> was created and designed, you can read the
+dev blog, <a class="reference external" href="https://www.evennia.com/devblog/2019.html#2019-05-18-creating-evscaperoom-part-1">part 1</a> and <a class="reference external" href="https://www.evennia.com/devblog/2019.html#2019-05-26-creating-evscaperoom-part-2">part 2</a>.</p>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
@@ -257,7 +263,7 @@ file will be overwritten, so edit that file rather than this one.</small></p>
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="Contrib-Barter.html" title="Barter system"
+          <a href="Contrib-Achievements.html" title="Achievements"
              >next</a> |</li>
         <li class="right" >
           <a href="Contrib-Unixcommand.html" title="Unix-like Command style"
@@ -271,7 +277,7 @@ file will be overwritten, so edit that file rather than this one.</small></p>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

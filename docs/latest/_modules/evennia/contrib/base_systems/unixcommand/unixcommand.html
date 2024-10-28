@@ -71,13 +71,15 @@
   
     <li><a href="unixcommand.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -162,14 +164,12 @@
 
 
 <div class="viewcode-block" id="ParseError"><a class="viewcode-back" href="../../../../../api/evennia.contrib.base_systems.unixcommand.unixcommand.html#evennia.contrib.base_systems.unixcommand.unixcommand.ParseError">[docs]</a><span class="k">class</span> <span class="nc">ParseError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;An error occurred during parsing.&quot;&quot;&quot;</span>
 
     <span class="k">pass</span></div>
 
 
 <div class="viewcode-block" id="UnixCommandParser"><a class="viewcode-back" href="../../../../../api/evennia.contrib.base_systems.unixcommand.unixcommand.html#evennia.contrib.base_systems.unixcommand.unixcommand.UnixCommandParser">[docs]</a><span class="k">class</span> <span class="nc">UnixCommandParser</span><span class="p">(</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A modifier command parser for unix commands.</span>
 
 <span class="sd">    This parser is used to replace `argparse.ArgumentParser`.  It</span>
@@ -273,7 +273,6 @@
 
 
 <div class="viewcode-block" id="HelpAction"><a class="viewcode-back" href="../../../../../api/evennia.contrib.base_systems.unixcommand.unixcommand.html#evennia.contrib.base_systems.unixcommand.unixcommand.HelpAction">[docs]</a><span class="k">class</span> <span class="nc">HelpAction</span><span class="p">(</span><span class="n">argparse</span><span class="o">.</span><span class="n">Action</span><span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Override the -h/--help action in the default parser.</span>
 
 <span class="sd">    Using the default -h/--help will call the exit function in different</span>
@@ -412,7 +411,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

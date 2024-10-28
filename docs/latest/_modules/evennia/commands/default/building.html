@@ -71,13 +71,15 @@
   
     <li><a href="building.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -91,16 +93,16 @@
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Building and world design commands</span>
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">typing</span>
 
+<span class="kn">import</span> <span class="nn">evennia</span>
 <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 <span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span>
 <span class="kn">from</span> <span class="nn">django.db.models</span> <span class="kn">import</span> <span class="n">Max</span><span class="p">,</span> <span class="n">Min</span><span class="p">,</span> <span class="n">Q</span>
-
-<span class="kn">import</span> <span class="nn">evennia</span>
 <span class="kn">from</span> <span class="nn">evennia</span> <span class="kn">import</span> <span class="n">InterruptCommand</span>
-<span class="kn">from</span> <span class="nn">evennia.commands.cmdhandler</span> <span class="kn">import</span> <span class="n">get_and_merge_cmdsets</span><span class="p">,</span> <span class="n">generate_cmdset_providers</span>
+<span class="kn">from</span> <span class="nn">evennia.commands.cmdhandler</span> <span class="kn">import</span> <span class="n">generate_cmdset_providers</span><span class="p">,</span> <span class="n">get_and_merge_cmdsets</span>
 <span class="kn">from</span> <span class="nn">evennia.locks.lockhandler</span> <span class="kn">import</span> <span class="n">LockException</span>
 <span class="kn">from</span> <span class="nn">evennia.objects.models</span> <span class="kn">import</span> <span class="n">ObjectDB</span>
 <span class="kn">from</span> <span class="nn">evennia.prototypes</span> <span class="kn">import</span> <span class="n">menus</span> <span class="k">as</span> <span class="n">olc_menus</span>
@@ -131,7 +133,8 @@
 <span class="n">_FUNCPARSER</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">_ATTRFUNCPARSER</span> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="n">_KEY_REGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?P&lt;attr&gt;.*?)(?P&lt;key&gt;(\[.*\]\ *)+)?$&quot;</span><span class="p">)</span>
+<span class="c1"># _KEY_REGEX = re.compile(r&quot;(?P&lt;attr&gt;.*?)(?P&lt;key&gt;(\[.*\]\ *)+)?$&quot;)</span>
+<span class="n">_KEY_REGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?P&lt;attr&gt;[^\[]*)(?P&lt;key&gt;(\[[^\]]*\]\ *)+)?$&quot;</span><span class="p">)</span>
 
 <span class="c1"># limit symbol import for API</span>
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
@@ -165,7 +168,7 @@
 <span class="p">)</span>
 
 <span class="c1"># used by set</span>
-<span class="kn">from</span> <span class="nn">ast</span> <span class="kn">import</span> <span class="n">literal_eval</span> <span class="k">as</span> <span class="n">_LITERAL_EVAL</span>
+<span class="kn">from</span> <span class="nn">ast</span> <span class="kn">import</span> <span class="n">literal_eval</span> <span class="k">as</span> <span class="n">_LITERAL_EVAL</span>  <span class="c1"># noqa</span>
 
 <span class="n">LIST_APPEND_CHAR</span> <span class="o">=</span> <span class="s2">&quot;+&quot;</span>
 
@@ -256,7 +259,7 @@
                     <span class="n">attrs</span> <span class="o">=</span> <span class="n">_attrs</span>
                 <span class="c1"># store data</span>
                 <span class="n">obj_defs</span><span class="p">[</span><span class="n">iside</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">objdef</span><span class="p">,</span> <span class="s2">&quot;option&quot;</span><span class="p">:</span> <span class="n">option</span><span class="p">,</span> <span class="s2">&quot;aliases&quot;</span><span class="p">:</span> <span class="n">aliases</span><span class="p">})</span>
-                <span class="n">obj_attrs</span><span class="p">[</span><span class="n">iside</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">objdef</span><span class="p">,</span> <span class="s2">&quot;attrs&quot;</span><span class="p">:</span> <span class="n">attrs</span><span class="p">})</span>
+                <span class="n">obj_attrs</span><span class="p">[</span><span class="n">iside</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">objdef</span><span class="p">,</span> <span class="s2">&quot;attrs&quot;</span><span class="p">:</span> <span class="n">attrs</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="n">option</span><span class="p">})</span>
 
         <span class="c1"># store for future access</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lhs_objs</span> <span class="o">=</span> <span class="n">obj_defs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -266,26 +269,30 @@
 
 <div class="viewcode-block" id="ObjManipCommand.get_object_typeclass"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.ObjManipCommand.get_object_typeclass">[docs]</a>    <span class="k">def</span> <span class="nf">get_object_typeclass</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">obj_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="n">typeclass</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;cmd_create&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Builder&quot;</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Typeclass&quot;</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        This hook is called by build commands to determine which typeclass to use for a specific purpose. For instance,</span>
-<span class="sd">        when using dig, the system can use this to autodetect which kind of Room typeclass to use based on where the</span>
-<span class="sd">        builder is currently located.</span>
-
-<span class="sd">        Note: Although intended to be used with typeclasses, as long as this hook returns a class with a create method,</span>
-<span class="sd">            which accepts the same API as DefaultObject.create(), build commands and other places should take it.</span>
+<span class="sd">        This hook is called by build commands to determine which typeclass to use for a specific</span>
+<span class="sd">        purpose.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            obj_type (str, optional): The type of object that is being created. Defaults to &quot;object&quot;. Evennia provides</span>
-<span class="sd">                &quot;room&quot;, &quot;exit&quot;, and &quot;character&quot; by default, but this can be extended.</span>
-<span class="sd">            typeclass (str, optional): The typeclass that was requested by the player. Defaults to None.</span>
-<span class="sd">                Can also be an actual class.</span>
+<span class="sd">            obj_type (str, optional): The type of object that is being created. Defaults to</span>
+<span class="sd">                &quot;object&quot;. Evennia provides &quot;room&quot;, &quot;exit&quot;, and &quot;character&quot; by default, but this can be</span>
+<span class="sd">                extended.</span>
+<span class="sd">            typeclass (str, optional): The typeclass that was requested by the player. Defaults to</span>
+<span class="sd">                None.  Can also be an actual class.</span>
 <span class="sd">            method (str, optional): The method that is calling this hook. Defaults to &quot;cmd_create&quot;.</span>
 <span class="sd">                Others are &quot;cmd_dig&quot;, &quot;cmd_open&quot;, &quot;cmd_tunnel&quot;, etc.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            results_tuple (tuple[Optional[Builder], list[str]]): A tuple containing the typeclass to use and a list of</span>
-<span class="sd">                errors. (which might be empty.)</span>
+<span class="sd">            tuple: A tuple containing the typeclass to use and a list of errors. (which might be</span>
+<span class="sd">                empty.)</span>
+
+<span class="sd">        Notes:</span>
+<span class="sd">            Although intended to be used with typeclasses, as long as this hook returns a class with</span>
+<span class="sd">            a create method, which accepts the same API as DefaultObject.create(), build commands</span>
+<span class="sd">            and other places should take it. While not used by default, one could picture using this</span>
+<span class="sd">            for things like autodetecting which room to build next based on the current location.</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">found_typeclass</span> <span class="o">=</span> <span class="n">typeclass</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_typeclasses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">obj_type</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
@@ -315,10 +322,13 @@
 <span class="sd">      alias &lt;obj&gt; [= [alias[,alias,alias,...]]]</span>
 <span class="sd">      alias &lt;obj&gt; =</span>
 <span class="sd">      alias/category &lt;obj&gt; = [alias[,alias,...]:&lt;category&gt;</span>
+<span class="sd">      alias/delete &lt;obj&gt; = &lt;alias&gt;</span>
 
 <span class="sd">    Switches:</span>
 <span class="sd">      category - requires ending input with :category, to store the</span>
 <span class="sd">        given aliases with the given category.</span>
+<span class="sd">      delete - deletes all occurrences of the given alias, regardless</span>
+<span class="sd">        of category</span>
 
 <span class="sd">    Assigns aliases to an object so it can be referenced by more</span>
 <span class="sd">    than one name. Assign empty to remove all aliases from object. If</span>
@@ -332,7 +342,7 @@
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;@alias&quot;</span>
     <span class="n">aliases</span> <span class="o">=</span> <span class="s2">&quot;setobjalias&quot;</span>
-    <span class="n">switch_options</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">,)</span>
+    <span class="n">switch_options</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;delete&quot;</span><span class="p">)</span>
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(setobjalias) or perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Building&quot;</span>
 
@@ -349,12 +359,12 @@
             <span class="k">return</span>
         <span class="n">objname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lhs</span>
 
-        <span class="c1"># Find the object to receive aliases</span>
+        <span class="c1"># Find the object to receive/delete aliases</span>
         <span class="n">obj</span> <span class="o">=</span> <span class="n">caller</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">objname</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">obj</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="c1"># no =, so we just list aliases on object.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="s2">&quot;delete&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
+            <span class="c1"># no =, and not deleting, so we just list aliases on object.</span>
             <span class="n">aliases</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">return_key_and_category</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">aliases</span><span class="p">:</span>
                 <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
@@ -377,7 +387,9 @@
             <span class="k">return</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
-            <span class="c1"># we have given an empty =, so delete aliases</span>
+            <span class="c1"># we have given an empty =, so delete aliases.</span>
+            <span class="c1"># as a side-effect, &#39;alias/delete obj&#39; and &#39;alias/delete obj=&#39;</span>
+            <span class="c1"># will also be caught here, which is fine</span>
             <span class="n">old_aliases</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">old_aliases</span><span class="p">:</span>
                 <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
@@ -387,6 +399,19 @@
                 <span class="n">obj</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;No aliases to clear.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="s2">&quot;delete&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
+            <span class="c1"># delete all matching keys, regardless of category</span>
+            <span class="n">existed</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">category</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">return_key_and_category</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
+                    <span class="n">obj</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+                    <span class="n">existed</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">if</span> <span class="n">existed</span><span class="p">:</span>
+                <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Alias &#39;</span><span class="si">%s</span><span class="s2">&#39; deleted from </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> has no alias &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">))</span>
             <span class="k">return</span>
 
         <span class="n">category</span> <span class="o">=</span> <span class="kc">None</span>
@@ -514,7 +539,7 @@
 <span class="sd">    Usage:</span>
 <span class="sd">      cpattr[/switch] &lt;obj&gt;/&lt;attr&gt; = &lt;obj1&gt;/&lt;attr1&gt; [,&lt;obj2&gt;/&lt;attr2&gt;,&lt;obj3&gt;/&lt;attr3&gt;,...]</span>
 <span class="sd">      cpattr[/switch] &lt;obj&gt;/&lt;attr&gt; = &lt;obj1&gt; [,&lt;obj2&gt;,&lt;obj3&gt;,...]</span>
-<span class="sd">      cpattr[/switch] &lt;attr&gt; = &lt;obj1&gt;/&lt;attr1&gt; [,&lt;obj2&gt;/&lt;attr2&gt;,&lt;obj3&gt;/&lt;attr3&gt;,...]</span>
+<span class="sd">      cpattr[/switch] &lt;attr&gt;[:category] = &lt;obj1&gt;/&lt;attr1&gt;[:category] [,&lt;obj2&gt;/&lt;attr2&gt;,&lt;obj3&gt;/&lt;attr3&gt;,...]</span>
 <span class="sd">      cpattr[/switch] &lt;attr&gt; = &lt;obj1&gt;[,&lt;obj2&gt;,&lt;obj3&gt;,...]</span>
 
 <span class="sd">    Switches:</span>
@@ -526,6 +551,11 @@
 <span class="sd">      copies the coolness attribute (defined on yourself), to attributes</span>
 <span class="sd">      on Anna and Tom.</span>
 
+<span class="sd">      cpattr box/width:dimension = tube/width:dimension</span>
+<span class="sd">      -&gt;</span>
+<span class="sd">      copies the box&#39;s width attribute in the dimension category, to be the</span>
+<span class="sd">      tube&#39;s width attribute in the dimension category</span>
+
 <span class="sd">    Copy the attribute one object to one or more attributes on another object.</span>
 <span class="sd">    If you don&#39;t supply a source object, yourself is used.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -535,7 +565,7 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(cpattr) or perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Building&quot;</span>
 
-<div class="viewcode-block" id="CmdCpAttr.check_from_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.check_from_attr">[docs]</a>    <span class="k">def</span> <span class="nf">check_from_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">clear</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdCpAttr.check_from_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.check_from_attr">[docs]</a>    <span class="k">def</span> <span class="nf">check_from_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clear</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Hook for overriding on subclassed commands. Checks to make sure a</span>
 <span class="sd">        caller can copy the attr from the object in question. If not, return a</span>
@@ -546,7 +576,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="CmdCpAttr.check_to_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.check_to_attr">[docs]</a>    <span class="k">def</span> <span class="nf">check_to_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdCpAttr.check_to_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.check_to_attr">[docs]</a>    <span class="k">def</span> <span class="nf">check_to_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Hook for overriding on subclassed commands. Checks to make sure a</span>
 <span class="sd">        caller can write to the specified attribute on the specified object.</span>
@@ -555,22 +585,24 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="CmdCpAttr.check_has_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.check_has_attr">[docs]</a>    <span class="k">def</span> <span class="nf">check_has_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdCpAttr.check_has_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.check_has_attr">[docs]</a>    <span class="k">def</span> <span class="nf">check_has_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Hook for overriding on subclassed commands. Do any preprocessing</span>
 <span class="sd">        required and verify an object has an attribute.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">attr</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> doesn&#39;t have an attribute </span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> doesn&#39;t have an attribute </span><span class="si">{</span><span class="n">attr</span><span class="si">}{</span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">category</span><span class="si">}</span><span class="s1">]&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">category</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
             <span class="k">return</span> <span class="kc">False</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="CmdCpAttr.get_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.get_attr">[docs]</a>    <span class="k">def</span> <span class="nf">get_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdCpAttr.get_attr"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.get_attr">[docs]</a>    <span class="k">def</span> <span class="nf">get_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Hook for overriding on subclassed commands. Do any preprocessing</span>
 <span class="sd">        required and get the attribute from the object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="CmdCpAttr.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdCpAttr.func">[docs]</a>    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -580,7 +612,7 @@
 
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
             <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Usage:</span>
-<span class="s2">            cpattr[/switch] &lt;obj&gt;/&lt;attr&gt; = &lt;obj1&gt;/&lt;attr1&gt; [,&lt;obj2&gt;/&lt;attr2&gt;,&lt;obj3&gt;/&lt;attr3&gt;,...]</span>
+<span class="s2">            cpattr[/switch] &lt;obj&gt;/&lt;attr&gt;[:category] = &lt;obj1&gt;/&lt;attr1&gt; [,&lt;obj2&gt;/&lt;attr2&gt;,&lt;obj3&gt;/&lt;attr3&gt;,...]</span>
 <span class="s2">            cpattr[/switch] &lt;obj&gt;/&lt;attr&gt; = &lt;obj1&gt; [,&lt;obj2&gt;,&lt;obj3&gt;,...]</span>
 <span class="s2">            cpattr[/switch] &lt;attr&gt; = &lt;obj1&gt;/&lt;attr1&gt; [,&lt;obj2&gt;/&lt;attr2&gt;,&lt;obj3&gt;/&lt;attr3&gt;,...]</span>
 <span class="s2">            cpattr[/switch] &lt;attr&gt; = &lt;obj1&gt;[,&lt;obj2&gt;,&lt;obj3&gt;,...]&quot;&quot;&quot;</span>
@@ -591,6 +623,8 @@
         <span class="n">to_objs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs_objattr</span>
         <span class="n">from_obj_name</span> <span class="o">=</span> <span class="n">lhs_objattr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
         <span class="n">from_obj_attrs</span> <span class="o">=</span> <span class="n">lhs_objattr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;attrs&quot;</span><span class="p">]</span>
+        <span class="n">from_obj_category</span> <span class="o">=</span> <span class="n">lhs_objattr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;category&quot;</span><span class="p">]</span>  <span class="c1"># None if unset</span>
+        <span class="n">from_obj_category_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">from_obj_category</span><span class="si">}</span><span class="s2">]&quot;</span> <span class="k">if</span> <span class="n">from_obj_category</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">from_obj_attrs</span><span class="p">:</span>
             <span class="c1"># this means the from_obj_name is actually an attribute</span>
@@ -607,11 +641,13 @@
             <span class="n">clear</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">clear</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_from_attr</span><span class="p">(</span><span class="n">from_obj</span><span class="p">,</span> <span class="n">from_obj_attrs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">clear</span><span class="o">=</span><span class="n">clear</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_from_attr</span><span class="p">(</span>
+            <span class="n">from_obj</span><span class="p">,</span> <span class="n">from_obj_attrs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">clear</span><span class="o">=</span><span class="n">clear</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">from_obj_category</span>
+        <span class="p">):</span>
             <span class="k">return</span>
 
         <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">from_obj_attrs</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_has_attr</span><span class="p">(</span><span class="n">from_obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_has_attr</span><span class="p">(</span><span class="n">from_obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">from_obj_category</span><span class="p">):</span>
                 <span class="k">return</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">from_obj_attrs</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">from_obj_attrs</span><span class="p">)))</span> <span class="ow">and</span> <span class="n">clear</span><span class="p">:</span>
@@ -619,10 +655,11 @@
             <span class="k">return</span>
 
         <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
-
         <span class="k">for</span> <span class="n">to_obj</span> <span class="ow">in</span> <span class="n">to_objs</span><span class="p">:</span>
             <span class="n">to_obj_name</span> <span class="o">=</span> <span class="n">to_obj</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
             <span class="n">to_obj_attrs</span> <span class="o">=</span> <span class="n">to_obj</span><span class="p">[</span><span class="s2">&quot;attrs&quot;</span><span class="p">]</span>
+            <span class="n">to_obj_category</span> <span class="o">=</span> <span class="n">to_obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+            <span class="n">to_obj_category_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">to_obj_category</span><span class="si">}</span><span class="s2">]&quot;</span> <span class="k">if</span> <span class="n">to_obj_category</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
             <span class="n">to_obj</span> <span class="o">=</span> <span class="n">caller</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">to_obj_name</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">to_obj</span><span class="p">:</span>
                 <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Could not find object &#39;</span><span class="si">{</span><span class="n">to_obj_name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
@@ -634,19 +671,19 @@
                     <span class="c1"># if there are too few attributes given</span>
                     <span class="c1"># on the to_obj, we copy the original name instead.</span>
                     <span class="n">to_attr</span> <span class="o">=</span> <span class="n">from_attr</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_to_attr</span><span class="p">(</span><span class="n">to_obj</span><span class="p">,</span> <span class="n">to_attr</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_to_attr</span><span class="p">(</span><span class="n">to_obj</span><span class="p">,</span> <span class="n">to_attr</span><span class="p">,</span> <span class="n">to_obj_category</span><span class="p">):</span>
                     <span class="k">continue</span>
-                <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attr</span><span class="p">(</span><span class="n">from_obj</span><span class="p">,</span> <span class="n">from_attr</span><span class="p">)</span>
-                <span class="n">to_obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">to_attr</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attr</span><span class="p">(</span><span class="n">from_obj</span><span class="p">,</span> <span class="n">from_attr</span><span class="p">,</span> <span class="n">from_obj_category</span><span class="p">)</span>
+                <span class="n">to_obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">to_attr</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">to_obj_category</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">clear</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">from_obj</span> <span class="o">==</span> <span class="n">to_obj</span> <span class="ow">and</span> <span class="n">from_attr</span> <span class="o">==</span> <span class="n">to_attr</span><span class="p">):</span>
-                    <span class="n">from_obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">from_attr</span><span class="p">)</span>
+                    <span class="n">from_obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">from_attr</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">from_obj_category</span><span class="p">)</span>
                     <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                        <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Moved </span><span class="si">{</span><span class="n">from_obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">from_attr</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">to_obj_name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">to_attr</span><span class="si">}</span><span class="s2">. (value:&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Moved </span><span class="si">{</span><span class="n">from_obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">from_attr</span><span class="si">}{</span><span class="n">from_obj_category_str</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">to_obj_name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">to_attr</span><span class="si">}{</span><span class="n">to_obj_category_str</span><span class="si">}</span><span class="s2">. (value:&quot;</span>
                         <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
                     <span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                        <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Copied </span><span class="si">{</span><span class="n">from_obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">from_attr</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">to_obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">to_attr</span><span class="si">}</span><span class="s2">. (value:&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Copied </span><span class="si">{</span><span class="n">from_obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">from_attr</span><span class="si">}{</span><span class="n">from_obj_category_str</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">to_obj</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">to_attr</span><span class="si">}{</span><span class="n">to_obj_category_str</span><span class="si">}</span><span class="s2">. (value:&quot;</span>
                         <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span>
                     <span class="p">)</span>
         <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">))</span></div></div>
@@ -1098,7 +1135,7 @@
         <span class="k">if</span> <span class="n">new_room</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
             <span class="n">alias_string</span> <span class="o">=</span> <span class="s2">&quot; (</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">new_room</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
 
-        <span class="n">room_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Created room </span><span class="si">{</span><span class="n">new_room</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">new_room</span><span class="o">.</span><span class="n">dbref</span><span class="si">}</span><span class="s2">)</span><span class="si">{</span><span class="n">alias_string</span><span class="si">}</span><span class="s2"> of type </span><span class="si">{</span><span class="n">new_room</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="n">room_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Created room </span><span class="si">{</span><span class="n">new_room</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">new_room</span><span class="o">.</span><span class="n">dbref</span><span class="si">}</span><span class="s2">)</span><span class="si">{</span><span class="n">alias_string</span><span class="si">}</span><span class="s2"> of type </span><span class="si">{</span><span class="n">new_room</span><span class="o">.</span><span class="n">typeclass_path</span><span class="si">}</span><span class="s2">.&quot;</span>
 
         <span class="c1"># create exit to room</span>
 
@@ -1475,7 +1512,7 @@
             <span class="n">obj</span><span class="o">.</span><span class="n">home</span> <span class="o">=</span> <span class="n">new_home</span>
             <span class="k">if</span> <span class="n">old_home</span><span class="p">:</span>
                 <span class="n">string</span> <span class="o">=</span> <span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;Home location of </span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2"> was changed from </span><span class="si">{</span><span class="n">old_home</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">old_home</span><span class="o">.</span><span class="n">dbref</span><span class="si">}</span><span class="s2"> to&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Home location of </span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2"> was changed from </span><span class="si">{</span><span class="n">old_home</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">old_home</span><span class="o">.</span><span class="n">dbref</span><span class="si">}</span><span class="s2">) to&quot;</span>
                     <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">new_home</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">new_home</span><span class="o">.</span><span class="n">dbref</span><span class="si">}</span><span class="s2">).&quot;</span>
                 <span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
@@ -2897,8 +2934,12 @@
             <span class="n">_FUNCPARSER</span> <span class="o">=</span> <span class="n">funcparser</span><span class="o">.</span><span class="n">FuncParser</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">FUNCPARSER_OUTGOING_MESSAGES_MODULES</span><span class="p">)</span>
 
         <span class="n">key</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">db_key</span><span class="p">,</span> <span class="n">attr</span><span class="o">.</span><span class="n">db_category</span><span class="p">,</span> <span class="n">attr</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">valuetype</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">attr</span><span class="o">.</span><span class="n">strvalue</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">strvalue</span>
+            <span class="n">valuetype</span> <span class="o">=</span> <span class="s2">&quot; |B[strvalue]|n&quot;</span>
         <span class="n">typ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_attribute_value_type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-        <span class="n">typ</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot; |B[type: </span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2">]|n&quot;</span> <span class="k">if</span> <span class="n">typ</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot; |B[type:</span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2">]|n</span><span class="si">{</span><span class="n">valuetype</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">typ</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">valuetype</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">_FUNCPARSER</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">ansi_raw</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="n">escape</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">(</span>
@@ -2912,8 +2953,12 @@
             <span class="n">_FUNCPARSER</span> <span class="o">=</span> <span class="n">funcparser</span><span class="o">.</span><span class="n">FuncParser</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">FUNCPARSER_OUTGOING_MESSAGES_MODULES</span><span class="p">)</span>
 
         <span class="n">key</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">db_key</span><span class="p">,</span> <span class="n">attr</span><span class="o">.</span><span class="n">db_category</span><span class="p">,</span> <span class="n">attr</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">valuetype</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">attr</span><span class="o">.</span><span class="n">strvalue</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">strvalue</span>
+            <span class="n">valuetype</span> <span class="o">=</span> <span class="s2">&quot; |B[strvalue]|n&quot;</span>
         <span class="n">typ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_attribute_value_type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-        <span class="n">typ</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot; |B[type: </span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2">]|n&quot;</span> <span class="k">if</span> <span class="n">typ</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot; |B[type: </span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2">]|n</span><span class="si">{</span><span class="n">valuetype</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">typ</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">valuetype</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">to_str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">_FUNCPARSER</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">ansi_raw</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="n">escape</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
@@ -3035,9 +3080,9 @@
         <span class="p">):</span>
             <span class="n">objdata</span><span class="p">[</span><span class="s2">&quot;Stored Cmdset(s)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_stored_cmdsets</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
             <span class="n">objdata</span><span class="p">[</span><span class="s2">&quot;Merged Cmdset(s)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_merged_cmdsets</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">current_cmdset</span><span class="p">)</span>
-            <span class="n">objdata</span><span class="p">[</span>
-                <span class="sa">f</span><span class="s2">&quot;Commands available to </span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2"> (result of Merged Cmdset(s))&quot;</span>
-            <span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_current_cmds</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">current_cmdset</span><span class="p">)</span>
+            <span class="n">objdata</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Commands available to </span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2"> (result of Merged Cmdset(s))&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">format_current_cmds</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">current_cmdset</span><span class="p">)</span>
+            <span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">object_type</span> <span class="o">==</span> <span class="s2">&quot;script&quot;</span><span class="p">:</span>
             <span class="n">objdata</span><span class="p">[</span><span class="s2">&quot;Description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_script_desc</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
             <span class="n">objdata</span><span class="p">[</span><span class="s2">&quot;Persistent&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_script_is_persistent</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
@@ -3352,9 +3397,15 @@
                 <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">   |RNo match found for &#39;</span><span class="si">{</span><span class="n">searchstring</span><span class="si">}</span><span class="s2">&#39; in #dbref interval.|n&quot;</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-                <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">|g   </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">|n&quot;</span>
+                <span class="n">string</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">|g   </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get_extra_display_name_info</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">|n&quot;</span>
+                <span class="p">)</span>
                 <span class="k">if</span> <span class="s2">&quot;loc&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_account</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">location</span><span class="p">:</span>
-                    <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot; (|wlocation|n: |g</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">|n)&quot;</span>
+                    <span class="n">string</span> <span class="o">+=</span> <span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot; (|wlocation|n: |g</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">get_extra_display_name_info</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">|n)&quot;</span>
+                    <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># Not an account/dbref search but a wider search; build a queryset.</span>
             <span class="c1"># Searches for key and aliases</span>
@@ -3418,14 +3469,23 @@
                 <span class="n">string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;|w</span><span class="si">{</span><span class="n">header</span><span class="si">}</span><span class="s2">|n(#</span><span class="si">{</span><span class="n">low</span><span class="si">}</span><span class="s2">-#</span><span class="si">{</span><span class="n">high</span><span class="si">}{</span><span class="n">restrictions</span><span class="si">}</span><span class="s2">):&quot;</span>
                 <span class="n">res</span> <span class="o">=</span> <span class="kc">None</span>
                 <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
-                    <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">   |g</span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">|n&quot;</span>
+                    <span class="n">string</span> <span class="o">+=</span> <span class="p">(</span>
+                        <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot; |g</span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">get_extra_display_name_info</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2"> -&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">path</span><span class="si">}</span><span class="s2">|n&quot;</span>
+                    <span class="p">)</span>
                 <span class="k">if</span> <span class="p">(</span>
                     <span class="s2">&quot;loc&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span>
                     <span class="ow">and</span> <span class="n">nresults</span> <span class="o">==</span> <span class="mi">1</span>
                     <span class="ow">and</span> <span class="n">res</span>
                     <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
                 <span class="p">):</span>
-                    <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot; (|wlocation|n: |g</span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">|n)&quot;</span>
+                    <span class="n">string</span> <span class="o">+=</span> <span class="p">(</span>
+                        <span class="s2">&quot; (|wlocation|n:&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot; |g</span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">get_extra_display_name_info</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">|n)&quot;</span>
+                    <span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;|wNo Matches|n(#</span><span class="si">{</span><span class="n">low</span><span class="si">}</span><span class="s2">-#</span><span class="si">{</span><span class="n">high</span><span class="si">}{</span><span class="n">restrictions</span><span class="si">}</span><span class="s2">):&quot;</span>
                 <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">   |RNo matches found for &#39;</span><span class="si">{</span><span class="n">searchstring</span><span class="si">}</span><span class="s2">&#39;|n&quot;</span>
@@ -3485,10 +3545,12 @@
 
             <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;#</span><span class="si">{</span><span class="n">script</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">script</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">script</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">dbref</span><span class="si">}</span><span class="s2">)&quot;</span>
-                <span class="k">if</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="s2">&quot;obj&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">script</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
-                <span class="k">else</span> <span class="s2">&quot;&lt;Global&gt;&quot;</span><span class="p">,</span>
-                <span class="n">script</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+                <span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">script</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">script</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">dbref</span><span class="si">}</span><span class="s2">)&quot;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="s2">&quot;obj&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">script</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
+                    <span class="k">else</span> <span class="s2">&quot;&lt;Global&gt;&quot;</span>
+                <span class="p">),</span>
+                <span class="n">script</span><span class="o">.</span><span class="n">db_key</span><span class="p">,</span>
                 <span class="n">script</span><span class="o">.</span><span class="n">interval</span> <span class="k">if</span> <span class="n">script</span><span class="o">.</span><span class="n">interval</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span>
                 <span class="n">nextrep</span><span class="p">,</span>
                 <span class="n">rept</span><span class="p">,</span>
@@ -3509,17 +3571,20 @@
 <span class="sd">      script[/start||stop] &lt;obj&gt; = [&lt;script.path or script-key&gt;]</span>
 
 <span class="sd">    Switches:</span>
-<span class="sd">      start - start/unpause an existing script&#39;s timer.</span>
-<span class="sd">      stop - stops an existing script&#39;s timer</span>
-<span class="sd">      pause - pause a script&#39;s timer</span>
+<span class="sd">      start  - start/unpause an existing script&#39;s timer.</span>
+<span class="sd">      stop   - stops an existing script&#39;s timer</span>
+<span class="sd">      pause  - pause a script&#39;s timer</span>
 <span class="sd">      delete - deletes script. This will also stop the timer as needed</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        script                            - list all scripts</span>
-<span class="sd">        script foo.bar.Script             - create a new global Script</span>
-<span class="sd">        script/pause foo.bar.Script       - pause global script</span>
-<span class="sd">        script scriptname|#dbref          - examine named existing global script</span>
-<span class="sd">        script/delete #dbref[-#dbref]     - delete script or range by #dbref</span>
+<span class="sd">        script                             - list all scripts</span>
+<span class="sd">        script key:foo.bar.Script         - create a new global Script with typeclass</span>
+<span class="sd">                                             and key &#39;key&#39;</span>
+<span class="sd">        script foo.bar.Script              - create a new global Script with typeclass</span>
+<span class="sd">                                             (key taken from typeclass or auto-generated)</span>
+<span class="sd">        script/pause foo.bar.Script        - pause global script</span>
+<span class="sd">        script typeclass|name|#dbref       - examine named existing global script</span>
+<span class="sd">        script/delete #dbref[-#dbref]      - delete script or range by #dbref</span>
 
 <span class="sd">        script myobj =                    - list all scripts on object</span>
 <span class="sd">        script myobj = foo.bar.Script     - create and assign script to object</span>
@@ -3544,14 +3609,13 @@
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;@scripts&quot;</span>
     <span class="n">aliases</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@script&quot;</span><span class="p">]</span>
-    <span class="n">switch_options</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;create&quot;</span><span class="p">,</span> <span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">,</span> <span class="s2">&quot;pause&quot;</span><span class="p">,</span> <span class="s2">&quot;delete&quot;</span><span class="p">)</span>
+    <span class="n">switch_options</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="s2">&quot;stop&quot;</span><span class="p">,</span> <span class="s2">&quot;pause&quot;</span><span class="p">,</span> <span class="s2">&quot;delete&quot;</span><span class="p">)</span>
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(scripts) or perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;System&quot;</span>
 
     <span class="n">excluded_typeclass_paths</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;evennia.prototypes.prototypes.DbPrototype&quot;</span><span class="p">]</span>
 
     <span class="n">switch_mapping</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;create&quot;</span><span class="p">:</span> <span class="s2">&quot;|gCreated|n&quot;</span><span class="p">,</span>
         <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;|gStarted|n&quot;</span><span class="p">,</span>
         <span class="s2">&quot;stop&quot;</span><span class="p">:</span> <span class="s2">&quot;|RStopped|n&quot;</span><span class="p">,</span>
         <span class="s2">&quot;pause&quot;</span><span class="p">:</span> <span class="s2">&quot;|Paused|n&quot;</span><span class="p">,</span>
@@ -3560,21 +3624,32 @@
     <span class="c1"># never show these script types</span>
     <span class="n">hide_script_paths</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;evennia.prototypes.prototypes.DbPrototype&quot;</span><span class="p">,)</span>
 
-    <span class="k">def</span> <span class="nf">_search_script</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-        <span class="c1"># test first if this is a script match</span>
-        <span class="n">scripts</span> <span class="o">=</span> <span class="n">ScriptDB</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_all_scripts</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">args</span><span class="p">)</span><span class="o">.</span><span class="n">exclude</span><span class="p">(</span>
-            <span class="n">db_typeclass_path__in</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hide_script_paths</span>
-        <span class="p">)</span>
-        <span class="k">if</span> <span class="n">scripts</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">scripts</span>
-        <span class="c1"># try typeclass path</span>
+    <span class="k">def</span> <span class="nf">_search_script</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># see if a dbref was provided</span>
+        <span class="k">if</span> <span class="n">dbref</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span><span class="p">):</span>
+            <span class="n">scripts</span> <span class="o">=</span> <span class="n">ScriptDB</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_all_scripts</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">scripts</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">scripts</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No script found with dbref </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">InterruptCommand</span>
+
+        <span class="c1"># if we provided a key, we must find an exact match, otherwise we&#39;re creating that anew</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">key_query</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ScriptDB</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+                <span class="n">db_key__iexact</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key_query</span><span class="p">,</span> <span class="n">db_typeclass_path__iendswith</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">exclude</span><span class="p">(</span><span class="n">db_typeclass_path__in</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hide_script_paths</span><span class="p">)</span>
+
+        <span class="c1"># the more general case - try typeclass path</span>
         <span class="n">scripts</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="n">ScriptDB</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">db_typeclass_path__iendswith</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">ScriptDB</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">db_typeclass_path__iendswith</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span><span class="p">)</span>
             <span class="o">.</span><span class="n">exclude</span><span class="p">(</span><span class="n">db_typeclass_path__in</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hide_script_paths</span><span class="p">)</span>
             <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
         <span class="p">)</span>
         <span class="k">if</span> <span class="n">scripts</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">scripts</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span>
         <span class="k">if</span> <span class="s2">&quot;-&quot;</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
             <span class="c1"># may be a dbref-range</span>
             <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span> <span class="o">=</span> <span class="p">(</span><span class="n">dbref</span><span class="p">(</span><span class="n">part</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
@@ -3586,6 +3661,29 @@
                 <span class="p">)</span>
                 <span class="k">if</span> <span class="n">scripts</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">scripts</span>
+
+<div class="viewcode-block" id="CmdScripts.parse"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdScripts.parse">[docs]</a>    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">def</span> <span class="nf">_separate_key_typeclass</span><span class="p">(</span><span class="n">part</span><span class="p">):</span>
+            <span class="n">part1</span><span class="p">,</span> <span class="o">*</span><span class="n">part2</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">part1</span><span class="p">,</span> <span class="n">part2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">part2</span> <span class="k">else</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">part1</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
+            <span class="c1"># arg with &quot;=&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">obj_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lhs</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key_query</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span> <span class="o">=</span> <span class="n">_separate_key_typeclass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># an empty &quot;=&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">obj_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lhs</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key_query</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># arg without &quot;=&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">obj_query</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key_query</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span> <span class="o">=</span> <span class="n">_separate_key_typeclass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="CmdScripts.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.building.html#evennia.commands.default.building.CmdScripts.func">[docs]</a>    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;implement method&quot;&quot;&quot;</span>
@@ -3602,20 +3700,8 @@
             <span class="k">return</span>
 
         <span class="c1"># find script or object to operate on</span>
-        <span class="n">scripts</span><span class="p">,</span> <span class="n">obj</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
-            <span class="n">obj_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lhs</span>
-            <span class="n">script_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span>
-        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="c1"># an empty &quot;=&quot;</span>
-            <span class="n">obj_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lhs</span>
-            <span class="n">script_query</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">obj_query</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="n">script_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span>
-
-        <span class="n">scripts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_search_script</span><span class="p">(</span><span class="n">script_query</span><span class="p">)</span> <span class="k">if</span> <span class="n">script_query</span> <span class="k">else</span> <span class="kc">None</span>
-        <span class="n">objects</span> <span class="o">=</span> <span class="n">caller</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">obj_query</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">obj_query</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">scripts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_search_script</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">objects</span> <span class="o">=</span> <span class="n">caller</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj_query</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj_query</span> <span class="k">else</span> <span class="kc">None</span>
         <span class="n">obj</span> <span class="o">=</span> <span class="n">objects</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">objects</span> <span class="k">else</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
@@ -3624,7 +3710,7 @@
                 <span class="c1"># we have an object</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
                     <span class="c1"># creation mode</span>
-                    <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">scripts</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">,</span> <span class="n">autostart</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">scripts</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key_query</span><span class="p">,</span> <span class="n">autostart</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
                         <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
                             <span class="sa">f</span><span class="s2">&quot;Script |w</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="si">}</span><span class="s2">|n successfully added and &quot;</span>
                             <span class="sa">f</span><span class="s2">&quot;started on </span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
@@ -3652,7 +3738,9 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># create global script</span>
                 <span class="k">try</span><span class="p">:</span>
-                    <span class="n">new_script</span> <span class="o">=</span> <span class="n">create</span><span class="o">.</span><span class="n">create_script</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+                    <span class="n">new_script</span> <span class="o">=</span> <span class="n">create</span><span class="o">.</span><span class="n">create_script</span><span class="p">(</span>
+                        <span class="n">typeclass</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">typeclass_query</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key_query</span>
+                    <span class="p">)</span>
                 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
                     <span class="n">logger</span><span class="o">.</span><span class="n">log_trace</span><span class="p">()</span>
                     <span class="n">new_script</span> <span class="o">=</span> <span class="kc">None</span>
@@ -3971,7 +4059,7 @@
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;@tag&quot;</span>
     <span class="n">aliases</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@tags&quot;</span><span class="p">]</span>
-    <span class="n">options</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;search&quot;</span><span class="p">,</span> <span class="s2">&quot;del&quot;</span><span class="p">)</span>
+    <span class="n">switch_options</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;search&quot;</span><span class="p">,</span> <span class="s2">&quot;del&quot;</span><span class="p">)</span>
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(tag) or perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Building&quot;</span>
     <span class="n">arg_regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(/\w+?(\s|$))|\s|$&quot;</span>
@@ -4637,7 +4725,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

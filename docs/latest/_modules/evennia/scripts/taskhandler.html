@@ -71,13 +71,15 @@
   
     <li><a href="taskhandler.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -294,7 +296,6 @@
 
 
 <div class="viewcode-block" id="TaskHandler"><a class="viewcode-back" href="../../../api/evennia.scripts.taskhandler.html#evennia.scripts.taskhandler.TaskHandler">[docs]</a><span class="k">class</span> <span class="nc">TaskHandler</span><span class="p">:</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A light singleton wrapper allowing to access permanent tasks.</span>
 
 <span class="sd">    When `utils.delay` is called, the task handler is used to create</span>
@@ -341,7 +342,12 @@
                     <span class="n">to_save</span> <span class="o">=</span> <span class="kc">True</span>
                     <span class="k">continue</span>
 
-                <span class="n">callback</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">callback</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="n">log_err</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;TaskHandler: Unable to load task </span><span class="si">{</span><span class="n">task_id</span><span class="si">}</span><span class="s2"> (disabling it): </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">to_save</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">continue</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">tasks</span><span class="p">[</span><span class="n">task_id</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stale_timeout</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># cleanup stale tasks.</span>
@@ -724,7 +730,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

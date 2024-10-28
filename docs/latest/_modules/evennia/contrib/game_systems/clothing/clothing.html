@@ -71,13 +71,15 @@
   
     <li><a href="clothing.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -162,13 +164,23 @@
 <span class="sd">    wear shirt</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 
 <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 
 <span class="kn">from</span> <span class="nn">evennia</span> <span class="kn">import</span> <span class="n">DefaultCharacter</span><span class="p">,</span> <span class="n">DefaultObject</span><span class="p">,</span> <span class="n">default_cmds</span>
 <span class="kn">from</span> <span class="nn">evennia.commands.default.muxcommand</span> <span class="kn">import</span> <span class="n">MuxCommand</span>
-<span class="kn">from</span> <span class="nn">evennia.utils</span> <span class="kn">import</span> <span class="n">at_search_result</span><span class="p">,</span> <span class="n">evtable</span><span class="p">,</span> <span class="n">inherits_from</span><span class="p">,</span> <span class="n">iter_to_str</span>
+<span class="kn">from</span> <span class="nn">evennia.utils</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">at_search_result</span><span class="p">,</span>
+    <span class="n">crop</span><span class="p">,</span>
+    <span class="n">evtable</span><span class="p">,</span>
+    <span class="n">group_objects_by_key_and_desc</span><span class="p">,</span>
+    <span class="n">inherits_from</span><span class="p">,</span>
+    <span class="n">int2str</span><span class="p">,</span>
+    <span class="n">iter_to_str</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">evennia.utils.ansi</span> <span class="kn">import</span> <span class="n">raw</span> <span class="k">as</span> <span class="n">raw_ansi</span>
 
 <span class="c1"># Options start here.</span>
 <span class="c1"># Maximum character length of &#39;wear style&#39; strings, or None for unlimited.</span>
@@ -558,7 +570,8 @@
                 <span class="k">return</span>
             <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">WEARSTYLE_MAXLENGTH</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;Please keep your wear style message to less than </span><span class="si">{</span><span class="n">WEARSTYLE_MAXLENGTH</span><span class="si">}</span><span class="s2"> characters.&quot;</span>
+                    <span class="s2">&quot;Please keep your wear style message to less than&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">WEARSTYLE_MAXLENGTH</span><span class="si">}</span><span class="s2"> characters.&quot;</span>
                 <span class="p">)</span>
                 <span class="k">return</span>
             <span class="k">else</span><span class="p">:</span>
@@ -606,6 +619,9 @@
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;clothing&quot;</span>
 
 <div class="viewcode-block" id="CmdRemove.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.clothing.clothing.html#evennia.contrib.game_systems.clothing.clothing.CmdRemove.func">[docs]</a>    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Usage: remove &lt;worn clothing object&gt;&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
         <span class="n">clothing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">candidates</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">clothing</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;You don&#39;t have anything like that.&quot;</span><span class="p">)</span>
@@ -742,34 +758,37 @@
 
         <span class="n">message_list</span> <span class="o">=</span> <span class="p">[]</span>
 
+        <span class="c1"># all our items</span>
         <span class="n">items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">contents</span>
 
-        <span class="n">carry_table</span> <span class="o">=</span> <span class="n">evtable</span><span class="o">.</span><span class="n">EvTable</span><span class="p">(</span><span class="n">border</span><span class="o">=</span><span class="s2">&quot;header&quot;</span><span class="p">)</span>
-        <span class="n">wear_table</span> <span class="o">=</span> <span class="n">evtable</span><span class="o">.</span><span class="n">EvTable</span><span class="p">(</span><span class="n">border</span><span class="o">=</span><span class="s2">&quot;header&quot;</span><span class="p">)</span>
-
+        <span class="c1"># carried items</span>
         <span class="n">carried</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">worn</span><span class="p">]</span>
-        <span class="n">worn</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">worn</span><span class="p">]</span>
+        <span class="n">carry_table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">styled_table</span><span class="p">(</span><span class="n">border</span><span class="o">=</span><span class="s2">&quot;header&quot;</span><span class="p">)</span>
 
-        <span class="n">message_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;|wYou are carrying:|n&quot;</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">carried</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">group_objects_by_key_and_desc</span><span class="p">(</span><span class="n">carried</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">):</span>
             <span class="n">carry_table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span>
-                <span class="n">item</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">),</span> <span class="n">item</span><span class="o">.</span><span class="n">get_display_desc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">)</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">|n&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">|n&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">crop</span><span class="p">(</span><span class="n">raw_ansi</span><span class="p">(</span><span class="n">desc</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
             <span class="p">)</span>
-        <span class="k">if</span> <span class="n">carry_table</span><span class="o">.</span><span class="n">nrows</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">carry_table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="s2">&quot;Nothing.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="n">message_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">carry_table</span><span class="p">))</span>
+        <span class="n">message_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+            <span class="p">[</span><span class="s2">&quot;|wYou are carrying:|n&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">carry_table</span><span class="p">)</span> <span class="k">if</span> <span class="n">carry_table</span><span class="o">.</span><span class="n">nrows</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot; Nothing.&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
 
-        <span class="n">message_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;|wYou are wearing:|n&quot;</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">worn</span><span class="p">:</span>
-            <span class="n">item_name</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">covered_by</span><span class="p">:</span>
-                <span class="n">item_name</span> <span class="o">+=</span> <span class="s2">&quot; (hidden)&quot;</span>
-            <span class="n">wear_table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="n">item_name</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">get_display_desc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">wear_table</span><span class="o">.</span><span class="n">nrows</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">wear_table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="s2">&quot;Nothing.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="n">message_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">wear_table</span><span class="p">))</span>
+        <span class="c1"># worn items</span>
+        <span class="n">worn</span> <span class="o">=</span> <span class="p">[</span><span class="n">obj</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">worn</span><span class="p">]</span>
+        <span class="n">wear_table</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">styled_table</span><span class="p">(</span><span class="n">border</span><span class="o">=</span><span class="s2">&quot;header&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">message_list</span><span class="p">))</span></div></div>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">group_objects_by_key_and_desc</span><span class="p">(</span><span class="n">worn</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">):</span>
+            <span class="n">wear_table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">|n&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">|n&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">crop</span><span class="p">(</span><span class="n">raw_ansi</span><span class="p">(</span><span class="n">desc</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="n">message_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+            <span class="p">[</span><span class="s2">&quot;You are wearing:|n&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">wear_table</span><span class="p">)</span> <span class="k">if</span> <span class="n">wear_table</span><span class="o">.</span><span class="n">nrows</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot; Nothing.&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="c1"># return the composite message</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">message_list</span><span class="p">),</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;inventory&quot;</span><span class="p">}))</span></div></div>
 
 
 <div class="viewcode-block" id="ClothedCharacterCmdSet"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.clothing.clothing.html#evennia.contrib.game_systems.clothing.clothing.ClothedCharacterCmdSet">[docs]</a><span class="k">class</span> <span class="nc">ClothedCharacterCmdSet</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CharacterCmdSet</span><span class="p">):</span>
@@ -821,7 +840,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

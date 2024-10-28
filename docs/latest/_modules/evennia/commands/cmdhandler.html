@@ -71,13 +71,15 @@
   
     <li><a href="cmdhandler.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -130,8 +132,8 @@
 <span class="kn">from</span> <span class="nn">twisted.internet.defer</span> <span class="kn">import</span> <span class="n">inlineCallbacks</span><span class="p">,</span> <span class="n">returnValue</span>
 <span class="kn">from</span> <span class="nn">twisted.internet.task</span> <span class="kn">import</span> <span class="n">deferLater</span>
 
-<span class="kn">from</span> <span class="nn">evennia.commands.command</span> <span class="kn">import</span> <span class="n">InterruptCommand</span>
 <span class="kn">from</span> <span class="nn">evennia.commands.cmdset</span> <span class="kn">import</span> <span class="n">CmdSet</span>
+<span class="kn">from</span> <span class="nn">evennia.commands.command</span> <span class="kn">import</span> <span class="n">InterruptCommand</span>
 <span class="kn">from</span> <span class="nn">evennia.utils</span> <span class="kn">import</span> <span class="n">logger</span><span class="p">,</span> <span class="n">utils</span>
 <span class="kn">from</span> <span class="nn">evennia.utils.utils</span> <span class="kn">import</span> <span class="n">string_suggestions</span>
 
@@ -440,7 +442,7 @@
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="c1"># Gather cmdsets from location, objects in location or carried</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">local_obj_cmdsets</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span>
+                <span class="n">local_obj_cmdsets</span> <span class="o">=</span> <span class="p">[]</span>
                 <span class="k">try</span><span class="p">:</span>
                     <span class="n">location</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">location</span>
                 <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
@@ -528,11 +530,12 @@
             <span class="n">cmdset</span> <span class="k">for</span> <span class="n">cmdset</span> <span class="ow">in</span> <span class="n">object_cmdsets</span> <span class="k">if</span> <span class="n">cmdset</span> <span class="ow">and</span> <span class="n">cmdset</span><span class="o">.</span><span class="n">key</span> <span class="o">!=</span> <span class="s2">&quot;_EMPTY_CMDSET&quot;</span>
         <span class="p">]</span>
         <span class="c1"># report cmdset errors to user (these should already have been logged)</span>
-        <span class="k">yield</span> <span class="p">[</span>
-            <span class="n">report_to</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">err_helper</span><span class="p">(</span><span class="n">cmdset</span><span class="o">.</span><span class="n">errmessage</span><span class="p">,</span> <span class="n">cmdid</span><span class="o">=</span><span class="n">cmdid</span><span class="p">))</span>
-            <span class="k">for</span> <span class="n">cmdset</span> <span class="ow">in</span> <span class="n">cmdsets</span>
-            <span class="k">if</span> <span class="n">cmdset</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;_CMDSET_ERROR&quot;</span>
-        <span class="p">]</span>
+        <span class="k">if</span> <span class="n">report_to</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="p">[</span>
+                <span class="n">report_to</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">err_helper</span><span class="p">(</span><span class="n">cmdset</span><span class="o">.</span><span class="n">errmessage</span><span class="p">,</span> <span class="n">cmdid</span><span class="o">=</span><span class="n">cmdid</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">cmdset</span> <span class="ow">in</span> <span class="n">cmdsets</span>
+                <span class="k">if</span> <span class="n">cmdset</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;_CMDSET_ERROR&quot;</span>
+            <span class="p">]</span>
 
         <span class="k">if</span> <span class="n">cmdsets</span><span class="p">:</span>
             <span class="c1"># faster to do tuple on list than to build tuple directly</span>
@@ -918,7 +921,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

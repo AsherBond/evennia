@@ -71,13 +71,15 @@
   
     <li><a href="menus.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -925,7 +927,7 @@
         <span class="k">return</span> <span class="s2">&quot;node_prototype_parent&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">_prototype_parent_select</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">new_parent</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">_prototype_parent_select</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">new_parent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">prototype_parent</span> <span class="o">=</span> <span class="n">protlib</span><span class="o">.</span><span class="n">search_prototype</span><span class="p">(</span><span class="n">new_parent</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
@@ -2861,7 +2863,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

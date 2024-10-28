@@ -71,13 +71,15 @@
   
     <li><a href="comms.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -92,6 +94,7 @@
 <span class="sd">Base typeclass for in-game Channels.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">re</span>
 
 <span class="kn">from</span> <span class="nn">django.contrib.contenttypes.models</span> <span class="kn">import</span> <span class="n">ContentType</span>
@@ -103,11 +106,11 @@
 <span class="kn">from</span> <span class="nn">evennia.comms.models</span> <span class="kn">import</span> <span class="n">ChannelDB</span>
 <span class="kn">from</span> <span class="nn">evennia.typeclasses.models</span> <span class="kn">import</span> <span class="n">TypeclassBase</span>
 <span class="kn">from</span> <span class="nn">evennia.utils</span> <span class="kn">import</span> <span class="n">create</span><span class="p">,</span> <span class="n">logger</span>
-<span class="kn">from</span> <span class="nn">evennia.utils.utils</span> <span class="kn">import</span> <span class="n">make_iter</span><span class="p">,</span> <span class="n">inherits_from</span>
+<span class="kn">from</span> <span class="nn">evennia.utils.utils</span> <span class="kn">import</span> <span class="n">inherits_from</span><span class="p">,</span> <span class="n">make_iter</span>
 
 
 <div class="viewcode-block" id="DefaultChannel"><a class="viewcode-back" href="../../../api/evennia.comms.comms.html#evennia.comms.comms.DefaultChannel">[docs]</a><span class="k">class</span> <span class="nc">DefaultChannel</span><span class="p">(</span><span class="n">ChannelDB</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">TypeclassBase</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the base class for all Channel Comms. Inherit from this to</span>
 <span class="sd">    create different types of communication channels.</span>
 
@@ -124,7 +127,7 @@
 <span class="sd">      in front of every channel message; use `{channelmessage}` token to insert the</span>
 <span class="sd">      name of the current channel. Set to `None` if you want no prefix (or want to</span>
 <span class="sd">      handle it in a hook during message generation instead.</span>
-<span class="sd">    - `channel_msg_nick_pattern`(str, default `&quot;{alias}\\s*?|{alias}\\s+?(?P&lt;arg1&gt;.+?)&quot;) -</span>
+<span class="sd">    - `channel_msg_nick_pattern`(str, default `&quot;{alias}\s*?|{alias}\s+?(?P&lt;arg1&gt;.+?)&quot;) -</span>
 <span class="sd">      this is what used when a channel subscriber gets a channel nick assigned to this</span>
 <span class="sd">      channel. The nickhandler uses the pattern to pick out this channel&#39;s name from user</span>
 <span class="sd">      input. The `{alias}` token will get both the channel&#39;s key and any set/custom aliases</span>
@@ -139,6 +142,70 @@
 <span class="sd">      &#39;public Hello&#39; and have that become a mapping to `channel public = Hello`. By default,</span>
 <span class="sd">      the account-level `channel` command is used. If you were to rename that command you must</span>
 <span class="sd">      tweak the output to something like `yourchannelcommandname {channelname} = $1`.</span>
+
+<span class="sd">    * Properties:</span>
+<span class="sd">        mutelist</span>
+<span class="sd">        banlist</span>
+<span class="sd">        wholist</span>
+
+<span class="sd">    * Working methods:</span>
+<span class="sd">        get_log_filename()</span>
+<span class="sd">        set_log_filename(filename)</span>
+<span class="sd">        has_connection(account) - check if the given account listens to this channel</span>
+<span class="sd">        connect(account) - connect account to this channel</span>
+<span class="sd">        disconnect(account) - disconnect account from channel</span>
+<span class="sd">        access(access_obj, access_type=&#39;listen&#39;, default=False) - check the</span>
+<span class="sd">                    access on this channel (default access_type is listen)</span>
+<span class="sd">        create(key, creator=None, *args, **kwargs)</span>
+<span class="sd">        delete() - delete this channel</span>
+<span class="sd">        message_transform(msg, emit=False, prefix=True,</span>
+<span class="sd">                          sender_strings=None, external=False) - called by</span>
+<span class="sd">                          the comm system and triggers the hooks below</span>
+<span class="sd">        msg(msgobj, header=None, senders=None, sender_strings=None,</span>
+<span class="sd">            persistent=None, online=False, emit=False, external=False) - main</span>
+<span class="sd">                send method, builds and sends a new message to channel.</span>
+<span class="sd">        tempmsg(msg, header=None, senders=None) - wrapper for sending non-persistent</span>
+<span class="sd">                messages.</span>
+<span class="sd">        distribute_message(msg, online=False) - send a message to all</span>
+<span class="sd">                connected accounts on channel, optionally sending only</span>
+<span class="sd">                to accounts that are currently online (optimized for very large sends)</span>
+<span class="sd">        mute(subscriber, **kwargs)</span>
+<span class="sd">        unmute(subscriber, **kwargs)</span>
+<span class="sd">        ban(target, **kwargs)</span>
+<span class="sd">        unban(target, **kwargs)</span>
+<span class="sd">        add_user_channel_alias(user, alias, **kwargs)</span>
+<span class="sd">        remove_user_channel_alias(user, alias, **kwargs)</span>
+
+
+<span class="sd">    Useful hooks:</span>
+<span class="sd">        at_channel_creation() - called once, when the channel is created</span>
+<span class="sd">        basetype_setup()</span>
+<span class="sd">        at_init()</span>
+<span class="sd">        at_first_save()</span>
+<span class="sd">        channel_prefix() - how the channel should be</span>
+<span class="sd">                  prefixed when returning to user. Returns a string</span>
+<span class="sd">        format_senders(senders) - should return how to display multiple</span>
+<span class="sd">                senders to a channel</span>
+<span class="sd">        pose_transform(msg, sender_string) - should detect if the</span>
+<span class="sd">                sender is posing, and if so, modify the string</span>
+<span class="sd">        format_external(msg, senders, emit=False) - format messages sent</span>
+<span class="sd">                from outside the game, like from IRC</span>
+<span class="sd">        format_message(msg, emit=False) - format the message body before</span>
+<span class="sd">                displaying it to the user. &#39;emit&#39; generally means that the</span>
+<span class="sd">                message should not be displayed with the sender&#39;s name.</span>
+<span class="sd">        channel_prefix()</span>
+
+<span class="sd">        pre_join_channel(joiner) - if returning False, abort join</span>
+<span class="sd">        post_join_channel(joiner) - called right after successful join</span>
+<span class="sd">        pre_leave_channel(leaver) - if returning False, abort leave</span>
+<span class="sd">        post_leave_channel(leaver) - called right after successful leave</span>
+<span class="sd">        at_pre_msg(message, **kwargs)</span>
+<span class="sd">        at_post_msg(message, **kwargs)</span>
+<span class="sd">        web_get_admin_url()</span>
+<span class="sd">        web_get_create_url()</span>
+<span class="sd">        web_get_detail_url()</span>
+<span class="sd">        web_get_update_url()</span>
+<span class="sd">        web_get_delete_url()</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -946,7 +1013,7 @@
     <span class="c1"># Used by Django Sites/Admin</span>
     <span class="n">get_absolute_url</span> <span class="o">=</span> <span class="n">web_get_detail_url</span>
 
-    <span class="c1"># TODO Evennia 1.0+ removed hooks. Remove in 1.1.</span>
+    <span class="c1"># TODO Evennia 1.0+ removed hooks. Remove in 5.0</span>
 <div class="viewcode-block" id="DefaultChannel.message_transform"><a class="viewcode-back" href="../../../api/evennia.comms.comms.html#evennia.comms.comms.DefaultChannel.message_transform">[docs]</a>    <span class="k">def</span> <span class="nf">message_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
             <span class="s2">&quot;Channel.message_transform is no longer used in 1.0+. &quot;</span>
@@ -1011,7 +1078,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

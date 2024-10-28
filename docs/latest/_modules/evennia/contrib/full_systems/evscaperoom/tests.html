@@ -71,13 +71,15 @@
   
     <li><a href="tests.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -92,6 +94,7 @@
 <span class="sd">Unit tests for the Evscaperoom</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">inspect</span>
 <span class="kn">import</span> <span class="nn">pkgutil</span>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
@@ -273,7 +276,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">call</span><span class="p">(</span>
             <span class="n">commands</span><span class="o">.</span><span class="n">CmdEmote</span><span class="p">(),</span>
             <span class="s2">&quot;/me smiles to /obj&quot;</span><span class="p">,</span>
-            <span class="sa">f</span><span class="s2">&quot;Char(#</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">) smiles to Obj(#</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">obj1</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;Char smiles to Obj.&quot;</span><span class="p">,</span>
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="TestEvscaperoomCommands.test_focus_interaction"><a class="viewcode-back" href="../../../../../api/evennia.contrib.full_systems.evscaperoom.tests.html#evennia.contrib.full_systems.evscaperoom.tests.TestEvscaperoomCommands.test_focus_interaction">[docs]</a>    <span class="k">def</span> <span class="nf">test_focus_interaction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -413,7 +416,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

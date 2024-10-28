@@ -106,13 +106,15 @@
   
     <li><a href="evennia.contrib.rpg.character_creator.character_creator.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -137,6 +139,55 @@ command as well as a modified <strong>at_look</strong> method for your Account c
 EvMenu. The included <strong>example_menu.py</strong> gives a number of useful techniques
 and examples, including how to allow players to choose and confirm
 character names from within the menu.</p>
+<dl class="py class">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC">
+<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.character_creator.character_creator.</code><code class="sig-name descname">ContribCmdIC</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/character_creator/character_creator.html#ContribCmdIC"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.account.html#evennia.commands.default.account.CmdIC" title="evennia.commands.default.account.CmdIC"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.account.CmdIC</span></code></a></p>
+<p>control an object you have permission to puppet</p>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>ic &lt;character&gt;</p>
+</dd>
+</dl>
+<p>Go in-character (IC) as a given Character.</p>
+<p>This will attempt to “become” a different object assuming you have
+the right to do so. Note that it’s the ACCOUNT character that puppets
+characters/objects and which needs to have the correct permission!</p>
+<p>You cannot become an object that is already controlled by another
+account. In principle &lt;character&gt; can be any in-game object as long
+as you the account have access right to puppet it.</p>
+<dl class="py method">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.func">
+<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/character_creator/character_creator.html#ContribCmdIC.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main puppet method</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.aliases">
+<code class="sig-name descname">aliases</code><em class="property"> = ['puppet']</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.aliases" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.help_category">
+<code class="sig-name descname">help_category</code><em class="property"> = 'general'</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.help_category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.key">
+<code class="sig-name descname">key</code><em class="property"> = 'ic'</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.lock_storage">
+<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.search_index_entry">
+<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'puppet', 'category': 'general', 'key': 'ic', 'no_prefix': ' puppet', 'tags': '', 'text': '\n    control an object you have permission to puppet\n\n    Usage:\n      ic &lt;character&gt;\n\n    Go in-character (IC) as a given Character.\n\n    This will attempt to &quot;become&quot; a different object assuming you have\n    the right to do so. Note that it\'s the ACCOUNT character that puppets\n    characters/objects and which needs to have the correct permission!\n\n    You cannot become an object that is already controlled by another\n    account. In principle &lt;character&gt; can be any in-game object as long\n    as you the account have access right to puppet it.\n    '}</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdIC.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt id="evennia.contrib.rpg.character_creator.character_creator.ContribCmdCharCreate">
 <em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.character_creator.character_creator.</code><code class="sig-name descname">ContribCmdCharCreate</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/character_creator/character_creator.html#ContribCmdCharCreate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribCmdCharCreate" title="Permalink to this definition">¶</a></dt>
@@ -185,11 +236,40 @@ you left off later.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet">
+<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.character_creator.character_creator.</code><code class="sig-name descname">ContribChargenCmdSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmdsetobj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/character_creator/character_creator.html#ContribChargenCmdSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.cmdset.CmdSet</span></code></a></p>
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet.key">
+<code class="sig-name descname">key</code><em class="property"> = 'Contrib Chargen CmdSet'</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet.key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet.at_cmdset_creation">
+<code class="sig-name descname">at_cmdset_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/character_creator/character_creator.html#ContribChargenCmdSet.at_cmdset_creation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet.at_cmdset_creation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method - this should be overloaded in the inheriting
+class, and should take care of populating the cmdset by use of
+self.add().</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet.path">
+<code class="sig-name descname">path</code><em class="property"> = 'evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet'</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribChargenCmdSet.path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="evennia.contrib.rpg.character_creator.character_creator.ContribChargenAccount">
 <em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.character_creator.character_creator.</code><code class="sig-name descname">ContribChargenAccount</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/character_creator/character_creator.html#ContribChargenAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribChargenAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount" title="evennia.accounts.accounts.DefaultAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.accounts.accounts.DefaultAccount</span></code></a></p>
-<p>A modified Account class that makes minor changes to the OOC look
-output to incorporate in-progress characters.</p>
+<p>A modified Account class that changes the OOC look output to better match the contrib and
+incorporate in-progress characters.</p>
+<dl class="py attribute">
+<dt id="evennia.contrib.rpg.character_creator.character_creator.ContribChargenAccount.ooc_appearance_template">
+<code class="sig-name descname">ooc_appearance_template</code><em class="property"> = '--------------------------------------------------------------------\n{header}\n\n{sessions}\n\n  |whelp|n - more commands\n  |wcharcreate|n - create new character\n  |wchardelete &lt;name&gt;|n - delete a character\n  |wic &lt;name&gt;|n - enter the game as character (|wooc|n to get back here)\n  |wic|n - enter the game as latest character controlled.\n\n{characters}\n{footer}\n--------------------------------------------------------------------'</em><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribChargenAccount.ooc_appearance_template" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt id="evennia.contrib.rpg.character_creator.character_creator.ContribChargenAccount.at_look">
 <code class="sig-name descname">at_look</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/character_creator/character_creator.html#ContribChargenAccount.at_look"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.character_creator.character_creator.ContribChargenAccount.at_look" title="Permalink to this definition">¶</a></dt>
@@ -278,7 +358,7 @@ overriding the call (unused by default).</p></li>
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

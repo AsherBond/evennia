@@ -71,13 +71,15 @@
   
     <li><a href="utils.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -118,7 +120,6 @@
 <span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">punctuation</span>
 <span class="kn">from</span> <span class="nn">unicodedata</span> <span class="kn">import</span> <span class="n">east_asian_width</span>
 
-<span class="kn">import</span> <span class="nn">evennia</span>
 <span class="kn">from</span> <span class="nn">django.apps</span> <span class="kn">import</span> <span class="n">apps</span>
 <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
 <span class="kn">from</span> <span class="nn">django.core.exceptions</span> <span class="kn">import</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">DjangoValidationError</span>
@@ -126,11 +127,13 @@
 <span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">timezone</span>
 <span class="kn">from</span> <span class="nn">django.utils.html</span> <span class="kn">import</span> <span class="n">strip_tags</span>
 <span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">gettext</span> <span class="k">as</span> <span class="n">_</span>
-<span class="kn">from</span> <span class="nn">evennia.utils</span> <span class="kn">import</span> <span class="n">logger</span>
 <span class="kn">from</span> <span class="nn">simpleeval</span> <span class="kn">import</span> <span class="n">simple_eval</span>
 <span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">reactor</span><span class="p">,</span> <span class="n">threads</span>
 <span class="kn">from</span> <span class="nn">twisted.internet.defer</span> <span class="kn">import</span> <span class="n">returnValue</span>  <span class="c1"># noqa - used as import target</span>
 <span class="kn">from</span> <span class="nn">twisted.internet.task</span> <span class="kn">import</span> <span class="n">deferLater</span>
+
+<span class="kn">import</span> <span class="nn">evennia</span>
+<span class="kn">from</span> <span class="nn">evennia.utils</span> <span class="kn">import</span> <span class="n">logger</span>
 
 <span class="n">_MULTIMATCH_TEMPLATE</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">SEARCH_MULTIMATCH_TEMPLATE</span>
 <span class="n">_EVENNIA_DIR</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">EVENNIA_DIR</span>
@@ -561,6 +564,32 @@
 <span class="c1"># legacy aliases</span>
 <span class="n">list_to_string</span> <span class="o">=</span> <span class="n">iter_to_str</span>
 <span class="n">iter_to_string</span> <span class="o">=</span> <span class="n">iter_to_str</span>
+
+<span class="n">re_empty</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\\</span><span class="s2">s*</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="compress_whitespace"><a class="viewcode-back" href="../../../api/evennia.utils.utils.html#evennia.commands.default.building.compress_whitespace">[docs]</a><span class="k">def</span> <span class="nf">compress_whitespace</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">max_linebreaks</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_spacing</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Removes extra sequential whitespace in a block of text. This will also remove any trailing</span>
+<span class="sd">    whitespace at the end.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        text (str):   A string which may contain excess internal whitespace.</span>
+
+<span class="sd">    Keyword args:</span>
+<span class="sd">        max_linebreaks (int):  How many linebreak characters are allowed to occur in a row.</span>
+<span class="sd">        max_spacing (int):     How many spaces are allowed to occur in a row.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="c1"># replaces any non-visible lines that are just whitespace characters with actual empty lines</span>
+    <span class="c1"># this allows the blank-line compression to eliminate them if needed</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re_empty</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="c1"># replace groups of extra spaces with the maximum number of spaces</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;(?&lt;=\S) </span><span class="se">{{</span><span class="si">{</span><span class="n">max_spacing</span><span class="si">}</span><span class="s2">,</span><span class="se">}}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="n">max_spacing</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="c1"># replace groups of extra newlines with the maximum number of newlines</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n{{</span><span class="si">{</span><span class="n">max_linebreaks</span><span class="si">}</span><span class="s2">,</span><span class="se">}}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="n">max_linebreaks</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span></div>
 
 
 <div class="viewcode-block" id="wildcard_to_regexp"><a class="viewcode-back" href="../../../api/evennia.utils.utils.html#evennia.commands.default.building.wildcard_to_regexp">[docs]</a><span class="k">def</span> <span class="nf">wildcard_to_regexp</span><span class="p">(</span><span class="n">instring</span><span class="p">):</span>
@@ -1856,6 +1885,41 @@
     <span class="k">return</span> <span class="p">[]</span></div>
 
 
+<div class="viewcode-block" id="group_objects_by_key_and_desc"><a class="viewcode-back" href="../../../api/evennia.utils.utils.html#evennia.commands.default.building.group_objects_by_key_and_desc">[docs]</a><span class="k">def</span> <span class="nf">group_objects_by_key_and_desc</span><span class="p">(</span><span class="n">objects</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Groups a list of objects by their key and description. This is used to group</span>
+<span class="sd">    visibly identical objects together, for example for inventory listings.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        objects (list): A list of objects to group. These must be DefaultObject.</span>
+
+<span class="sd">        caller (Object, optional): The object looking at the objects, used to get the</span>
+<span class="sd">            description and key of each object.</span>
+<span class="sd">        **kwargs: Passed into each object&#39;s `get_display_name/desc` methods.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        iterable: An iterable of tuples, where each tuple is on the form</span>
+<span class="sd">            `(numbered_name, description, [objects])`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">key_descs</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">return_string</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;return_string&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
+        <span class="n">key_descs</span><span class="p">[</span>
+            <span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span> <span class="n">obj</span><span class="o">.</span><span class="n">get_display_desc</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+        <span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">objs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_numbered_name</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objs</span><span class="p">),</span> <span class="n">caller</span><span class="p">,</span> <span class="n">return_string</span><span class="o">=</span><span class="n">return_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span>
+            <span class="n">desc</span><span class="p">,</span>
+            <span class="n">objs</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">desc</span><span class="p">),</span> <span class="n">objs</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">key_descs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">tup</span><span class="p">:</span> <span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="format_table"><a class="viewcode-back" href="../../../api/evennia.utils.utils.html#evennia.commands.default.building.format_table">[docs]</a><span class="k">def</span> <span class="nf">format_table</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">extra_space</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Format a 2D array of strings into a multi-column table.</span>
@@ -2100,7 +2164,7 @@
                     <span class="k">else</span><span class="p">:</span>
                         <span class="n">row</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span> <span class="o">-</span> <span class="n">lrow</span><span class="p">)</span>
                     <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-                    <span class="n">row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                    <span class="n">row</span> <span class="o">=</span> <span class="n">element</span>
                     <span class="n">ic</span> <span class="o">=</span> <span class="mi">0</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="c1"># add a new slot</span>
@@ -2425,30 +2489,35 @@
                 <span class="n">query</span><span class="o">=</span><span class="n">query</span>
             <span class="p">)</span>
 
-        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">matches</span><span class="p">):</span>
-            <span class="c1"># we need to consider that result could be a Command, where .aliases</span>
-            <span class="c1"># is a list of strings</span>
-            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">aliases</span><span class="p">,</span> <span class="s2">&quot;all&quot;</span><span class="p">):</span>
-                <span class="c1"># result is a typeclassed entity where `.aliases` is an AliasHandler.</span>
-                <span class="n">aliases</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">return_objs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-                <span class="c1"># remove pluralization aliases</span>
-                <span class="n">aliases</span> <span class="o">=</span> <span class="p">[</span>
-                    <span class="n">alias</span>
-                    <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="n">aliases</span>
-                    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">alias</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">alias</span><span class="o">.</span><span class="n">category</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;plural_key&quot;</span><span class="p">,)</span>
-                <span class="p">]</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># result is likely a Command, where `.aliases` is a list of strings.</span>
-                <span class="n">aliases</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">aliases</span>
+        <span class="c1"># group results by display name to properly disambiguate</span>
+        <span class="n">grouped_matches</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">matches</span><span class="p">:</span>
+            <span class="n">group_key</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">item</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s2">&quot;get_display_name&quot;</span><span class="p">)</span>
+                    <span class="k">else</span> <span class="n">query</span>
+                <span class="p">)</span>
+            <span class="n">grouped_matches</span><span class="p">[</span><span class="n">group_key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 
-            <span class="n">error</span> <span class="o">+=</span> <span class="n">_MULTIMATCH_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-                <span class="n">number</span><span class="o">=</span><span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="n">name</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span>
-                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s2">&quot;get_display_name&quot;</span><span class="p">)</span>
-                <span class="k">else</span> <span class="n">query</span><span class="p">,</span>
-                <span class="n">aliases</span><span class="o">=</span><span class="s2">&quot; [</span><span class="si">{alias}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">aliases</span><span class="p">)</span> <span class="k">if</span> <span class="n">aliases</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">),</span>
-                <span class="n">info</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">get_extra_info</span><span class="p">(</span><span class="n">caller</span><span class="p">),</span>
-            <span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">match_list</span> <span class="ow">in</span> <span class="n">grouped_matches</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">match_list</span><span class="p">):</span>
+                <span class="c1"># we need to consider that result could be a Command, where .aliases</span>
+                <span class="c1"># is a list of strings</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">aliases</span><span class="p">,</span> <span class="s2">&quot;all&quot;</span><span class="p">):</span>
+                    <span class="c1"># result is a typeclassed entity where `.aliases` is an AliasHandler.</span>
+                    <span class="n">aliases</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">aliases</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">return_objs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="c1"># remove pluralization aliases</span>
+                    <span class="n">aliases</span> <span class="o">=</span> <span class="p">[</span><span class="n">alias</span><span class="o">.</span><span class="n">db_key</span> <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="n">aliases</span> <span class="k">if</span> <span class="n">alias</span><span class="o">.</span><span class="n">db_category</span> <span class="o">!=</span> <span class="s2">&quot;plural_key&quot;</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># result is likely a Command, where `.aliases` is a list of strings.</span>
+                    <span class="n">aliases</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">aliases</span>
+
+                <span class="n">error</span> <span class="o">+=</span> <span class="n">_MULTIMATCH_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">number</span><span class="o">=</span><span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">key</span><span class="p">,</span>
+                    <span class="n">aliases</span><span class="o">=</span><span class="s2">&quot; [</span><span class="si">{alias}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">aliases</span><span class="p">))</span> <span class="k">if</span> <span class="n">aliases</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="n">info</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">get_extra_info</span><span class="p">(</span><span class="n">caller</span><span class="p">),</span>
+                <span class="p">)</span>
         <span class="n">matches</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># exactly one match</span>
@@ -2915,7 +2984,7 @@
 
 <span class="sd">    Args:</span>
 <span class="sd">        number (int): The number to convert. Floats will be converted to ints.</span>
-<span class="sd">        adjective (int): If set, map 1-&gt;1st, 2-&gt;2nd etc. If unset, map 1-&gt;one, 2-&gt;two etc.</span>
+<span class="sd">        adjective (bool): If True, map 1-&gt;1st, 2-&gt;2nd etc. If unset or False, map 1-&gt;one, 2-&gt;two etc.</span>
 <span class="sd">            up to twelve.</span>
 <span class="sd">    Return:</span>
 <span class="sd">        str: The number expressed as a string.</span>
@@ -3107,6 +3176,24 @@
 
     <span class="n">logger</span><span class="o">.</span><span class="n">log_warn</span><span class="p">(</span><span class="s2">&quot;ip_from_request: No valid IP address found in request. Using remote_addr.&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">remote_addr</span></div>
+
+
+<div class="viewcode-block" id="value_is_integer"><a class="viewcode-back" href="../../../api/evennia.utils.utils.html#evennia.commands.default.building.value_is_integer">[docs]</a><span class="k">def</span> <span class="nf">value_is_integer</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determines if a value can be type-cast to an integer.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (any): The value to check.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        result (bool): Whether it can be type-cast to an integer or not.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span></div>
 </pre></div>
 
           </div>
@@ -3133,7 +3220,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>

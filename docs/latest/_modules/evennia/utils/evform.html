@@ -71,13 +71,15 @@
   
     <li><a href="evform.html">latest (main branch)</a></li>
 
-    <li><a href="../../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
   
-    <li><a href="../../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+  
+    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
   
 
 </ul>
@@ -293,7 +295,10 @@
 <span class="sd">                also works, to stay compatible with the in-file names). While &quot;form/FORM&quot;</span>
 <span class="sd">                is required, if FORMCHAR/TABLECHAR are not given, they will default to</span>
 <span class="sd">                &#39;x&#39; and &#39;c&#39; respectively.</span>
-<span class="sd">            cells (dict): A dictionary mapping  `{id: str}`</span>
+<span class="sd">            cells (dict): A dictionary mapping  `{id: str}` or `{id: evennia.utils.evtable.EvCell}`.</span>
+<span class="sd">                By pre-creating the `EvCell` like `EvCell(&quot;text&quot;, align=&quot;c&quot;, valign=&quot;t&quot;)` you can</span>
+<span class="sd">                control the cell contents&#39; alignment. Note that cell width/height will be enforced</span>
+<span class="sd">                by the form so will be overridden even if specified.</span>
 <span class="sd">            tables (dict): A dictionary mapping  `{id: EvTable}`.</span>
 <span class="sd">            literals (dict): A dictionary mapping `{id: str}`. Will be replaced</span>
 <span class="sd">                after width of form is calculated, but before cells/tables are mapped.</span>
@@ -671,7 +676,7 @@
      
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2023, The Evennia developer community.
+        &#169; Copyright 2024, The Evennia developer community.
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
