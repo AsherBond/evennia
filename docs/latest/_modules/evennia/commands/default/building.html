@@ -3341,7 +3341,7 @@
             <span class="k">try</span><span class="p">:</span>
                 <span class="c1"># Check that rhs is either a valid dbref or dbref range</span>
                 <span class="n">bounds</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
-                    <span class="nb">sorted</span><span class="p">(</span><span class="n">dbref</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;[-\s]+&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
+                    <span class="nb">sorted</span><span class="p">(</span><span class="n">dbref</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[-\s]+&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
                 <span class="p">)</span>
 
                 <span class="c1"># dbref() will return either a valid int or None</span>
