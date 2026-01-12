@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Building menu &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Additional Color markups" href="Contrib-Color-Markups.html" />
     <link rel="prev" title="AWSstorage system" href="Contrib-AWSStorage.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,111 +33,19 @@
         <li class="right" >
           <a href="Contrib-AWSStorage.html" title="AWSstorage system"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" accesskey="U">Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Building menu</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Building menu</a><ul>
-<li><a class="reference internal" href="#install">Install</a></li>
-<li><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
-<li><a class="reference internal" href="#a-simple-menu-example">A simple menu example</a><ul>
-<li><a class="reference internal" href="#a-generic-editing-command">A generic editing command</a></li>
-<li><a class="reference internal" href="#our-first-menu">Our first menu</a></li>
-<li><a class="reference internal" href="#code-explanation">Code explanation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#customizing-building-menus">Customizing building menus</a><ul>
-<li><a class="reference internal" href="#generic-choices">Generic choices</a></li>
-<li><a class="reference internal" href="#add-choice-options"><code class="docutils literal notranslate"><span class="pre">add_choice</span></code> options</a></li>
-<li><a class="reference internal" href="#everything-can-be-a-function">Everything can be a function</a></li>
-<li><a class="reference internal" href="#sub-menus-for-complex-menus">Sub-menus for complex menus</a><ul>
-<li><a class="reference internal" href="#nested-menu-keys">Nested menu keys</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#full-sub-menu-as-separate-classes">Full sub-menu as separate classes</a><ul>
-<li><a class="reference internal" href="#generic-menu-options">Generic menu options</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Contrib-AWSStorage.html"
-                        title="previous chapter">AWSstorage system</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Color-Markups.html"
-                        title="next chapter">Additional Color markups</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Contribs/Contrib-Building-Menu.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Contrib-Building-Menu.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="building-menu">
-<h1>Building menu<a class="headerlink" href="#building-menu" title="Permalink to this headline">¶</a></h1>
+<h1>Building menu<a class="headerlink" href="#building-menu" title="Link to this heading">¶</a></h1>
 <p>Contrib by vincent-lg, 2018</p>
 <p>Building menus are in-game menus, not unlike <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code> though using a
 different approach. Building menus have been specifically designed to edit
@@ -152,8 +54,8 @@ builders quick-editing of a given object, like a room. If you follow the
 steps to add the contrib, you will have access to an <code class="docutils literal notranslate"><span class="pre">edit</span></code> command
 that will edit any default object, offering to change its key and description.</p>
 <section id="install">
-<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
-<ol>
+<h2>Install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
 <li><p>Import the <code class="docutils literal notranslate"><span class="pre">GenericBuildingCmd</span></code> class from this contrib in your
 <code class="docutils literal notranslate"><span class="pre">mygame/commands/default_cmdset.py</span></code> file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evennia.contrib.base_systems.building_menu</span><span class="w"> </span><span class="kn">import</span> <span class="n">GenericBuildingCmd</span>
@@ -175,7 +77,7 @@ that will edit any default object, offering to change its key and description.</
 </ol>
 </section>
 <section id="basic-usage">
-<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">edit</span></code> command will allow you to edit any object.  You will need to
 specify the object name or ID as an argument.  For instance: <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">here</span></code>
 will edit the current room.  However, building menus can perform much more
@@ -252,7 +154,7 @@ then call <code class="docutils literal notranslate"><span class="pre">open</spa
 </div>
 </section>
 <section id="a-simple-menu-example">
-<h2>A simple menu example<a class="headerlink" href="#a-simple-menu-example" title="Permalink to this headline">¶</a></h2>
+<h2>A simple menu example<a class="headerlink" href="#a-simple-menu-example" title="Link to this heading">¶</a></h2>
 <p>Before diving in, there are some things to point out:</p>
 <ul class="simple">
 <li><p>Building menus work on an object.  This object will be edited by manipulations in the menu.  So
@@ -267,7 +169,7 @@ demonstration, but we will override it in this example, using the same code with
 </ul>
 <p>So let’s add a very basic example to begin with.</p>
 <section id="a-generic-editing-command">
-<h3>A generic editing command<a class="headerlink" href="#a-generic-editing-command" title="Permalink to this headline">¶</a></h3>
+<h3>A generic editing command<a class="headerlink" href="#a-generic-editing-command" title="Link to this heading">¶</a></h3>
 <p>Let’s begin by adding a new command.  You could add or edit the following file (there’s no trick
 here, feel free to organize the code differently):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># file: commands/building.py</span>
@@ -317,7 +219,7 @@ here, feel free to organize the code differently):</p>
 </pre></div>
 </div>
 <p>This command is rather simple in itself:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>It has a key <code class="docutils literal notranslate"><span class="pre">&#64;edit</span></code> and a lock to only allow builders to use it.</p></li>
 <li><p>In its <code class="docutils literal notranslate"><span class="pre">func</span></code> method, it begins by checking the arguments, returning an error if no argument is
 specified.</p></li>
@@ -373,7 +275,7 @@ at the top of the file:</p>
 </div>
 </section>
 <section id="our-first-menu">
-<h3>Our first menu<a class="headerlink" href="#our-first-menu" title="Permalink to this headline">¶</a></h3>
+<h3>Our first menu<a class="headerlink" href="#our-first-menu" title="Link to this heading">¶</a></h3>
 <p>So far, we can’t use our building menu.  Our <code class="docutils literal notranslate"><span class="pre">&#64;edit</span></code> command will throw an error.  We have to define
 the <code class="docutils literal notranslate"><span class="pre">RoomBuildingMenu</span></code> class.  Open the <code class="docutils literal notranslate"><span class="pre">commands/building.py</span></code> file and add to the end of the file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ... at the end of commands/building.py</span>
@@ -469,7 +371,7 @@ room key (the way we have done here).  You can use <code class="docutils literal
 class, with a method and a single line of code within, we’ve added a menu with two choices.</p>
 </section>
 <section id="code-explanation">
-<h3>Code explanation<a class="headerlink" href="#code-explanation" title="Permalink to this headline">¶</a></h3>
+<h3>Code explanation<a class="headerlink" href="#code-explanation" title="Link to this heading">¶</a></h3>
 <p>Let’s examine our code again:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">RoomBuildingMenu</span><span class="p">(</span><span class="n">BuildingMenu</span><span class="p">):</span>
 
@@ -512,11 +414,11 @@ perform some actions.</p>
 </section>
 </section>
 <section id="customizing-building-menus">
-<h2>Customizing building menus<a class="headerlink" href="#customizing-building-menus" title="Permalink to this headline">¶</a></h2>
+<h2>Customizing building menus<a class="headerlink" href="#customizing-building-menus" title="Link to this heading">¶</a></h2>
 <p>This somewhat long section explains how to customize building menus.  There are different ways
 depending on what you would like to achieve.  We’ll go from specific to more advanced here.</p>
 <section id="generic-choices">
-<h3>Generic choices<a class="headerlink" href="#generic-choices" title="Permalink to this headline">¶</a></h3>
+<h3>Generic choices<a class="headerlink" href="#generic-choices" title="Link to this heading">¶</a></h3>
 <p>In the previous example, we’ve used <code class="docutils literal notranslate"><span class="pre">add_choice</span></code>.  This is one of three methods you can use to add
 choices.  The other two are to handle more generic actions:</p>
 <ul class="simple">
@@ -604,7 +506,7 @@ the description is saved (here, in <code class="docutils literal notranslate"><s
 most cases, you will probably not use this method, since the quit menu is added automatically.</p>
 </section>
 <section id="add-choice-options">
-<h3><code class="docutils literal notranslate"><span class="pre">add_choice</span></code> options<a class="headerlink" href="#add-choice-options" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">add_choice</span></code> options<a class="headerlink" href="#add-choice-options" title="Link to this heading">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">add_choice</span></code> and the two methods <code class="docutils literal notranslate"><span class="pre">add_choice_edit</span></code> and <code class="docutils literal notranslate"><span class="pre">add_choice_quit</span></code> take a lot of optional
 arguments to make customization easier.  Some of these options might not apply to <code class="docutils literal notranslate"><span class="pre">add_choice_edit</span></code>
 or <code class="docutils literal notranslate"><span class="pre">add_choice_quit</span></code> however.</p>
@@ -705,7 +607,7 @@ information between braces… sometimes using double braces.  What might be a bi
 <p>In <code class="docutils literal notranslate"><span class="pre">glance</span></code>, we also use <code class="docutils literal notranslate"><span class="pre">{obj.key}</span></code> to indicate we want to show the room’s key.</p>
 </section>
 <section id="everything-can-be-a-function">
-<h3>Everything can be a function<a class="headerlink" href="#everything-can-be-a-function" title="Permalink to this headline">¶</a></h3>
+<h3>Everything can be a function<a class="headerlink" href="#everything-can-be-a-function" title="Link to this heading">¶</a></h3>
 <p>The keyword arguments of <code class="docutils literal notranslate"><span class="pre">add_choice</span></code> are often strings (type <code class="docutils literal notranslate"><span class="pre">str</span></code>).  But each of these arguments
 can also be a function.  This allows for a lot of customization, since we define the callbacks that
 will be executed to achieve such and such an operation.</p>
@@ -924,7 +826,7 @@ destination of exits accurately.  Here is a demonstration of this menu:</p>
 <p>Using callbacks allows a great flexibility.  We’ll now see how to handle sub-menus.</p>
 </section>
 <section id="sub-menus-for-complex-menus">
-<h3>Sub-menus for complex menus<a class="headerlink" href="#sub-menus-for-complex-menus" title="Permalink to this headline">¶</a></h3>
+<h3>Sub-menus for complex menus<a class="headerlink" href="#sub-menus-for-complex-menus" title="Link to this heading">¶</a></h3>
 <p>A menu is relatively flat: it has a root (where you see all the menu choices) and individual choices
 you can go to using the menu choice keys.  Once in a choice you can type some input or go back to
 the root menu by entering the return command (usually <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>).</p>
@@ -937,7 +839,7 @@ a bit counter-intuitive at first.  Another option is to create a different menu 
 from the first to the second.  This option might require more lines but is more explicit and can be
 re-used for multiple menus.  Adopt one of them depending of your taste.</p>
 <section id="nested-menu-keys">
-<h4>Nested menu keys<a class="headerlink" href="#nested-menu-keys" title="Permalink to this headline">¶</a></h4>
+<h4>Nested menu keys<a class="headerlink" href="#nested-menu-keys" title="Link to this heading">¶</a></h4>
 <p>So far, we’ve only used menu keys with one letter.  We can add more, of course, but menu keys in
 their simple shape are just command keys.  Press “e” to go to the “exits” choice.</p>
 <p>But menu keys can be nested.  Nested keys allow to add choices with sub-menus.  For instance, type
@@ -1134,7 +1036,7 @@ explanations next!</p>
 </div></blockquote>
 <p>That’s why at some point you might want to write a real sub-menu, instead of using simple nested
 keys.  But you might need both to build pretty menus too!</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The first thing new is in our menu class.  After creating a <code class="docutils literal notranslate"><span class="pre">on_nomatch</span></code> callback for the exits
 menu (that shouldn’t be a surprised), we need to add a nested key.  We give this menu a key of
 <code class="docutils literal notranslate"><span class="pre">&quot;e.*&quot;</span></code>.  That’s a bit odd!  “e” is our key to the exits menu, . is the separator to indicate a
@@ -1167,7 +1069,7 @@ handle a choice.</p>
 </section>
 </section>
 <section id="full-sub-menu-as-separate-classes">
-<h2>Full sub-menu as separate classes<a class="headerlink" href="#full-sub-menu-as-separate-classes" title="Permalink to this headline">¶</a></h2>
+<h2>Full sub-menu as separate classes<a class="headerlink" href="#full-sub-menu-as-separate-classes" title="Link to this heading">¶</a></h2>
 <p>The best way to handle individual exits is to create two separate classes:</p>
 <ul class="simple">
 <li><p>One for the room menu.</p></li>
@@ -1387,7 +1289,7 @@ since the parent menus is the “exits” choice.</p></li>
 <p>And that’s it.  The new class will be automatically created.  As you can see, we have to create a
 <code class="docutils literal notranslate"><span class="pre">on_nomatch</span></code> callback to open the sub-menu, but once opened, it automatically close whenever needed.</p>
 <section id="generic-menu-options">
-<h3>Generic menu options<a class="headerlink" href="#generic-menu-options" title="Permalink to this headline">¶</a></h3>
+<h3>Generic menu options<a class="headerlink" href="#generic-menu-options" title="Link to this heading">¶</a></h3>
 <p>There are some options that can be set on any menu class.  These options allow for greater
 customization.  They are class attributes (see the example below), so just set them in the class
 body:</p>
@@ -1413,7 +1315,7 @@ change the minimum length of any key for security reasons.</p></li>
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
 <p>Building menus mean to save you time and create a rich yet simple interface.  But they can be
 complicated to learn and require reading the source code to find out how to do such and such a
 thing.  This documentation, however long, is an attempt at describing this system, but chances are
@@ -1427,12 +1329,122 @@ file will be overwritten, so edit that file rather than this one.</small></p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Building menu</a><ul>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li><a class="reference internal" href="#a-simple-menu-example">A simple menu example</a><ul>
+<li><a class="reference internal" href="#a-generic-editing-command">A generic editing command</a></li>
+<li><a class="reference internal" href="#our-first-menu">Our first menu</a></li>
+<li><a class="reference internal" href="#code-explanation">Code explanation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customizing-building-menus">Customizing building menus</a><ul>
+<li><a class="reference internal" href="#generic-choices">Generic choices</a></li>
+<li><a class="reference internal" href="#add-choice-options"><code class="docutils literal notranslate"><span class="pre">add_choice</span></code> options</a></li>
+<li><a class="reference internal" href="#everything-can-be-a-function">Everything can be a function</a></li>
+<li><a class="reference internal" href="#sub-menus-for-complex-menus">Sub-menus for complex menus</a><ul>
+<li><a class="reference internal" href="#nested-menu-keys">Nested menu keys</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#full-sub-menu-as-separate-classes">Full sub-menu as separate classes</a><ul>
+<li><a class="reference internal" href="#generic-menu-options">Generic menu options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Contrib-AWSStorage.html"
+                          title="previous chapter">AWSstorage system</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Contrib-Color-Markups.html"
+                          title="next chapter">Additional Color markups</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Contribs/Contrib-Building-Menu.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1447,17 +1459,14 @@ file will be overwritten, so edit that file rather than this one.</small></p>
         <li class="right" >
           <a href="Contrib-AWSStorage.html" title="AWSstorage system"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Building menu</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

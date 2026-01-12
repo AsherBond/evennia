@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.utils.funcparser &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.utils.gametime" href="evennia.utils.gametime.html" />
     <link rel="prev" title="evennia.utils.evtable" href="evennia.utils.evtable.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.utils.evtable.html" title="evennia.utils.evtable"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -49,74 +43,12 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.utils.evtable.html"
-                        title="previous chapter">evennia.utils.evtable</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.utils.gametime.html"
-                        title="next chapter">evennia.utils.gametime</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/api/evennia.utils.funcparser.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="evennia.utils.funcparser.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section id="module-evennia.utils.funcparser">
-<span id="evennia-utils-funcparser"></span><h1>evennia.utils.funcparser<a class="headerlink" href="#module-evennia.utils.funcparser" title="Permalink to this headline">¶</a></h1>
+<span id="evennia-utils-funcparser"></span><h1>evennia.utils.funcparser<a class="headerlink" href="#module-evennia.utils.funcparser" title="Link to this heading">¶</a></h1>
 <p>Generic function parser for functions embedded in a string, on the form
 <strong>$funcname(*args, **kwargs)</strong>, for example:</p>
 <p>“A string $foo() with $bar(a, b, c, $moo(), d=23) etc.”</p>
@@ -149,24 +81,24 @@ regular Python functions on the form:</p>
 <p>The <strong>FuncParser</strong> also accepts a direct dict mapping of <strong>{‘name’: callable, …}</strong>.</p>
 <p>—</p>
 <dl class="py exception">
-<dt id="evennia.utils.funcparser.ParsingError">
-<em class="property">exception </em><code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">ParsingError</code><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#ParsingError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.ParsingError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.ParsingError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">ParsingError</span></span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#ParsingError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.ParsingError" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
 <p>Failed to parse for some reason.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.funcparser.FuncParser">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">FuncParser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">callables</span></em>, <em class="sig-param"><span class="n">start_char</span><span class="o">=</span><span class="default_value">'$'</span></em>, <em class="sig-param"><span class="n">escape_char</span><span class="o">=</span><span class="default_value">'\\'</span></em>, <em class="sig-param"><span class="n">max_nesting</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">default_kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.FuncParser">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">FuncParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\\'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_nesting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">default_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Sets up a parser for strings containing <strong>$funcname(*args, **kwargs)</strong>
 substrings.</p>
 <dl class="py method">
-<dt id="evennia.utils.funcparser.FuncParser.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">callables</span></em>, <em class="sig-param"><span class="n">start_char</span><span class="o">=</span><span class="default_value">'$'</span></em>, <em class="sig-param"><span class="n">escape_char</span><span class="o">=</span><span class="default_value">'\\'</span></em>, <em class="sig-param"><span class="n">max_nesting</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">default_kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.__init__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.FuncParser.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape_char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\\'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_nesting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">default_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize the parser.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>callables</strong> (<em>str</em><em>, </em><em>module</em><em>, </em><em>list</em><em> or </em><em>dict</em>) – Where to find
 ‘safe’ functions to make available in the parser. If a <strong>dict</strong>,
@@ -193,16 +125,16 @@ into <strong>.parse</strong> as <strong>**reserved_kwargs</strong> instead.</p><
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.funcparser.FuncParser.validate_callables">
-<code class="sig-name descname">validate_callables</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">callables</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.validate_callables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.validate_callables" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.FuncParser.validate_callables">
+<span class="sig-name descname"><span class="pre">validate_callables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callables</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.validate_callables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.validate_callables" title="Link to this definition">¶</a></dt>
 <dd><p>Validate the loaded callables. Each callable must support at least
 <strong>funcname(*args, **kwargs)</strong>.
 property.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callables</strong> (<em>dict</em>) – A mapping <strong>{“funcname”: callable, …}</strong> to validate</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>AssertionError</strong> – If invalid callable was found.</p>
 </dd>
 </dl>
@@ -212,11 +144,11 @@ needing to run any particular pre-checks.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.funcparser.FuncParser.execute">
-<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parsedfunc</span></em>, <em class="sig-param"><span class="n">raise_errors</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">reserved_kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.execute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.execute" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.FuncParser.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parsedfunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">reserved_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.execute" title="Link to this definition">¶</a></dt>
 <dd><p>Execute a parsed function</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>parsedfunc</strong> (<em>_ParsedFunc</em>) – This dataclass holds the parsed details
 of the function.</p></li>
@@ -229,7 +161,7 @@ call. This is often used by Evennia to pass required data into
 the callable, for example the current Session for inlinefuncs.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p><em>any</em> –</p>
 <dl class="simple">
 <dt>The result of the execution. If this is a nested function, it</dt><dd><p>can be anything, otherwise it will be converted to a string later.
@@ -238,7 +170,7 @@ Always a string on un-raised error (the unparsed function string).</p>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a><strong>, </strong><strong>any</strong> – A <strong>ParsingError</strong> if the function could not be</p></li>
 <li><p><strong>found</strong><strong>, </strong><strong>otherwise error from function definition. Only raised if</strong> – </p></li>
@@ -256,13 +188,13 @@ override the other two.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.funcparser.FuncParser.parse">
-<code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">string</span></em>, <em class="sig-param"><span class="n">raise_errors</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">escape</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">strip</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">return_str</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">reserved_kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.parse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.FuncParser.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">reserved_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.parse" title="Link to this definition">¶</a></dt>
 <dd><p>Use parser to parse a string that may or may not have
 <strong>$funcname(*args, **kwargs)</strong> - style tokens in it. Only the callables
 used to initiate the parser will be eligible for parsing.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>string</strong> (<em>str</em>) – The string to parse.</p></li>
 <li><p><strong>raise_errors</strong> (<em>bool</em><em>, </em><em>optional</em>) – By default, a failing parse just
@@ -284,7 +216,7 @@ it is often used by Evennia to pass necessary kwargs into each
 callable (like the current Session object for inlinefuncs).</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p><em>str or any</em> –</p>
 <dl class="simple">
 <dt>The parsed string, or the same string on error (if</dt><dd><p><strong>raise_errors</strong> is <strong>False</strong>). This is always a string</p>
@@ -292,21 +224,21 @@ callable (like the current Session object for inlinefuncs).</p></li>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a> – If a problem is encountered and <strong>raise_errors</strong> is True.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.funcparser.FuncParser.parse_to_any">
-<code class="sig-name descname">parse_to_any</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">string</span></em>, <em class="sig-param"><span class="n">raise_errors</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">escape</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">strip</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">reserved_kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.parse_to_any"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.parse_to_any" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.FuncParser.parse_to_any">
+<span class="sig-name descname"><span class="pre">parse_to_any</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">reserved_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#FuncParser.parse_to_any"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.FuncParser.parse_to_any" title="Link to this definition">¶</a></dt>
 <dd><p>This parses a string and if the string only contains a “$func(…)”,
 the return will be the return value of that function, even if it’s not
 a string. If mixed in with other strings, the result will still always
 be a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>string</strong> (<em>str</em>) – The string to parse.</p></li>
 <li><p><strong>raise_errors</strong> (<em>bool</em><em>, </em><em>optional</em>) – If unset, leave a failing (or
@@ -324,7 +256,7 @@ it is often used by Evennia to pass necessary kwargs into each
 callable (like the current Session object for inlinefuncs).</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p><em>any</em> –</p>
 <dl class="simple">
 <dt>The return from the callable. Or string if the callable is not</dt><dd><p>given alone in the string.</p>
@@ -332,7 +264,7 @@ callable (like the current Session object for inlinefuncs).</p></li>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a> – If a problem is encountered and <strong>raise_errors</strong> is True.</p>
 </dd>
 </dl>
@@ -358,16 +290,16 @@ accomplishes the same thing.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_eval">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_eval" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_eval">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_eval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_eval" title="Link to this definition">¶</a></dt>
 <dd><p>Funcparser callable. This will combine safe evaluations to try to parse the
 incoming string into a python object. If it fails, the return will be same
 as the input.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to parse. Only simple literals or operators are allowed.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>any</em> – The string parsed into its Python form, or the same as input.</p>
 </dd>
 </dl>
@@ -380,17 +312,17 @@ as the input.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_toint">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_toint</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_toint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_toint" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_toint">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_toint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_toint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_toint" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $toint(43.0) -&gt; 43</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_int2str">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_int2str</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_int2str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_int2str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_int2str">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_int2str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_int2str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_int2str" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $int2str(1) -&gt; ‘one’ etc, up to 12-&gt;twelve.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>number</strong> (<em>int</em>) – The number. If not an int, will be converted.</p>
 </dd>
 </dl>
@@ -398,43 +330,43 @@ as the input.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_an">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_an</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_an"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_an" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_an">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_an</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_an"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_an" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $an(thing) -&gt; a thing</p>
 <p>Adds a/an depending on if the first letter of the given word is a consonant or not.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_add">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_add</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_add" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_add">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_add" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: <strong>$add(val1, val2) -&gt; val1 + val2</strong></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_sub">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_sub</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_sub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_sub" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_sub">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_sub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_sub"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_sub" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: <strong>**$sub(val1, val2) -&gt; val1 - val2</strong></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_mult">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_mult</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_mult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_mult" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_mult">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_mult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_mult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_mult" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: <strong>$mult(val1, val2) -&gt; val1 * val2</strong></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_div">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_div</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_div"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_div" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_div">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_div"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_div" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: <strong>$mult(val1, val2) -&gt; val1 / val2</strong></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_round">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_round</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_round"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_round" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_round">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_round</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_round"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_round" title="Link to this definition">¶</a></dt>
 <dd><p>Funcparser callable. Rounds an incoming float to a
 certain number of significant digits.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>inp</strong> (<em>str</em><em> or </em><em>number</em>) – If a string, it will attempt
 to be converted to a number first.</p></li>
@@ -442,7 +374,7 @@ to be converted to a number first.</p></li>
 this will turn the result into an int.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>any</em> – The rounded value or inp if inp was not a number.</p>
 </dd>
 </dl>
@@ -454,12 +386,12 @@ this will turn the result into an int.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_random">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_random</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_random"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_random" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_random">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_random"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_random" title="Link to this definition">¶</a></dt>
 <dd><p>Funcparser callable. Returns a random number between 0 and 1, from 0 to a
 maximum value, or within a given range (inclusive).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>minval</strong> (<em>str</em><em>, </em><em>optional</em>) – Minimum value. If not given, assumed 0.</p></li>
 <li><p><strong>maxval</strong> (<em>str</em><em>, </em><em>optional</em>) – Maximum value.</p></li>
@@ -481,25 +413,25 @@ integer value in the given range.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_randint">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_randint</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_randint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_randint" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_randint">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_randint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_randint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_randint" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $randint(start, end):</p>
 <p>Legacy alias - always returns integers.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_choice">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_choice</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_choice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_choice" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_choice">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_choice" title="Link to this definition">¶</a></dt>
 <dd><p>FuncParser callable. Picks a random choice from a list.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>listing</strong> (<em>list</em>) – A list of items to randomly choose between.
 This will be converted from a string to a real list.</p></li>
 <li><p><strong>*args</strong> – If multiple args are given, will pick one randomly from them.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>any</em> – The randomly chosen element.</p>
 </dd>
 </dl>
@@ -511,11 +443,11 @@ This will be converted from a string to a real list.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_pad">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_pad</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pad" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_pad">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pad" title="Link to this definition">¶</a></dt>
 <dd><p>FuncParser callable. Pads text to given width, optionally with fill-characters</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> (<em>str</em>) – Text to pad.</p></li>
 <li><p><strong>width</strong> (<em>int</em>) – Width of padding.</p></li>
@@ -526,17 +458,17 @@ This will be converted from a string to a real list.</p></li>
 </dl>
 <p class="rubric">Example</p>
 <ul class="simple">
-<li><p><strong>$pad(text, 12, r, ‘ ‘) -&gt; ”        text”</strong></p></li>
+<li><p><strong>$pad(text, 12, r, ‘ ‘) -&gt; “        text”</strong></p></li>
 <li><p><strong>$pad(text, width=12, align=c, fillchar=-) -&gt; “—-text—-”</strong></p></li>
 </ul>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_crop">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_crop</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_crop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_crop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_crop">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_crop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_crop" title="Link to this definition">¶</a></dt>
 <dd><p>FuncParser callable. Crops ingoing text to given widths.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – Text to crop.</p></li>
 <li><p><strong>width</strong> (<em>str</em><em>, </em><em>optional</em>) – Will be converted to an integer. Width of
@@ -554,18 +486,18 @@ of the string was cropped. Defaults to <strong>[…]</strong>.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_space">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_space</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwarg</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_space"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_space" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_space">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwarg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_space"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_space" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $space(43)</p>
 <p>Insert a length of space.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_justify">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_justify</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_justify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_justify" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_justify">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_justify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_justify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_justify" title="Link to this definition">¶</a></dt>
 <dd><p>Justify text across a width, default across screen width.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> (<em>str</em>) – Text to justify.</p></li>
 <li><p><strong>width</strong> (<em>int</em><em>, </em><em>optional</em>) – Defaults to default screen width.</p></li>
@@ -573,7 +505,7 @@ of the string was cropped. Defaults to <strong>[…]</strong>.</p></li>
 <li><p><strong>indent</strong> (<em>int</em><em>, </em><em>optional</em>) – Intendation of text block, if any.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>str</em> – The justified text.</p>
 </dd>
 </dl>
@@ -585,29 +517,29 @@ of the string was cropped. Defaults to <strong>[…]</strong>.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_left_justify">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_left_justify</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_left_justify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_left_justify" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_left_justify">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_left_justify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_left_justify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_left_justify" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $ljust(text)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_right_justify">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_right_justify</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_right_justify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_right_justify" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_right_justify">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_right_justify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_right_justify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_right_justify" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $rjust(text)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_center_justify">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_center_justify</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_center_justify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_center_justify" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_center_justify">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_center_justify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_center_justify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_center_justify" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $cjust(text)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_clr">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_clr</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_clr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_clr" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_clr">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_clr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_clr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_clr" title="Link to this definition">¶</a></dt>
 <dd><p>FuncParser callable. Colorizes nested text.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>startclr</strong> (<em>str</em><em>, </em><em>optional</em>) – An ANSI color abbreviation without the
 prefix <strong>|</strong>, such as <strong>r</strong> (red foreground) or <strong>[r</strong> (red background).</p></li>
@@ -630,11 +562,11 @@ to <strong>|n</strong> (reset-color).</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_pluralize">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_pluralize</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pluralize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pluralize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_pluralize">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_pluralize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pluralize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pluralize" title="Link to this definition">¶</a></dt>
 <dd><p>FuncParser callable. Handles pluralization of a word.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>singular_word</strong> (<em>str</em>) – The base (singular) word to optionally pluralize</p></li>
 <li><p><strong>number</strong> (<em>int</em>) – The number of elements; if 1 (or 0), use <strong>singular_word</strong> as-is,
@@ -653,18 +585,18 @@ is greater than one. If not given, we simply add ‘s’ to the end of
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_search">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_search</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access</span><span class="o">=</span><span class="default_value">'control'</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_search" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_search">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'control'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_search" title="Link to this definition">¶</a></dt>
 <dd><p>FuncParser callable. Finds an object based on name or #dbref. Note that
 this requries the parser be called with the caller’s Session for proper
 security. If called without session, the call is aborted.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>query</strong> (<em>str</em>) – The key or dbref to search for. This can consist of any args used
 for one of the regular search methods. Also kwargs will be passed into
 the search (except the kwargs given below)</p>
 </dd>
-<dt class="field-even">Keyword Arguments</dt>
+<dt class="field-even">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>return_list</strong> (<em>bool</em>) – If set, return a list of objects with
 0, 1 or more matches to <strong>query</strong>. Defaults to False.</p></li>
@@ -677,10 +609,10 @@ security check.</p></li>
 <li><p><strong>**kwargs</strong> – Will be passed into the main search.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>any</em> – An entity match or None if no match or a list if <strong>return_list</strong> is set.</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a> – If zero/multimatch and <strong>return_list</strong> is False, or caller was not
 passed into parser.</p>
 </dd>
@@ -695,20 +627,20 @@ passed into parser.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_search_list">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_search_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access</span><span class="o">=</span><span class="default_value">'control'</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_search_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_search_list" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_search_list">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_search_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'control'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_search_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_search_list" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $objlist(#123)</p>
 <p>Legacy alias for search with a return_list=True kwarg preset.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_you">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_you</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capitalize</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_you"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_you" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_you">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_you</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capitalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_you"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_you" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $you() or $you(key)</p>
 <p>Replaces with you for the caller of the string, with the display_name
 of the caller for others.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Keyword Arguments</dt>
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em>) – The ‘you’ in the string. This is used unless another
 you-key is passed to the callable in combination with <strong>mapping</strong>.</p></li>
@@ -719,10 +651,10 @@ used to find which object <strong>$you(key)</strong> refers to. If not given, th
 <li><p><strong>capitalize</strong> (<em>bool</em>) – Passed by the You helper, to capitalize you.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>str</em> – The parsed string.</p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a> – If <strong>caller</strong> and <strong>receiver</strong> were not supplied.</p>
 </dd>
 </dl>
@@ -740,19 +672,19 @@ Others will see “With a grin, CharName jumps at Tommy.”</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_you_capitalize">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_you_capitalize</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">you</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capitalize</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_you_capitalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_you_capitalize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_you_capitalize">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_you_capitalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">you</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capitalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_you_capitalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_you_capitalize" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $You() - capitalizes the ‘you’ output.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_your">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_your</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capitalize</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_your"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_your" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_your">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_your</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capitalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_your"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_your" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $your() or $your(key)</p>
 <p>Replaces with your for the caller of the string, with the display_name +’s
 of the caller for others.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Keyword Arguments</dt>
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em>) – The ‘your’ in the string. This is used unless another
 your-key is passed to the callable in combination with <strong>mapping</strong>.</p></li>
@@ -763,10 +695,10 @@ used to find which object <strong>$you(key)</strong> refers to. If not given, th
 <li><p><strong>capitalize</strong> (<em>bool</em>) – Passed by the You helper, to capitalize you.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>str</em> – The parsed string.</p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a> – If <strong>caller</strong> and <strong>receiver</strong> were not supplied.</p>
 </dd>
 </dl>
@@ -784,18 +716,18 @@ Others will see “CharName’s pet jumps at Tommy.”</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_your_capitalize">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_your_capitalize</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">you</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capitalize</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_your_capitalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_your_capitalize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_your_capitalize">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_your_capitalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">you</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capitalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_your_capitalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_your_capitalize" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $Your() - capitalizes the ‘your’ output.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_conjugate">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_conjugate</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_conjugate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_conjugate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_conjugate">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_conjugate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_conjugate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_conjugate" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $conj(word, [key])</p>
 <p>Conjugate a verb according to if it should be 2nd or third person.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Keyword Arguments</dt>
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em>) – The object who represents ‘you’ in the string.</p></li>
 <li><p><strong>receiver</strong> (<em>Object</em>) – The recipient of the string.</p></li>
@@ -804,10 +736,10 @@ used to find which object the optional <strong>key</strong> argument refers to. 
 the <strong>caller</strong> kwarg is used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>str</em> – The parsed string.</p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a> – If <strong>you</strong> and <strong>recipient</strong> were not both supplied.</p>
 </dd>
 </dl>
@@ -823,13 +755,13 @@ Others will see “With a grin, CharName jumps.”</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_conjugate_for_pronouns">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_conjugate_for_pronouns</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_conjugate_for_pronouns"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_conjugate_for_pronouns" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_conjugate_for_pronouns">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_conjugate_for_pronouns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_conjugate_for_pronouns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_conjugate_for_pronouns" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $pconj(word, [key])</p>
 <p>Conjugate a verb according to if it should be 2nd or third person, respecting the
 singular/plural gendering for third person.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Keyword Arguments</dt>
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em>) – The object who represents ‘you’ in the string.</p></li>
 <li><p><strong>receiver</strong> (<em>Object</em>) – The recipient of the string.</p></li>
@@ -838,10 +770,10 @@ used to find which object the optional <strong>key</strong> argument refers to. 
 the <strong>caller</strong> kwarg is used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>str</em> – The parsed string.</p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#evennia.utils.funcparser.ParsingError" title="evennia.utils.funcparser.ParsingError"><strong>ParsingError</strong></a> – If <strong>you</strong> and <strong>recipient</strong> were not both supplied.</p>
 </dd>
 </dl>
@@ -858,22 +790,14 @@ With your gender as “plural”, others will see “With a grin, they jump.”<
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_pronoun">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_pronoun</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capitalize</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pronoun"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pronoun" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_pronoun">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_pronoun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capitalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pronoun"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pronoun" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $pron(word, [options], [key])</p>
 <p>Adjust pronouns to the expected form. Pronouns are words you use instead of a
 proper name, such as ‘him’, ‘herself’, ‘theirs’ etc. These look different
 depending on who sees the outgoing string.</p>
 <p>The parser maps between this table …</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-<col style="width: 17%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>1st/2nd person</p></th>
 <th class="head"><p>Subject
@@ -921,14 +845,6 @@ Pronoun</p></th>
 </table>
 <p>… and this table (and vice versa).</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-<col style="width: 17%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>3rd person</p></th>
 <th class="head"><p>Subject
@@ -981,7 +897,7 @@ get a default gender fallback (if not specified in the call). If a callable,
 If no <strong>gender</strong> property/callable is found, <strong>neutral</strong> is used as a fallback.</p>
 <p>The pronoun-type default (if not specified in call) is <strong>subject pronoun</strong>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pronoun</strong> (<em>str</em>) – Input argument to parsed call. This can be any of the pronouns
 in the table above. If given in 1st/second form, they will be mappped to
@@ -1012,7 +928,7 @@ reference when finding the correct pronoun. If not provided, it defaults
 to <strong>caller</strong></p></li>
 </ul>
 </dd>
-<dt class="field-even">Keyword Arguments</dt>
+<dt class="field-even">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em>) – The object creating the string. If this has a property ‘gender’,
 it will be checked for a string ‘male/female/neutral’ to determine
@@ -1032,11 +948,6 @@ always capitalized.</p></li>
 </dl>
 <p class="rubric">Examples</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 48%" />
-<col style="width: 28%" />
-<col style="width: 24%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Input</p></th>
 <th class="head"><p>caller sees</p></th>
@@ -1072,20 +983,147 @@ and the mapping can always be auto-detected.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.funcparser.funcparser_callable_pronoun_capitalize">
-<code class="sig-prename descclassname">evennia.utils.funcparser.</code><code class="sig-name descname">funcparser_callable_pronoun_capitalize</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">caller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">receiver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capitalize</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pronoun_capitalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pronoun_capitalize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.funcparser.funcparser_callable_pronoun_capitalize">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.funcparser.</span></span><span class="sig-name descname"><span class="pre">funcparser_callable_pronoun_capitalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capitalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/funcparser.html#funcparser_callable_pronoun_capitalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.funcparser.funcparser_callable_pronoun_capitalize" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $Pron(word, [options]) - always maps to a capitalized word.</p>
 </dd></dl>
 
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.utils.funcparser</a><ul>
+<li><a class="reference internal" href="#evennia.utils.funcparser.ParsingError"><code class="docutils literal notranslate"><span class="pre">ParsingError</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.FuncParser"><code class="docutils literal notranslate"><span class="pre">FuncParser</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.funcparser.FuncParser.__init__"><code class="docutils literal notranslate"><span class="pre">FuncParser.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.FuncParser.validate_callables"><code class="docutils literal notranslate"><span class="pre">FuncParser.validate_callables()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.FuncParser.execute"><code class="docutils literal notranslate"><span class="pre">FuncParser.execute()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.FuncParser.parse"><code class="docutils literal notranslate"><span class="pre">FuncParser.parse()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.FuncParser.parse_to_any"><code class="docutils literal notranslate"><span class="pre">FuncParser.parse_to_any()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_eval"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_eval()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_toint"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_toint()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_int2str"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_int2str()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_an"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_an()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_add"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_add()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_sub"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_sub()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_mult"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_mult()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_div"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_div()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_round"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_round()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_random"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_random()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_randint"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_randint()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_choice"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_choice()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_pad"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_pad()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_crop"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_crop()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_space"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_space()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_justify"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_justify()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_left_justify"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_left_justify()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_right_justify"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_right_justify()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_center_justify"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_center_justify()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_clr"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_clr()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_pluralize"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_pluralize()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_search"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_search()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_search_list"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_search_list()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_you"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_you()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_you_capitalize"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_you_capitalize()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_your"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_your()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_your_capitalize"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_your_capitalize()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_conjugate"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_conjugate()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_conjugate_for_pronouns"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_conjugate_for_pronouns()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_pronoun"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_pronoun()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.funcparser.funcparser_callable_pronoun_capitalize"><code class="docutils literal notranslate"><span class="pre">funcparser_callable_pronoun_capitalize()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.utils.evtable.html"
+                          title="previous chapter">evennia.utils.evtable</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.utils.gametime.html"
+                          title="next chapter">evennia.utils.gametime</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/evennia.utils.funcparser.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1100,7 +1138,7 @@ and the mapping can always be auto-detected.</p>
         <li class="right" >
           <a href="evennia.utils.evtable.html" title="evennia.utils.evtable"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -1108,12 +1146,9 @@ and the mapping can always be auto-detected.</p>
         <li class="nav-item nav-item-this"><a href="">evennia.utils.funcparser</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

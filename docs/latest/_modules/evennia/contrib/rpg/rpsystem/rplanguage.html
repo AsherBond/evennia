@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.rpg.rpsystem.rplanguage &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.rpg.rpsystem.rplanguage</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="rplanguage.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -263,15 +208,23 @@
 <span class="n">_RE_EXTRA_CHARS</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s+(?!... )(?=\W)|[,.?;](?!.. )(?=[,?;]|\s+[,.?;])&quot;</span><span class="p">,</span> <span class="n">_RE_FLAGS</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="LanguageError"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageError">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LanguageError</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">):</span>
+<div class="viewcode-block" id="LanguageError">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LanguageError</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">):</span>
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="LanguageExistsError"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageExistsError">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LanguageExistsError</span><span class="p">(</span><span class="n">LanguageError</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LanguageExistsError">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageExistsError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LanguageExistsError</span><span class="p">(</span><span class="n">LanguageError</span><span class="p">):</span>
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="LanguageHandler"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LanguageHandler</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LanguageHandler">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LanguageHandler</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is a storage class that should usually not be created on its</span>
 <span class="sd">    own. It&#39;s automatically created by a call to `obfuscate_language`</span>
@@ -298,13 +251,18 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="LanguageHandler.at_script_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler.at_script_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="LanguageHandler.at_script_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler.at_script_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s2">&quot;Called when script is first started&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;language_handler&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">persistent</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">language_storage</span> <span class="o">=</span> <span class="p">{}</span></div>
 
-<div class="viewcode-block" id="LanguageHandler.add"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler.add">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span>
+
+<div class="viewcode-block" id="LanguageHandler.add">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler.add">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">key</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
         <span class="n">phonemes</span><span class="o">=</span><span class="n">_PHONEMES</span><span class="p">,</span>
@@ -455,6 +413,7 @@
         <span class="p">}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">language_storage</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">storage</span></div>
 
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_translate_sub</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">match</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replacer method called by re.sub when</span>
@@ -547,7 +506,9 @@
 
         <span class="k">return</span> <span class="n">new_word</span>
 
-<div class="viewcode-block" id="LanguageHandler.translate"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler.translate">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="LanguageHandler.translate">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.LanguageHandler.translate">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Translate the text according to the given level.</span>
 
@@ -575,7 +536,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))))</span>
         <span class="n">translation</span> <span class="o">=</span> <span class="n">_RE_WORD</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_translate_sub</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
         <span class="c1"># the substitution may create too long empty spaces, remove those</span>
-        <span class="k">return</span> <span class="n">_RE_EXTRA_CHARS</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">translation</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="n">_RE_EXTRA_CHARS</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">translation</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># Language access functions</span>
@@ -583,7 +546,9 @@
 <span class="n">_LANGUAGE_HANDLER</span> <span class="o">=</span> <span class="kc">None</span>
 
 
-<div class="viewcode-block" id="obfuscate_language"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.obfuscate_language">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">obfuscate_language</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="obfuscate_language">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.obfuscate_language">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">obfuscate_language</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Main access method for the language parser.</span>
 
@@ -613,7 +578,10 @@
     <span class="k">return</span> <span class="n">_LANGUAGE_HANDLER</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="n">language</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="add_language"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.add_language">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">add_language</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="add_language">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.add_language">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_language</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Access function to creating a new language. See the docstring of</span>
 <span class="sd">    `LanguageHandler.add` for list of keyword arguments.</span>
@@ -631,7 +599,10 @@
     <span class="n">_LANGUAGE_HANDLER</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="available_languages"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.available_languages">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">available_languages</span><span class="p">():</span>
+
+<div class="viewcode-block" id="available_languages">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.available_languages">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">available_languages</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns all available language keys.</span>
 
@@ -649,6 +620,7 @@
 
                 <span class="n">_LANGUAGE_HANDLER</span> <span class="o">=</span> <span class="n">create_script</span><span class="p">(</span><span class="n">LanguageHandler</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">_LANGUAGE_HANDLER</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;language_storage&quot;</span><span class="p">,</span> <span class="p">{}))</span></div>
+
 
 
 <span class="c1"># -----------------------------------------------------------------------------</span>
@@ -683,7 +655,9 @@
 <span class="p">]</span>  <span class="c1"># ...             #13 (always same length)</span>
 
 
-<div class="viewcode-block" id="obfuscate_whisper"><a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.obfuscate_whisper">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">obfuscate_whisper</span><span class="p">(</span><span class="n">whisper</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<div class="viewcode-block" id="obfuscate_whisper">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.rpg.rpsystem.rplanguage.html#evennia.contrib.rpg.rpsystem.rplanguage.obfuscate_whisper">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">obfuscate_whisper</span><span class="p">(</span><span class="n">whisper</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Obfuscate whisper depending on a pre-calculated level</span>
 <span class="sd">    (that may depend on distance, listening skill etc)</span>
@@ -702,14 +676,78 @@
         <span class="k">return</span> <span class="s2">&quot;...&quot;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">_RE_WHISPER_OBSCURE</span><span class="p">[</span><span class="n">olevel</span><span class="p">]</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">whisper</span><span class="p">)</span></div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -718,18 +756,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.rpg.rpsystem.rplanguage</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

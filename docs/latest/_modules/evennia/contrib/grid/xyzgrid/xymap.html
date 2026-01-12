@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.grid.xyzgrid.xymap &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.grid.xyzgrid.xymap</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="xymap.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -228,7 +173,9 @@
 <span class="c1"># Map parser implementation</span>
 
 
-<div class="viewcode-block" id="XYMap"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">XYMap</span><span class="p">:</span>
+<div class="viewcode-block" id="XYMap">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">XYMap</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This represents a single map of interconnected nodes/rooms, parsed from a ASCII map</span>
 <span class="sd">    representation.</span>
@@ -275,7 +222,9 @@
     <span class="c1"># we normally only accept one single character for the legend key</span>
     <span class="n">legend_key_exceptions</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span>
 
-<div class="viewcode-block" id="XYMap.__init__"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_module_or_dict</span><span class="p">,</span> <span class="n">Z</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">,</span> <span class="n">xyzgrid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="XYMap.__init__">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_module_or_dict</span><span class="p">,</span> <span class="n">Z</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">,</span> <span class="n">xyzgrid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the map parser by feeding it the map.</span>
 
@@ -350,6 +299,7 @@
         <span class="c1"># load data and parse it</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span></div>
 
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Print the string representation of the map.</span>
@@ -365,13 +315,18 @@
             <span class="n">nnodes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">node_index_map</span><span class="p">)</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;XYMap(Z=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="si">}</span><span class="s2">), </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">max_X</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">max_Y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">nnodes</span><span class="si">}</span><span class="s2"> nodes&gt;&quot;</span>
 
-<div class="viewcode-block" id="XYMap.log"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.log">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+<div class="viewcode-block" id="XYMap.log">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.log">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">xyzgrid</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">xyzgrid</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">log_info</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="XYMap.reload"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.reload">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_module_or_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="XYMap.reload">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.reload">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_module_or_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        (Re)Load a map.</span>
 
@@ -468,7 +423,10 @@
             <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">node_or_link_class</span><span class="o">.</span><span class="n">prototype</span> <span class="o">=</span> <span class="n">proto</span></div>
 
-<div class="viewcode-block" id="XYMap.parse"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.parse">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="XYMap.parse">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.parse">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parses the numerical grid from the string. The first pass means parsing out</span>
 <span class="sd">        all nodes. The linking-together of nodes is not happening until the second pass</span>
@@ -636,6 +594,7 @@
         <span class="c1"># store</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">display_map</span> <span class="o">=</span> <span class="n">display_map</span></div>
 
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_get_topology_around_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get all links and nodes up to a certain distance from an XY coordinate.</span>
@@ -691,7 +650,9 @@
         <span class="n">points</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="n">_scan_neighbors</span><span class="p">(</span><span class="n">center_node</span><span class="p">,</span> <span class="p">[],</span> <span class="n">dist</span><span class="o">=</span><span class="n">dist</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">points</span><span class="p">)),</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span>
 
-<div class="viewcode-block" id="XYMap.calculate_path_matrix"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.calculate_path_matrix">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_path_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="XYMap.calculate_path_matrix">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.calculate_path_matrix">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_path_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Solve the pathfinding problem using Dijkstra&#39;s algorithm. This will try to</span>
 <span class="sd">        load the solution from disk if possible.</span>
@@ -744,7 +705,10 @@
                     <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mapstring</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist_matrix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pathfinding_routes</span><span class="p">),</span> <span class="n">fil</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="mi">4</span>
                 <span class="p">)</span></div>
 
-<div class="viewcode-block" id="XYMap.spawn_nodes"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.spawn_nodes">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">spawn_nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">)):</span>
+
+<div class="viewcode-block" id="XYMap.spawn_nodes">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.spawn_nodes">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">spawn_nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">)):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert the nodes of this XYMap into actual in-world rooms by spawning their</span>
 <span class="sd">        related prototypes in the correct coordinate positions. This must be done *first*</span>
@@ -788,7 +752,10 @@
                 <span class="n">spawned</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">spawned</span></div>
 
-<div class="viewcode-block" id="XYMap.spawn_links"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.spawn_links">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">spawn_links</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">),</span> <span class="n">nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">directions</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="XYMap.spawn_links">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.spawn_links">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">spawn_links</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">),</span> <span class="n">nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">directions</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert links of this XYMap into actual in-game exits by spawning their related</span>
 <span class="sd">        prototypes. It&#39;s possible to only spawn a specic exit by specifying the node and</span>
@@ -816,7 +783,10 @@
             <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="n">wildcard</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">X</span><span class="p">))</span> <span class="ow">and</span> <span class="p">(</span><span class="n">y</span> <span class="ow">in</span> <span class="p">(</span><span class="n">wildcard</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">Y</span><span class="p">)):</span>
                 <span class="n">node</span><span class="o">.</span><span class="n">spawn_links</span><span class="p">(</span><span class="n">directions</span><span class="o">=</span><span class="n">directions</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="XYMap.get_node_from_coord"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_node_from_coord">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_from_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="p">):</span>
+
+<div class="viewcode-block" id="XYMap.get_node_from_coord">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_node_from_coord">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_from_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get a MapNode from a coordinate.</span>
 
@@ -846,7 +816,10 @@
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="XYMap.get_components_with_symbol"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_components_with_symbol">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_components_with_symbol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">):</span>
+
+<div class="viewcode-block" id="XYMap.get_components_with_symbol">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_components_with_symbol">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_components_with_symbol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">symbol</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Find all map components (nodes, links) with a given symbol in this map.</span>
 
@@ -859,7 +832,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="p">[])</span></div>
 
-<div class="viewcode-block" id="XYMap.get_shortest_path"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_shortest_path">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_shortest_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_xy</span><span class="p">,</span> <span class="n">end_xy</span><span class="p">):</span>
+
+<div class="viewcode-block" id="XYMap.get_shortest_path">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_shortest_path">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_shortest_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_xy</span><span class="p">,</span> <span class="n">end_xy</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the shortest route between two points on the grid.</span>
 
@@ -917,7 +893,10 @@
 
         <span class="k">return</span> <span class="n">directions</span><span class="p">,</span> <span class="n">path</span></div>
 
-<div class="viewcode-block" id="XYMap.get_visual_range"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_visual_range">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_visual_range</span><span class="p">(</span>
+
+<div class="viewcode-block" id="XYMap.get_visual_range">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.xyzgrid.xymap.html#evennia.contrib.grid.xyzgrid.xymap.XYMap.get_visual_range">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_visual_range</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">xy</span><span class="p">,</span>
         <span class="n">dist</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
@@ -1083,15 +1062,80 @@
             <span class="n">indent</span> <span class="o">=</span> <span class="n">indent</span> <span class="o">*</span> <span class="s2">&quot; &quot;</span>
             <span class="k">return</span> <span class="n">indent</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">indent</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">gridmap</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">gridmap</span></div></div>
+            <span class="k">return</span> <span class="n">gridmap</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1100,18 +1144,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.grid.xyzgrid.xymap</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

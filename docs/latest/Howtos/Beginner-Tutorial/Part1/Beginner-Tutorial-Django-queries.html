@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>12. Advanced searching - Django Database queries &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="13. Building a chair you can sit on" href="Beginner-Tutorial-Making-A-Sittable-Object.html" />
     <link rel="prev" title="11. Searching for things" href="Beginner-Tutorial-Searching-Things.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="Beginner-Tutorial-Searching-Things.html" title="11. Searching for things"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part1-Overview.html" accesskey="U">Part 1: What We Have</a> &#187;</li>
@@ -48,88 +42,12 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">12. Advanced searching - Django Database queries</a><ul>
-<li><a class="reference internal" href="#queryset-field-lookups">12.1. Queryset field lookups</a></li>
-<li><a class="reference internal" href="#lets-get-that-werewolf">12.2. Let’s get that werewolf …</a></li>
-<li><a class="reference internal" href="#queries-with-or-or-not">12.3. Queries with OR or NOT</a></li>
-<li><a class="reference internal" href="#annotations">12.4. Annotations</a></li>
-<li><a class="reference internal" href="#f-objects">12.5. F-objects</a></li>
-<li><a class="reference internal" href="#grouping-and-returning-only-certain-properties">12.6. Grouping and returning only certain properties</a></li>
-<li><a class="reference internal" href="#conclusions">12.7. Conclusions</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Searching-Things.html"
-                        title="previous chapter"><span class="section-number">11. </span>Searching for things</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Making-A-Sittable-Object.html"
-                        title="next chapter"><span class="section-number">13. </span>Building a chair you can sit on</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Django-queries.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Beginner-Tutorial-Django-queries.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="advanced-searching-django-database-queries">
-<h1><span class="section-number">12. </span>Advanced searching - Django Database queries<a class="headerlink" href="#advanced-searching-django-database-queries" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">12. </span>Advanced searching - Django Database queries<a class="headerlink" href="#advanced-searching-django-database-queries" title="Link to this heading">¶</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>More advanced lesson!</p>
@@ -220,7 +138,7 @@ found.</p></li>
 <div><p>All of Evennia search functions use querysets under the hood. The <code class="docutils literal notranslate"><span class="pre">evennia.search_*</span></code> functions actually return querysets (we have just been treating them as lists so far). This means you could in principle add a <code class="docutils literal notranslate"><span class="pre">.filter</span></code> query to the result of <code class="docutils literal notranslate"><span class="pre">evennia.search_object</span></code> to further refine the search.</p>
 </div></blockquote>
 <section id="queryset-field-lookups">
-<h2><span class="section-number">12.1. </span>Queryset field lookups<a class="headerlink" href="#queryset-field-lookups" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.1. </span>Queryset field lookups<a class="headerlink" href="#queryset-field-lookups" title="Link to this heading">¶</a></h2>
 <p>Above we found roses with exactly the <code class="docutils literal notranslate"><span class="pre">db_key</span></code> <code class="docutils literal notranslate"><span class="pre">&quot;rose&quot;</span></code>. This is an <em>exact</em> match that is <em>case sensitive</em>, so it would not find <code class="docutils literal notranslate"><span class="pre">&quot;Rose&quot;</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is case-sensitive and the same as =</span>
 <span class="n">roses</span> <span class="o">=</span> <span class="n">Flower</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">db_key__exact</span><span class="o">=</span><span class="s2">&quot;rose&quot;</span>
@@ -263,7 +181,7 @@ this is how we have identified mages:</p>
 <p>For more field lookups, see the <a class="reference external" href="https://docs.djangoproject.com/en/3.0/ref/models/querysets/#field-lookups">django docs</a> on the subject.</p>
 </section>
 <section id="lets-get-that-werewolf">
-<h2><span class="section-number">12.2. </span>Let’s get that werewolf …<a class="headerlink" href="#lets-get-that-werewolf" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.2. </span>Let’s get that werewolf …<a class="headerlink" href="#lets-get-that-werewolf" title="Link to this heading">¶</a></h2>
 <p>Let’s see if we can make a query for the werewolves in the moonlight we mentioned at the beginning
 of this lesson.</p>
 <p>Firstly, we make ourselves and our current location match the criteria, so we can test:</p>
@@ -273,30 +191,21 @@ of this lesson.</p>
 </div>
 <p>This is an example of a more complex query. We’ll consider it an example of what is
 possible.</p>
-<div class="highlight-python notranslate"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typeclasses.characters</span><span class="w"> </span><span class="kn">import</span> <span class="n">Character</span>
-
-<span class="n">will_transform</span> <span class="o">=</span> <span class="p">(</span>
-<span class="hll">    <span class="n">Character</span><span class="o">.</span><span class="n">objects</span>
-</span>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span>
-<span class="hll">        <span class="n">db_location__db_tags__db_key__iexact</span><span class="o">=</span><span class="s2">&quot;moonlit&quot;</span><span class="p">,</span>
-</span><span class="hll">        <span class="n">db_attributes__db_key__iexact</span><span class="o">=</span><span class="s2">&quot;lycanthropy&quot;</span><span class="p">,</span>
-</span><span class="hll">        <span class="n">db_attributes__db_value</span><span class="o">=</span><span class="mi">2</span>
-</span>    <span class="p">)</span>
-<span class="p">)</span>
-</pre></div></td></tr></table></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">typeclasses.characters</span><span class="w"> </span><span class="kn">import</span> <span class="n">Character</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">will_transform</span> <span class="o">=</span> <span class="p">(</span>
+<span class="hll"><span class="linenos"> 4</span>    <span class="n">Character</span><span class="o">.</span><span class="n">objects</span>
+</span><span class="linenos"> 5</span>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+<span class="hll"><span class="linenos"> 6</span>        <span class="n">db_location__db_tags__db_key__iexact</span><span class="o">=</span><span class="s2">&quot;moonlit&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 7</span>        <span class="n">db_attributes__db_key__iexact</span><span class="o">=</span><span class="s2">&quot;lycanthropy&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 8</span>        <span class="n">db_attributes__db_value</span><span class="o">=</span><span class="mi">2</span>
+</span><span class="linenos"> 9</span>    <span class="p">)</span>
+<span class="linenos">10</span><span class="p">)</span>
+</pre></div>
 </div>
 <aside class="sidebar">
 <p class="sidebar-title">Attributes vs database fields</p>
-<p>Don’t confuse database fields with <a class="reference internal" href="../../../Components/Attributes.html"><span class="doc std std-doc">Attributes</span></a> you set via <code class="docutils literal notranslate"><span class="pre">obj.db.attr</span> <span class="pre">=</span> <span class="pre">'foo'</span></code> or <code class="docutils literal notranslate"><span class="pre">obj.attributes.add()</span></code>. Attributes are custom database entities <em>linked</em> to an object. They are not separate fields <em>on</em> that object like <code class="docutils literal notranslate"><span class="pre">db_key</span></code> or <code class="docutils literal notranslate"><span class="pre">db_location</span></code> are.</p>
+<p>Don’t confuse database fields with <a class="reference internal" href="../../../Components/Attributes.html"><span class="std std-doc">Attributes</span></a> you set via <code class="docutils literal notranslate"><span class="pre">obj.db.attr</span> <span class="pre">=</span> <span class="pre">'foo'</span></code> or <code class="docutils literal notranslate"><span class="pre">obj.attributes.add()</span></code>. Attributes are custom database entities <em>linked</em> to an object. They are not separate fields <em>on</em> that object like <code class="docutils literal notranslate"><span class="pre">db_key</span></code> or <code class="docutils literal notranslate"><span class="pre">db_location</span></code> are.</p>
 <p>While an Attribute’s <code class="docutils literal notranslate"><span class="pre">db_key</span></code> is just a normal string, theor <code class="docutils literal notranslate"><span class="pre">db_value</span></code> is in fact a serialized piece of data.  This means that cannot query this with additional operators. So if you use e.g. <code class="docutils literal notranslate"><span class="pre">db_attributes__db_value__iexact=2</span></code>, you’ll get an error. While Attributes are very flexible, this is their drawback - their stored value is not possible to directly query with advanced query methods beyond finding the exact match.</p>
 </aside>
 <ul class="simple">
@@ -318,11 +227,11 @@ that we can treat like an object for this purpose; it references all Tags on the
 <p>Running this query makes our newly lycanthropic Character appear in <code class="docutils literal notranslate"><span class="pre">will_transform</span></code> so we know to transform it. Success!</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>You can’t query for an Attribute <code class="docutils literal notranslate"><span class="pre">db_value</span></code> quite as freely as other data-types. This is because Attributes can store any Python entity and is actually stored as <em>strings</em> on the database side. So while you can use <code class="docutils literal notranslate"><span class="pre">db_value=2</span></code> in the above example, you will not be able to use <code class="docutils literal notranslate"><span class="pre">dbvalue__eq=2</span></code> or <code class="docutils literal notranslate"><span class="pre">__lt=2</span></code>. See <a class="reference internal" href="../../../Components/Attributes.html#querying-by-attribute"><span class="std std-doc">Attributes</span></a> for more information on dealing with Attributes.</p>
+<p>You can’t query for an Attribute <code class="docutils literal notranslate"><span class="pre">db_value</span></code> quite as freely as other data-types. This is because Attributes can store any Python entity and is actually stored as <em>strings</em> on the database side. So while you can use <code class="docutils literal notranslate"><span class="pre">db_value=2</span></code> in the above example, you will not be able to use <code class="docutils literal notranslate"><span class="pre">dbvalue__eq=2</span></code> or <code class="docutils literal notranslate"><span class="pre">__lt=2</span></code>. See <a class="reference internal" href="../../../Components/Attributes.html#querying-by-attribute"><span class="std std-ref">Attributes</span></a> for more information on dealing with Attributes.</p>
 </div>
 </section>
 <section id="queries-with-or-or-not">
-<h2><span class="section-number">12.3. </span>Queries with OR or NOT<a class="headerlink" href="#queries-with-or-or-not" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.3. </span>Queries with OR or NOT<a class="headerlink" href="#queries-with-or-or-not" title="Link to this heading">¶</a></h2>
 <p>All examples so far used <code class="docutils literal notranslate"><span class="pre">AND</span></code> relations. The arguments to <code class="docutils literal notranslate"><span class="pre">.filter</span></code> are added together with <code class="docutils literal notranslate"><span class="pre">AND</span></code>
 (“we want tag room to be “monlit” <em>and</em> lycanthropy be &gt; 2”).</p>
 <p>For queries using <code class="docutils literal notranslate"><span class="pre">OR</span></code> and <code class="docutils literal notranslate"><span class="pre">NOT</span></code> we need Django’s <a class="reference external" href="https://docs.djangoproject.com/en/4.1/topics/db/queries/#complex-lookups-with-q-objects">Q object</a>. It is imported from Django directly:</p>
@@ -395,7 +304,7 @@ Character via different paths, so we add <code class="docutils literal notransla
 sure that there is only one instance of each Character in the result.</p>
 </section>
 <section id="annotations">
-<h2><span class="section-number">12.4. </span>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.4. </span>Annotations<a class="headerlink" href="#annotations" title="Link to this heading">¶</a></h2>
 <p>What if we wanted to filter on some condition that isn’t represented easily by a
 field on the object? An example would wanting to find rooms only containing <em>five or more objects</em>.</p>
 <p>We <em>could</em> do it like this (don’t actually do it this way!):</p>
@@ -420,24 +329,16 @@ database directly</p>
 <p><em>Annotations</em> allow you to set a ‘variable’ inside the query that you can then
 access from other parts of the query. Let’s do the same example as before
 directly in the database:</p>
-<div class="highlight-python notranslate"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typeclasses.rooms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Room</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">django.db.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Count</span>
-
-<span class="n">rooms</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">Room</span><span class="o">.</span><span class="n">objects</span>
-<span class="hll">    <span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
-</span>        <span class="n">num_objects</span><span class="o">=</span><span class="n">Count</span><span class="p">(</span><span class="s1">&#39;locations_set&#39;</span><span class="p">))</span>
-<span class="hll">    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">num_objects__gte</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-</span><span class="p">)</span>
-</pre></div></td></tr></table></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span><span class="w"> </span><span class="nn">typeclasses.rooms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Room</span>
+<span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">django.db.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Count</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">rooms</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">5</span>    <span class="n">Room</span><span class="o">.</span><span class="n">objects</span>
+<span class="hll"><span class="linenos">6</span>    <span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+</span><span class="linenos">7</span>        <span class="n">num_objects</span><span class="o">=</span><span class="n">Count</span><span class="p">(</span><span class="s1">&#39;locations_set&#39;</span><span class="p">))</span>
+<span class="hll"><span class="linenos">8</span>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">num_objects__gte</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span><span class="linenos">9</span><span class="p">)</span>
+</pre></div>
 </div>
 <aside class="sidebar">
 <p class="sidebar-title">locations_set</p>
@@ -453,7 +354,7 @@ should be greater than or equal to 5.</p></li>
 <p>Annotations can be a little harder to get one’s head around but much more efficient than lopping over all objects in Python.</p>
 </section>
 <section id="f-objects">
-<h2><span class="section-number">12.5. </span>F-objects<a class="headerlink" href="#f-objects" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.5. </span>F-objects<a class="headerlink" href="#f-objects" title="Link to this heading">¶</a></h2>
 <p>What if we wanted to compare two dynamic parameters against one another in a
 query? For example, what if instead of having 5 or more objects, we only wanted
 objects that had a bigger inventory than they had tags (silly example, but …)?</p>
@@ -473,27 +374,19 @@ objects that had a bigger inventory than they had tags (silly example, but …)?
 <p>Here we used <code class="docutils literal notranslate"><span class="pre">.annotate</span></code> to create two in-query ‘variables’ <code class="docutils literal notranslate"><span class="pre">num_objects</span></code> and <code class="docutils literal notranslate"><span class="pre">num_tags</span></code>. We then directly use these results in the filter. Using <code class="docutils literal notranslate"><span class="pre">F()</span></code> allows for also the right-hand-side of the filter condition to be calculated on the fly, completely within the database.</p>
 </section>
 <section id="grouping-and-returning-only-certain-properties">
-<h2><span class="section-number">12.6. </span>Grouping and returning only certain properties<a class="headerlink" href="#grouping-and-returning-only-certain-properties" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.6. </span>Grouping and returning only certain properties<a class="headerlink" href="#grouping-and-returning-only-certain-properties" title="Link to this heading">¶</a></h2>
 <p>Suppose you used tags to mark someone belonging to an organization. Now you want to make a list and need to get the membership count of every organization all at once.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">.annotate</span></code>, <code class="docutils literal notranslate"><span class="pre">.values_list</span></code>, and <code class="docutils literal notranslate"><span class="pre">.order_by</span></code> queryset methods are useful for this. Normally when you run a <code class="docutils literal notranslate"><span class="pre">.filter</span></code>, what you get back is a bunch of full typeclass instances, like roses or swords. Using <code class="docutils literal notranslate"><span class="pre">.values_list</span></code> you can instead choose to only get back certain properties on objects. The <code class="docutils literal notranslate"><span class="pre">.order_by</span></code> method finally allows for sorting the results according to some criterion:</p>
-<div class="highlight-python notranslate"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.db.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Count</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typeclasses.rooms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Room</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">Character</span><span class="o">.</span><span class="n">objects</span>
-<span class="hll">    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">db_tags__db_category</span><span class="o">=</span><span class="s2">&quot;organization&quot;</span><span class="p">)</span>
-</span><span class="hll">    <span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">tagcount</span><span class="o">=</span><span class="n">Count</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">))</span>
-</span><span class="hll">    <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-tagcount&#39;</span><span class="p">))</span>
-</span><span class="hll">    <span class="o">.</span><span class="n">values_list</span><span class="p">(</span><span class="s1">&#39;db_tags__db_key&#39;</span><span class="p">,</span> <span class="s2">&quot;tagcount&quot;</span><span class="p">)</span>
-</span></pre></div></td></tr></table></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span><span class="w"> </span><span class="nn">django.db.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Count</span>
+<span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">typeclasses.rooms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Room</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">result</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">5</span>    <span class="n">Character</span><span class="o">.</span><span class="n">objects</span>
+<span class="hll"><span class="linenos">6</span>    <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">db_tags__db_category</span><span class="o">=</span><span class="s2">&quot;organization&quot;</span><span class="p">)</span>
+</span><span class="hll"><span class="linenos">7</span>    <span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">tagcount</span><span class="o">=</span><span class="n">Count</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">))</span>
+</span><span class="hll"><span class="linenos">8</span>    <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-tagcount&#39;</span><span class="p">))</span>
+</span><span class="hll"><span class="linenos">9</span>    <span class="o">.</span><span class="n">values_list</span><span class="p">(</span><span class="s1">&#39;db_tags__db_key&#39;</span><span class="p">,</span> <span class="s2">&quot;tagcount&quot;</span><span class="p">)</span>
+</span></pre></div>
 </div>
 <p>Here we fetch all Characters who …</p>
 <ul class="simple">
@@ -515,18 +408,112 @@ in a format like the following:</p>
 </div>
 </section>
 <section id="conclusions">
-<h2><span class="section-number">12.7. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.7. </span>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">¶</a></h2>
 <p>We have covered a lot of ground in this lesson and covered several more complex topics. Knowing how to query using Django is a powerful skill to have.</p>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">12. Advanced searching - Django Database queries</a><ul>
+<li><a class="reference internal" href="#queryset-field-lookups">12.1. Queryset field lookups</a></li>
+<li><a class="reference internal" href="#lets-get-that-werewolf">12.2. Let’s get that werewolf …</a></li>
+<li><a class="reference internal" href="#queries-with-or-or-not">12.3. Queries with OR or NOT</a></li>
+<li><a class="reference internal" href="#annotations">12.4. Annotations</a></li>
+<li><a class="reference internal" href="#f-objects">12.5. F-objects</a></li>
+<li><a class="reference internal" href="#grouping-and-returning-only-certain-properties">12.6. Grouping and returning only certain properties</a></li>
+<li><a class="reference internal" href="#conclusions">12.7. Conclusions</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Searching-Things.html"
+                          title="previous chapter"><span class="section-number">11. </span>Searching for things</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Making-A-Sittable-Object.html"
+                          title="next chapter"><span class="section-number">13. </span>Building a chair you can sit on</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Django-queries.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -541,19 +528,16 @@ in a format like the following:</p>
         <li class="right" >
           <a href="Beginner-Tutorial-Searching-Things.html" title="11. Searching for things"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part1-Overview.html" >Part 1: What We Have</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><span class="section-number">12. </span>Advanced searching - Django Database queries</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>11. Searching for things &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="12. Advanced searching - Django Database queries" href="Beginner-Tutorial-Django-queries.html" />
     <link rel="prev" title="10. Creating things" href="Beginner-Tutorial-Creating-Things.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="Beginner-Tutorial-Creating-Things.html" title="10. Creating things"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part1-Overview.html" accesskey="U">Part 1: What We Have</a> &#187;</li>
@@ -48,95 +42,12 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">11. Searching for things</a><ul>
-<li><a class="reference internal" href="#searching-using-object-search">11.1. Searching using Object.search</a></li>
-<li><a class="reference internal" href="#main-search-functions">11.2. Main search functions</a></li>
-<li><a class="reference internal" href="#understanding-object-relationships">11.3. Understanding object relationships</a></li>
-<li><a class="reference internal" href="#what-can-be-searched-for">11.4. What can be searched for</a><ul>
-<li><a class="reference internal" href="#search-by-key">11.4.1. Search by key</a></li>
-<li><a class="reference internal" href="#search-by-aliases">11.4.2. Search by aliases</a></li>
-<li><a class="reference internal" href="#search-by-location">11.4.3. Search by location</a></li>
-<li><a class="reference internal" href="#search-by-tags">11.4.4. Search by Tags</a></li>
-<li><a class="reference internal" href="#search-by-attribute">11.4.5. Search by Attribute</a></li>
-<li><a class="reference internal" href="#search-by-typeclass">11.4.6. Search by Typeclass</a></li>
-<li><a class="reference internal" href="#search-by-dbref">11.4.7. Search by dbref</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#summary">11.5. Summary</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Creating-Things.html"
-                        title="previous chapter"><span class="section-number">10. </span>Creating things</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Django-queries.html"
-                        title="next chapter"><span class="section-number">12. </span>Advanced searching - Django Database queries</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Searching-Things.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Beginner-Tutorial-Searching-Things.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="searching-for-things">
-<h1><span class="section-number">11. </span>Searching for things<a class="headerlink" href="#searching-for-things" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>Searching for things<a class="headerlink" href="#searching-for-things" title="Link to this heading">¶</a></h1>
 <p>We have gone through how to create the various entities in Evennia. But creating something is of little use if we cannot find and use it afterwards.</p>
 <aside class="sidebar">
 <p class="sidebar-title">Python code vs using the py command</p>
@@ -148,7 +59,7 @@ give examples of how to test things out from the <code class="docutils literal n
 </pre></div>
 </div>
 <section id="searching-using-object-search">
-<h2><span class="section-number">11.1. </span>Searching using Object.search<a class="headerlink" href="#searching-using-object-search" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Searching using Object.search<a class="headerlink" href="#searching-using-object-search" title="Link to this heading">¶</a></h2>
 <p>On the <code class="docutils literal notranslate"><span class="pre">DefaultObject</span></code> is a <code class="docutils literal notranslate"><span class="pre">.search</span></code> method which we have already tried out when we made Commands. For this to be used you must already have an object available, and if you are using <code class="docutils literal notranslate"><span class="pre">py</span></code> you can use yourself:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>py self.search(&quot;rose&quot;)
 Rose
@@ -187,7 +98,7 @@ Rose
         <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found match for </span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you want to test this command out, add it to the default cmdset (see <a class="reference internal" href="Beginner-Tutorial-Adding-Commands.html"><span class="doc std std-doc">the Command tutorial</span></a> for more details) and then reload the server with <code class="docutils literal notranslate"><span class="pre">reload</span></code>:</p>
+<p>If you want to test this command out, add it to the default cmdset (see <a class="reference internal" href="Beginner-Tutorial-Adding-Commands.html"><span class="std std-doc">the Command tutorial</span></a> for more details) and then reload the server with <code class="docutils literal notranslate"><span class="pre">reload</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in mygame/commands/default_cmdsets.py</span>
 
 <span class="c1"># ...</span>
@@ -228,7 +139,7 @@ inherits from <code class="docutils literal notranslate"><span class="pre">Defau
 <p>With <code class="docutils literal notranslate"><span class="pre">quiet=True</span></code> the user will not be notified on zero or multi-match errors. Instead you are expected to handle this yourself. Furthermore, what is returned is now a list of zero, one or more matches!</p>
 </section>
 <section id="main-search-functions">
-<h2><span class="section-number">11.2. </span>Main search functions<a class="headerlink" href="#main-search-functions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>Main search functions<a class="headerlink" href="#main-search-functions" title="Link to this heading">¶</a></h2>
 <p>The base search tools of Evennia are the <code class="docutils literal notranslate"><span class="pre">evennia.search_*</span></code> functions, such as <code class="docutils literal notranslate"><span class="pre">evennia.search_object</span></code>. These are normally used in your code, but you can also try them out in-game using <code class="docutils literal notranslate"><span class="pre">py</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> &gt; py evennia.search_object(&quot;rose&quot;)
  &lt;Queryset [Rose]&gt;
@@ -236,7 +147,7 @@ inherits from <code class="docutils literal notranslate"><span class="pre">Defau
 </div>
 <aside class="sidebar">
 <p class="sidebar-title">Querysets</p>
-<p>What is returned from the main search functions is actually a <code class="docutils literal notranslate"><span class="pre">queryset</span></code>. They can be treated like lists except that they can’t modified in-place. We’ll discuss querysets in the <a class="reference internal" href="Beginner-Tutorial-Django-queries.html"><span class="doc std std-doc">next lesson</span></a></p>
+<p>What is returned from the main search functions is actually a <code class="docutils literal notranslate"><span class="pre">queryset</span></code>. They can be treated like lists except that they can’t modified in-place. We’ll discuss querysets in the <a class="reference internal" href="Beginner-Tutorial-Django-queries.html"><span class="std std-doc">next lesson</span></a></p>
 </aside>
 <p>This searches for objects based on <code class="docutils literal notranslate"><span class="pre">key</span></code> or <code class="docutils literal notranslate"><span class="pre">alias</span></code>.  The <code class="docutils literal notranslate"><span class="pre">.search</span></code> method we talked about in the previous section in fact wraps <code class="docutils literal notranslate"><span class="pre">evennia.search_object</span></code> and handles its output in various ways. Here’s the same example in Python code, for example as part of a command or coded system:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">evennia</span> 
@@ -264,10 +175,10 @@ Rose
         <span class="n">the_one_ring</span> <span class="o">=</span> <span class="n">the_one_ring</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>There are equivalent search functions for all the main resources. You can find a listing of them <a class="reference internal" href="../../../Evennia-API.html"><span class="doc std std-doc">in the Search functions section</span></a> of the API front page.</p>
+<p>There are equivalent search functions for all the main resources. You can find a listing of them <a class="reference internal" href="../../../Evennia-API.html"><span class="std std-doc">in the Search functions section</span></a> of the API front page.</p>
 </section>
 <section id="understanding-object-relationships">
-<h2><span class="section-number">11.3. </span>Understanding object relationships<a class="headerlink" href="#understanding-object-relationships" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Understanding object relationships<a class="headerlink" href="#understanding-object-relationships" title="Link to this heading">¶</a></h2>
 <p>It’s important to understand how objects relate to one another when searching.</p>
 <p>Let’s consider a <code class="docutils literal notranslate"><span class="pre">chest</span></code> with a <code class="docutils literal notranslate"><span class="pre">coin</span></code> inside it. The chest stands in a <code class="docutils literal notranslate"><span class="pre">dungeon</span></code> room. In the dungeon is also a <code class="docutils literal notranslate"><span class="pre">door</span></code> (an exit leading outside).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌───────────────────────┐
@@ -313,25 +224,25 @@ Rose
 </ul>
 </section>
 <section id="what-can-be-searched-for">
-<h2><span class="section-number">11.4. </span>What can be searched for<a class="headerlink" href="#what-can-be-searched-for" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>What can be searched for<a class="headerlink" href="#what-can-be-searched-for" title="Link to this heading">¶</a></h2>
 <p>These are the main database entities one can search for:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../Components/Objects.html"><span class="doc std std-doc">Objects</span></a></p></li>
-<li><p><a class="reference internal" href="../../../Components/Accounts.html"><span class="doc std std-doc">Accounts</span></a></p></li>
-<li><p><a class="reference internal" href="../../../Components/Scripts.html"><span class="doc std std-doc">Scripts</span></a>,</p></li>
-<li><p><a class="reference internal" href="../../../Components/Channels.html"><span class="doc std std-doc">Channels</span></a></p></li>
-<li><p><a class="reference internal" href="../../../Components/Msg.html"><span class="doc std std-doc">Messages</span></a>   (used by <code class="docutils literal notranslate"><span class="pre">page</span></code> command by default)</p></li>
-<li><p><a class="reference internal" href="../../../Components/Help-System.html"><span class="doc std std-doc">Help Entries</span></a> (help entries created manually)</p></li>
+<li><p><a class="reference internal" href="../../../Components/Objects.html"><span class="std std-doc">Objects</span></a></p></li>
+<li><p><a class="reference internal" href="../../../Components/Accounts.html"><span class="std std-doc">Accounts</span></a></p></li>
+<li><p><a class="reference internal" href="../../../Components/Scripts.html"><span class="std std-doc">Scripts</span></a>,</p></li>
+<li><p><a class="reference internal" href="../../../Components/Channels.html"><span class="std std-doc">Channels</span></a></p></li>
+<li><p><a class="reference internal" href="../../../Components/Msg.html"><span class="std std-doc">Messages</span></a>   (used by <code class="docutils literal notranslate"><span class="pre">page</span></code> command by default)</p></li>
+<li><p><a class="reference internal" href="../../../Components/Help-System.html"><span class="std std-doc">Help Entries</span></a> (help entries created manually)</p></li>
 </ul>
 <p>Most of the time you’ll likely spend your time searching for Objects and the occasional Accounts.</p>
 <p>Most search methods are available directly from <code class="docutils literal notranslate"><span class="pre">evennia</span></code>. But there are also a lot of useful search helpers found via <code class="docutils literal notranslate"><span class="pre">evennia.search</span></code>.</p>
 <p>So to find an entity, what can be searched for?</p>
 <section id="search-by-key">
-<h3><span class="section-number">11.4.1. </span>Search by key<a class="headerlink" href="#search-by-key" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.1. </span>Search by key<a class="headerlink" href="#search-by-key" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">key</span></code> is the name of the entity. Searching for this is always case-insensitive.</p>
 </section>
 <section id="search-by-aliases">
-<h3><span class="section-number">11.4.2. </span>Search by aliases<a class="headerlink" href="#search-by-aliases" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.2. </span>Search by aliases<a class="headerlink" href="#search-by-aliases" title="Link to this heading">¶</a></h3>
 <p>Objects and Accounts can have any number of aliases. When searching for <code class="docutils literal notranslate"><span class="pre">key</span></code> these will searched too, you can’t easily search only for aliases. Let’s add an alias to our rose with the default <code class="docutils literal notranslate"><span class="pre">alias</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; alias rose = flower
 </pre></div>
@@ -350,7 +261,7 @@ Rose
 </div></blockquote>
 </section>
 <section id="search-by-location">
-<h3><span class="section-number">11.4.3. </span>Search by location<a class="headerlink" href="#search-by-location" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.3. </span>Search by location<a class="headerlink" href="#search-by-location" title="Link to this heading">¶</a></h3>
 <p>Only Objects (things inheriting from <code class="docutils literal notranslate"><span class="pre">evennia.DefaultObject</span></code>) has a <code class="docutils literal notranslate"><span class="pre">.location</span></code> property.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Object.search</span></code> method will automatically limit its search by the object’s location, so assuming you are in the same room as the rose, this will work:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; py self.search(&quot;rose&quot;)
@@ -377,8 +288,8 @@ Could not find &quot;rose&quot;
 <p>In general, the <code class="docutils literal notranslate"><span class="pre">Object.search</span></code> is a shortcut for doing the very common searches of things in the same location, whereas the <code class="docutils literal notranslate"><span class="pre">search_object</span></code> finds objects anywhere.</p>
 </section>
 <section id="search-by-tags">
-<h3><span class="section-number">11.4.4. </span>Search by Tags<a class="headerlink" href="#search-by-tags" title="Permalink to this headline">¶</a></h3>
-<p>Think of a <a class="reference internal" href="../../../Components/Tags.html"><span class="doc std std-doc">Tag</span></a> as the label the airport puts on your luggage when flying. Everyone going on the same plane gets a tag, grouping them together so the airport can know what should go to which plane. Entities in Evennia can be grouped in the same way. Any number of tags can be attached to each object.</p>
+<h3><span class="section-number">11.4.4. </span>Search by Tags<a class="headerlink" href="#search-by-tags" title="Link to this heading">¶</a></h3>
+<p>Think of a <a class="reference internal" href="../../../Components/Tags.html"><span class="std std-doc">Tag</span></a> as the label the airport puts on your luggage when flying. Everyone going on the same plane gets a tag, grouping them together so the airport can know what should go to which plane. Entities in Evennia can be grouped in the same way. Any number of tags can be attached to each object.</p>
 <p>Go back to the location of your <code class="docutils literal notranslate"><span class="pre">rose</span></code> and let’s create a few more plants:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; create/drop Daffodil
 &gt; create/drop Tulip
@@ -419,8 +330,8 @@ all_fantasy_books = evennia.search_tag(&quot;fantasy&quot;, category=&quot;books
 <p>This gets all three books.</p>
 </section>
 <section id="search-by-attribute">
-<h3><span class="section-number">11.4.5. </span>Search by Attribute<a class="headerlink" href="#search-by-attribute" title="Permalink to this headline">¶</a></h3>
-<p>We can also search by the <a class="reference internal" href="../../../Components/Attributes.html"><span class="doc std std-doc">Attributes</span></a> associated with entities.</p>
+<h3><span class="section-number">11.4.5. </span>Search by Attribute<a class="headerlink" href="#search-by-attribute" title="Link to this heading">¶</a></h3>
+<p>We can also search by the <a class="reference internal" href="../../../Components/Attributes.html"><span class="std std-doc">Attributes</span></a> associated with entities.</p>
 <p>For example, let’s say our plants have a ‘growth state’ that updates as it grows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; py self.search(&quot;rose&quot;).db.growth_state = &quot;blooming&quot;
 &gt; py self.search(&quot;daffodil&quot;).db.growth_state = &quot;withering&quot;
@@ -436,7 +347,7 @@ all_fantasy_books = evennia.search_tag(&quot;fantasy&quot;, category=&quot;books
 </div></blockquote>
 </section>
 <section id="search-by-typeclass">
-<h3><span class="section-number">11.4.6. </span>Search by Typeclass<a class="headerlink" href="#search-by-typeclass" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.6. </span>Search by Typeclass<a class="headerlink" href="#search-by-typeclass" title="Link to this heading">¶</a></h3>
 <p>Sometimes it’s useful to limit your search by which Typeclass they have.</p>
 <p>Let’s say you for example have two types of flower, <code class="docutils literal notranslate"><span class="pre">CursedFlower</span></code> and <code class="docutils literal notranslate"><span class="pre">BlessedFlower</span></code> defined under <code class="docutils literal notranslate"><span class="pre">mygame/typeclasses.flowers.py</span></code>. Each class contains custom code that grants curses and blessings respectively. You may have two <code class="docutils literal notranslate"><span class="pre">rose</span></code> objects, and the player doesn’t know which one is the bad or the good one. To separate them in your search, you can make sure to get the right one like this (in Python code)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cursed_roses</span> <span class="o">=</span> <span class="n">evennia</span><span class="o">.</span><span class="n">search_object</span><span class="p">(</span><span class="s2">&quot;rose&quot;</span><span class="p">,</span> <span class="n">typeclass</span><span class="o">=</span><span class="s2">&quot;typeclasses.flowers.CursedFlower&quot;</span><span class="p">)</span>
@@ -452,13 +363,13 @@ all_fantasy_books = evennia.search_tag(&quot;fantasy&quot;, category=&quot;books
 <span class="n">all_roses</span> <span class="o">=</span> <span class="n">Rose</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This last way of searching is a simple form of a Django <em>query</em>. This is a way to express SQL queries using Python. See <a class="reference internal" href="Beginner-Tutorial-Django-queries.html"><span class="doc std std-doc">the next lesson</span></a>, where we’ll explore this way to searching in more detail.</p>
+<p>This last way of searching is a simple form of a Django <em>query</em>. This is a way to express SQL queries using Python. See <a class="reference internal" href="Beginner-Tutorial-Django-queries.html"><span class="std std-doc">the next lesson</span></a>, where we’ll explore this way to searching in more detail.</p>
 </section>
 <section id="search-by-dbref">
-<h3><span class="section-number">11.4.7. </span>Search by dbref<a class="headerlink" href="#search-by-dbref" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.7. </span>Search by dbref<a class="headerlink" href="#search-by-dbref" title="Link to this heading">¶</a></h3>
 <aside class="sidebar">
 <p class="sidebar-title">Will I run out of dbrefs?</p>
-<p>Since dbrefs are not reused, do you need to worry about your database ids ‘running out’ in the future? <a class="reference internal" href="../../../Components/Typeclasses.html#will-i-run-out-of-dbrefs"><span class="std std-doc">No, and here’s why</span></a>.</p>
+<p>Since dbrefs are not reused, do you need to worry about your database ids ‘running out’ in the future? <a class="reference internal" href="../../../Components/Typeclasses.html#will-i-run-out-of-dbrefs"><span class="std std-ref">No, and here’s why</span></a>.</p>
 </aside>
 <p>The database id or <code class="docutils literal notranslate"><span class="pre">#dbref</span></code> is unique and never-reused within each database table. In search methods you can replace the search for <code class="docutils literal notranslate"><span class="pre">key</span></code> with the dbref to search for. This must be written as a string <code class="docutils literal notranslate"><span class="pre">#dbref</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>the_answer = self.caller.search(&quot;#42&quot;)
@@ -474,7 +385,7 @@ eightball = evennia.search_object(&quot;#8&quot;)
 </section>
 </section>
 <section id="summary">
-<h2><span class="section-number">11.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.5. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">¶</a></h2>
 <p>Knowing how to find things is important and the tools from this section will serve you well. These tools will cover most of your regular needs.</p>
 <p>Not always though. If we go back to the example of a coin in a chest from before, you <em>could</em> use the following to dynamically figure out if there are any chests in the room with coins inside:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evennia</span><span class="w"> </span><span class="kn">import</span> <span class="n">search_object</span>
@@ -491,12 +402,113 @@ eightball = evennia.search_object(&quot;#8&quot;)
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">11. Searching for things</a><ul>
+<li><a class="reference internal" href="#searching-using-object-search">11.1. Searching using Object.search</a></li>
+<li><a class="reference internal" href="#main-search-functions">11.2. Main search functions</a></li>
+<li><a class="reference internal" href="#understanding-object-relationships">11.3. Understanding object relationships</a></li>
+<li><a class="reference internal" href="#what-can-be-searched-for">11.4. What can be searched for</a><ul>
+<li><a class="reference internal" href="#search-by-key">11.4.1. Search by key</a></li>
+<li><a class="reference internal" href="#search-by-aliases">11.4.2. Search by aliases</a></li>
+<li><a class="reference internal" href="#search-by-location">11.4.3. Search by location</a></li>
+<li><a class="reference internal" href="#search-by-tags">11.4.4. Search by Tags</a></li>
+<li><a class="reference internal" href="#search-by-attribute">11.4.5. Search by Attribute</a></li>
+<li><a class="reference internal" href="#search-by-typeclass">11.4.6. Search by Typeclass</a></li>
+<li><a class="reference internal" href="#search-by-dbref">11.4.7. Search by dbref</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#summary">11.5. Summary</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Creating-Things.html"
+                          title="previous chapter"><span class="section-number">10. </span>Creating things</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Django-queries.html"
+                          title="next chapter"><span class="section-number">12. </span>Advanced searching - Django Database queries</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Searching-Things.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -511,19 +523,16 @@ eightball = evennia.search_object(&quot;#8&quot;)
         <li class="right" >
           <a href="Beginner-Tutorial-Creating-Things.html" title="10. Creating things"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part1-Overview.html" >Part 1: What We Have</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><span class="section-number">11. </span>Searching for things</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

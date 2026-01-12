@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.tutorials.tutorial_world.rooms &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.tutorials.tutorial_world.rooms</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="rooms.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -141,7 +86,9 @@
 <span class="c1"># Special command available in all tutorial rooms</span>
 
 
-<div class="viewcode-block" id="CmdTutorial"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorial">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorial</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTutorial">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorial">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorial</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get help during the tutorial</span>
 
@@ -158,7 +105,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdTutorial.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorial.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTutorial.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorial.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        All we do is to scan the current location for an Attribute</span>
 <span class="sd">        called `tutorial_info` and display that.</span>
@@ -179,13 +128,17 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">helptext</span> <span class="o">=</span> <span class="s2">&quot; |RSorry, there is no tutorial help available here.|n&quot;</span>
         <span class="n">helptext</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2"> (Write &#39;give up&#39; if you want to abandon your quest.)&quot;</span>
-        <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">helptext</span><span class="p">)</span></div></div>
+        <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">helptext</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># for the @detail command we inherit from MuxCommand, since</span>
 <span class="c1"># we want to make use of MuxCommand&#39;s pre-parsing of &#39;=&#39; in the</span>
 <span class="c1"># argument.</span>
-<div class="viewcode-block" id="CmdTutorialSetDetail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialSetDetail">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorialSetDetail</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTutorialSetDetail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialSetDetail">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorialSetDetail</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sets a detail on a room</span>
 
@@ -210,7 +163,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdTutorialSetDetail.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialSetDetail.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTutorialSetDetail.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialSetDetail.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        All this does is to check if the object has</span>
 <span class="sd">        the set_detail method and uses it.</span>
@@ -225,10 +180,14 @@
             <span class="c1"># loop over all aliases, if any (if not, this will just be</span>
             <span class="c1"># the one key to loop over)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">set_detail</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Detail set: &#39;</span><span class="si">%s</span><span class="s2">&#39;: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lhs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">))</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Detail set: &#39;</span><span class="si">%s</span><span class="s2">&#39;: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lhs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">))</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdTutorialLook"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialLook">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorialLook</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdLook</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdTutorialLook">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialLook">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorialLook</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdLook</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    looks at the room and on details</span>
 
@@ -251,7 +210,9 @@
     <span class="c1"># set by the parent.</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdTutorialLook.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialLook.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTutorialLook.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialLook.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Handle the looking. This is a copy of the default look</span>
 <span class="sd">        code except for adding in the details.</span>
@@ -304,10 +265,14 @@
         <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">looking_at_obj</span><span class="o">.</span><span class="n">return_appearance</span><span class="p">(</span><span class="n">caller</span><span class="p">))</span>
         <span class="c1"># the object&#39;s at_desc() method.</span>
         <span class="n">looking_at_obj</span><span class="o">.</span><span class="n">at_desc</span><span class="p">(</span><span class="n">looker</span><span class="o">=</span><span class="n">caller</span><span class="p">)</span>
-        <span class="k">return</span></div></div>
+        <span class="k">return</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdTutorialGiveUp"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialGiveUp">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorialGiveUp</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdTutorialGiveUp">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialGiveUp">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdTutorialGiveUp</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Give up the tutorial-world quest and return to Limbo, the start room of the</span>
 <span class="sd">    server.</span>
@@ -317,7 +282,9 @@
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;give up&quot;</span>
     <span class="n">aliases</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;abort&quot;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="CmdTutorialGiveUp.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialGiveUp.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTutorialGiveUp.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdTutorialGiveUp.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">outro_room</span> <span class="o">=</span> <span class="n">OutroRoom</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">outro_room</span><span class="p">:</span>
             <span class="n">outro_room</span> <span class="o">=</span> <span class="n">outro_room</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -328,10 +295,14 @@
             <span class="p">)</span>
             <span class="k">return</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">outro_room</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;teleport&quot;</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">move_to</span><span class="p">(</span><span class="n">outro_room</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;teleport&quot;</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="TutorialRoomCmdSet"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoomCmdSet">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TutorialRoomCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TutorialRoomCmdSet">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoomCmdSet">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TutorialRoomCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Implements the simple tutorial cmdset. This will overload the look</span>
 <span class="sd">    command in the default CharacterCmdSet since it has a higher</span>
@@ -341,28 +312,39 @@
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;tutorial_cmdset&quot;</span>
     <span class="n">priority</span> <span class="o">=</span> <span class="mi">1</span>
 
-<div class="viewcode-block" id="TutorialRoomCmdSet.at_cmdset_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoomCmdSet.at_cmdset_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TutorialRoomCmdSet.at_cmdset_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoomCmdSet.at_cmdset_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;add the tutorial-room commands&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTutorial</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTutorialSetDetail</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTutorialLook</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTutorialGiveUp</span><span class="p">())</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTutorialGiveUp</span><span class="p">())</span></div>
+</div>
 
 
-<div class="viewcode-block" id="TutorialRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TutorialRoom</span><span class="p">(</span><span class="n">DefaultRoom</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TutorialRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TutorialRoom</span><span class="p">(</span><span class="n">DefaultRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the base room type for all rooms in the tutorial world.</span>
 <span class="sd">    It defines a cmdset on itself for reading tutorial info about the location.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TutorialRoom.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TutorialRoom.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Called when room is first created&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">tutorial_info</span> <span class="o">=</span> <span class="p">(</span>
             <span class="s2">&quot;This is a tutorial room. It allows you to use the &#39;tutorial&#39; command.&quot;</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">add_default</span><span class="p">(</span><span class="n">TutorialRoomCmdSet</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TutorialRoom.at_object_receive"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.at_object_receive">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_arrival</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TutorialRoom.at_object_receive">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.at_object_receive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_arrival</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        When an object enter a tutorial room we tell other objects in</span>
 <span class="sd">        the room about it by trying to call a hook on them. The Mob object</span>
@@ -384,7 +366,10 @@
                 <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;at_new_arrival&quot;</span><span class="p">):</span>
                     <span class="n">obj</span><span class="o">.</span><span class="n">at_new_arrival</span><span class="p">(</span><span class="n">new_arrival</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TutorialRoom.return_detail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.return_detail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">return_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailkey</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TutorialRoom.return_detail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.return_detail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">return_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailkey</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This looks for an Attribute &quot;obj_details&quot; and possibly</span>
 <span class="sd">        returns the value of it.</span>
@@ -398,7 +383,10 @@
         <span class="k">if</span> <span class="n">details</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">detailkey</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="kc">None</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TutorialRoom.set_detail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.set_detail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailkey</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TutorialRoom.set_detail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialRoom.set_detail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detailkey</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This sets a new detail, using an Attribute &quot;details&quot;.</span>
 
@@ -413,10 +401,14 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">details</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">details</span><span class="p">[</span><span class="n">detailkey</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">=</span> <span class="n">description</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">details</span> <span class="o">=</span> <span class="p">{</span><span class="n">detailkey</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span> <span class="n">description</span><span class="p">}</span></div></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">details</span> <span class="o">=</span> <span class="p">{</span><span class="n">detailkey</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span> <span class="n">description</span><span class="p">}</span></div>
+</div>
 
 
-<div class="viewcode-block" id="TutorialStartExit"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialStartExit">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TutorialStartExit</span><span class="p">(</span><span class="n">DefaultExit</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TutorialStartExit">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialStartExit">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TutorialStartExit</span><span class="p">(</span><span class="n">DefaultExit</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is like a normal exit except it makes the `intro` command available</span>
 <span class="sd">    on itself. We put it on the exit in order to provide this command to the</span>
@@ -425,8 +417,12 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TutorialStartExit.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialStartExit.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdSetEvenniaIntro</span><span class="p">,</span> <span class="n">persistent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div></div>
+<div class="viewcode-block" id="TutorialStartExit.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TutorialStartExit.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdSetEvenniaIntro</span><span class="p">,</span> <span class="n">persistent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># -------------------------------------------------------------</span>
@@ -451,7 +447,9 @@
 <span class="p">)</span>
 
 
-<div class="viewcode-block" id="WeatherRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.WeatherRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">WeatherRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
+<div class="viewcode-block" id="WeatherRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.WeatherRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WeatherRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This should probably better be called a rainy room...</span>
 
@@ -461,7 +459,9 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="WeatherRoom.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.WeatherRoom.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="WeatherRoom.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.WeatherRoom.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when object is first created.</span>
 <span class="sd">        We set up a ticker to update this room regularly.</span>
@@ -481,7 +481,10 @@
         <span class="c1"># this is parsed by the &#39;tutorial&#39; command on TutorialRooms.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">tutorial_info</span> <span class="o">=</span> <span class="s2">&quot;This room has a Script running that has it echo a weather-related message at irregular intervals.&quot;</span></div>
 
-<div class="viewcode-block" id="WeatherRoom.update_weather"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.WeatherRoom.update_weather">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">update_weather</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="WeatherRoom.update_weather">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.WeatherRoom.update_weather">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_weather</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called by the tickerhandler at regular intervals. Even so, we</span>
 <span class="sd">        only update 20% of the time, picking a random weather message</span>
@@ -491,7 +494,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.2</span><span class="p">:</span>
             <span class="c1"># only update 20 % of the time</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span><span class="s2">&quot;|w</span><span class="si">%s</span><span class="s2">|n&quot;</span> <span class="o">%</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">WEATHER_STRINGS</span><span class="p">))</span></div></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span><span class="s2">&quot;|w</span><span class="si">%s</span><span class="s2">|n&quot;</span> <span class="o">%</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">WEATHER_STRINGS</span><span class="p">))</span></div>
+</div>
+
 
 
 <span class="n">SUPERUSER_WARNING</span> <span class="o">=</span> <span class="p">(</span>
@@ -511,7 +516,9 @@
 <span class="c1"># -------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="CmdEvenniaIntro"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEvenniaIntro">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdEvenniaIntro</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdEvenniaIntro">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEvenniaIntro">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdEvenniaIntro</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Start the Evennia intro wizard.</span>
 
@@ -522,24 +529,36 @@
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;intro&quot;</span>
 
-<div class="viewcode-block" id="CmdEvenniaIntro.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEvenniaIntro.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdEvenniaIntro.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEvenniaIntro.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="kn">from</span><span class="w"> </span><span class="nn">.intro_menu</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_menu</span>
 
         <span class="c1"># quell also superusers</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">account</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Auto-quelling permissions while in intro ...&quot;</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">account</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;quell&quot;</span><span class="p">)</span>
-        <span class="n">init_menu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">)</span></div></div>
+        <span class="n">init_menu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdSetEvenniaIntro"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdSetEvenniaIntro">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdSetEvenniaIntro</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdSetEvenniaIntro">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdSetEvenniaIntro">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdSetEvenniaIntro</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;Evennia Intro StartSet&quot;</span>
 
-<div class="viewcode-block" id="CmdSetEvenniaIntro.at_cmdset_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdSetEvenniaIntro.at_cmdset_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdEvenniaIntro</span><span class="p">())</span></div></div>
+<div class="viewcode-block" id="CmdSetEvenniaIntro.at_cmdset_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdSetEvenniaIntro.at_cmdset_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdEvenniaIntro</span><span class="p">())</span></div>
+</div>
 
 
-<div class="viewcode-block" id="IntroRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.IntroRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">IntroRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
+
+<div class="viewcode-block" id="IntroRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.IntroRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">IntroRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Intro room</span>
 
@@ -547,7 +566,9 @@
 <span class="sd">     char_health - integer &gt; 0 (default 20)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="IntroRoom.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.IntroRoom.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="IntroRoom.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.IntroRoom.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when the room is first created.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -558,7 +579,10 @@
             <span class="s2">&quot;the account.&quot;</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="IntroRoom.at_object_receive"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.IntroRoom.at_object_receive">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="IntroRoom.at_object_receive">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.IntroRoom.at_object_receive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Assign properties on characters</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -581,7 +605,9 @@
             <span class="c1"># quell user if they have account and is not currently running the batch processor</span>
             <span class="k">if</span> <span class="n">character</span><span class="o">.</span><span class="n">account</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">character</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">batch_batchmode</span><span class="p">:</span>
                 <span class="n">character</span><span class="o">.</span><span class="n">account</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;quell&quot;</span><span class="p">)</span>
-                <span class="n">character</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;(Auto-quelling while in tutorial-world)&quot;</span><span class="p">)</span></div></div>
+                <span class="n">character</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;(Auto-quelling while in tutorial-world)&quot;</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># -------------------------------------------------------------</span>
@@ -601,7 +627,9 @@
 <span class="c1"># -------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="CmdEast"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEast">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdEast</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdEast">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEast">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdEast</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Go eastwards across the bridge.</span>
 
@@ -623,7 +651,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdEast.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEast.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdEast.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdEast.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;move one step eastwards&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
 
@@ -644,11 +674,15 @@
         <span class="n">caller</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span>
             <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> steps eastwards across the bridge.&quot;</span> <span class="o">%</span> <span class="n">caller</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="n">caller</span>
         <span class="p">)</span>
-        <span class="n">caller</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;look&quot;</span><span class="p">)</span></div></div>
+        <span class="n">caller</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;look&quot;</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># go back across the bridge</span>
-<div class="viewcode-block" id="CmdWest"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdWest">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdWest</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdWest">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdWest">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdWest</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Go westwards across the bridge.</span>
 
@@ -670,7 +704,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdWest.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdWest.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdWest.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdWest.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;move one step westwards&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
 
@@ -691,7 +727,9 @@
         <span class="n">caller</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span>
             <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> steps westwards across the bridge.&quot;</span> <span class="o">%</span> <span class="n">caller</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="n">caller</span>
         <span class="p">)</span>
-        <span class="n">caller</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;look&quot;</span><span class="p">)</span></div></div>
+        <span class="n">caller</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;look&quot;</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="n">BRIDGE_POS_MESSAGES</span> <span class="o">=</span> <span class="p">(</span>
@@ -728,7 +766,9 @@
 <span class="p">)</span>
 
 
-<div class="viewcode-block" id="CmdLookBridge"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookBridge">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdLookBridge</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdLookBridge">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookBridge">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdLookBridge</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    looks around at the bridge.</span>
 
@@ -743,7 +783,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdLookBridge.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookBridge.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdLookBridge.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookBridge.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Looking around, including a chance to fall.&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="n">bridge_position</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">tutorial_bridge_position</span>
@@ -774,11 +816,15 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span>
                     <span class="s2">&quot;A plank gives way under </span><span class="si">%s</span><span class="s2">&#39;s feet and &quot;</span>
                     <span class="s2">&quot;they fall from the bridge!&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">key</span>
-                <span class="p">)</span></div></div>
+                <span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># custom help command</span>
-<div class="viewcode-block" id="CmdBridgeHelp"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdBridgeHelp">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdBridgeHelp</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdBridgeHelp">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdBridgeHelp">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdBridgeHelp</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Overwritten help command while on the bridge.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -788,29 +834,39 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Tutorial world&quot;</span>
 
-<div class="viewcode-block" id="CmdBridgeHelp.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdBridgeHelp.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdBridgeHelp.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdBridgeHelp.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implements the command.&quot;&quot;&quot;</span>
         <span class="n">string</span> <span class="o">=</span> <span class="p">(</span>
             <span class="s2">&quot;You are trying hard not to fall off the bridge ...&quot;</span>
             <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">What you can do is trying to cross the bridge |weast|n&quot;</span>
             <span class="s2">&quot; or try to get back to the mainland |wwest|n).&quot;</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="BridgeCmdSet"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeCmdSet">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BridgeCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BridgeCmdSet">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeCmdSet">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BridgeCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This groups the bridge commands. We will store it on the room.&quot;&quot;&quot;</span>
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;Bridge commands&quot;</span>
     <span class="n">priority</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># this gives it precedence over the normal look/help commands.</span>
 
-<div class="viewcode-block" id="BridgeCmdSet.at_cmdset_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeCmdSet.at_cmdset_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BridgeCmdSet.at_cmdset_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeCmdSet.at_cmdset_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Called at first cmdset creation&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTutorial</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdEast</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdWest</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdLookBridge</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdBridgeHelp</span><span class="p">())</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdBridgeHelp</span><span class="p">())</span></div>
+</div>
+
 
 
 <span class="n">BRIDGE_WEATHER</span> <span class="o">=</span> <span class="p">(</span>
@@ -827,7 +883,9 @@
 <span class="p">)</span>
 
 
-<div class="viewcode-block" id="BridgeRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BridgeRoom</span><span class="p">(</span><span class="n">WeatherRoom</span><span class="p">):</span>
+<div class="viewcode-block" id="BridgeRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BridgeRoom</span><span class="p">(</span><span class="n">WeatherRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The bridge room implements an unsafe bridge. It also enters the player into</span>
 <span class="sd">    a state where they get new commands so as to try to cross the bridge.</span>
@@ -852,7 +910,9 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="BridgeRoom.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BridgeRoom.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Setups the room&quot;&quot;&quot;</span>
         <span class="c1"># this will start the weather room&#39;s ticker and tell</span>
         <span class="c1"># it to call update_weather regularly.</span>
@@ -872,7 +932,10 @@
         <span class="c1"># handle all return messages.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">locks</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;view:false()&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BridgeRoom.update_weather"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.update_weather">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">update_weather</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BridgeRoom.update_weather">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.update_weather">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_weather</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is called at irregular intervals and makes the passage</span>
 <span class="sd">        over the bridge a little more interesting.</span>
@@ -881,7 +944,10 @@
             <span class="c1"># send a message most of the time</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span><span class="s2">&quot;|w</span><span class="si">%s</span><span class="s2">|n&quot;</span> <span class="o">%</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">BRIDGE_WEATHER</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="BridgeRoom.at_object_receive"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.at_object_receive">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BridgeRoom.at_object_receive">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.at_object_receive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called by the engine whenever the player is moved</span>
 <span class="sd">        into this room.</span>
@@ -911,13 +977,18 @@
                 <span class="n">character</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">tutorial_bridge_position</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="n">character</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;look&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BridgeRoom.at_object_leave"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.at_object_leave">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_leave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">target_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BridgeRoom.at_object_leave">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.BridgeRoom.at_object_leave">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_leave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">target_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is triggered when the player leaves the bridge room.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">character</span><span class="o">.</span><span class="n">has_account</span><span class="p">:</span>
             <span class="c1"># clean up the position attribute</span>
-            <span class="k">del</span> <span class="n">character</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">tutorial_bridge_position</span></div></div>
+            <span class="k">del</span> <span class="n">character</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">tutorial_bridge_position</span></div>
+</div>
+
 
 
 <span class="c1"># -------------------------------------------------------------------------------</span>
@@ -958,7 +1029,9 @@
 <span class="p">)</span>
 
 
-<div class="viewcode-block" id="CmdLookDark"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookDark">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdLookDark</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdLookDark">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookDark">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdLookDark</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Look around in darkness</span>
 
@@ -974,7 +1047,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdLookDark.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookDark.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdLookDark.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdLookDark.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Implement the command.</span>
 
@@ -1001,10 +1076,14 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># don&#39;t have a light source, create a new one.</span>
                 <span class="n">create_object</span><span class="p">(</span><span class="n">LightSource</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;splinter&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="n">caller</span><span class="p">)</span>
-                <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">FOUND_LIGHTSOURCE</span><span class="p">)</span></div></div>
+                <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">FOUND_LIGHTSOURCE</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdDarkHelp"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkHelp">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdDarkHelp</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdDarkHelp">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkHelp">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdDarkHelp</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Help command for the dark state.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1013,7 +1092,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;TutorialWorld&quot;</span>
 
-<div class="viewcode-block" id="CmdDarkHelp.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkHelp.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdDarkHelp.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkHelp.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Replace the the help command with a not-so-useful help</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1021,10 +1102,14 @@
             <span class="s2">&quot;Can&#39;t help you until you find some light! Try looking/feeling around for something to burn. &quot;</span>
             <span class="s2">&quot;You shouldn&#39;t give up even if you don&#39;t find anything right away.&quot;</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdDarkNoMatch"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkNoMatch">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdDarkNoMatch</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdDarkNoMatch">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkNoMatch">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdDarkNoMatch</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is a system command. Commands with special keys are used to</span>
 <span class="sd">    override special sitations in the game. The CMD_NOMATCH is used</span>
@@ -1036,15 +1121,21 @@
     <span class="n">key</span> <span class="o">=</span> <span class="n">syscmdkeys</span><span class="o">.</span><span class="n">CMD_NOMATCH</span>
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
 
-<div class="viewcode-block" id="CmdDarkNoMatch.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkNoMatch.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdDarkNoMatch.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.CmdDarkNoMatch.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implements the command.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
             <span class="s2">&quot;Until you find some light, there&#39;s not much you can do. &quot;</span>
             <span class="s2">&quot;Try feeling around, maybe you&#39;ll find something helpful!&quot;</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="DarkCmdSet"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkCmdSet">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DarkCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DarkCmdSet">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkCmdSet">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DarkCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Groups the commands of the dark room together.  We also import the</span>
 <span class="sd">    default say command here so that players can still talk in the</span>
@@ -1059,7 +1150,9 @@
     <span class="n">mergetype</span> <span class="o">=</span> <span class="s2">&quot;Replace&quot;</span>
     <span class="n">priority</span> <span class="o">=</span> <span class="mi">2</span>
 
-<div class="viewcode-block" id="DarkCmdSet.at_cmdset_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkCmdSet.at_cmdset_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DarkCmdSet.at_cmdset_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkCmdSet.at_cmdset_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;populate the cmdset.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTutorial</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdLookDark</span><span class="p">())</span>
@@ -1067,10 +1160,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdDarkNoMatch</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdSay</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdQuit</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdHome</span><span class="p">())</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdHome</span><span class="p">())</span></div>
+</div>
 
 
-<div class="viewcode-block" id="DarkRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DarkRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DarkRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DarkRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A dark room. This tries to start the DarkState script on all</span>
 <span class="sd">    objects entering. The script is responsible for making sure it is</span>
@@ -1085,7 +1182,9 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="DarkRoom.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DarkRoom.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when object is first created.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1095,11 +1194,15 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">is_lit</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">DarkCmdSet</span><span class="p">,</span> <span class="n">persistent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DarkRoom.at_init"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_init">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DarkRoom.at_init">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_init">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when room is first recached (such as after a reload)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">check_light_state</span><span class="p">()</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_carries_light</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1125,7 +1228,9 @@
         <span class="n">health</span> <span class="o">=</span> <span class="n">character</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">health_max</span> <span class="ow">or</span> <span class="mi">20</span>
         <span class="n">character</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">health</span> <span class="o">=</span> <span class="n">health</span>
 
-<div class="viewcode-block" id="DarkRoom.check_light_state"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.check_light_state">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">check_light_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="DarkRoom.check_light_state">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.check_light_state">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_light_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This method checks if there are any light sources in the room.</span>
 <span class="sd">        If there isn&#39;t it makes sure to add the dark cmdset to all</span>
@@ -1154,7 +1259,10 @@
                     <span class="c1"># put players in darkness</span>
                     <span class="n">char</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;The room is completely dark.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DarkRoom.at_object_receive"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_object_receive">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DarkRoom.at_object_receive">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_object_receive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when an object enters the room.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1168,7 +1276,10 @@
             <span class="c1"># in case the new guy carries light with them</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">check_light_state</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="DarkRoom.at_object_leave"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_object_leave">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_leave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">target_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DarkRoom.at_object_leave">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.DarkRoom.at_object_leave">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_leave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">target_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        In case people leave with the light, we make sure to clear the</span>
 <span class="sd">        DarkCmdSet if necessary.  This also works if they are</span>
@@ -1177,7 +1288,9 @@
         <span class="c1"># since this hook is called while the object is still in the room,</span>
         <span class="c1"># we exclude it from the light check, to ignore any light sources</span>
         <span class="c1"># it may be carrying.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">check_light_state</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">obj</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_light_state</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">obj</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># -------------------------------------------------------------</span>
@@ -1196,7 +1309,9 @@
 <span class="c1"># -------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="TeleportRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TeleportRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TeleportRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
+<div class="viewcode-block" id="TeleportRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TeleportRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TeleportRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Teleporter - puzzle room.</span>
 
@@ -1210,7 +1325,9 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TeleportRoom.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TeleportRoom.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TeleportRoom.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TeleportRoom.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Called at first creation&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">at_object_creation</span><span class="p">()</span>
         <span class="c1"># what character.db.puzzle_clue must be set to, to avoid teleportation.</span>
@@ -1223,7 +1340,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">failure_teleport_msg</span> <span class="o">=</span> <span class="s2">&quot;You fail!&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">failure_teleport_to</span> <span class="o">=</span> <span class="s2">&quot;dark cell&quot;</span></div>
 
-<div class="viewcode-block" id="TeleportRoom.at_object_receive"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TeleportRoom.at_object_receive">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TeleportRoom.at_object_receive">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.TeleportRoom.at_object_receive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called by the engine whenever the player is moved into</span>
 <span class="sd">        this room.</span>
@@ -1255,7 +1375,9 @@
         <span class="c1"># we have to call this manually since we turn off move_hooks</span>
         <span class="c1"># - this is necessary to make the target dark room aware of an</span>
         <span class="c1"># already carried light.</span>
-        <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">at_object_receive</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span></div></div>
+        <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">at_object_receive</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># -------------------------------------------------------------</span>
@@ -1267,7 +1389,9 @@
 <span class="c1"># -------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="OutroRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">OutroRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
+<div class="viewcode-block" id="OutroRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">OutroRoom</span><span class="p">(</span><span class="n">TutorialRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Outro room.</span>
 
@@ -1276,7 +1400,9 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="OutroRoom.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="OutroRoom.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when the room is first created.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1288,7 +1414,10 @@
             <span class="s2">&quot;character.&quot;</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="OutroRoom.at_object_receive"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom.at_object_receive">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="OutroRoom.at_object_receive">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom.at_object_receive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">source_location</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Do cleanup.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1308,17 +1437,85 @@
                     <span class="n">obj</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
             <span class="n">character</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;tutorial_world&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="OutroRoom.at_object_leave"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom.at_object_leave">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_leave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="OutroRoom.at_object_leave">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.tutorial_world.rooms.html#evennia.contrib.tutorials.tutorial_world.rooms.OutroRoom.at_object_leave">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_leave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="s2">&quot;move&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">character</span><span class="o">.</span><span class="n">account</span><span class="p">:</span>
-            <span class="n">character</span><span class="o">.</span><span class="n">account</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;unquell&quot;</span><span class="p">)</span></div></div>
+            <span class="n">character</span><span class="o">.</span><span class="n">account</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="s2">&quot;unquell&quot;</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1327,18 +1524,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.tutorials.tutorial_world.rooms</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.grid.extended_room.extended_room &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.grid.extended_room.extended_room</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="extended_room.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -162,7 +107,9 @@
 <span class="c1"># funcparser callable for the ExtendedRoom</span>
 
 
-<div class="viewcode-block" id="func_state"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.func_state">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">func_state</span><span class="p">(</span><span class="n">roomstate</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">looker</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">room</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="func_state">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.func_state">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">func_state</span><span class="p">(</span><span class="n">roomstate</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">looker</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">room</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Usage: $state(roomstate, text)</span>
 
@@ -205,7 +152,10 @@
     <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="ExtendedRoom"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ExtendedRoom</span><span class="p">(</span><span class="n">DefaultRoom</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExtendedRoom</span><span class="p">(</span><span class="n">DefaultRoom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An Extended Room</span>
 
@@ -295,11 +245,16 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">room_message_rate</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">repeat_broadcast_msg_to_room</span><span class="p">,</span> <span class="n">persistent</span><span class="o">=</span><span class="kc">False</span>
             <span class="p">)</span>
 
-<div class="viewcode-block" id="ExtendedRoom.at_init"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.at_init">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoom.at_init">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.at_init">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evennia hook. Start up repeating function whenever object loads into memory.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_broadcast_repeat_task</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.start_repeat_broadcast_messages"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.start_repeat_broadcast_messages">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">start_repeat_broadcast_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.start_repeat_broadcast_messages">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.start_repeat_broadcast_messages">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start_repeat_broadcast_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Start repeating the broadcast messages. Only needs to be called if adding messages</span>
 <span class="sd">        and not having reloaded the server.</span>
@@ -307,7 +262,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_broadcast_repeat_task</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.repeat_broadcast_message_to_room"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.repeat_broadcast_message_to_room">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">repeat_broadcast_message_to_room</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.repeat_broadcast_message_to_room">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.repeat_broadcast_message_to_room">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">repeat_broadcast_message_to_room</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send a message to the room at room_message_rate. By default</span>
 <span class="sd">        we will randomize which one to send.</span>
@@ -315,7 +273,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">room_messages</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.get_time_of_day"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_time_of_day">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_time_of_day</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.get_time_of_day">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_time_of_day">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_time_of_day</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the current time of day.</span>
 
@@ -334,7 +295,10 @@
                 <span class="k">return</span> <span class="n">time_of_day</span>
         <span class="k">return</span> <span class="n">time_of_day</span>  <span class="c1"># final back to the beginning</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.get_season"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_season">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_season</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.get_season">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_season">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_season</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the current season.</span>
 
@@ -353,6 +317,7 @@
                 <span class="k">return</span> <span class="n">season_of_year</span>
         <span class="k">return</span> <span class="n">season_of_year</span>  <span class="c1"># final step is back to beginning</span></div>
 
+
     <span class="c1"># manipulate room states</span>
 
     <span class="nd">@property</span>
@@ -363,7 +328,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">room_state_tag_category</span><span class="p">,</span> <span class="n">return_list</span><span class="o">=</span><span class="kc">True</span><span class="p">)))</span>
 
-<div class="viewcode-block" id="ExtendedRoom.add_room_state"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_room_state">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_room_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">room_states</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoom.add_room_state">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_room_state">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_room_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">room_states</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set a room-state or room-states to the room.</span>
 
@@ -381,7 +348,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">batch_add</span><span class="p">(</span><span class="o">*</span><span class="p">((</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_state_tag_category</span><span class="p">)</span> <span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">room_states</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.remove_room_state"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_room_state">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove_room_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">room_states</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.remove_room_state">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_room_state">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_room_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">room_states</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove a roomstate from the room.</span>
 
@@ -393,7 +363,10 @@
         <span class="k">for</span> <span class="n">room_state</span> <span class="ow">in</span> <span class="n">room_states</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">room_state</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">room_state_tag_category</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.clear_room_state"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.clear_room_state">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">clear_room_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.clear_room_state">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.clear_room_state">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clear_room_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Clear all room states.</span>
 
@@ -403,9 +376,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s2">&quot;room_state&quot;</span><span class="p">)</span></div>
 
+
     <span class="c1"># control the available room descriptions</span>
 
-<div class="viewcode-block" id="ExtendedRoom.add_desc"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_desc">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">room_state</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoom.add_desc">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_desc">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">desc</span><span class="p">,</span> <span class="n">room_state</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a custom description, matching a particular room state.</span>
 
@@ -420,7 +396,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;desc_</span><span class="si">{</span><span class="n">room_state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">desc</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.remove_desc"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_desc">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room_state</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.remove_desc">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_desc">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room_state</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove a custom description.</span>
 
@@ -430,7 +409,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;desc_</span><span class="si">{</span><span class="n">room_state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.all_desc"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.all_desc">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">all_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.all_desc">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.all_desc">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">all_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get all available descriptions.</span>
 
@@ -447,7 +429,10 @@
             <span class="p">},</span>
         <span class="p">}</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.get_stateful_desc"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_stateful_desc">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_stateful_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.get_stateful_desc">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_stateful_desc">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_stateful_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the currently active room description based on the current roomstate.</span>
 
@@ -510,7 +495,10 @@
         <span class="c1"># fallback to normal desc Attribute</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;desc&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fallback_desc</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.replace_legacy_time_of_day_markup"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.replace_legacy_time_of_day_markup">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">replace_legacy_time_of_day_markup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">desc</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.replace_legacy_time_of_day_markup">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.replace_legacy_time_of_day_markup">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">replace_legacy_time_of_day_markup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">desc</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Filter description by legacy markup like `&lt;morning&gt;...&lt;/morning&gt;`. Filter</span>
 <span class="sd">        out all such markings that does not match the current time. Supports</span>
@@ -553,7 +541,10 @@
             <span class="n">desc</span> <span class="o">=</span> <span class="n">regex</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\1&quot;</span> <span class="k">if</span> <span class="n">regex</span> <span class="o">==</span> <span class="n">regextuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">desc</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">desc</span></div>
 
-<div class="viewcode-block" id="ExtendedRoom.get_display_desc"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_display_desc">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_display_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">looker</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExtendedRoom.get_display_desc">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_display_desc">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_display_desc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">looker</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Evennia standard hook. Dynamically get the &#39;desc&#39; component of the object description. This</span>
 <span class="sd">        is called by the return_appearance method and in turn by the &#39;look&#39; command.</span>
@@ -573,9 +564,12 @@
         <span class="n">desc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_funcparser</span><span class="p">(</span><span class="n">looker</span><span class="p">)</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">desc</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">desc</span></div>
 
+
     <span class="c1"># manipulate details</span>
 
-<div class="viewcode-block" id="ExtendedRoom.add_detail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_detail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoom.add_detail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_detail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This sets a new detail, using an Attribute &quot;details&quot;.</span>
 
@@ -591,9 +585,12 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">details</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># causes it to be created as real attribute</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">details</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">=</span> <span class="n">description</span></div>
 
+
     <span class="n">set_detail</span> <span class="o">=</span> <span class="n">add_detail</span>  <span class="c1"># legacy name</span>
 
-<div class="viewcode-block" id="ExtendedRoom.remove_detail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_detail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoom.remove_detail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_detail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Delete a detail.</span>
 
@@ -608,9 +605,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">details</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="kc">None</span><span class="p">)</span></div>
 
+
     <span class="n">del_detail</span> <span class="o">=</span> <span class="n">remove_detail</span>  <span class="c1"># legacy alias</span>
 
-<div class="viewcode-block" id="ExtendedRoom.get_detail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_detail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">looker</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoom.get_detail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_detail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">looker</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This will attempt to match a &quot;detail&quot; to look for in the room.</span>
 <span class="sd">        This will do a lower-case match followed by a startsby match. This</span>
@@ -660,14 +660,18 @@
 
         <span class="k">return</span> <span class="n">detail</span></div>
 
+
     <span class="n">return_detail</span> <span class="o">=</span> <span class="n">get_detail</span>  <span class="c1"># legacy name</span></div>
+
 
 
 <span class="c1"># Custom Look command supporting Room details. Add this to</span>
 <span class="c1"># the Default cmdset to use.</span>
 
 
-<div class="viewcode-block" id="CmdExtendedRoomLook"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomLook</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdLook</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdExtendedRoomLook">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomLook</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdLook</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    look</span>
 
@@ -680,7 +684,9 @@
 <span class="sd">    Observes your location, details at your location or objects in your vicinity.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="CmdExtendedRoomLook.look_detail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.look_detail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">look_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdExtendedRoomLook.look_detail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.look_detail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">look_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Look for detail on room.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -697,7 +703,10 @@
                 <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="CmdExtendedRoomLook.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomLook.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Handle the looking.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -723,7 +732,9 @@
         <span class="n">desc</span> <span class="o">=</span> <span class="n">caller</span><span class="o">.</span><span class="n">at_look</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
         <span class="c1"># add the type=look to the outputfunc to make it</span>
         <span class="c1"># easy to separate this output in client.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">desc</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;look&quot;</span><span class="p">}),</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">desc</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;look&quot;</span><span class="p">}),</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># Custom build commands for setting seasonal descriptions</span>
@@ -760,7 +771,9 @@
     <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Exited editor.&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="CmdExtendedRoomDesc"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomDesc</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdDesc</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdExtendedRoomDesc">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomDesc</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CmdDesc</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    describe an object or the current room.</span>
 
@@ -795,7 +808,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(desc) or perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Building&quot;</span>
 
-<div class="viewcode-block" id="CmdExtendedRoomDesc.parse"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.parse">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdExtendedRoomDesc.parse">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.parse">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">delete_mode</span> <span class="o">=</span> <span class="s2">&quot;del&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span>
@@ -806,7 +821,10 @@
         <span class="c1"># all other switches are names of room-states</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">roomstates</span> <span class="o">=</span> <span class="p">[</span><span class="n">state</span> <span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span> <span class="k">if</span> <span class="n">state</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;edit&quot;</span><span class="p">,</span> <span class="s2">&quot;del&quot;</span><span class="p">)]</span></div>
 
-<div class="viewcode-block" id="CmdExtendedRoomDesc.edit_handler"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.edit_handler">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">edit_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomDesc.edit_handler">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.edit_handler">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;|rYou may specify a value, or use the edit switch, but not both.|n&quot;</span><span class="p">)</span>
             <span class="k">return</span>
@@ -834,7 +852,10 @@
         <span class="p">)</span>
         <span class="k">return</span></div>
 
-<div class="viewcode-block" id="CmdExtendedRoomDesc.show_stateful_descriptions"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.show_stateful_descriptions">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">show_stateful_descriptions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomDesc.show_stateful_descriptions">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.show_stateful_descriptions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show_stateful_descriptions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">location</span>
         <span class="n">room_states</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">room_states</span>
         <span class="n">season</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">get_season</span><span class="p">()</span>
@@ -862,7 +883,10 @@
         <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">78</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="CmdExtendedRoomDesc.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomDesc.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="ow">and</span> <span class="s2">&quot;edit&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span> <span class="ow">and</span> <span class="s2">&quot;del&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">caller</span><span class="o">.</span><span class="n">location</span><span class="p">:</span>
@@ -913,10 +937,14 @@
             <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
                 <span class="s2">&quot;You don&#39;t have permission to edit the description &quot;</span>
                 <span class="sa">f</span><span class="s2">&quot;of </span><span class="si">{</span><span class="n">target</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
-            <span class="p">)</span></div></div>
+            <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdExtendedRoomDetail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomDetail</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomDetail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomDetail</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    sets a detail on a room</span>
 
@@ -945,7 +973,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Building&quot;</span>
 
-<div class="viewcode-block" id="CmdExtendedRoomDetail.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdExtendedRoomDetail.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">location</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
             <span class="n">details</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">details</span>
@@ -978,10 +1008,14 @@
         <span class="k">if</span> <span class="s2">&quot;del&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">switches</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deleted detail &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">lhs</span><span class="si">}</span><span class="s2">&#39;, if it existed.&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Set detail &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">lhs</span><span class="si">}</span><span class="s2">&#39;: &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Set detail &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">lhs</span><span class="si">}</span><span class="s2">&#39;: &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdExtendedRoomState"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomState</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomState">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomState</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Toggle and view room state for the current room.</span>
 
@@ -1002,7 +1036,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Building&quot;</span>
 
-<div class="viewcode-block" id="CmdExtendedRoomState.parse"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.parse">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdExtendedRoomState.parse">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.parse">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">room</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">location</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">room</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="p">,</span> <span class="s2">&quot;room_states&quot;</span><span class="p">):</span>
@@ -1011,7 +1047,10 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">room_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="CmdExtendedRoomState.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomState.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="n">room</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room</span>
         <span class="n">room_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room_state</span>
@@ -1032,10 +1071,14 @@
             <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
                 <span class="s2">&quot;Room states (not counting automatic time/season) on&quot;</span>
                 <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">room</span><span class="o">.</span><span class="n">get_display_name</span><span class="p">(</span><span class="n">caller</span><span class="p">)</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">room_states</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="p">)</span></div></div>
+            <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdExtendedRoomGameTime"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomGameTime</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomGameTime">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdExtendedRoomGameTime</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">MuxCommand</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Check the game time.</span>
 
@@ -1050,7 +1093,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;General&quot;</span>
 
-<div class="viewcode-block" id="CmdExtendedRoomGameTime.parse"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.parse">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdExtendedRoomGameTime.parse">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.parse">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">location</span>
         <span class="k">if</span> <span class="p">(</span>
             <span class="ow">not</span> <span class="n">location</span>
@@ -1061,39 +1106,113 @@
             <span class="k">raise</span> <span class="n">InterruptCommand</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span></div>
 
-<div class="viewcode-block" id="CmdExtendedRoomGameTime.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdExtendedRoomGameTime.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">location</span>
 
         <span class="n">season</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">get_season</span><span class="p">()</span>
         <span class="n">timeslot</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">get_time_of_day</span><span class="p">()</span>
 
         <span class="n">prep</span> <span class="o">=</span> <span class="s2">&quot;an&quot;</span> <span class="k">if</span> <span class="n">season</span> <span class="o">==</span> <span class="s2">&quot;autumn&quot;</span> <span class="k">else</span> <span class="s2">&quot;a&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It&#39;s </span><span class="si">{</span><span class="n">prep</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">season</span><span class="si">}</span><span class="s2"> day, in the </span><span class="si">{</span><span class="n">timeslot</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It&#39;s </span><span class="si">{</span><span class="n">prep</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">season</span><span class="si">}</span><span class="s2"> day, in the </span><span class="si">{</span><span class="n">timeslot</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># CmdSet for easily install all commands</span>
 
 
-<div class="viewcode-block" id="ExtendedRoomCmdSet"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ExtendedRoomCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoomCmdSet">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExtendedRoomCmdSet</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Groups the extended-room commands.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ExtendedRoomCmdSet.at_cmdset_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.at_cmdset_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtendedRoomCmdSet.at_cmdset_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.grid.extended_room.extended_room.html#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.at_cmdset_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdExtendedRoomLook</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdExtendedRoomDesc</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdExtendedRoomDetail</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdExtendedRoomState</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdExtendedRoomGameTime</span><span class="p">())</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdExtendedRoomGameTime</span><span class="p">())</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1102,18 +1221,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.grid.extended_room.extended_room</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

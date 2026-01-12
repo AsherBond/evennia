@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Command Sets &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Default Commands" href="Default-Commands.html" />
     <link rel="prev" title="Commands" href="Commands.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,99 +33,20 @@
         <li class="right" >
           <a href="Commands.html" title="Commands"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" accesskey="U">Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Command Sets</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Command Sets</a><ul>
-<li><a class="reference internal" href="#defining-command-sets">Defining Command Sets</a><ul>
-<li><a class="reference internal" href="#properties-on-command-sets">Properties on Command Sets</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#command-sets-searched">Command Sets Searched</a></li>
-<li><a class="reference internal" href="#adding-and-merging-command-sets">Adding and Merging Command Sets</a><ul>
-<li><a class="reference internal" href="#merge-rules">Merge Rules</a></li>
-<li><a class="reference internal" href="#assorted-notes">Assorted Notes</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Commands.html"
-                        title="previous chapter">Commands</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Default-Commands.html"
-                        title="next chapter">Default Commands</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Components/Command-Sets.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Command-Sets.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="command-sets">
-<h1>Command Sets<a class="headerlink" href="#command-sets" title="Permalink to this headline">¶</a></h1>
-<p>Command Sets are intimately linked with <a class="reference internal" href="Commands.html"><span class="doc std std-doc">Commands</span></a> and you should be familiar with
+<h1>Command Sets<a class="headerlink" href="#command-sets" title="Link to this heading">¶</a></h1>
+<p>Command Sets are intimately linked with <a class="reference internal" href="Commands.html"><span class="std std-doc">Commands</span></a> and you should be familiar with
 Commands before reading this page. The two pages were split for ease of reading.</p>
 <p>A <em>Command Set</em> (often referred to as a CmdSet or cmdset) is the basic unit for storing one or more
 <em>Commands</em>. A given Command can go into any number of different command sets. Storing Command
@@ -139,7 +54,7 @@ classes in a command set is the way to make commands available to use in your ga
 <p>When storing a CmdSet on an object, you will make the commands in that command set available to the
 object. An example is the default command set stored on new Characters. This command set contains
 all the useful commands, from <code class="docutils literal notranslate"><span class="pre">look</span></code> and <code class="docutils literal notranslate"><span class="pre">inventory</span></code> to <code class="docutils literal notranslate"><span class="pre">&#64;dig</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;reload</span></code>
-(<a class="reference internal" href="Permissions.html"><span class="doc std std-doc">permissions</span></a> then limit which players may use them, but that’s a separate
+(<a class="reference internal" href="Permissions.html"><span class="std std-doc">permissions</span></a> then limit which players may use them, but that’s a separate
 topic).</p>
 <p>When an account enters a command, cmdsets from the Account, Character, its location, and elsewhere
 are pulled together into a <em>merge stack</em>. This stack is merged together in a specific order to
@@ -150,10 +65,10 @@ like a <code class="docutils literal notranslate"><span class="pre">Television</
 on. The tutorial world included with Evennia showcases a dark room that replaces certain critical
 commands with its own versions because the Character cannot see.</p>
 <p>If you want a quick start into defining your first commands and using them with command sets, you
-can head over to the <a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Adding-Commands.html"><span class="doc std std-doc">Adding Command Tutorial</span></a> which steps through things
+can head over to the <a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Adding-Commands.html"><span class="std std-doc">Adding Command Tutorial</span></a> which steps through things
 without the explanations.</p>
 <section id="defining-command-sets">
-<h2>Defining Command Sets<a class="headerlink" href="#defining-command-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Defining Command Sets<a class="headerlink" href="#defining-command-sets" title="Link to this heading">¶</a></h2>
 <p>A CmdSet is, as most things in Evennia, defined as a Python class inheriting from the correct parent
 (<code class="docutils literal notranslate"><span class="pre">evennia.CmdSet</span></code>, which is a shortcut to <code class="docutils literal notranslate"><span class="pre">evennia.commands.cmdset.CmdSet</span></code>). The CmdSet class only
 needs to define one method, called <code class="docutils literal notranslate"><span class="pre">at_cmdset_creation()</span></code>. All other class parameters are optional,
@@ -219,11 +134,11 @@ remove the latest added cmdset.</p>
 back even if all other cmdsets fail or are removed. It is always persistent and will not be affected
 by <code class="docutils literal notranslate"><span class="pre">cmdset.delete()</span></code>. To remove a default cmdset you must explicitly call <code class="docutils literal notranslate"><span class="pre">cmdset.remove_default()</span></code>.</p>
 <p>Command sets are often added to an object in its <code class="docutils literal notranslate"><span class="pre">at_object_creation</span></code> method. For more examples of
-adding commands, read the <a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Adding-Commands.html"><span class="doc std std-doc">Step by step tutorial</span></a>. Generally you can
+adding commands, read the <a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Adding-Commands.html"><span class="std std-doc">Step by step tutorial</span></a>. Generally you can
 customize which command sets are added to your objects by using <code class="docutils literal notranslate"><span class="pre">self.cmdset.add()</span></code> or
 <code class="docutils literal notranslate"><span class="pre">self.cmdset.add_default()</span></code>.</p>
 <blockquote>
-<div><p>Important: Commands are identified uniquely by key <em>or</em> alias (see <a class="reference internal" href="Commands.html"><span class="doc std std-doc">Commands</span></a>). If any
+<div><p>Important: Commands are identified uniquely by key <em>or</em> alias (see <a class="reference internal" href="Commands.html"><span class="std std-doc">Commands</span></a>). If any
 overlap exists, two commands are considered identical. Adding a Command to a command set that
 already has an identical command will <em>replace</em> the previous command. This is very important. You
 must take this behavior into account when attempting to overload any default Evennia commands with
@@ -231,7 +146,7 @@ your own. Otherwise, you may accidentally “hide” your own command in your co
 new one that has a matching alias.</p>
 </div></blockquote>
 <section id="properties-on-command-sets">
-<h3>Properties on Command Sets<a class="headerlink" href="#properties-on-command-sets" title="Permalink to this headline">¶</a></h3>
+<h3>Properties on Command Sets<a class="headerlink" href="#properties-on-command-sets" title="Link to this heading">¶</a></h3>
 <p>There are several extra flags that you can set on CmdSets in order to modify how they work. All are
 optional and will be set to defaults otherwise.  Since many of these relate to <em>merging</em> cmdsets,
 you might want to read the [Adding and Merging Command Sets](./Command-Sets.md#adding-and-merging-
@@ -244,7 +159,7 @@ dictionary below.</p></li>
 “<em>Replace</em>”, or “<em>Remove</em>”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (int) - This defines the merge order of the merge stack - cmdsets will merge in rising
 order of priority with the highest priority set merging last. During a merger, the commands from the
-set with the higher priority will have precedence (just what happens depends on the <a class="reference internal" href="#adding-and-merging-command-sets"><span class="std std-doc">merge
+set with the higher priority will have precedence (just what happens depends on the <a class="reference internal" href="#adding-and-merging-command-sets"><span class="std std-ref">merge
 type</span></a>). If priority is identical, the order in the
 merge stack determines preference. The priority value must be greater or equal to <code class="docutils literal notranslate"><span class="pre">-100</span></code>. Most in-
 game sets should usually have priorities between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>. Evennia default sets have priorities
@@ -263,7 +178,7 @@ arguments, there is no collision between exits named the same as a channel even 
 <li><p><code class="docutils literal notranslate"><span class="pre">key_mergetype</span></code> (dict) - a dict of <code class="docutils literal notranslate"><span class="pre">key:mergetype</span></code> pairs. This allows this cmdset to merge
 differently with certain named cmdsets. If the cmdset to merge with has a <code class="docutils literal notranslate"><span class="pre">key</span></code> matching an entry in
 <code class="docutils literal notranslate"><span class="pre">key_mergetype</span></code>, it will not be merged according to the setting in <code class="docutils literal notranslate"><span class="pre">mergetype</span></code> but according to the
-mode in this dict. Please note that this is more complex than it may seem due to the <a class="reference internal" href="#adding-and-merging-command-sets"><span class="std std-doc">merge
+mode in this dict. Please note that this is more complex than it may seem due to the <a class="reference internal" href="#adding-and-merging-command-sets"><span class="std std-ref">merge
 order</span></a> of command sets.  Please review that section
 before using <code class="docutils literal notranslate"><span class="pre">key_mergetype</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">duplicates</span></code> (bool/None default <code class="docutils literal notranslate"><span class="pre">None</span></code>) - this determines what happens when merging same-priority
@@ -317,15 +232,15 @@ priority determines what is used.</p></li>
 </section>
 </section>
 <section id="command-sets-searched">
-<h2>Command Sets Searched<a class="headerlink" href="#command-sets-searched" title="Permalink to this headline">¶</a></h2>
+<h2>Command Sets Searched<a class="headerlink" href="#command-sets-searched" title="Link to this heading">¶</a></h2>
 <p>When a user issues a command, it is matched against the [merged](./Command-Sets.md#adding-and-merging-
 command-sets) command sets available to the player at the moment. Which those are may change at any
 time (such as when the player walks into the room with the <code class="docutils literal notranslate"><span class="pre">Window</span></code> object described earlier).</p>
 <p>The currently valid command sets are collected from the following sources:</p>
 <ul class="simple">
-<li><p>The cmdsets stored on the currently active <a class="reference internal" href="Sessions.html"><span class="doc std std-doc">Session</span></a>. Default is the empty
+<li><p>The cmdsets stored on the currently active <a class="reference internal" href="Sessions.html"><span class="std std-doc">Session</span></a>. Default is the empty
 <code class="docutils literal notranslate"><span class="pre">SessionCmdSet</span></code> with merge priority <code class="docutils literal notranslate"><span class="pre">-20</span></code>.</p></li>
-<li><p>The cmdsets defined on the <a class="reference internal" href="Accounts.html"><span class="doc std std-doc">Account</span></a>. Default is the AccountCmdSet with merge priority
+<li><p>The cmdsets defined on the <a class="reference internal" href="Accounts.html"><span class="std std-doc">Account</span></a>. Default is the AccountCmdSet with merge priority
 <code class="docutils literal notranslate"><span class="pre">-10</span></code>.</p></li>
 <li><p>All cmdsets on the Character/Object (assuming the Account is currently puppeting such a
 Character/Object). Merge priority <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
@@ -337,20 +252,20 @@ included if <code class="docutils literal notranslate"><span class="pre">no_objs
 <code class="docutils literal notranslate"><span class="pre">no_objs</span></code> option is active in the merge stack.</p></li>
 <li><p>The cmdsets of Exits in the location. Merge priority <code class="docutils literal notranslate"><span class="pre">+101</span></code>. Will not be included if <code class="docutils literal notranslate"><span class="pre">no_exits</span></code>
 <em>or</em> <code class="docutils literal notranslate"><span class="pre">no_objs</span></code> option is active in the merge stack.</p></li>
-<li><p>The <a class="reference internal" href="Channels.html"><span class="doc std std-doc">channel</span></a> cmdset containing commands for posting to all channels the account
+<li><p>The <a class="reference internal" href="Channels.html"><span class="std std-doc">channel</span></a> cmdset containing commands for posting to all channels the account
 or character is currently connected to. Merge priority <code class="docutils literal notranslate"><span class="pre">+101</span></code>. Will not be included if <code class="docutils literal notranslate"><span class="pre">no_channels</span></code>
 option is active in the merge stack.</p></li>
 </ul>
 <p>Note that an object does not <em>have</em> to share its commands with its surroundings. A Character’s
 cmdsets should not be shared for example, or all other Characters would get multi-match errors just
 by being in the same room. The ability of an object to share its cmdsets is managed by its <code class="docutils literal notranslate"><span class="pre">call</span></code>
-<a class="reference internal" href="Locks.html"><span class="doc std std-doc">lock</span></a>. For example, <a class="reference internal" href="Objects.html"><span class="doc std std-doc">Character objects</span></a> defaults to <code class="docutils literal notranslate"><span class="pre">call:false()</span></code> so that any
+<a class="reference internal" href="Locks.html"><span class="std std-doc">lock</span></a>. For example, <a class="reference internal" href="Objects.html"><span class="std std-doc">Character objects</span></a> defaults to <code class="docutils literal notranslate"><span class="pre">call:false()</span></code> so that any
 cmdsets on them can only be accessed by themselves, not by other objects around them. Another
 example might be to lock an object with <code class="docutils literal notranslate"><span class="pre">call:inside()</span></code> to only make their commands available to
 objects inside them, or <code class="docutils literal notranslate"><span class="pre">cmd:holds()</span></code> to make their commands available only if they are held.</p>
 </section>
 <section id="adding-and-merging-command-sets">
-<h2>Adding and Merging Command Sets<a class="headerlink" href="#adding-and-merging-command-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Adding and Merging Command Sets<a class="headerlink" href="#adding-and-merging-command-sets" title="Link to this heading">¶</a></h2>
 <p><em>Note: This is an advanced topic. It’s very useful to know about, but you might want to skip it if
 this is your first time learning about commands.</em></p>
 <p>CmdSets have the special ability that they can be <em>merged</em> together into new sets. Which of the
@@ -377,7 +292,7 @@ anything! Another example would be to offer special combat commands only when th
 combat. Or when being on a boat. Or when having taken the super power-up. All this can be done on
 the fly by merging command sets.</p>
 <section id="merge-rules">
-<h3>Merge Rules<a class="headerlink" href="#merge-rules" title="Permalink to this headline">¶</a></h3>
+<h3>Merge Rules<a class="headerlink" href="#merge-rules" title="Link to this heading">¶</a></h3>
 <p>Basic rule is that command sets are merged in <em>reverse priority order</em>. That is, lower-prio sets are
 merged first and higher prio sets are merged “on top” of them. Think of it like a layered cake with
 the highest priority on top.</p>
@@ -478,7 +393,7 @@ it appropriately.</p>
 </div>
 </section>
 <section id="assorted-notes">
-<h3>Assorted Notes<a class="headerlink" href="#assorted-notes" title="Permalink to this headline">¶</a></h3>
+<h3>Assorted Notes<a class="headerlink" href="#assorted-notes" title="Link to this heading">¶</a></h3>
 <p>It is very important to remember that two commands are compared <em>both</em> by their <code class="docutils literal notranslate"><span class="pre">key</span></code> properties
 <em>and</em> by their <code class="docutils literal notranslate"><span class="pre">aliases</span></code> properties. If either keys or one of their aliases match, the two commands
 are considered the <em>same</em>. So consider these two Commands:</p>
@@ -496,12 +411,109 @@ commands having any combination of the keys and/or aliases “kick”, “punch�
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Command Sets</a><ul>
+<li><a class="reference internal" href="#defining-command-sets">Defining Command Sets</a><ul>
+<li><a class="reference internal" href="#properties-on-command-sets">Properties on Command Sets</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#command-sets-searched">Command Sets Searched</a></li>
+<li><a class="reference internal" href="#adding-and-merging-command-sets">Adding and Merging Command Sets</a><ul>
+<li><a class="reference internal" href="#merge-rules">Merge Rules</a></li>
+<li><a class="reference internal" href="#assorted-notes">Assorted Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Commands.html"
+                          title="previous chapter">Commands</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Default-Commands.html"
+                          title="next chapter">Default Commands</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Components/Command-Sets.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -516,17 +528,14 @@ commands having any combination of the keys and/or aliases “kick”, “punch�
         <li class="right" >
           <a href="Commands.html" title="Commands"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" >Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Command Sets</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

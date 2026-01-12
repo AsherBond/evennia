@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Using the Arxcode game dir &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Implementing a game rule system" href="Implementing-a-game-rule-system.html" />
     <link rel="prev" title="Evennia for MUSH Users" href="Evennia-for-MUSH-Users.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,98 +33,19 @@
         <li class="right" >
           <a href="Evennia-for-MUSH-Users.html" title="Evennia for MUSH Users"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" accesskey="U">Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Using the Arxcode game dir</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Using the Arxcode game dir</a><ul>
-<li><a class="reference internal" href="#installing-evennia">Installing Evennia</a></li>
-<li><a class="reference internal" href="#installing-arxcode">Installing Arxcode</a><ul>
-<li><a class="reference internal" href="#clean-up-settings">Clean up settings</a></li>
-<li><a class="reference internal" href="#install-arx-dependencies">Install Arx dependencies</a></li>
-<li><a class="reference internal" href="#adding-logs-folder">Adding logs/ folder</a></li>
-<li><a class="reference internal" href="#setting-up-the-database-and-starting">Setting up the database and starting</a></li>
-<li><a class="reference internal" href="#additional-setup-steps">Additional Setup Steps</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#alternate-windows-install-guide">Alternate Windows install guide</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Evennia-for-MUSH-Users.html"
-                        title="previous chapter">Evennia for MUSH Users</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Implementing-a-game-rule-system.html"
-                        title="next chapter">Implementing a game rule system</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Howtos/Tutorial-Using-Arxcode.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Tutorial-Using-Arxcode.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="using-the-arxcode-game-dir">
-<h1>Using the Arxcode game dir<a class="headerlink" href="#using-the-arxcode-game-dir" title="Permalink to this headline">¶</a></h1>
+<h1>Using the Arxcode game dir<a class="headerlink" href="#using-the-arxcode-game-dir" title="Link to this heading">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Arxcode is separately maintained.</p>
@@ -142,9 +57,9 @@
 since part of Arx has grown organically, it doesn’t follow standard Evennia paradigms everywhere.
 This page covers one take on installing and setting things up while making your new Arx-based game better match with the vanilla Evennia install.</p>
 <section id="installing-evennia">
-<h2>Installing Evennia<a class="headerlink" href="#installing-evennia" title="Permalink to this headline">¶</a></h2>
+<h2>Installing Evennia<a class="headerlink" href="#installing-evennia" title="Link to this heading">¶</a></h2>
 <p>Firstly, set aside a folder/directory on your drive for everything to follow.</p>
-<p>You need to start by installing <a class="reference external" href="https://www.evennia.com">Evennia</a> by following most of the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="doc std std-doc">Git-installation instructions</span></a> for your OS. The difference is that instead of cloning from upstream Evennia, you should do</p>
+<p>You need to start by installing <a class="reference external" href="https://www.evennia.com">Evennia</a> by following most of the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="std std-doc">Git-installation instructions</span></a> for your OS. The difference is that instead of cloning from upstream Evennia, you should do</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/TehomCD/evennia.git
 </pre></div>
 </div>
@@ -164,16 +79,16 @@ run Arx, so in principle you could erase <code class="docutils literal notransla
 to compare to.</p>
 </section>
 <section id="installing-arxcode">
-<h2>Installing Arxcode<a class="headerlink" href="#installing-arxcode" title="Permalink to this headline">¶</a></h2>
+<h2>Installing Arxcode<a class="headerlink" href="#installing-arxcode" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">cd</span></code> to the root of your directory and clone the released source code from github:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Arx-Game/arxcode.git myarx
 </pre></div>
 </div>
 <p>A new folder <code class="docutils literal notranslate"><span class="pre">myarx</span></code> should appear next to the ones you already had. You could rename this to
 something else if you want.</p>
-<p><code class="docutils literal notranslate"><span class="pre">cd</span></code> into <code class="docutils literal notranslate"><span class="pre">myarx</span></code>. If you wonder about the structure of the game dir, you can <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Gamedir-Overview.html"><span class="doc std std-doc">read more about it here</span></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span></code> into <code class="docutils literal notranslate"><span class="pre">myarx</span></code>. If you wonder about the structure of the game dir, you can <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Gamedir-Overview.html"><span class="std std-doc">read more about it here</span></a>.</p>
 <section id="clean-up-settings">
-<h3>Clean up settings<a class="headerlink" href="#clean-up-settings" title="Permalink to this headline">¶</a></h3>
+<h3>Clean up settings<a class="headerlink" href="#clean-up-settings" title="Link to this heading">¶</a></h3>
 <p>Arx has split evennia’s normal settings into <code class="docutils literal notranslate"><span class="pre">base_settings.py</span></code> and <code class="docutils literal notranslate"><span class="pre">production_settings.py</span></code>. It
 also has its own solution for managing ‘secret’ parts of the settings file. We’ll keep most of Arx
 way but we’ll remove the secret-handling and replace it with the normal Evennia method.</p>
@@ -207,7 +122,7 @@ This can just contain the following:</p>
 <p>Comment out <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">decouple</span> <span class="pre">import</span> <span class="pre">config</span></code> by adding a <code class="docutils literal notranslate"><span class="pre">#</span></code> to the start of the line: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">from</span> <span class="pre">decouple</span> <span class="pre">import</span> <span class="pre">config</span></code>. Then search for <code class="docutils literal notranslate"><span class="pre">config(</span></code> in the file and comment out all lines where this is used. Many of these are specific to the server environment where the original Arx runs, so is not that relevant to us.</p>
 </section>
 <section id="install-arx-dependencies">
-<h3>Install Arx dependencies<a class="headerlink" href="#install-arx-dependencies" title="Permalink to this headline">¶</a></h3>
+<h3>Install Arx dependencies<a class="headerlink" href="#install-arx-dependencies" title="Link to this heading">¶</a></h3>
 <p>Arx has some further dependencies beyond vanilla Evennia. Start by <code class="docutils literal notranslate"><span class="pre">cd</span></code>:ing to the root of your
 <code class="docutils literal notranslate"><span class="pre">myarx</span></code> folder.</p>
 <blockquote>
@@ -221,7 +136,7 @@ This can just contain the following:</p>
 <p>The needed Python packages will be installed for you.</p>
 </section>
 <section id="adding-logs-folder">
-<h3>Adding logs/ folder<a class="headerlink" href="#adding-logs-folder" title="Permalink to this headline">¶</a></h3>
+<h3>Adding logs/ folder<a class="headerlink" href="#adding-logs-folder" title="Link to this heading">¶</a></h3>
 <p>The Arx repo does not contain the <code class="docutils literal notranslate"><span class="pre">myarx/server/logs/</span></code> folder Evennia expects for storing server
 logs. This is simple to add:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># linux/mac
@@ -232,7 +147,7 @@ mkdir server\logs
 </div>
 </section>
 <section id="setting-up-the-database-and-starting">
-<h3>Setting up the database and starting<a class="headerlink" href="#setting-up-the-database-and-starting" title="Permalink to this headline">¶</a></h3>
+<h3>Setting up the database and starting<a class="headerlink" href="#setting-up-the-database-and-starting" title="Link to this heading">¶</a></h3>
 <p>From the <code class="docutils literal notranslate"><span class="pre">myarx</span></code> folder, run</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>evennia migrate
 </pre></div>
@@ -246,13 +161,13 @@ mkdir server\logs
 try <code class="docutils literal notranslate"><span class="pre">help</span></code> to see that it’s indeed Arx that is running.</p>
 </section>
 <section id="additional-setup-steps">
-<h3>Additional Setup Steps<a class="headerlink" href="#additional-setup-steps" title="Permalink to this headline">¶</a></h3>
+<h3>Additional Setup Steps<a class="headerlink" href="#additional-setup-steps" title="Link to this heading">¶</a></h3>
 <p>The first time you start Evennia after creating the database with the <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">migrate</span></code> step above,
 it should create a few starting objects for you - your superuser account, which it will prompt you
 to enter, a starting room (Limbo), and a character object for you. If for some reason this does not
 occur, you may have to follow the steps below.  For the first time Superuser login you may have to
 run steps 7-8 and 10 to create and connect to your in-came Character.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Login to the game website with your Superuser account.</p></li>
 <li><p>Press the <code class="docutils literal notranslate"><span class="pre">Admin</span></code> button to get into the (Django-) Admin Interface.</p></li>
 <li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Accounts</span></code> section.</p></li>
@@ -279,7 +194,7 @@ in, if you choose to use an active roster of characters). PlayerOrNpc are more c
 </section>
 </section>
 <section id="alternate-windows-install-guide">
-<h2>Alternate Windows install guide<a class="headerlink" href="#alternate-windows-install-guide" title="Permalink to this headline">¶</a></h2>
+<h2>Alternate Windows install guide<a class="headerlink" href="#alternate-windows-install-guide" title="Link to this heading">¶</a></h2>
 <p><em>Contributed by Pax</em></p>
 <p>If for some reason you cannot use the Windows Subsystem for Linux (which would use instructions identical to the ones above), it’s possible to get Evennia/Arx running under Anaconda for Windows. The process is a little bit trickier.</p>
 <p>Make sure you have:</p>
@@ -345,12 +260,109 @@ on localhost at port 4000, and the webserver at <a class="reference external" hr
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Using the Arxcode game dir</a><ul>
+<li><a class="reference internal" href="#installing-evennia">Installing Evennia</a></li>
+<li><a class="reference internal" href="#installing-arxcode">Installing Arxcode</a><ul>
+<li><a class="reference internal" href="#clean-up-settings">Clean up settings</a></li>
+<li><a class="reference internal" href="#install-arx-dependencies">Install Arx dependencies</a></li>
+<li><a class="reference internal" href="#adding-logs-folder">Adding logs/ folder</a></li>
+<li><a class="reference internal" href="#setting-up-the-database-and-starting">Setting up the database and starting</a></li>
+<li><a class="reference internal" href="#additional-setup-steps">Additional Setup Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#alternate-windows-install-guide">Alternate Windows install guide</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Evennia-for-MUSH-Users.html"
+                          title="previous chapter">Evennia for MUSH Users</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Implementing-a-game-rule-system.html"
+                          title="next chapter">Implementing a game rule system</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Howtos/Tutorial-Using-Arxcode.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -365,17 +377,14 @@ on localhost at port 4000, and the webserver at <a class="reference external" hr
         <li class="right" >
           <a href="Evennia-for-MUSH-Users.html" title="Evennia for MUSH Users"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Using the Arxcode game dir</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

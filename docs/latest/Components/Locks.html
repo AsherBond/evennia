@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Locks &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Commands" href="Commands.html" />
     <link rel="prev" title="Permissions" href="Permissions.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,108 +33,25 @@
         <li class="right" >
           <a href="Permissions.html" title="Permissions"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" accesskey="U">Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Locks</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Locks</a><ul>
-<li><a class="reference internal" href="#working-with-locks">Working with locks</a><ul>
-<li><a class="reference internal" href="#defining-locks">Defining locks</a></li>
-<li><a class="reference internal" href="#valid-access-types">Valid access_types</a></li>
-<li><a class="reference internal" href="#custom-access-types">Custom access_types</a></li>
-<li><a class="reference internal" href="#lock-functions">Lock functions</a></li>
-<li><a class="reference internal" href="#checking-simple-strings">Checking simple strings</a></li>
-<li><a class="reference internal" href="#default-locks">Default locks</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#more-lock-definition-examples">More Lock definition examples</a><ul>
-<li><a class="reference internal" href="#a-complete-example-of-setting-locks-on-an-object">A complete example of setting locks on an object</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#on-djangos-permission-system">On Django’s permission system</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Permissions.html"
-                        title="previous chapter">Permissions</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Commands.html"
-                        title="next chapter">Commands</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Components/Locks.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Locks.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="locks">
-<h1>Locks<a class="headerlink" href="#locks" title="Permalink to this headline">¶</a></h1>
-<p>For most games it is a good idea to restrict what people can do. In Evennia such restrictions are applied and checked by something called <em>locks</em>. All Evennia entities (<a class="reference internal" href="Commands.html"><span class="doc std std-doc">Commands</span></a>, <a class="reference internal" href="Objects.html"><span class="doc std std-doc">Objects</span></a>, <a class="reference internal" href="Scripts.html"><span class="doc std std-doc">Scripts</span></a>, <a class="reference internal" href="Accounts.html"><span class="doc std std-doc">Accounts</span></a>, <a class="reference internal" href="Help-System.html"><span class="doc std std-doc">Help System</span></a>, <a class="reference internal" href="Msg.html"><span class="doc std std-doc">messages</span></a> and <a class="reference internal" href="Channels.html"><span class="doc std std-doc">channels</span></a>) are accessed through locks.</p>
+<h1>Locks<a class="headerlink" href="#locks" title="Link to this heading">¶</a></h1>
+<p>For most games it is a good idea to restrict what people can do. In Evennia such restrictions are applied and checked by something called <em>locks</em>. All Evennia entities (<a class="reference internal" href="Commands.html"><span class="std std-doc">Commands</span></a>, <a class="reference internal" href="Objects.html"><span class="std std-doc">Objects</span></a>, <a class="reference internal" href="Scripts.html"><span class="std std-doc">Scripts</span></a>, <a class="reference internal" href="Accounts.html"><span class="std std-doc">Accounts</span></a>, <a class="reference internal" href="Help-System.html"><span class="std std-doc">Help System</span></a>, <a class="reference internal" href="Msg.html"><span class="std std-doc">messages</span></a> and <a class="reference internal" href="Channels.html"><span class="std std-doc">channels</span></a>) are accessed through locks.</p>
 <p>A lock can be thought of as an “access rule” restricting a particular use of an Evennia entity.
 Whenever another entity wants that kind of access the lock will analyze that entity in different ways to determine if access should be granted or not. Evennia implements a “lockdown” philosophy - all entities are inaccessible unless you explicitly define a lock that allows some or full access.</p>
 <p>Let’s take an example: An object has a lock on itself that restricts how people may “delete” that object. Apart from knowing that it restricts deletion, the lock also knows that only players with the specific ID of, say, <code class="docutils literal notranslate"><span class="pre">34</span></code> are allowed to delete it. So whenever a player tries to run <code class="docutils literal notranslate"><span class="pre">delete</span></code> on the object, the <code class="docutils literal notranslate"><span class="pre">delete</span></code> command makes sure to check if this player is really allowed to do so. It calls the lock, which in turn checks if the player’s id is <code class="docutils literal notranslate"><span class="pre">34</span></code>. Only then will it allow <code class="docutils literal notranslate"><span class="pre">delete</span></code> to go on with its job.</p>
 <section id="working-with-locks">
-<h2>Working with locks<a class="headerlink" href="#working-with-locks" title="Permalink to this headline">¶</a></h2>
+<h2>Working with locks<a class="headerlink" href="#working-with-locks" title="Link to this heading">¶</a></h2>
 <p>The in-game command for setting locks on objects is <code class="docutils literal notranslate"><span class="pre">lock</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> &gt; lock obj = &lt;lockstring&gt;
 </pre></div>
@@ -157,7 +68,7 @@ Whenever another entity wants that kind of access the lock will analyze that ent
 </pre></div>
 </div>
 <section id="defining-locks">
-<h3>Defining locks<a class="headerlink" href="#defining-locks" title="Permalink to this headline">¶</a></h3>
+<h3>Defining locks<a class="headerlink" href="#defining-locks" title="Link to this heading">¶</a></h3>
 <p>Defining a lock (i.e. an access restriction) in Evennia is done by adding simple strings of lock
 definitions to the object’s <code class="docutils literal notranslate"><span class="pre">locks</span></code> property using <code class="docutils literal notranslate"><span class="pre">obj.locks.add()</span></code>.</p>
 <p>Here are some examples of lock strings (not including the quotes):</p>
@@ -179,17 +90,17 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 </div>
 </section>
 <section id="valid-access-types">
-<h3>Valid access_types<a class="headerlink" href="#valid-access-types" title="Permalink to this headline">¶</a></h3>
+<h3>Valid access_types<a class="headerlink" href="#valid-access-types" title="Link to this heading">¶</a></h3>
 <p>An <code class="docutils literal notranslate"><span class="pre">access_type</span></code>, the first part of a lockstring, defines what kind of capability a lock controls, such as “delete” or “edit”. You may in principle name your <code class="docutils literal notranslate"><span class="pre">access_type</span></code> anything as long as it is unique for the particular object. The name of the access types is not case-sensitive.</p>
 <p>If you want to make sure the lock is used however, you should pick <code class="docutils literal notranslate"><span class="pre">access_type</span></code> names that you (or the default command set) actually checks for, as in the example of <code class="docutils literal notranslate"><span class="pre">delete</span></code> above that uses the ‘delete’ <code class="docutils literal notranslate"><span class="pre">access_type</span></code>.</p>
 <p>Below are the access_types checked by the default commandset.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="Commands.html"><span class="doc std std-doc">Commands</span></a></p>
+<li><p><a class="reference internal" href="Commands.html"><span class="std std-doc">Commands</span></a></p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code> - this defines who may call this command at all.</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="Objects.html"><span class="doc std std-doc">Objects</span></a>:</p>
+<li><p><a class="reference internal" href="Objects.html"><span class="std std-doc">Objects</span></a>:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">control</span></code> - who is the “owner” of the object. Can set locks, delete it etc. Defaults to the creator of the object.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">call</span></code> - who may call Object-commands stored on this Object except for the Object itself. By default, Objects share their Commands with anyone in the same location (e.g. so you can ‘press’ a <code class="docutils literal notranslate"><span class="pre">Button</span></code> object in the room). For Characters and Mobs (who likely only use those Commands for themselves and don’t want to share them) this should usually be turned off completely, using something like <code class="docutils literal notranslate"><span class="pre">call:false()</span></code>.</p></li>
@@ -203,18 +114,18 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 <li><p><code class="docutils literal notranslate"><span class="pre">attrcreate</span></code> - who may create new attributes on the object (default True)</p></li>
 </ul>
 </li>
-<li><p><span class="xref myst">Characters</span>:</p>
+<li><p><a class="reference internal" href="Objects.html#characters"><span class="std std-ref">Characters</span></a>:</p>
 <ul>
 <li><p>Same as for Objects</p></li>
 </ul>
 </li>
-<li><p><span class="xref myst">Exits</span>:</p>
+<li><p><a class="reference internal" href="Objects.html#exits"><span class="std std-ref">Exits</span></a>:</p>
 <ul>
 <li><p>Same as for Objects</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">traverse</span></code> - who may pass the exit.</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="Accounts.html"><span class="doc std std-doc">Accounts</span></a>:</p>
+<li><p><a class="reference internal" href="Accounts.html"><span class="std std-doc">Accounts</span></a>:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">examine</span></code> - who may examine the account’s properties.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> - who may delete the account.</p></li>
@@ -223,20 +134,20 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 <li><p><code class="docutils literal notranslate"><span class="pre">boot</span></code> - who may boot the account.</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="Attributes.html"><span class="doc std std-doc">Attributes</span></a>: (only checked by <code class="docutils literal notranslate"><span class="pre">obj.secure_attr</span></code>)</p>
+<li><p><a class="reference internal" href="Attributes.html"><span class="std std-doc">Attributes</span></a>: (only checked by <code class="docutils literal notranslate"><span class="pre">obj.secure_attr</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">attrread</span></code> - see/access attribute</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">attredit</span></code> - change/delete attribute</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="Channels.html"><span class="doc std std-doc">Channels</span></a>:</p>
+<li><p><a class="reference internal" href="Channels.html"><span class="std std-doc">Channels</span></a>:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">control</span></code> - who is administrating the channel. This means the ability to delete the channel, boot listeners etc.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">send</span></code> - who may send to the channel.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">listen</span></code> - who may subscribe and listen to the channel.</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="Help-System.html"><span class="doc std std-doc">HelpEntry</span></a>:</p>
+<li><p><a class="reference internal" href="Help-System.html"><span class="std std-doc">HelpEntry</span></a>:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">view</span></code> - if the help entry header should show up in the help index</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> - who may view this help entry (usually everyone)</p></li>
@@ -247,7 +158,7 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 <p>So to take an example, whenever an exit is to be traversed, a lock of the type <em>traverse</em> will be checked. Defining a suitable lock type for an exit object would thus involve a lockstring <code class="docutils literal notranslate"><span class="pre">traverse:</span> <span class="pre">&lt;lock</span> <span class="pre">functions&gt;</span></code>.</p>
 </section>
 <section id="custom-access-types">
-<h3>Custom access_types<a class="headerlink" href="#custom-access-types" title="Permalink to this headline">¶</a></h3>
+<h3>Custom access_types<a class="headerlink" href="#custom-access-types" title="Link to this heading">¶</a></h3>
 <p>As stated above, the <code class="docutils literal notranslate"><span class="pre">access_type</span></code> part of the lock is simply the ‘name’ or ‘type’ of the lock. The text is an arbitrary string that must be unique for an object. If adding a lock with the same <code class="docutils literal notranslate"><span class="pre">access_type</span></code> as one that already exists on the object, the new one override the old one.</p>
 <p>For example, if you wanted to create a bulletin board system and wanted to restrict who can either read a board or post to a board. You could then define locks such as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>     <span class="n">obj</span><span class="o">.</span><span class="n">locks</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;read:perm(Player);post:perm(Admin)&quot;</span><span class="p">)</span>
@@ -261,7 +172,7 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 </div>
 </section>
 <section id="lock-functions">
-<h3>Lock functions<a class="headerlink" href="#lock-functions" title="Permalink to this headline">¶</a></h3>
+<h3>Lock functions<a class="headerlink" href="#lock-functions" title="Link to this heading">¶</a></h3>
 <p>A <em>lock function</em> is a normal Python function put in a place Evennia looks for such functions. The modules Evennia looks at is the list <code class="docutils literal notranslate"><span class="pre">settings.LOCK_FUNC_MODULES</span></code>. <em>All functions</em> in any of those modules will automatically be considered a valid lock function. The default ones are found in <code class="docutils literal notranslate"><span class="pre">evennia/locks/lockfuncs.py</span></code> and you can start adding your own in <code class="docutils literal notranslate"><span class="pre">mygame/server/conf/lockfuncs.py</span></code>. You can append the setting to add more module paths. To replace a default lock function, just add your own with the same name.</p>
 <p>This is the basic definition of a lock function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">lockfunc_name</span><span class="p">(</span><span class="n">accessing_obj</span><span class="p">,</span> <span class="n">accessed_obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -302,10 +213,10 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">true()/all()</span></code> - give access to everyone</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">false()/none()/superuser()</span></code> - give access to none. Superusers bypass the check entirely and are thus the only ones who will pass this check.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">perm(perm)</span></code> - this tries to match a given <code class="docutils literal notranslate"><span class="pre">permission</span></code> property, on an Account firsthand, on a Character second. See <a class="reference internal" href="Permissions.html"><span class="doc std std-doc">below</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perm(perm)</span></code> - this tries to match a given <code class="docutils literal notranslate"><span class="pre">permission</span></code> property, on an Account firsthand, on a Character second. See <a class="reference internal" href="Permissions.html"><span class="std std-doc">below</span></a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">perm_above(perm)</span></code> - like <code class="docutils literal notranslate"><span class="pre">perm</span></code> but requires a “higher” permission level than the one given.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id(num)/dbref(num)</span></code> - checks so the access_object has a certain dbref/id.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">attr(attrname)</span></code> - checks if a certain <a class="reference internal" href="Attributes.html"><span class="doc std std-doc">Attribute</span></a> exists on accessing_object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attr(attrname)</span></code> - checks if a certain <a class="reference internal" href="Attributes.html"><span class="std std-doc">Attribute</span></a> exists on accessing_object.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">attr(attrname,</span> <span class="pre">value)</span></code> - checks so an attribute exists on accessing_object <em>and</em> has the given value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">attr_gt(attrname,</span> <span class="pre">value)</span></code> - checks so accessing_object has a value larger (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>) than the given value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">attr_ge,</span> <span class="pre">attr_lt,</span> <span class="pre">attr_le,</span> <span class="pre">attr_ne</span></code> - corresponding for <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> and <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
@@ -319,7 +230,7 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 </ul>
 </section>
 <section id="checking-simple-strings">
-<h3>Checking simple strings<a class="headerlink" href="#checking-simple-strings" title="Permalink to this headline">¶</a></h3>
+<h3>Checking simple strings<a class="headerlink" href="#checking-simple-strings" title="Link to this heading">¶</a></h3>
 <p>Sometimes you don’t really need to look up a certain lock, you just want to check a lockstring. A common use is inside Commands, in order to check if a user has a certain permission. The lockhandler has a method <code class="docutils literal notranslate"><span class="pre">check_lockstring(accessing_obj,</span> <span class="pre">lockstring,</span> <span class="pre">bypass_superuser=False)</span></code> that allows this.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>     <span class="c1"># inside command definition</span>
      <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">locks</span><span class="o">.</span><span class="n">check_lockstring</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">,</span> <span class="s2">&quot;dummy:perm(Admin)&quot;</span><span class="p">):</span>
@@ -330,12 +241,12 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 <p>Note here that the <code class="docutils literal notranslate"><span class="pre">access_type</span></code> can be left to a dummy value since this method does not actually do a Lock lookup.</p>
 </section>
 <section id="default-locks">
-<h3>Default locks<a class="headerlink" href="#default-locks" title="Permalink to this headline">¶</a></h3>
-<p>Evennia sets up a few basic locks on all new objects and accounts (if we didn’t, noone would have any access to anything from the start).  This is all defined in the root <a class="reference internal" href="Typeclasses.html"><span class="doc std std-doc">Typeclasses</span></a> of the respective entity, in the hook method <code class="docutils literal notranslate"><span class="pre">basetype_setup()</span></code> (which you usually don’t want to edit unless you want to change how basic stuff like rooms and exits store their internal variables). This is called once, before <code class="docutils literal notranslate"><span class="pre">at_object_creation</span></code>, so just put them in the latter method on your child object to change the default. Also creation commands like <code class="docutils literal notranslate"><span class="pre">create</span></code> changes the locks of objects you create - for example it sets the <code class="docutils literal notranslate"><span class="pre">control</span></code> lock_type so as to allow you, its creator, to control and delete the object.</p>
+<h3>Default locks<a class="headerlink" href="#default-locks" title="Link to this heading">¶</a></h3>
+<p>Evennia sets up a few basic locks on all new objects and accounts (if we didn’t, noone would have any access to anything from the start).  This is all defined in the root <a class="reference internal" href="Typeclasses.html"><span class="std std-doc">Typeclasses</span></a> of the respective entity, in the hook method <code class="docutils literal notranslate"><span class="pre">basetype_setup()</span></code> (which you usually don’t want to edit unless you want to change how basic stuff like rooms and exits store their internal variables). This is called once, before <code class="docutils literal notranslate"><span class="pre">at_object_creation</span></code>, so just put them in the latter method on your child object to change the default. Also creation commands like <code class="docutils literal notranslate"><span class="pre">create</span></code> changes the locks of objects you create - for example it sets the <code class="docutils literal notranslate"><span class="pre">control</span></code> lock_type so as to allow you, its creator, to control and delete the object.</p>
 </section>
 </section>
 <section id="more-lock-definition-examples">
-<h2>More Lock definition examples<a class="headerlink" href="#more-lock-definition-examples" title="Permalink to this headline">¶</a></h2>
+<h2>More Lock definition examples<a class="headerlink" href="#more-lock-definition-examples" title="Link to this heading">¶</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>examine: attr(eyesight, excellent) or perm(Builders)
 </pre></div>
 </div>
@@ -360,8 +271,8 @@ definitions to the object’s <code class="docutils literal notranslate"><span c
 </div>
 <p>This is how the <code class="docutils literal notranslate"><span class="pre">create</span></code> command sets up new objects. In sequence, this permission string sets the owner of this object be the creator (the one  running <code class="docutils literal notranslate"><span class="pre">create</span></code>). Builders may examine the object whereas only Admins and the creator may delete it. Everyone can pick it up.</p>
 <section id="a-complete-example-of-setting-locks-on-an-object">
-<h3>A complete example of setting locks on an object<a class="headerlink" href="#a-complete-example-of-setting-locks-on-an-object" title="Permalink to this headline">¶</a></h3>
-<p>Assume we have two objects - one is ourselves (not superuser) and the other is an <a class="reference internal" href="Objects.html"><span class="doc std std-doc">Object</span></a>
+<h3>A complete example of setting locks on an object<a class="headerlink" href="#a-complete-example-of-setting-locks-on-an-object" title="Link to this heading">¶</a></h3>
+<p>Assume we have two objects - one is ourselves (not superuser) and the other is an <a class="reference internal" href="Objects.html"><span class="std std-doc">Object</span></a>
 called <code class="docutils literal notranslate"><span class="pre">box</span></code>.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> &gt; create/drop box
  &gt; desc box = &quot;This is a very big and heavy box.&quot;
@@ -380,7 +291,7 @@ called <code class="docutils literal notranslate"><span class="pre">box</span></
         <span class="k">return</span>
 </pre></div>
 </div>
-<p>So the <code class="docutils literal notranslate"><span class="pre">get</span></code> command looks for a lock with the type <em>get</em> (not so surprising). It also looks for an <a class="reference internal" href="Attributes.html"><span class="doc std std-doc">Attribute</span></a> on the checked object called <em>get_err_msg</em> in order to return a customized error message. Sounds good! Let’s start by setting that on the box:</p>
+<p>So the <code class="docutils literal notranslate"><span class="pre">get</span></code> command looks for a lock with the type <em>get</em> (not so surprising). It also looks for an <a class="reference internal" href="Attributes.html"><span class="std std-doc">Attribute</span></a> on the checked object called <em>get_err_msg</em> in order to return a customized error message. Sounds good! Let’s start by setting that on the box:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> &gt; set box/get_err_msg = You are not strong enough to lift this box.
 </pre></div>
 </div>
@@ -411,19 +322,120 @@ called <code class="docutils literal notranslate"><span class="pre">box</span></
 </section>
 </section>
 <section id="on-djangos-permission-system">
-<h2>On Django’s permission system<a class="headerlink" href="#on-djangos-permission-system" title="Permalink to this headline">¶</a></h2>
+<h2>On Django’s permission system<a class="headerlink" href="#on-djangos-permission-system" title="Link to this heading">¶</a></h2>
 <p>Django also implements a comprehensive permission/security system of its own.  The reason we don’t use that is because it is app-centric (app in the Django sense).  Its permission strings are of the form <code class="docutils literal notranslate"><span class="pre">appname.permstring</span></code> and it automatically adds three of them for each database model in the app - for the app evennia/object this would be for example ‘object.create’, ‘object.admin’ and ‘object.edit’. This makes a lot of sense for a web application, not so much for a MUD, especially when we try to hide away as much of the underlying architecture as possible.</p>
 <p>The django permissions are not completely gone however. We use it for validating passwords during login. It is also used exclusively for managing Evennia’s web-based admin site, which is a graphical front-end for the database of Evennia. You edit and assign such permissions directly from the web interface. It’s stand-alone from the permissions described above.</p>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Locks</a><ul>
+<li><a class="reference internal" href="#working-with-locks">Working with locks</a><ul>
+<li><a class="reference internal" href="#defining-locks">Defining locks</a></li>
+<li><a class="reference internal" href="#valid-access-types">Valid access_types</a></li>
+<li><a class="reference internal" href="#custom-access-types">Custom access_types</a></li>
+<li><a class="reference internal" href="#lock-functions">Lock functions</a></li>
+<li><a class="reference internal" href="#checking-simple-strings">Checking simple strings</a></li>
+<li><a class="reference internal" href="#default-locks">Default locks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#more-lock-definition-examples">More Lock definition examples</a><ul>
+<li><a class="reference internal" href="#a-complete-example-of-setting-locks-on-an-object">A complete example of setting locks on an object</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#on-djangos-permission-system">On Django’s permission system</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Permissions.html"
+                          title="previous chapter">Permissions</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Commands.html"
+                          title="next chapter">Commands</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Components/Locks.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -438,17 +450,14 @@ called <code class="docutils literal notranslate"><span class="pre">box</span></
         <li class="right" >
           <a href="Permissions.html" title="Permissions"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" >Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Locks</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

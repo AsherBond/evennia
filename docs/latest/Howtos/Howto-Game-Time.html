@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Changing game calendar and time speed &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Adding Weather messages to a Room" href="Tutorial-Weather-Effects.html" />
     <link rel="prev" title="Making a Persistent object Handler" href="Tutorial-Persistent-Handler.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,103 +33,23 @@
         <li class="right" >
           <a href="Tutorial-Persistent-Handler.html" title="Making a Persistent object Handler"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" accesskey="U">Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Changing game calendar and time speed</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Changing game calendar and time speed</a><ul>
-<li><a class="reference internal" href="#a-game-time-with-a-standard-calendar">A game time with a standard calendar</a><ul>
-<li><a class="reference internal" href="#setting-up-game-time-for-a-standard-calendar">Setting up game time for a standard calendar</a></li>
-<li><a class="reference internal" href="#time-related-events">Time-related events</a></li>
-<li><a class="reference internal" href="#a-game-time-with-a-custom-calendar">A game time with a custom calendar</a></li>
-<li><a class="reference internal" href="#setting-up-the-custom-calendar">Setting up the custom calendar</a><ul>
-<li><a class="reference internal" href="#a-command-to-display-the-current-game-time">A command to display the current game time</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#time-related-events-in-custom-gametime">Time-related events in custom gametime</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Tutorial-Persistent-Handler.html"
-                        title="previous chapter">Making a Persistent object Handler</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Tutorial-Weather-Effects.html"
-                        title="next chapter">Adding Weather messages to a Room</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Howtos/Howto-Game-Time.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Howto-Game-Time.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="changing-game-calendar-and-time-speed">
-<h1>Changing game calendar and time speed<a class="headerlink" href="#changing-game-calendar-and-time-speed" title="Permalink to this headline">¶</a></h1>
+<h1>Changing game calendar and time speed<a class="headerlink" href="#changing-game-calendar-and-time-speed" title="Link to this heading">¶</a></h1>
 <p>A lot of games use a separate time system we refer to as <em>game time</em>. This runs in parallel to what we usually think of as <em>real time</em>.  The game time might run at a different speed, use different
 names for its time units or might even use a completely custom calendar. You don’t need to rely on a game time system at all. But if you do, Evennia offers basic tools to handle these various situations. This tutorial will walk you through these features.</p>
 <section id="a-game-time-with-a-standard-calendar">
-<h2>A game time with a standard calendar<a class="headerlink" href="#a-game-time-with-a-standard-calendar" title="Permalink to this headline">¶</a></h2>
+<h2>A game time with a standard calendar<a class="headerlink" href="#a-game-time-with-a-standard-calendar" title="Link to this heading">¶</a></h2>
 <p>Many games let their in-game time run faster or slower than real time, but still use our normal
 real-world calendar. This is common both for games set in present day as well as for games in
 historical or futuristic settings. Using a standard calendar has some advantages:</p>
@@ -147,7 +61,7 @@ automatically handled by the system.</p></li>
 </ul>
 <p>Evennia’s game time features assume a standard calendar (see the relevant section below for a custom calendar).</p>
 <section id="setting-up-game-time-for-a-standard-calendar">
-<h3>Setting up game time for a standard calendar<a class="headerlink" href="#setting-up-game-time-for-a-standard-calendar" title="Permalink to this headline">¶</a></h3>
+<h3>Setting up game time for a standard calendar<a class="headerlink" href="#setting-up-game-time-for-a-standard-calendar" title="Link to this heading">¶</a></h3>
 <p>All is done through the settings.  Here are the settings you should use if you want a game time with
 a standard calendar:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in a file settings.py in mygame/server/conf</span>
@@ -203,9 +117,9 @@ this point forward, the game time keeps increasing.  If you keep typing <code cl
 time updated correctly… and going (by default) twice as fast as the real time.</p>
 </section>
 <section id="time-related-events">
-<h3>Time-related events<a class="headerlink" href="#time-related-events" title="Permalink to this headline">¶</a></h3>
+<h3>Time-related events<a class="headerlink" href="#time-related-events" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">gametime</span></code> utility also has a way to schedule game-related events, taking into account your game time, and assuming a standard calendar (see below for the same feature with a custom calendar).  For instance, it can be used to have a specific message every (in-game) day at 6:00 AM showing how the sun rises.</p>
-<p>The function <code class="docutils literal notranslate"><span class="pre">schedule()</span></code> should be used here.  It will create a <a class="reference internal" href="../Components/Scripts.html"><span class="doc std std-doc">script</span></a> with some additional features to make sure the script is always executed when the game time matches the given parameters.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">schedule()</span></code> should be used here.  It will create a <a class="reference internal" href="../Components/Scripts.html"><span class="std std-doc">script</span></a> with some additional features to make sure the script is always executed when the game time matches the given parameters.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">schedule</span></code> function takes the following arguments:</p>
 <ul class="simple">
 <li><p>The <em>callback</em>, a function to be called when time is up.</p></li>
@@ -250,13 +164,13 @@ such day in February, April etc. Similarly, leap years may change the number of 
 </div></blockquote>
 </section>
 <section id="a-game-time-with-a-custom-calendar">
-<h3>A game time with a custom calendar<a class="headerlink" href="#a-game-time-with-a-custom-calendar" title="Permalink to this headline">¶</a></h3>
+<h3>A game time with a custom calendar<a class="headerlink" href="#a-game-time-with-a-custom-calendar" title="Link to this heading">¶</a></h3>
 <p>Using a custom calendar to handle game time is sometimes needed if you want to place your game in a fictional universe.  For instance you may want to create the Shire calendar which Tolkien described having 12 months, each which 30 days. That would give only 360 days per year (presumably hobbits weren’t really fond of the hassle of following the astronomical calendar).  Another example would be creating a planet in a different solar system with, say, days 29 hours long and months of only 18 days.</p>
 <p>Evennia handles custom calendars through an optional <em>contrib</em> module, called <code class="docutils literal notranslate"><span class="pre">custom_gametime</span></code>.
 Contrary to the normal <code class="docutils literal notranslate"><span class="pre">gametime</span></code> module described above it is not active by default.</p>
 </section>
 <section id="setting-up-the-custom-calendar">
-<h3>Setting up the custom calendar<a class="headerlink" href="#setting-up-the-custom-calendar" title="Permalink to this headline">¶</a></h3>
+<h3>Setting up the custom calendar<a class="headerlink" href="#setting-up-the-custom-calendar" title="Link to this heading">¶</a></h3>
 <p>In our first example of the Shire calendar, used by hobbits in books by Tolkien, we don’t really need the notion of weeks… but we need the notion of months having 30 days, not 28.</p>
 <p>The custom calendar is defined by adding the <code class="docutils literal notranslate"><span class="pre">TIME_UNITS</span></code> setting to your settings file. It’s a dictionary containing as keys the name of the units, and as value the number of seconds (the smallest unit for us) in this unit. Its keys must be picked among the following: “sec”, “min”, “hour”, “day”, “week”, “month” and “year” but you don’t have to include them all.  Here is the configuration for the Shire calendar:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in a file settings.py in mygame/server/conf</span>
@@ -297,7 +211,7 @@ behave consistently with the standard time.</p>
 <p>Note that while we use “month”, “week” etc in the settings, your game may not use those terms in- game, instead referring to them as “cycles”, “moons”, “sand falls” etc. This is just a matter of you
 displaying them differently. See next section.</p>
 <section id="a-command-to-display-the-current-game-time">
-<h4>A command to display the current game time<a class="headerlink" href="#a-command-to-display-the-current-game-time" title="Permalink to this headline">¶</a></h4>
+<h4>A command to display the current game time<a class="headerlink" href="#a-command-to-display-the-current-game-time" title="Link to this heading">¶</a></h4>
 <p>As pointed out earlier, the <code class="docutils literal notranslate"><span class="pre">&#64;time</span></code> command is meant to be used with a standard calendar, not a custom one.  We can easily create a new command though.  We’ll call it <code class="docutils literal notranslate"><span class="pre">time</span></code>, as is often the case
 on other MU*.  Here’s an example of how we could write it (for the example, you can create a file
 <code class="docutils literal notranslate"><span class="pre">gametime.py</span></code> in your <code class="docutils literal notranslate"><span class="pre">commands</span></code> directory and paste this code in it):</p>
@@ -364,18 +278,116 @@ And if “months” are called “moons” in your game, this is where you’d a
 </section>
 </section>
 <section id="time-related-events-in-custom-gametime">
-<h2>Time-related events in custom gametime<a class="headerlink" href="#time-related-events-in-custom-gametime" title="Permalink to this headline">¶</a></h2>
+<h2>Time-related events in custom gametime<a class="headerlink" href="#time-related-events-in-custom-gametime" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">custom_gametime</span></code> module also has a way to schedule game-related events, taking into account your game time (and your custom calendar).  It can be used to have a specific message every day at 6:00 AM, to show the sun rises, for instance. The <code class="docutils literal notranslate"><span class="pre">custom_gametime.schedule</span></code> function works in the same way as described for the default one above.</p>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Changing game calendar and time speed</a><ul>
+<li><a class="reference internal" href="#a-game-time-with-a-standard-calendar">A game time with a standard calendar</a><ul>
+<li><a class="reference internal" href="#setting-up-game-time-for-a-standard-calendar">Setting up game time for a standard calendar</a></li>
+<li><a class="reference internal" href="#time-related-events">Time-related events</a></li>
+<li><a class="reference internal" href="#a-game-time-with-a-custom-calendar">A game time with a custom calendar</a></li>
+<li><a class="reference internal" href="#setting-up-the-custom-calendar">Setting up the custom calendar</a><ul>
+<li><a class="reference internal" href="#a-command-to-display-the-current-game-time">A command to display the current game time</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#time-related-events-in-custom-gametime">Time-related events in custom gametime</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Tutorial-Persistent-Handler.html"
+                          title="previous chapter">Making a Persistent object Handler</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Tutorial-Weather-Effects.html"
+                          title="next chapter">Adding Weather messages to a Room</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Howtos/Howto-Game-Time.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -390,17 +402,14 @@ And if “months” are called “moons” in your game, this is where you’d a
         <li class="right" >
           <a href="Tutorial-Persistent-Handler.html" title="Making a Persistent object Handler"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Changing game calendar and time speed</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

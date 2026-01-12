@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Help System &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Permissions" href="Permissions.html" />
     <link rel="prev" title="Spawner and Prototypes" href="Prototypes.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,104 +33,19 @@
         <li class="right" >
           <a href="Prototypes.html" title="Spawner and Prototypes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" accesskey="U">Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Help System</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Help System</a><ul>
-<li><a class="reference internal" href="#working-with-three-types-of-help-entries">Working with three types of help entries</a><ul>
-<li><a class="reference internal" href="#database-stored-help-entries">Database-stored help entries</a></li>
-<li><a class="reference internal" href="#file-stored-help-entries">File-stored help entries</a></li>
-<li><a class="reference internal" href="#command-help-entries">Command-help entries</a></li>
-<li><a class="reference internal" href="#locking-help-entries">Locking help entries</a></li>
-<li><a class="reference internal" href="#customizing-the-look-of-the-help-system">Customizing the look of the help system</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#subtopics">Subtopics</a></li>
-<li><a class="reference internal" href="#technical-notes">Technical notes</a><ul>
-<li><a class="reference internal" href="#help-entry-clashes">Help-entry clashes</a></li>
-<li><a class="reference internal" href="#the-help-entry-container">The Help Entry container</a></li>
-<li><a class="reference internal" href="#help-pagination">Help pagination</a></li>
-<li><a class="reference internal" href="#search-engine">Search engine</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Prototypes.html"
-                        title="previous chapter">Spawner and Prototypes</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Permissions.html"
-                        title="next chapter">Permissions</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Components/Help-System.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Help-System.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="help-system">
-<h1>Help System<a class="headerlink" href="#help-system" title="Permalink to this headline">¶</a></h1>
+<h1>Help System<a class="headerlink" href="#help-system" title="Link to this heading">¶</a></h1>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span><span class="nb">help</span><span class="w"> </span>theatre
 </pre></div>
 </div>
@@ -174,7 +83,7 @@ Suggestions:
 </div>
 <p>Sub-topics are accessed as <code class="docutils literal notranslate"><span class="pre">help</span> <span class="pre">&lt;topic&gt;/&lt;subtopic&gt;/...</span></code>.</p>
 <section id="working-with-three-types-of-help-entries">
-<h2>Working with three types of help entries<a class="headerlink" href="#working-with-three-types-of-help-entries" title="Permalink to this headline">¶</a></h2>
+<h2>Working with three types of help entries<a class="headerlink" href="#working-with-three-types-of-help-entries" title="Link to this heading">¶</a></h2>
 <p>There are three ways to generate help entries:</p>
 <ul class="simple">
 <li><p>In the database</p></li>
@@ -182,7 +91,7 @@ Suggestions:
 <li><p>From Command doc strings</p></li>
 </ul>
 <section id="database-stored-help-entries">
-<h3>Database-stored help entries<a class="headerlink" href="#database-stored-help-entries" title="Permalink to this headline">¶</a></h3>
+<h3>Database-stored help entries<a class="headerlink" href="#database-stored-help-entries" title="Link to this heading">¶</a></h3>
 <p>Creating a new help entry from in-game is done with</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sethelp &lt;topic&gt;[;aliases] [,category] [,lockstring] = &lt;text&gt;
 </pre></div>
@@ -202,9 +111,9 @@ Suggestions:
 </div>
 </section>
 <section id="file-stored-help-entries">
-<h3>File-stored help entries<a class="headerlink" href="#file-stored-help-entries" title="Permalink to this headline">¶</a></h3>
+<h3>File-stored help entries<a class="headerlink" href="#file-stored-help-entries" title="Link to this heading">¶</a></h3>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.0.</span></p>
+<p><span class="versionmodified added">Added in version 1.0.</span></p>
 </div>
 <p>File-help entries are created by the game development team outside of the game. The help entries are defined in normal Python modules (<code class="docutils literal notranslate"><span class="pre">.py</span></code> file ending) containing a <code class="docutils literal notranslate"><span class="pre">dict</span></code> to represent each entry. They require a server <code class="docutils literal notranslate"><span class="pre">reload</span></code> before any changes apply.</p>
 <ul class="simple">
@@ -262,8 +171,8 @@ to keep your strings a reasonable width (it will look better). Just reload the
 server and the file-based help entries will be available to view.</p>
 </section>
 <section id="command-help-entries">
-<h3>Command-help entries<a class="headerlink" href="#command-help-entries" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">__docstring__</span></code> of  <a class="reference internal" href="Commands.html"><span class="doc std std-doc">Command classes</span></a> are automatically extracted into a help entry. You set <code class="docutils literal notranslate"><span class="pre">help_category</span></code> directly on the class.</p>
+<h3>Command-help entries<a class="headerlink" href="#command-help-entries" title="Link to this heading">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">__docstring__</span></code> of  <a class="reference internal" href="Commands.html"><span class="std std-doc">Command classes</span></a> are automatically extracted into a help entry. You set <code class="docutils literal notranslate"><span class="pre">help_category</span></code> directly on the class.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evennia</span><span class="w"> </span><span class="kn">import</span> <span class="n">Command</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">MyCommand</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span> 
@@ -290,7 +199,7 @@ server and the file-based help entries will be available to view.</p>
 <p>When you update your code, the command’s help will follow. The idea is that the command docs are easier to maintain and keep up-to-date if the developer can change them at the same time as they do the code.</p>
 </section>
 <section id="locking-help-entries">
-<h3>Locking help entries<a class="headerlink" href="#locking-help-entries" title="Permalink to this headline">¶</a></h3>
+<h3>Locking help entries<a class="headerlink" href="#locking-help-entries" title="Link to this heading">¶</a></h3>
 <p>The default <code class="docutils literal notranslate"><span class="pre">help</span></code> command gather all available commands and help entries
 together so they can be searched or listed. By setting locks on the command/help
 entry one can limit who can read help about it.</p>
@@ -333,16 +242,16 @@ the new ‘read’ lock-type to control access to the entry itself.</p>
 </div>
 </section>
 <section id="customizing-the-look-of-the-help-system">
-<h3>Customizing the look of the help system<a class="headerlink" href="#customizing-the-look-of-the-help-system" title="Permalink to this headline">¶</a></h3>
+<h3>Customizing the look of the help system<a class="headerlink" href="#customizing-the-look-of-the-help-system" title="Link to this heading">¶</a></h3>
 <p>This is done almost exclusively by overriding the <code class="docutils literal notranslate"><span class="pre">help</span></code> command <a class="reference internal" href="../api/evennia.commands.default.help.html#evennia.commands.default.help.CmdHelp" title="evennia.commands.default.help.CmdHelp"><span class="xref myst py py-class">evennia.commands.default.help.CmdHelp</span></a>.</p>
 <p>Since the available commands may vary from moment to moment, <code class="docutils literal notranslate"><span class="pre">help</span></code> is responsible for collating the three sources of help-entries (commands/db/file) together and search through them on the fly. It also does all the formatting of the output.</p>
 <p>To make it easier to tweak the look, the parts of the code that changes the visual presentation and entity searching has been broken out into separate methods on the command class. Override these in your version of <code class="docutils literal notranslate"><span class="pre">help</span></code> to change the display or tweak as you please. See the api link above for details.</p>
 </section>
 </section>
 <section id="subtopics">
-<h2>Subtopics<a class="headerlink" href="#subtopics" title="Permalink to this headline">¶</a></h2>
+<h2>Subtopics<a class="headerlink" href="#subtopics" title="Link to this heading">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.0.</span></p>
+<p><span class="versionmodified added">Added in version 1.0.</span></p>
 </div>
 <p>Rather than making a very long help entry, the <code class="docutils literal notranslate"><span class="pre">text</span></code> may also be broken up into <em>subtopics</em>. A list of the next level of subtopics are shown below the main help text and allows the user to read more about some particular detail that wouldn’t fit in the main text.</p>
 <p>Subtopics use a markup slightly similar to markdown headings. The top level heading must be named <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">subtopics</span></code> (non case-sensitive) and the following headers must be sub-headings to this (so <code class="docutils literal notranslate"><span class="pre">##</span> <span class="pre">subtopic</span> <span class="pre">name</span></code> etc). All headings are non-case sensitive (the help command will format them). The topics can be nested at most to a depth of 5 (which is probably too many levels already). The parser uses fuzzy matching to find the subtopic, so one does not have to type it all out exactly.</p>
@@ -392,9 +301,9 @@ He always keeps an eye on the door and ...
 </div>
 </section>
 <section id="technical-notes">
-<h2>Technical notes<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
+<h2>Technical notes<a class="headerlink" href="#technical-notes" title="Link to this heading">¶</a></h2>
 <section id="help-entry-clashes">
-<h3>Help-entry clashes<a class="headerlink" href="#help-entry-clashes" title="Permalink to this headline">¶</a></h3>
+<h3>Help-entry clashes<a class="headerlink" href="#help-entry-clashes" title="Link to this heading">¶</a></h3>
 <p>Should you have clashing help-entries (of the same name) between the three types of available entries, the priority is</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Command-auto-help &gt; Db-help &gt; File-help
 </pre></div>
@@ -402,7 +311,7 @@ He always keeps an eye on the door and ...
 <p>The <code class="docutils literal notranslate"><span class="pre">sethelp</span></code> command (which only deals with creating db-based help entries) will warn you if a new help entry might shadow/be shadowed by a same/similar-named command or file-based help entry.</p>
 </section>
 <section id="the-help-entry-container">
-<h3>The Help Entry container<a class="headerlink" href="#the-help-entry-container" title="Permalink to this headline">¶</a></h3>
+<h3>The Help Entry container<a class="headerlink" href="#the-help-entry-container" title="Link to this heading">¶</a></h3>
 <p>All help entries (no matter the source) are parsed into an object with the following properties:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - This is the main topic-name. For Commands, this is literally the command’s <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p></li>
@@ -415,11 +324,11 @@ He always keeps an eye on the door and ...
 </ul>
 </section>
 <section id="help-pagination">
-<h3>Help pagination<a class="headerlink" href="#help-pagination" title="Permalink to this headline">¶</a></h3>
-<p>A <code class="docutils literal notranslate"><span class="pre">text</span></code> that scrolls off the screen will automatically be paginated by the <a class="reference internal" href="EvMore.html"><span class="doc std std-doc">EvMore</span></a> pager (you can control this with <code class="docutils literal notranslate"><span class="pre">settings.HELP_MORE_ENABLED=False</span></code>). If you use EvMore and want to control exactly where the pager should break the page, mark the break with the control character <code class="docutils literal notranslate"><span class="pre">\f</span></code>.</p>
+<h3>Help pagination<a class="headerlink" href="#help-pagination" title="Link to this heading">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">text</span></code> that scrolls off the screen will automatically be paginated by the <a class="reference internal" href="EvMore.html"><span class="std std-doc">EvMore</span></a> pager (you can control this with <code class="docutils literal notranslate"><span class="pre">settings.HELP_MORE_ENABLED=False</span></code>). If you use EvMore and want to control exactly where the pager should break the page, mark the break with the control character <code class="docutils literal notranslate"><span class="pre">\f</span></code>.</p>
 </section>
 <section id="search-engine">
-<h3>Search engine<a class="headerlink" href="#search-engine" title="Permalink to this headline">¶</a></h3>
+<h3>Search engine<a class="headerlink" href="#search-engine" title="Link to this heading">¶</a></h3>
 <p>Since it needs to search so different types of data, the help system has to collect all possibilities in memory before searching through the entire set. It uses the <a class="reference external" href="https://github.com/yeraydiazdiaz/lunr.py">Lunr</a> search engine to search through the main bulk of help entries. Lunr is a mature engine used for web-pages and produces much more sensible results than previous solutions.</p>
 <p>Once the main entry has been found, subtopics are then searched with simple <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">startswith</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span></code> matching (there are so relatively few of them at that point).</p>
 <div class="versionchanged">
@@ -430,12 +339,115 @@ He always keeps an eye on the door and ...
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Help System</a><ul>
+<li><a class="reference internal" href="#working-with-three-types-of-help-entries">Working with three types of help entries</a><ul>
+<li><a class="reference internal" href="#database-stored-help-entries">Database-stored help entries</a></li>
+<li><a class="reference internal" href="#file-stored-help-entries">File-stored help entries</a></li>
+<li><a class="reference internal" href="#command-help-entries">Command-help entries</a></li>
+<li><a class="reference internal" href="#locking-help-entries">Locking help entries</a></li>
+<li><a class="reference internal" href="#customizing-the-look-of-the-help-system">Customizing the look of the help system</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#subtopics">Subtopics</a></li>
+<li><a class="reference internal" href="#technical-notes">Technical notes</a><ul>
+<li><a class="reference internal" href="#help-entry-clashes">Help-entry clashes</a></li>
+<li><a class="reference internal" href="#the-help-entry-container">The Help Entry container</a></li>
+<li><a class="reference internal" href="#help-pagination">Help pagination</a></li>
+<li><a class="reference internal" href="#search-engine">Search engine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Prototypes.html"
+                          title="previous chapter">Spawner and Prototypes</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Permissions.html"
+                          title="next chapter">Permissions</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Components/Help-System.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -450,17 +462,14 @@ He always keeps an eye on the door and ...
         <li class="right" >
           <a href="Prototypes.html" title="Spawner and Prototypes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" >Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Help System</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

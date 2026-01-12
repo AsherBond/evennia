@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.objects.models &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.objects.models</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="models.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -121,7 +66,9 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">evennia.utils.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">dbref</span><span class="p">,</span> <span class="n">lazy_property</span><span class="p">,</span> <span class="n">make_iter</span>
 
 
-<div class="viewcode-block" id="ContentsHandler"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ContentsHandler</span><span class="p">:</span>
+<div class="viewcode-block" id="ContentsHandler">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ContentsHandler</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Handles and caches the contents of an object to avoid excessive</span>
 <span class="sd">    lookups (this is done very often due to cmdhandler needing to look</span>
@@ -129,7 +76,9 @@
 <span class="sd">    of the ObjectDB.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ContentsHandler.__init__"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="ContentsHandler.__init__">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Sets up the contents handler.</span>
 
@@ -148,7 +97,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_typecache</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">init</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ContentsHandler.load"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ContentsHandler.load">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieves all objects from database. Used for initializing.</span>
 
@@ -157,7 +109,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">locations_set</span><span class="o">.</span><span class="n">all</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="ContentsHandler.init"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler.init">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ContentsHandler.init">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler.init">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Re-initialize the content cache</span>
 
@@ -179,7 +134,10 @@
                 <span class="k">for</span> <span class="n">ctype</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">_content_types</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_typecache</span><span class="p">[</span><span class="n">ctype</span><span class="p">][</span><span class="n">obj</span><span class="o">.</span><span class="n">pk</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="ContentsHandler.get"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler.get">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ContentsHandler.get">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler.get">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the contents of the cache.</span>
 
@@ -210,7 +168,10 @@
                 <span class="n">logger</span><span class="o">.</span><span class="n">log_err</span><span class="p">(</span><span class="s2">&quot;contents cache failed for </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">key</span><span class="p">)</span>
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ContentsHandler.add"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler.add">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ContentsHandler.add">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler.add">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a new object to this location</span>
 
@@ -222,7 +183,10 @@
         <span class="k">for</span> <span class="n">ctype</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">_content_types</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_typecache</span><span class="p">[</span><span class="n">ctype</span><span class="p">][</span><span class="n">obj</span><span class="o">.</span><span class="n">pk</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="ContentsHandler.remove"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler.remove">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ContentsHandler.remove">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler.remove">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove object from this location</span>
 
@@ -235,14 +199,19 @@
             <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">pk</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_typecache</span><span class="p">[</span><span class="n">ctype</span><span class="p">]:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_typecache</span><span class="p">[</span><span class="n">ctype</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">pk</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ContentsHandler.clear"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ContentsHandler.clear">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ContentsHandler.clear">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ContentsHandler.clear">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Clear the contents cache and re-initialize</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pkcache</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_typecache</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">init</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init</span><span class="p">()</span></div>
+</div>
+
 
 
 <span class="c1"># -------------------------------------------------------------</span>
@@ -252,7 +221,9 @@
 <span class="c1"># -------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="ObjectDB"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ObjectDB">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">ObjectDB</span><span class="p">(</span><span class="n">TypedObject</span><span class="p">):</span>
+<div class="viewcode-block" id="ObjectDB">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ObjectDB">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ObjectDB</span><span class="p">(</span><span class="n">TypedObject</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    All objects in the game use the ObjectDB model to store</span>
 <span class="sd">    data in the database. This is handled transparently through</span>
@@ -371,9 +342,12 @@
     <span class="n">__defaultclasspath__</span> <span class="o">=</span> <span class="s2">&quot;evennia.objects.objects.DefaultObject&quot;</span>
     <span class="n">__applabel__</span> <span class="o">=</span> <span class="s2">&quot;objects&quot;</span>
 
-<div class="viewcode-block" id="ObjectDB.contents_cache"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ObjectDB.contents_cache">[docs]</a>    <span class="nd">@lazy_property</span>
+<div class="viewcode-block" id="ObjectDB.contents_cache">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ObjectDB.contents_cache">[docs]</a>
+    <span class="nd">@lazy_property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">contents_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ContentsHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
 
     <span class="c1"># cmdset_storage property handling</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">__cmdset_storage_get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -465,7 +439,9 @@
 
     <span class="n">location</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">__location_get</span><span class="p">,</span> <span class="n">__location_set</span><span class="p">,</span> <span class="n">__location_del</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ObjectDB.at_db_location_postsave"><a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.objects.models.ObjectDB.at_db_location_postsave">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_db_location_postsave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
+<div class="viewcode-block" id="ObjectDB.at_db_location_postsave">
+<a class="viewcode-back" href="../../../api/evennia.objects.models.html#evennia.accounts.accounts.ObjectDB.at_db_location_postsave">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_db_location_postsave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is called automatically after the location field was</span>
 <span class="sd">        saved, no matter how. It checks for a variable</span>
@@ -491,19 +467,84 @@
                 <span class="p">)</span>
                 <span class="p">[</span><span class="n">o</span><span class="o">.</span><span class="n">contents_cache</span><span class="o">.</span><span class="n">init</span><span class="p">()</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dbclass__</span><span class="o">.</span><span class="n">get_all_cached_instances</span><span class="p">()]</span></div>
 
+
     <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Define Django meta options&quot;&quot;&quot;</span>
 
         <span class="n">verbose_name</span> <span class="o">=</span> <span class="s2">&quot;Object&quot;</span>
         <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s2">&quot;Objects&quot;</span></div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -512,18 +553,15 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.objects.models</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

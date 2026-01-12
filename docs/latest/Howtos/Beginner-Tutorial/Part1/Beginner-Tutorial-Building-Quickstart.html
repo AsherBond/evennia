@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1. Using Commands and Building Stuff &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="2. The Tutorial World" href="Beginner-Tutorial-Tutorial-World.html" />
     <link rel="prev" title="Part 1: What We Have" href="Beginner-Tutorial-Part1-Overview.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="Beginner-Tutorial-Part1-Overview.html" title="Part 1: What We Have"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part1-Overview.html" accesskey="U">Part 1: What We Have</a> &#187;</li>
@@ -48,96 +42,17 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">1. Using Commands and Building Stuff</a><ul>
-<li><a class="reference internal" href="#getting-help">1.1. Getting Help</a></li>
-<li><a class="reference internal" href="#looking-around">1.2. Looking Around</a></li>
-<li><a class="reference internal" href="#stepping-down-from-godhood">1.3. Stepping Down from Godhood</a></li>
-<li><a class="reference internal" href="#creating-an-object">1.4. Creating an Object</a></li>
-<li><a class="reference internal" href="#get-a-personality">1.5. Get a Personality</a></li>
-<li><a class="reference internal" href="#pushing-your-buttons">1.6. Pushing Your Buttons</a></li>
-<li><a class="reference internal" href="#making-yourself-a-house">1.7. Making Yourself a House</a></li>
-<li><a class="reference internal" href="#reshuffling-the-world">1.8. Reshuffling the World</a></li>
-<li><a class="reference internal" href="#adding-a-help-entry">1.9. Adding a Help Entry</a></li>
-<li><a class="reference internal" href="#adding-a-world">1.10. Adding a World</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Part1-Overview.html"
-                        title="previous chapter">Part 1: What We Have</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Tutorial-World.html"
-                        title="next chapter"><span class="section-number">2. </span>The Tutorial World</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Building-Quickstart.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Beginner-Tutorial-Building-Quickstart.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="using-commands-and-building-stuff">
-<h1><span class="section-number">1. </span>Using Commands and Building Stuff<a class="headerlink" href="#using-commands-and-building-stuff" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Using Commands and Building Stuff<a class="headerlink" href="#using-commands-and-building-stuff" title="Link to this heading">¶</a></h1>
 <p>In this lesson, we will test out what we can do in-game out-of-the-box. Evennia ships with
-<a class="reference internal" href="../../../Components/Default-Commands.html"><span class="doc std std-doc">around 90 default commands</span></a> and, while you can override those as you please, the defaults can be quite useful.</p>
+<a class="reference internal" href="../../../Components/Default-Commands.html"><span class="std std-doc">around 90 default commands</span></a> and, while you can override those as you please, the defaults can be quite useful.</p>
 <p>Connect and login to your new game. You will find yourself in the “Limbo” location. This
 is the only room in the game at this point. Let’s explore the default commands a little.</p>
-<p>The default commands have syntax <a class="reference internal" href="../../../Coding/Default-Command-Syntax.html"><span class="doc std std-doc">similar to MUX</span></a>:</p>
+<p>The default commands have syntax <a class="reference internal" href="../../../Coding/Default-Command-Syntax.html"><span class="std std-doc">similar to MUX</span></a>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> command[/switch/switch...] [arguments ...]
 </pre></div>
 </div>
@@ -150,7 +65,7 @@ is the only room in the game at this point. Let’s explore the default commands
 <div><p>Are you used to commands starting with &#64;, like &#64;create? That will work, too. Evennia simply ignores the preceeding &#64;.</p>
 </div></blockquote>
 <section id="getting-help">
-<h2><span class="section-number">1.1. </span>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Getting Help<a class="headerlink" href="#getting-help" title="Link to this heading">¶</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>help
 </pre></div>
 </div>
@@ -161,7 +76,7 @@ is the only room in the game at this point. Let’s explore the default commands
 <p>to see the in-game help for that command.</p>
 </section>
 <section id="looking-around">
-<h2><span class="section-number">1.2. </span>Looking Around<a class="headerlink" href="#looking-around" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Looking Around<a class="headerlink" href="#looking-around" title="Link to this heading">¶</a></h2>
 <p>The most common command is</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>look
 </pre></div>
@@ -174,7 +89,7 @@ is the only room in the game at this point. Let’s explore the default commands
 <p>will give you your own description. <code class="docutils literal notranslate"><span class="pre">look</span> <span class="pre">here</span></code> is, in this case, the same as just plain <code class="docutils literal notranslate"><span class="pre">look</span></code>.</p>
 </section>
 <section id="stepping-down-from-godhood">
-<h2><span class="section-number">1.3. </span>Stepping Down from Godhood<a class="headerlink" href="#stepping-down-from-godhood" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Stepping Down from Godhood<a class="headerlink" href="#stepping-down-from-godhood" title="Link to this heading">¶</a></h2>
 <p>If you just installed Evennia, your very first player account is called user #1 — also known as the <em>superuser</em> or <em>god user</em>. This user is very powerful — so powerful that it will override many game restrictions (such as locks). This can be useful, but it also hides some functionality that you might want to test.</p>
 <p>To step down temporarily from your superuser position, you may use the <code class="docutils literal notranslate"><span class="pre">quell</span></code> command in-game:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>quell
@@ -187,7 +102,7 @@ is the only room in the game at this point. Let’s explore the default commands
 <p>to get superuser status again when you are done.</p>
 </section>
 <section id="creating-an-object">
-<h2><span class="section-number">1.4. </span>Creating an Object<a class="headerlink" href="#creating-an-object" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Creating an Object<a class="headerlink" href="#creating-an-object" title="Link to this heading">¶</a></h2>
 <p>Basic objects can be anything — swords, flowers, and non-player characters. They are created using the <code class="docutils literal notranslate"><span class="pre">create</span></code> command. For example:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>create box
 </pre></div>
@@ -226,12 +141,12 @@ You see nothing special.
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>lock box = get:false()
 </pre></div>
 </div>
-<p>Locks represent a rather <a class="reference internal" href="../../../Components/Locks.html"><span class="doc std std-doc">big topic</span></a> but, for now, this will do what we want. The above command will lock the box so no one can lift it — with one exception. Remember that superusers override all locks and will pick it up anyway. Make sure you are quelling your superuser powers, and try to get it again:</p>
+<p>Locks represent a rather <a class="reference internal" href="../../../Components/Locks.html"><span class="std std-doc">big topic</span></a> but, for now, this will do what we want. The above command will lock the box so no one can lift it — with one exception. Remember that superusers override all locks and will pick it up anyway. Make sure you are quelling your superuser powers, and try to get it again:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; get box
 You can&#39;t get that.
 </pre></div>
 </div>
-<p>Think this default error message looks dull? The <code class="docutils literal notranslate"><span class="pre">get</span></code> command looks for an <a class="reference internal" href="../../../Components/Attributes.html"><span class="doc std std-doc">Attribute</span></a> named <code class="docutils literal notranslate"><span class="pre">get_err_msg</span></code> to return as a custom error message. We set attributes using the <code class="docutils literal notranslate"><span class="pre">set</span></code> command:</p>
+<p>Think this default error message looks dull? The <code class="docutils literal notranslate"><span class="pre">get</span></code> command looks for an <a class="reference internal" href="../../../Components/Attributes.html"><span class="std std-doc">Attribute</span></a> named <code class="docutils literal notranslate"><span class="pre">get_err_msg</span></code> to return as a custom error message. We set attributes using the <code class="docutils literal notranslate"><span class="pre">set</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>set box/get_err_msg = It&#39;s way too heavy for you to lift.
 </pre></div>
 </div>
@@ -240,11 +155,11 @@ You can&#39;t get that.
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Examine</span></code> will return the value of attributes, including color codes. For instance, <code class="docutils literal notranslate"><span class="pre">examine</span> <span class="pre">here/desc</span></code> would return the raw description of the current room (including color codes), so that you can copy-and-paste to set its description to something else.</p>
-<p>You create new Commands — or modify existing ones — in Python code outside the game. We explore doing so later in the <a class="reference internal" href="Beginner-Tutorial-Adding-Commands.html"><span class="doc std std-doc">Commands tutorial</span></a>.</p>
+<p>You create new Commands — or modify existing ones — in Python code outside the game. We explore doing so later in the <a class="reference internal" href="Beginner-Tutorial-Adding-Commands.html"><span class="std std-doc">Commands tutorial</span></a>.</p>
 </section>
 <section id="get-a-personality">
-<h2><span class="section-number">1.5. </span>Get a Personality<a class="headerlink" href="#get-a-personality" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../../../Components/Scripts.html"><span class="doc std std-doc">Scripts</span></a> are powerful out-of-character objects useful for many “under the hood” things. One of their optional abilities is to do things on a timer. To try out our first script, let’s apply one to ourselves. There is an example script in <code class="docutils literal notranslate"><span class="pre">evennia/contrib/tutorials/bodyfunctions/bodyfunctions.py</span></code> that is called <code class="docutils literal notranslate"><span class="pre">BodyFunctions</span></code>. To add this to our self, we may use the <code class="docutils literal notranslate"><span class="pre">script</span></code> command:</p>
+<h2><span class="section-number">1.5. </span>Get a Personality<a class="headerlink" href="#get-a-personality" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="../../../Components/Scripts.html"><span class="std std-doc">Scripts</span></a> are powerful out-of-character objects useful for many “under the hood” things. One of their optional abilities is to do things on a timer. To try out our first script, let’s apply one to ourselves. There is an example script in <code class="docutils literal notranslate"><span class="pre">evennia/contrib/tutorials/bodyfunctions/bodyfunctions.py</span></code> that is called <code class="docutils literal notranslate"><span class="pre">BodyFunctions</span></code>. To add this to our self, we may use the <code class="docutils literal notranslate"><span class="pre">script</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>script self = tutorials.bodyfunctions.BodyFunctions
 </pre></div>
 </div>
@@ -262,11 +177,11 @@ You can&#39;t get that.
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>script/stop self = tutorials.bodyfunctions.BodyFunctions
 </pre></div>
 </div>
-<p>You may create your own scripts in Python, outside the game; the path you give to <code class="docutils literal notranslate"><span class="pre">script</span></code> is literally the Python path to your script file. The <a class="reference internal" href="../../../Components/Scripts.html"><span class="doc std std-doc">Scripts</span></a> page explains more details.</p>
+<p>You may create your own scripts in Python, outside the game; the path you give to <code class="docutils literal notranslate"><span class="pre">script</span></code> is literally the Python path to your script file. The <a class="reference internal" href="../../../Components/Scripts.html"><span class="std std-doc">Scripts</span></a> page explains more details.</p>
 </section>
 <section id="pushing-your-buttons">
-<h2><span class="section-number">1.6. </span>Pushing Your Buttons<a class="headerlink" href="#pushing-your-buttons" title="Permalink to this headline">¶</a></h2>
-<p>If we get back to the box we made, there is only so much fun you can have with it at this point. It’s just a dumb generic object. If you renamed it to <code class="docutils literal notranslate"><span class="pre">stone</span></code> and changed its description, no one would be the wiser. However, with the combined use of custom <a class="reference internal" href="../../../Components/Typeclasses.html"><span class="doc std std-doc">Typeclasses</span></a>, <a class="reference internal" href="../../../Components/Scripts.html"><span class="doc std std-doc">Scripts</span></a> and object-based <a class="reference internal" href="../../../Components/Commands.html"><span class="doc std std-doc">Commands</span></a>, you can expand it — and other items — to be as unique, complex, and interactive as you want.</p>
+<h2><span class="section-number">1.6. </span>Pushing Your Buttons<a class="headerlink" href="#pushing-your-buttons" title="Link to this heading">¶</a></h2>
+<p>If we get back to the box we made, there is only so much fun you can have with it at this point. It’s just a dumb generic object. If you renamed it to <code class="docutils literal notranslate"><span class="pre">stone</span></code> and changed its description, no one would be the wiser. However, with the combined use of custom <a class="reference internal" href="../../../Components/Typeclasses.html"><span class="std std-doc">Typeclasses</span></a>, <a class="reference internal" href="../../../Components/Scripts.html"><span class="std std-doc">Scripts</span></a> and object-based <a class="reference internal" href="../../../Components/Commands.html"><span class="std std-doc">Commands</span></a>, you can expand it — and other items — to be as unique, complex, and interactive as you want.</p>
 <p>So, let’s work though just such an example. So far, we have only created objects that use the default object typeclass named simply <code class="docutils literal notranslate"><span class="pre">Object</span></code>. Let’s create an object that is a little more interesting. Under
 <code class="docutils literal notranslate"><span class="pre">evennia/contrib/tutorials</span></code> there is a module <code class="docutils literal notranslate"><span class="pre">red_button.py</span></code>. It contains the enigmatic <code class="docutils literal notranslate"><span class="pre">RedButton</span></code> class.</p>
 <p>Let’s make us one of <em>those</em>!</p>
@@ -274,7 +189,7 @@ You can&#39;t get that.
 </pre></div>
 </div>
 <p>Enter the above command with Python-path and there you go — one red button! Just as in the Script example earlier, we have specified a Python-path to the Python code that we want Evennia to use for creating the object.</p>
-<p>The RedButton is an example object intended to show off a few of Evennia’s features. You will find that the <a class="reference internal" href="../../../Components/Typeclasses.html"><span class="doc std std-doc">Typeclass</span></a> and <a class="reference internal" href="../../../Components/Commands.html"><span class="doc std std-doc">Commands</span></a> controlling it are inside <a class="reference internal" href="../../../api/evennia.contrib.tutorials.red_button.html"><span class="doc std std-doc">evennia/contrib/tutorials/red_button</span></a>.</p>
+<p>The RedButton is an example object intended to show off a few of Evennia’s features. You will find that the <a class="reference internal" href="../../../Components/Typeclasses.html"><span class="std std-doc">Typeclass</span></a> and <a class="reference internal" href="../../../Components/Commands.html"><span class="std std-doc">Commands</span></a> controlling it are inside <a class="reference internal" href="../../../api/evennia.contrib.tutorials.red_button.html"><span class="std std-doc">evennia/contrib/tutorials/red_button</span></a>.</p>
 <p>If you wait for a while (make sure you dropped it!) the button will blink invitingly.</p>
 <p>Why don’t you try to push it…?</p>
 <p>Surely a big red button is meant to be pushed.</p>
@@ -285,7 +200,7 @@ You can&#39;t get that.
 </div>
 </section>
 <section id="making-yourself-a-house">
-<h2><span class="section-number">1.7. </span>Making Yourself a House<a class="headerlink" href="#making-yourself-a-house" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span>Making Yourself a House<a class="headerlink" href="#making-yourself-a-house" title="Link to this heading">¶</a></h2>
 <p>The main command for shaping your game world is <code class="docutils literal notranslate"><span class="pre">dig</span></code>. For example, if you are standing in Limbo, you can dig a route to your new house location like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>dig house = large red door;door;in,to the outside;out
 </pre></div>
@@ -317,7 +232,7 @@ You can&#39;t get that.
 <p>(You can also use the <code class="docutils literal notranslate"><span class="pre">#dbref</span></code> of Limbo, which you can find by using <code class="docutils literal notranslate"><span class="pre">examine</span> <span class="pre">here</span></code> when standing in Limbo.)</p>
 </section>
 <section id="reshuffling-the-world">
-<h2><span class="section-number">1.8. </span>Reshuffling the World<a class="headerlink" href="#reshuffling-the-world" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.8. </span>Reshuffling the World<a class="headerlink" href="#reshuffling-the-world" title="Link to this heading">¶</a></h2>
 <p>Assuming you are back at <code class="docutils literal notranslate"><span class="pre">Limbo</span></code>, let’s teleport the <em>large box</em> to our <code class="docutils literal notranslate"><span class="pre">house</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>teleport box = house
     very large box is leaving Limbo, heading for house.
@@ -343,7 +258,7 @@ You can&#39;t get that.
 <p>You can <code class="docutils literal notranslate"><span class="pre">destroy</span></code> many objects in one go by providing a comma-separated list of objects (or a range of <code class="docutils literal notranslate"><span class="pre">#dbrefs</span></code>, if they are not in the same location) to the command.</p>
 </section>
 <section id="adding-a-help-entry">
-<h2><span class="section-number">1.9. </span>Adding a Help Entry<a class="headerlink" href="#adding-a-help-entry" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.9. </span>Adding a Help Entry<a class="headerlink" href="#adding-a-help-entry" title="Link to this heading">¶</a></h2>
 <p>Command-related <code class="docutils literal notranslate"><span class="pre">help</span></code> entries are something that you modify in Python code — we’ll cover that when we explain how to add Commands — but you may also add non-command-related help entries. For example, to explain something about the history of your game world:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sethelp History = At the dawn of time ...
 </pre></div>
@@ -351,18 +266,115 @@ You can&#39;t get that.
 <p>You will now find your new <code class="docutils literal notranslate"><span class="pre">History</span></code> entry in the <code class="docutils literal notranslate"><span class="pre">help</span></code> list, and can read your help-text with <code class="docutils literal notranslate"><span class="pre">help</span> <span class="pre">History</span></code>.</p>
 </section>
 <section id="adding-a-world">
-<h2><span class="section-number">1.10. </span>Adding a World<a class="headerlink" href="#adding-a-world" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.10. </span>Adding a World<a class="headerlink" href="#adding-a-world" title="Link to this heading">¶</a></h2>
 <p>After this brief introduction to building and using in-game commands, you may be ready to see a more fleshed-out example. Fortunately, Evennia comes with an tutorial world for you to explore — which we will try in the next lesson.</p>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. Using Commands and Building Stuff</a><ul>
+<li><a class="reference internal" href="#getting-help">1.1. Getting Help</a></li>
+<li><a class="reference internal" href="#looking-around">1.2. Looking Around</a></li>
+<li><a class="reference internal" href="#stepping-down-from-godhood">1.3. Stepping Down from Godhood</a></li>
+<li><a class="reference internal" href="#creating-an-object">1.4. Creating an Object</a></li>
+<li><a class="reference internal" href="#get-a-personality">1.5. Get a Personality</a></li>
+<li><a class="reference internal" href="#pushing-your-buttons">1.6. Pushing Your Buttons</a></li>
+<li><a class="reference internal" href="#making-yourself-a-house">1.7. Making Yourself a House</a></li>
+<li><a class="reference internal" href="#reshuffling-the-world">1.8. Reshuffling the World</a></li>
+<li><a class="reference internal" href="#adding-a-help-entry">1.9. Adding a Help Entry</a></li>
+<li><a class="reference internal" href="#adding-a-world">1.10. Adding a World</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Part1-Overview.html"
+                          title="previous chapter">Part 1: What We Have</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Tutorial-World.html"
+                          title="next chapter"><span class="section-number">2. </span>The Tutorial World</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Building-Quickstart.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -377,19 +389,16 @@ You can&#39;t get that.
         <li class="right" >
           <a href="Beginner-Tutorial-Part1-Overview.html" title="Part 1: What We Have"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part1-Overview.html" >Part 1: What We Have</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Using Commands and Building Stuff</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

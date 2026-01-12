@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.contrib.full_systems.evscaperoom.menu &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.contrib.full_systems.evscaperoom.objects" href="evennia.contrib.full_systems.evscaperoom.objects.html" />
     <link rel="prev" title="evennia.contrib.full_systems.evscaperoom.commands" href="evennia.contrib.full_systems.evscaperoom.commands.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.contrib.full_systems.evscaperoom.commands.html" title="evennia.contrib.full_systems.evscaperoom.commands"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -51,29 +45,175 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-evennia.contrib.full_systems.evscaperoom.menu">
+<span id="evennia-contrib-full-systems-evscaperoom-menu"></span><h1>evennia.contrib.full_systems.evscaperoom.menu<a class="headerlink" href="#module-evennia.contrib.full_systems.evscaperoom.menu" title="Link to this heading">¶</a></h1>
+<p>Start menu</p>
+<p>This is started from the <strong>evscaperoom</strong> command.</p>
+<p>Here player user can set their own description as well as select to create a
+new room (to start from scratch) or join an existing room (with other players).</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.node_set_desc">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">node_set_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_string</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_set_desc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_set_desc" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.node_create_room">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">node_create_room</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_string</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_create_room"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_create_room" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.node_join_room">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">node_join_room</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_string</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_join_room"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_join_room" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.node_quit">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">node_quit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_string</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_quit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_quit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">EvscaperoomMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menudata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'start'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_mergetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_look</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'look'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#EvscaperoomMenu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.utils.evmenu.html#evennia.utils.evmenu.EvMenu" title="evennia.utils.evmenu.EvMenu"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvMenu</span></code></a></p>
+<p>Custom menu with a different formatting of options.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.node_border_char">
+<span class="sig-name descname"><span class="pre">node_border_char</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'~'</span></em><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.node_border_char" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.nodetext_formatter">
+<span class="sig-name descname"><span class="pre">nodetext_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#EvscaperoomMenu.nodetext_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.nodetext_formatter" title="Link to this definition">¶</a></dt>
+<dd><p>Format the node text itself.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nodetext</strong> (<em>str</em>) – The full node text (the text describing the node).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>nodetext (str)</em> – The formatted node text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.options_formatter">
+<span class="sig-name descname"><span class="pre">options_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optionlist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#EvscaperoomMenu.options_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.options_formatter" title="Link to this definition">¶</a></dt>
+<dd><p>Formats the option block.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>optionlist</strong> (<em>list</em>) – List of (key, description) tuples for every
+option related to this node.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>options (str)</em> – The formatted option display.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.run_evscaperoom_menu">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">run_evscaperoom_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#run_evscaperoom_menu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.run_evscaperoom_menu" title="Link to this definition">¶</a></dt>
+<dd><p>Run room selection menu</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.node_options">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">node_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_string</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_options"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_options" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">OptionsMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menudata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'start'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_mergetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_look</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'look'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#OptionsMenu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.utils.evmenu.html#evennia.utils.evmenu.EvMenu" title="evennia.utils.evmenu.EvMenu"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvMenu</span></code></a></p>
+<p>Custom display of Option menu</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu.node_formatter">
+<span class="sig-name descname"><span class="pre">node_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetext</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optionstext</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#OptionsMenu.node_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu.node_formatter" title="Link to this definition">¶</a></dt>
+<dd><p>Formats the entirety of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodetext</strong> (<em>str</em>) – The node text as returned by <strong>self.nodetext_formatter</strong>.</p></li>
+<li><p><strong>optionstext</strong> (<em>str</em>) – The options display as returned by <strong>self.options_formatter</strong>.</p></li>
+<li><p><strong>caller</strong> (<em>Object</em><em>, </em><em>Account</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – The caller of the node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>node (str)</em> – The formatted node to display.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.full_systems.evscaperoom.menu.run_option_menu">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.full_systems.evscaperoom.menu.</span></span><span class="sig-name descname"><span class="pre">run_option_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#run_option_menu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.run_option_menu" title="Link to this definition">¶</a></dt>
+<dd><p>Run option menu in-game</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
             </a></p>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.contrib.full_systems.evscaperoom.commands.html"
-                        title="previous chapter">evennia.contrib.full_systems.evscaperoom.commands</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.contrib.full_systems.evscaperoom.objects.html"
-                        title="next chapter">evennia.contrib.full_systems.evscaperoom.objects</a></p>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.contrib.full_systems.evscaperoom.menu</a><ul>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.node_set_desc"><code class="docutils literal notranslate"><span class="pre">node_set_desc()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.node_create_room"><code class="docutils literal notranslate"><span class="pre">node_create_room()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.node_join_room"><code class="docutils literal notranslate"><span class="pre">node_join_room()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.node_quit"><code class="docutils literal notranslate"><span class="pre">node_quit()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu"><code class="docutils literal notranslate"><span class="pre">EvscaperoomMenu</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.node_border_char"><code class="docutils literal notranslate"><span class="pre">EvscaperoomMenu.node_border_char</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.nodetext_formatter"><code class="docutils literal notranslate"><span class="pre">EvscaperoomMenu.nodetext_formatter()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.options_formatter"><code class="docutils literal notranslate"><span class="pre">EvscaperoomMenu.options_formatter()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.run_evscaperoom_menu"><code class="docutils literal notranslate"><span class="pre">run_evscaperoom_menu()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.node_options"><code class="docutils literal notranslate"><span class="pre">node_options()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu"><code class="docutils literal notranslate"><span class="pre">OptionsMenu</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu.node_formatter"><code class="docutils literal notranslate"><span class="pre">OptionsMenu.node_formatter()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.full_systems.evscaperoom.menu.run_option_menu"><code class="docutils literal notranslate"><span class="pre">run_option_menu()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.contrib.full_systems.evscaperoom.commands.html"
+                          title="previous chapter">evennia.contrib.full_systems.evscaperoom.commands</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.contrib.full_systems.evscaperoom.objects.html"
+                          title="next chapter">evennia.contrib.full_systems.evscaperoom.objects</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <!--h3>This Page</h3-->
     <ul class="this-page-menu">
@@ -95,146 +235,42 @@
 <h3>Doc Versions</h3>
 <ul>
   
-    <li><a href="evennia.contrib.full_systems.evscaperoom.menu.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
   
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
   
-
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
 </ul>
 
         </div>
       </div>
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="module-evennia.contrib.full_systems.evscaperoom.menu">
-<span id="evennia-contrib-full-systems-evscaperoom-menu"></span><h1>evennia.contrib.full_systems.evscaperoom.menu<a class="headerlink" href="#module-evennia.contrib.full_systems.evscaperoom.menu" title="Permalink to this headline">¶</a></h1>
-<p>Start menu</p>
-<p>This is started from the <strong>evscaperoom</strong> command.</p>
-<p>Here player user can set their own description as well as select to create a
-new room (to start from scratch) or join an existing room (with other players).</p>
-<dl class="py function">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.node_set_desc">
-<code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">node_set_desc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">raw_string</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_set_desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_set_desc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.node_create_room">
-<code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">node_create_room</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">raw_string</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_create_room"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_create_room" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.node_join_room">
-<code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">node_join_room</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">raw_string</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_join_room"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_join_room" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.node_quit">
-<code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">node_quit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">raw_string</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_quit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_quit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">EvscaperoomMenu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">menudata</span></em>, <em class="sig-param"><span class="n">startnode</span><span class="o">=</span><span class="default_value">'start'</span></em>, <em class="sig-param"><span class="n">cmdset_mergetype</span><span class="o">=</span><span class="default_value">'Replace'</span></em>, <em class="sig-param"><span class="n">cmdset_priority</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">auto_quit</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_look</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_help</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cmd_on_exit</span><span class="o">=</span><span class="default_value">'look'</span></em>, <em class="sig-param"><span class="n">persistent</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">startnode_input</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#EvscaperoomMenu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.utils.evmenu.html#evennia.utils.evmenu.EvMenu" title="evennia.utils.evmenu.EvMenu"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.utils.evmenu.EvMenu</span></code></a></p>
-<p>Custom menu with a different formatting of options.</p>
-<dl class="py attribute">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.node_border_char">
-<code class="sig-name descname">node_border_char</code><em class="property"> = '~'</em><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.node_border_char" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.nodetext_formatter">
-<code class="sig-name descname">nodetext_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#EvscaperoomMenu.nodetext_formatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.nodetext_formatter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Format the node text itself.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>nodetext</strong> (<em>str</em>) – The full node text (the text describing the node).</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>nodetext (str)</em> – The formatted node text.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.options_formatter">
-<code class="sig-name descname">options_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">optionlist</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#EvscaperoomMenu.options_formatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.EvscaperoomMenu.options_formatter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Formats the option block.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>optionlist</strong> (<em>list</em>) – List of (key, description) tuples for every
-option related to this node.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>options (str)</em> – The formatted option display.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.run_evscaperoom_menu">
-<code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">run_evscaperoom_menu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#run_evscaperoom_menu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.run_evscaperoom_menu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run room selection menu</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.node_options">
-<code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">node_options</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">raw_string</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#node_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.node_options" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">OptionsMenu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">menudata</span></em>, <em class="sig-param"><span class="n">startnode</span><span class="o">=</span><span class="default_value">'start'</span></em>, <em class="sig-param"><span class="n">cmdset_mergetype</span><span class="o">=</span><span class="default_value">'Replace'</span></em>, <em class="sig-param"><span class="n">cmdset_priority</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">auto_quit</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_look</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_help</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cmd_on_exit</span><span class="o">=</span><span class="default_value">'look'</span></em>, <em class="sig-param"><span class="n">persistent</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">startnode_input</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#OptionsMenu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.utils.evmenu.html#evennia.utils.evmenu.EvMenu" title="evennia.utils.evmenu.EvMenu"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.utils.evmenu.EvMenu</span></code></a></p>
-<p>Custom display of Option menu</p>
-<dl class="py method">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu.node_formatter">
-<code class="sig-name descname">node_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodetext</span></em>, <em class="sig-param"><span class="n">optionstext</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#OptionsMenu.node_formatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.OptionsMenu.node_formatter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Formats the entirety of the node.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>nodetext</strong> (<em>str</em>) – The node text as returned by <strong>self.nodetext_formatter</strong>.</p></li>
-<li><p><strong>optionstext</strong> (<em>str</em>) – The options display as returned by <strong>self.options_formatter</strong>.</p></li>
-<li><p><strong>caller</strong> (<em>Object</em><em>, </em><em>Account</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – The caller of the node.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>node (str)</em> – The formatted node to display.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt id="evennia.contrib.full_systems.evscaperoom.menu.run_option_menu">
-<code class="sig-prename descclassname">evennia.contrib.full_systems.evscaperoom.menu.</code><code class="sig-name descname">run_option_menu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">session</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/full_systems/evscaperoom/menu.html#run_option_menu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.full_systems.evscaperoom.menu.run_option_menu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run option menu in-game</p>
-</dd></dl>
-
-</section>
-
-
-          </div>
-        </div>
-      </div>
-
+      <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -249,7 +285,7 @@ option related to this node.</p>
         <li class="right" >
           <a href="evennia.contrib.full_systems.evscaperoom.commands.html" title="evennia.contrib.full_systems.evscaperoom.commands"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -259,12 +295,9 @@ option related to this node.</p>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.full_systems.evscaperoom.menu</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

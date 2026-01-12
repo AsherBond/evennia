@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.game_systems.barter.barter &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.game_systems.barter.barter</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="barter.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -195,12 +140,16 @@
 <span class="n">TRADE_TIMEOUT</span> <span class="o">=</span> <span class="mi">60</span>  <span class="c1"># timeout for B to accept trade</span>
 
 
-<div class="viewcode-block" id="TradeTimeout"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TradeTimeout</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
+<div class="viewcode-block" id="TradeTimeout">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TradeTimeout</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This times out the trade request, in case player B did not reply in time.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TradeTimeout.at_script_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout.at_script_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TradeTimeout.at_script_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout.at_script_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when script is first created</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -211,7 +160,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">repeats</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">persistent</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TradeTimeout.at_repeat"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout.at_repeat">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeTimeout.at_repeat">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout.at_repeat">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        called once</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -219,20 +171,29 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">tradeevent</span><span class="o">.</span><span class="n">finish</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Trade request timed out.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TradeTimeout.is_valid"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout.is_valid">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeTimeout.is_valid">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeTimeout.is_valid">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Only valid if the trade has not yet started</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">tradeevent</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">tradeevent</span><span class="o">.</span><span class="n">trade_started</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">tradeevent</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">tradeevent</span><span class="o">.</span><span class="n">trade_started</span></div>
+</div>
 
 
-<div class="viewcode-block" id="TradeHandler"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TradeHandler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TradeHandler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Objects of this class handles the ongoing trade, notably storing the current</span>
 <span class="sd">    offers from each side and wether both have accepted or not.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="TradeHandler.__init__"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">part_a</span><span class="p">,</span> <span class="n">part_b</span><span class="p">):</span>
+<div class="viewcode-block" id="TradeHandler.__init__">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">part_a</span><span class="p">,</span> <span class="n">part_b</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes the trade. This is called when part A tries to</span>
 <span class="sd">        initiate a trade with part B. The trade will not start until</span>
@@ -261,7 +222,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">part_a_accepted</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">part_b_accepted</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TradeHandler.msg_other"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.msg_other">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">msg_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.msg_other">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.msg_other">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">msg_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Relay a message to the *other* party without needing to know</span>
 <span class="sd">        which party that is. This allows the calling command to not</span>
@@ -280,7 +244,10 @@
             <span class="c1"># no match, relay to oneself</span>
             <span class="n">sender</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="k">if</span> <span class="n">sender</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">part_a</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TradeHandler.get_other"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.get_other">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.get_other">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.get_other">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the other party of the trade</span>
 
@@ -297,7 +264,10 @@
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">part_a</span>
         <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="TradeHandler.join"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.join">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">part_b</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.join">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.join">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">part_b</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is used once B decides to join the trade</span>
 
@@ -312,7 +282,10 @@
             <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TradeHandler.unjoin"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.unjoin">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">unjoin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">part_b</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.unjoin">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.unjoin">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">unjoin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">part_b</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is used if B decides not to join the trade.</span>
 
@@ -325,7 +298,10 @@
             <span class="k">return</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TradeHandler.offer"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.offer">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">offer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.offer">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.offer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">offer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Change the current standing offer. We leave it up to the</span>
 <span class="sd">        command to do the actual checks that the offer consists</span>
@@ -347,7 +323,10 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span></div>
 
-<div class="viewcode-block" id="TradeHandler.list"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.list">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.list">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.list">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        List current offers.</span>
 
@@ -357,7 +336,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">part_a_offers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">part_b_offers</span></div>
 
-<div class="viewcode-block" id="TradeHandler.search"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.search">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offername</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.search">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.search">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offername</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Search current offers.</span>
 
@@ -385,7 +367,10 @@
                     <span class="k">return</span> <span class="n">offer</span>
         <span class="k">return</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="TradeHandler.accept"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.accept">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.accept">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.accept">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Accept the current offer.</span>
 
@@ -412,7 +397,10 @@
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>  <span class="c1"># try to close the deal</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TradeHandler.decline"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.decline">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">decline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.decline">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.decline">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">party</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Decline the offer (or change one&#39;s mind).</span>
 
@@ -444,7 +432,10 @@
                 <span class="k">raise</span> <span class="ne">ValueError</span>
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TradeHandler.finish"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.finish">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TradeHandler.finish">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.TradeHandler.finish">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Conclude trade - move all offers and clean up</span>
 
@@ -476,20 +467,26 @@
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">part_b</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">tradehandler</span><span class="p">:</span>
                 <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">part_b</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">tradehandler</span>
             <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">return</span> <span class="kc">False</span></div></div>
+        <span class="k">return</span> <span class="kc">False</span></div>
+</div>
+
 
 
 <span class="c1"># trading commands (will go into CmdsetTrade, initialized by the</span>
 <span class="c1"># CmdTrade command further down).</span>
 
 
-<div class="viewcode-block" id="CmdTradeBase"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeBase">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdTradeBase</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTradeBase">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeBase">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdTradeBase</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base command for Trade commands to inherit from. Implements the</span>
 <span class="sd">    custom parsing.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="CmdTradeBase.parse"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeBase.parse">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTradeBase.parse">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeBase.parse">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parse the relevant parts and make it easily</span>
 <span class="sd">        available to the command</span>
@@ -512,13 +509,17 @@
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">has_account</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">=</span> <span class="s1">&#39;|c</span><span class="si">%s</span><span class="s1">|n says, &quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">key</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">emote</span> <span class="o">+</span> <span class="s1">&#39;&quot;</span><span class="se">\n</span><span class="s1">  [</span><span class="si">%s</span><span class="s1">]&#39;</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> says, &quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">key</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">emote</span> <span class="o">+</span> <span class="s1">&#39;&quot;</span><span class="se">\n</span><span class="s1">  [</span><span class="si">%s</span><span class="s1">]&#39;</span></div></div>
+                <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> says, &quot;&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">key</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">emote</span> <span class="o">+</span> <span class="s1">&#39;&quot;</span><span class="se">\n</span><span class="s1">  [</span><span class="si">%s</span><span class="s1">]&#39;</span></div>
+</div>
+
 
 
 <span class="c1"># trade help</span>
 
 
-<div class="viewcode-block" id="CmdTradeHelp"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeHelp">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdTradeHelp</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTradeHelp">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeHelp">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdTradeHelp</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    help command for the trade system.</span>
 
@@ -532,7 +533,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Trade&quot;</span>
 
-<div class="viewcode-block" id="CmdTradeHelp.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeHelp.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTradeHelp.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTradeHelp.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Show the help&quot;&quot;&quot;</span>
         <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">        Trading commands</span>
@@ -559,13 +562,17 @@
 <span class="s2">        You can also use |wemote|n, |wsay|n etc to discuss</span>
 <span class="s2">        without making a decision or offer.</span>
 <span class="s2">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># offer</span>
 
 
-<div class="viewcode-block" id="CmdOffer"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdOffer">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdOffer</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdOffer">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdOffer">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdOffer</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    offer one or more items in trade.</span>
 
@@ -580,7 +587,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Trading&quot;</span>
 
-<div class="viewcode-block" id="CmdOffer.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdOffer.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdOffer.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdOffer.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;implement the offer&quot;&quot;&quot;</span>
 
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
@@ -611,13 +620,17 @@
             <span class="n">objnames</span> <span class="o">=</span> <span class="s2">&quot;|w</span><span class="si">%s</span><span class="s2">|n&quot;</span> <span class="o">%</span> <span class="n">offerobjs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">key</span>
 
         <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">str_caller</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;You offer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">objnames</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">msg_other</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;They offer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">objnames</span><span class="p">))</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg_other</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;They offer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">objnames</span><span class="p">))</span></div>
+</div>
+
 
 
 <span class="c1"># accept</span>
 
 
-<div class="viewcode-block" id="CmdAccept"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdAccept">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdAccept</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdAccept">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdAccept">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdAccept</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    accept the standing offer</span>
 
@@ -636,7 +649,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Trading&quot;</span>
 
-<div class="viewcode-block" id="CmdAccept.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdAccept.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdAccept.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdAccept.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;accept the offer&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">trade_started</span><span class="p">:</span>
@@ -663,13 +678,17 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">msg_other</span><span class="p">(</span>
                 <span class="n">caller</span><span class="p">,</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">%</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> |Gaccepts|n the offer. You must now also accept.&quot;</span> <span class="o">%</span> <span class="n">caller</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
-            <span class="p">)</span></div></div>
+            <span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># decline</span>
 
 
-<div class="viewcode-block" id="CmdDecline"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdDecline">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdDecline</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdDecline">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdDecline">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdDecline</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    decline the standing offer</span>
 
@@ -686,7 +705,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Trading&quot;</span>
 
-<div class="viewcode-block" id="CmdDecline.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdDecline.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdDecline.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdDecline.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;decline the offer&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">trade_started</span><span class="p">:</span>
@@ -708,7 +729,9 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># no acceptance to change</span>
             <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">str_caller</span> <span class="o">%</span> <span class="s2">&quot;You |Rdecline|n the current offer.&quot;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">msg_other</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">%</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> declines the current offer.&quot;</span> <span class="o">%</span> <span class="n">caller</span><span class="o">.</span><span class="n">key</span><span class="p">)</span></div></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">msg_other</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">%</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> declines the current offer.&quot;</span> <span class="o">%</span> <span class="n">caller</span><span class="o">.</span><span class="n">key</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># evaluate</span>
@@ -719,7 +742,9 @@
 <span class="c1"># here.</span>
 
 
-<div class="viewcode-block" id="CmdEvaluate"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdEvaluate">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdEvaluate</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdEvaluate">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdEvaluate">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdEvaluate</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    evaluate objects on offer</span>
 
@@ -735,7 +760,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Trading&quot;</span>
 
-<div class="viewcode-block" id="CmdEvaluate.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdEvaluate.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdEvaluate.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdEvaluate.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;evaluate an object&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
@@ -754,13 +781,17 @@
             <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;No offer matching &#39;</span><span class="si">%s</span><span class="s2">&#39; was found.&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="c1"># show the description</span>
-        <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">offer</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">desc</span><span class="p">)</span></div></div>
+        <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">offer</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">desc</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># status</span>
 
 
-<div class="viewcode-block" id="CmdStatus"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdStatus">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdStatus</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdStatus">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdStatus">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdStatus</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    show a list of the current deal</span>
 
@@ -780,7 +811,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Trading&quot;</span>
 
-<div class="viewcode-block" id="CmdStatus.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdStatus.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdStatus.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdStatus.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Show the current deal&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="n">part_a_offers</span><span class="p">,</span> <span class="n">part_b_offers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tradehandler</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
@@ -813,13 +846,17 @@
             <span class="n">accept_b</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">string</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Use &#39;offer&#39;, &#39;eval&#39; and &#39;accept&#39;/&#39;decline&#39; to trade. See also &#39;trade help&#39;.&quot;</span>
-        <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div></div>
+        <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">string</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># finish</span>
 
 
-<div class="viewcode-block" id="CmdFinish"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdFinish">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdFinish</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdFinish">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdFinish">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdFinish</span><span class="p">(</span><span class="n">CmdTradeBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    end the trade prematurely</span>
 
@@ -836,20 +873,26 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Trading&quot;</span>
 
-<div class="viewcode-block" id="CmdFinish.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdFinish.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdFinish.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdFinish.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;end trade&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tradehandler</span><span class="o">.</span><span class="n">finish</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">str_caller</span> <span class="o">%</span> <span class="s2">&quot;You |raborted|n trade. No deal was made.&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">msg_other</span><span class="p">(</span>
             <span class="n">caller</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">str_other</span> <span class="o">%</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> |raborted|n trade. No deal was made.&quot;</span> <span class="o">%</span> <span class="n">caller</span><span class="o">.</span><span class="n">key</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># custom Trading cmdset</span>
 
 
-<div class="viewcode-block" id="CmdsetTrade"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdsetTrade">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdsetTrade</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdsetTrade">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdsetTrade">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdsetTrade</span><span class="p">(</span><span class="n">CmdSet</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This cmdset is added when trade is initated. It is handled by the</span>
 <span class="sd">    trade event handler.</span>
@@ -857,7 +900,9 @@
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;cmdset_trade&quot;</span>
 
-<div class="viewcode-block" id="CmdsetTrade.at_cmdset_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdsetTrade.at_cmdset_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdsetTrade.at_cmdset_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdsetTrade.at_cmdset_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Called when cmdset is created&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdTradeHelp</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdOffer</span><span class="p">())</span>
@@ -865,14 +910,18 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdDecline</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdEvaluate</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdStatus</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdFinish</span><span class="p">())</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdFinish</span><span class="p">())</span></div>
+</div>
+
 
 
 <span class="c1"># access command - once both have given this, this will create the</span>
 <span class="c1"># trading cmdset to start trade.</span>
 
 
-<div class="viewcode-block" id="CmdTrade"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTrade">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdTrade</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTrade">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTrade">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdTrade</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Initiate trade with another party</span>
 
@@ -894,7 +943,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:all()&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;General&quot;</span>
 
-<div class="viewcode-block" id="CmdTrade.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTrade.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdTrade.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.barter.barter.html#evennia.contrib.game_systems.barter.barter.CmdTrade.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Initiate trade&quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
@@ -990,15 +1041,80 @@
                 <span class="n">part_a</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">selfemote</span> <span class="o">+</span> <span class="n">str_noinit_b</span> <span class="o">%</span> <span class="n">part_b</span><span class="o">.</span><span class="n">key</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">part_a</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;No trade proposal to decline.&quot;</span><span class="p">)</span>
-            <span class="k">return</span></div></div>
+            <span class="k">return</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1007,18 +1123,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.game_systems.barter.barter</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.contrib.rpg.traits.traits &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.contrib.tutorials" href="evennia.contrib.tutorials.html" />
     <link rel="prev" title="evennia.contrib.rpg.traits.tests" href="evennia.contrib.rpg.traits.tests.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.contrib.rpg.traits.tests.html" title="evennia.contrib.rpg.traits.tests"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -51,100 +45,12 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">evennia.contrib.rpg.traits.traits</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a><ul>
-<li><a class="reference internal" href="#traits-with-traithandler">Traits with TraitHandler</a></li>
-<li><a class="reference internal" href="#traitproperties">TraitProperties</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-traits">Using traits</a></li>
-<li><a class="reference internal" href="#trait-types">Trait types</a></li>
-<li><a class="reference internal" href="#static-trait">Static trait</a><ul>
-<li><a class="reference internal" href="#counter">Counter</a><ul>
-<li><a class="reference internal" href="#descs">.descs</a></li>
-<li><a class="reference internal" href="#rate">.rate</a></li>
-<li><a class="reference internal" href="#percent">.percent()</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gauge">Gauge</a></li>
-<li><a class="reference internal" href="#trait">Trait</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#expanding-with-your-own-traits">Expanding with your own Traits</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.contrib.rpg.traits.tests.html"
-                        title="previous chapter">evennia.contrib.rpg.traits.tests</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.contrib.tutorials.html"
-                        title="next chapter">evennia.contrib.tutorials</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/api/evennia.contrib.rpg.traits.traits.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="evennia.contrib.rpg.traits.traits.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section id="module-evennia.contrib.rpg.traits.traits">
-<span id="evennia-contrib-rpg-traits-traits"></span><h1>evennia.contrib.rpg.traits.traits<a class="headerlink" href="#module-evennia.contrib.rpg.traits.traits" title="Permalink to this headline">¶</a></h1>
+<span id="evennia-contrib-rpg-traits-traits"></span><h1>evennia.contrib.rpg.traits.traits<a class="headerlink" href="#module-evennia.contrib.rpg.traits.traits" title="Link to this heading">¶</a></h1>
 <p>Traits</p>
 <p>Whitenoise 2014, Ainneve contributors,
 Griatch 2020</p>
@@ -154,7 +60,7 @@ be used to represent everything from attributes (str, agi etc) to skills
 <p>Traits use Evennia Attributes under the hood, making them persistent (they survive
 a server reload/reboot).</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
 <p>Traits are always added to a typeclass, such as the Character class.</p>
 <p>There are two ways to set up Traits on a typeclass. The first sets up the <strong>TraitHandler</strong>
 as a property <strong>.traits</strong> on your class and you then access traits as e.g. <strong>.traits.strength</strong>.
@@ -162,7 +68,7 @@ The other alternative uses a <strong>TraitProperty</strong>, which makes the tra
 as e.g. <strong>.strength</strong>. This solution also uses the <strong>TraitHandler</strong>, but you don’t need to
 define it explicitly. You can combine both styles if you like.</p>
 <section id="traits-with-traithandler">
-<h3>Traits with TraitHandler<a class="headerlink" href="#traits-with-traithandler" title="Permalink to this headline">¶</a></h3>
+<h3>Traits with TraitHandler<a class="headerlink" href="#traits-with-traithandler" title="Link to this heading">¶</a></h3>
 <p>Here’s an example for adding the TraitHandler to the Character class:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mygame/typeclasses/objects.py</span>
 
@@ -194,7 +100,7 @@ print the trait etc. The <strong>trait_type</strong> is important, this specifie
 of trait this is (see below).</p>
 </section>
 <section id="traitproperties">
-<h3>TraitProperties<a class="headerlink" href="#traitproperties" title="Permalink to this headline">¶</a></h3>
+<h3>TraitProperties<a class="headerlink" href="#traitproperties" title="Link to this heading">¶</a></h3>
 <p>Using <strong>TraitProperties</strong> makes the trait available directly on the class, much like Django model
 fields. The drawback is that you must make sure that the name of your Traits don’t collide with any
 other properties/methods on your class.</p>
@@ -223,7 +129,7 @@ other properties/methods on your class.</p>
 </section>
 </section>
 <section id="using-traits">
-<h2>Using traits<a class="headerlink" href="#using-traits" title="Permalink to this headline">¶</a></h2>
+<h2>Using traits<a class="headerlink" href="#using-traits" title="Link to this heading">¶</a></h2>
 <p>A trait is added to the traithandler (if you use <strong>TraitProperty</strong> the handler is just created under
 the hood) after which one can access it as a property on the handler (similarly to how you can do
 .db.attrname for Attributes in Evennia).</p>
@@ -270,7 +176,7 @@ each other depends on the trait type.</p>
 </div>
 </section>
 <section id="trait-types">
-<h2>Trait types<a class="headerlink" href="#trait-types" title="Permalink to this headline">¶</a></h2>
+<h2>Trait types<a class="headerlink" href="#trait-types" title="Link to this heading">¶</a></h2>
 <p>All default traits have a read-only <strong>.value</strong> property that shows the relevant or
 ‘current’ value of the trait. Exactly what this means depends on the type of trait.</p>
 <p>Traits can also be combined to do arithmetic with their .value, if both have a
@@ -294,7 +200,7 @@ all sorts of rule-resolution.</p>
 </div>
 </section>
 <section id="static-trait">
-<h2>Static trait<a class="headerlink" href="#static-trait" title="Permalink to this headline">¶</a></h2>
+<h2>Static trait<a class="headerlink" href="#static-trait" title="Link to this heading">¶</a></h2>
 <p><strong>value = (base + mod) * mult</strong></p>
 <p>The static trait has a <strong>base</strong> value and an optional <strong>mod</strong>-ifier and ‘mult’-iplier.
 The modifier defaults to 0, and the multiplier to 1.0, for no change in value.
@@ -316,7 +222,7 @@ somethingthat varies slowly or not at all, and which may be modified in-place.</
 </pre></div>
 </div>
 <section id="counter">
-<h3>Counter<a class="headerlink" href="#counter" title="Permalink to this headline">¶</a></h3>
+<h3>Counter<a class="headerlink" href="#counter" title="Link to this heading">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="o">/</span><span class="n">unset</span>     <span class="n">base</span>    <span class="n">base</span><span class="o">+</span><span class="n">mod</span>                       <span class="nb">max</span><span class="o">/</span><span class="n">unset</span>
 <span class="o">|--------------|--------|---------</span><span class="n">X</span><span class="o">--------</span><span class="n">X</span><span class="o">------------|</span>
                               <span class="n">current</span>    <span class="n">value</span>
@@ -355,7 +261,7 @@ for a Counter Trait would be to track skill values.</p>
 </div>
 <p>Counters have some extra properties:</p>
 <section id="descs">
-<h4>.descs<a class="headerlink" href="#descs" title="Permalink to this headline">¶</a></h4>
+<h4>.descs<a class="headerlink" href="#descs" title="Link to this heading">¶</a></h4>
 <p>The <strong>descs</strong> property is a dict {upper_bound:text_description}. This allows for easily
 storing a more human-friendly description of the current value in the
 interval. Here is an example for skill values between 0 and 10:</p>
@@ -383,7 +289,7 @@ By calling <strong>.desc()</strong> on the Counter, you will get the text matchi
 </div>
 </section>
 <section id="rate">
-<h4>.rate<a class="headerlink" href="#rate" title="Permalink to this headline">¶</a></h4>
+<h4>.rate<a class="headerlink" href="#rate" title="Link to this heading">¶</a></h4>
 <p>The <strong>rate</strong> property defaults to 0. If set to a value different from 0, it
 allows the trait to change value dynamically. This could be used for example
 for an attribute that was temporarily lowered but will gradually (or abruptly)
@@ -425,7 +331,7 @@ If you want to see the exact <strong>current</strong> value, set <strong>base</s
 will then need to use <strong>round()</strong> yourself on the result if you want integers.</p>
 </section>
 <section id="percent">
-<h4>.percent()<a class="headerlink" href="#percent" title="Permalink to this headline">¶</a></h4>
+<h4>.percent()<a class="headerlink" href="#percent" title="Link to this heading">¶</a></h4>
 <p>If both min and max are defined, the <strong>.percent()</strong> method of the trait will
 return the value as a percentage.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">obj</span><span class="o">.</span><span class="n">traits</span><span class="o">.</span><span class="n">hunting</span><span class="o">.</span><span class="n">percent</span><span class="p">()</span>
@@ -438,7 +344,7 @@ return the value as a percentage.</p>
 </section>
 </section>
 <section id="gauge">
-<h3>Gauge<a class="headerlink" href="#gauge" title="Permalink to this headline">¶</a></h3>
+<h3>Gauge<a class="headerlink" href="#gauge" title="Link to this heading">¶</a></h3>
 <p>This emulates a [fuel-] gauge that empties from a base+mod value.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="o">/</span><span class="mi">0</span>                                            <span class="nb">max</span><span class="o">=</span><span class="n">base</span><span class="o">+</span><span class="n">mod</span>
  <span class="o">|-----------------------</span><span class="n">X</span><span class="o">---------------------------|</span>
@@ -473,7 +379,7 @@ get how filled it is as a percentage etc.</p>
 from poison slowly draining your health, to resting gradually increasing it.</p>
 </section>
 <section id="trait">
-<h3>Trait<a class="headerlink" href="#trait" title="Permalink to this headline">¶</a></h3>
+<h3>Trait<a class="headerlink" href="#trait" title="Link to this heading">¶</a></h3>
 <p>A single value of any type.</p>
 <p>This is the ‘base’ Trait, meant to inherit from if you want to invent
 trait-types from scratch (most of the time you’ll probably inherit from some of
@@ -494,7 +400,7 @@ like a glorified Attribute.</p>
 </section>
 </section>
 <section id="expanding-with-your-own-traits">
-<h2>Expanding with your own Traits<a class="headerlink" href="#expanding-with-your-own-traits" title="Permalink to this headline">¶</a></h2>
+<h2>Expanding with your own Traits<a class="headerlink" href="#expanding-with-your-own-traits" title="Link to this heading">¶</a></h2>
 <p>A Trait is a class inhering from <strong>evennia.contrib.rpg.traits.Trait</strong> (or from one of
 the existing Trait classes).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in a file, say, &#39;mygame/world/traits.py&#39;</span>
@@ -535,28 +441,28 @@ default (0). Above we also added some helper methods.</p>
     <span class="n">rage</span> <span class="o">=</span> <span class="n">TraitProperty</span><span class="p">(</span><span class="s2">&quot;A dark mood&quot;</span><span class="p">,</span> <span class="n">rage</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">trait_type</span><span class="o">=</span><span class="s1">&#39;rage&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 <hr class="docutils" />
 <dl class="py exception">
-<dt id="evennia.contrib.rpg.traits.traits.TraitException">
-<em class="property">exception </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">TraitException</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitException" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">TraitException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitException" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
 <p>Base exception class raised by <strong>Trait</strong> objects.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>msg</strong> (<em>str</em>) – informative error message</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitException.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitException.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitException.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitException.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitException.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitException.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.rpg.traits.traits.MandatoryTraitKey">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">MandatoryTraitKey</code><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#MandatoryTraitKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.MandatoryTraitKey" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.MandatoryTraitKey">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">MandatoryTraitKey</span></span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#MandatoryTraitKey"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.MandatoryTraitKey" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This represents a required key that must be
 supplied when a Trait is initialized. It’s used
@@ -564,8 +470,8 @@ by Trait classes when defining their required keys.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.rpg.traits.traits.TraitHandler">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">TraitHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">db_attribute_key</span><span class="o">=</span><span class="default_value">'traits'</span></em>, <em class="sig-param"><span class="n">db_attribute_category</span><span class="o">=</span><span class="default_value">'traits'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitHandler">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">TraitHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_attribute_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'traits'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_attribute_category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'traits'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Factory class that instantiates Trait objects. Must be assigned as a property
 on the class, usually with <strong>lazy_property</strong>.</p>
@@ -579,11 +485,11 @@ on the class, usually with <strong>lazy_property</strong>.</p>
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitHandler.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">db_attribute_key</span><span class="o">=</span><span class="default_value">'traits'</span></em>, <em class="sig-param"><span class="n">db_attribute_category</span><span class="o">=</span><span class="default_value">'traits'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.__init__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitHandler.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_attribute_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'traits'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_attribute_category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'traits'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize the handler and set up its internal Attribute-based storage.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj</strong> (<em>Object</em>) – Parent Object typeclass for this TraitHandler</p></li>
 <li><p><strong>db_attribute_key</strong> (<em>str</em>) – Name of the DB attribute for trait data storage.</p></li>
@@ -594,24 +500,24 @@ on the class, usually with <strong>lazy_property</strong>.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitHandler.all">
-<code class="sig-name descname">all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.all" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitHandler.all">
+<span class="sig-name descname"><span class="pre">all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.all" title="Link to this definition">¶</a></dt>
 <dd><p>Get all trait keys in this handler.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>list</em> – All Trait keys.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitHandler.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_key</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.get" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitHandler.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.get" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>trait_key</strong> (<em>str</em>) – key from the traits dict containing config data.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(<strong>Trait</strong> or <strong>None</strong>) – named Trait class or None if trait key
 is not found in traits collection.</p>
 </dd>
@@ -619,11 +525,11 @@ is not found in traits collection.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitHandler.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_key</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trait_type</span><span class="o">=</span><span class="default_value">'static'</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">trait_properties</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.add" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitHandler.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trait_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'static'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">trait_properties</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.add" title="Link to this definition">¶</a></dt>
 <dd><p>Create a new Trait and add it to the handler.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>trait_key</strong> (<em>str</em>) – This is the name of the property that will be made
 available on this handler (example ‘hp’).</p></li>
@@ -637,7 +543,7 @@ the new trait. See the <strong>properties</strong> class variable on each
 Trait class to see which are required.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitException" title="evennia.contrib.rpg.traits.traits.TraitException"><strong>TraitException</strong></a> – If specifying invalid values for the given Trait,
 the <strong>trait_type</strong> is not recognized, or an existing trait
 already exists (and <strong>force</strong> is unset).</p>
@@ -646,27 +552,27 @@ already exists (and <strong>force</strong> is unset).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitHandler.remove">
-<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_key</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.remove" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitHandler.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.remove"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.remove" title="Link to this definition">¶</a></dt>
 <dd><p>Remove a Trait from the handler’s parent object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>trait_key</strong> (<em>str</em>) – The name of the trait to remove.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitHandler.clear">
-<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.clear" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitHandler.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitHandler.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitHandler.clear" title="Link to this definition">¶</a></dt>
 <dd><p>Remove all Traits from the handler’s parent object.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.rpg.traits.traits.TraitProperty">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">TraitProperty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trait_type</span><span class="o">=</span><span class="default_value">'static'</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">trait_properties</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitProperty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitProperty" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitProperty">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">TraitProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trait_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'static'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">trait_properties</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitProperty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitProperty" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Optional extra: Allows for applying traits as individual properties directly on the parent class
 instead for properties on the <strong>.traits</strong> handler. So with this you could access data e.g. as
@@ -685,11 +591,11 @@ under the hood.</p>
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.TraitProperty.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trait_type</span><span class="o">=</span><span class="default_value">'static'</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">trait_properties</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitProperty.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitProperty.__init__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.TraitProperty.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trait_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'static'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">trait_properties</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#TraitProperty.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.TraitProperty.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize a TraitField. Mimics TraitHandler.add input except no <strong>trait_key</strong>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the Trait, like “Health”. If
 not given, will use <strong>trait_key</strong> starting with a capital letter.</p></li>
@@ -713,8 +619,8 @@ the same <strong>trait_key</strong> already exists.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.rpg.traits.traits.Trait">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">Trait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_data</span></em>, <em class="sig-param"><span class="n">handler</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">Trait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Represents an object or Character trait. This simple base is just
 storing anything in it’s ‘value’ property, so it’s pretty much just a
@@ -726,29 +632,29 @@ stored.</p>
 </div>
 <p>value</p>
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.trait_type">
-<code class="sig-name descname">trait_type</code><em class="property"> = 'trait'</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.trait_type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.trait_type">
+<span class="sig-name descname"><span class="pre">trait_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'trait'</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.trait_type" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.default_keys">
-<code class="sig-name descname">default_keys</code><em class="property"> = {'value': None}</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.default_keys" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.default_keys">
+<span class="sig-name descname"><span class="pre">default_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'value':</span> <span class="pre">None}</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.default_keys" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.allow_extra_properties">
-<code class="sig-name descname">allow_extra_properties</code><em class="property"> = True</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.allow_extra_properties" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.allow_extra_properties">
+<span class="sig-name descname"><span class="pre">allow_extra_properties</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.allow_extra_properties" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_data</span></em>, <em class="sig-param"><span class="n">handler</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.__init__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>This both initializes and validates the Trait on creation. It must
 raise exception if validation fails. The TraitHandler will call this
 when the trait is furst added, to make sure it validates before
 storing.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>trait_data</strong> (<em>any</em>) – Any pickle-able values to store with this trait.
 This must contain any cls.default_keys that do not have a default
@@ -759,22 +665,22 @@ variable <strong>allow_extra_properties</strong> is set.</p></li>
 This is for referencing other traits.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitException" title="evennia.contrib.rpg.traits.traits.TraitException"><strong>TraitException</strong></a> – If input-validation failed.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.validate_input">
-<em class="property">static </em><code class="sig-name descname">validate_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cls</span></em>, <em class="sig-param"><span class="n">trait_data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait.validate_input"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.validate_input" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.validate_input">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trait_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait.validate_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.validate_input" title="Link to this definition">¶</a></dt>
 <dd><p>Validate input</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>trait_data</strong> (<em>dict</em><em> or </em><em>_SaverDict</em>) – Data to be used for
 initialization of this trait.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p><em>dict</em> –</p>
 <dl class="simple">
 <dt>Validated data, possibly complemented with default</dt><dd><p>values from default_keys.</p>
@@ -782,85 +688,85 @@ initialization of this trait.</p>
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitException" title="evennia.contrib.rpg.traits.traits.TraitException"><strong>TraitException</strong></a> – If finding unset keys without a default.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.name">
-<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.name" title="Link to this definition">¶</a></dt>
 <dd><p>Display name for the trait.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.get_trait">
-<code class="sig-name descname">get_trait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_key</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait.get_trait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.get_trait" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.get_trait">
+<span class="sig-name descname"><span class="pre">get_trait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#Trait.get_trait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.get_trait" title="Link to this definition">¶</a></dt>
 <dd><p>Get another Trait from the handler. Not used by default, but can be used
 for custom traits that are affected by other traits on the same handler.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.key">
-<em class="property">property </em><code class="sig-name descname">key</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.key" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.key">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.key" title="Link to this definition">¶</a></dt>
 <dd><p>Display name for the trait.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.Trait.value">
-<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.value" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.Trait.value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.Trait.value" title="Link to this definition">¶</a></dt>
 <dd><p>Store a value</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.rpg.traits.traits.StaticTrait">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">StaticTrait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_data</span></em>, <em class="sig-param"><span class="n">handler</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#StaticTrait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait" title="evennia.contrib.rpg.traits.traits.Trait"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.rpg.traits.traits.Trait</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.StaticTrait">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">StaticTrait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#StaticTrait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait" title="evennia.contrib.rpg.traits.traits.Trait"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trait</span></code></a></p>
 <p>Static Trait. This is a single value with a modifier,
 multiplier, and no concept of a ‘current’ value or min/max etc.</p>
 <p>value = (base + mod) * mult</p>
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.StaticTrait.trait_type">
-<code class="sig-name descname">trait_type</code><em class="property"> = 'static'</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.trait_type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.StaticTrait.trait_type">
+<span class="sig-name descname"><span class="pre">trait_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'static'</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.trait_type" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.StaticTrait.default_keys">
-<code class="sig-name descname">default_keys</code><em class="property"> = {'base': 0, 'mod': 0, 'mult': 1.0}</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.default_keys" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.StaticTrait.default_keys">
+<span class="sig-name descname"><span class="pre">default_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'base':</span> <span class="pre">0,</span> <span class="pre">'mod':</span> <span class="pre">0,</span> <span class="pre">'mult':</span> <span class="pre">1.0}</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.default_keys" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.StaticTrait.base">
-<em class="property">property </em><code class="sig-name descname">base</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.base" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.StaticTrait.base">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.base" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.StaticTrait.mod">
-<em class="property">property </em><code class="sig-name descname">mod</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.mod" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.StaticTrait.mod">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mod</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.mod" title="Link to this definition">¶</a></dt>
 <dd><p>The trait’s modifier.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.StaticTrait.mult">
-<em class="property">property </em><code class="sig-name descname">mult</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.mult" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.StaticTrait.mult">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mult</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.mult" title="Link to this definition">¶</a></dt>
 <dd><p>The trait’s multiplier.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.StaticTrait.value">
-<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.value" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.StaticTrait.value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.StaticTrait.value" title="Link to this definition">¶</a></dt>
 <dd><p>The value of the Trait.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">CounterTrait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_data</span></em>, <em class="sig-param"><span class="n">handler</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait" title="evennia.contrib.rpg.traits.traits.Trait"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.rpg.traits.traits.Trait</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">CounterTrait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait" title="evennia.contrib.rpg.traits.traits.Trait"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trait</span></code></a></p>
 <p>Counter Trait.</p>
 <p>This includes modifications and min/max limits as well as the notion of a
 current value. The value can also be reset to the base value.</p>
@@ -902,75 +808,75 @@ increase will stop when either reaching a boundary (if set) or
 ratetarget. Setting the rate to 0 (default) stops any change.</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.trait_type">
-<code class="sig-name descname">trait_type</code><em class="property"> = 'counter'</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.trait_type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.trait_type">
+<span class="sig-name descname"><span class="pre">trait_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'counter'</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.trait_type" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.default_keys">
-<code class="sig-name descname">default_keys</code><em class="property"> = {'base': 0, 'descs': None, 'max': None, 'min': None, 'mod': 0, 'mult': 1.0, 'rate': 0, 'ratetarget': None}</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.default_keys" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.default_keys">
+<span class="sig-name descname"><span class="pre">default_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'base':</span> <span class="pre">0,</span> <span class="pre">'descs':</span> <span class="pre">None,</span> <span class="pre">'max':</span> <span class="pre">None,</span> <span class="pre">'min':</span> <span class="pre">None,</span> <span class="pre">'mod':</span> <span class="pre">0,</span> <span class="pre">'mult':</span> <span class="pre">1.0,</span> <span class="pre">'rate':</span> <span class="pre">0,</span> <span class="pre">'ratetarget':</span> <span class="pre">None}</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.default_keys" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.validate_input">
-<em class="property">static </em><code class="sig-name descname">validate_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cls</span></em>, <em class="sig-param"><span class="n">trait_data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.validate_input"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.validate_input" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.validate_input">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trait_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.validate_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.validate_input" title="Link to this definition">¶</a></dt>
 <dd><p>Add extra validation for descs</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.base">
-<em class="property">property </em><code class="sig-name descname">base</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.base" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.base">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.base" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.mod">
-<em class="property">property </em><code class="sig-name descname">mod</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.mod" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.mod">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mod</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.mod" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.mult">
-<em class="property">property </em><code class="sig-name descname">mult</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.mult" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.mult">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mult</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.mult" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.min">
-<em class="property">property </em><code class="sig-name descname">min</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.min" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.min">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.min" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.max">
-<em class="property">property </em><code class="sig-name descname">max</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.max" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.max">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.max" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.current">
-<em class="property">property </em><code class="sig-name descname">current</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.current" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.current">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.current" title="Link to this definition">¶</a></dt>
 <dd><p>The <strong>current</strong> value of the <strong>Trait</strong>. This does not have .mod added and is not .mult-iplied.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.value">
-<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.value" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.value" title="Link to this definition">¶</a></dt>
 <dd><p>The value of the Trait. (current + mod) * mult</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.ratetarget">
-<em class="property">property </em><code class="sig-name descname">ratetarget</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.ratetarget" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.ratetarget">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ratetarget</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.ratetarget" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.percent">
-<code class="sig-name descname">percent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">formatting</span><span class="o">=</span><span class="default_value">'{:3.1f}%'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.percent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.percent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.percent">
+<span class="sig-name descname"><span class="pre">percent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'{:3.1f}%'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.percent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.percent" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current value as a percentage.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>formatting</strong> (<em>str</em><em>, </em><em>optional</em>) – Should contain a
 format-tag which will receive the value. If
 this is set to None, the raw float will be
 returned.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p><em>float or str</em> –</p>
 <dl class="simple">
 <dt>Depending of if a <strong>formatting</strong> string</dt><dd><p>is supplied or not.</p>
@@ -982,14 +888,14 @@ returned.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.reset">
-<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.reset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.reset" title="Link to this definition">¶</a></dt>
 <dd><p>Resets <strong>current</strong> property equal to <strong>base</strong> value.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.CounterTrait.desc">
-<code class="sig-name descname">desc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.CounterTrait.desc">
+<span class="sig-name descname"><span class="pre">desc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#CounterTrait.desc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.CounterTrait.desc" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieve descriptions of the current value, if available.</p>
 <p>This must be a mapping {upper_bound_inclusive: text},
 ordered from small to big. Any value above the highest
@@ -997,7 +903,7 @@ upper bound will be included as being in the highest bound.
 rely on Python3.7+ dicts retaining ordering to let this
 describe the interval.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><p><em>str</em> –</p>
 <dl class="simple">
 <dt>The description describing the <strong>value</strong> value.</dt><dd><p>If not found, returns the empty string.</p>
@@ -1011,9 +917,9 @@ describe the interval.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.rpg.traits.traits.</code><code class="sig-name descname">GaugeTrait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait_data</span></em>, <em class="sig-param"><span class="n">handler</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#GaugeTrait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait" title="evennia.contrib.rpg.traits.traits.CounterTrait"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.rpg.traits.traits.CounterTrait</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.rpg.traits.traits.</span></span><span class="sig-name descname"><span class="pre">GaugeTrait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trait_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#GaugeTrait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait" title="evennia.contrib.rpg.traits.traits.CounterTrait"><code class="xref py py-class docutils literal notranslate"><span class="pre">CounterTrait</span></code></a></p>
 <p>Gauge Trait.</p>
 <p>This emulates a gauge-meter that empties from a (base+mod) * mult value.</p>
 <dl>
@@ -1050,65 +956,65 @@ values between 0 and 100:</p>
 </li>
 </ul>
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.trait_type">
-<code class="sig-name descname">trait_type</code><em class="property"> = 'gauge'</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.trait_type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.trait_type">
+<span class="sig-name descname"><span class="pre">trait_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'gauge'</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.trait_type" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.default_keys">
-<code class="sig-name descname">default_keys</code><em class="property"> = {'base': 0, 'descs': None, 'min': 0, 'mod': 0, 'mult': 1.0, 'rate': 0, 'ratetarget': None}</em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.default_keys" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.default_keys">
+<span class="sig-name descname"><span class="pre">default_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'base':</span> <span class="pre">0,</span> <span class="pre">'descs':</span> <span class="pre">None,</span> <span class="pre">'min':</span> <span class="pre">0,</span> <span class="pre">'mod':</span> <span class="pre">0,</span> <span class="pre">'mult':</span> <span class="pre">1.0,</span> <span class="pre">'rate':</span> <span class="pre">0,</span> <span class="pre">'ratetarget':</span> <span class="pre">None}</span></em><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.default_keys" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.base">
-<em class="property">property </em><code class="sig-name descname">base</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.base" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.base">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.base" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.mod">
-<em class="property">property </em><code class="sig-name descname">mod</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.mod" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.mod">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mod</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.mod" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.mult">
-<em class="property">property </em><code class="sig-name descname">mult</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.mult" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.mult">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mult</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.mult" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.min">
-<em class="property">property </em><code class="sig-name descname">min</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.min" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.min">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.min" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.max">
-<em class="property">property </em><code class="sig-name descname">max</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.max" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.max">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.max" title="Link to this definition">¶</a></dt>
 <dd><p>The max is always (base + mod) * mult.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.current">
-<em class="property">property </em><code class="sig-name descname">current</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.current" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.current">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.current" title="Link to this definition">¶</a></dt>
 <dd><p>The <strong>current</strong> value of the gauge.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.value">
-<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.value" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.value">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.value" title="Link to this definition">¶</a></dt>
 <dd><p>The value of the trait</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.percent">
-<code class="sig-name descname">percent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">formatting</span><span class="o">=</span><span class="default_value">'{:3.1f}%'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#GaugeTrait.percent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.percent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.percent">
+<span class="sig-name descname"><span class="pre">percent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'{:3.1f}%'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#GaugeTrait.percent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.percent" title="Link to this definition">¶</a></dt>
 <dd><p>Return the current value as a percentage.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>formatting</strong> (<em>str</em><em>, </em><em>optional</em>) – Should contain a
 format-tag which will receive the value. If
 this is set to None, the raw float will be
 returned.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><p><em>float or str</em> –</p>
 <dl class="simple">
 <dt>Depending of if a <strong>formatting</strong> string</dt><dd><p>is supplied or not.</p>
@@ -1120,23 +1026,198 @@ returned.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.rpg.traits.traits.GaugeTrait.reset">
-<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#GaugeTrait.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.reset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.rpg.traits.traits.GaugeTrait.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/rpg/traits/traits.html#GaugeTrait.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.reset" title="Link to this definition">¶</a></dt>
 <dd><p>Fills the gauge to its maximum allowed by base + mod</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
-</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.contrib.rpg.traits.traits</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#traits-with-traithandler">Traits with TraitHandler</a></li>
+<li><a class="reference internal" href="#traitproperties">TraitProperties</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-traits">Using traits</a></li>
+<li><a class="reference internal" href="#trait-types">Trait types</a></li>
+<li><a class="reference internal" href="#static-trait">Static trait</a><ul>
+<li><a class="reference internal" href="#counter">Counter</a><ul>
+<li><a class="reference internal" href="#descs">.descs</a></li>
+<li><a class="reference internal" href="#rate">.rate</a></li>
+<li><a class="reference internal" href="#percent">.percent()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gauge">Gauge</a></li>
+<li><a class="reference internal" href="#trait">Trait</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#expanding-with-your-own-traits">Expanding with your own Traits</a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitException"><code class="docutils literal notranslate"><span class="pre">TraitException</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitException.__init__"><code class="docutils literal notranslate"><span class="pre">TraitException.__init__()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.MandatoryTraitKey"><code class="docutils literal notranslate"><span class="pre">MandatoryTraitKey</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitHandler"><code class="docutils literal notranslate"><span class="pre">TraitHandler</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitHandler.__init__"><code class="docutils literal notranslate"><span class="pre">TraitHandler.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitHandler.all"><code class="docutils literal notranslate"><span class="pre">TraitHandler.all()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitHandler.get"><code class="docutils literal notranslate"><span class="pre">TraitHandler.get()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitHandler.add"><code class="docutils literal notranslate"><span class="pre">TraitHandler.add()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitHandler.remove"><code class="docutils literal notranslate"><span class="pre">TraitHandler.remove()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitHandler.clear"><code class="docutils literal notranslate"><span class="pre">TraitHandler.clear()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitProperty"><code class="docutils literal notranslate"><span class="pre">TraitProperty</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.TraitProperty.__init__"><code class="docutils literal notranslate"><span class="pre">TraitProperty.__init__()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait"><code class="docutils literal notranslate"><span class="pre">Trait</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.trait_type"><code class="docutils literal notranslate"><span class="pre">Trait.trait_type</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.default_keys"><code class="docutils literal notranslate"><span class="pre">Trait.default_keys</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.allow_extra_properties"><code class="docutils literal notranslate"><span class="pre">Trait.allow_extra_properties</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.__init__"><code class="docutils literal notranslate"><span class="pre">Trait.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.validate_input"><code class="docutils literal notranslate"><span class="pre">Trait.validate_input()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.name"><code class="docutils literal notranslate"><span class="pre">Trait.name</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.get_trait"><code class="docutils literal notranslate"><span class="pre">Trait.get_trait()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.key"><code class="docutils literal notranslate"><span class="pre">Trait.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.Trait.value"><code class="docutils literal notranslate"><span class="pre">Trait.value</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.StaticTrait"><code class="docutils literal notranslate"><span class="pre">StaticTrait</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.StaticTrait.trait_type"><code class="docutils literal notranslate"><span class="pre">StaticTrait.trait_type</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.StaticTrait.default_keys"><code class="docutils literal notranslate"><span class="pre">StaticTrait.default_keys</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.StaticTrait.base"><code class="docutils literal notranslate"><span class="pre">StaticTrait.base</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.StaticTrait.mod"><code class="docutils literal notranslate"><span class="pre">StaticTrait.mod</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.StaticTrait.mult"><code class="docutils literal notranslate"><span class="pre">StaticTrait.mult</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.StaticTrait.value"><code class="docutils literal notranslate"><span class="pre">StaticTrait.value</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait"><code class="docutils literal notranslate"><span class="pre">CounterTrait</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.trait_type"><code class="docutils literal notranslate"><span class="pre">CounterTrait.trait_type</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.default_keys"><code class="docutils literal notranslate"><span class="pre">CounterTrait.default_keys</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.validate_input"><code class="docutils literal notranslate"><span class="pre">CounterTrait.validate_input()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.base"><code class="docutils literal notranslate"><span class="pre">CounterTrait.base</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.mod"><code class="docutils literal notranslate"><span class="pre">CounterTrait.mod</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.mult"><code class="docutils literal notranslate"><span class="pre">CounterTrait.mult</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.min"><code class="docutils literal notranslate"><span class="pre">CounterTrait.min</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.max"><code class="docutils literal notranslate"><span class="pre">CounterTrait.max</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.current"><code class="docutils literal notranslate"><span class="pre">CounterTrait.current</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.value"><code class="docutils literal notranslate"><span class="pre">CounterTrait.value</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.ratetarget"><code class="docutils literal notranslate"><span class="pre">CounterTrait.ratetarget</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.percent"><code class="docutils literal notranslate"><span class="pre">CounterTrait.percent()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.reset"><code class="docutils literal notranslate"><span class="pre">CounterTrait.reset()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.CounterTrait.desc"><code class="docutils literal notranslate"><span class="pre">CounterTrait.desc()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait"><code class="docutils literal notranslate"><span class="pre">GaugeTrait</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.trait_type"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.trait_type</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.default_keys"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.default_keys</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.base"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.base</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.mod"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.mod</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.mult"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.mult</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.min"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.min</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.max"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.max</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.current"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.current</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.value"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.value</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.percent"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.percent()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.rpg.traits.traits.GaugeTrait.reset"><code class="docutils literal notranslate"><span class="pre">GaugeTrait.reset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.contrib.rpg.traits.tests.html"
+                          title="previous chapter">evennia.contrib.rpg.traits.tests</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.contrib.tutorials.html"
+                          title="next chapter">evennia.contrib.tutorials</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/evennia.contrib.rpg.traits.traits.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1151,7 +1232,7 @@ returned.</p>
         <li class="right" >
           <a href="evennia.contrib.rpg.traits.tests.html" title="evennia.contrib.rpg.traits.tests"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -1161,12 +1242,9 @@ returned.</p>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.rpg.traits.traits</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

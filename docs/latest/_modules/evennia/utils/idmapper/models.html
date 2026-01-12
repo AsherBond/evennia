@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.utils.idmapper.models &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.utils.idmapper.models</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../index.html">
-              <img class="logo" src="../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="models.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -140,7 +85,9 @@
 <span class="n">_IS_MAIN_THREAD</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;MainThread&quot;</span>
 
 
-<div class="viewcode-block" id="SharedMemoryModelBase"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModelBase">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">SharedMemoryModelBase</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
+<div class="viewcode-block" id="SharedMemoryModelBase">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModelBase">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SharedMemoryModelBase</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
     <span class="c1"># CL: upstream had a __new__ method that skipped ModelBase&#39;s __new__ if</span>
     <span class="c1"># SharedMemoryModelBase was not in the model class&#39;s ancestors. It&#39;s not</span>
     <span class="c1"># clear what was the intended purpose, but skipping ModelBase.__new__</span>
@@ -339,15 +286,21 @@
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="SharedMemoryModel"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">SharedMemoryModel</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">SharedMemoryModelBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SharedMemoryModel">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SharedMemoryModel</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">SharedMemoryModelBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for idmapped objects. Inherit from `this`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">objects</span> <span class="o">=</span> <span class="n">SharedMemoryManager</span><span class="p">()</span>
 
-<div class="viewcode-block" id="SharedMemoryModel.Meta"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.Meta">[docs]</a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="SharedMemoryModel.Meta">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.Meta">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
         <span class="n">abstract</span> <span class="o">=</span> <span class="kc">True</span></div>
+
 
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">_get_cache_key</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
@@ -384,7 +337,9 @@
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">_get_pk_val</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">result</span>
 
-<div class="viewcode-block" id="SharedMemoryModel.get_cached_instance"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.get_cached_instance">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SharedMemoryModel.get_cached_instance">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.get_cached_instance">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_cached_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method to retrieve a cached instance by pk value. Returns None</span>
@@ -395,7 +350,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__dbclass__</span><span class="o">.</span><span class="n">__instance_cache__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SharedMemoryModel.cache_instance"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.cache_instance">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="SharedMemoryModel.cache_instance">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.cache_instance">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">cache_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method to store an instance in the cache.</span>
@@ -420,13 +378,17 @@
                     <span class="c1"># The at_init hook is not assigned to all entities</span>
                     <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="SharedMemoryModel.get_all_cached_instances"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.get_all_cached_instances">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="SharedMemoryModel.get_all_cached_instances">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.get_all_cached_instances">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_all_cached_instances</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the objects so far cached by idmapper for this class.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">__dbclass__</span><span class="o">.</span><span class="n">__instance_cache__</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
+
 
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">_flush_cached_by_key</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
@@ -443,7 +405,9 @@
             <span class="c1"># No need to remove if cache doesn&#39;t contain it already</span>
             <span class="k">pass</span>
 
-<div class="viewcode-block" id="SharedMemoryModel.flush_cached_instance"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.flush_cached_instance">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SharedMemoryModel.flush_cached_instance">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.flush_cached_instance">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">flush_cached_instance</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Method to flush an instance from the cache. The instance will</span>
@@ -454,9 +418,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">_flush_cached_by_key</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">_get_pk_val</span><span class="p">(),</span> <span class="n">force</span><span class="o">=</span><span class="n">force</span><span class="p">)</span></div>
 
+
     <span class="c1"># flush_cached_instance = classmethod(flush_cached_instance)</span>
 
-<div class="viewcode-block" id="SharedMemoryModel.flush_instance_cache"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.flush_instance_cache">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SharedMemoryModel.flush_instance_cache">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.flush_instance_cache">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">flush_instance_cache</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This will clean safe objects from the cache. Use `force`</span>
@@ -472,6 +439,7 @@
                 <span class="k">if</span> <span class="ow">not</span> <span class="n">obj</span><span class="o">.</span><span class="n">at_idmapper_flush</span><span class="p">()</span>
             <span class="p">)</span></div>
 
+
     <span class="c1"># flush_instance_cache = classmethod(flush_instance_cache)</span>
 
     <span class="c1"># per-instance methods</span>
@@ -483,7 +451,9 @@
         <span class="c1"># this is required to maintain hashing</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">()</span>
 
-<div class="viewcode-block" id="SharedMemoryModel.at_idmapper_flush"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.at_idmapper_flush">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_idmapper_flush</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SharedMemoryModel.at_idmapper_flush">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.at_idmapper_flush">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_idmapper_flush</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is called when the idmapper cache is flushed and</span>
 <span class="sd">        allows customized actions when this happens.</span>
@@ -495,7 +465,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="SharedMemoryModel.flush_from_cache"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.flush_from_cache">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">flush_from_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SharedMemoryModel.flush_from_cache">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.flush_from_cache">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">flush_from_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Flush this instance from the instance cache. Use</span>
 <span class="sd">        `force` to override the result of at_idmapper_flush() for the object.</span>
@@ -506,7 +479,10 @@
             <span class="k">if</span> <span class="n">force</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">at_idmapper_flush</span><span class="p">():</span>
                 <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">__dbclass__</span><span class="o">.</span><span class="n">__instance_cache__</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">pk</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SharedMemoryModel.delete"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.delete">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SharedMemoryModel.delete">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.delete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Delete the object, clearing cache.</span>
 
@@ -515,7 +491,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_is_deleted</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SharedMemoryModel.save"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.SharedMemoryModel.save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="SharedMemoryModel.save">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.SharedMemoryModel.save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Central database save operation.</span>
 
@@ -590,10 +569,14 @@
         <span class="c1">#            fieldtracker = &quot;_oob_at_%s_postsave&quot; % fieldname</span>
         <span class="c1">#            if hasattr(self, fieldtracker):</span>
         <span class="c1">#                _GA(self, fieldtracker)(fieldname)</span>
-        <span class="k">pass</span></div></div>
+        <span class="k">pass</span></div>
+</div>
 
 
-<div class="viewcode-block" id="WeakSharedMemoryModelBase"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.WeakSharedMemoryModelBase">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">WeakSharedMemoryModelBase</span><span class="p">(</span><span class="n">SharedMemoryModelBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="WeakSharedMemoryModelBase">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.WeakSharedMemoryModelBase">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WeakSharedMemoryModelBase</span><span class="p">(</span><span class="n">SharedMemoryModelBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Uses a WeakValue dictionary for caching instead of a regular one.</span>
 
@@ -604,17 +587,26 @@
         <span class="bp">cls</span><span class="o">.</span><span class="n">__dbclass__</span><span class="o">.</span><span class="n">__instance_cache__</span> <span class="o">=</span> <span class="n">WeakValueDictionary</span><span class="p">()</span></div>
 
 
-<div class="viewcode-block" id="WeakSharedMemoryModel"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.WeakSharedMemoryModel">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">WeakSharedMemoryModel</span><span class="p">(</span><span class="n">SharedMemoryModel</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">WeakSharedMemoryModelBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="WeakSharedMemoryModel">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.WeakSharedMemoryModel">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WeakSharedMemoryModel</span><span class="p">(</span><span class="n">SharedMemoryModel</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">WeakSharedMemoryModelBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Uses a WeakValue dictionary for caching instead of a regular one</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="WeakSharedMemoryModel.Meta"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.WeakSharedMemoryModel.Meta">[docs]</a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-        <span class="n">abstract</span> <span class="o">=</span> <span class="kc">True</span></div></div>
+<div class="viewcode-block" id="WeakSharedMemoryModel.Meta">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.WeakSharedMemoryModel.Meta">[docs]</a>
+    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+        <span class="n">abstract</span> <span class="o">=</span> <span class="kc">True</span></div>
+</div>
 
 
-<div class="viewcode-block" id="flush_cache"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.flush_cache">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">flush_cache</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="flush_cache">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.flush_cache">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">flush_cache</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Flush idmapper cache. When doing so the cache will fire the</span>
 <span class="sd">    at_idmapper_flush hook to allow the object to optionally handle</span>
@@ -640,11 +632,14 @@
     <span class="k">return</span> <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span></div>
 
 
+
 <span class="c1"># request_finished.connect(flush_cache)</span>
 <span class="n">post_migrate</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">flush_cache</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="flush_cached_instance"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.flush_cached_instance">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">flush_cached_instance</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="flush_cached_instance">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.flush_cached_instance">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">flush_cached_instance</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Flush the idmapper cache only for a given instance.</span>
 
@@ -655,10 +650,13 @@
     <span class="n">sender</span><span class="o">.</span><span class="n">flush_cached_instance</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
 
+
 <span class="n">pre_delete</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">flush_cached_instance</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="update_cached_instance"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.update_cached_instance">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">update_cached_instance</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="update_cached_instance">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.update_cached_instance">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">update_cached_instance</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Re-cache the given instance in the idmapper cache.</span>
 
@@ -668,13 +666,16 @@
     <span class="n">sender</span><span class="o">.</span><span class="n">cache_instance</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span></div>
 
 
+
 <span class="n">post_save</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">update_cached_instance</span><span class="p">)</span>
 
 
 <span class="n">LAST_FLUSH</span> <span class="o">=</span> <span class="kc">None</span>
 
 
-<div class="viewcode-block" id="conditional_flush"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.conditional_flush">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">conditional_flush</span><span class="p">(</span><span class="n">max_rmem</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="conditional_flush">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.conditional_flush">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">conditional_flush</span><span class="p">(</span><span class="n">max_rmem</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Flush the cache if the estimated memory usage exceeds `max_rmem`.</span>
 
@@ -746,7 +747,10 @@
         <span class="n">LAST_FLUSH</span> <span class="o">=</span> <span class="n">now</span></div>
 
 
-<div class="viewcode-block" id="cache_size"><a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.utils.idmapper.models.cache_size">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">cache_size</span><span class="p">(</span><span class="n">mb</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+<div class="viewcode-block" id="cache_size">
+<a class="viewcode-back" href="../../../../api/evennia.utils.idmapper.models.html#evennia.comms.models.cache_size">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">cache_size</span><span class="p">(</span><span class="n">mb</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculate statistics about the cache.</span>
 
@@ -776,14 +780,78 @@
 
     <span class="n">get_recurse</span><span class="p">(</span><span class="n">SharedMemoryModel</span><span class="o">.</span><span class="n">__subclasses__</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">numtotal</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">classdict</span></div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -792,18 +860,15 @@
         <li class="right" >
           <a href="../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.utils.idmapper.models</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

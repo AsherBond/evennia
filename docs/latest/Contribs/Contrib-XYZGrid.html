@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>XYZgrid &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Buffs" href="Contrib-Buffs.html" />
     <link rel="prev" title="Wilderness system" href="Contrib-Wilderness.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,126 +33,19 @@
         <li class="right" >
           <a href="Contrib-Wilderness.html" title="Wilderness system"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" accesskey="U">Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">XYZgrid</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">XYZgrid</a><ul>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#first-example-usage">First example usage</a></li>
-<li><a class="reference internal" href="#defining-an-xymap">Defining an XYMap</a><ul>
-<li><a class="reference internal" href="#the-zcoord">The Zcoord</a><ul>
-<li><a class="reference internal" href="#a-true-3d-map">A true 3D map</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#map-string">Map String</a></li>
-<li><a class="reference internal" href="#map-legend">Map legend</a><ul>
-<li><a class="reference internal" href="#important-node-link-properties">Important node/link properties</a></li>
-<li><a class="reference internal" href="#default-legend">Default Legend</a></li>
-<li><a class="reference internal" href="#map-nodes">Map Nodes</a></li>
-<li><a class="reference internal" href="#one-way-links">One-way links</a></li>
-<li><a class="reference internal" href="#up-and-down-links">Up- and Down-links</a></li>
-<li><a class="reference internal" href="#interrupt-nodes">Interrupt-nodes</a></li>
-<li><a class="reference internal" href="#interrupt-links">Interrupt-links</a></li>
-<li><a class="reference internal" href="#blocked-links">Blocked links</a></li>
-<li><a class="reference internal" href="#router-links">Router-links</a></li>
-<li><a class="reference internal" href="#teleporter-links">Teleporter Links</a></li>
-<li><a class="reference internal" href="#map-transition-nodes">Map-Transition Nodes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#prototypes">Prototypes</a><ul>
-<li><a class="reference internal" href="#extending-the-base-prototypes">Extending the base prototypes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#options">Options</a></li>
-<li><a class="reference internal" href="#about-the-pathfinder">About the Pathfinder</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id1">XYZGrid</a></li>
-<li><a class="reference internal" href="#xyzroom-and-xyzexit">XYZRoom and XYZExit</a></li>
-<li><a class="reference internal" href="#working-with-the-grid">Working with the grid</a></li>
-<li><a class="reference internal" href="#details">Details</a></li>
-<li><a class="reference internal" href="#id2">Installation</a></li>
-<li><a class="reference internal" href="#example-usage">Example usage</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Contrib-Wilderness.html"
-                        title="previous chapter">Wilderness system</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Buffs.html"
-                        title="next chapter">Buffs</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Contribs/Contrib-XYZGrid.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Contrib-XYZGrid.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="xyzgrid">
-<h1>XYZgrid<a class="headerlink" href="#xyzgrid" title="Permalink to this headline">¶</a></h1>
+<h1>XYZgrid<a class="headerlink" href="#xyzgrid" title="Link to this heading">¶</a></h1>
 <p>Contribution by Griatch 2021</p>
 <p>Places Evennia’s game world on an xy (z being different maps) coordinate grid.
 Grid is created and maintained externally by drawing and parsing 2D ASCII maps,
@@ -169,7 +56,7 @@ current location (useful for displaying the grid as an in-game, updating map).</
 <p>Grid-management is done outside of the game using a new evennia-launcher
 option.</p>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
 <script id="asciicast-Zz36JuVAiPF0fSUR09Ii7lcxc" src="https://asciinema.org/a/Zz36JuVAiPF0fSUR09Ii7lcxc.js" async></script>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#-#-#-#   #</span>
 <span class="o">|</span>  <span class="o">/</span>      <span class="n">d</span>
@@ -197,8 +84,8 @@ option.</p>
 </div>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<ol>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
 <li><p>XYZGrid requires the <code class="docutils literal notranslate"><span class="pre">scipy</span></code> library. Easiest is to get the ‘extra’
 dependencies of Evennia with</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install evennia[extra]
@@ -216,7 +103,7 @@ pip install --upgrade -e .[extra]
 the server. This makes the <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">goto/path</span></code> and the modified <code class="docutils literal notranslate"><span class="pre">teleport</span></code> and
 <code class="docutils literal notranslate"><span class="pre">open</span></code> commands available in-game.</p></li>
 </ol>
-<ol>
+<ol class="arabic" start="3">
 <li><p>Edit <code class="docutils literal notranslate"><span class="pre">mygame/server/conf/settings.py</span></code> and add</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>EXTRA_LAUNCHER_COMMANDS[&#39;xyzgrid&#39;] = &#39;evennia.contrib.grid.xyzgrid.launchcmd.xyzcommand&#39;
 PROTOTYPE_MODULES += [&#39;evennia.contrib.grid.xyzgrid.prototypes&#39;]
@@ -235,17 +122,17 @@ also make use of in-game (db-) created prototypes, add
 </ol>
 </section>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p>The grid contrib consists of multiple components.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">XYMap</span></code> - This class parses modules with special <em>Map strings</em>
 and <em>Map legends</em> into one Python object. It has helpers for pathfinding and
 visual-range handling.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">XYZGrid</span></code> - This is a singleton <a class="reference internal" href="../Components/Scripts.html"><span class="doc std std-doc">Script</span></a> that
+<li><p>The <code class="docutils literal notranslate"><span class="pre">XYZGrid</span></code> - This is a singleton <a class="reference internal" href="../Components/Scripts.html"><span class="std std-doc">Script</span></a> that
 stores all <code class="docutils literal notranslate"><span class="pre">XYMaps</span></code> in the game. It is the central point for managing the ‘grid’
 of the game.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">XYZRoom</span></code> and <code class="docutils literal notranslate"><span class="pre">XYZExit</span></code>are custom typeclasses that use
-<a class="reference internal" href="../Components/Tags.html"><span class="doc std std-doc">Tags</span></a>
+<a class="reference internal" href="../Components/Tags.html"><span class="std std-doc">Tags</span></a>
 to know which X,Y,Z coordinate they are located at. The <code class="docutils literal notranslate"><span class="pre">XYZGrid</span></code> is
 abstract until it is used to <em>spawn</em> these database entities into
 something you can actually interract with in the game. The <code class="docutils literal notranslate"><span class="pre">XYZRoom</span></code>
@@ -257,14 +144,14 @@ manage the grid from the terminal (no game login is needed).</p></li>
 <p>We’ll start exploring these components with an example.</p>
 </section>
 <section id="first-example-usage">
-<h2>First example usage<a class="headerlink" href="#first-example-usage" title="Permalink to this headline">¶</a></h2>
+<h2>First example usage<a class="headerlink" href="#first-example-usage" title="Link to this heading">¶</a></h2>
 <p>After installation, do the following from your command line (where the
 <code class="docutils literal notranslate"><span class="pre">evennia</span></code> command is available):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ evennia xyzgrid init
 </pre></div>
 </div>
 <p>use <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">xyzgrid</span> <span class="pre">help</span></code> to see all options)
-This will create a new <code class="docutils literal notranslate"><span class="pre">XYZGrid</span></code> <a class="reference internal" href="../Components/Scripts.html"><span class="doc std std-doc">Script</span></a> if one didn’t already exist.
+This will create a new <code class="docutils literal notranslate"><span class="pre">XYZGrid</span></code> <a class="reference internal" href="../Components/Scripts.html"><span class="std std-doc">Script</span></a> if one didn’t already exist.
 The <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">xyzgrid</span></code> is a custom launch option added only for this contrib.</p>
 <p>The xyzgrid-contrib comes with a full grid example. Let’s add it:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ evennia xyzgrid add evennia.contrib.grid.xyzgrid.example
@@ -355,7 +242,7 @@ XYZGrid script. Reload the server afterwards. If you were on a map that was
 deleted you will have been moved back to your home location.</p>
 </section>
 <section id="defining-an-xymap">
-<h2>Defining an XYMap<a class="headerlink" href="#defining-an-xymap" title="Permalink to this headline">¶</a></h2>
+<h2>Defining an XYMap<a class="headerlink" href="#defining-an-xymap" title="Link to this heading">¶</a></h2>
 <p>For a module to be suitable to pass to <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">xyzgrid</span> <span class="pre">add</span> <span class="pre">&lt;module&gt;</span></code>, the
 module must contain one of the following variables:</p>
 <ul class="simple">
@@ -452,7 +339,7 @@ how pathfinding should work etc.</p></li>
 </div>
 <p>In the following sections we’ll discuss each component in turn.</p>
 <section id="the-zcoord">
-<h3>The Zcoord<a class="headerlink" href="#the-zcoord" title="Permalink to this headline">¶</a></h3>
+<h3>The Zcoord<a class="headerlink" href="#the-zcoord" title="Link to this heading">¶</a></h3>
 <p>Each XYMap on the grid has a Z-coordinate which usually can be treated just as
 the name of the map. The Z-coordinate can be either a string or an integer, and must
 be unique across the entire grid. It is added as the key ‘zcoord’ to <code class="docutils literal notranslate"><span class="pre">XYMAP_DATA</span></code>.</p>
@@ -464,7 +351,7 @@ be unique across the entire grid. It is added as the key ‘zcoord’ to <code c
 <p>Pathfinding happens only within each XYMap (up/down is normally ‘faked’ by moving
 sideways to a new area of the XY plane).</p>
 <section id="a-true-3d-map">
-<h4>A true 3D map<a class="headerlink" href="#a-true-3d-map" title="Permalink to this headline">¶</a></h4>
+<h4>A true 3D map<a class="headerlink" href="#a-true-3d-map" title="Link to this heading">¶</a></h4>
 <p>Even for the most hardcore of sci-fi space game, consider sticking to 2D
 movement. It’s hard enough for players to visualize a 3D volume with graphics.
 In text it’s even harder.</p>
@@ -543,7 +430,7 @@ adjacent Z coordinates.</p>
 </section>
 </section>
 <section id="map-string">
-<h3>Map String<a class="headerlink" href="#map-string" title="Permalink to this headline">¶</a></h3>
+<h3>Map String<a class="headerlink" href="#map-string" title="Link to this heading">¶</a></h3>
 <p>The creation of a new map starts with a <em>Map string</em>. This allows you to ‘draw’
 your map, describing and how rooms are positioned in an X,Y coordinate system.
 It is added to <code class="docutils literal notranslate"><span class="pre">XYMAP_DATA</span></code> with the key ‘map’.</p>
@@ -633,7 +520,7 @@ to move from leftmost to the rightmost node/room).</p>
 </div></blockquote>
 </section>
 <section id="map-legend">
-<h3>Map legend<a class="headerlink" href="#map-legend" title="Permalink to this headline">¶</a></h3>
+<h3>Map legend<a class="headerlink" href="#map-legend" title="Link to this heading">¶</a></h3>
 <p>There can be many different types of <em>nodes</em> and <em>links</em>. Whereas the map
 string describes where they are located, the <em>Map Legend</em> connects each symbol
 on the map to Python code.</p>
@@ -648,7 +535,7 @@ on the map to Python code.</p>
 </pre></div>
 </div>
 <p>The legend is optional, and any symbol not explicitly given in your legend will
-fall back to its value in the default legend <a class="reference internal" href="#default-legend"><span class="std std-doc">outlined below</span></a>.</p>
+fall back to its value in the default legend <a class="reference internal" href="#default-legend">outlined below</a>.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../api/evennia.contrib.grid.xyzgrid.xymap_legend.html#evennia.contrib.grid.xyzgrid.xymap_legend.MapNode" title="evennia.contrib.grid.xyzgrid.xymap_legend.MapNode"><span class="xref myst py py-class">MapNode</span></a>
 is the base class for all nodes.</p></li>
@@ -658,7 +545,7 @@ is the base class for all links.</p></li>
 <p>As the <em>Map String</em> is parsed, each found symbol is looked up in the legend and
 initialized into the corresponding MapNode/Link instance.</p>
 <section id="important-node-link-properties">
-<h4>Important node/link properties<a class="headerlink" href="#important-node-link-properties" title="Permalink to this headline">¶</a></h4>
+<h4>Important node/link properties<a class="headerlink" href="#important-node-link-properties" title="Link to this heading">¶</a></h4>
 <p>These are relevant if you want to customize the map. The contrib already comes
 with a full set of map elements that use these properties in various ways
 (described in the next section).</p>
@@ -760,20 +647,13 @@ custom directions outside of the cardinal directions + up/down. The exit’s key
 </div>
 </section>
 <section id="default-legend">
-<h4>Default Legend<a class="headerlink" href="#default-legend" title="Permalink to this headline">¶</a></h4>
+<h4>Default Legend<a class="headerlink" href="#default-legend" title="Link to this heading">¶</a></h4>
 <p>Below is the default map legend. The <code class="docutils literal notranslate"><span class="pre">symbol</span></code> is what should be put in the Map
 string. It must always be a single character. The <code class="docutils literal notranslate"><span class="pre">display-symbol</span></code> is what is
 actually visualized when displaying the map to players in-game. This could have
 colors etc. All classes are found in <code class="docutils literal notranslate"><span class="pre">evennia.contrib.grid.xyzgrid.xymap_legend</span></code> and
 their names are included to make it easy to know what to override.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 15%" />
-<col style="width: 4%" />
-<col style="width: 21%" />
-<col style="width: 45%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>symbol</p></th>
 <th class="head"><p>display-symbol</p></th>
@@ -910,7 +790,7 @@ same-symbol teleporter on the same map.
 </table>
 </section>
 <section id="map-nodes">
-<h4>Map Nodes<a class="headerlink" href="#map-nodes" title="Permalink to this headline">¶</a></h4>
+<h4>Map Nodes<a class="headerlink" href="#map-nodes" title="Link to this heading">¶</a></h4>
 <p>The basic map node (<code class="docutils literal notranslate"><span class="pre">#</span></code>) usually represents a ‘room’ in the game world. Links
 can connect to the node from any of the 8 cardinal directions, but since nodes
 must <em>only</em> exist on full coordinates, they can never appear directly next to
@@ -930,7 +810,7 @@ each other.</p>
 </div>
 </section>
 <section id="one-way-links">
-<h4>One-way links<a class="headerlink" href="#one-way-links" title="Permalink to this headline">¶</a></h4>
+<h4>One-way links<a class="headerlink" href="#one-way-links" title="Link to this heading">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>,<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code> are used to indicate one-way links. These indicators should
 either be <em>first</em> or <em>last</em> in a link chain (think of them as arrows):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#-----&gt;#
@@ -949,7 +829,7 @@ movement as well.</p>
 </div></blockquote>
 </section>
 <section id="up-and-down-links">
-<h4>Up- and Down-links<a class="headerlink" href="#up-and-down-links" title="Permalink to this headline">¶</a></h4>
+<h4>Up- and Down-links<a class="headerlink" href="#up-and-down-links" title="Link to this heading">¶</a></h4>
 <p>Links like <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">d</span></code> don’t have a clear indicator which directions they
 connect (unlike e.g. <code class="docutils literal notranslate"><span class="pre">|</span></code> and <code class="docutils literal notranslate"><span class="pre">-</span></code>).</p>
 <p>So placing them (and many similar types of map elements) requires that the
@@ -986,7 +866,7 @@ link will prioritize connecting to the node. Here are some examples:</p>
 </div>
 </section>
 <section id="interrupt-nodes">
-<h4>Interrupt-nodes<a class="headerlink" href="#interrupt-nodes" title="Permalink to this headline">¶</a></h4>
+<h4>Interrupt-nodes<a class="headerlink" href="#interrupt-nodes" title="Link to this heading">¶</a></h4>
 <p>An interrupt-node (<code class="docutils literal notranslate"><span class="pre">I</span></code>, <code class="docutils literal notranslate"><span class="pre">InterruptMapNode</span></code>) is a node that acts like any other
 node except it is considered a ‘point of interest’ and the auto-walk of the
 <code class="docutils literal notranslate"><span class="pre">goto</span></code> command will always stop auto-stepping at this location.</p>
@@ -1003,7 +883,7 @@ show them the right paperwork - trying to auto-walk past them would be bad!</p>
 <p>By default, this node looks just like a normal <code class="docutils literal notranslate"><span class="pre">#</span></code> to the player.</p>
 </section>
 <section id="interrupt-links">
-<h4>Interrupt-links<a class="headerlink" href="#interrupt-links" title="Permalink to this headline">¶</a></h4>
+<h4>Interrupt-links<a class="headerlink" href="#interrupt-links" title="Link to this heading">¶</a></h4>
 <p>The interrupt-link (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">InterruptMapLink</span></code>) is equivalent to the
 <code class="docutils literal notranslate"><span class="pre">InterruptMapNode</span></code> except it applies to a link. While the pathfinder will
 correctly trace a path to the other side, the auto-stepper will never cross an
@@ -1024,7 +904,7 @@ cross the threshold manually before they can continue.</p>
 (so in the above example, it would show as <code class="docutils literal notranslate"><span class="pre">-</span></code>).</p>
 </section>
 <section id="blocked-links">
-<h4>Blocked links<a class="headerlink" href="#blocked-links" title="Permalink to this headline">¶</a></h4>
+<h4>Blocked links<a class="headerlink" href="#blocked-links" title="Link to this heading">¶</a></h4>
 <p>Blockers (<code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">BlockedMapLink</span></code>) indicates a route that the pathfinder should not use. The
 pathfinder will treat it as impassable even though it will be spawned as a
 normal exit in-game.</p>
@@ -1043,7 +923,7 @@ will not work (admittedly one may want to turn off pathfinding altogether on
 such maps).</p>
 </section>
 <section id="router-links">
-<h4>Router-links<a class="headerlink" href="#router-links" title="Permalink to this headline">¶</a></h4>
+<h4>Router-links<a class="headerlink" href="#router-links" title="Link to this heading">¶</a></h4>
 <p>Routers (<code class="docutils literal notranslate"><span class="pre">o</span></code>, <code class="docutils literal notranslate"><span class="pre">RouterMapLink</span></code>) allow for connecting nodes with links at an
 angle, by creating a ‘knee’.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#----o
@@ -1079,7 +959,7 @@ link will continue to the outgoing link on the opposite side of the router.</p>
 </div>
 </section>
 <section id="teleporter-links">
-<h4>Teleporter Links<a class="headerlink" href="#teleporter-links" title="Permalink to this headline">¶</a></h4>
+<h4>Teleporter Links<a class="headerlink" href="#teleporter-links" title="Link to this heading">¶</a></h4>
 <p>Teleporters (<code class="docutils literal notranslate"><span class="pre">TeleportMapLink</span></code>) always come in pairs using the same map symbol
 (<code class="docutils literal notranslate"><span class="pre">'t'</span></code> by default).  When moving into one link, movement continues out the
 matching teleport link. The pair must both be on the same XYMap and both sides
@@ -1134,7 +1014,7 @@ different (unused) unique symbol in your map legend:</p>
 </div>
 </section>
 <section id="map-transition-nodes">
-<h4>Map-Transition Nodes<a class="headerlink" href="#map-transition-nodes" title="Permalink to this headline">¶</a></h4>
+<h4>Map-Transition Nodes<a class="headerlink" href="#map-transition-nodes" title="Link to this heading">¶</a></h4>
 <p>The map transition (<code class="docutils literal notranslate"><span class="pre">MapTransitionNode</span></code>) teleports between XYMaps (a
 Z-coordinate transition, if you will), like walking from the “Dungeon” map to
 the “Castle” map. Unlike other nodes, the MapTransitionNode is never spawned
@@ -1219,8 +1099,8 @@ across the map boundary.</p>
 </section>
 </section>
 <section id="prototypes">
-<h3>Prototypes<a class="headerlink" href="#prototypes" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference internal" href="../Components/Prototypes.html"><span class="doc std std-doc">Prototypes</span></a> are dicts that describe how to <em>spawn</em> a new instance
+<h3>Prototypes<a class="headerlink" href="#prototypes" title="Link to this heading">¶</a></h3>
+<p><a class="reference internal" href="../Components/Prototypes.html"><span class="std std-doc">Prototypes</span></a> are dicts that describe how to <em>spawn</em> a new instance
 of an object. Each of the <em>nodes</em> and <em>links</em> above have a default prototype
 that allows the <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">xyzgrid</span> <span class="pre">spawn</span></code> command to convert them to
 a <a class="reference internal" href="../api/evennia.contrib.grid.xyzgrid.xyzroom.html#evennia.contrib.grid.xyzgrid.xyzroom.XYZRoom" title="evennia.contrib.grid.xyzgrid.xyzroom.XYZRoom"><span class="xref myst py py-class">XYZRoom</span></a>
@@ -1303,7 +1183,7 @@ you - a hash based on the current XYZ (+ direction) of the node/link to spawn.</
 grid/map, you can rerun <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">xyzgrid</span> <span class="pre">spawn</span></code> again; The changes will be
 picked up and applied to the existing objects.</p>
 <section id="extending-the-base-prototypes">
-<h4>Extending the base prototypes<a class="headerlink" href="#extending-the-base-prototypes" title="Permalink to this headline">¶</a></h4>
+<h4>Extending the base prototypes<a class="headerlink" href="#extending-the-base-prototypes" title="Link to this heading">¶</a></h4>
 <p>The default prototypes are found in <code class="docutils literal notranslate"><span class="pre">evennia.contrib.grid.xyzgrid.prototypes</span></code> and
 should be included as <code class="docutils literal notranslate"><span class="pre">prototype_parents</span></code> for prototypes on the map. Would it
 not be nice to be able to change these and have the change apply to all of the
@@ -1326,7 +1206,7 @@ after a change like this.</p>
 </section>
 </section>
 <section id="options">
-<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<h3>Options<a class="headerlink" href="#options" title="Link to this heading">¶</a></h3>
 <p>The last element of the <code class="docutils literal notranslate"><span class="pre">XYMAP_DATA</span></code> dict is the <code class="docutils literal notranslate"><span class="pre">&quot;options&quot;</span></code>, for example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">XYMAP_DATA</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c1"># ...</span>
@@ -1419,7 +1299,7 @@ and the room description. Defaults to <code class="docutils literal notranslate"
 map, but you <em>do</em> need to reload the server!</p>
 </section>
 <section id="about-the-pathfinder">
-<h3>About the Pathfinder<a class="headerlink" href="#about-the-pathfinder" title="Permalink to this headline">¶</a></h3>
+<h3>About the Pathfinder<a class="headerlink" href="#about-the-pathfinder" title="Link to this heading">¶</a></h3>
 <p>The new <code class="docutils literal notranslate"><span class="pre">goto</span></code> command exemplifies the use of the <em>Pathfinder</em>. This
 is an algorithm that calculates the shortest route between nodes (rooms) on an
 XY-map of arbitrary size and complexity. It allows players to quickly move to
@@ -1454,8 +1334,8 @@ This behavior can be changed per-link by using links with
 </section>
 </section>
 <section id="id1">
-<h2>XYZGrid<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">XYZGrid</span></code> is a <a class="reference internal" href="../Components/Scripts.html"><span class="doc std std-doc">Global Script</span></a> that holds all <code class="docutils literal notranslate"><span class="pre">XYMap</span></code> objects on
+<h2>XYZGrid<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">XYZGrid</span></code> is a <a class="reference internal" href="../Components/Scripts.html"><span class="std std-doc">Global Script</span></a> that holds all <code class="docutils literal notranslate"><span class="pre">XYMap</span></code> objects on
 the grid. There should be only one XYZGrid created at any time.</p>
 <p>To access the grid in-code, there are several ways:</p>
 <ul>
@@ -1505,8 +1385,8 @@ know how to call find the pathfinder though:</p>
 details.</p>
 </section>
 <section id="xyzroom-and-xyzexit">
-<h2>XYZRoom and XYZExit<a class="headerlink" href="#xyzroom-and-xyzexit" title="Permalink to this headline">¶</a></h2>
-<p>These are new custom <a class="reference internal" href="../Components/Typeclasses.html"><span class="doc std std-doc">Typeclasses</span></a> located in
+<h2>XYZRoom and XYZExit<a class="headerlink" href="#xyzroom-and-xyzexit" title="Link to this heading">¶</a></h2>
+<p>These are new custom <a class="reference internal" href="../Components/Typeclasses.html"><span class="std std-doc">Typeclasses</span></a> located in
 <code class="docutils literal notranslate"><span class="pre">evennia.contrib.xyzgrid.xyzroom</span></code>. They extend the base <code class="docutils literal notranslate"><span class="pre">DefaultRoom</span></code> and
 <code class="docutils literal notranslate"><span class="pre">DefaultExit</span></code> to be aware of their <code class="docutils literal notranslate"><span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">Y</span></code> and <code class="docutils literal notranslate"><span class="pre">Z</span></code> coordinates.</p>
 <div class="admonition warning">
@@ -1536,7 +1416,7 @@ map display in depth.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">xyz_destination</span></code> (only for <code class="docutils literal notranslate"><span class="pre">XYZExits</span></code>) - this gives the xyz-coordinate of
 the exit’s destination.</p></li>
 </ul>
-<p>The coordinates are stored as <a class="reference internal" href="../Components/Tags.html"><span class="doc std std-doc">Tags</span></a> where both rooms and exits tag
+<p>The coordinates are stored as <a class="reference internal" href="../Components/Tags.html"><span class="std std-doc">Tags</span></a> where both rooms and exits tag
 categories <code class="docutils literal notranslate"><span class="pre">room_x_coordinate</span></code>, <code class="docutils literal notranslate"><span class="pre">room_y_coordinate</span></code> and <code class="docutils literal notranslate"><span class="pre">room_z_coordinate</span></code>
 while exits use the same in addition to tags for their destination, with tag
 categories <code class="docutils literal notranslate"><span class="pre">exit_dest_x_coordinate</span></code>, <code class="docutils literal notranslate"><span class="pre">exit_dest_y_coordinate</span></code> and
@@ -1573,12 +1453,12 @@ custom manager methods. The filter methods allow for <code class="docutils liter
 <p>You can customize the XYZRoom/Exit by having the grid spawn your own subclasses
 of them. To do this you need to override the prototype used to spawn rooms on
 the grid. Easiest is to modify the base prototype-parents in settings (see the
-<a class="reference internal" href="#xyzroom-and-xyzexit"><span class="std std-doc">XYZRoom and XYZExit</span></a> section above).</p>
+<a class="reference internal" href="#xyzroom-and-xyzexit">XYZRoom and XYZExit</a> section above).</p>
 </section>
 <section id="working-with-the-grid">
-<h2>Working with the grid<a class="headerlink" href="#working-with-the-grid" title="Permalink to this headline">¶</a></h2>
+<h2>Working with the grid<a class="headerlink" href="#working-with-the-grid" title="Link to this heading">¶</a></h2>
 <p>The work flow of working with the grid is usually as follows:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Prepare a module with a <em>Map String</em>, <em>Map Legend</em>, <em>Prototypes</em> and
 <em>Options</em> packaged into a dict <code class="docutils literal notranslate"><span class="pre">XYMAP_DATA</span></code>. Include multiple maps per module
 by adding several <code class="docutils literal notranslate"><span class="pre">XYMAP_DATA</span></code> to a variable <code class="docutils literal notranslate"><span class="pre">XYMAP_DATA_LIST</span></code> instead.</p></li>
@@ -1606,7 +1486,7 @@ apply the changes.</p></li>
 </ol>
 </section>
 <section id="details">
-<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<h2>Details<a class="headerlink" href="#details" title="Link to this heading">¶</a></h2>
 <p>The default Evennia’s rooms are non-euclidian - they can connect
 to each other with any types of exits without necessarily having a clear
 position relative to each other. This gives maximum flexibility, but many games
@@ -1622,8 +1502,8 @@ grid rooms as much as you like in-game, but you cannot spawn new grid
 rooms without editing the map files outside of the game.</p>
 </section>
 <section id="id2">
-<h2>Installation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<ol>
+<h2>Installation<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
 <li><p>If you haven’t before, install the extra contrib requirements.
 You can do so by doing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">evennia[extra]</span></code>, or if you used <code class="docutils literal notranslate"><span class="pre">git</span></code> to
 install, do <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">-e</span> <span class="pre">.[extra]</span></code> from the <code class="docutils literal notranslate"><span class="pre">evennia/</span></code> repo
@@ -1641,7 +1521,7 @@ the server. This makes the <code class="docutils literal notranslate"><span clas
 </ol>
 </section>
 <section id="example-usage">
-<h2>Example usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
+<h2>Example usage<a class="headerlink" href="#example-usage" title="Link to this heading">¶</a></h2>
 <p>After installation, do the following (from your command line, where the
 <code class="docutils literal notranslate"><span class="pre">evennia</span></code> command is available) to install an example grid:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>evennia xyzgrid init
@@ -1669,12 +1549,137 @@ file will be overwritten, so edit that file rather than this one.</small></p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">XYZgrid</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#first-example-usage">First example usage</a></li>
+<li><a class="reference internal" href="#defining-an-xymap">Defining an XYMap</a><ul>
+<li><a class="reference internal" href="#the-zcoord">The Zcoord</a><ul>
+<li><a class="reference internal" href="#a-true-3d-map">A true 3D map</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#map-string">Map String</a></li>
+<li><a class="reference internal" href="#map-legend">Map legend</a><ul>
+<li><a class="reference internal" href="#important-node-link-properties">Important node/link properties</a></li>
+<li><a class="reference internal" href="#default-legend">Default Legend</a></li>
+<li><a class="reference internal" href="#map-nodes">Map Nodes</a></li>
+<li><a class="reference internal" href="#one-way-links">One-way links</a></li>
+<li><a class="reference internal" href="#up-and-down-links">Up- and Down-links</a></li>
+<li><a class="reference internal" href="#interrupt-nodes">Interrupt-nodes</a></li>
+<li><a class="reference internal" href="#interrupt-links">Interrupt-links</a></li>
+<li><a class="reference internal" href="#blocked-links">Blocked links</a></li>
+<li><a class="reference internal" href="#router-links">Router-links</a></li>
+<li><a class="reference internal" href="#teleporter-links">Teleporter Links</a></li>
+<li><a class="reference internal" href="#map-transition-nodes">Map-Transition Nodes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prototypes">Prototypes</a><ul>
+<li><a class="reference internal" href="#extending-the-base-prototypes">Extending the base prototypes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#options">Options</a></li>
+<li><a class="reference internal" href="#about-the-pathfinder">About the Pathfinder</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">XYZGrid</a></li>
+<li><a class="reference internal" href="#xyzroom-and-xyzexit">XYZRoom and XYZExit</a></li>
+<li><a class="reference internal" href="#working-with-the-grid">Working with the grid</a></li>
+<li><a class="reference internal" href="#details">Details</a></li>
+<li><a class="reference internal" href="#id2">Installation</a></li>
+<li><a class="reference internal" href="#example-usage">Example usage</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Contrib-Wilderness.html"
+                          title="previous chapter">Wilderness system</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Contrib-Buffs.html"
+                          title="next chapter">Buffs</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Contribs/Contrib-XYZGrid.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1689,17 +1694,14 @@ file will be overwritten, so edit that file rather than this one.</small></p>
         <li class="right" >
           <a href="Contrib-Wilderness.html" title="Wilderness system"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">XYZgrid</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

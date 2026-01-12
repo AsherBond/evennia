@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Evennia in-game Python system &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Dialogues in events" href="Contrib-Ingame-Python-Tutorial-Dialogue.html" />
     <link rel="prev" title="Godot Websocket" href="Contrib-Godotwebsocket.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,127 +33,19 @@
         <li class="right" >
           <a href="Contrib-Godotwebsocket.html" title="Godot Websocket"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" accesskey="U">Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Evennia in-game Python system</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Evennia in-game Python system</a><ul>
-<li><a class="reference internal" href="#a-warning-regarding-security">A WARNING REGARDING SECURITY</a></li>
-<li><a class="reference internal" href="#extra-tutorials">Extra tutorials</a></li>
-<li><a class="reference internal" href="#basic-structure-and-vocabulary">Basic structure and vocabulary</a></li>
-<li><a class="reference internal" href="#installation">Installation</a><ul>
-<li><a class="reference internal" href="#starting-the-event-script">Starting the event script</a></li>
-<li><a class="reference internal" href="#editing-permissions">Editing permissions</a></li>
-<li><a class="reference internal" href="#adding-the-call-command">Adding the <code class="docutils literal notranslate"><span class="pre">call</span></code> command</a></li>
-<li><a class="reference internal" href="#changing-parent-classes-of-typeclasses">Changing parent classes of typeclasses</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-the-call-command">Using the <code class="docutils literal notranslate"><span class="pre">call</span></code> command</a><ul>
-<li><a class="reference internal" href="#examining-callbacks-and-events">Examining callbacks and events</a></li>
-<li><a class="reference internal" href="#creating-a-new-callback">Creating a new callback</a></li>
-<li><a class="reference internal" href="#editing-and-removing-a-callback">Editing and removing a callback</a></li>
-<li><a class="reference internal" href="#the-code-editor">The code editor</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-events">Using events</a><ul>
-<li><a class="reference internal" href="#the-eventfuncs">The eventfuncs</a><ul>
-<li><a class="reference internal" href="#deny">deny</a></li>
-<li><a class="reference internal" href="#get">get</a></li>
-<li><a class="reference internal" href="#call-event">call_event</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#variables-in-callbacks">Variables in callbacks</a></li>
-<li><a class="reference internal" href="#callbacks-with-parameters">Callbacks with parameters</a></li>
-<li><a class="reference internal" href="#time-related-events">Time-related events</a></li>
-<li><a class="reference internal" href="#chained-events">Chained events</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-events-in-code">Using events in code</a><ul>
-<li><a class="reference internal" href="#adding-new-events">Adding new events</a></li>
-<li><a class="reference internal" href="#calling-an-event-in-code">Calling an event in code</a></li>
-<li><a class="reference internal" href="#see-it-all-work">See it all work</a></li>
-<li><a class="reference internal" href="#adding-new-eventfuncs">Adding new eventfuncs</a></li>
-<li><a class="reference internal" href="#creating-events-with-parameters">Creating events with parameters</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#disabling-all-events-at-once">Disabling all events at once</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Contrib-Godotwebsocket.html"
-                        title="previous chapter">Godot Websocket</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Ingame-Python-Tutorial-Dialogue.html"
-                        title="next chapter">Dialogues in events</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Contribs/Contrib-Ingame-Python.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Contrib-Ingame-Python.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="evennia-in-game-python-system">
-<h1>Evennia in-game Python system<a class="headerlink" href="#evennia-in-game-python-system" title="Permalink to this headline">¶</a></h1>
+<h1>Evennia in-game Python system<a class="headerlink" href="#evennia-in-game-python-system" title="Link to this heading">¶</a></h1>
 <p>Contrib by Vincent Le Goff 2017</p>
 <p>This contrib adds the ability to script with Python in-game. It allows trusted
 staff/builders to dynamically add features and triggers to individual objects
@@ -170,11 +56,11 @@ Keep in mind, however, that allowing Python in-game comes with <em>severe</em>
 security concerns (you must trust your builders deeply), so read the warnings in
 this module carefully before continuing.</p>
 <section id="a-warning-regarding-security">
-<h2>A WARNING REGARDING SECURITY<a class="headerlink" href="#a-warning-regarding-security" title="Permalink to this headline">¶</a></h2>
+<h2>A WARNING REGARDING SECURITY<a class="headerlink" href="#a-warning-regarding-security" title="Link to this heading">¶</a></h2>
 <p>Evennia’s in-game Python system will run arbitrary Python code without much
 restriction.  Such a system is as powerful as potentially dangerous, and you
 will have to keep in mind these points before deciding to install it:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Untrusted people can run Python code on your game server with this system.
 Be careful about who can use this system (see the permissions below).</p></li>
 <li><p>You can do all of this in Python outside the game.  The in-game Python system
@@ -182,25 +68,25 @@ is not to replace all your game feature.</p></li>
 </ol>
 </section>
 <section id="extra-tutorials">
-<h2>Extra tutorials<a class="headerlink" href="#extra-tutorials" title="Permalink to this headline">¶</a></h2>
+<h2>Extra tutorials<a class="headerlink" href="#extra-tutorials" title="Link to this heading">¶</a></h2>
 <p>These tutorials cover examples of using ingame python. Once you have the system
 installed (see below) they may be an easier way to learn than reading the full
 documentation from beginning to end.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="Contrib-Ingame-Python-Tutorial-Dialogue.html"><span class="doc std std-doc">Dialogue events</span></a>, where
+<li><p><a class="reference internal" href="Contrib-Ingame-Python-Tutorial-Dialogue.html"><span class="std std-doc">Dialogue events</span></a>, where
 NPCs react to things said.</p></li>
-<li><p><a class="reference internal" href="Contrib-Ingame-Python-Tutorial-Elevator.html"><span class="doc std std-doc">A voice operated elevator</span></a>
+<li><p><a class="reference internal" href="Contrib-Ingame-Python-Tutorial-Elevator.html"><span class="std std-doc">A voice operated elevator</span></a>
 using ingame-python events.</p></li>
 </ul>
 </section>
 <section id="basic-structure-and-vocabulary">
-<h2>Basic structure and vocabulary<a class="headerlink" href="#basic-structure-and-vocabulary" title="Permalink to this headline">¶</a></h2>
+<h2>Basic structure and vocabulary<a class="headerlink" href="#basic-structure-and-vocabulary" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>At the basis of the in-game Python system are <strong>events</strong>.  An <strong>event</strong>
 defines the context in which we would like to call some arbitrary code.  For
 instance, one event is defined on exits and will fire every time a character
-traverses through this exit.  Events are described on a <a class="reference internal" href="../Components/Typeclasses.html"><span class="doc std std-doc">typeclass</span></a>
-(<a class="reference internal" href="../Components/Exits.html"><span class="doc std std-doc">exits</span></a> in our example).  All objects inheriting from this
+traverses through this exit.  Events are described on a <a class="reference internal" href="../Components/Typeclasses.html"><span class="std std-doc">typeclass</span></a>
+(<a class="reference internal" href="../Components/Exits.html"><span class="std std-doc">exits</span></a> in our example).  All objects inheriting from this
 typeclass will have access to this event.</p></li>
 <li><p><strong>Callbacks</strong> can be set on individual objects, on events defined in code.
 These <strong>callbacks</strong> can contain arbitrary code and describe a specific
@@ -209,7 +95,7 @@ object’s event are executed.</p></li>
 </ul>
 <p>To see the system in context, when an object is picked up (using the default
 <code class="docutils literal notranslate"><span class="pre">get</span></code> command), a specific event is fired:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The event “get” is set on objects (on the <code class="docutils literal notranslate"><span class="pre">Object</span></code> typeclass).</p></li>
 <li><p>When using the “get” command to pick up an object, this object’s <code class="docutils literal notranslate"><span class="pre">at_get</span></code>
 hook is called.</p></li>
@@ -237,11 +123,11 @@ You have picked up a sword and have completed this quest!
 </div>
 </section>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
 <p>Being in a separate contrib, the in-game Python system isn’t installed by
 default.  You need to do it manually, following these steps:</p>
 <p>This is the quick summary. Scroll down for more detailed help on each step.</p>
-<ol>
+<ol class="arabic">
 <li><p>Launch the main script (important!):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> py evennia.create_script(&quot;evennia.contrib.base_systems.ingame_python.scripts.EventHandler&quot;)
 </pre></div>
@@ -275,7 +161,7 @@ resetting your database) you will most likely face a traceback when logging in, 
 that a ‘callback’ property is not defined. After performing step <code class="docutils literal notranslate"><span class="pre">1</span></code> the error will go away.</p>
 </div></blockquote>
 <section id="starting-the-event-script">
-<h3>Starting the event script<a class="headerlink" href="#starting-the-event-script" title="Permalink to this headline">¶</a></h3>
+<h3>Starting the event script<a class="headerlink" href="#starting-the-event-script" title="Link to this heading">¶</a></h3>
 <p>To start the event script, you only need a single command, using <code class="docutils literal notranslate"><span class="pre">&#64;py</span></code>.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>py evennia.create_script(&quot;evennia.contrib.base_systems.ingame_python.scripts.EventHandler&quot;)
 </pre></div>
@@ -286,7 +172,7 @@ but you will probably use the callback handler.  Creating this script will also 
 handler on all objects (see below for details).</p>
 </section>
 <section id="editing-permissions">
-<h3>Editing permissions<a class="headerlink" href="#editing-permissions" title="Permalink to this headline">¶</a></h3>
+<h3>Editing permissions<a class="headerlink" href="#editing-permissions" title="Link to this heading">¶</a></h3>
 <p>This contrib comes with its own set of permissions.  They define who can edit callbacks without
 validation, and who can edit callbacks but needs validation.  Validation is a process in which an
 administrator (or somebody trusted as such) will check the callbacks produced by others and will
@@ -294,7 +180,7 @@ accept or reject them.  If accepted, the callbacks are connected, otherwise they
 <p>By default, callbacks can only be created by immortals: no one except the immortals can edit
 callbacks, and immortals don’t need validation.  It can easily be changed, either through settings
 or dynamically by changing permissions of users.</p>
-<p>The ingame-python contrib adds three <a class="reference internal" href="../Components/Permissions.html"><span class="doc std std-doc">permissions</span></a>) in the settings.  You can
+<p>The ingame-python contrib adds three <a class="reference internal" href="../Components/Permissions.html"><span class="std std-doc">permissions</span></a>) in the settings.  You can
 override them by changing the settings into your <code class="docutils literal notranslate"><span class="pre">server/conf/settings.py</span></code> file (see below for an
 example).  The settings defined in the events contrib are:</p>
 <ul class="simple">
@@ -349,7 +235,7 @@ users who have the <code class="docutils literal notranslate"><span class="pre">
 the <code class="docutils literal notranslate"><span class="pre">EVENTS_WITH_VALIDATION</span></code> setting will be able to call the command (with different switches).</p>
 </section>
 <section id="adding-the-call-command">
-<h3>Adding the <code class="docutils literal notranslate"><span class="pre">call</span></code> command<a class="headerlink" href="#adding-the-call-command" title="Permalink to this headline">¶</a></h3>
+<h3>Adding the <code class="docutils literal notranslate"><span class="pre">call</span></code> command<a class="headerlink" href="#adding-the-call-command" title="Link to this heading">¶</a></h3>
 <p>You also have to add the <code class="docutils literal notranslate"><span class="pre">&#64;call</span></code> command to your Character CmdSet.  This command allows your users
 to add, edit and delete callbacks in-game.  In your <code class="docutils literal notranslate"><span class="pre">commands/default_cmdsets</span></code>, it might look like
 this:</p>
@@ -374,7 +260,7 @@ this:</p>
 </div>
 </section>
 <section id="changing-parent-classes-of-typeclasses">
-<h3>Changing parent classes of typeclasses<a class="headerlink" href="#changing-parent-classes-of-typeclasses" title="Permalink to this headline">¶</a></h3>
+<h3>Changing parent classes of typeclasses<a class="headerlink" href="#changing-parent-classes-of-typeclasses" title="Link to this heading">¶</a></h3>
 <p>Finally, to use the in-game Python system, you need to have your typeclasses inherit from the modified event
 classes.  For instance, in your <code class="docutils literal notranslate"><span class="pre">typeclasses/characters.py</span></code> module, you should change inheritance
 like this:</p>
@@ -392,7 +278,7 @@ overriding hooks.</p>
 </section>
 </section>
 <section id="using-the-call-command">
-<h2>Using the <code class="docutils literal notranslate"><span class="pre">call</span></code> command<a class="headerlink" href="#using-the-call-command" title="Permalink to this headline">¶</a></h2>
+<h2>Using the <code class="docutils literal notranslate"><span class="pre">call</span></code> command<a class="headerlink" href="#using-the-call-command" title="Link to this heading">¶</a></h2>
 <p>The in-game Python system relies, to a great extent, on its <code class="docutils literal notranslate"><span class="pre">call</span></code> command.
 Who can execute this command, and who can do what with it, will depend on your
 set of permissions.</p>
@@ -401,7 +287,7 @@ system can be used on most Evennia objects, mostly typeclassed objects (excludin
 first argument of the <code class="docutils literal notranslate"><span class="pre">call</span></code> command is the name of the object you want to edit.  It can also be
 used to know what events are available for this specific object.</p>
 <section id="examining-callbacks-and-events">
-<h3>Examining callbacks and events<a class="headerlink" href="#examining-callbacks-and-events" title="Permalink to this headline">¶</a></h3>
+<h3>Examining callbacks and events<a class="headerlink" href="#examining-callbacks-and-events" title="Link to this heading">¶</a></h3>
 <p>To see the events connected to an object, use the <code class="docutils literal notranslate"><span class="pre">call</span></code> command and give the name or ID of the
 object to examine.  For instance, <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">here</span></code> to examine the events on your current location.  Or
 <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">self</span></code> to see the events on yourself.</p>
@@ -434,10 +320,10 @@ second column.</p></li>
 </div>
 </section>
 <section id="creating-a-new-callback">
-<h3>Creating a new callback<a class="headerlink" href="#creating-a-new-callback" title="Permalink to this headline">¶</a></h3>
+<h3>Creating a new callback<a class="headerlink" href="#creating-a-new-callback" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">/add</span></code> switch should be used to add a callback.  It takes two arguments beyond the object’s
 name/DBREF:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>After an = sign, the name of the event to be edited (if not supplied, will display the list of
 possible events, like above).</p></li>
 <li><p>The parameters (optional).</p></li>
@@ -480,7 +366,7 @@ exiting for this time.</p>
 - room: the room in which stands the character before moving.
 </pre></div>
 </div>
-<p>The section dedicated to <a class="reference internal" href="#the-eventfuncs"><span class="std std-doc">eventfuncs</span></a> will elaborate on the <code class="docutils literal notranslate"><span class="pre">deny()</span></code> function and
+<p>The section dedicated to <a class="reference internal" href="#the-eventfuncs">eventfuncs</a> will elaborate on the <code class="docutils literal notranslate"><span class="pre">deny()</span></code> function and
 other eventfuncs.  Let us say, for the time being, that it can prevent an action (in this case, it
 can prevent the character from traversing through this exit).  In the editor that opened when you
 used <code class="docutils literal notranslate"><span class="pre">call/add</span></code>, you can type something like:</p>
@@ -521,10 +407,10 @@ specific event.  Here, for instance:</p>
 difference.</p>
 </section>
 <section id="editing-and-removing-a-callback">
-<h3>Editing and removing a callback<a class="headerlink" href="#editing-and-removing-a-callback" title="Permalink to this headline">¶</a></h3>
+<h3>Editing and removing a callback<a class="headerlink" href="#editing-and-removing-a-callback" title="Link to this heading">¶</a></h3>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">/edit</span></code> switch to the <code class="docutils literal notranslate"><span class="pre">&#64;call</span></code> command to edit a callback.  You should provide, after
 the name of the object to edit and the equal sign:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The name of the event (as seen above).</p></li>
 <li><p>A number, if several callbacks are connected at this location.</p></li>
 </ol>
@@ -537,22 +423,22 @@ as the <code class="docutils literal notranslate"><span class="pre">/edit</span>
 <code class="docutils literal notranslate"><span class="pre">/del</span></code> was an error.</p>
 </section>
 <section id="the-code-editor">
-<h3>The code editor<a class="headerlink" href="#the-code-editor" title="Permalink to this headline">¶</a></h3>
+<h3>The code editor<a class="headerlink" href="#the-code-editor" title="Link to this heading">¶</a></h3>
 <p>When adding or editing a callback, the event editor should open in code mode.  The additional
 options supported by the editor in this mode are describe in <a class="reference external" href="https://github.com/evennia/evennia/wiki/EvEditor#the-eveditor-to-edit-code">a dedicated section of the EvEditor’s
 documentation</a>.</p>
 </section>
 </section>
 <section id="using-events">
-<h2>Using events<a class="headerlink" href="#using-events" title="Permalink to this headline">¶</a></h2>
+<h2>Using events<a class="headerlink" href="#using-events" title="Link to this heading">¶</a></h2>
 <p>The following sections describe how to use events for various tasks, from the most simple to the
 most complex.</p>
 <section id="the-eventfuncs">
-<h3>The eventfuncs<a class="headerlink" href="#the-eventfuncs" title="Permalink to this headline">¶</a></h3>
+<h3>The eventfuncs<a class="headerlink" href="#the-eventfuncs" title="Link to this heading">¶</a></h3>
 <p>In order to make development a little easier, the in-game Python system provides eventfuncs to be used in
 callbacks themselves.  You don’t have to use them, they are just shortcuts.  An eventfunc is just a
 simple function that can be used inside of your callback code.</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Function</p></th>
 <th class="head"><p>Argument</p></th>
@@ -579,7 +465,7 @@ simple function that can be used inside of your callback code.</p>
 </tbody>
 </table>
 <section id="deny">
-<h4>deny<a class="headerlink" href="#deny" title="Permalink to this headline">¶</a></h4>
+<h4>deny<a class="headerlink" href="#deny" title="Link to this heading">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">deny()</span></code> function allows to interrupt the callback and the action that called it.  In the
 <code class="docutils literal notranslate"><span class="pre">can_*</span></code> events, it can be used to prevent the action from happening.  For instance, in <code class="docutils literal notranslate"><span class="pre">can_say</span></code> on
 rooms, it can prevent the character from saying something in the room.  One could have a <code class="docutils literal notranslate"><span class="pre">can_eat</span></code>
@@ -588,15 +474,15 @@ event set on food that would prevent this character from eating this food.</p>
 handler of events.  The handler will then report that the action was cancelled.</p>
 </section>
 <section id="get">
-<h4>get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h4>
+<h4>get<a class="headerlink" href="#get" title="Link to this heading">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">get</span></code> eventfunc is a shortcut to get a single object with a specific identity.  It’s often used
-to retrieve an object with a given ID.  In the section dedicated to <a class="reference internal" href="#chained-events"><span class="std std-doc">chained
-events</span></a>, you will see a concrete example of this function in action.</p>
+to retrieve an object with a given ID.  In the section dedicated to <a class="reference internal" href="#chained-events">chained
+events</a>, you will see a concrete example of this function in action.</p>
 </section>
 <section id="call-event">
-<h4>call_event<a class="headerlink" href="#call-event" title="Permalink to this headline">¶</a></h4>
-<p>Some callbacks will call other events.  It is particularly useful for <a class="reference internal" href="#chained-events"><span class="std std-doc">chained
-events</span></a> that are described in a dedicated section.  This eventfunc is used to call
+<h4>call_event<a class="headerlink" href="#call-event" title="Link to this heading">¶</a></h4>
+<p>Some callbacks will call other events.  It is particularly useful for <a class="reference internal" href="#chained-events">chained
+events</a> that are described in a dedicated section.  This eventfunc is used to call
 another event, immediately or in a defined time.</p>
 <p>You need to specify as first parameter the object containing the event.  The second parameter is the
 name of the event to call.  The third parameter is the number of seconds before calling this event.
@@ -604,7 +490,7 @@ By default, this parameter is set to 0 (the event is called immediately).</p>
 </section>
 </section>
 <section id="variables-in-callbacks">
-<h3>Variables in callbacks<a class="headerlink" href="#variables-in-callbacks" title="Permalink to this headline">¶</a></h3>
+<h3>Variables in callbacks<a class="headerlink" href="#variables-in-callbacks" title="Link to this heading">¶</a></h3>
 <p>In the Python code you will enter in individual callbacks, you will have access to variables in your
 locals.  These variables will depend on the event, and will be clearly listed when you add or edit a
 callback.  As you’ve seen in the previous example, when we manipulate characters or character
@@ -656,7 +542,7 @@ this exit.</p>
 from it when the event has been executed.</p>
 </section>
 <section id="callbacks-with-parameters">
-<h3>Callbacks with parameters<a class="headerlink" href="#callbacks-with-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>Callbacks with parameters<a class="headerlink" href="#callbacks-with-parameters" title="Link to this heading">¶</a></h3>
 <p>Some callbacks are called without parameter.  It has been the case for all examples we have seen
 before.  In some cases, you can create callbacks that are triggered under only some conditions.  A
 typical example is the room’s “say” event.  This event is triggered when somebody says something in
@@ -690,7 +576,7 @@ callbacks, not all of them.</p>
 </div></blockquote>
 </section>
 <section id="time-related-events">
-<h3>Time-related events<a class="headerlink" href="#time-related-events" title="Permalink to this headline">¶</a></h3>
+<h3>Time-related events<a class="headerlink" href="#time-related-events" title="Link to this heading">¶</a></h3>
 <p>Events are usually linked to commands,  as we saw before.  However, this is not always the case.
 Events can be triggered by other actions and, as we’ll see later, could even be called from inside
 other events!</p>
@@ -735,7 +621,7 @@ random or frequent actions in events.</p>
 </div></blockquote>
 </section>
 <section id="chained-events">
-<h3>Chained events<a class="headerlink" href="#chained-events" title="Permalink to this headline">¶</a></h3>
+<h3>Chained events<a class="headerlink" href="#chained-events" title="Link to this heading">¶</a></h3>
 <p>Callbacks can call other events, either now or a bit later.  It is potentially very powerful.</p>
 <p>To use chained events, just use the <code class="docutils literal notranslate"><span class="pre">call_event</span></code> eventfunc.  It takes 2-3 arguments:</p>
 <ul class="simple">
@@ -778,7 +664,7 @@ is, but let’s only look at the part that opens and closes the doors:</p>
 </pre></div>
 </div>
 <p>This callback will:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Be called at 10:00 AM (specify 22:00 to set it to 10:00 PM).</p></li>
 <li><p>Set an exit between the subway and the station.  Notice that the exits already exist (you will
 not have to create them), but they don’t need to have specific location and destination.</p></li>
@@ -818,14 +704,14 @@ several chained events in the same object.</p>
 </section>
 </section>
 <section id="using-events-in-code">
-<h2>Using events in code<a class="headerlink" href="#using-events-in-code" title="Permalink to this headline">¶</a></h2>
+<h2>Using events in code<a class="headerlink" href="#using-events-in-code" title="Link to this heading">¶</a></h2>
 <p>This section describes callbacks and events from code, how to create new events, how to call them in
 a command, and how to handle specific cases like parameters.</p>
 <p>Along this section, we will see how to implement the following example: we would like to create a
 “push” command that could be used to push objects.  Objects could react to this command and have
 specific events fired.</p>
 <section id="adding-new-events">
-<h3>Adding new events<a class="headerlink" href="#adding-new-events" title="Permalink to this headline">¶</a></h3>
+<h3>Adding new events<a class="headerlink" href="#adding-new-events" title="Link to this heading">¶</a></h3>
 <p>Adding new events should be done in your typeclasses.  Events are contained in the <code class="docutils literal notranslate"><span class="pre">_events</span></code> class
 variable, a dictionary of event names as keys, and tuples to describe these events as values.  You
 also need to register this class, to tell the in-game Python system that it contains events to be added to
@@ -881,7 +767,7 @@ should see the “push” event with its help.  Of course, right now, the event 
 fired.</p>
 </section>
 <section id="calling-an-event-in-code">
-<h3>Calling an event in code<a class="headerlink" href="#calling-an-event-in-code" title="Permalink to this headline">¶</a></h3>
+<h3>Calling an event in code<a class="headerlink" href="#calling-an-event-in-code" title="Link to this heading">¶</a></h3>
 <p>The in-game Python system is accessible through a handler on all objects.  This handler is named <code class="docutils literal notranslate"><span class="pre">callbacks</span></code>
 and can be accessed from any typeclassed object (your character, a room, an exit…).  This handler
 offers several methods to examine and call an event or callback on this object.</p>
@@ -889,7 +775,7 @@ offers several methods to examine and call an event or callback on this object.<
 <ul class="simple">
 <li><p>The name of the event to call.</p></li>
 <li><p>All variables that will be accessible in the event as positional arguments.  They should be
-specified in the order chosen when <a class="reference internal" href="#adding-new-events"><span class="std std-doc">creating new events</span></a>.</p></li>
+specified in the order chosen when <a class="reference internal" href="#adding-new-events">creating new events</a>.</p></li>
 </ul>
 <p>Following the same example, so far, we have created an event on all objects, called “push”.  This
 event is never fired for the time being.  We could add a “push” command, taking as argument the name
@@ -937,7 +823,7 @@ of an object.  If this object is valid, it will call its “push” event.</p>
 who pushed the object), and the “obj” variable (containing the object that was pushed).</p>
 </section>
 <section id="see-it-all-work">
-<h3>See it all work<a class="headerlink" href="#see-it-all-work" title="Permalink to this headline">¶</a></h3>
+<h3>See it all work<a class="headerlink" href="#see-it-all-work" title="Link to this heading">¶</a></h3>
 <p>To see the effect of the two modifications above (the added event and the “push” command), let us
 create a simple object:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>@create/drop rock
@@ -957,7 +843,7 @@ create a simple object:</p>
 see a message about a “beautiful ant-hill”.</p>
 </section>
 <section id="adding-new-eventfuncs">
-<h3>Adding new eventfuncs<a class="headerlink" href="#adding-new-eventfuncs" title="Permalink to this headline">¶</a></h3>
+<h3>Adding new eventfuncs<a class="headerlink" href="#adding-new-eventfuncs" title="Link to this heading">¶</a></h3>
 <p>Eventfuncs, like <code class="docutils literal notranslate"><span class="pre">deny()</span></code>, are defined in
 <code class="docutils literal notranslate"><span class="pre">contrib/base_systesm/ingame_python/eventfuncs.py</span></code>.  You can add your own
 eventfuncs by creating a file named <code class="docutils literal notranslate"><span class="pre">eventfuncs.py</span></code> in your <code class="docutils literal notranslate"><span class="pre">world</span></code> directory.
@@ -973,7 +859,7 @@ Python paths in which your helper functions are defined.  For instance:</p>
 </div>
 </section>
 <section id="creating-events-with-parameters">
-<h3>Creating events with parameters<a class="headerlink" href="#creating-events-with-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>Creating events with parameters<a class="headerlink" href="#creating-events-with-parameters" title="Link to this heading">¶</a></h3>
 <p>If you want to create events with parameters (if you create a “whisper” or “ask” command, for
 instance, and need to have some characters automatically react to words), you can set an additional
 argument in the tuple of events in your typeclass’ <code class="docutils literal notranslate"><span class="pre">_events</span></code> class variable.  This third argument
@@ -1014,7 +900,7 @@ able to know how to filter down the list of callbacks.</p>
 </section>
 </section>
 <section id="disabling-all-events-at-once">
-<h2>Disabling all events at once<a class="headerlink" href="#disabling-all-events-at-once" title="Permalink to this headline">¶</a></h2>
+<h2>Disabling all events at once<a class="headerlink" href="#disabling-all-events-at-once" title="Link to this heading">¶</a></h2>
 <p>When callbacks are running in an infinite loop, for instance, or sending unwanted information to
 players or other sources, you, as the game administrator, have the power to restart without events.
 The best way to do this is to use a custom setting, in your setting file
@@ -1034,12 +920,138 @@ file will be overwritten, so edit that file rather than this one.</small></p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Evennia in-game Python system</a><ul>
+<li><a class="reference internal" href="#a-warning-regarding-security">A WARNING REGARDING SECURITY</a></li>
+<li><a class="reference internal" href="#extra-tutorials">Extra tutorials</a></li>
+<li><a class="reference internal" href="#basic-structure-and-vocabulary">Basic structure and vocabulary</a></li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#starting-the-event-script">Starting the event script</a></li>
+<li><a class="reference internal" href="#editing-permissions">Editing permissions</a></li>
+<li><a class="reference internal" href="#adding-the-call-command">Adding the <code class="docutils literal notranslate"><span class="pre">call</span></code> command</a></li>
+<li><a class="reference internal" href="#changing-parent-classes-of-typeclasses">Changing parent classes of typeclasses</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-call-command">Using the <code class="docutils literal notranslate"><span class="pre">call</span></code> command</a><ul>
+<li><a class="reference internal" href="#examining-callbacks-and-events">Examining callbacks and events</a></li>
+<li><a class="reference internal" href="#creating-a-new-callback">Creating a new callback</a></li>
+<li><a class="reference internal" href="#editing-and-removing-a-callback">Editing and removing a callback</a></li>
+<li><a class="reference internal" href="#the-code-editor">The code editor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-events">Using events</a><ul>
+<li><a class="reference internal" href="#the-eventfuncs">The eventfuncs</a><ul>
+<li><a class="reference internal" href="#deny">deny</a></li>
+<li><a class="reference internal" href="#get">get</a></li>
+<li><a class="reference internal" href="#call-event">call_event</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#variables-in-callbacks">Variables in callbacks</a></li>
+<li><a class="reference internal" href="#callbacks-with-parameters">Callbacks with parameters</a></li>
+<li><a class="reference internal" href="#time-related-events">Time-related events</a></li>
+<li><a class="reference internal" href="#chained-events">Chained events</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-events-in-code">Using events in code</a><ul>
+<li><a class="reference internal" href="#adding-new-events">Adding new events</a></li>
+<li><a class="reference internal" href="#calling-an-event-in-code">Calling an event in code</a></li>
+<li><a class="reference internal" href="#see-it-all-work">See it all work</a></li>
+<li><a class="reference internal" href="#adding-new-eventfuncs">Adding new eventfuncs</a></li>
+<li><a class="reference internal" href="#creating-events-with-parameters">Creating events with parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#disabling-all-events-at-once">Disabling all events at once</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Contrib-Godotwebsocket.html"
+                          title="previous chapter">Godot Websocket</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Contrib-Ingame-Python-Tutorial-Dialogue.html"
+                          title="next chapter">Dialogues in events</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Contribs/Contrib-Ingame-Python.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1054,17 +1066,14 @@ file will be overwritten, so edit that file rather than this one.</small></p>
         <li class="right" >
           <a href="Contrib-Godotwebsocket.html" title="Godot Websocket"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Evennia in-game Python system</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

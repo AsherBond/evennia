@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Coding using Version Control &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Debugging" href="Debugging.html" />
     <link rel="prev" title="Soft Code" href="Soft-Code.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,119 +33,27 @@
         <li class="right" >
           <a href="Soft-Code.html" title="Soft Code"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Coding-Overview.html" accesskey="U">Coding and development help</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Coding using Version Control</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Coding using Version Control</a><ul>
-<li><a class="reference internal" href="#setting-up-git">Setting up Git</a></li>
-<li><a class="reference internal" href="#common-git-commands">Common Git commands</a><ul>
-<li><a class="reference internal" href="#git-init"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></a></li>
-<li><a class="reference internal" href="#git-add"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></a></li>
-<li><a class="reference internal" href="#git-commit"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code></a></li>
-<li><a class="reference internal" href="#git-status-git-diff-and-git-log"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></a></li>
-<li><a class="reference internal" href="#git-branch-checkout-and-merge"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code>, <code class="docutils literal notranslate"><span class="pre">checkout</span></code> and <code class="docutils literal notranslate"><span class="pre">merge</span></code></a></li>
-<li><a class="reference internal" href="#git-glone-git-push-and-git-pull"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">glone</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></a></li>
-<li><a class="reference internal" href="#other-git-commands">Other git commands</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#putting-your-game-dir-under-version-control">Putting your game dir under version control</a><ul>
-<li><a class="reference internal" href="#pushing-your-code-online">Pushing your code online</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#contributing-to-evennia">Contributing to Evennia</a><ul>
-<li><a class="reference internal" href="#fixing-an-evennia-bug-or-feature">Fixing an Evennia bug or feature</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
-<li><a class="reference internal" href="#getting-403-forbidden-access">Getting 403: Forbidden access</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Soft-Code.html"
-                        title="previous chapter">Soft Code</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Debugging.html"
-                        title="next chapter">Debugging</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Coding/Version-Control.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Version-Control.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="coding-using-version-control">
-<h1>Coding using Version Control<a class="headerlink" href="#coding-using-version-control" title="Permalink to this headline">¶</a></h1>
+<h1>Coding using Version Control<a class="headerlink" href="#coding-using-version-control" title="Link to this heading">¶</a></h1>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Version_control">Version control</a> allows you to track changes to your code. You can save ‘snapshots’ of your progress which means you can roll back undo things easily. Version control also allows you to easily back up your code to an online <em>repository</em> such as Github. It also allows you to collaborate with others on the same code without clashing or worry about who changed what.</p>
 <aside class="sidebar">
 <p class="sidebar-title">Do it!</p>
-<p>It’s <em>strongly</em> recommended that you <a class="reference internal" href="#putting-your-game-dir-under-version-control"><span class="std std-doc">put your game folder under version control</span></a>. Using git is is also the way to contribue to Evennia itself.</p>
+<p>It’s <em>strongly</em> recommended that you <a class="reference internal" href="#putting-your-game-dir-under-version-control">put your game folder under version control</a>. Using git is is also the way to contribue to Evennia itself.</p>
 </aside>
 <p>Evennia uses the most commonly used version control system, <a class="reference external" href="https://git-scm.com/">Git</a> .  For additional help on using Git, please refer to the <a class="reference external" href="https://help.github.com/articles/set-up-git#platform-all">Official GitHub documentation</a>.</p>
 <section id="setting-up-git">
-<h2>Setting up Git<a class="headerlink" href="#setting-up-git" title="Permalink to this headline">¶</a></h2>
+<h2>Setting up Git<a class="headerlink" href="#setting-up-git" title="Link to this heading">¶</a></h2>
 <ul>
 <li><p><strong>Fedora Linux</strong></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  yum install git-core
@@ -174,7 +76,7 @@
 <p>If you ever make your code available online (or contribute to Evennia), your name will be visible to those reading the code-commit history. So if you are not comfortable with using your real, full name online, put a nickname (or your github handler) here.</p>
 </aside>
 <p>To avoid a common issue later, you will need to set a couple of settings; first you will need to tell Git your username, followed by your e-mail address, so that when you commit code later you will be properly credited.</p>
-<ol>
+<ol class="arabic">
 <li><p>Set the default name for git to use when you commit:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> git config --global user.name &quot;Your Name Here&quot;
 </pre></div>
@@ -191,7 +93,7 @@
 </div></blockquote>
 </section>
 <section id="common-git-commands">
-<h2>Common Git commands<a class="headerlink" href="#common-git-commands" title="Permalink to this headline">¶</a></h2>
+<h2>Common Git commands<a class="headerlink" href="#common-git-commands" title="Link to this heading">¶</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">Git repository</p>
 <p>This is just a fancy name for the folder you have designated to be under version control. We will make your <code class="docutils literal notranslate"><span class="pre">mygame</span></code> game folder into such a repository. The Evennia code  is also in a (separate) git repository.</p>
@@ -200,7 +102,7 @@
 <p>All these actions need to be done from inside the <em>git repository</em> .</p>
 <p>Git may seem daunting at first. But when working with git, you’ll be using the same 2-3 commands 99% of the time. And you can make git <em>aliases</em> to have them be even easier to remember.</p>
 <section id="git-init">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code><a class="headerlink" href="#git-init" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code><a class="headerlink" href="#git-init" title="Link to this heading">¶</a></h3>
 <p>This initializes a folder/directory on your drive as a ‘git repository’</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git init .
 </pre></div>
@@ -208,7 +110,7 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">.</span></code> means to apply to the current directory. If you are inside <code class="docutils literal notranslate"><span class="pre">mygame</span></code>, this makes your game dir into a git repository. That’s all there is to it, really. You only need to do this once.</p>
 </section>
 <section id="git-add">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code><a class="headerlink" href="#git-add" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code><a class="headerlink" href="#git-add" title="Link to this heading">¶</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git add &lt;file&gt; 
 </pre></div>
 </div>
@@ -223,7 +125,7 @@
 <p>All files in the current directory are now tracked by Git. You only need to do this once for every file you want to track.</p>
 </section>
 <section id="git-commit">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code><a class="headerlink" href="#git-commit" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code><a class="headerlink" href="#git-commit" title="Link to this heading">¶</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git commit -a -m &quot;This is the initial commit&quot;
 </pre></div>
 </div>
@@ -239,7 +141,7 @@
 <p>Much easier to remember!</p>
 </section>
 <section id="git-status-git-diff-and-git-log">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code><a class="headerlink" href="#git-status-git-diff-and-git-log" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code><a class="headerlink" href="#git-status-git-diff-and-git-log" title="Link to this heading">¶</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git status -s 
 </pre></div>
 </div>
@@ -272,7 +174,7 @@ git ls    # log with pretty formatting
 <p>for these useful functions.</p>
 </section>
 <section id="git-branch-checkout-and-merge">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code>, <code class="docutils literal notranslate"><span class="pre">checkout</span></code> and <code class="docutils literal notranslate"><span class="pre">merge</span></code><a class="headerlink" href="#git-branch-checkout-and-merge" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code>, <code class="docutils literal notranslate"><span class="pre">checkout</span></code> and <code class="docutils literal notranslate"><span class="pre">merge</span></code><a class="headerlink" href="#git-branch-checkout-and-merge" title="Link to this heading">¶</a></h3>
 <p>Git allows you to work with <em>branches</em>. These are separate development paths your code may take, completely separate from each other. You can later <em>merge</em> the code from a branch back into another branch. Evennia’s <code class="docutils literal notranslate"><span class="pre">main</span></code> and <code class="docutils literal notranslate"><span class="pre">develop</span></code> branches are examples of this.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git branch -b branchaname 
 </pre></div>
@@ -304,15 +206,15 @@ git ls    # log with pretty formatting
 <p>This <em>merges</em> the code from <code class="docutils literal notranslate"><span class="pre">branchname</span></code> into the branch you are currently in. Doing so may lead to <em>merge conflicts</em> if the same code changed in different ways in the two branches. See <a class="reference external" href="https://phoenixnap.com/kb/how-to-resolve-merge-conflicts-in-git">how to resolve merge conflicts in git</a> for more help.</p>
 </section>
 <section id="git-glone-git-push-and-git-pull">
-<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">glone</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code><a class="headerlink" href="#git-glone-git-push-and-git-pull" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">glone</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code><a class="headerlink" href="#git-glone-git-push-and-git-pull" title="Link to this heading">¶</a></h3>
 <p>All of these other commands have dealt with code only sitting in your local repository-folder. These commands instead allows you to exchange code with a <em>remote</em> repository - usually one that is online (like on github).</p>
 <blockquote>
-<div><p>How you actually set up a remote repository is described <a class="reference internal" href="#pushing-your-code-online"><span class="std std-doc">in the next section</span></a>.</p>
+<div><p>How you actually set up a remote repository is described <a class="reference internal" href="#pushing-your-code-online">in the next section</a>.</p>
 </div></blockquote>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone repository/path
 </pre></div>
 </div>
-<p>This copies the remote repository to your current location. If you used the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="doc std std-doc">Git installation instructions</span></a> to install Evennia, this is what you used to get your local copy of the Evennia repository.</p>
+<p>This copies the remote repository to your current location. If you used the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="std std-doc">Git installation instructions</span></a> to install Evennia, this is what you used to get your local copy of the Evennia repository.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git pull
 </pre></div>
 </div>
@@ -323,7 +225,7 @@ git ls    # log with pretty formatting
 <p>This uploads your local changes <em>of your current branch</em> to the same-named branch on the remote repository. To be able to do this you must have write-permissions to the remote repository.</p>
 </section>
 <section id="other-git-commands">
-<h3>Other git commands<a class="headerlink" href="#other-git-commands" title="Permalink to this headline">¶</a></h3>
+<h3>Other git commands<a class="headerlink" href="#other-git-commands" title="Link to this heading">¶</a></h3>
 <p>There are <em>many</em> other git commands. Read up on them online:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git reflog 
 </pre></div>
@@ -343,7 +245,7 @@ git ls    # log with pretty formatting
 </section>
 </section>
 <section id="putting-your-game-dir-under-version-control">
-<h2>Putting your game dir under version control<a class="headerlink" href="#putting-your-game-dir-under-version-control" title="Permalink to this headline">¶</a></h2>
+<h2>Putting your game dir under version control<a class="headerlink" href="#putting-your-game-dir-under-version-control" title="Link to this heading">¶</a></h2>
 <p>This makes use  of the git commands listed in the previous section.</p>
 <aside class="sidebar">
 <p class="sidebar-title">git aliases</p>
@@ -364,7 +266,7 @@ in <code class="docutils literal notranslate"><span class="pre">.gitignore</span
 lies madness and a good chance you’ll confuse yourself. Make one mistake or local change and after a few commits and reverts you will have lost track of what is in your database or not. If you want to backup your SQlite3 database, do so by simply copying the database file to a safe location.</p>
 </div>
 <section id="pushing-your-code-online">
-<h3>Pushing your code online<a class="headerlink" href="#pushing-your-code-online" title="Permalink to this headline">¶</a></h3>
+<h3>Pushing your code online<a class="headerlink" href="#pushing-your-code-online" title="Link to this heading">¶</a></h3>
 <p>So far your code is only located on your private machine. A good idea is to back it up online. The easiest way to do this is to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> it to your own remote repository on GitHub. So for this you need a (free) Github account.</p>
 <p>If you don’t want your code to be publicly visible, Github also allows you set up a <em>private</em> repository, only visible to you.</p>
 <p>Create a new, empty repository on Github. <a class="reference external" href="https://help.github.com/articles/create-a-repo/">Github explains how here</a> . <em>Don’t</em> allow it to add a README, license etc, that will just clash with what we upload later.</p>
@@ -386,17 +288,17 @@ lies madness and a good chance you’ll confuse yourself. Make one mistake or lo
 </section>
 </section>
 <section id="contributing-to-evennia">
-<h2>Contributing to Evennia<a class="headerlink" href="#contributing-to-evennia" title="Permalink to this headline">¶</a></h2>
-<p>If you want to help contributing to Evennia you must do so by <em>forking</em> - making your own remote copy of the Evennia repository on Github. So for this, you need a (free) Github account. Doing so is a completely separate process from <a class="reference internal" href="#putting-your-game-dir-under-version-control"><span class="std std-doc">putting your game dir under version control</span></a> (which you should also do!).</p>
+<h2>Contributing to Evennia<a class="headerlink" href="#contributing-to-evennia" title="Link to this heading">¶</a></h2>
+<p>If you want to help contributing to Evennia you must do so by <em>forking</em> - making your own remote copy of the Evennia repository on Github. So for this, you need a (free) Github account. Doing so is a completely separate process from <a class="reference internal" href="#putting-your-game-dir-under-version-control">putting your game dir under version control</a> (which you should also do!).</p>
 <p>At the top right of <a class="reference external" href="https://github.com/evennia/evennia">the evennia github page</a>, click the “Fork” button:</p>
 <p><img alt="fork button" src="../_images/fork_button.png" /></p>
 <p>This will create a new online fork Evennia under your github account.</p>
-<p>The fork only exists online as of yet. In a terminal, <code class="docutils literal notranslate"><span class="pre">cd</span></code> to  the folder you wish to develop in. This folder should <em>not</em> be your game dir, nor the place you cloned Evennia into if you used the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="doc std std-doc">Git installation</span></a>.</p>
+<p>The fork only exists online as of yet. In a terminal, <code class="docutils literal notranslate"><span class="pre">cd</span></code> to  the folder you wish to develop in. This folder should <em>not</em> be your game dir, nor the place you cloned Evennia into if you used the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="std std-doc">Git installation</span></a>.</p>
 <p>From this directory run the following command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/yourusername/evennia.git evennia
 </pre></div>
 </div>
-<p>This will download your fork to your computer. It creates a new folder <code class="docutils literal notranslate"><span class="pre">evennia/</span></code> at your current location. If you installed Evennia using the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="doc std std-doc">Git installation</span></a>, this folder will be identical in content to the <code class="docutils literal notranslate"><span class="pre">evennia</span></code> folder you cloned during that installation. The difference is that this repo is connected to your remote fork and not to the ‘original’ <em>upstream</em> Evennia.</p>
+<p>This will download your fork to your computer. It creates a new folder <code class="docutils literal notranslate"><span class="pre">evennia/</span></code> at your current location. If you installed Evennia using the <a class="reference internal" href="../Setup/Installation-Git.html"><span class="std std-doc">Git installation</span></a>, this folder will be identical in content to the <code class="docutils literal notranslate"><span class="pre">evennia</span></code> folder you cloned during that installation. The difference is that this repo is connected to your remote fork and not to the ‘original’ <em>upstream</em> Evennia.</p>
 <p>When we cloned our fork, git automatically set up a ‘remote repository’ labeled <code class="docutils literal notranslate"><span class="pre">origin</span></code> pointing to it. So if we do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>, we’ll push to our fork.</p>
 <p>We now want to add a second remote repository linked to the original Evennia repo. We will label this remote repository <code class="docutils literal notranslate"><span class="pre">upstream</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd evennia
@@ -423,13 +325,13 @@ git checkout develop
 <p>You can’t do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">upstream</span></code> unless you have write-access to the upstream Evennia repository. So there is no risk of you accidentally pushing your own code into the main, public repository.</p>
 </aside>
 <section id="fixing-an-evennia-bug-or-feature">
-<h3>Fixing an Evennia bug or feature<a class="headerlink" href="#fixing-an-evennia-bug-or-feature" title="Permalink to this headline">¶</a></h3>
+<h3>Fixing an Evennia bug or feature<a class="headerlink" href="#fixing-an-evennia-bug-or-feature" title="Link to this heading">¶</a></h3>
 <p>This should be done in your fork of Evennia. You should <em>always</em> do this in a <em>separate git branch</em> based off the Evennia branch you want to improve.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout main (or develop)
 git branch -b myfixbranch
 </pre></div>
 </div>
-<p>Now fix whatever needs fixing. Abide by the <a class="reference internal" href="Evennia-Code-Style.html"><span class="doc std std-doc">Evennia code style</span></a>. You can <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> commit your changes along the way as normal.</p>
+<p>Now fix whatever needs fixing. Abide by the <a class="reference internal" href="Evennia-Code-Style.html"><span class="std std-doc">Evennia code style</span></a>. You can <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> commit your changes along the way as normal.</p>
 <p>Upstream Evennia is not standing still, so you want to make sure that your work is up-to-date with upstream changes. Make sure to first commit your <code class="docutils literal notranslate"><span class="pre">myfixbranch</span></code> changes, then</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout main (or develop)
 git pull upstream 
@@ -445,7 +347,7 @@ one else can see it.</p>
 <p>This will automatically create a matching <code class="docutils literal notranslate"><span class="pre">myfixbranch</span></code> in your forked version of Evennia and push to it. On github you will be able to see appear it in the <code class="docutils literal notranslate"><span class="pre">branches</span></code> dropdown. You can keep pushing to your remote <code class="docutils literal notranslate"><span class="pre">myfixbranch</span></code> as much as you like.</p>
 <p>Once you feel you have something to share, you need to <a class="reference external" href="https://github.com/evennia/evennia/pulls">create a pull request</a> (PR):
 This is a formal request for upstream Evennia to adopt and pull your code into the main repository.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">pull</span> <span class="pre">request</span></code></p></li>
 <li><p>Choose <code class="docutils literal notranslate"><span class="pre">compare</span> <span class="pre">across</span> <span class="pre">forks</span></code></p></li>
 <li><p>Select your fork from dropdown list of <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">repository</span></code> repos. Pick the right branch to <code class="docutils literal notranslate"><span class="pre">compare</span></code>.</p></li>
@@ -461,9 +363,9 @@ This is a formal request for upstream Evennia to adopt and pull your code into t
 </section>
 </section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
 <section id="getting-403-forbidden-access">
-<h3>Getting 403: Forbidden access<a class="headerlink" href="#getting-403-forbidden-access" title="Permalink to this headline">¶</a></h3>
+<h3>Getting 403: Forbidden access<a class="headerlink" href="#getting-403-forbidden-access" title="Link to this heading">¶</a></h3>
 <p>Some users have experienced this on <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to their remote repository. They are not asked for username/password (and don’t have a ssh key set up).</p>
 <p>Some users have reported that the workaround is to create a file <code class="docutils literal notranslate"><span class="pre">.netrc</span></code> under your home directory and add your github credentials there:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>machine<span class="w"> </span>github.com
@@ -476,12 +378,122 @@ password<span class="w"> </span>&lt;my_github_password&gt;
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Coding using Version Control</a><ul>
+<li><a class="reference internal" href="#setting-up-git">Setting up Git</a></li>
+<li><a class="reference internal" href="#common-git-commands">Common Git commands</a><ul>
+<li><a class="reference internal" href="#git-init"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></a></li>
+<li><a class="reference internal" href="#git-add"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></a></li>
+<li><a class="reference internal" href="#git-commit"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code></a></li>
+<li><a class="reference internal" href="#git-status-git-diff-and-git-log"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></a></li>
+<li><a class="reference internal" href="#git-branch-checkout-and-merge"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code>, <code class="docutils literal notranslate"><span class="pre">checkout</span></code> and <code class="docutils literal notranslate"><span class="pre">merge</span></code></a></li>
+<li><a class="reference internal" href="#git-glone-git-push-and-git-pull"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">glone</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></a></li>
+<li><a class="reference internal" href="#other-git-commands">Other git commands</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#putting-your-game-dir-under-version-control">Putting your game dir under version control</a><ul>
+<li><a class="reference internal" href="#pushing-your-code-online">Pushing your code online</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributing-to-evennia">Contributing to Evennia</a><ul>
+<li><a class="reference internal" href="#fixing-an-evennia-bug-or-feature">Fixing an Evennia bug or feature</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li><a class="reference internal" href="#getting-403-forbidden-access">Getting 403: Forbidden access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Soft-Code.html"
+                          title="previous chapter">Soft Code</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Debugging.html"
+                          title="next chapter">Debugging</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Coding/Version-Control.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -496,17 +508,14 @@ password<span class="w"> </span>&lt;my_github_password&gt;
         <li class="right" >
           <a href="Soft-Code.html" title="Soft Code"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Coding-Overview.html" >Coding and development help</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Coding using Version Control</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

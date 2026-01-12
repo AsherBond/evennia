@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.contrib.game_systems.achievements.tests &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.contrib.game_systems.barter" href="evennia.contrib.game_systems.barter.html" />
     <link rel="prev" title="evennia.contrib.game_systems.achievements.achievements" href="evennia.contrib.game_systems.achievements.achievements.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.contrib.game_systems.achievements.achievements.html" title="evennia.contrib.game_systems.achievements.achievements"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -51,29 +45,116 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-evennia.contrib.game_systems.achievements.tests">
+<span id="evennia-contrib-game-systems-achievements-tests"></span><h1>evennia.contrib.game_systems.achievements.tests<a class="headerlink" href="#module-evennia.contrib.game_systems.achievements.tests" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchievements">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.game_systems.achievements.tests.</span></span><span class="sig-name descname"><span class="pre">TestAchievements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.utils.test_resources.html#evennia.utils.test_resources.BaseEvenniaTest" title="evennia.utils.test_resources.BaseEvenniaTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEvenniaTest</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_completion">
+<span class="sig-name descname"><span class="pre">test_completion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_completion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_completion" title="Link to this definition">¶</a></dt>
+<dd><p>no defined count means a single match completes it</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_counter_progress">
+<span class="sig-name descname"><span class="pre">test_counter_progress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_counter_progress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_counter_progress" title="Link to this definition">¶</a></dt>
+<dd><p>progressing a counter should update the achiever</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_prereqs">
+<span class="sig-name descname"><span class="pre">test_prereqs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_prereqs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_prereqs" title="Link to this definition">¶</a></dt>
+<dd><p>verify progress is not counted on achievements with unmet prerequisites</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_separate_tracking">
+<span class="sig-name descname"><span class="pre">test_separate_tracking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_separate_tracking"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_separate_tracking" title="Link to this definition">¶</a></dt>
+<dd><p>achievements with ‘tracking_type’: ‘separate’ should count progress for each item</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_search_achievement">
+<span class="sig-name descname"><span class="pre">test_search_achievement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_search_achievement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_search_achievement" title="Link to this definition">¶</a></dt>
+<dd><p>searching for achievements by name</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchieveCommand">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.game_systems.achievements.tests.</span></span><span class="sig-name descname"><span class="pre">TestAchieveCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchieveCommand"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.utils.test_resources.html#evennia.utils.test_resources.BaseEvenniaCommandTest" title="evennia.utils.test_resources.BaseEvenniaCommandTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEvenniaCommandTest</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_switches">
+<span class="sig-name descname"><span class="pre">test_switches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchieveCommand.test_switches"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_switches" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_search">
+<span class="sig-name descname"><span class="pre">test_search</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchieveCommand.test_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_search" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
             </a></p>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.contrib.game_systems.achievements.achievements.html"
-                        title="previous chapter">evennia.contrib.game_systems.achievements.achievements</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.contrib.game_systems.barter.html"
-                        title="next chapter">evennia.contrib.game_systems.barter</a></p>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.contrib.game_systems.achievements.tests</a><ul>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements"><code class="docutils literal notranslate"><span class="pre">TestAchievements</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_completion"><code class="docutils literal notranslate"><span class="pre">TestAchievements.test_completion()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_counter_progress"><code class="docutils literal notranslate"><span class="pre">TestAchievements.test_counter_progress()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_prereqs"><code class="docutils literal notranslate"><span class="pre">TestAchievements.test_prereqs()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_separate_tracking"><code class="docutils literal notranslate"><span class="pre">TestAchievements.test_separate_tracking()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_search_achievement"><code class="docutils literal notranslate"><span class="pre">TestAchievements.test_search_achievement()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand"><code class="docutils literal notranslate"><span class="pre">TestAchieveCommand</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_switches"><code class="docutils literal notranslate"><span class="pre">TestAchieveCommand.test_switches()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_search"><code class="docutils literal notranslate"><span class="pre">TestAchieveCommand.test_search()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.contrib.game_systems.achievements.achievements.html"
+                          title="previous chapter">evennia.contrib.game_systems.achievements.achievements</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.contrib.game_systems.barter.html"
+                          title="next chapter">evennia.contrib.game_systems.barter</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <!--h3>This Page</h3-->
     <ul class="this-page-menu">
@@ -95,91 +176,42 @@
 <h3>Doc Versions</h3>
 <ul>
   
-    <li><a href="evennia.contrib.game_systems.achievements.tests.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
   
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
   
-
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
 </ul>
 
         </div>
       </div>
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="module-evennia.contrib.game_systems.achievements.tests">
-<span id="evennia-contrib-game-systems-achievements-tests"></span><h1>evennia.contrib.game_systems.achievements.tests<a class="headerlink" href="#module-evennia.contrib.game_systems.achievements.tests" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchievements">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.game_systems.achievements.tests.</code><code class="sig-name descname">TestAchievements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.utils.test_resources.html#evennia.utils.test_resources.BaseEvenniaTest" title="evennia.utils.test_resources.BaseEvenniaTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.utils.test_resources.BaseEvenniaTest</span></code></a></p>
-<dl class="py method">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_completion">
-<code class="sig-name descname">test_completion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_completion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_completion" title="Permalink to this definition">¶</a></dt>
-<dd><p>no defined count means a single match completes it</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_counter_progress">
-<code class="sig-name descname">test_counter_progress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_counter_progress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_counter_progress" title="Permalink to this definition">¶</a></dt>
-<dd><p>progressing a counter should update the achiever</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_prereqs">
-<code class="sig-name descname">test_prereqs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_prereqs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_prereqs" title="Permalink to this definition">¶</a></dt>
-<dd><p>verify progress is not counted on achievements with unmet prerequisites</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_separate_tracking">
-<code class="sig-name descname">test_separate_tracking</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_separate_tracking"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_separate_tracking" title="Permalink to this definition">¶</a></dt>
-<dd><p>achievements with ‘tracking_type’: ‘separate’ should count progress for each item</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchievements.test_search_achievement">
-<code class="sig-name descname">test_search_achievement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchievements.test_search_achievement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchievements.test_search_achievement" title="Permalink to this definition">¶</a></dt>
-<dd><p>searching for achievements by name</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchieveCommand">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.game_systems.achievements.tests.</code><code class="sig-name descname">TestAchieveCommand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchieveCommand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.utils.test_resources.html#evennia.utils.test_resources.BaseEvenniaCommandTest" title="evennia.utils.test_resources.BaseEvenniaCommandTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.utils.test_resources.BaseEvenniaCommandTest</span></code></a></p>
-<dl class="py method">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_switches">
-<code class="sig-name descname">test_switches</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchieveCommand.test_switches"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_switches" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_search">
-<code class="sig-name descname">test_search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/game_systems/achievements/tests.html#TestAchieveCommand.test_search"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.game_systems.achievements.tests.TestAchieveCommand.test_search" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</section>
-
-
-          </div>
-        </div>
-      </div>
-
+      <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -194,7 +226,7 @@
         <li class="right" >
           <a href="evennia.contrib.game_systems.achievements.achievements.html" title="evennia.contrib.game_systems.achievements.achievements"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -204,12 +236,9 @@
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.game_systems.achievements.tests</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

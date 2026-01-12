@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Attributes &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Nicks" href="Nicks.html" />
     <link rel="prev" title="Msg" href="Msg.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,130 +33,41 @@
         <li class="right" >
           <a href="Msg.html" title="Msg"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" accesskey="U">Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Attributes</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Attributes</a><ul>
-<li><a class="reference internal" href="#working-with-attributes">Working with Attributes</a><ul>
-<li><a class="reference internal" href="#using-db">Using .db</a></li>
-<li><a class="reference internal" href="#using-attributes">Using .attributes</a></li>
-<li><a class="reference internal" href="#using-attributeproperty">Using AttributeProperty</a></li>
-<li><a class="reference internal" href="#properties-of-attributes">Properties of Attributes</a></li>
-<li><a class="reference internal" href="#managing-attributes-in-game">Managing Attributes in-game</a></li>
-<li><a class="reference internal" href="#locking-and-checking-attributes">Locking and checking Attributes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#querying-by-attribute">Querying by Attribute</a></li>
-<li><a class="reference internal" href="#what-types-of-data-can-i-save-in-an-attribute">What types of data can I save in an Attribute?</a><ul>
-<li><a class="reference internal" href="#storing-single-objects">Storing single objects</a></li>
-<li><a class="reference internal" href="#storing-multiple-objects">Storing multiple objects</a></li>
-<li><a class="reference internal" href="#retrieving-mutable-objects">Retrieving Mutable objects</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#in-memory-attributes-nattributes">In-memory Attributes (NAttributes)</a><ul>
-<li><a class="reference internal" href="#persistent-vs-non-persistent">Persistent vs non-persistent</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Msg.html"
-                        title="previous chapter">Msg</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Nicks.html"
-                        title="next chapter">Nicks</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Components/Attributes.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Attributes.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="attributes">
-<h1>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h1>
+<h1>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h1>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-text">In-game</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">In-game</span><a class="headerlink" href="#id1" title="Link to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="nb">set</span> <span class="n">obj</span><span class="o">/</span><span class="n">myattr</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">In-code, using the .db wrapper</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">In-code, using the .db wrapper</span><a class="headerlink" href="#id2" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">foo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">]</span>
 <span class="n">value</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">foo</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">In-code, using the .attributes handler</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">In-code, using the .attributes handler</span><a class="headerlink" href="#id3" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;myattr&quot;</span><span class="p">,</span> <span class="mi">1234</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
 <span class="n">value</span> <span class="o">=</span> <span class="n">attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;myattr&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">In-code, using <code class="docutils literal notranslate"><span class="pre">AttributeProperty</span></code> at class level</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">In-code, using <code class="docutils literal notranslate"><span class="pre">AttributeProperty</span></code> at class level</span><a class="headerlink" href="#id4" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evennia</span><span class="w"> </span><span class="kn">import</span> <span class="n">DefaultObject</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">evennia</span><span class="w"> </span><span class="kn">import</span> <span class="n">AttributeProperty</span>
 
@@ -174,10 +79,10 @@
 </div>
 <p><em>Attributes</em> allow you to to store arbitrary data on objects and make sure the data survives a server reboot. An Attribute can store pretty much any Python data structure and data type, like numbers, strings, lists, dicts etc. You can also store (references to) database objects like characters and rooms.</p>
 <section id="working-with-attributes">
-<h2>Working with Attributes<a class="headerlink" href="#working-with-attributes" title="Permalink to this headline">¶</a></h2>
-<p>Attributes are usually handled in code. All <a class="reference internal" href="Typeclasses.html"><span class="doc std std-doc">Typeclassed</span></a> entities (<a class="reference internal" href="Accounts.html"><span class="doc std std-doc">Accounts</span></a>, <a class="reference internal" href="Objects.html"><span class="doc std std-doc">Objects</span></a>, <a class="reference internal" href="Scripts.html"><span class="doc std std-doc">Scripts</span></a> and <a class="reference internal" href="Channels.html"><span class="doc std std-doc">Channels</span></a>) can (and usually do) have Attributes associated with them. There are three ways to manage Attributes, all of which can be mixed.</p>
+<h2>Working with Attributes<a class="headerlink" href="#working-with-attributes" title="Link to this heading">¶</a></h2>
+<p>Attributes are usually handled in code. All <a class="reference internal" href="Typeclasses.html"><span class="std std-doc">Typeclassed</span></a> entities (<a class="reference internal" href="Accounts.html"><span class="std std-doc">Accounts</span></a>, <a class="reference internal" href="Objects.html"><span class="std std-doc">Objects</span></a>, <a class="reference internal" href="Scripts.html"><span class="std std-doc">Scripts</span></a> and <a class="reference internal" href="Channels.html"><span class="std std-doc">Channels</span></a>) can (and usually do) have Attributes associated with them. There are three ways to manage Attributes, all of which can be mixed.</p>
 <section id="using-db">
-<h3>Using .db<a class="headerlink" href="#using-db" title="Permalink to this headline">¶</a></h3>
+<h3>Using .db<a class="headerlink" href="#using-db" title="Link to this heading">¶</a></h3>
 <p>The simplest way to get/set Attributes is to use the <code class="docutils literal notranslate"><span class="pre">.db</span></code> shortcut. This allows for setting and getting Attributes that lack a <em>category</em> (having category <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">evennia</span>
 
@@ -213,7 +118,7 @@
 <p>Trying to access a non-existing Attribute will never lead to an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>. Instead you will get <code class="docutils literal notranslate"><span class="pre">None</span></code> back. The special <code class="docutils literal notranslate"><span class="pre">.db.all</span></code> will return a list of all Attributes on the object. You can replace this with your own Attribute <code class="docutils literal notranslate"><span class="pre">all</span></code> if you want, it will replace the default <code class="docutils literal notranslate"><span class="pre">all</span></code> functionality until you delete it again.</p>
 </section>
 <section id="using-attributes">
-<h3>Using .attributes<a class="headerlink" href="#using-attributes" title="Permalink to this headline">¶</a></h3>
+<h3>Using .attributes<a class="headerlink" href="#using-attributes" title="Link to this heading">¶</a></h3>
 <p>If you want to group your Attribute in a category, or don’t know the name of the Attribute beforehand, you can make use of the <a class="reference internal" href="../api/evennia.typeclasses.attributes.html#evennia.typeclasses.attributes.AttributeHandler" title="evennia.typeclasses.attributes.AttributeHandler"><span class="xref myst py py-class">AttributeHandler</span></a>, available as <code class="docutils literal notranslate"><span class="pre">.attributes</span></code> on all typeclassed entities. With no extra keywords, this is identical to using the <code class="docutils literal notranslate"><span class="pre">.db</span></code> shortcut (<code class="docutils literal notranslate"><span class="pre">.db</span></code> is actually using the <code class="docutils literal notranslate"><span class="pre">AttributeHandler</span></code> internally):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_ouch</span> <span class="o">=</span> <span class="n">rose</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;has_thorns&quot;</span><span class="p">)</span>
 
@@ -239,7 +144,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">has(...)</span></code> - this checks if the object has an Attribute with this key. This is equivalent to doing <code class="docutils literal notranslate"><span class="pre">obj.db.attrname</span></code> except you can also check for a specific `category.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">get(...)</span></code> - this retrieves the given Attribute. You can also provide a <code class="docutils literal notranslate"><span class="pre">default</span></code> value to return if the Attribute is not defined (instead of None). By supplying an <code class="docutils literal notranslate"><span class="pre">accessing_object</span></code> to the call one can also make sure to check permissions before modifying anything. The <code class="docutils literal notranslate"><span class="pre">raise_exception</span></code> kwarg allows you to raise an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> instead of returning <code class="docutils literal notranslate"><span class="pre">None</span></code> when you access a non-existing <code class="docutils literal notranslate"><span class="pre">Attribute</span></code>. The <code class="docutils literal notranslate"><span class="pre">strattr</span></code> kwarg tells the system to store the Attribute as a raw string rather than to pickle it. While an optimization this should usually not be used unless the Attribute is used for some particular, limited purpose.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">add(...)</span></code> - this adds a new Attribute to the object. An optional <a class="reference internal" href="Locks.html"><span class="doc std std-doc">lockstring</span></a> can be supplied here to restrict future access and also the call itself may be checked against locks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add(...)</span></code> - this adds a new Attribute to the object. An optional <a class="reference internal" href="Locks.html"><span class="std std-doc">lockstring</span></a> can be supplied here to restrict future access and also the call itself may be checked against locks.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">remove(...)</span></code> - Remove the given Attribute. This can optionally be made to check for permission before performing the deletion.  - <code class="docutils literal notranslate"><span class="pre">clear(...)</span></code>  - removes all Attributes from object.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">all(category=None)</span></code> - returns all Attributes (of the given category) attached to this object.</p></li>
 </ul>
@@ -263,7 +168,7 @@
 </div>
 </section>
 <section id="using-attributeproperty">
-<h3>Using AttributeProperty<a class="headerlink" href="#using-attributeproperty" title="Permalink to this headline">¶</a></h3>
+<h3>Using AttributeProperty<a class="headerlink" href="#using-attributeproperty" title="Link to this heading">¶</a></h3>
 <p>The third way to set up an Attribute is to use an <code class="docutils literal notranslate"><span class="pre">AttributeProperty</span></code>. This is done on the <em>class level</em> of your typeclass and allows you to treat Attributes a bit like Django database Fields. Unlike using <code class="docutils literal notranslate"><span class="pre">.db</span></code> and <code class="docutils literal notranslate"><span class="pre">.attributes</span></code>, an <code class="docutils literal notranslate"><span class="pre">AttributeProperty</span></code> can’t be created on the fly, you must assign it in the class code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mygame/typeclasses/characters.py</span>
 
@@ -327,25 +232,25 @@
 </div>
 </section>
 <section id="properties-of-attributes">
-<h3>Properties of Attributes<a class="headerlink" href="#properties-of-attributes" title="Permalink to this headline">¶</a></h3>
+<h3>Properties of Attributes<a class="headerlink" href="#properties-of-attributes" title="Link to this heading">¶</a></h3>
 <p>An <code class="docutils literal notranslate"><span class="pre">Attribute</span></code> object is stored in the database. It has the following properties:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - the name of the Attribute. When doing e.g. <code class="docutils literal notranslate"><span class="pre">obj.db.attrname</span> <span class="pre">=</span> <span class="pre">value</span></code>, this property is set to <code class="docutils literal notranslate"><span class="pre">attrname</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - this is the value of the Attribute. This value can be anything which can be pickled - objects, lists, numbers or what have you (see <a class="reference internal" href="#what-types-of-data-can-i-save-in-an-attribute"><span class="std std-doc">this section</span></a> for more info). In the example
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - this is the value of the Attribute. This value can be anything which can be pickled - objects, lists, numbers or what have you (see <a class="reference internal" href="#what-types-of-data-can-i-save-in-an-attribute"><span class="std std-ref">this section</span></a> for more info). In the example
 <code class="docutils literal notranslate"><span class="pre">obj.db.attrname</span> <span class="pre">=</span> <span class="pre">value</span></code>, the <code class="docutils literal notranslate"><span class="pre">value</span></code> is stored here.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> - this is an optional property that is set to None for most Attributes. Setting this allows to use Attributes for different functionality. This is usually not needed unless you want to use Attributes for very different functionality (<a class="reference internal" href="Nicks.html"><span class="doc std std-doc">Nicks</span></a> is an example of using
-Attributes in this way). To modify this property you need to use the <a class="reference internal" href="#attributes"><span class="std std-doc">Attribute Handler</span></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">strvalue</span></code> - this is a separate value field that only accepts strings. This severely limits the data possible to store, but allows for easier database lookups. This property is usually not used except when re-using Attributes for some other purpose (<a class="reference internal" href="Nicks.html"><span class="doc std std-doc">Nicks</span></a> use it). It is only accessible via the <a class="reference internal" href="#attributes"><span class="std std-doc">Attribute Handler</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> - this is an optional property that is set to None for most Attributes. Setting this allows to use Attributes for different functionality. This is usually not needed unless you want to use Attributes for very different functionality (<a class="reference internal" href="Nicks.html"><span class="std std-doc">Nicks</span></a> is an example of using
+Attributes in this way). To modify this property you need to use the <a class="reference internal" href="#attributes">Attribute Handler</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">strvalue</span></code> - this is a separate value field that only accepts strings. This severely limits the data possible to store, but allows for easier database lookups. This property is usually not used except when re-using Attributes for some other purpose (<a class="reference internal" href="Nicks.html"><span class="std std-doc">Nicks</span></a> use it). It is only accessible via the <a class="reference internal" href="#attributes">Attribute Handler</a>.</p></li>
 </ul>
 <p>There are also two special properties:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">attrtype</span></code> - this is used internally by Evennia to separate <a class="reference internal" href="Nicks.html"><span class="doc std std-doc">Nicks</span></a>, from Attributes (Nicks use Attributes behind the scenes).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attrtype</span></code> - this is used internally by Evennia to separate <a class="reference internal" href="Nicks.html"><span class="std std-doc">Nicks</span></a>, from Attributes (Nicks use Attributes behind the scenes).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> - this is a <em>natural-key</em> describing the model this Attribute is attached to. This is on the form <em>appname.modelclass</em>, like <code class="docutils literal notranslate"><span class="pre">objects.objectdb</span></code>. It is used by the Attribute and NickHandler to quickly sort matches in the database.  Neither this nor <code class="docutils literal notranslate"><span class="pre">attrtype</span></code> should normally need to be modified.</p></li>
 </ul>
 <p>Non-database attributes are not stored in the database and have no equivalence to <code class="docutils literal notranslate"><span class="pre">category</span></code> nor <code class="docutils literal notranslate"><span class="pre">strvalue</span></code>, <code class="docutils literal notranslate"><span class="pre">attrtype</span></code> or <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p>
 </section>
 <section id="managing-attributes-in-game">
-<h3>Managing Attributes in-game<a class="headerlink" href="#managing-attributes-in-game" title="Permalink to this headline">¶</a></h3>
+<h3>Managing Attributes in-game<a class="headerlink" href="#managing-attributes-in-game" title="Link to this heading">¶</a></h3>
 <p>Attributes are mainly used by code. But one can also allow the builder to use Attributes to ‘turn knobs’ in-game. For example a builder could want to manually tweak the “level” Attribute of an enemy NPC to lower its difficuly.</p>
 <p>When setting Attributes this way, you are severely limited in what can be stored - this is because giving players (even builders) the ability to store arbitrary Python would be a severe security problem.</p>
 <p>In game you can set an Attribute like this:</p>
@@ -374,8 +279,8 @@ set mypobj/mystring = [1, 2, foo]   # foo is invalid Python (no quotes)
 <p>For the last line you’ll get a warning and the value instead will be saved as a string <code class="docutils literal notranslate"><span class="pre">&quot;[1,</span> <span class="pre">2,</span> <span class="pre">foo]&quot;</span></code>.</p>
 </section>
 <section id="locking-and-checking-attributes">
-<h3>Locking and checking Attributes<a class="headerlink" href="#locking-and-checking-attributes" title="Permalink to this headline">¶</a></h3>
-<p>While the <code class="docutils literal notranslate"><span class="pre">set</span></code> command is limited to builders, individual Attributes are usually not locked down. You may want to lock certain sensitive Attributes, in particular for games where you allow player building. You can add such limitations by adding a <a class="reference internal" href="Locks.html"><span class="doc std std-doc">lock string</span></a> to your Attribute. A NAttribute have no locks.</p>
+<h3>Locking and checking Attributes<a class="headerlink" href="#locking-and-checking-attributes" title="Link to this heading">¶</a></h3>
+<p>While the <code class="docutils literal notranslate"><span class="pre">set</span></code> command is limited to builders, individual Attributes are usually not locked down. You may want to lock certain sensitive Attributes, in particular for games where you allow player building. You can add such limitations by adding a <a class="reference internal" href="Locks.html"><span class="std std-doc">lock string</span></a> to your Attribute. A NAttribute have no locks.</p>
 <p>The relevant lock types are</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attrread</span></code> - limits who may read the value of the Attribute</p></li>
@@ -410,7 +315,7 @@ set mypobj/mystring = [1, 2, foo]   # foo is invalid Python (no quotes)
 </section>
 </section>
 <section id="querying-by-attribute">
-<h2>Querying by Attribute<a class="headerlink" href="#querying-by-attribute" title="Permalink to this headline">¶</a></h2>
+<h2>Querying by Attribute<a class="headerlink" href="#querying-by-attribute" title="Link to this heading">¶</a></h2>
 <p>While you can get attributes using the <code class="docutils literal notranslate"><span class="pre">obj.attributes.get</span></code> handler, you can also find objects based on the Attributes they have through the <code class="docutils literal notranslate"><span class="pre">db_attributes</span></code> many-to-many field available on each typeclassed entity:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># find objects by attribue assigned (regardless of value)</span>
 <span class="n">objs</span> <span class="o">=</span> <span class="n">evennia</span><span class="o">.</span><span class="n">ObjectDB</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">db_attributes__db_key</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
@@ -424,13 +329,13 @@ set mypobj/mystring = [1, 2, foo]   # foo is invalid Python (no quotes)
 </div>
 </section>
 <section id="what-types-of-data-can-i-save-in-an-attribute">
-<h2>What types of data can I save in an Attribute?<a class="headerlink" href="#what-types-of-data-can-i-save-in-an-attribute" title="Permalink to this headline">¶</a></h2>
+<h2>What types of data can I save in an Attribute?<a class="headerlink" href="#what-types-of-data-can-i-save-in-an-attribute" title="Link to this heading">¶</a></h2>
 <p>The database doesn’t know anything about Python objects, so Evennia must <em>serialize</em> Attribute values into a string representation before storing it to the database. This is done using the <a class="reference external" href="https://docs.python.org/library/pickle.html">pickle</a> module of Python.</p>
 <blockquote>
 <div><p>The only exception is if you use the <code class="docutils literal notranslate"><span class="pre">strattr</span></code> keyword of the <code class="docutils literal notranslate"><span class="pre">AttributeHandler</span></code> to save to the <code class="docutils literal notranslate"><span class="pre">strvalue</span></code> field of the Attribute. In that case you can <em>only</em> save <em>strings</em> and those will not be pickled).</p>
 </div></blockquote>
 <section id="storing-single-objects">
-<h3>Storing single objects<a class="headerlink" href="#storing-single-objects" title="Permalink to this headline">¶</a></h3>
+<h3>Storing single objects<a class="headerlink" href="#storing-single-objects" title="Link to this heading">¶</a></h3>
 <p>With a single object, we mean anything that is <em>not iterable</em>, like numbers, strings or custom class instances without the <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> method.</p>
 <ul class="simple">
 <li><p>You can generally store any non-iterable Python entity that can be <em>pickled</em>.</p></li>
@@ -438,7 +343,7 @@ set mypobj/mystring = [1, 2, foo]   # foo is invalid Python (no quotes)
 <li><p>If you ‘hide’ a db-obj as a property on a custom class, Evennia will not be able to find it to serialize it. For that you need to help it out (see below).</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Valid assignments</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Valid assignments</span><a class="headerlink" href="#id5" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Examples of valid single-value  attribute data:</span>
 <span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">test1</span> <span class="o">=</span> <span class="mi">23</span>
 <span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">test1</span> <span class="o">=</span> <span class="kc">False</span>
@@ -449,7 +354,7 @@ set mypobj/mystring = [1, 2, foo]   # foo is invalid Python (no quotes)
 </div>
 <p>As mentioned, Evennia will not be able to automatically serialize db-objects ‘hidden’ in arbitrary properties on an object. This will lead to an error when saving the Attribute.</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">Invalid, ‘hidden’ dbobject</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Invalid, ‘hidden’ dbobject</span><a class="headerlink" href="#id6" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># example of storing an invalid, &quot;hidden&quot; dbobject in Attribute</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Container</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mydbobj</span><span class="p">):</span>
@@ -464,7 +369,7 @@ set mypobj/mystring = [1, 2, foo]   # foo is invalid Python (no quotes)
 </div>
 <p>By adding two methods <code class="docutils literal notranslate"><span class="pre">__serialize_dbobjs__</span></code> and <code class="docutils literal notranslate"><span class="pre">__deserialize_dbobjs__</span></code> to the object you want to save, you can pre-serialize and post-deserialize all ‘hidden’ objects before Evennia’s main serializer gets to work. Inside these methods, use Evennia’s <a class="reference internal" href="../api/evennia.utils.dbserialize.html#evennia.utils.dbserialize.dbserialize" title="evennia.utils.dbserialize.dbserialize"><span class="xref myst py py-func">evennia.utils.dbserialize.dbserialize</span></a> and <a class="reference internal" href="../api/evennia.utils.dbserialize.html#evennia.utils.dbserialize.dbunserialize" title="evennia.utils.dbserialize.dbunserialize"><span class="xref myst py py-func">dbunserialize</span></a> functions to safely serialize the db-objects you want to store.</p>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Fixing an invalid ‘hidden’ dbobj for storing in Attribute</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Fixing an invalid ‘hidden’ dbobj for storing in Attribute</span><a class="headerlink" href="#id7" title="Link to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evennia.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">dbserialize</span>  <span class="c1"># important</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">Container</span><span class="p">:</span>
@@ -495,7 +400,7 @@ set mypobj/mystring = [1, 2, foo]   # foo is invalid Python (no quotes)
 </div></blockquote>
 </section>
 <section id="storing-multiple-objects">
-<h3>Storing multiple objects<a class="headerlink" href="#storing-multiple-objects" title="Permalink to this headline">¶</a></h3>
+<h3>Storing multiple objects<a class="headerlink" href="#storing-multiple-objects" title="Link to this heading">¶</a></h3>
 <p>This means storing objects in a collection of some kind and are examples of <em>iterables</em>, pickle-able entities you can loop over in a for-loop. Attribute-saving supports the following iterables:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#tuple">Tuples</a>, like <code class="docutils literal notranslate"><span class="pre">(1,2,&quot;test&quot;,</span> <span class="pre">&lt;dbobj&gt;)</span></code>.</p></li>
@@ -509,7 +414,7 @@ like <code class="docutils literal notranslate"><span class="pre">OrderedDict((1
 <li><p><em>Nestings</em> of any combinations of the above, like lists in dicts or an OrderedDict of tuples, each containing dicts, etc.</p></li>
 <li><p>All other iterables (i.e. entities with the <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> method) will be converted to a <em>list</em>. Since you can use any combination of the above iterables, this is generally not much of a limitation.</p></li>
 </ul>
-<p>Any entity listed in the <a class="reference internal" href="#storing-single-objects"><span class="std std-doc">Single object</span></a> section above can be stored in the iterable.</p>
+<p>Any entity listed in the <a class="reference internal" href="#storing-single-objects"><span class="std std-ref">Single object</span></a> section above can be stored in the iterable.</p>
 <blockquote>
 <div><p>As mentioned in the previous section, database entities (aka typeclasses) are not possible to pickle. So when storing an iterable, Evennia must recursively traverse the iterable <em>and all its nested sub-iterables</em> in order to find eventual database objects to convert. This is a very fast process but for efficiency you may want to avoid too deeply nested structures if you can.</p>
 </div></blockquote>
@@ -530,10 +435,10 @@ like <code class="docutils literal notranslate"><span class="pre">OrderedDict((1
 <span class="c1"># test8 is now [4,2,{&quot;test&quot;:5}]</span>
 </pre></div>
 </div>
-<p>Note that if make some advanced iterable object, and store an db-object on it in a way such that it is <em>not</em> returned by iterating over it, you have created a ‘hidden’ db-object. See <a class="reference internal" href="#storing-single-objects"><span class="std std-doc">the previous section</span></a> for how to tell Evennia how to serialize such hidden objects safely.</p>
+<p>Note that if make some advanced iterable object, and store an db-object on it in a way such that it is <em>not</em> returned by iterating over it, you have created a ‘hidden’ db-object. See <a class="reference internal" href="#storing-single-objects">the previous section</a> for how to tell Evennia how to serialize such hidden objects safely.</p>
 </section>
 <section id="retrieving-mutable-objects">
-<h3>Retrieving Mutable objects<a class="headerlink" href="#retrieving-mutable-objects" title="Permalink to this headline">¶</a></h3>
+<h3>Retrieving Mutable objects<a class="headerlink" href="#retrieving-mutable-objects" title="Link to this heading">¶</a></h3>
 <p>A side effect of the way Evennia stores Attributes is that <em>mutable</em> iterables (iterables that can be modified in-place after they were created, which is everything except tuples) are handled by custom objects called <code class="docutils literal notranslate"><span class="pre">_SaverList</span></code>, <code class="docutils literal notranslate"><span class="pre">_SaverDict</span></code> etc. These <code class="docutils literal notranslate"><span class="pre">_Saver...</span></code> classes behave just like the normal variant except that they are aware of the database and saves to it whenever new data gets assigned to them. This is what allows you to do things like <code class="docutils literal notranslate"><span class="pre">self.db.mylist[7]</span> <span class="pre">=</span> <span class="pre">val</span></code> and be sure that the new version of list is saved. Without this you would have to load the list into a temporary variable, change it and then re-assign it to the Attribute in order for it to save.</p>
 <p>There is however an important thing to remember. If you retrieve your mutable iterable into another variable, e.g. <code class="docutils literal notranslate"><span class="pre">mylist2</span> <span class="pre">=</span> <span class="pre">obj.db.mylist</span></code>, your new variable (<code class="docutils literal notranslate"><span class="pre">mylist2</span></code>) will <em>still</em> be a <code class="docutils literal notranslate"><span class="pre">_SaverList</span></code>. This means it will continue to save itself to the database whenever it is updated!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -574,7 +479,7 @@ database with the help of the <code class="docutils literal notranslate"><span c
 </section>
 </section>
 <section id="in-memory-attributes-nattributes">
-<h2>In-memory Attributes (NAttributes)<a class="headerlink" href="#in-memory-attributes-nattributes" title="Permalink to this headline">¶</a></h2>
+<h2>In-memory Attributes (NAttributes)<a class="headerlink" href="#in-memory-attributes-nattributes" title="Link to this heading">¶</a></h2>
 <p><em>NAttributes</em> (short of Non-database Attributes) mimic Attributes in most things except they
 are <strong>non-persistent</strong> - they will <em>not</em> survive a server reload.</p>
 <ul class="simple">
@@ -598,13 +503,13 @@ access and edit than <code class="docutils literal notranslate"><span class="pre
 <li><p>They can <em>not</em> be set with the standard <code class="docutils literal notranslate"><span class="pre">set</span></code> command (but they are visible with <code class="docutils literal notranslate"><span class="pre">examine</span></code>)</p></li>
 </ul>
 <p>There are some important reasons we recommend using <code class="docutils literal notranslate"><span class="pre">ndb</span></code> to store temporary data rather than the simple alternative of just storing a variable directly on an object:
-<span class="xref myst"></span></p>
+<a class="reference internal" href="#"><code class="xref myst docutils literal notranslate"></code></a></p>
 <ul class="simple">
 <li><p>NAttributes are tracked by Evennia and will not be purged in various cache-cleanup operations the server may do. So using them guarantees that they’ll remain available at least as long as the server lives.</p></li>
 <li><p>It’s a consistent style - <code class="docutils literal notranslate"><span class="pre">.db/.attributes</span></code> and <code class="docutils literal notranslate"><span class="pre">.ndb/.nattributes</span></code> makes for clean-looking code where it’s clear how long-lived (or not) your data is to be.</p></li>
 </ul>
 <section id="persistent-vs-non-persistent">
-<h3>Persistent vs non-persistent<a class="headerlink" href="#persistent-vs-non-persistent" title="Permalink to this headline">¶</a></h3>
+<h3>Persistent vs non-persistent<a class="headerlink" href="#persistent-vs-non-persistent" title="Link to this heading">¶</a></h3>
 <p>So <em>persistent</em> data means that your data will survive a server reboot, whereas with
 <em>non-persistent</em> data it will not …</p>
 <p>… So why would you ever want to use non-persistent data? The answer is, you don’t have to. Most of
@@ -612,7 +517,7 @@ the time you really want to save as much as you possibly can. Non-persistent dat
 useful in a few situations though.</p>
 <ul class="simple">
 <li><p>You are worried about database performance. Since Evennia caches Attributes very aggressively, this is not an issue unless you are reading <em>and</em> writing to your Attribute very often (like many times per second). Reading from an already cached Attribute is as fast as reading any Python property. But even then this is not likely something to worry about: Apart from Evennia’s own caching, modern database systems  themselves also cache data very efficiently for speed. Our default database even runs completely in RAM if possible, alleviating much of the need to write to disk during heavy loads.</p></li>
-<li><p>A more valid reason for using non-persistent data is if you <em>want</em> to lose your state when logging off. Maybe you are storing throw-away data that are re-initialized at server startup. Maybe you are implementing some caching of your own. Or maybe you are testing a buggy <a class="reference internal" href="Scripts.html"><span class="doc std std-doc">Script</span></a> that does potentially harmful stuff to your character object. With non-persistent storage you can be sure that whatever is messed up, it’s nothing a server reboot can’t clear up.</p></li>
+<li><p>A more valid reason for using non-persistent data is if you <em>want</em> to lose your state when logging off. Maybe you are storing throw-away data that are re-initialized at server startup. Maybe you are implementing some caching of your own. Or maybe you are testing a buggy <a class="reference internal" href="Scripts.html"><span class="std std-doc">Script</span></a> that does potentially harmful stuff to your character object. With non-persistent storage you can be sure that whatever is messed up, it’s nothing a server reboot can’t clear up.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">NAttribute</span></code>s have no restrictions at all on what they can store, since they don’t need to worry about being saved to the database - they work very well for temporary storage.</p></li>
 <li><p>You want to implement a fully or partly <em>non-persistent world</em>. Who are we to argue with your grand vision!</p></li>
 </ul>
@@ -621,12 +526,119 @@ useful in a few situations though.</p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Attributes</a><ul>
+<li><a class="reference internal" href="#working-with-attributes">Working with Attributes</a><ul>
+<li><a class="reference internal" href="#using-db">Using .db</a></li>
+<li><a class="reference internal" href="#using-attributes">Using .attributes</a></li>
+<li><a class="reference internal" href="#using-attributeproperty">Using AttributeProperty</a></li>
+<li><a class="reference internal" href="#properties-of-attributes">Properties of Attributes</a></li>
+<li><a class="reference internal" href="#managing-attributes-in-game">Managing Attributes in-game</a></li>
+<li><a class="reference internal" href="#locking-and-checking-attributes">Locking and checking Attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#querying-by-attribute">Querying by Attribute</a></li>
+<li><a class="reference internal" href="#what-types-of-data-can-i-save-in-an-attribute">What types of data can I save in an Attribute?</a><ul>
+<li><a class="reference internal" href="#storing-single-objects">Storing single objects</a></li>
+<li><a class="reference internal" href="#storing-multiple-objects">Storing multiple objects</a></li>
+<li><a class="reference internal" href="#retrieving-mutable-objects">Retrieving Mutable objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#in-memory-attributes-nattributes">In-memory Attributes (NAttributes)</a><ul>
+<li><a class="reference internal" href="#persistent-vs-non-persistent">Persistent vs non-persistent</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Msg.html"
+                          title="previous chapter">Msg</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Nicks.html"
+                          title="next chapter">Nicks</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Components/Attributes.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -641,17 +653,14 @@ useful in a few situations though.</p>
         <li class="right" >
           <a href="Msg.html" title="Msg"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" >Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Attributes</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

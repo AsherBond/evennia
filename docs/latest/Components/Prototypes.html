@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Spawner and Prototypes &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Help System" href="Help-System.html" />
     <link rel="prev" title="Tags" href="Tags.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,125 +33,37 @@
         <li class="right" >
           <a href="Tags.html" title="Tags"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" accesskey="U">Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Spawner and Prototypes</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Spawner and Prototypes</a><ul>
-<li><a class="reference internal" href="#working-with-prototypes">Working with Prototypes</a><ul>
-<li><a class="reference internal" href="#using-the-olc">Using the OLC</a></li>
-<li><a class="reference internal" href="#the-prototype">The prototype</a></li>
-<li><a class="reference internal" href="#prototype-keys">Prototype keys</a><ul>
-<li><a class="reference internal" href="#more-on-prototype-inheritance">More on prototype inheritance</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#prototype-values">Prototype values</a><ul>
-<li><a class="reference internal" href="#protfuncs">Protfuncs</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#database-prototypes">Database prototypes</a></li>
-<li><a class="reference internal" href="#module-based-prototypes">Module-based prototypes</a></li>
-<li><a class="reference internal" href="#spawning">Spawning</a><ul>
-<li><a class="reference internal" href="#using-evennia-prototypes-spawner">Using evennia.prototypes.spawner()</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Tags.html"
-                        title="previous chapter">Tags</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Help-System.html"
-                        title="next chapter">Help System</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Components/Prototypes.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Prototypes.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="spawner-and-prototypes">
-<h1>Spawner and Prototypes<a class="headerlink" href="#spawner-and-prototypes" title="Permalink to this headline">¶</a></h1>
+<h1>Spawner and Prototypes<a class="headerlink" href="#spawner-and-prototypes" title="Link to this heading">¶</a></h1>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>spawn<span class="w"> </span>goblin
 
 Spawned<span class="w"> </span>Goblin<span class="w"> </span>Grunt<span class="o">(</span><span class="c1">#45)</span>
 </pre></div>
 </div>
-<p>The <em>spawner</em> is a system for defining and creating individual objects from a base template called a <em>prototype</em>. It is only designed for use with in-game <a class="reference internal" href="Objects.html"><span class="doc std std-doc">Objects</span></a>, not any other type of entity.</p>
-<p>The normal way to create a custom object in Evennia is to make a <a class="reference internal" href="Typeclasses.html"><span class="doc std std-doc">Typeclass</span></a>. If you haven’t read up on Typeclasses yet, think of them as normal Python classes that save to the database behind the scenes. Say you wanted to create a “Goblin” enemy. A common way to do this would be to first create a <code class="docutils literal notranslate"><span class="pre">Mobile</span></code> typeclass that holds everything common to mobiles in the game, like generic AI, combat code and various movement methods. A  <code class="docutils literal notranslate"><span class="pre">Goblin</span></code> subclass is then made to inherit from <code class="docutils literal notranslate"><span class="pre">Mobile</span></code>. The <code class="docutils literal notranslate"><span class="pre">Goblin</span></code> class adds stuff unique to goblins, like group-based AI (because goblins are smarter in a group), the ability to panic, dig for gold etc.</p>
+<p>The <em>spawner</em> is a system for defining and creating individual objects from a base template called a <em>prototype</em>. It is only designed for use with in-game <a class="reference internal" href="Objects.html"><span class="std std-doc">Objects</span></a>, not any other type of entity.</p>
+<p>The normal way to create a custom object in Evennia is to make a <a class="reference internal" href="Typeclasses.html"><span class="std std-doc">Typeclass</span></a>. If you haven’t read up on Typeclasses yet, think of them as normal Python classes that save to the database behind the scenes. Say you wanted to create a “Goblin” enemy. A common way to do this would be to first create a <code class="docutils literal notranslate"><span class="pre">Mobile</span></code> typeclass that holds everything common to mobiles in the game, like generic AI, combat code and various movement methods. A  <code class="docutils literal notranslate"><span class="pre">Goblin</span></code> subclass is then made to inherit from <code class="docutils literal notranslate"><span class="pre">Mobile</span></code>. The <code class="docutils literal notranslate"><span class="pre">Goblin</span></code> class adds stuff unique to goblins, like group-based AI (because goblins are smarter in a group), the ability to panic, dig for gold etc.</p>
 <p>But now it’s time to actually start to create some goblins and put them in the world. What if we wanted those goblins to not all look the same? Maybe we want grey-skinned and green-skinned goblins or some goblins that can cast spells or which wield different weapons? We <em>could</em> make subclasses of <code class="docutils literal notranslate"><span class="pre">Goblin</span></code>, like <code class="docutils literal notranslate"><span class="pre">GreySkinnedGoblin</span></code> and <code class="docutils literal notranslate"><span class="pre">GoblinWieldingClub</span></code>. But that seems a bit excessive (and a lot of Python code for every little thing). Using classes can also become impractical when wanting to combine them - what if we want a grey-skinned goblin shaman wielding a spear - setting up a web of classes inheriting each other with multiple inheritance can be tricky.</p>
 <p>This is what the <em>prototype</em> is for. It is a Python dictionary that describes these per-instance changes to an object. The prototype also has the advantage of allowing an in-game builder to customize an object without access to the Python backend. Evennia also allows for saving and searching prototypes so other builders can find and use (and tweak) them later. Having a library of interesting prototypes is a good reasource for builders. The OLC system allows for creating, saving, loading and manipulating prototypes using a menu system.</p>
 <p>The <em>spawner</em> takes a prototype and uses it to create (spawn) new, custom objects.</p>
 <section id="working-with-prototypes">
-<h2>Working with Prototypes<a class="headerlink" href="#working-with-prototypes" title="Permalink to this headline">¶</a></h2>
+<h2>Working with Prototypes<a class="headerlink" href="#working-with-prototypes" title="Link to this heading">¶</a></h2>
 <section id="using-the-olc">
-<h3>Using the OLC<a class="headerlink" href="#using-the-olc" title="Permalink to this headline">¶</a></h3>
+<h3>Using the OLC<a class="headerlink" href="#using-the-olc" title="Link to this heading">¶</a></h3>
 <p>Enter the <code class="docutils literal notranslate"><span class="pre">olc</span></code> command or <code class="docutils literal notranslate"><span class="pre">spawn/olc</span></code> to enter the prototype wizard. This is a menu system for creating, loading, saving and manipulating prototypes. It’s intended to be used by in-game builders and will give a better understanding of prototypes in general. Use <code class="docutils literal notranslate"><span class="pre">help</span></code> on each node of the menu for more information. Below are further details about how prototypes work and how they are used.</p>
 </section>
 <section id="the-prototype">
-<h3>The prototype<a class="headerlink" href="#the-prototype" title="Permalink to this headline">¶</a></h3>
+<h3>The prototype<a class="headerlink" href="#the-prototype" title="Link to this heading">¶</a></h3>
 <p>The prototype dictionary can either be created for you by the OLC (see above), be  written manually in a Python module (and then referenced by the <code class="docutils literal notranslate"><span class="pre">spawn</span></code> command/OLC), or created on-the-fly and manually loaded into the spawner function or <code class="docutils literal notranslate"><span class="pre">spawn</span></code> command.</p>
 <p>The dictionary defines all possible database-properties of an Object. It has a fixed set of allowed keys. When preparing to store the prototype in the database (or when using the OLC), some of these keys are mandatory. When just passing a one-time prototype-dict to the spawner the system is more lenient and will use defaults for keys not explicitly provided.</p>
 <p>In dictionary form, a prototype can look something like this:</p>
@@ -177,7 +83,7 @@ Spawned<span class="w"> </span>Goblin<span class="w"> </span>Grunt<span class="o
 </div></blockquote>
 </section>
 <section id="prototype-keys">
-<h3>Prototype keys<a class="headerlink" href="#prototype-keys" title="Permalink to this headline">¶</a></h3>
+<h3>Prototype keys<a class="headerlink" href="#prototype-keys" title="Link to this heading">¶</a></h3>
 <p>All keys starting with <code class="docutils literal notranslate"><span class="pre">prototype_</span></code> are for book keeping.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">prototype_key</span></code> - the ‘name’ of the prototype, used for referencing the prototype
@@ -198,14 +104,14 @@ easier later.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">home</span></code> - a valid <code class="docutils literal notranslate"><span class="pre">#dbref</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">location</span></code> or <code class="docutils literal notranslate"><span class="pre">settings.DEFAULT_HOME</span></code> if location does not exist.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> - a valid <code class="docutils literal notranslate"><span class="pre">#dbref</span></code>. Only used by exits.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> - list of permission strings, like <code class="docutils literal notranslate"><span class="pre">[&quot;Accounts&quot;,</span> <span class="pre">&quot;may_use_red_door&quot;]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">locks</span></code> - a <a class="reference internal" href="Locks.html"><span class="doc std std-doc">lock-string</span></a> like <code class="docutils literal notranslate"><span class="pre">&quot;edit:all();control:perm(Builder)&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locks</span></code> - a <a class="reference internal" href="Locks.html"><span class="std std-doc">lock-string</span></a> like <code class="docutils literal notranslate"><span class="pre">&quot;edit:all();control:perm(Builder)&quot;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aliases</span></code> - list of strings for use as aliases</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - list <a class="reference internal" href="Tags.html"><span class="doc std std-doc">Tags</span></a>. These are given as tuples <code class="docutils literal notranslate"><span class="pre">(tag,</span> <span class="pre">category,</span> <span class="pre">data)</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">attrs</span></code> - list of <a class="reference internal" href="Attributes.html"><span class="doc std std-doc">Attributes</span></a>. These are given as tuples <code class="docutils literal notranslate"><span class="pre">(attrname,</span> <span class="pre">value,</span> <span class="pre">category,</span> <span class="pre">lockstring)</span></code></p></li>
-<li><p>Any other keywords are interpreted as non-category <a class="reference internal" href="Attributes.html"><span class="doc std std-doc">Attributes</span></a> and their values. This is convenient for simple Attributes - use <code class="docutils literal notranslate"><span class="pre">attrs</span></code> for full control of Attributes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - list <a class="reference internal" href="Tags.html"><span class="std std-doc">Tags</span></a>. These are given as tuples <code class="docutils literal notranslate"><span class="pre">(tag,</span> <span class="pre">category,</span> <span class="pre">data)</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attrs</span></code> - list of <a class="reference internal" href="Attributes.html"><span class="std std-doc">Attributes</span></a>. These are given as tuples <code class="docutils literal notranslate"><span class="pre">(attrname,</span> <span class="pre">value,</span> <span class="pre">category,</span> <span class="pre">lockstring)</span></code></p></li>
+<li><p>Any other keywords are interpreted as non-category <a class="reference internal" href="Attributes.html"><span class="std std-doc">Attributes</span></a> and their values. This is convenient for simple Attributes - use <code class="docutils literal notranslate"><span class="pre">attrs</span></code> for full control of Attributes.</p></li>
 </ul>
 <section id="more-on-prototype-inheritance">
-<h4>More on prototype inheritance<a class="headerlink" href="#more-on-prototype-inheritance" title="Permalink to this headline">¶</a></h4>
+<h4>More on prototype inheritance<a class="headerlink" href="#more-on-prototype-inheritance" title="Link to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>A prototype can inherit by defining a <code class="docutils literal notranslate"><span class="pre">prototype_parent</span></code> pointing to the name (<code class="docutils literal notranslate"><span class="pre">prototype_key</span></code> of another prototype). If a list of <code class="docutils literal notranslate"><span class="pre">prototype_keys</span></code>, this will be stepped through from left to right, giving priority to the first in the list over those appearing later. That is, if your inheritance is <code class="docutils literal notranslate"><span class="pre">prototype_parent</span> <span class="pre">=</span> <span class="pre">('A',</span> <span class="pre">'B,'</span> <span class="pre">'C')</span></code>, and all parents contain colliding keys, then the one from <code class="docutils literal notranslate"><span class="pre">A</span></code> will apply.</p></li>
 <li><p>The prototype keys that start with <code class="docutils literal notranslate"><span class="pre">prototype_*</span></code> are all unique to each prototype. They are <em>never</em> inherited from parent to child.</p></li>
@@ -216,7 +122,7 @@ easier later.</p></li>
 </section>
 </section>
 <section id="prototype-values">
-<h3>Prototype values<a class="headerlink" href="#prototype-values" title="Permalink to this headline">¶</a></h3>
+<h3>Prototype values<a class="headerlink" href="#prototype-values" title="Link to this heading">¶</a></h3>
 <p>The prototype supports values of several different types.</p>
 <p>It can be a hard-coded value:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;An ugly goblin&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
@@ -234,7 +140,7 @@ easier later.</p></li>
 </pre></div>
 </div>
 <section id="protfuncs">
-<h4>Protfuncs<a class="headerlink" href="#protfuncs" title="Permalink to this headline">¶</a></h4>
+<h4>Protfuncs<a class="headerlink" href="#protfuncs" title="Link to this heading">¶</a></h4>
 <p>Finally, the value can be a <em>prototype function</em> (<em>Protfunc</em>). These look like simple function calls that you embed in strings and that has a <code class="docutils literal notranslate"><span class="pre">$</span></code> in front, like</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;$choice(Urfgar, Rick the smelly, Blargh the foul)&quot;</span><span class="p">,</span>
      <span class="s2">&quot;attrs&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a large $red(and very red) demon. &quot;</span>
@@ -244,7 +150,7 @@ easier later.</p></li>
 <blockquote>
 <div><p>If you want to escape a protfunc and have it appear verbatim, use <code class="docutils literal notranslate"><span class="pre">$$funcname()</span></code>.</p>
 </div></blockquote>
-<p>At spawn time, the place of the protfunc will be replaced with the result of that protfunc being called (this is always a string). A protfunc is a <a class="reference internal" href="FuncParser.html"><span class="doc std std-doc">FuncParser function</span></a> run every time the prototype is used to spawn a new object. See the FuncParse for a lot more information.</p>
+<p>At spawn time, the place of the protfunc will be replaced with the result of that protfunc being called (this is always a string). A protfunc is a <a class="reference internal" href="FuncParser.html"><span class="std std-doc">FuncParser function</span></a> run every time the prototype is used to spawn a new object. See the FuncParse for a lot more information.</p>
 <p>Here is how a protfunc is defined (same as other funcparser functions).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is a silly example, you can just color the text red with |r directly!</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">red</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -275,7 +181,7 @@ easier later.</p></li>
 </div>
 <p>All <em>global callables</em> in your added module will be considered a new protfunc. To avoid this (e.g. to have helper functions that are not protfuncs on their own), name your function something starting with <code class="docutils literal notranslate"><span class="pre">_</span></code>.</p>
 <p>The default protfuncs available out of the box are defined in <code class="docutils literal notranslate"><span class="pre">evennia/prototypes/profuncs.py</span></code>. To override the ones available, just add the same-named function in your own protfunc module.</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Protfunc</p></th>
 <th class="head"><p>Description</p></th>
@@ -322,13 +228,10 @@ easier later.</p></li>
 <td><p>Returns result of <a class="reference external" href="https://docs.python.org/2/library/ast.html#ast.literal_eval">literal-eval</a> of code string. Only simple python expressions.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">$obj(&lt;query&gt;)</span></code></p></td>
-<td><p>Returns object #dbref searched globally by key, tag or #dbref. Error if more than one found.</p></td>
+<td><p>Returns object searched globally by key, tag or #dbref. Requires <code class="docutils literal notranslate"><span class="pre">caller</span></code> kwarg in <code class="docutils literal notranslate"><span class="pre">spawner.spawn()</span></code> for access checks. See <a class="reference internal" href="FuncParser.html#evennia-utils-funcparser-searching-callables"><span class="std std-ref">searching callables</span></a>.  ($dbref(<query>) is an alias and works the same)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">$objlist(&lt;query&gt;)</span></code></p></td>
-<td><p>Like <code class="docutils literal notranslate"><span class="pre">$obj</span></code>, except always returns a list of zero, one or more results.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">$dbref(dbref)</span></code></p></td>
-<td><p>Returns argument if it is formed as a #dbref (e.g. #1234), otherwise error.</p></td>
+<td><p>Like <code class="docutils literal notranslate"><span class="pre">$obj</span></code>, except always returns a list of zero, one or more results. Requires <code class="docutils literal notranslate"><span class="pre">caller</span></code> kwarg in <code class="docutils literal notranslate"><span class="pre">spawner.spawn()</span></code> for access checks. See <a class="reference internal" href="FuncParser.html#evennia-utils-funcparser-searching-callables"><span class="std std-ref">searching callables</span></a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -337,11 +240,11 @@ easier later.</p></li>
 </section>
 </section>
 <section id="database-prototypes">
-<h2>Database prototypes<a class="headerlink" href="#database-prototypes" title="Permalink to this headline">¶</a></h2>
-<p>Stored as <a class="reference internal" href="Scripts.html"><span class="doc std std-doc">Scripts</span></a> in the database. These are sometimes referred to as <em>database- prototypes</em> This is the only way for in-game builders to modify and add prototypes. They have the advantage of being easily modifiable and sharable between builders but you need to work with them using in-game tools.</p>
+<h2>Database prototypes<a class="headerlink" href="#database-prototypes" title="Link to this heading">¶</a></h2>
+<p>Stored as <a class="reference internal" href="Scripts.html"><span class="std std-doc">Scripts</span></a> in the database. These are sometimes referred to as <em>database- prototypes</em> This is the only way for in-game builders to modify and add prototypes. They have the advantage of being easily modifiable and sharable between builders but you need to work with them using in-game tools.</p>
 </section>
 <section id="module-based-prototypes">
-<h2>Module-based prototypes<a class="headerlink" href="#module-based-prototypes" title="Permalink to this headline">¶</a></h2>
+<h2>Module-based prototypes<a class="headerlink" href="#module-based-prototypes" title="Link to this heading">¶</a></h2>
 <p>These prototypes are defined as dictionaries assigned to global variables in one of the modules defined in <code class="docutils literal notranslate"><span class="pre">settings.PROTOTYPE_MODULES</span></code>. They can only be modified from outside the game so they are are necessarily “read-only” from in-game and cannot be modified (but copies of them could be made into database-prototypes). These were the only prototypes available before Evennia 0.8. Module based prototypes can be useful in order for developers to provide read-only “starting” or “base” prototypes to build from or if they just prefer to work offline in an external code editor.</p>
 <p>By default <code class="docutils literal notranslate"><span class="pre">mygame/world/prototypes.py</span></code> is set up for you to add your own prototypes. <em>All global
 dicts</em> in this module will be considered by Evennia to be a prototype. You could also tell Evennia
@@ -369,7 +272,7 @@ ORC_SHAMAN = {&quot;key&quot;:&quot;Orc shaman&quot;,
 </div></blockquote>
 </section>
 <section id="spawning">
-<h2>Spawning<a class="headerlink" href="#spawning" title="Permalink to this headline">¶</a></h2>
+<h2>Spawning<a class="headerlink" href="#spawning" title="Link to this heading">¶</a></h2>
 <p>The spawner can be used from inside the game through the Builder-only <code class="docutils literal notranslate"><span class="pre">&#64;spawn</span></code> command. Assuming the “goblin” typeclass is available to the system (either as a database-prototype or read from module), you can spawn a new goblin with</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>spawn goblin
 </pre></div>
@@ -386,7 +289,7 @@ ORC_SHAMAN = {&quot;key&quot;:&quot;Orc shaman&quot;,
 <div><p>Note: The <code class="docutils literal notranslate"><span class="pre">spawn</span></code> command is more lenient about the prototype dictionary than shown here. So you can for example skip the <code class="docutils literal notranslate"><span class="pre">prototype_key</span></code> if you are just testing a throw-away prototype. A random hash will be used to please the validation. You could also skip  <code class="docutils literal notranslate"><span class="pre">prototype_parent/typeclass</span></code> - then the typeclass given by <code class="docutils literal notranslate"><span class="pre">settings.BASE_OBJECT_TYPECLASS</span></code> will be used.</p>
 </div></blockquote>
 <section id="using-evennia-prototypes-spawner">
-<h3>Using evennia.prototypes.spawner()<a class="headerlink" href="#using-evennia-prototypes-spawner" title="Permalink to this headline">¶</a></h3>
+<h3>Using evennia.prototypes.spawner()<a class="headerlink" href="#using-evennia-prototypes-spawner" title="Link to this heading">¶</a></h3>
 <p>In code you access the spawner mechanism directly via the call</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">new_objects</span> <span class="o">=</span> <span class="n">evennia</span><span class="o">.</span><span class="n">prototypes</span><span class="o">.</span><span class="n">spawner</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="o">*</span><span class="n">prototypes</span><span class="p">)</span>
 </pre></div>
@@ -406,12 +309,118 @@ matching list of created objects. Example:</p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Spawner and Prototypes</a><ul>
+<li><a class="reference internal" href="#working-with-prototypes">Working with Prototypes</a><ul>
+<li><a class="reference internal" href="#using-the-olc">Using the OLC</a></li>
+<li><a class="reference internal" href="#the-prototype">The prototype</a></li>
+<li><a class="reference internal" href="#prototype-keys">Prototype keys</a><ul>
+<li><a class="reference internal" href="#more-on-prototype-inheritance">More on prototype inheritance</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prototype-values">Prototype values</a><ul>
+<li><a class="reference internal" href="#protfuncs">Protfuncs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#database-prototypes">Database prototypes</a></li>
+<li><a class="reference internal" href="#module-based-prototypes">Module-based prototypes</a></li>
+<li><a class="reference internal" href="#spawning">Spawning</a><ul>
+<li><a class="reference internal" href="#using-evennia-prototypes-spawner">Using evennia.prototypes.spawner()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Tags.html"
+                          title="previous chapter">Tags</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Help-System.html"
+                          title="next chapter">Help System</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Components/Prototypes.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -426,17 +435,14 @@ matching list of created objects. Example:</p>
         <li class="right" >
           <a href="Tags.html" title="Tags"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" >Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Spawner and Prototypes</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

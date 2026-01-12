@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Creating rooms from an ascii map &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SimpleDoor" href="Contrib-Simpledoor.html" />
     <link rel="prev" title="Map Builder" href="Contrib-Mapbuilder.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="Contrib-Mapbuilder.html" title="Map Builder"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Contrib-Mapbuilder.html" accesskey="U">Map Builder</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Creating rooms from an ascii map</a></li> 
@@ -47,87 +41,13 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Creating rooms from an ascii map</a><ul>
-<li><a class="reference internal" href="#planning-the-map">Planning the Map</a></li>
-<li><a class="reference internal" href="#creating-a-map-object">Creating a Map Object</a></li>
-<li><a class="reference internal" href="#building-the-map-areas">Building the map areas</a></li>
-<li><a class="reference internal" href="#in-game-minimap">In-game minimap</a></li>
-<li><a class="reference internal" href="#conclusions">Conclusions</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Contrib-Mapbuilder.html"
-                        title="previous chapter">Map Builder</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Simpledoor.html"
-                        title="next chapter">SimpleDoor</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Contribs/Contrib-Mapbuilder-Tutorial.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Contrib-Mapbuilder-Tutorial.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="creating-rooms-from-an-ascii-map">
-<h1>Creating rooms from an ascii map<a class="headerlink" href="#creating-rooms-from-an-ascii-map" title="Permalink to this headline">¶</a></h1>
-<p>This tutorial describes the creation of an in-game map display based on a pre-drawn map.  It goes with the <a class="reference internal" href="Contrib-Mapbuilder.html"><span class="doc std std-doc">Mapbuilder contrib</span></a>.   It also details how to use the <a class="reference internal" href="../Components/Batch-Code-Processor.html"><span class="doc std std-doc">Batch code processor</span></a> for advanced building.</p>
+<h1>Creating rooms from an ascii map<a class="headerlink" href="#creating-rooms-from-an-ascii-map" title="Link to this heading">¶</a></h1>
+<p>This tutorial describes the creation of an in-game map display based on a pre-drawn map.  It goes with the <a class="reference internal" href="Contrib-Mapbuilder.html"><span class="std std-doc">Mapbuilder contrib</span></a>.   It also details how to use the <a class="reference internal" href="../Components/Batch-Code-Processor.html"><span class="std std-doc">Batch code processor</span></a> for advanced building.</p>
 <p>Evennia does not require its rooms to be positioned in a “logical” way. Your exits could be named
 anything. You could make an exit “west” that leads to a room described to be in the far north. You
 could have rooms inside one another, exits leading back to the same room or describing spatial
@@ -138,7 +58,7 @@ an example of a simple but flexible in-game map system to further help player’
 <p>To simplify development and error-checking we’ll break down the work into bite-size chunks, each
 building on what came before. For this we’ll make extensive use of the [Batch code processor](Batch-
 Code-Processor), so you may want to familiarize yourself with that.</p>
-<ol>
+<ol class="arabic">
 <li><p><strong>Planning the map</strong> - Here we’ll come up with a small example map to use for the rest of the
 tutorial.</p></li>
 <li><p><strong>Making a map object</strong> - This will showcase how to make a static in-game “map” object a
@@ -159,10 +79,10 @@ Exits: north(#8), east(#9), south(#10), west(#11)
 </li>
 </ol>
 <p>We will henceforth assume your game folder is name named <code class="docutils literal notranslate"><span class="pre">mygame</span></code> and that you haven’t modified the
-dkefault commands. We will also not be using <a class="reference internal" href="../Concepts/Colors.html"><span class="doc std std-doc">Colors</span></a> for our map since they
+dkefault commands. We will also not be using <a class="reference internal" href="../Concepts/Colors.html"><span class="std std-doc">Colors</span></a> for our map since they
 don’t show in the documentation wiki.</p>
 <section id="planning-the-map">
-<h2>Planning the Map<a class="headerlink" href="#planning-the-map" title="Permalink to this headline">¶</a></h2>
+<h2>Planning the Map<a class="headerlink" href="#planning-the-map" title="Link to this heading">¶</a></h2>
 <p>Let’s begin with the fun part! Maps in MUDs come in many different [shapes and
 sizes](<a class="reference external" href="http://journal.imaginary-realities.com/volume-05/issue-01/modern-interface-modern-">http://journal.imaginary-realities.com/volume-05/issue-01/modern-interface-modern-</a>
 mud/index.html). Some appear as just boxes connected by lines. Others have complex graphics that are
@@ -193,25 +113,25 @@ account. This means making sure to account for 2 characters around every visitab
 planning at this stage can solve many problems before they happen.</p>
 </section>
 <section id="creating-a-map-object">
-<h2>Creating a Map Object<a class="headerlink" href="#creating-a-map-object" title="Permalink to this headline">¶</a></h2>
+<h2>Creating a Map Object<a class="headerlink" href="#creating-a-map-object" title="Link to this heading">¶</a></h2>
 <p>In this section we will try to create an actual “map” object that an account can pick up and look
 at.</p>
-<p>Evennia offers a range of <a class="reference internal" href="../Components/Default-Commands.html"><span class="doc std std-doc">default commands</span></a> for
-<a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Building-Quickstart.html"><span class="doc std std-doc">creating objects and rooms in-game</span></a>. While readily accessible, these commands are made to do very
+<p>Evennia offers a range of <a class="reference internal" href="../Components/Default-Commands.html"><span class="std std-doc">default commands</span></a> for
+<a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Building-Quickstart.html"><span class="std std-doc">creating objects and rooms in-game</span></a>. While readily accessible, these commands are made to do very
 specific, restricted things and will thus not offer as much flexibility to experiment (for an
-advanced exception see <a class="reference internal" href="../Components/FuncParser.html"><span class="doc std std-doc">the FuncParser</span></a>). Additionally, entering long
+advanced exception see <a class="reference internal" href="../Components/FuncParser.html"><span class="std std-doc">the FuncParser</span></a>). Additionally, entering long
 descriptions and properties over and over in the game client can become tedious; especially when
 testing and you may want to delete and recreate things over and over.</p>
-<p>To overcome this, Evennia offers <a class="reference internal" href="../Components/Batch-Processors.html"><span class="doc std std-doc">batch processors</span></a> that work as input-files
+<p>To overcome this, Evennia offers <a class="reference internal" href="../Components/Batch-Processors.html"><span class="std std-doc">batch processors</span></a> that work as input-files
 created out-of-game. In this tutorial we’ll be using the more powerful of the two available batch
-processors, the <a class="reference internal" href="../Components/Batch-Code-Processor.html"><span class="doc std std-doc">Batch Code Processor </span></a>, called with the <code class="docutils literal notranslate"><span class="pre">&#64;batchcode</span></code> command.
+processors, the <a class="reference internal" href="../Components/Batch-Code-Processor.html"><span class="std std-doc">Batch Code Processor </span></a>, called with the <code class="docutils literal notranslate"><span class="pre">&#64;batchcode</span></code> command.
 This is a very powerful tool. It allows you to craft Python files to act as blueprints of your
 entire game world. These files have access to use Evennia’s Python API directly. Batchcode allows
 for easy editing and creation in whatever text editor you prefer, avoiding having to manually build
 the world line-by-line inside the game.</p>
 <blockquote>
 <div><p>Important warning: <code class="docutils literal notranslate"><span class="pre">&#64;batchcode</span></code>’s power is only rivaled by the <code class="docutils literal notranslate"><span class="pre">&#64;py</span></code> command. Batchcode is so
-powerful it should be reserved only for the <span class="xref myst">superuser</span>. Think carefully
+powerful it should be reserved only for the <a class="reference internal" href="#../Concepts/Building-Permissions.md"><span class="xref myst">superuser</span></a>. Think carefully
 before you let others (such as <code class="docutils literal notranslate"><span class="pre">Developer</span></code>- level staff) run <code class="docutils literal notranslate"><span class="pre">&#64;batchcode</span></code> on their own - make sure
 you are okay with them running <em>arbitrary Python code</em> on your server.</p>
 </div></blockquote>
@@ -256,7 +176,7 @@ folder automatically so you don’t need to specify it).</p>
 take it with the <code class="docutils literal notranslate"><span class="pre">get</span> <span class="pre">map</span></code> command. We’ll need it in case we get lost!</p>
 </section>
 <section id="building-the-map-areas">
-<h2>Building the map areas<a class="headerlink" href="#building-the-map-areas" title="Permalink to this headline">¶</a></h2>
+<h2>Building the map areas<a class="headerlink" href="#building-the-map-areas" title="Link to this heading">¶</a></h2>
 <p>We’ve just used batchcode to create an object useful for our adventures. But the locations on that
 map does not actually exist yet - we’re all mapped up with nowhere to go! Let’s use batchcode to
 build a game area based on our map. We have five areas outlined: a castle, a cottage, a campsite, a
@@ -338,7 +258,7 @@ now have a nice mini-world to explore. Remember that if you get lost you can loo
 created!</p>
 </section>
 <section id="in-game-minimap">
-<h2>In-game minimap<a class="headerlink" href="#in-game-minimap" title="Permalink to this headline">¶</a></h2>
+<h2>In-game minimap<a class="headerlink" href="#in-game-minimap" title="Link to this heading">¶</a></h2>
 <p>Now we have a landscape and matching map, but what we really want is a mini-map that displays
 whenever we move to a room or use the <code class="docutils literal notranslate"><span class="pre">look</span></code> command.</p>
 <p>We <em>could</em> manually enter a part of the map into the description of every room like we did our map
@@ -499,23 +419,115 @@ Prompt use <code class="docutils literal notranslate"><span class="pre">evennia<
 <p>Log in to evennia and run <code class="docutils literal notranslate"><span class="pre">&#64;batchcode</span> <span class="pre">batchcode_world</span></code> and you’ll have a little world to explore.</p>
 </section>
 <section id="conclusions">
-<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">¶</a></h2>
 <p>You should now have a mapped little world and a basic understanding of batchcode, EvTable and how
 easily new game defining features can be added to Evennia.</p>
 <p>You can easily build from this tutorial by expanding the map and creating more rooms to explore. Why
 not add more features to your game by trying other tutorials: [Add weather to your world](Weather-
-Tutorial), <a class="reference internal" href="../Howtos/Tutorial-NPC-Reacting.html"><span class="doc std std-doc">fill your world with NPC’s</span></a> or
-<a class="reference internal" href="../Howtos/Turn-based-Combat-System.html"><span class="doc std std-doc">implement a combat system</span></a>.</p>
+Tutorial), <a class="reference internal" href="../Howtos/Tutorial-NPC-Reacting.html"><span class="std std-doc">fill your world with NPC’s</span></a> or
+<a class="reference internal" href="../Howtos/Turn-based-Combat-System.html"><span class="std std-doc">implement a combat system</span></a>.</p>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Creating rooms from an ascii map</a><ul>
+<li><a class="reference internal" href="#planning-the-map">Planning the Map</a></li>
+<li><a class="reference internal" href="#creating-a-map-object">Creating a Map Object</a></li>
+<li><a class="reference internal" href="#building-the-map-areas">Building the map areas</a></li>
+<li><a class="reference internal" href="#in-game-minimap">In-game minimap</a></li>
+<li><a class="reference internal" href="#conclusions">Conclusions</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Contrib-Mapbuilder.html"
+                          title="previous chapter">Map Builder</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Contrib-Simpledoor.html"
+                          title="next chapter">SimpleDoor</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Contribs/Contrib-Mapbuilder-Tutorial.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -530,18 +542,15 @@ Tutorial), <a class="reference internal" href="../Howtos/Tutorial-NPC-Reacting.h
         <li class="right" >
           <a href="Contrib-Mapbuilder.html" title="Map Builder"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Contrib-Mapbuilder.html" >Map Builder</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Creating rooms from an ascii map</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

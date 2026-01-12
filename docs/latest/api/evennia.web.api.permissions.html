@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.web.api.permissions &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.web.api.root" href="evennia.web.api.root.html" />
     <link rel="prev" title="evennia.web.api.filters" href="evennia.web.api.filters.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.web.api.filters.html" title="evennia.web.api.filters"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -50,29 +44,158 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-evennia.web.api.permissions">
+<span id="evennia-web-api-permissions"></span><h1>evennia.web.api.permissions<a class="headerlink" href="#module-evennia.web.api.permissions" title="Link to this heading">¶</a></h1>
+<p>Sets up an api-access permission check using the in-game permission hierarchy.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.web.api.permissions.</span></span><span class="sig-name descname"><span class="pre">EvenniaPermission</span></span><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BasePermission</span></code></p>
+<p>A Django Rest Framework permission class that allows us to use Evennia’s
+permission structure. Based on the action in a given view, we’ll check a
+corresponding Evennia access/lock check.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.MINIMUM_LIST_PERMISSION">
+<span class="sig-name descname"><span class="pre">MINIMUM_LIST_PERMISSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'builder'</span></em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.MINIMUM_LIST_PERMISSION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.MINIMUM_CREATE_PERMISSION">
+<span class="sig-name descname"><span class="pre">MINIMUM_CREATE_PERMISSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'builder'</span></em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.MINIMUM_CREATE_PERMISSION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.view_locks">
+<span class="sig-name descname"><span class="pre">view_locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['examine']</span></em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.view_locks" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.destroy_locks">
+<span class="sig-name descname"><span class="pre">destroy_locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['delete']</span></em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.destroy_locks" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.update_locks">
+<span class="sig-name descname"><span class="pre">update_locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['control',</span> <span class="pre">'edit']</span></em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.update_locks" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.has_permission">
+<span class="sig-name descname"><span class="pre">has_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission.has_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.has_permission" title="Link to this definition">¶</a></dt>
+<dd><p>Checks for permissions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>Request</em>) – The incoming request object.</p></li>
+<li><p><strong>view</strong> (<em>View</em>) – The django view we are checking permission for.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>bool</em> – If permission is granted or not. If we return False here, a PermissionDenied
+error will be raised from the view.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method is a check that always happens first. If there’s an object involved,
+such as with retrieve, update, or delete, then the has_object_permission method
+is called after this, assuming this returns <strong>True</strong>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.check_locks">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_locks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission.check_locks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.check_locks" title="Link to this definition">¶</a></dt>
+<dd><p>Checks access for user for object with given locks
+:param obj: Object instance we’re checking
+:param user: User who we’re checking permissions
+:type user: Account
+:param locks: list of lockstrings
+:type locks: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>bool</em> – True if they have access, False if they don’t</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.web.api.permissions.EvenniaPermission.has_object_permission">
+<span class="sig-name descname"><span class="pre">has_object_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission.has_object_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.has_object_permission" title="Link to this definition">¶</a></dt>
+<dd><p>Checks object-level permissions after has_permission</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>Request</em>) – The incoming request object.</p></li>
+<li><p><strong>view</strong> (<em>View</em>) – The django view we are checking permission for.</p></li>
+<li><p><strong>obj</strong> – Object we’re checking object-level permissions for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>bool</em> – If permission is granted or not. If we return False here, a PermissionDenied
+error will be raised from the view.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method assumes that has_permission has already returned True. We check
+equivalent Evennia permissions in the request.user to determine if they can
+complete the action.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
             </a></p>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.web.api.filters.html"
-                        title="previous chapter">evennia.web.api.filters</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.web.api.root.html"
-                        title="next chapter">evennia.web.api.root</a></p>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.web.api.permissions</a><ul>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.MINIMUM_LIST_PERMISSION"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.MINIMUM_LIST_PERMISSION</span></code></a></li>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.MINIMUM_CREATE_PERMISSION"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.MINIMUM_CREATE_PERMISSION</span></code></a></li>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.view_locks"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.view_locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.destroy_locks"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.destroy_locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.update_locks"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.update_locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.has_permission"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.has_permission()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.check_locks"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.check_locks()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.web.api.permissions.EvenniaPermission.has_object_permission"><code class="docutils literal notranslate"><span class="pre">EvenniaPermission.has_object_permission()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.web.api.filters.html"
+                          title="previous chapter">evennia.web.api.filters</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.web.api.root.html"
+                          title="next chapter">evennia.web.api.root</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <!--h3>This Page</h3-->
     <ul class="this-page-menu">
@@ -94,135 +217,42 @@
 <h3>Doc Versions</h3>
 <ul>
   
-    <li><a href="evennia.web.api.permissions.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
   
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
   
-
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
 </ul>
 
         </div>
       </div>
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="module-evennia.web.api.permissions">
-<span id="evennia-web-api-permissions"></span><h1>evennia.web.api.permissions<a class="headerlink" href="#module-evennia.web.api.permissions" title="Permalink to this headline">¶</a></h1>
-<p>Sets up an api-access permission check using the in-game permission hierarchy.</p>
-<dl class="py class">
-<dt id="evennia.web.api.permissions.EvenniaPermission">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.web.api.permissions.</code><code class="sig-name descname">EvenniaPermission</code><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.permissions.BasePermission</span></code></p>
-<p>A Django Rest Framework permission class that allows us to use Evennia’s
-permission structure. Based on the action in a given view, we’ll check a
-corresponding Evennia access/lock check.</p>
-<dl class="py attribute">
-<dt id="evennia.web.api.permissions.EvenniaPermission.MINIMUM_LIST_PERMISSION">
-<code class="sig-name descname">MINIMUM_LIST_PERMISSION</code><em class="property"> = 'builder'</em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.MINIMUM_LIST_PERMISSION" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.web.api.permissions.EvenniaPermission.MINIMUM_CREATE_PERMISSION">
-<code class="sig-name descname">MINIMUM_CREATE_PERMISSION</code><em class="property"> = 'builder'</em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.MINIMUM_CREATE_PERMISSION" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.web.api.permissions.EvenniaPermission.view_locks">
-<code class="sig-name descname">view_locks</code><em class="property"> = ['examine']</em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.view_locks" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.web.api.permissions.EvenniaPermission.destroy_locks">
-<code class="sig-name descname">destroy_locks</code><em class="property"> = ['delete']</em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.destroy_locks" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.web.api.permissions.EvenniaPermission.update_locks">
-<code class="sig-name descname">update_locks</code><em class="property"> = ['control', 'edit']</em><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.update_locks" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="evennia.web.api.permissions.EvenniaPermission.has_permission">
-<code class="sig-name descname">has_permission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">view</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission.has_permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.has_permission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks for permissions</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>request</strong> (<em>Request</em>) – The incoming request object.</p></li>
-<li><p><strong>view</strong> (<em>View</em>) – The django view we are checking permission for.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>bool</em> – If permission is granted or not. If we return False here, a PermissionDenied
-error will be raised from the view.</p>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This method is a check that always happens first. If there’s an object involved,
-such as with retrieve, update, or delete, then the has_object_permission method
-is called after this, assuming this returns <strong>True</strong>.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.web.api.permissions.EvenniaPermission.check_locks">
-<em class="property">static </em><code class="sig-name descname">check_locks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">user</span></em>, <em class="sig-param"><span class="n">locks</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission.check_locks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.check_locks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks access for user for object with given locks
-:param obj: Object instance we’re checking
-:param user: User who we’re checking permissions
-:type user: Account
-:param locks: list of lockstrings
-:type locks: list</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><em>bool</em> – True if they have access, False if they don’t</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.web.api.permissions.EvenniaPermission.has_object_permission">
-<code class="sig-name descname">has_object_permission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">view</span></em>, <em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/web/api/permissions.html#EvenniaPermission.has_object_permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.web.api.permissions.EvenniaPermission.has_object_permission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks object-level permissions after has_permission</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>request</strong> (<em>Request</em>) – The incoming request object.</p></li>
-<li><p><strong>view</strong> (<em>View</em>) – The django view we are checking permission for.</p></li>
-<li><p><strong>obj</strong> – Object we’re checking object-level permissions for</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>bool</em> – If permission is granted or not. If we return False here, a PermissionDenied
-error will be raised from the view.</p>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>This method assumes that has_permission has already returned True. We check
-equivalent Evennia permissions in the request.user to determine if they can
-complete the action.</p>
-</dd></dl>
-
-</dd></dl>
-
-</section>
-
-
-          </div>
-        </div>
-      </div>
-
+      <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -237,7 +267,7 @@ complete the action.</p>
         <li class="right" >
           <a href="evennia.web.api.filters.html" title="evennia.web.api.filters"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -246,12 +276,9 @@ complete the action.</p>
         <li class="nav-item nav-item-this"><a href="">evennia.web.api.permissions</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

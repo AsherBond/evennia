@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Web Client &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="The Web Admin" href="Web-Admin.html" />
     <link rel="prev" title="Game website" href="Website.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,100 +33,19 @@
         <li class="right" >
           <a href="Website.html" title="Game website"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" accesskey="U">Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Web Client</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Web Client</a><ul>
-<li><a class="reference internal" href="#customizing-the-web-client">Customizing the web client</a></li>
-<li><a class="reference internal" href="#evennia-web-client-api-from-evennia-js">Evennia Web Client API (from evennia.js)</a></li>
-<li><a class="reference internal" href="#plugin-manager-api-from-webclient-gui-js">Plugin Manager API (from webclient_gui.js)</a></li>
-<li><a class="reference internal" href="#plugin-callbacks-api">Plugin callbacks API</a><ul>
-<li><a class="reference internal" href="#example-default-plugins-plugins-js">Example/Default Plugins (<code class="docutils literal notranslate"><span class="pre">plugins/*.js</span></code>)</a></li>
-<li><a class="reference internal" href="#a-side-note-on-html-messages-vs-text2html-messages">A side note on html messages vs text2html messages</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#writing-your-own-plugins">Writing your own Plugins</a><ul>
-<li><a class="reference internal" href="#goldenlayout">GoldenLayout</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Website.html"
-                        title="previous chapter">Game website</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Web-Admin.html"
-                        title="next chapter">The Web Admin</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Components/Webclient.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Webclient.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="web-client">
-<h1>Web Client<a class="headerlink" href="#web-client" title="Permalink to this headline">¶</a></h1>
+<h1>Web Client<a class="headerlink" href="#web-client" title="Link to this heading">¶</a></h1>
 <p>Evennia comes with a MUD client accessible from a normal web browser. During development you can try
 it at <code class="docutils literal notranslate"><span class="pre">http://localhost:4001/webclient</span></code>. The client consists of several parts, all under
 <code class="docutils literal notranslate"><span class="pre">evennia/web</span></code>:</p>
@@ -154,7 +67,7 @@ to display ANSI/Xterm256 colors etc.</p>
 <code class="docutils literal notranslate"><span class="pre">webclient_ajax.py</span></code> for the two types of connections. You can’t (and should not need to) modify
 these.</p>
 <section id="customizing-the-web-client">
-<h2>Customizing the web client<a class="headerlink" href="#customizing-the-web-client" title="Permalink to this headline">¶</a></h2>
+<h2>Customizing the web client<a class="headerlink" href="#customizing-the-web-client" title="Link to this heading">¶</a></h2>
 <p>Like was the case for the website, you override the webclient from your game directory. You need to
 add/modify a file in the matching directory locations within your project’s <code class="docutils literal notranslate"><span class="pre">mygame/web/</span></code> directories.
 These directories are NOT directly used by the web server when the game is running, the
@@ -168,7 +81,7 @@ your browser cache, and see if your edit shows up.</strong></p>
 <code class="docutils literal notranslate"><span class="pre">mygame/web/templates/webclient/base.html</span></code> and editing it to add your new plugin.</p>
 </section>
 <section id="evennia-web-client-api-from-evennia-js">
-<h2>Evennia Web Client API (from evennia.js)<a class="headerlink" href="#evennia-web-client-api-from-evennia-js" title="Permalink to this headline">¶</a></h2>
+<h2>Evennia Web Client API (from evennia.js)<a class="headerlink" href="#evennia-web-client-api-from-evennia-js" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Evennia.init(</span> <span class="pre">opts</span> <span class="pre">)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Evennia.connect()</span></code></p></li>
@@ -179,7 +92,7 @@ your browser cache, and see if your edit shows up.</strong></p>
 </ul>
 </section>
 <section id="plugin-manager-api-from-webclient-gui-js">
-<h2>Plugin Manager API (from webclient_gui.js)<a class="headerlink" href="#plugin-manager-api-from-webclient-gui-js" title="Permalink to this headline">¶</a></h2>
+<h2>Plugin Manager API (from webclient_gui.js)<a class="headerlink" href="#plugin-manager-api-from-webclient-gui-js" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code> Object, Stores key/value ‘state’ that can be used by plugins to coordinate behavior.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">plugins</span></code> Object, key/value list of the all the loaded plugins.</p></li>
@@ -192,7 +105,7 @@ your browser cache, and see if your edit shows up.</strong></p>
 </ul>
 </section>
 <section id="plugin-callbacks-api">
-<h2>Plugin callbacks API<a class="headerlink" href="#plugin-callbacks-api" title="Permalink to this headline">¶</a></h2>
+<h2>Plugin callbacks API<a class="headerlink" href="#plugin-callbacks-api" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">init()</span></code> – The only required callback</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">onKeydown(event)</span></code> This plugin listens for Keydown events</p></li>
@@ -215,7 +128,7 @@ their callback for this event called.  This enables things like the up/down arro
 history.js plugin to always occur before the default_in.js plugin adds that key to the current input
 buffer.</p>
 <section id="example-default-plugins-plugins-js">
-<h3>Example/Default Plugins (<code class="docutils literal notranslate"><span class="pre">plugins/*.js</span></code>)<a class="headerlink" href="#example-default-plugins-plugins-js" title="Permalink to this headline">¶</a></h3>
+<h3>Example/Default Plugins (<code class="docutils literal notranslate"><span class="pre">plugins/*.js</span></code>)<a class="headerlink" href="#example-default-plugins-plugins-js" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">clienthelp.js</span></code> Defines onOptionsUI from the options2 plugin.  This is a mostly empty plugin to
 add some “How To” information for your game.</p></li>
@@ -249,7 +162,7 @@ while the tab is hidden.</p></li>
 </ul>
 </section>
 <section id="a-side-note-on-html-messages-vs-text2html-messages">
-<h3>A side note on html messages vs text2html messages<a class="headerlink" href="#a-side-note-on-html-messages-vs-text2html-messages" title="Permalink to this headline">¶</a></h3>
+<h3>A side note on html messages vs text2html messages<a class="headerlink" href="#a-side-note-on-html-messages-vs-text2html-messages" title="Link to this heading">¶</a></h3>
 <p>So…lets say you have a desire to make your webclient output more like standard webpages…
 For telnet clients, you could collect a bunch of text lines together, with ASCII formatted borders, etc. Then send the results to be rendered client-side via the text2html plugin.</p>
 <p>But for webclients, you could format a message directly with the html plugin to render the whole thing as an HTML table, like so:</p>
@@ -280,12 +193,12 @@ For telnet clients, you could collect a bunch of text lines together, with ASCII
 </section>
 </section>
 <section id="writing-your-own-plugins">
-<h2>Writing your own Plugins<a class="headerlink" href="#writing-your-own-plugins" title="Permalink to this headline">¶</a></h2>
+<h2>Writing your own Plugins<a class="headerlink" href="#writing-your-own-plugins" title="Link to this heading">¶</a></h2>
 <p>So, you love the functionality of the webclient, but your game has specific
 types of text that need to be separated out into their own space, visually.
 The Goldenlayout plugin framework can help with this.</p>
 <section id="goldenlayout">
-<h3>GoldenLayout<a class="headerlink" href="#goldenlayout" title="Permalink to this headline">¶</a></h3>
+<h3>GoldenLayout<a class="headerlink" href="#goldenlayout" title="Link to this heading">¶</a></h3>
 <p>GoldenLayout is a web framework that allows web developers and their users to create their own
 tabbed/windowed layouts.  Windows/tabs can be click-and-dragged from location to location by
 clicking on their titlebar and dragging until the “frame lines” appear.  Dragging a window onto
@@ -414,12 +327,111 @@ window.plugin_handler.add(&quot;myplugin&quot;, myplugin);
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Web Client</a><ul>
+<li><a class="reference internal" href="#customizing-the-web-client">Customizing the web client</a></li>
+<li><a class="reference internal" href="#evennia-web-client-api-from-evennia-js">Evennia Web Client API (from evennia.js)</a></li>
+<li><a class="reference internal" href="#plugin-manager-api-from-webclient-gui-js">Plugin Manager API (from webclient_gui.js)</a></li>
+<li><a class="reference internal" href="#plugin-callbacks-api">Plugin callbacks API</a><ul>
+<li><a class="reference internal" href="#example-default-plugins-plugins-js">Example/Default Plugins (<code class="docutils literal notranslate"><span class="pre">plugins/*.js</span></code>)</a></li>
+<li><a class="reference internal" href="#a-side-note-on-html-messages-vs-text2html-messages">A side note on html messages vs text2html messages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#writing-your-own-plugins">Writing your own Plugins</a><ul>
+<li><a class="reference internal" href="#goldenlayout">GoldenLayout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Website.html"
+                          title="previous chapter">Game website</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Web-Admin.html"
+                          title="next chapter">The Web Admin</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Components/Webclient.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -434,17 +446,14 @@ window.plugin_handler.add(&quot;myplugin&quot;, myplugin);
         <li class="right" >
           <a href="Website.html" title="Game website"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" >Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Web Client</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

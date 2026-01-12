@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Evennia 1.0 Release Notes &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Contribs" href="../Contribs/Contribs-Overview.html" />
     <link rel="prev" title="Changelog" href="Changelog.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,104 +33,25 @@
         <li class="right" >
           <a href="Changelog.html" title="Changelog"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Coding-Overview.html" accesskey="U">Coding and development help</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Evennia 1.0 Release Notes</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Evennia 1.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#minimum-requirements">Minimum requirements</a></li>
-<li><a class="reference internal" href="#major-new-features">Major new features</a></li>
-<li><a class="reference internal" href="#contribs">Contribs</a></li>
-<li><a class="reference internal" href="#translations">Translations</a></li>
-<li><a class="reference internal" href="#utils">Utils</a></li>
-<li><a class="reference internal" href="#locks">Locks</a></li>
-<li><a class="reference internal" href="#hook-changes">Hook changes</a></li>
-<li><a class="reference internal" href="#command-changes">Command changes</a></li>
-<li><a class="reference internal" href="#coding-improvement-highlights">Coding improvement highlights</a></li>
-<li><a class="reference internal" href="#other">Other</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Changelog.html"
-                        title="previous chapter">Changelog</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../Contribs/Contribs-Overview.html"
-                        title="next chapter">Contribs</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Coding/Release-Notes-1.0.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Release-Notes-1.0.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="evennia-1-0-release-notes">
-<h1>Evennia 1.0 Release Notes<a class="headerlink" href="#evennia-1-0-release-notes" title="Permalink to this headline">¶</a></h1>
-<p>This summarizes the changes. See the <a class="reference internal" href="Changelog.html"><span class="doc std std-doc">Changelog</span></a> for the full list.</p>
+<h1>Evennia 1.0 Release Notes<a class="headerlink" href="#evennia-1-0-release-notes" title="Link to this heading">¶</a></h1>
+<p>This summarizes the changes. See the <a class="reference internal" href="Changelog.html"><span class="std std-doc">Changelog</span></a> for the full list.</p>
 <ul class="simple">
 <li><p>Main development now on <code class="docutils literal notranslate"><span class="pre">main</span></code> branch. <code class="docutils literal notranslate"><span class="pre">master</span></code> branch remains, but will not be updated anymore.</p></li>
 </ul>
 <section id="minimum-requirements">
-<h2>Minimum requirements<a class="headerlink" href="#minimum-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Minimum requirements<a class="headerlink" href="#minimum-requirements" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Python 3.10 is now required minimum. Ubuntu LTS now installs with 3.10. Evennia 1.0 is also tested with Python 3.11 - this is the recommended version for Linux/Mac. Windows users may want to stay on Python 3.10 unless they are okay with installing a C++ compiler.</p></li>
 <li><p>Twisted 22.10+</p></li>
@@ -144,16 +59,16 @@
 </ul>
 </section>
 <section id="major-new-features">
-<h2>Major new features<a class="headerlink" href="#major-new-features" title="Permalink to this headline">¶</a></h2>
+<h2>Major new features<a class="headerlink" href="#major-new-features" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Evennia is now on PyPi and is installable as <a class="reference internal" href="../Setup/Installation.html"><span class="doc std std-doc">pip install evennia</span></a>.</p></li>
+<li><p>Evennia is now on PyPi and is installable as <a class="reference internal" href="../Setup/Installation.html"><span class="std std-doc">pip install evennia</span></a>.</p></li>
 <li><p>A completely revamped documentation at <a class="reference external" href="https://www.evennia.com/docs/latest">https://www.evennia.com/docs/latest</a>. The old wiki and readmedocs pages will close.</p></li>
 <li><p>Evennia 1.0 now has a REST API which allows you access game objects using CRUD operations GET/POST etc. See [The Web-API docs][Web-API] for more information.</p></li>
-<li><p><a class="reference internal" href="../Setup/Channels-to-Discord.html"><span class="doc std std-doc">Evennia&lt;&gt;Discord Integration</span></a> between Evennia channels and Discord servers.</p></li>
-<li><p><a class="reference internal" href="../Components/Scripts.html"><span class="doc std std-doc">Script</span></a> overhaul: Scripts’ timer component independent from script object deletion; can now start/stop  timer without deleting Script. The <code class="docutils literal notranslate"><span class="pre">.persistent</span></code> flag now only controls if timer survives reload - Script has to be removed with <code class="docutils literal notranslate"><span class="pre">.delete()</span></code> like other typeclassed entities. This makes Scripts even more useful as general storage entities.</p></li>
-<li><p>The <a class="reference internal" href="../Components/FuncParser.html"><span class="doc std std-doc">FuncParser</span></a> centralizes and vastly improves all in-string function calls, such as <code class="docutils literal notranslate"><span class="pre">say</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">$eval(3</span> <span class="pre">*</span> <span class="pre">7)</span></code> and say the result <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">21</span></code>. The parser completely replaces the old <code class="docutils literal notranslate"><span class="pre">parse_inlinefunc</span></code>. The new parser can handle both arguments and kwargs and are also used for in-prototype parsing as well as director stance messaging, such as using <code class="docutils literal notranslate"><span class="pre">$You()</span></code> to represent yourself in a string and having the result come out differently depending on who see you.</p></li>
-<li><p><a class="reference internal" href="../Components/Channels.html"><span class="doc std std-doc">Channels</span></a> New Channel-System using the <code class="docutils literal notranslate"><span class="pre">channel</span></code> command and nicks. The old <code class="docutils literal notranslate"><span class="pre">ChannelHandler</span></code> was removed and the customization and operation of channels have been simplified a lot. The old command syntax commands are now available as a contrib.</p></li>
-<li><p><a class="reference internal" href="../Components/Help-System.html"><span class="doc std std-doc">Help System</span></a> was refactored.</p>
+<li><p><a class="reference internal" href="../Setup/Channels-to-Discord.html"><span class="std std-doc">Evennia&lt;&gt;Discord Integration</span></a> between Evennia channels and Discord servers.</p></li>
+<li><p><a class="reference internal" href="../Components/Scripts.html"><span class="std std-doc">Script</span></a> overhaul: Scripts’ timer component independent from script object deletion; can now start/stop  timer without deleting Script. The <code class="docutils literal notranslate"><span class="pre">.persistent</span></code> flag now only controls if timer survives reload - Script has to be removed with <code class="docutils literal notranslate"><span class="pre">.delete()</span></code> like other typeclassed entities. This makes Scripts even more useful as general storage entities.</p></li>
+<li><p>The <a class="reference internal" href="../Components/FuncParser.html"><span class="std std-doc">FuncParser</span></a> centralizes and vastly improves all in-string function calls, such as <code class="docutils literal notranslate"><span class="pre">say</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">$eval(3</span> <span class="pre">*</span> <span class="pre">7)</span></code> and say the result <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">21</span></code>. The parser completely replaces the old <code class="docutils literal notranslate"><span class="pre">parse_inlinefunc</span></code>. The new parser can handle both arguments and kwargs and are also used for in-prototype parsing as well as director stance messaging, such as using <code class="docutils literal notranslate"><span class="pre">$You()</span></code> to represent yourself in a string and having the result come out differently depending on who see you.</p></li>
+<li><p><a class="reference internal" href="../Components/Channels.html"><span class="std std-doc">Channels</span></a> New Channel-System using the <code class="docutils literal notranslate"><span class="pre">channel</span></code> command and nicks. The old <code class="docutils literal notranslate"><span class="pre">ChannelHandler</span></code> was removed and the customization and operation of channels have been simplified a lot. The old command syntax commands are now available as a contrib.</p></li>
+<li><p><a class="reference internal" href="../Components/Help-System.html"><span class="std std-doc">Help System</span></a> was refactored.</p>
 <ul>
 <li><p>A new type of <code class="docutils literal notranslate"><span class="pre">FileHelp</span></code> system allows you to add in-game help files as external Python files. This means there are three ways to add help entries in Evennia:  1) Auto-generated from Command’s code. 2) Manually added to the database from the <code class="docutils literal notranslate"><span class="pre">sethelp</span></code> command in-game and 3) Created as external Python files that Evennia loads and makes available in-game.</p></li>
 <li><p>We now use  <code class="docutils literal notranslate"><span class="pre">lunr</span></code> search indexing for better <code class="docutils literal notranslate"><span class="pre">help</span></code> matching and suggestions. Also improve
@@ -163,29 +78,29 @@ the main help command’s default listing output.</p></li>
 <li><p>Make <code class="docutils literal notranslate"><span class="pre">help</span></code> index output clickable for webclient/clients with MXP (PR by davewiththenicehat)</p></li>
 </ul>
 </li>
-<li><p>Rework of the <a class="reference internal" href="../Components/Website.html"><span class="doc std std-doc">Web</span></a> setup, into a much more consistent structure and update to latest Django. The <code class="docutils literal notranslate"><span class="pre">mygame/web/static_overrides</span></code> and <code class="docutils literal notranslate"><span class="pre">-template_overrides</span></code> were removed. The folders are now just <code class="docutils literal notranslate"><span class="pre">mygame/web/static</span></code> and <code class="docutils literal notranslate"><span class="pre">/templates</span></code> and handle the automatic copying of data behind the scenes. <code class="docutils literal notranslate"><span class="pre">app.css</span></code> to <code class="docutils literal notranslate"><span class="pre">website.css</span></code> for consistency. The old <code class="docutils literal notranslate"><span class="pre">prosimii-css</span></code> files were removed.</p></li>
-<li><p><a class="reference internal" href="../Components/Attributes.html#using-attributeproperty"><span class="std std-doc">AttributeProperty</span></a>/<a class="reference internal" href="../Components/Tags.html"><span class="doc std std-doc">TagProperty</span></a> along with <code class="docutils literal notranslate"><span class="pre">AliasProperty</span></code> and <code class="docutils literal notranslate"><span class="pre">PermissionProperty</span></code> to allow managing Attributes, Tags, Aliases and Permissios on typeclasses in the same way as Django fields. This dramatically reduces the need to assign Attributes/Tags in <code class="docutils literal notranslate"><span class="pre">at_create_object</span></code> hook.</p></li>
-<li><p>The old <code class="docutils literal notranslate"><span class="pre">MULTISESSION_MODE</span></code> was divided into smaller settings, for better controlling what happens when a user connects, if a character should be auto-created, and how many characters they can control at the same time. See <a class="reference internal" href="../Concepts/Connection-Styles.html"><span class="doc std std-doc">Connection-Styles</span></a> for a detailed explanation.</p></li>
+<li><p>Rework of the <a class="reference internal" href="../Components/Website.html"><span class="std std-doc">Web</span></a> setup, into a much more consistent structure and update to latest Django. The <code class="docutils literal notranslate"><span class="pre">mygame/web/static_overrides</span></code> and <code class="docutils literal notranslate"><span class="pre">-template_overrides</span></code> were removed. The folders are now just <code class="docutils literal notranslate"><span class="pre">mygame/web/static</span></code> and <code class="docutils literal notranslate"><span class="pre">/templates</span></code> and handle the automatic copying of data behind the scenes. <code class="docutils literal notranslate"><span class="pre">app.css</span></code> to <code class="docutils literal notranslate"><span class="pre">website.css</span></code> for consistency. The old <code class="docutils literal notranslate"><span class="pre">prosimii-css</span></code> files were removed.</p></li>
+<li><p><a class="reference internal" href="../Components/Attributes.html#using-attributeproperty"><span class="std std-ref">AttributeProperty</span></a>/<a class="reference internal" href="../Components/Tags.html"><span class="std std-doc">TagProperty</span></a> along with <code class="docutils literal notranslate"><span class="pre">AliasProperty</span></code> and <code class="docutils literal notranslate"><span class="pre">PermissionProperty</span></code> to allow managing Attributes, Tags, Aliases and Permissios on typeclasses in the same way as Django fields. This dramatically reduces the need to assign Attributes/Tags in <code class="docutils literal notranslate"><span class="pre">at_create_object</span></code> hook.</p></li>
+<li><p>The old <code class="docutils literal notranslate"><span class="pre">MULTISESSION_MODE</span></code> was divided into smaller settings, for better controlling what happens when a user connects, if a character should be auto-created, and how many characters they can control at the same time. See <a class="reference internal" href="../Concepts/Connection-Styles.html"><span class="std std-doc">Connection-Styles</span></a> for a detailed explanation.</p></li>
 <li><p>Evennia now supports custom <code class="docutils literal notranslate"><span class="pre">evennia</span></code> launcher commands (e.g. <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">mycmd</span> <span class="pre">foo</span> <span class="pre">bar</span></code>). Add new commands as callables accepting <code class="docutils literal notranslate"><span class="pre">*args</span></code>, as <code class="docutils literal notranslate"><span class="pre">settings.EXTRA_LAUNCHER_COMMANDS</span> <span class="pre">=</span> <span class="pre">{'mycmd':</span> <span class="pre">'path.to.callable',</span> <span class="pre">...}</span></code>.</p></li>
 </ul>
 </section>
 <section id="contribs">
-<h2>Contribs<a class="headerlink" href="#contribs" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">contrib</span></code> folder structure was changed from 0.9.5. All contribs are now in sub-folders and organized into categories. All import paths must be updated. See <a class="reference internal" href="../Contribs/Contribs-Overview.html"><span class="doc std std-doc">Contribs overview</span></a>.</p>
+<h2>Contribs<a class="headerlink" href="#contribs" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">contrib</span></code> folder structure was changed from 0.9.5. All contribs are now in sub-folders and organized into categories. All import paths must be updated. See <a class="reference internal" href="../Contribs/Contribs-Overview.html"><span class="std std-doc">Contribs overview</span></a>.</p>
 <ul class="simple">
-<li><p>New <a class="reference internal" href="../Contribs/Contrib-Traits.html"><span class="doc std std-doc">Traits contrib</span></a>, converted and expanded from Ainneve project. (whitenoise, Griatch)</p></li>
-<li><p>New <a class="reference internal" href="../Contribs/Contrib-Crafting.html"><span class="doc std std-doc">Crafting contrib</span></a>, adding a full crafting subsystem (Griatch)</p></li>
-<li><p>New <a class="reference internal" href="../Contribs/Contrib-XYZGrid.html"><span class="doc std std-doc">XYZGrid contrib</span></a>, adding x,y,z grid coordinates with in-game map and pathfinding. Controlled outside of the game via custom evennia launcher command (Griatch)</p></li>
-<li><p>New <a class="reference internal" href="../Contribs/Contrib-Cooldowns.html"><span class="doc std std-doc">Command cooldown contrib</span></a> contrib for making it easier to manage commands using
+<li><p>New <a class="reference internal" href="../Contribs/Contrib-Traits.html"><span class="std std-doc">Traits contrib</span></a>, converted and expanded from Ainneve project. (whitenoise, Griatch)</p></li>
+<li><p>New <a class="reference internal" href="../Contribs/Contrib-Crafting.html"><span class="std std-doc">Crafting contrib</span></a>, adding a full crafting subsystem (Griatch)</p></li>
+<li><p>New <a class="reference internal" href="../Contribs/Contrib-XYZGrid.html"><span class="std std-doc">XYZGrid contrib</span></a>, adding x,y,z grid coordinates with in-game map and pathfinding. Controlled outside of the game via custom evennia launcher command (Griatch)</p></li>
+<li><p>New <a class="reference internal" href="../Contribs/Contrib-Cooldowns.html"><span class="std std-doc">Command cooldown contrib</span></a> contrib for making it easier to manage commands using
 dynamic cooldowns between uses (owllex)</p></li>
-<li><p>New <a class="reference internal" href="../Contribs/Contrib-Godotwebsocket.html"><span class="doc std std-doc">Godot Protocol contrib</span></a> for connecting to Evennia from a client written in the open-source game engine <a class="reference external" href="https://godotengine.org/">Godot</a> (ChrisLR).</p></li>
-<li><p>New <a class="reference internal" href="../Contribs/Contrib-Name-Generator.html"><span class="doc std std-doc">name_generator contrib</span></a> for building random real-world based or fantasy-names based on phonetic rules (InspectorCaracal)</p></li>
-<li><p>New <a class="reference internal" href="../Contribs/Contrib-Buffs.html"><span class="doc std std-doc">Buffs contrib</span></a> for managing temporary and permanent RPG status buffs effects (tegiminis)</p></li>
-<li><p>The existing <a class="reference internal" href="../Contribs/Contrib-RPSystem.html"><span class="doc std std-doc">RPSystem contrib</span></a> was refactored and saw a speed boost (InspectorCaracal, other contributors)</p></li>
+<li><p>New <a class="reference internal" href="../Contribs/Contrib-Godotwebsocket.html"><span class="std std-doc">Godot Protocol contrib</span></a> for connecting to Evennia from a client written in the open-source game engine <a class="reference external" href="https://godotengine.org/">Godot</a> (ChrisLR).</p></li>
+<li><p>New <a class="reference internal" href="../Contribs/Contrib-Name-Generator.html"><span class="std std-doc">name_generator contrib</span></a> for building random real-world based or fantasy-names based on phonetic rules (InspectorCaracal)</p></li>
+<li><p>New <a class="reference internal" href="../Contribs/Contrib-Buffs.html"><span class="std std-doc">Buffs contrib</span></a> for managing temporary and permanent RPG status buffs effects (tegiminis)</p></li>
+<li><p>The existing <a class="reference internal" href="../Contribs/Contrib-RPSystem.html"><span class="std std-doc">RPSystem contrib</span></a> was refactored and saw a speed boost (InspectorCaracal, other contributors)</p></li>
 </ul>
 </section>
 <section id="translations">
-<h2>Translations<a class="headerlink" href="#translations" title="Permalink to this headline">¶</a></h2>
+<h2>Translations<a class="headerlink" href="#translations" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>New Latin (la) translation (jamalainm)</p></li>
 <li><p>New German (de) translation (Zhuraj)</p></li>
@@ -194,7 +109,7 @@ dynamic cooldowns between uses (owllex)</p></li>
 </ul>
 </section>
 <section id="utils">
-<h2>Utils<a class="headerlink" href="#utils" title="Permalink to this headline">¶</a></h2>
+<h2>Utils<a class="headerlink" href="#utils" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>New <code class="docutils literal notranslate"><span class="pre">utils.format_grid</span></code> for easily displaying long lists of items in a block. This is now used for the default help display.</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">utils.repeat</span></code> and <code class="docutils literal notranslate"><span class="pre">utils.unrepeat</span></code> as shortcuts to TickerHandler add/remove, similar
@@ -216,7 +131,7 @@ wrapper functions (consistent with <code class="docutils literal notranslate"><s
 </ul>
 </section>
 <section id="locks">
-<h2>Locks<a class="headerlink" href="#locks" title="Permalink to this headline">¶</a></h2>
+<h2>Locks<a class="headerlink" href="#locks" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>New <code class="docutils literal notranslate"><span class="pre">search:</span></code> lock type used to completely hide an object from being found by
 the <code class="docutils literal notranslate"><span class="pre">DefaultObject.search</span></code> (<code class="docutils literal notranslate"><span class="pre">caller.search</span></code>) method. (CloudKeeper)</p></li>
@@ -224,7 +139,7 @@ the <code class="docutils literal notranslate"><span class="pre">DefaultObject.s
 </ul>
 </section>
 <section id="hook-changes">
-<h2>Hook changes<a class="headerlink" href="#hook-changes" title="Permalink to this headline">¶</a></h2>
+<h2>Hook changes<a class="headerlink" href="#hook-changes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Changed all <code class="docutils literal notranslate"><span class="pre">at_before/after_*</span></code> hooks to <code class="docutils literal notranslate"><span class="pre">at_pre/post_*</span></code> for consistency
 across Evennia (the old names still work but are deprecated)</p></li>
@@ -243,7 +158,7 @@ N identical matches instead of triggering a multi-match error.</p></li>
 </ul>
 </section>
 <section id="command-changes">
-<h2>Command changes<a class="headerlink" href="#command-changes" title="Permalink to this headline">¶</a></h2>
+<h2>Command changes<a class="headerlink" href="#command-changes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Change default multi-match syntax from <code class="docutils literal notranslate"><span class="pre">1-obj</span></code>, <code class="docutils literal notranslate"><span class="pre">2-obj</span></code> to <code class="docutils literal notranslate"><span class="pre">obj-1</span></code>, <code class="docutils literal notranslate"><span class="pre">obj-2</span></code>, which seems to be what most expect.</p></li>
 <li><p>Split <code class="docutils literal notranslate"><span class="pre">return_appearance</span></code> hook with helper methods and have it use a template
@@ -269,9 +184,9 @@ warning when using reset mode.</p></li>
 </ul>
 </section>
 <section id="coding-improvement-highlights">
-<h2>Coding improvement highlights<a class="headerlink" href="#coding-improvement-highlights" title="Permalink to this headline">¶</a></h2>
+<h2>Coding improvement highlights<a class="headerlink" href="#coding-improvement-highlights" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>The db pickle-serializer now checks for methods <code class="docutils literal notranslate"><span class="pre">__serialize_dbobjs__</span></code> and <code class="docutils literal notranslate"><span class="pre">__deserialize_dbobjs__</span></code> to allow custom packing/unpacking of nested dbobjs, to allow storing in Attribute. See <a class="reference internal" href="../Components/Attributes.html"><span class="doc std std-doc">Attributes</span></a> documentation.</p></li>
+<li><p>The db pickle-serializer now checks for methods <code class="docutils literal notranslate"><span class="pre">__serialize_dbobjs__</span></code> and <code class="docutils literal notranslate"><span class="pre">__deserialize_dbobjs__</span></code> to allow custom packing/unpacking of nested dbobjs, to allow storing in Attribute. See <a class="reference internal" href="../Components/Attributes.html"><span class="std std-doc">Attributes</span></a> documentation.</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">ObjectParent</span></code> mixin to default game folder template as an easy, ready-made
 way to override features on all ObjectDB-inheriting objects easily.
 source location, mimicking behavior of <code class="docutils literal notranslate"><span class="pre">at_pre_move</span></code> hook - returning False will abort move.</p></li>
@@ -279,7 +194,7 @@ source location, mimicking behavior of <code class="docutils literal notranslate
 </ul>
 </section>
 <section id="other">
-<h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
+<h2>Other<a class="headerlink" href="#other" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Homogenize manager search methods to always return querysets and not sometimes querysets and sometimes lists.</p></li>
 <li><p>Attribute/NAttribute got a homogenous representation, using intefaces, both
@@ -305,12 +220,109 @@ a space or <code class="docutils literal notranslate"><span class="pre">/</span>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Evennia 1.0 Release Notes</a><ul>
+<li><a class="reference internal" href="#minimum-requirements">Minimum requirements</a></li>
+<li><a class="reference internal" href="#major-new-features">Major new features</a></li>
+<li><a class="reference internal" href="#contribs">Contribs</a></li>
+<li><a class="reference internal" href="#translations">Translations</a></li>
+<li><a class="reference internal" href="#utils">Utils</a></li>
+<li><a class="reference internal" href="#locks">Locks</a></li>
+<li><a class="reference internal" href="#hook-changes">Hook changes</a></li>
+<li><a class="reference internal" href="#command-changes">Command changes</a></li>
+<li><a class="reference internal" href="#coding-improvement-highlights">Coding improvement highlights</a></li>
+<li><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Changelog.html"
+                          title="previous chapter">Changelog</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../Contribs/Contribs-Overview.html"
+                          title="next chapter">Contribs</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Coding/Release-Notes-1.0.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -325,17 +337,14 @@ a space or <code class="docutils literal notranslate"><span class="pre">/</span>
         <li class="right" >
           <a href="Changelog.html" title="Changelog"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Coding-Overview.html" >Coding and development help</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Evennia 1.0 Release Notes</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

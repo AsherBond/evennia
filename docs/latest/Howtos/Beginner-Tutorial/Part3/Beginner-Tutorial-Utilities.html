@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1. Code Structure and Utilities &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="2. Rules and dice rolling" href="Beginner-Tutorial-Rules.html" />
     <link rel="prev" title="Part 3: How We Get There (Example Game)" href="Beginner-Tutorial-Part3-Overview.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="Beginner-Tutorial-Part3-Overview.html" title="Part 3: How We Get There (Example Game)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part3-Overview.html" accesskey="U">Part 3: How We Get There (Example Game)</a> &#187;</li>
@@ -48,93 +42,16 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../../../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">1. Code Structure and Utilities</a><ul>
-<li><a class="reference internal" href="#folder-structure">1.1. Folder Structure</a></li>
-<li><a class="reference internal" href="#enums">1.2. Enums</a></li>
-<li><a class="reference internal" href="#utility-module">1.3. Utility Module</a></li>
-<li><a class="reference internal" href="#testing">1.4. Testing</a><ul>
-<li><a class="reference internal" href="#running-your-test">1.4.1. Running your Test</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#summary">1.5. Summary</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Part3-Overview.html"
-                        title="previous chapter">Part 3: How We Get There (Example Game)</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Beginner-Tutorial-Rules.html"
-                        title="next chapter"><span class="section-number">2. </span>Rules and dice rolling</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part3/Beginner-Tutorial-Utilities.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Beginner-Tutorial-Utilities.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="code-structure-and-utilities">
-<h1><span class="section-number">1. </span>Code Structure and Utilities<a class="headerlink" href="#code-structure-and-utilities" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Code Structure and Utilities<a class="headerlink" href="#code-structure-and-utilities" title="Link to this heading">¶</a></h1>
 <p>In this lesson, we will set up the file structure for <em>EvAdventure</em>. We will make some
 utilities that will be useful later. We will also learn how to write <em>tests</em>.</p>
 <section id="folder-structure">
-<h2><span class="section-number">1.1. </span>Folder Structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Folder Structure<a class="headerlink" href="#folder-structure" title="Link to this heading">¶</a></h2>
 <aside class="sidebar">
 <p class="sidebar-title">This layout is for the tutorial!</p>
 <p>We make the <code class="docutils literal notranslate"><span class="pre">evadventure</span></code> folder stand-alone for the sake of the tutorial only. Leaving the code isolated in this way makes it clear what we have changed — and for you to grab what you want later. It also makes it easier to refer to the matching code in <code class="docutils literal notranslate"><span class="pre">evennia/contrib/tutorials/evadventure</span></code>.</p>
@@ -174,10 +91,10 @@ utilities that will be useful later. We will also learn how to write <em>tests</
 </div>
 </section>
 <section id="enums">
-<h2><span class="section-number">1.2. </span>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Enums<a class="headerlink" href="#enums" title="Link to this heading">¶</a></h2>
 <aside class="sidebar">
 <p>A full example of the enum module is found in
-<a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.enums.html"><span class="doc std std-doc">evennia/contrib/tutorials/evadventure/enums.py</span></a>.</p>
+<a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.enums.html"><span class="std std-doc">evennia/contrib/tutorials/evadventure/enums.py</span></a>.</p>
 </aside>
 <p>Create a new file <code class="docutils literal notranslate"><span class="pre">mygame/evadventure/enums.py</span></code>.</p>
 <p>An <a class="reference external" href="https://docs.python.org/3/library/enum.html">enum</a> (enumeration) is a way to establish constants in Python. For example:</p>
@@ -250,13 +167,13 @@ utilities that will be useful later. We will also learn how to write <em>tests</
 </div>
 </section>
 <section id="utility-module">
-<h2><span class="section-number">1.3. </span>Utility Module<a class="headerlink" href="#utility-module" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Utility Module<a class="headerlink" href="#utility-module" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p>Create a new module <code class="docutils literal notranslate"><span class="pre">mygame/evadventure/utils.py</span></code></p>
 </div></blockquote>
 <aside class="sidebar">
 <p>An example of the utility module is found in
-<a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.utils.html"><span class="doc std std-doc">evennia/contrib/tutorials/evadventure/utils.py</span></a></p>
+<a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.utils.html"><span class="std std-doc">evennia/contrib/tutorials/evadventure/utils.py</span></a></p>
 </aside>
 <p>The utility module is used to contain general functions we may need to call repeatedly from various other modules. In this tutorial example, we only crate one utility: a function that produces a pretty display of any object we pass to it.</p>
 <p>Here’s how it could look:</p>
@@ -318,12 +235,12 @@ utilities that will be useful later. We will also learn how to write <em>tests</
 </pre></div>
 </div>
 <p>We will later use this to let the player inspect any object without us having to make a new utility for every object type.</p>
-<p>Study the <code class="docutils literal notranslate"><span class="pre">_OBJ_STATS</span></code> template string so that you understand what it does. The <code class="docutils literal notranslate"><span class="pre">|c</span></code>, <code class="docutils literal notranslate"><span class="pre">|y</span></code>, <code class="docutils literal notranslate"><span class="pre">|w</span></code> and <code class="docutils literal notranslate"><span class="pre">|n</span></code> markers are  <a class="reference internal" href="../../../Concepts/Colors.html"><span class="doc std std-doc">Evennia color markup</span></a> for making the text cyan, yellow, white and neutral-color, respectively.</p>
+<p>Study the <code class="docutils literal notranslate"><span class="pre">_OBJ_STATS</span></code> template string so that you understand what it does. The <code class="docutils literal notranslate"><span class="pre">|c</span></code>, <code class="docutils literal notranslate"><span class="pre">|y</span></code>, <code class="docutils literal notranslate"><span class="pre">|w</span></code> and <code class="docutils literal notranslate"><span class="pre">|n</span></code> markers are  <a class="reference internal" href="../../../Concepts/Colors.html"><span class="std std-doc">Evennia color markup</span></a> for making the text cyan, yellow, white and neutral-color, respectively.</p>
 <p>Some stats elements are easy to identify in the above code. For instance, <code class="docutils literal notranslate"><span class="pre">obj.key</span></code> is the name of an object and <code class="docutils literal notranslate"><span class="pre">obj.db.desc</span></code> will hold an object’s description — this is also how default Evennia works.</p>
 <p>So far, here in our tutorial, we have not yet established how to get any of the other properties like <code class="docutils literal notranslate"><span class="pre">size</span></code>, <code class="docutils literal notranslate"><span class="pre">damage_roll</span></code>  or <code class="docutils literal notranslate"><span class="pre">attack_type_name</span></code>. For our current purposes, we will just set them to fixed dummy values so they work. We’ll need to revisit them later when we have more code in place!</p>
 </section>
 <section id="testing">
-<h2><span class="section-number">1.4. </span>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h2>
 <p>Evennia comes with extensive functionality to help you test your code. A <em>unit test</em> allows you to set up automated testing of code. Once you’ve written your test, you can then run it over and over again to ensure later changes to your code didn’t break things by introducing errors.</p>
 <blockquote>
 <div><p>create a new module <code class="docutils literal notranslate"><span class="pre">mygame/evadventure/tests/test_utils.py</span></code></p>
@@ -335,7 +252,7 @@ utilities that will be useful later. We will also learn how to write <em>tests</
 <p>Doing so should spit back a nice bit of string ouput about yourself! If that works, great! But, you’ll need to remember re-running that test manually when you later change the code.</p>
 <aside class="sidebar">
 <p>In <a class="reference internal" href="../../../api/evennia.contrib.tutorials.evadventure.tests.test_utils.html#evennia-contrib-tutorials-evadventure-tests-test-utils"><span class="std std-ref">evennia/contrib/tutorials/evadventure/tests/test_utils.py</span></a>
-is an example of the testing module. To dive deeper into unit testing in Evennia, see the <a class="reference internal" href="../../../Coding/Unit-Testing.html"><span class="doc std std-doc">Unit testing</span></a> documentation.</p>
+is an example of the testing module. To dive deeper into unit testing in Evennia, see the <a class="reference internal" href="../../../Coding/Unit-Testing.html"><span class="std std-doc">Unit testing</span></a> documentation.</p>
 </aside>
 <p>In our particular case of this tutorial, we should <em>expect</em> to need to later update the test when the <code class="docutils literal notranslate"><span class="pre">get_obj_stats</span></code> code becomes more complete and returns more pertinent data.</p>
 <p>Here’s a module for  testing <code class="docutils literal notranslate"><span class="pre">get_obj_stats</span></code>.</p>
@@ -380,11 +297,11 @@ is an example of the testing module. To dive deeper into unit testing in Evennia
 <p>Writing tests for your code is optional, but highly recommended. Initially, unit testing may feel a little cumbersome or time-consuming… but you’ll thank yourself later.</p>
 </div>
 <p>We can have any number of methods called on this class. To have Evennia automatically recognize a method as one containing code to test, its name <em>must</em> start with the <code class="docutils literal notranslate"><span class="pre">test_</span></code> prefix. We have one here as <code class="docutils literal notranslate"><span class="pre">test_get_obj_stats</span></code>.</p>
-<p>In our <code class="docutils literal notranslate"><span class="pre">test_get_obj_stats</span></code> method, we create a dummy <code class="docutils literal notranslate"><span class="pre">obj</span></code> and assign it a <code class="docutils literal notranslate"><span class="pre">key</span></code> “testobj”. Note that we add the<code class="docutils literal notranslate"><span class="pre">desc</span></code> <a class="reference internal" href="../../../Components/Attributes.html"><span class="doc std std-doc">Attribute</span></a> directly in the <code class="docutils literal notranslate"><span class="pre">create_object</span></code> call by specifying the attribute as a tuple <code class="docutils literal notranslate"><span class="pre">(name,</span> <span class="pre">value)</span></code>!</p>
+<p>In our <code class="docutils literal notranslate"><span class="pre">test_get_obj_stats</span></code> method, we create a dummy <code class="docutils literal notranslate"><span class="pre">obj</span></code> and assign it a <code class="docutils literal notranslate"><span class="pre">key</span></code> “testobj”. Note that we add the<code class="docutils literal notranslate"><span class="pre">desc</span></code> <a class="reference internal" href="../../../Components/Attributes.html"><span class="std std-doc">Attribute</span></a> directly in the <code class="docutils literal notranslate"><span class="pre">create_object</span></code> call by specifying the attribute as a tuple <code class="docutils literal notranslate"><span class="pre">(name,</span> <span class="pre">value)</span></code>!</p>
 <p>Then, we can get the result of passing this dummy-object through the <code class="docutils literal notranslate"><span class="pre">get_obj_stats</span></code> function that we imported earlier.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">assertEqual</span></code> method is available on all testing classes and checks that the <code class="docutils literal notranslate"><span class="pre">result</span></code> is equal to the string we specify. If they are the same, the test <em>passes</em>. Otherwise, it <em>fails</em> and we need to investigate what went wrong.</p>
 <section id="running-your-test">
-<h3><span class="section-number">1.4.1. </span>Running your Test<a class="headerlink" href="#running-your-test" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>Running your Test<a class="headerlink" href="#running-your-test" title="Link to this heading">¶</a></h3>
 <p>To run our utility module test, we need to issue the following command directly from the <code class="docutils literal notranslate"><span class="pre">mygame</span></code> folder:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>evennia test --settings settings.py evadventure.tests
 </pre></div>
@@ -401,19 +318,114 @@ is an example of the testing module. To dive deeper into unit testing in Evennia
 </section>
 </section>
 <section id="summary">
-<h2><span class="section-number">1.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">¶</a></h2>
 <p>It’s very important to understand how you import code among modules in Python. If importing from Python modules is still confusing to you, it’s worth it to read more on the topic.</p>
 <p>That said, many newcomers are confused with how to tackle these concepts. In this lesson, by creating the folder structure, two small modules and even making our first unit test, you are off to a great start!</p>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. Code Structure and Utilities</a><ul>
+<li><a class="reference internal" href="#folder-structure">1.1. Folder Structure</a></li>
+<li><a class="reference internal" href="#enums">1.2. Enums</a></li>
+<li><a class="reference internal" href="#utility-module">1.3. Utility Module</a></li>
+<li><a class="reference internal" href="#testing">1.4. Testing</a><ul>
+<li><a class="reference internal" href="#running-your-test">1.4.1. Running your Test</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#summary">1.5. Summary</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Part3-Overview.html"
+                          title="previous chapter">Part 3: How We Get There (Example Game)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Beginner-Tutorial-Rules.html"
+                          title="next chapter"><span class="section-number">2. </span>Rules and dice rolling</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/Howtos/Beginner-Tutorial/Part3/Beginner-Tutorial-Utilities.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -428,19 +440,16 @@ is an example of the testing module. To dive deeper into unit testing in Evennia
         <li class="right" >
           <a href="Beginner-Tutorial-Part3-Overview.html" title="Part 3: How We Get There (Example Game)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../Beginner-Tutorial-Overview.html" >Beginner Tutorial</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="Beginner-Tutorial-Part3-Overview.html" >Part 3: How We Get There (Example Game)</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Code Structure and Utilities</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

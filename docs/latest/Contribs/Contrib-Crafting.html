@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Crafting system &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Gendersub" href="Contrib-Gendersub.html" />
     <link rel="prev" title="Cooldowns" href="Contrib-Cooldowns.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,96 +33,19 @@
         <li class="right" >
           <a href="Contrib-Cooldowns.html" title="Cooldowns"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" accesskey="U">Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Crafting system</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Crafting system</a><ul>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#installation-and-usage">Installation and Usage</a></li>
-<li><a class="reference internal" href="#adding-new-recipes">Adding new recipes</a></li>
-<li><a class="reference internal" href="#deeper-customization-of-recipes">Deeper customization of recipes</a><ul>
-<li><a class="reference internal" href="#skilled-crafters">Skilled crafters</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#even-more-customization">Even more customization</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Contrib-Cooldowns.html"
-                        title="previous chapter">Cooldowns</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Gendersub.html"
-                        title="next chapter">Gendersub</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Contribs/Contrib-Crafting.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Contrib-Crafting.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="crafting-system">
-<h1>Crafting system<a class="headerlink" href="#crafting-system" title="Permalink to this headline">¶</a></h1>
+<h1>Crafting system<a class="headerlink" href="#crafting-system" title="Link to this heading">¶</a></h1>
 <p>Contribution by Griatch 2020</p>
 <p>This implements a full crafting system. The principle is that of a ‘recipe’,
 where you combine items (tagged as ingredients) create something new. The recipe can also
@@ -145,7 +62,7 @@ necessary for the process but will not be destroyed by it.</p>
 </pre></div>
 </div>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">craft</span></code> command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>craft toy car from plank, wooden wheels, nails using saw, hammer
 </pre></div>
@@ -169,7 +86,7 @@ makeshift_fishing_rod + storm_drain -&gt; key
 of how to design a recipe tree for crafting a sword from base elements.</p>
 </section>
 <section id="installation-and-usage">
-<h2>Installation and Usage<a class="headerlink" href="#installation-and-usage" title="Permalink to this headline">¶</a></h2>
+<h2>Installation and Usage<a class="headerlink" href="#installation-and-usage" title="Link to this heading">¶</a></h2>
 <p>Import the <code class="docutils literal notranslate"><span class="pre">CmdCraft</span></code> command from evennia/contrib/crafting/crafting.py  and
 add it to your Character cmdset. Reload and the <code class="docutils literal notranslate"><span class="pre">craft</span></code> command will be
 available to you:</p>
@@ -186,7 +103,7 @@ available to you:</p>
 </div>
 <p>Here, <code class="docutils literal notranslate"><span class="pre">caller</span></code> is the one doing the crafting and <code class="docutils literal notranslate"><span class="pre">*inputs</span></code> is any combination of
 consumables and/or tool Objects. The system will identify which is which by the
-<a class="reference internal" href="../Components/Tags.html"><span class="doc std std-doc">Tags</span></a> on them (see below) The <code class="docutils literal notranslate"><span class="pre">result</span></code> is always a list.</p>
+<a class="reference internal" href="../Components/Tags.html"><span class="std std-doc">Tags</span></a> on them (see below) The <code class="docutils literal notranslate"><span class="pre">result</span></code> is always a list.</p>
 <p>To use crafting you need recipes. Add a new variable to
 <code class="docutils literal notranslate"><span class="pre">mygame/server/conf/settings.py</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CRAFT_RECIPE_MODULES = [&#39;world.recipes&#39;]
@@ -235,7 +152,7 @@ there:</p>
 </div>
 </section>
 <section id="adding-new-recipes">
-<h2>Adding new recipes<a class="headerlink" href="#adding-new-recipes" title="Permalink to this headline">¶</a></h2>
+<h2>Adding new recipes<a class="headerlink" href="#adding-new-recipes" title="Link to this heading">¶</a></h2>
 <p>A <em>recipe</em> is a class inheriting from
 <code class="docutils literal notranslate"><span class="pre">evennia.contrib.game_systems.crafting.CraftingRecipe</span></code>. This class implements the
 most common form of crafting - that using in-game objects. Each recipe is a
@@ -269,13 +186,13 @@ example setting:</p>
 </pre></div>
 </div>
 <p>This specifies which tags to look for in the inputs. It defines a
-<a class="reference internal" href="../Components/Prototypes.html"><span class="doc std std-doc">Prototype</span></a> for the recipe to use to spawn the
+<a class="reference internal" href="../Components/Prototypes.html"><span class="std std-doc">Prototype</span></a> for the recipe to use to spawn the
 result on the fly (a recipe could spawn more than one result if needed).
 Instead of specifying the full prototype-dict, you could also just provide a
 list of <code class="docutils literal notranslate"><span class="pre">prototype_key</span></code>s to existing prototypes you have.</p>
 <p>After reloading the server, this recipe would now be available to use. To try it
 we should create materials and tools to insert into the recipe.</p>
-<p>The recipe analyzes inputs, looking for <a class="reference internal" href="../Components/Tags.html"><span class="doc std std-doc">Tags</span></a> with
+<p>The recipe analyzes inputs, looking for <a class="reference internal" href="../Components/Tags.html"><span class="std std-doc">Tags</span></a> with
 specific tag-categories.  The tag-category used can be set per-recipe using the
 (<code class="docutils literal notranslate"><span class="pre">.consumable_tag_category</span></code> and <code class="docutils literal notranslate"><span class="pre">.tool_tag_category</span></code> respectively). The defaults
 are <code class="docutils literal notranslate"><span class="pre">crafting_material</span></code> and <code class="docutils literal notranslate"><span class="pre">crafting_tool</span></code>. For
@@ -313,7 +230,7 @@ in-game command:</p>
 recipe will sort out which is which based on their tags.</p>
 </section>
 <section id="deeper-customization-of-recipes">
-<h2>Deeper customization of recipes<a class="headerlink" href="#deeper-customization-of-recipes" title="Permalink to this headline">¶</a></h2>
+<h2>Deeper customization of recipes<a class="headerlink" href="#deeper-customization-of-recipes" title="Link to this heading">¶</a></h2>
 <p>For customizing recipes further, it helps to understand how to use the
 recipe-class directly:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyRecipe</span><span class="p">(</span><span class="n">CraftingRecipe</span><span class="p">):</span>
@@ -351,7 +268,7 @@ crafter. Centralizing this means you can also easily modify the sending style in
 <p>The class constructor (and the <code class="docutils literal notranslate"><span class="pre">craft</span></code> access function) takes optional <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>. These are passed
 into each crafting hook. These are unused by default but could be used to customize things per-call.</p>
 <section id="skilled-crafters">
-<h3>Skilled crafters<a class="headerlink" href="#skilled-crafters" title="Permalink to this headline">¶</a></h3>
+<h3>Skilled crafters<a class="headerlink" href="#skilled-crafters" title="Link to this heading">¶</a></h3>
 <p>What the crafting system does not have out of the box is a ‘skill’ system - the
 notion of being able to fail the craft if you are not skilled enough. Just how
 skills work is game-dependent, so to add this you need to make your own recipe
@@ -391,7 +308,7 @@ of a random skill-check being implemented in a parent and then inherited for mul
 </section>
 </section>
 <section id="even-more-customization">
-<h2>Even more customization<a class="headerlink" href="#even-more-customization" title="Permalink to this headline">¶</a></h2>
+<h2>Even more customization<a class="headerlink" href="#even-more-customization" title="Link to this heading">¶</a></h2>
 <p>If you want to build something even more custom (maybe using different input types of validation logic)
 you could also look at the <code class="docutils literal notranslate"><span class="pre">CraftingRecipe</span></code> parent class <code class="docutils literal notranslate"><span class="pre">CraftingRecipeBase</span></code>.
 It implements just the minimum needed to be a recipe and for big changes you may be better off starting
@@ -403,12 +320,107 @@ file will be overwritten, so edit that file rather than this one.</small></p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Crafting system</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#installation-and-usage">Installation and Usage</a></li>
+<li><a class="reference internal" href="#adding-new-recipes">Adding new recipes</a></li>
+<li><a class="reference internal" href="#deeper-customization-of-recipes">Deeper customization of recipes</a><ul>
+<li><a class="reference internal" href="#skilled-crafters">Skilled crafters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#even-more-customization">Even more customization</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Contrib-Cooldowns.html"
+                          title="previous chapter">Cooldowns</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Contrib-Gendersub.html"
+                          title="next chapter">Gendersub</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Contribs/Contrib-Crafting.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -423,17 +435,14 @@ file will be overwritten, so edit that file rather than this one.</small></p>
         <li class="right" >
           <a href="Contrib-Cooldowns.html" title="Cooldowns"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Crafting system</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

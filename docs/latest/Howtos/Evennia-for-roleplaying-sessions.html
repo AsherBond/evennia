@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Evennia for roleplaying sessions &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Evennia for Diku Users" href="Evennia-for-Diku-Users.html" />
     <link rel="prev" title="Understanding Color Tags" href="Tutorial-Understanding-Color-Tags.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,114 +33,19 @@
         <li class="right" >
           <a href="Tutorial-Understanding-Color-Tags.html" title="Understanding Color Tags"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" accesskey="U">Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Evennia for roleplaying sessions</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Evennia for roleplaying sessions</a><ul>
-<li><a class="reference internal" href="#starting-out">Starting out</a></li>
-<li><a class="reference internal" href="#the-game-master-role">The Game Master role</a><ul>
-<li><a class="reference internal" href="#the-permission-hierarchy">The permission hierarchy</a></li>
-<li><a class="reference internal" href="#how-to-grant-permissions">How to grant permissions</a></li>
-<li><a class="reference internal" href="#optional-making-a-gm-granting-command">Optional: Making a GM-granting command</a><ul>
-<li><a class="reference internal" href="#character-modification">Character modification</a></li>
-<li><a class="reference internal" href="#new-gm-ungm-command">New &#64;gm/&#64;ungm command</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#character-sheet">Character sheet</a><ul>
-<li><a class="reference internal" href="#building-a-character-sheet">Building a Character sheet</a><ul>
-<li><a class="reference internal" href="#making-a-sheet-with-evtable">Making a sheet with EvTable</a></li>
-<li><a class="reference internal" href="#making-a-sheet-with-evform">Making a sheet with EvForm</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#tie-a-character-sheet-to-a-character">Tie a Character sheet to a Character</a></li>
-<li><a class="reference internal" href="#command-for-account-to-change-character-sheet">Command for Account to change Character sheet</a></li>
-<li><a class="reference internal" href="#commands-for-gm-to-change-character-sheet">Commands for GM to change Character sheet</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#dice-roller">Dice roller</a></li>
-<li><a class="reference internal" href="#rooms">Rooms</a></li>
-<li><a class="reference internal" href="#channels">Channels</a></li>
-<li><a class="reference internal" href="#pms">PMs</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Tutorial-Understanding-Color-Tags.html"
-                        title="previous chapter">Understanding Color Tags</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Evennia-for-Diku-Users.html"
-                        title="next chapter">Evennia for Diku Users</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Howtos/Evennia-for-roleplaying-sessions.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Evennia-for-roleplaying-sessions.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="evennia-for-roleplaying-sessions">
-<h1>Evennia for roleplaying sessions<a class="headerlink" href="#evennia-for-roleplaying-sessions" title="Permalink to this headline">¶</a></h1>
+<h1>Evennia for roleplaying sessions<a class="headerlink" href="#evennia-for-roleplaying-sessions" title="Link to this heading">¶</a></h1>
 <p>This tutorial will explain how to set up a realtime or play-by-post tabletop style game using a
 fresh Evennia server.</p>
 <p>The scenario is thus: You and a bunch of friends want to play a tabletop role playing game online.
@@ -169,22 +68,22 @@ simultaneously, regardless of location.</p></li>
 <p>We will find most of these things are already part of vanilla Evennia, but that we can expand on the
 defaults for our particular use-case. Below we will flesh out these components from start to finish.</p>
 <section id="starting-out">
-<h2>Starting out<a class="headerlink" href="#starting-out" title="Permalink to this headline">¶</a></h2>
-<p>We will assume you start from scratch. You need Evennia installed, as per the <a class="reference internal" href="../Setup/Installation.html"><span class="doc std std-doc">Setup Quickstart</span></a>
+<h2>Starting out<a class="headerlink" href="#starting-out" title="Link to this heading">¶</a></h2>
+<p>We will assume you start from scratch. You need Evennia installed, as per the <a class="reference internal" href="../Setup/Installation.html"><span class="std std-doc">Setup Quickstart</span></a>
 instructions. Initialize a new game directory with <code class="docutils literal notranslate"><span class="pre">evennia</span> <span class="pre">init</span> <span class="pre">&lt;gamedirname&gt;</span></code>. In this tutorial we assume your game dir is simply named <code class="docutils literal notranslate"><span class="pre">mygame</span></code>. You can use the default database and keep all other settings to default for now. Familiarize yourself with the
-<code class="docutils literal notranslate"><span class="pre">mygame</span></code> folder before continuing. You might want to browse the  <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Part1-Overview.html"><span class="doc std std-doc">Beginner Tutorial</span></a> tutorial, just to see roughly where things are modified.</p>
+<code class="docutils literal notranslate"><span class="pre">mygame</span></code> folder before continuing. You might want to browse the  <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Part1-Overview.html"><span class="std std-doc">Beginner Tutorial</span></a> tutorial, just to see roughly where things are modified.</p>
 </section>
 <section id="the-game-master-role">
-<h2>The Game Master role<a class="headerlink" href="#the-game-master-role" title="Permalink to this headline">¶</a></h2>
+<h2>The Game Master role<a class="headerlink" href="#the-game-master-role" title="Link to this heading">¶</a></h2>
 <p>In brief:</p>
 <ul class="simple">
 <li><p>Simplest way: Being an admin, just give one account <code class="docutils literal notranslate"><span class="pre">Admins</span></code> permission using the standard <code class="docutils literal notranslate"><span class="pre">perm</span></code> command.</p></li>
 <li><p>Better but more work: Make a custom command to set/unset the above, while tweaking the Character to show your renewed GM status to the other accounts.</p></li>
 </ul>
 <section id="the-permission-hierarchy">
-<h3>The permission hierarchy<a class="headerlink" href="#the-permission-hierarchy" title="Permalink to this headline">¶</a></h3>
-<p>Evennia has the following <a class="reference internal" href="../Components/Permissions.html"><span class="doc std std-doc">permission hierarchy</span></a> out of the box: <em>Players, Helpers, Builders, Admins</em> and finally <em>Developers</em>. We could change these but then we’d need to update our Default commands to use the changes. We want to keep this simple, so instead we map our different roles on top of this permission ladder.</p>
-<ol class="simple">
+<h3>The permission hierarchy<a class="headerlink" href="#the-permission-hierarchy" title="Link to this heading">¶</a></h3>
+<p>Evennia has the following <a class="reference internal" href="../Components/Permissions.html"><span class="std std-doc">permission hierarchy</span></a> out of the box: <em>Players, Helpers, Builders, Admins</em> and finally <em>Developers</em>. We could change these but then we’d need to update our Default commands to use the changes. We want to keep this simple, so instead we map our different roles on top of this permission ladder.</p>
+<ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Players</span></code> is the permission set on normal players. This is the default for anyone creating a new
 account on the server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Helpers</span></code> are like <code class="docutils literal notranslate"><span class="pre">Players</span></code> except they also have the ability to create/edit new help entries.
@@ -201,7 +100,7 @@ restart/shutdown the server as well as changing the permission levels.</p></li>
 </div></blockquote>
 </section>
 <section id="how-to-grant-permissions">
-<h3>How to grant permissions<a class="headerlink" href="#how-to-grant-permissions" title="Permalink to this headline">¶</a></h3>
+<h3>How to grant permissions<a class="headerlink" href="#how-to-grant-permissions" title="Link to this heading">¶</a></h3>
 <p>Only <code class="docutils literal notranslate"><span class="pre">Developers</span></code> can (by default) change permission level. Only they have access to the <code class="docutils literal notranslate"><span class="pre">&#64;perm</span></code>
 command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">perm</span> <span class="n">Yvonne</span>
@@ -221,21 +120,21 @@ highest will be used. Permission level names are <em>not</em> case sensitive. Yo
 and singular, so “Admins” gives the same powers as “Admin”.</p>
 </section>
 <section id="optional-making-a-gm-granting-command">
-<h3>Optional: Making a GM-granting command<a class="headerlink" href="#optional-making-a-gm-granting-command" title="Permalink to this headline">¶</a></h3>
+<h3>Optional: Making a GM-granting command<a class="headerlink" href="#optional-making-a-gm-granting-command" title="Link to this heading">¶</a></h3>
 <p>Use of <code class="docutils literal notranslate"><span class="pre">perm</span></code> works out of the box, but it’s really the bare minimum. Would it not be nice if other
 accounts could tell at a glance who the GM is? Also, we shouldn’t really need to remember that the
 permission level is called “Admins”. It would be easier if we could just do <code class="docutils literal notranslate"><span class="pre">&#64;gm</span> <span class="pre">&lt;account&gt;</span></code> and
 <code class="docutils literal notranslate"><span class="pre">&#64;notgm</span> <span class="pre">&lt;account&gt;</span></code> and at the same time change something make the new GM status apparent.</p>
 <p>So let’s make this possible. This is what we’ll do:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We’ll customize the default Character class. If an object of this class has a particular flag,
 its name will have the string<code class="docutils literal notranslate"><span class="pre">(GM)</span></code> added to the end.</p></li>
 <li><p>We’ll add a new command, for the server admin to assign the GM-flag properly.</p></li>
 </ol>
 <section id="character-modification">
-<h4>Character modification<a class="headerlink" href="#character-modification" title="Permalink to this headline">¶</a></h4>
+<h4>Character modification<a class="headerlink" href="#character-modification" title="Link to this heading">¶</a></h4>
 <p>Let’s first start by customizing the Character. We recommend you browse the beginning of the
-<a class="reference internal" href="../Components/Accounts.html"><span class="doc std std-doc">Account</span></a> page to make sure you know how Evennia differentiates between the OOC “Account
+<a class="reference internal" href="../Components/Accounts.html"><span class="std std-doc">Account</span></a> page to make sure you know how Evennia differentiates between the OOC “Account
 objects” (not to be confused with the <code class="docutils literal notranslate"><span class="pre">Accounts</span></code> permission, which is just a string specifying your
 access) and the IC “Character objects”.</p>
 <p>Open <code class="docutils literal notranslate"><span class="pre">mygame/typeclasses/characters.py</span></code> and modify the default <code class="docutils literal notranslate"><span class="pre">Character</span></code> class:</p>
@@ -271,7 +170,7 @@ access) and the IC “Character objects”.</p>
 a GM, we attach the string <code class="docutils literal notranslate"><span class="pre">(GM)</span></code> to the Character’s name so everyone can tell who’s the boss. If we
 ourselves are Developers or GM’s we will see database ids attached to Characters names, which can
 help if doing database searches against Characters of exactly the same name. We base the “gm-
-ingness” on having an flag (an <a class="reference internal" href="../Components/Attributes.html"><span class="doc std std-doc">Attribute</span></a>) named <code class="docutils literal notranslate"><span class="pre">is_gm</span></code>. We’ll make sure new GM’s
+ingness” on having an flag (an <a class="reference internal" href="../Components/Attributes.html"><span class="std std-doc">Attribute</span></a>) named <code class="docutils literal notranslate"><span class="pre">is_gm</span></code>. We’ll make sure new GM’s
 actually get this flag below.</p>
 <blockquote>
 <div><p><strong>Extra exercise:</strong> This will only show the <code class="docutils literal notranslate"><span class="pre">(GM)</span></code> text on <em>Characters</em> puppeted by a GM account,
@@ -281,8 +180,8 @@ that is, it will show only to those in the same location. If we wanted it to als
 </div></blockquote>
 </section>
 <section id="new-gm-ungm-command">
-<h4>New &#64;gm/&#64;ungm command<a class="headerlink" href="#new-gm-ungm-command" title="Permalink to this headline">¶</a></h4>
-<p>We will describe in some detail how to create and add an Evennia <a class="reference internal" href="../Components/Commands.html"><span class="doc std std-doc">command</span></a> here with the
+<h4>New &#64;gm/&#64;ungm command<a class="headerlink" href="#new-gm-ungm-command" title="Link to this heading">¶</a></h4>
+<p>We will describe in some detail how to create and add an Evennia <a class="reference internal" href="../Components/Commands.html"><span class="std std-doc">command</span></a> here with the
 hope that we don’t need to be as detailed when adding commands in the future. We will build on
 Evennia’s default “mux-like” commands here.</p>
 <p>Open <code class="docutils literal notranslate"><span class="pre">mygame/commands/command.py</span></code> and add a new Command class at the bottom:</p>
@@ -374,7 +273,7 @@ expected by our new <code class="docutils literal notranslate"><span class="pre"
 </section>
 </section>
 <section id="character-sheet">
-<h2>Character sheet<a class="headerlink" href="#character-sheet" title="Permalink to this headline">¶</a></h2>
+<h2>Character sheet<a class="headerlink" href="#character-sheet" title="Link to this heading">¶</a></h2>
 <p>In brief:</p>
 <ul class="simple">
 <li><p>Use Evennia’s EvTable/EvForm to build a Character sheet</p></li>
@@ -383,14 +282,14 @@ expected by our new <code class="docutils literal notranslate"><span class="pre"
 <li><p>Make the Character sheet lockable by a GM, so the Player can no longer modify it.</p></li>
 </ul>
 <section id="building-a-character-sheet">
-<h3>Building a Character sheet<a class="headerlink" href="#building-a-character-sheet" title="Permalink to this headline">¶</a></h3>
+<h3>Building a Character sheet<a class="headerlink" href="#building-a-character-sheet" title="Link to this heading">¶</a></h3>
 <p>There are many ways to build a Character sheet in text, from manually pasting strings together to more automated ways. Exactly what is the best/easiest way depends on the sheet one tries to create. We will here show two examples using the <em>EvTable</em> and <em>EvForm</em> utilities.Later we will create Commands to edit and display the output from those utilities.</p>
 <blockquote>
-<div><p>Note that these docs don’t show the color.  see <a class="reference internal" href="../Concepts/Tags-Parsed-By-Evennia.html"><span class="doc std std-doc">the text tag documentation</span></a> for how to add color to the tables and forms.</p>
+<div><p>Note that these docs don’t show the color.  see <a class="reference internal" href="../Concepts/Tags-Parsed-By-Evennia.html"><span class="std std-doc">the text tag documentation</span></a> for how to add color to the tables and forms.</p>
 </div></blockquote>
 <section id="making-a-sheet-with-evtable">
-<h4>Making a sheet with EvTable<a class="headerlink" href="#making-a-sheet-with-evtable" title="Permalink to this headline">¶</a></h4>
-<p><a class="reference internal" href="../Components/EvTable.html"><span class="doc std std-doc">EvTable</span></a> is a text-table generator. It helps with displaying text in ordered rows and columns. This is an example of using it in code:</p>
+<h4>Making a sheet with EvTable<a class="headerlink" href="#making-a-sheet-with-evtable" title="Link to this heading">¶</a></h4>
+<p><a class="reference internal" href="../Components/EvTable.html"><span class="std std-doc">EvTable</span></a> is a text-table generator. It helps with displaying text in ordered rows and columns. This is an example of using it in code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># this can be tried out in a Python shell like iPython</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">evennia.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">evtable</span>
@@ -426,8 +325,8 @@ strings one could build up a reasonably full graphical representation of a Chara
 advanced layouts we’ll look into EvForm next.</p>
 </section>
 <section id="making-a-sheet-with-evform">
-<h4>Making a sheet with EvForm<a class="headerlink" href="#making-a-sheet-with-evform" title="Permalink to this headline">¶</a></h4>
-<p><a class="reference internal" href="../Components/EvForm.html"><span class="doc std std-doc">EvForm</span></a> allows the creation of a two-dimensional “graphic” made by text characters. On this surface, one marks and tags rectangular regions (“cells”) to be filled with content. This content can be either normal strings or <code class="docutils literal notranslate"><span class="pre">EvTable</span></code> instances (see the previous section, one such instance would be the <code class="docutils literal notranslate"><span class="pre">table</span></code> variable in that example).</p>
+<h4>Making a sheet with EvForm<a class="headerlink" href="#making-a-sheet-with-evform" title="Link to this heading">¶</a></h4>
+<p><a class="reference internal" href="../Components/EvForm.html"><span class="std std-doc">EvForm</span></a> allows the creation of a two-dimensional “graphic” made by text characters. On this surface, one marks and tags rectangular regions (“cells”) to be filled with content. This content can be either normal strings or <code class="docutils literal notranslate"><span class="pre">EvTable</span></code> instances (see the previous section, one such instance would be the <code class="docutils literal notranslate"><span class="pre">table</span></code> variable in that example).</p>
 <p>In the case of a Character sheet, these cells would be comparable to a line or box where you could
 enter the name of your character or their strength score. EvMenu also easily allows to update the
 content of those fields in code (it use EvTables so you rebuild the table first before re-sending it
@@ -526,7 +425,7 @@ example.</p>
 </section>
 </section>
 <section id="tie-a-character-sheet-to-a-character">
-<h3>Tie a Character sheet to a Character<a class="headerlink" href="#tie-a-character-sheet-to-a-character" title="Permalink to this headline">¶</a></h3>
+<h3>Tie a Character sheet to a Character<a class="headerlink" href="#tie-a-character-sheet-to-a-character" title="Link to this heading">¶</a></h3>
 <p>We will assume we go with the <code class="docutils literal notranslate"><span class="pre">EvForm</span></code> example above. We now need to attach this to a Character so it can be modified. For this we will modify our <code class="docutils literal notranslate"><span class="pre">Character</span></code> class a little more:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mygame/typeclasses/character.py</span>
 
@@ -580,7 +479,7 @@ The easiest to force an existing Character to re-fire its <code class="docutils 
 </div>
 </section>
 <section id="command-for-account-to-change-character-sheet">
-<h3>Command for Account to change Character sheet<a class="headerlink" href="#command-for-account-to-change-character-sheet" title="Permalink to this headline">¶</a></h3>
+<h3>Command for Account to change Character sheet<a class="headerlink" href="#command-for-account-to-change-character-sheet" title="Link to this heading">¶</a></h3>
 <p>We will add a command to edit the sections of our Character sheet. Open
 <code class="docutils literal notranslate"><span class="pre">mygame/commands/command.py</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># at the end of mygame/commands/command.py</span>
@@ -660,7 +559,7 @@ The easiest to force an existing Character to re-fire its <code class="docutils 
 <p>This command you import into <code class="docutils literal notranslate"><span class="pre">mygame/commands/default_cmdsets.py</span></code> and add to the <code class="docutils literal notranslate"><span class="pre">CharacterCmdSet</span></code>, in the same way the <code class="docutils literal notranslate"><span class="pre">&#64;gm</span></code> command was added to the <code class="docutils literal notranslate"><span class="pre">AccountCmdSet</span></code> earlier.</p>
 </section>
 <section id="commands-for-gm-to-change-character-sheet">
-<h3>Commands for GM to change Character sheet<a class="headerlink" href="#commands-for-gm-to-change-character-sheet" title="Permalink to this headline">¶</a></h3>
+<h3>Commands for GM to change Character sheet<a class="headerlink" href="#commands-for-gm-to-change-character-sheet" title="Link to this heading">¶</a></h3>
 <p>Game masters use basically the same input as Players do to edit a character sheet, except they can do it on other players than themselves. They are also not stopped by any <code class="docutils literal notranslate"><span class="pre">sheet_locked</span></code> flags.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># continuing in mygame/commands/command.py</span>
 
@@ -742,7 +641,7 @@ The easiest to force an existing Character to re-fire its <code class="docutils 
 </section>
 </section>
 <section id="dice-roller">
-<h2>Dice roller<a class="headerlink" href="#dice-roller" title="Permalink to this headline">¶</a></h2>
+<h2>Dice roller<a class="headerlink" href="#dice-roller" title="Link to this heading">¶</a></h2>
 <p>Evennia’s <em>contrib</em> folder already comes with a full dice roller. To add it to the game, simply import <code class="docutils literal notranslate"><span class="pre">contrib.dice.CmdDice</span></code> into <code class="docutils literal notranslate"><span class="pre">mygame/commands/default_cmdsets.py</span></code> and add <code class="docutils literal notranslate"><span class="pre">CmdDice</span></code> to the <code class="docutils literal notranslate"><span class="pre">CharacterCmdset</span></code> as done with other commands in this tutorial. After a <code class="docutils literal notranslate"><span class="pre">&#64;reload</span></code> you will be able
 to roll dice using normal RPG-style format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roll</span> <span class="mi">2</span><span class="n">d6</span> <span class="o">+</span> <span class="mi">3</span>
@@ -752,8 +651,8 @@ to roll dice using normal RPG-style format:</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">help</span> <span class="pre">dice</span></code> to see what syntax is supported or look at <code class="docutils literal notranslate"><span class="pre">evennia/contrib/dice.py</span></code> to see how it’s implemented.</p>
 </section>
 <section id="rooms">
-<h2>Rooms<a class="headerlink" href="#rooms" title="Permalink to this headline">¶</a></h2>
-<p>Evennia comes with rooms out of the box, so no extra work needed. A GM will automatically have all needed building commands available. A fuller go-through is found in the <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Building-Quickstart.html"><span class="doc std std-doc">Building tutorial</span></a>.
+<h2>Rooms<a class="headerlink" href="#rooms" title="Link to this heading">¶</a></h2>
+<p>Evennia comes with rooms out of the box, so no extra work needed. A GM will automatically have all needed building commands available. A fuller go-through is found in the <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Building-Quickstart.html"><span class="std std-doc">Building tutorial</span></a>.
 Here are some useful highlights:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dig</span> <span class="pre">roomname;alias</span> <span class="pre">=</span> <span class="pre">exit_there;alias,</span> <span class="pre">exit_back;alias</span></code> - this is the basic command for digging a new room. You can specify any exit-names and just enter the name of that exit to go there.</p></li>
@@ -768,8 +667,8 @@ Here are some useful highlights:</p>
 </div></blockquote>
 </section>
 <section id="channels">
-<h2>Channels<a class="headerlink" href="#channels" title="Permalink to this headline">¶</a></h2>
-<p>Evennia comes with <a class="reference internal" href="../Components/Channels.html"><span class="doc std std-doc">Channels</span></a> in-built and they are described fully in the documentation. For brevity, here are the relevant commands for normal use:</p>
+<h2>Channels<a class="headerlink" href="#channels" title="Link to this heading">¶</a></h2>
+<p>Evennia comes with <a class="reference internal" href="../Components/Channels.html"><span class="std std-doc">Channels</span></a> in-built and they are described fully in the documentation. For brevity, here are the relevant commands for normal use:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">channel/create</span> <span class="pre">=</span> <span class="pre">new_channel;alias;alias</span> <span class="pre">=</span> <span class="pre">short</span> <span class="pre">description</span></code> - Creates a new channel.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">channel/sub</span> <span class="pre">channel</span></code> - subscribe to a channel.</p></li>
@@ -781,7 +680,7 @@ Here are some useful highlights:</p>
 posts backwards, starting with the 32nd from the end.</p>
 </section>
 <section id="pms">
-<h2>PMs<a class="headerlink" href="#pms" title="Permalink to this headline">¶</a></h2>
+<h2>PMs<a class="headerlink" href="#pms" title="Link to this heading">¶</a></h2>
 <p>To send PMs to one another, players can use the <code class="docutils literal notranslate"><span class="pre">page</span></code> (or <code class="docutils literal notranslate"><span class="pre">tell</span></code>) command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">page</span> <span class="n">recipient</span> <span class="o">=</span> <span class="n">message</span>
 <span class="n">page</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">recipient</span><span class="p">,</span> <span class="o">...</span> <span class="o">=</span> <span class="n">message</span>
@@ -793,12 +692,125 @@ when the message was sent.</p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Evennia for roleplaying sessions</a><ul>
+<li><a class="reference internal" href="#starting-out">Starting out</a></li>
+<li><a class="reference internal" href="#the-game-master-role">The Game Master role</a><ul>
+<li><a class="reference internal" href="#the-permission-hierarchy">The permission hierarchy</a></li>
+<li><a class="reference internal" href="#how-to-grant-permissions">How to grant permissions</a></li>
+<li><a class="reference internal" href="#optional-making-a-gm-granting-command">Optional: Making a GM-granting command</a><ul>
+<li><a class="reference internal" href="#character-modification">Character modification</a></li>
+<li><a class="reference internal" href="#new-gm-ungm-command">New &#64;gm/&#64;ungm command</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#character-sheet">Character sheet</a><ul>
+<li><a class="reference internal" href="#building-a-character-sheet">Building a Character sheet</a><ul>
+<li><a class="reference internal" href="#making-a-sheet-with-evtable">Making a sheet with EvTable</a></li>
+<li><a class="reference internal" href="#making-a-sheet-with-evform">Making a sheet with EvForm</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tie-a-character-sheet-to-a-character">Tie a Character sheet to a Character</a></li>
+<li><a class="reference internal" href="#command-for-account-to-change-character-sheet">Command for Account to change Character sheet</a></li>
+<li><a class="reference internal" href="#commands-for-gm-to-change-character-sheet">Commands for GM to change Character sheet</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dice-roller">Dice roller</a></li>
+<li><a class="reference internal" href="#rooms">Rooms</a></li>
+<li><a class="reference internal" href="#channels">Channels</a></li>
+<li><a class="reference internal" href="#pms">PMs</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Tutorial-Understanding-Color-Tags.html"
+                          title="previous chapter">Understanding Color Tags</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Evennia-for-Diku-Users.html"
+                          title="next chapter">Evennia for Diku Users</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Howtos/Evennia-for-roleplaying-sessions.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -813,17 +825,14 @@ when the message was sent.</p>
         <li class="right" >
           <a href="Tutorial-Understanding-Color-Tags.html" title="Understanding Color Tags"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Evennia for roleplaying sessions</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

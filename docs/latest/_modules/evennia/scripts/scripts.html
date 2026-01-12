@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.scripts.scripts &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.scripts.scripts</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="scripts.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -111,6 +56,8 @@
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;DefaultScript&quot;</span><span class="p">,</span> <span class="s2">&quot;DoNothing&quot;</span><span class="p">,</span> <span class="s2">&quot;Store&quot;</span><span class="p">]</span>
 
 
+<div class="viewcode-block" id="ExtendedLoopingCall">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ExtendedLoopingCall">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ExtendedLoopingCall</span><span class="p">(</span><span class="n">LoopingCall</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Custom child of LoopingCall that can start at a delay different than</span>
@@ -122,6 +69,8 @@
     <span class="n">start_delay</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">callcount</span> <span class="o">=</span> <span class="mi">0</span>
 
+<div class="viewcode-block" id="ExtendedLoopingCall.start">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ExtendedLoopingCall.start">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interval</span><span class="p">,</span> <span class="n">now</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">start_delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">count_start</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Start running function every interval seconds.</span>
@@ -178,7 +127,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">real_interval</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_scheduleFrom</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttime</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">deferred</span>
+        <span class="k">return</span> <span class="n">deferred</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -194,6 +144,8 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deferred</span><span class="p">:</span>
             <span class="n">LoopingCall</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
+<div class="viewcode-block" id="ExtendedLoopingCall.force_repeat">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ExtendedLoopingCall.force_repeat">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">force_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Force-fire the callback</span>
@@ -207,8 +159,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">call</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">call</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">starttime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">seconds</span><span class="p">()</span>
-        <span class="bp">self</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">()</span></div>
 
+
+<div class="viewcode-block" id="ExtendedLoopingCall.next_call_time">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ExtendedLoopingCall.next_call_time">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">next_call_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the next call time. This also takes the eventual effect</span>
@@ -223,9 +178,13 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">total_runtime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">seconds</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">starttime</span>
             <span class="n">interval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_delay</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span>
-            <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">interval</span> <span class="o">-</span> <span class="p">(</span><span class="n">total_runtime</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span><span class="p">))</span>
+            <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">interval</span> <span class="o">-</span> <span class="p">(</span><span class="n">total_runtime</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span><span class="p">))</span></div>
+</div>
 
 
+
+<div class="viewcode-block" id="ScriptBase">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ScriptBase</span><span class="p">(</span><span class="n">ScriptDB</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">TypeclassBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for scripts. Don&#39;t inherit from this, inherit from the</span>
@@ -243,6 +202,8 @@
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
+<div class="viewcode-block" id="ScriptBase.at_idmapper_flush">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_idmapper_flush">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_idmapper_flush</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        If we&#39;re flushing this object, make sure the LoopingCall is gone too.</span>
@@ -251,7 +212,8 @@
         <span class="k">if</span> <span class="n">ret</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">_task</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">_pause_task</span><span class="p">(</span><span class="n">auto_pause</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="c1"># TODO - restart anew ?</span>
-        <span class="k">return</span> <span class="n">ret</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_start_task</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -492,6 +454,8 @@
 
     <span class="c1"># Access methods / hooks</span>
 
+<div class="viewcode-block" id="ScriptBase.at_first_save">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_first_save">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_first_save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is called after very first time this object is saved.</span>
@@ -562,8 +526,11 @@
 
             <span class="k">if</span> <span class="n">cdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;autostart&quot;</span><span class="p">):</span>
                 <span class="c1"># autostart the script</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_start_task</span><span class="p">(</span><span class="n">force_restart</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_start_task</span><span class="p">(</span><span class="n">force_restart</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.delete">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Delete the Script. Normally stops any timer task. This fires at_script_delete before</span>
@@ -580,31 +547,43 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stop_task</span><span class="p">()</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-        <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.basetype_setup">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.basetype_setup">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">basetype_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Changes fundamental aspects of the type. Usually changes are made in at_script creation</span>
 <span class="sd">        instead.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.at_init">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_init">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when the Script is cached in the idmapper. This is usually more reliable</span>
 <span class="sd">        than overriding `__init__` since the latter can be called at unexpected times.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.at_script_creation">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_script_creation">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Should be overridden in child.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.at_script_delete">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_script_delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_script_delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when script is deleted, before the script timer stops.</span>
@@ -613,15 +592,21 @@
 <span class="sd">            bool: If False, deletion is aborted.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.is_valid">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.is_valid">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        If returning False, `at_repeat` will not be called and timer will stop</span>
 <span class="sd">        updating.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.at_repeat">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_repeat">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called repeatedly every `interval` seconds, once `.start()` has</span>
@@ -632,17 +617,29 @@
 <span class="sd">                overriding the call (unused by default).</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.at_start">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_start">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.at_pause">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_pause">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_pause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.at_stop">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.at_stop">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">at_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.start">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.start">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Start/Unpause timer component, optionally with new values. If given,</span>
@@ -668,11 +665,14 @@
 <span class="sd">            - Same Script is restarted with a 3s interval. It will fire immediately.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_start_task</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span> <span class="n">start_delay</span><span class="o">=</span><span class="n">start_delay</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="n">repeats</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_start_task</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span> <span class="n">start_delay</span><span class="o">=</span><span class="n">start_delay</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="n">repeats</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 
     <span class="c1"># legacy alias</span>
     <span class="n">update</span> <span class="o">=</span> <span class="n">start</span>
 
+<div class="viewcode-block" id="ScriptBase.stop">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.stop">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Stop the Script&#39;s timer component. This will not delete the Sctipt,</span>
@@ -683,8 +683,11 @@
 <span class="sd">            **kwargs: Optional (default unused) kwargs passed on into the `at_stop` hook.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_stop_task</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stop_task</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.pause">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.pause">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">pause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Manually the Script&#39;s timer component manually.</span>
@@ -693,8 +696,11 @@
 <span class="sd">            **kwargs: Optional (default unused) kwargs passed on into the `at_pause` hook.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_pause_task</span><span class="p">(</span><span class="n">manual_pause</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pause_task</span><span class="p">(</span><span class="n">manual_pause</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.unpause">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.unpause">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">unpause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Manually unpause a Paused Script.</span>
@@ -703,8 +709,11 @@
 <span class="sd">            **kwargs: Optional (default unused) kwargs passed on into the `at_start` hook.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_unpause_task</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_unpause_task</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.time_until_next_repeat">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.time_until_next_repeat">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">time_until_next_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get time until the script fires it `at_repeat` hook again.</span>
@@ -725,8 +734,11 @@
                 <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">next_call_time</span><span class="p">()))</span>
             <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
                 <span class="k">pass</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.remaining_repeats">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.remaining_repeats">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">remaining_repeats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the number of returning repeats for limited Scripts.</span>
@@ -739,8 +751,11 @@
         <span class="n">task</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">_task</span>
         <span class="k">if</span> <span class="n">task</span><span class="p">:</span>
             <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">db_repeats</span> <span class="o">-</span> <span class="n">task</span><span class="o">.</span><span class="n">callcount</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.reset_callcount">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.reset_callcount">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">reset_callcount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reset the count of the number of calls done.</span>
@@ -755,8 +770,11 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">task</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">_task</span>
         <span class="k">if</span> <span class="n">task</span><span class="p">:</span>
-            <span class="n">task</span><span class="o">.</span><span class="n">callcount</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+            <span class="n">task</span><span class="o">.</span><span class="n">callcount</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">))</span></div>
 
+
+<div class="viewcode-block" id="ScriptBase.force_repeat">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.ScriptBase.force_repeat">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">force_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Fire a premature triggering of the script callback. This</span>
@@ -765,10 +783,14 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">task</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndb</span><span class="o">.</span><span class="n">_task</span>
         <span class="k">if</span> <span class="n">task</span><span class="p">:</span>
-            <span class="n">task</span><span class="o">.</span><span class="n">force_repeat</span><span class="p">()</span>
+            <span class="n">task</span><span class="o">.</span><span class="n">force_repeat</span><span class="p">()</span></div>
+</div>
 
 
-<div class="viewcode-block" id="DefaultScript"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DefaultScript</span><span class="p">(</span><span class="n">ScriptBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultScript</span><span class="p">(</span><span class="n">ScriptBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the base TypeClass for all Scripts. Scripts describe</span>
 <span class="sd">    all entities/systems without a physical existence in the game world</span>
@@ -853,7 +875,9 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="DefaultScript.create"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.create">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="DefaultScript.create">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.create">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Provides a passthrough interface to the utils.create_script() function.</span>
@@ -882,14 +906,20 @@
 
         <span class="k">return</span> <span class="n">obj</span><span class="p">,</span> <span class="n">errors</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_script_creation"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_script_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_script_creation">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_script_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Only called once, when script is first created.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultScript.is_valid"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.is_valid">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.is_valid">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.is_valid">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Is called to check if the script&#39;s timer is valid to run at this time.</span>
 <span class="sd">        Should return a boolean. If False, the timer will be stopped.</span>
@@ -897,7 +927,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_start"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_start">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_start">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_start">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called whenever the script timer is started, which for persistent</span>
 <span class="sd">        timed scripts is at least once every server start. It will also be</span>
@@ -911,7 +944,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_repeat"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_repeat">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_repeat">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_repeat">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_repeat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called repeatedly if this Script is set to repeat regularly.</span>
 
@@ -922,7 +958,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_pause"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_pause">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_pause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manual_pause</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_pause">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_pause">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_pause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manual_pause</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when this script&#39;s timer pauses.</span>
 
@@ -934,7 +973,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_stop"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_stop">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_stop">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_stop">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called whenever when it&#39;s time for this script&#39;s timer to stop (either</span>
 <span class="sd">        because is_valid returned False, it ran out of iterations or it was manuallys</span>
@@ -947,7 +989,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_script_delete"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_script_delete">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_script_delete">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_script_delete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when the Script is deleted, before stopping the timer.</span>
 
@@ -957,7 +1002,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_server_reload"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_server_reload">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_server_reload">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_server_reload">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called whenever the server is shutting down for</span>
 <span class="sd">        restart/reboot. If you want to, for example, save</span>
@@ -966,58 +1014,141 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_server_shutdown"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_server_shutdown">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_server_shutdown">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_server_shutdown">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called whenever the server is shutting down fully</span>
 <span class="sd">        (i.e. not for a restart).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultScript.at_server_start"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_server_start">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultScript.at_server_start">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DefaultScript.at_server_start">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called after the server has started. It can be used to add</span>
 <span class="sd">        post-startup setup for Scripts without a timer component (for which at_start</span>
 <span class="sd">        could be used).</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span></div></div>
+        <span class="k">pass</span></div>
+</div>
+
 
 
 <span class="c1"># Some useful default Script types used by Evennia.</span>
 
 
-<div class="viewcode-block" id="DoNothing"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DoNothing">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DoNothing</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
+<div class="viewcode-block" id="DoNothing">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DoNothing">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DoNothing</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A script that does nothing. Used as default fallback.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="DoNothing.at_script_creation"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DoNothing.at_script_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DoNothing.at_script_creation">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.DoNothing.at_script_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Setup the script</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;sys_do_nothing&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;This is an empty placeholder script.&quot;</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;This is an empty placeholder script.&quot;</span></div>
+</div>
 
 
-<div class="viewcode-block" id="Store"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.Store">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Store</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Store">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.Store">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Store</span><span class="p">(</span><span class="n">DefaultScript</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Simple storage script</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="Store.at_script_creation"><a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.Store.at_script_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Store.at_script_creation">
+<a class="viewcode-back" href="../../../api/evennia.scripts.scripts.html#evennia.scripts.scripts.Store.at_script_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_script_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Setup the script</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;sys_storage&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;This is a generic storage container.&quot;</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;This is a generic storage container.&quot;</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1026,18 +1157,15 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.scripts.scripts</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

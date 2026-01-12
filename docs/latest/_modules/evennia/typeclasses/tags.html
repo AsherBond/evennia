@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.typeclasses.tags &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.typeclasses.tags</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="tags.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -121,7 +66,9 @@
 <span class="c1"># ------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="Tag"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.Tag">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Tag</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<div class="viewcode-block" id="Tag">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.Tag">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Tag</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tags are quick markers for objects in-game. An typeobject can have</span>
 <span class="sd">    any number of tags, stored via its db_tags property.  Tagging</span>
@@ -188,19 +135,24 @@
         <span class="p">)</span></div>
 
 
+
 <span class="c1">#</span>
 <span class="c1"># Handlers making use of the Tags model</span>
 <span class="c1">#</span>
 
 
-<div class="viewcode-block" id="TagProperty"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagProperty">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TagProperty</span><span class="p">:</span>
+<div class="viewcode-block" id="TagProperty">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagProperty">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TagProperty</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tag Property.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">taghandler_name</span> <span class="o">=</span> <span class="s2">&quot;tags&quot;</span>
 
-<div class="viewcode-block" id="TagProperty.__init__"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagProperty.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="TagProperty.__init__">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagProperty.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tag property descriptor. Allows for setting tags on an object as Django-like &#39;fields&#39;</span>
 <span class="sd">        on the class level. Since Tags are almost always used for querying, Tags are always</span>
@@ -223,6 +175,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_category</span> <span class="o">=</span> <span class="n">category</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="n">data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_key</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__set_name__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -266,7 +219,10 @@
         <span class="nb">getattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">taghandler_name</span><span class="p">)</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_key</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_category</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="TagCategoryProperty"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagCategoryProperty">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TagCategoryProperty</span><span class="p">:</span>
+
+<div class="viewcode-block" id="TagCategoryProperty">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagCategoryProperty">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TagCategoryProperty</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tag Category Property.</span>
 
@@ -274,7 +230,9 @@
 
     <span class="n">taghandler_name</span> <span class="o">=</span> <span class="s2">&quot;tags&quot;</span>
 
-<div class="viewcode-block" id="TagCategoryProperty.__init__"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagCategoryProperty.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">default_tags</span><span class="p">):</span>
+<div class="viewcode-block" id="TagCategoryProperty.__init__">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagCategoryProperty.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">default_tags</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Assign a property for a Tag Category, with any number of Tag keys.</span>
 <span class="sd">        This is often more useful than the `TagProperty` since it&#39;s common to want to check which</span>
@@ -306,6 +264,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_category</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_default_tags</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_tag_input</span><span class="p">(</span><span class="o">*</span><span class="n">default_tags</span><span class="p">)</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_parse_tag_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -380,7 +339,10 @@
         <span class="nb">getattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">taghandler_name</span><span class="p">)</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_category</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="TagHandler"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TagHandler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TagHandler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generic tag-handler. Accessed via TypedObject.tags.</span>
 
@@ -389,7 +351,9 @@
     <span class="n">_m2m_fieldname</span> <span class="o">=</span> <span class="s2">&quot;db_tags&quot;</span>
     <span class="n">_tagtype</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="TagHandler.__init__"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="TagHandler.__init__">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Tags are stored internally in the TypedObject.db_tags m2m</span>
 <span class="sd">        field with an tag.db_model based on the obj the taghandler is</span>
@@ -407,6 +371,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_catcache</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="c1"># full cache was run on all tags</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cache_complete</span> <span class="o">=</span> <span class="kc">False</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_query_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -570,7 +535,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_catcache</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">catkey</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cache_complete</span> <span class="o">=</span> <span class="kc">False</span>
 
-<div class="viewcode-block" id="TagHandler.reset_cache"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.reset_cache">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">reset_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TagHandler.reset_cache">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.reset_cache">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reset the cache from the outside.</span>
 
@@ -579,7 +546,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_catcache</span> <span class="o">=</span> <span class="p">{}</span></div>
 
-<div class="viewcode-block" id="TagHandler.add"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.add">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler.add">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.add">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a new tag to the handler.</span>
 
@@ -616,7 +586,10 @@
             <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_m2m_fieldname</span><span class="p">)</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tagobj</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_setcache</span><span class="p">(</span><span class="n">tagstr</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">tagobj</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TagHandler.has"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.has">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">has</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_list</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler.has">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.has">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">has</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">return_list</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if the given Tag (or list of Tags) exists on the object.</span>
 
@@ -650,7 +623,10 @@
 
         <span class="k">return</span> <span class="n">ret</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">ret</span></div>
 
-<div class="viewcode-block" id="TagHandler.get"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.get">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span>
+
+<div class="viewcode-block" id="TagHandler.get">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.get">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -704,7 +680,10 @@
                 <span class="k">return</span> <span class="n">default</span>
         <span class="k">return</span> <span class="n">ret</span> <span class="k">if</span> <span class="n">return_list</span> <span class="k">else</span> <span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">ret</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TagHandler.remove"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.remove">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler.remove">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.remove">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove a tag from the handler based ond key and/or category.</span>
 
@@ -739,7 +718,10 @@
                 <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_m2m_fieldname</span><span class="p">)</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">tagobj</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_delcache</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">category</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TagHandler.clear"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.clear">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler.clear">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.clear">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove all tags from the handler.</span>
 
@@ -763,7 +745,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_catcache</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cache_complete</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="TagHandler.all"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.all">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">return_key_and_category</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_objs</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler.all">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.all">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">return_key_and_category</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_objs</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get all tags in this handler, regardless of category.</span>
 
@@ -793,7 +778,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">[</span><span class="n">to_str</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">db_key</span><span class="p">)</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">tags</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="TagHandler.batch_add"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.batch_add">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">batch_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler.batch_add">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.batch_add">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">batch_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Batch-add tags from a list of tuples.</span>
 
@@ -824,7 +812,10 @@
         <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="TagHandler.batch_remove"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.TagHandler.batch_remove">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">batch_remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TagHandler.batch_remove">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.TagHandler.batch_remove">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">batch_remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Batch-remove tags from a list of tuples.</span>
 
@@ -845,11 +836,15 @@
         <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></div>
 
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all</span><span class="p">())</span></div>
 
 
-<div class="viewcode-block" id="AliasProperty"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.AliasProperty">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AliasProperty</span><span class="p">(</span><span class="n">TagProperty</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AliasProperty">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.AliasProperty">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AliasProperty</span><span class="p">(</span><span class="n">TagProperty</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Allows for setting aliases like Django fields:</span>
 <span class="sd">    ::</span>
@@ -865,7 +860,10 @@
     <span class="n">taghandler_name</span> <span class="o">=</span> <span class="s2">&quot;aliases&quot;</span></div>
 
 
-<div class="viewcode-block" id="AliasHandler"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.AliasHandler">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AliasHandler</span><span class="p">(</span><span class="n">TagHandler</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AliasHandler">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.AliasHandler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AliasHandler</span><span class="p">(</span><span class="n">TagHandler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A handler for the Alias Tag type.</span>
 
@@ -874,7 +872,10 @@
     <span class="n">_tagtype</span> <span class="o">=</span> <span class="s2">&quot;alias&quot;</span></div>
 
 
-<div class="viewcode-block" id="PermissionProperty"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.PermissionProperty">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">PermissionProperty</span><span class="p">(</span><span class="n">TagProperty</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PermissionProperty">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.PermissionProperty">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PermissionProperty</span><span class="p">(</span><span class="n">TagProperty</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Allows for setting permissions like Django fields:</span>
 <span class="sd">    ::</span>
@@ -889,7 +890,10 @@
     <span class="n">taghandler_name</span> <span class="o">=</span> <span class="s2">&quot;permissions&quot;</span></div>
 
 
-<div class="viewcode-block" id="PermissionHandler"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.PermissionHandler">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">PermissionHandler</span><span class="p">(</span><span class="n">TagHandler</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PermissionHandler">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.PermissionHandler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PermissionHandler</span><span class="p">(</span><span class="n">TagHandler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A handler for the Permission Tag type.</span>
 
@@ -897,7 +901,9 @@
 
     <span class="n">_tagtype</span> <span class="o">=</span> <span class="s2">&quot;permission&quot;</span>
 
-<div class="viewcode-block" id="PermissionHandler.check"><a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.typeclasses.tags.PermissionHandler.check">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">permissions</span><span class="p">,</span> <span class="n">require_all</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="PermissionHandler.check">
+<a class="viewcode-back" href="../../../api/evennia.typeclasses.tags.html#evennia.comms.models.PermissionHandler.check">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">permissions</span><span class="p">,</span> <span class="n">require_all</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Straight-up check the provided permission against this handler. The check will pass if</span>
 
@@ -939,15 +945,80 @@
         <span class="k">if</span> <span class="n">require_all</span><span class="p">:</span>
             <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">perm_lockfunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">perm</span><span class="p">)</span> <span class="k">for</span> <span class="n">perm</span> <span class="ow">in</span> <span class="n">permissions</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">perm_lockfunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">perm</span><span class="p">)</span> <span class="k">for</span> <span class="n">perm</span> <span class="ow">in</span> <span class="n">permissions</span><span class="p">)</span></div></div>
+            <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">perm_lockfunc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">perm</span><span class="p">)</span> <span class="k">for</span> <span class="n">perm</span> <span class="ow">in</span> <span class="n">permissions</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -956,18 +1027,15 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.typeclasses.tags</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

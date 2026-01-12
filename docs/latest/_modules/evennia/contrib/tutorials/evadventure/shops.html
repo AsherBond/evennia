@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.tutorials.evadventure.shops &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.tutorials.evadventure.shops</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="shops.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -143,7 +88,9 @@
 <span class="c1"># ------------------------------------ Buying from an NPC</span>
 
 
-<div class="viewcode-block" id="BuyItem"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem">[docs]</a><span class="nd">@dataclass</span>
+<div class="viewcode-block" id="BuyItem">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem">[docs]</a>
+<span class="nd">@dataclass</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">BuyItem</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Storage container for storing generic info about an item for sale. This means it can be used</span>
@@ -171,7 +118,9 @@
     <span class="n">obj</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">prototype</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="BuyItem.create_from_obj"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.create_from_obj">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BuyItem.create_from_obj">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.create_from_obj">[docs]</a>
+    <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">create_from_obj</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">shopkeeper</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Build a new BuyItem container from a real db obj.</span>
@@ -216,7 +165,10 @@
             <span class="n">obj</span><span class="o">=</span><span class="n">obj</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="BuyItem.create_from_prototype"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.create_from_prototype">[docs]</a>    <span class="nd">@staticmethod</span>
+
+<div class="viewcode-block" id="BuyItem.create_from_prototype">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.create_from_prototype">[docs]</a>
+    <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">create_from_prototype</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prototype_or_key</span><span class="p">,</span> <span class="n">shopkeeper</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Build a new BuyItem container from a prototype.</span>
@@ -289,6 +241,7 @@
             <span class="n">prototype</span><span class="o">=</span><span class="n">prototype</span><span class="p">,</span>
         <span class="p">)</span></div>
 
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the short description to show in buy list.</span>
@@ -296,7 +249,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2"> [|y</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">|n coins]&quot;</span>
 
-<div class="viewcode-block" id="BuyItem.get_detail"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.get_detail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BuyItem.get_detail">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.get_detail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get more info when looking at the item.</span>
 
@@ -311,7 +266,10 @@
 <span class="s2">Attacks using: |w</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">attack_type</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">|n against |w</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">defense_type</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">|n</span>
 <span class="s2">Damage roll: |w</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">damage_roll</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span></div>
 
-<div class="viewcode-block" id="BuyItem.to_obj"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.to_obj">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_obj</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BuyItem.to_obj">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.BuyItem.to_obj">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_obj</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert this into an actual database object that we can trade. This either means</span>
 <span class="sd">        using the stored `.prototype` to spawn a new instance of the object, or to</span>
@@ -320,7 +278,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span>
-        <span class="k">return</span> <span class="n">spawn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prototype</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="n">spawn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prototype</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_get_or_create_buymap</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">shopkeep</span><span class="p">):</span>
@@ -436,7 +396,9 @@
     <span class="k">return</span> <span class="n">text</span><span class="p">,</span> <span class="n">extra_options</span>
 
 
-<div class="viewcode-block" id="node_confirm_buy"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.node_confirm_buy">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">node_confirm_buy</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="node_confirm_buy">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.node_confirm_buy">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">node_confirm_buy</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Menu node reached when a user selects an item in the buy menu. The `item` passed</span>
 <span class="sd">    along in `**kwargs` is the selected item (see `_select_ware_to_buy`, where this is injected).</span>
@@ -459,6 +421,7 @@
     <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;Cancel&quot;</span><span class="p">,</span> <span class="s2">&quot;goto&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">_back_to_previous_node</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)})</span>
 
     <span class="k">return</span> <span class="n">text</span><span class="p">,</span> <span class="n">options</span></div>
+
 
 
 <span class="c1"># node tree to inject for buying things</span>
@@ -558,7 +521,9 @@
     <span class="k">return</span> <span class="n">text</span><span class="p">,</span> <span class="n">extra_options</span>
 
 
-<div class="viewcode-block" id="node_confirm_sell"><a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.node_confirm_sell">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">node_confirm_sell</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="node_confirm_sell">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.tutorials.evadventure.shops.html#evennia.contrib.tutorials.evadventure.shops.node_confirm_sell">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">node_confirm_sell</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    In this node we confirm the sell by first investigating the item we are about to sell.</span>
 
@@ -583,6 +548,7 @@
     <span class="k">return</span> <span class="n">text</span><span class="p">,</span> <span class="n">options</span></div>
 
 
+
 <span class="c1"># node tree to inject for selling things</span>
 <span class="n">node_tree_sell</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;node_start_sell&quot;</span><span class="p">:</span> <span class="n">node_start_sell</span><span class="p">,</span> <span class="s2">&quot;node_confirm_sell&quot;</span><span class="p">:</span> <span class="n">node_confirm_sell</span><span class="p">}</span>
 
@@ -591,12 +557,75 @@
 <span class="n">node_tree_shopkeep</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">node_tree_buy</span><span class="p">,</span> <span class="o">**</span><span class="n">node_tree_sell</span><span class="p">}</span>
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -605,18 +634,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.tutorials.evadventure.shops</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>EvMenu &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="EvMore" href="EvMore.html" />
     <link rel="prev" title="EvForm" href="EvForm.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,129 +33,19 @@
         <li class="right" >
           <a href="EvForm.html" title="EvForm"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" accesskey="U">Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">EvMenu</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">EvMenu</a><ul>
-<li><a class="reference internal" href="#launching-the-menu">Launching the menu</a></li>
-<li><a class="reference internal" href="#the-menu-nodes">The Menu nodes</a><ul>
-<li><a class="reference internal" href="#input-arguments-to-the-node">Input arguments to the node</a></li>
-<li><a class="reference internal" href="#return-values-from-the-node">Return values from the node</a><ul>
-<li><a class="reference internal" href="#text">text</a></li>
-<li><a class="reference internal" href="#options">options</a><ul>
-<li><a class="reference internal" href="#option-key-key">option-key ‘key’</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#option-key-desc">option-key ‘desc’</a></li>
-<li><a class="reference internal" href="#option-key-goto">option-key ‘goto’</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#temporary-storage">Temporary storage</a></li>
-<li><a class="reference internal" href="#customizing-menu-formatting">Customizing Menu formatting</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#evmenu-templating-language">EvMenu templating language</a><ul>
-<li><a class="reference internal" href="#template-options">Template Options</a></li>
-<li><a class="reference internal" href="#templating-example">Templating example</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#asking-for-one-line-input">Asking for one-line input</a><ul>
-<li><a class="reference internal" href="#the-yield-way">The <code class="docutils literal notranslate"><span class="pre">yield</span></code> way</a></li>
-<li><a class="reference internal" href="#the-get-input-way">The <code class="docutils literal notranslate"><span class="pre">get_input</span></code> way</a><ul>
-<li><a class="reference internal" href="#example-yes-no-prompt">Example: Yes/No prompt</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#the-list-node-decorator">The <code class="docutils literal notranslate"><span class="pre">&#64;list_node</span></code> decorator</a></li>
-<li><a class="reference internal" href="#example-menus">Example Menus</a><ul>
-<li><a class="reference internal" href="#example-simple-branching-menu">Example: Simple branching menu</a></li>
-<li><a class="reference internal" href="#example-dynamic-goto">Example: Dynamic goto</a></li>
-<li><a class="reference internal" href="#example-set-caller-properties">Example: Set caller properties</a></li>
-<li><a class="reference internal" href="#example-get-arbitrary-input">Example: Get arbitrary input</a></li>
-<li><a class="reference internal" href="#example-storing-data-between-nodes">Example: Storing data between nodes</a></li>
-<li><a class="reference internal" href="#example-repeating-the-same-node">Example: Repeating the same node</a></li>
-<li><a class="reference internal" href="#defining-nodes-in-a-dictionary">Defining nodes in a dictionary</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="EvForm.html"
-                        title="previous chapter">EvForm</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="EvMore.html"
-                        title="next chapter">EvMore</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Components/EvMenu.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="EvMenu.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="evmenu">
-<h1>EvMenu<a class="headerlink" href="#evmenu" title="Permalink to this headline">¶</a></h1>
+<h1>EvMenu<a class="headerlink" href="#evmenu" title="Link to this heading">¶</a></h1>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Is<span class="w"> </span>your<span class="w"> </span>answer<span class="w"> </span>yes<span class="w"> </span>or<span class="w"> </span>no?
 _________________________________________
 <span class="o">[</span>Y<span class="o">]</span>es!<span class="w"> </span>-<span class="w"> </span>Answer<span class="w"> </span>yes.
@@ -227,7 +111,7 @@ it’s just a helper function.</p>
 <p>When choosing ‘yes’ (or ‘no’) what happens here is that <code class="docutils literal notranslate"><span class="pre">_handle_answer</span></code> gets
 called and echoes your choice before directing to the “end” node, which exits
 the menu (since it doesn’t return any options).</p>
-<p>You can also write menus using the <a class="reference internal" href="#evmenu-templating-language"><span class="std std-doc">EvMenu templating language</span></a>. This
+<p>You can also write menus using the <a class="reference internal" href="#evmenu-templating-language">EvMenu templating language</a>. This
 allows you to use a text string to generate simpler menus with less boiler
 plate. Let’s create exactly the same menu using the templating language:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evennia.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">evmenu</span>
@@ -316,8 +200,8 @@ means depends on your game) to decide if your approach succeeded. It may then
 choose to point you to nodes that continue the conversation or maybe dump you
 into combat!</p>
 <section id="launching-the-menu">
-<h2>Launching the menu<a class="headerlink" href="#launching-the-menu" title="Permalink to this headline">¶</a></h2>
-<p>Initializing the menu is done using a call to the <code class="docutils literal notranslate"><span class="pre">evennia.utils.evmenu.EvMenu</span></code> class. This is the most common way to do so - from inside a <a class="reference internal" href="Commands.html"><span class="doc std std-doc">Command</span></a>:</p>
+<h2>Launching the menu<a class="headerlink" href="#launching-the-menu" title="Link to this heading">¶</a></h2>
+<p>Initializing the menu is done using a call to the <code class="docutils literal notranslate"><span class="pre">evennia.utils.evmenu.EvMenu</span></code> class. This is the most common way to do so - from inside a <a class="reference internal" href="Commands.html"><span class="std std-doc">Command</span></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in, for example gamedir/commands/command.py</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">evennia.utils.evmenu</span><span class="w"> </span><span class="kn">import</span> <span class="n">EvMenu</span>
@@ -349,7 +233,7 @@ into combat!</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (Object or Account): is a reference to the object using the menu. This object will get a new <a class="reference internal" href="Command-Sets.html"><span class="doc std std-doc">CmdSet</span></a> assigned to it, for handling the menu.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (Object or Account): is a reference to the object using the menu. This object will get a new <a class="reference internal" href="Command-Sets.html"><span class="std std-doc">CmdSet</span></a> assigned to it, for handling the menu.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">menu_data</span></code> (str, module or dict): is a module or python path to a module where the global-level functions will each be considered to be a menu node. Their names in the module will be the names by which they are referred to in the module. Importantly, function names starting with an underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> will be ignored by the loader. Alternatively, this can be a direct mapping
 <code class="docutils literal notranslate"><span class="pre">{&quot;nodename&quot;:function,</span> <span class="pre">...}</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startnode</span></code> (str): is the name of the menu-node to start the menu at. Changing this means that you can jump into a menu tree at different positions depending on circumstance and thus possibly re-use menu entries.</p></li>
@@ -362,7 +246,7 @@ out by the reload - make sure they can exit on their own!)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">startnode_input</span></code> (str or (str, dict) tuple): Pass an input text or a input text + kwargs to the
 start node as if it was entered on a fictional previous node. This can be very useful in order to
 start a menu differently depending on the Command’s arguments in which it was initialized.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">session</span></code> (Session): Useful when calling the menu from an <a class="reference internal" href="Accounts.html"><span class="doc std std-doc">Account</span></a> in
+<li><p><code class="docutils literal notranslate"><span class="pre">session</span></code> (Session): Useful when calling the menu from an <a class="reference internal" href="Accounts.html"><span class="std std-doc">Account</span></a> in
 <code class="docutils literal notranslate"><span class="pre">MULTISESSION_MODE</span></code> higher than 2, to make sure only the right Session sees the menu output.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">debug</span></code> (bool): If set, the <code class="docutils literal notranslate"><span class="pre">menudebug</span></code> command will be made available in the menu. Use it to
 list the current state of the menu and use <code class="docutils literal notranslate"><span class="pre">menudebug</span> <span class="pre">&lt;variable&gt;</span></code> to inspect a specific state
@@ -376,7 +260,7 @@ menu. Temporary variables you store on a persistent <code class="docutils litera
 <em>not</em> survive a <code class="docutils literal notranslate"><span class="pre">&#64;reload</span></code>, only those you set as part of the original <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code> call.</p>
 </section>
 <section id="the-menu-nodes">
-<h2>The Menu nodes<a class="headerlink" href="#the-menu-nodes" title="Permalink to this headline">¶</a></h2>
+<h2>The Menu nodes<a class="headerlink" href="#the-menu-nodes" title="Link to this heading">¶</a></h2>
 <p>The EvMenu nodes consist of functions on one of these forms.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">menunodename1</span><span class="p">(</span><span class="n">caller</span><span class="p">):</span>
     <span class="c1"># code</span>
@@ -396,7 +280,7 @@ menu. Temporary variables you store on a persistent <code class="docutils litera
 <div><p>While all of the above forms are okay, it’s recommended to stick to the third and last form since it gives the most flexibility. The previous forms are mainly there for backwards compatibility with  existing menus from a time when EvMenu was less able and may become deprecated at some time in the future.</p>
 </div></blockquote>
 <section id="input-arguments-to-the-node">
-<h3>Input arguments to the node<a class="headerlink" href="#input-arguments-to-the-node" title="Permalink to this headline">¶</a></h3>
+<h3>Input arguments to the node<a class="headerlink" href="#input-arguments-to-the-node" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (Object or Account): The object using the menu - usually a Character but could also be a Session or Account depending on where the menu is used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">raw_string</span></code> (str): If this is given, it will be set to the exact text the user entered on the
@@ -406,10 +290,10 @@ menu. Temporary variables you store on a persistent <code class="docutils litera
 </ul>
 </section>
 <section id="return-values-from-the-node">
-<h3>Return values from the node<a class="headerlink" href="#return-values-from-the-node" title="Permalink to this headline">¶</a></h3>
+<h3>Return values from the node<a class="headerlink" href="#return-values-from-the-node" title="Link to this heading">¶</a></h3>
 <p>Each node function must return two variables, <code class="docutils literal notranslate"><span class="pre">text</span></code> and <code class="docutils literal notranslate"><span class="pre">options</span></code>.</p>
 <section id="text">
-<h4>text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h4>
+<h4>text<a class="headerlink" href="#text" title="Link to this heading">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">text</span></code> variable is either a string or a tuple. This is the simplest form:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Node text&quot;</span>
 </pre></div>
@@ -431,7 +315,7 @@ menu. Temporary variables you store on a persistent <code class="docutils litera
 </div>
 </section>
 <section id="options">
-<h4>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h4>
+<h4>options<a class="headerlink" href="#options" title="Link to this heading">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">options</span></code> list describe all the choices available to the user when viewing this node. If <code class="docutils literal notranslate"><span class="pre">options</span></code> is returned as <code class="docutils literal notranslate"><span class="pre">None</span></code>, it means that this node is an <em>Exit node</em> - any text is displayed and then the menu immediately exits, running the <code class="docutils literal notranslate"><span class="pre">exit_cmd</span></code> if given.</p>
 <p>Otherwise, <code class="docutils literal notranslate"><span class="pre">options</span></code> should be a list (or tuple) of dictionaries, one for each option. If only one option is available, a single dictionary can also be returned. This is how it could look:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">node_test</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -460,7 +344,7 @@ Defend: Hold back and defend yourself
 </pre></div>
 </div>
 <section id="option-key-key">
-<h5>option-key ‘key’<a class="headerlink" href="#option-key-key" title="Permalink to this headline">¶</a></h5>
+<h5>option-key ‘key’<a class="headerlink" href="#option-key-key" title="Link to this heading">¶</a></h5>
 <p>The option’s <code class="docutils literal notranslate"><span class="pre">key</span></code> is what the user should enter in order to choose that option. If given as a tuple, the first string of that tuple will be what is shown on-screen while the rest are aliases for picking that option. In the above example, the user could enter “Attack” (or “attack”, it’s not case-sensitive), “a” or “att” in order to attack the goblin. Aliasing is useful for adding custom coloring to the choice. The first element of the aliasing tuple should then be the colored version, followed by a version without color - since otherwise the user would have to enter the color codes to select that choice.</p>
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">key</span></code> is <em>optional</em>. If no key is given, it will instead automatically be replaced
 with a running number starting from <code class="docutils literal notranslate"><span class="pre">1</span></code>. If removing the <code class="docutils literal notranslate"><span class="pre">key</span></code> part of each option, the resulting
@@ -490,11 +374,11 @@ ________________________________
 </section>
 </section>
 <section id="option-key-desc">
-<h4>option-key ‘desc’<a class="headerlink" href="#option-key-desc" title="Permalink to this headline">¶</a></h4>
+<h4>option-key ‘desc’<a class="headerlink" href="#option-key-desc" title="Link to this heading">¶</a></h4>
 <p>This simply contains the description as to what happens when selecting the menu option. For <code class="docutils literal notranslate"><span class="pre">&quot;_default&quot;</span></code> options or if the <code class="docutils literal notranslate"><span class="pre">key</span></code> is already long or descriptive, it is not strictly needed. But usually it’s better to keep the <code class="docutils literal notranslate"><span class="pre">key</span></code> short and put more detail in <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p>
 </section>
 <section id="option-key-goto">
-<h4>option-key ‘goto’<a class="headerlink" href="#option-key-goto" title="Permalink to this headline">¶</a></h4>
+<h4>option-key ‘goto’<a class="headerlink" href="#option-key-goto" title="Link to this heading">¶</a></h4>
 <p>This is the operational part of the option and fires only when the user chooses said option. Here are three ways to write it</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="k">def</span><span class="w"> </span><span class="nf">_action_two</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -534,12 +418,12 @@ ________________________________
 </section>
 </section>
 <section id="temporary-storage">
-<h3>Temporary storage<a class="headerlink" href="#temporary-storage" title="Permalink to this headline">¶</a></h3>
+<h3>Temporary storage<a class="headerlink" href="#temporary-storage" title="Link to this heading">¶</a></h3>
 <p>When the menu starts, the EvMenu instance is stored on the caller as <code class="docutils literal notranslate"><span class="pre">caller.ndb._evmenu</span></code>. Through this object you can in principle reach the menu’s internal state if you know what you are doing. This is also a good place to store temporary, more global variables that may be cumbersome to keep passing from node to node via the <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>. The <code class="docutils literal notranslate"><span class="pre">_evmnenu</span></code> will be deleted automatically when the menu closes, meaning you don’t need to worry about cleaning anything up.</p>
 <p>If you want <em>permanent</em> state storage, it’s instead better to use an Attribute on <code class="docutils literal notranslate"><span class="pre">caller</span></code>. Remember that this will remain after the menu closes though, so you need to handle any needed cleanup yourself.</p>
 </section>
 <section id="customizing-menu-formatting">
-<h3>Customizing Menu formatting<a class="headerlink" href="#customizing-menu-formatting" title="Permalink to this headline">¶</a></h3>
+<h3>Customizing Menu formatting<a class="headerlink" href="#customizing-menu-formatting" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code> display of nodes, options etc are controlled by a series of formatting methods on the <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code> class. To customize these, simply create a new child class of <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code> and override as needed. Here is an example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evennia.utils.evmenu</span><span class="w"> </span><span class="kn">import</span> <span class="n">EvMenu</span>
 
@@ -603,7 +487,7 @@ ________________________________
 </section>
 </section>
 <section id="evmenu-templating-language">
-<h2>EvMenu templating language<a class="headerlink" href="#evmenu-templating-language" title="Permalink to this headline">¶</a></h2>
+<h2>EvMenu templating language<a class="headerlink" href="#evmenu-templating-language" title="Link to this heading">¶</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">evmenu.py</span></code> are two helper functions <code class="docutils literal notranslate"><span class="pre">parse_menu_template</span></code> and <code class="docutils literal notranslate"><span class="pre">template2menu</span></code> that is used to parse a <em>menu template</em> string into an EvMenu:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>evmenu.template2menu(caller, menu_template, goto_callables)
 </pre></div>
@@ -641,7 +525,7 @@ advanced dynamic usage requires a full node-function.</p>
 <p>Except for defining the node/options, <code class="docutils literal notranslate"><span class="pre">#</span></code> act as comments - everything following
 will be ignored by the template parser.</p>
 <section id="template-options">
-<h3>Template Options<a class="headerlink" href="#template-options" title="Permalink to this headline">¶</a></h3>
+<h3>Template Options<a class="headerlink" href="#template-options" title="Link to this heading">¶</a></h3>
 <p>The option syntax is</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;key&gt;: [desc -&gt;] nodename or function-call
 </pre></div>
@@ -689,7 +573,7 @@ myfunc(foo)      # error!
 <p>This is because these properties are passed as <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> into the goto callable.</p>
 </section>
 <section id="templating-example">
-<h3>Templating example<a class="headerlink" href="#templating-example" title="Permalink to this headline">¶</a></h3>
+<h3>Templating example<a class="headerlink" href="#templating-example" title="Link to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">evennia.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">evmenu</span>
 
@@ -750,12 +634,12 @@ myfunc(foo)      # error!
 </section>
 </section>
 <section id="asking-for-one-line-input">
-<h2>Asking for one-line input<a class="headerlink" href="#asking-for-one-line-input" title="Permalink to this headline">¶</a></h2>
+<h2>Asking for one-line input<a class="headerlink" href="#asking-for-one-line-input" title="Link to this heading">¶</a></h2>
 <p>This describes two ways for asking for simple questions from the user. Using Python’s <code class="docutils literal notranslate"><span class="pre">input</span></code>
 will <em>not</em> work in Evennia. <code class="docutils literal notranslate"><span class="pre">input</span></code> will <em>block</em> the entire server for <em>everyone</em> until that one
 player has entered their text, which is not what you want.</p>
 <section id="the-yield-way">
-<h3>The <code class="docutils literal notranslate"><span class="pre">yield</span></code> way<a class="headerlink" href="#the-yield-way" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">yield</span></code> way<a class="headerlink" href="#the-yield-way" title="Link to this heading">¶</a></h3>
 <p>In the <code class="docutils literal notranslate"><span class="pre">func</span></code> method of your Commands (only) you can use Python’s built-in <code class="docutils literal notranslate"><span class="pre">yield</span></code> command to
 request input in a similar way to <code class="docutils literal notranslate"><span class="pre">input</span></code>. It looks like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="k">yield</span><span class="p">(</span><span class="s2">&quot;Please enter your answer:&quot;</span><span class="p">)</span>
@@ -786,7 +670,7 @@ but worth keeping in mind.</p>
 </div></blockquote>
 </section>
 <section id="the-get-input-way">
-<h3>The <code class="docutils literal notranslate"><span class="pre">get_input</span></code> way<a class="headerlink" href="#the-get-input-way" title="Permalink to this headline">¶</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">get_input</span></code> way<a class="headerlink" href="#the-get-input-way" title="Link to this heading">¶</a></h3>
 <p>The evmenu module offers a helper function named <code class="docutils literal notranslate"><span class="pre">get_input</span></code>. This is wrapped by the <code class="docutils literal notranslate"><span class="pre">yield</span></code>
 statement which is often easier and more intuitive to use. But <code class="docutils literal notranslate"><span class="pre">get_input</span></code> offers more flexibility
 and power if you need it. While in the same module as <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code>, <code class="docutils literal notranslate"><span class="pre">get_input</span></code> is technically unrelated
@@ -835,14 +719,14 @@ When asked &#39;Write something!&#39;, you answered &#39;Hello&#39;.
 return True from the callback to repeat the prompt until you pass whatever check you want.</p>
 <blockquote>
 <div><p>Note: You <em>cannot</em> link consecutive questions by putting a new <code class="docutils literal notranslate"><span class="pre">get_input</span></code> call inside the
-callback If you want that you should use an EvMenu instead (see the <a class="reference internal" href="#example-repeating-the-same-node"><span class="std std-doc">Repeating the same
+callback If you want that you should use an EvMenu instead (see the <a class="reference internal" href="#example-repeating-the-same-node"><span class="std std-ref">Repeating the same
 node</span></a> example above). Otherwise you can either peek at the
 implementation of <code class="docutils literal notranslate"><span class="pre">get_input</span></code> and implement your own mechanism (it’s just using cmdset nesting) or
-you can look at <a class="reference external" href="https://groups.google.com/forum/#%21category-topic/evennia/evennia-questions/16pi0SfMO5U">this extension suggested on the mailing
+you can look at <a class="reference external" href="https://groups.google.com/forum/#!category-topic/evennia/evennia-questions/16pi0SfMO5U">this extension suggested on the mailing
 list</a>.</p>
 </div></blockquote>
 <section id="example-yes-no-prompt">
-<h4>Example: Yes/No prompt<a class="headerlink" href="#example-yes-no-prompt" title="Permalink to this headline">¶</a></h4>
+<h4>Example: Yes/No prompt<a class="headerlink" href="#example-yes-no-prompt" title="Link to this heading">¶</a></h4>
 <p>Below is an example of a Yes/No prompt using the <code class="docutils literal notranslate"><span class="pre">get_input</span></code> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">yesno</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">prompt</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;yes&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;no&quot;</span><span class="p">):</span>
@@ -864,7 +748,7 @@ list</a>.</p>
 </section>
 </section>
 <section id="the-list-node-decorator">
-<h2>The <code class="docutils literal notranslate"><span class="pre">&#64;list_node</span></code> decorator<a class="headerlink" href="#the-list-node-decorator" title="Permalink to this headline">¶</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">&#64;list_node</span></code> decorator<a class="headerlink" href="#the-list-node-decorator" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">evennia.utils.evmenu.list_node</span></code> is an advanced decorator for use with <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code> node functions.
 It is used to quickly create menus for manipulating large numbers of items.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="n">here</span>
@@ -913,7 +797,7 @@ empty dictionary for its options. It returning options, those will supplement th
 auto-created by the <code class="docutils literal notranslate"><span class="pre">list_node</span></code> decorator.</p>
 </section>
 <section id="example-menus">
-<h2>Example Menus<a class="headerlink" href="#example-menus" title="Permalink to this headline">¶</a></h2>
+<h2>Example Menus<a class="headerlink" href="#example-menus" title="Link to this heading">¶</a></h2>
 <p>Here is a diagram to help visualize the flow of data from node to node, including goto-callables in-between:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        ┌─
         │  def nodeA(caller, raw_string, **kwargs):
@@ -971,20 +855,20 @@ callable│                                          │                        
 <p>In every step, we pass a dict which becomes the ingoing <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> in the next step. If we didn’t pass anything (it’s optional), the next step’s <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> would just be empty.</p>
 <p>More examples:</p>
 <ul class="simple">
-<li><p><strong><a class="reference internal" href="#example-simple-branching-menu"><span class="std std-doc">Simple branching menu</span></a></strong> - choose from options</p></li>
-<li><p><strong><a class="reference internal" href="#example-dynamic-goto"><span class="std std-doc">Dynamic goto</span></a></strong> - jumping to different nodes based on response</p></li>
-<li><p><strong><a class="reference internal" href="#example-set-caller-properties"><span class="std std-doc">Set caller properties</span></a></strong> - a menu that changes things</p></li>
-<li><p><strong><a class="reference internal" href="#example-get-arbitrary-input"><span class="std std-doc">Getting arbitrary input</span></a></strong> - entering text</p></li>
-<li><p><strong><a class="reference internal" href="#example-storing-data-between-nodes"><span class="std std-doc">Storing data between nodes</span></a></strong> - keeping states and
+<li><p><strong><a class="reference internal" href="#example-simple-branching-menu"><span class="std std-ref">Simple branching menu</span></a></strong> - choose from options</p></li>
+<li><p><strong><a class="reference internal" href="#example-dynamic-goto"><span class="std std-ref">Dynamic goto</span></a></strong> - jumping to different nodes based on response</p></li>
+<li><p><strong><a class="reference internal" href="#example-set-caller-properties"><span class="std std-ref">Set caller properties</span></a></strong> - a menu that changes things</p></li>
+<li><p><strong><a class="reference internal" href="#example-get-arbitrary-input"><span class="std std-ref">Getting arbitrary input</span></a></strong> - entering text</p></li>
+<li><p><strong><a class="reference internal" href="#example-storing-data-between-nodes"><span class="std std-ref">Storing data between nodes</span></a></strong> - keeping states and
 information while in the menu</p></li>
-<li><p><strong><a class="reference internal" href="#example-repeating-the-same-node"><span class="std std-doc">Repeating the same node</span></a></strong> - validating within the node
+<li><p><strong><a class="reference internal" href="#example-repeating-the-same-node"><span class="std std-ref">Repeating the same node</span></a></strong> - validating within the node
 before moving to the next</p></li>
-<li><p><strong><a class="reference internal" href="#example-yes-no-prompt"><span class="std std-doc">Yes/No prompt</span></a></strong> - entering text with limited possible responses
+<li><p><strong><a class="reference internal" href="#example-yes-no-prompt">Yes/No prompt</a></strong> - entering text with limited possible responses
 (this is <em>not</em> using EvMenu but the conceptually similar yet technically unrelated <code class="docutils literal notranslate"><span class="pre">get_input</span></code>
 helper function accessed as <code class="docutils literal notranslate"><span class="pre">evennia.utils.evmenu.get_input</span></code>).</p></li>
 </ul>
 <section id="example-simple-branching-menu">
-<h3>Example: Simple branching menu<a class="headerlink" href="#example-simple-branching-menu" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Simple branching menu<a class="headerlink" href="#example-simple-branching-menu" title="Link to this heading">¶</a></h3>
 <p>Below is an example of a simple branching menu node leading to different other nodes depending on choice:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in mygame/world/mychargen.py</span>
 
@@ -1022,7 +906,7 @@ like this instead in the example:</p>
 </div>
 </section>
 <section id="example-dynamic-goto">
-<h3>Example: Dynamic goto<a class="headerlink" href="#example-dynamic-goto" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Dynamic goto<a class="headerlink" href="#example-dynamic-goto" title="Link to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="k">def</span><span class="w"> </span><span class="nf">_is_in_mage_guild</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">caller</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mage&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s2">&quot;guild_member&quot;</span><span class="p">):</span>
@@ -1041,12 +925,12 @@ like this instead in the example:</p>
 </div>
 <p>This simple callable goto will analyse what happens depending on who the <code class="docutils literal notranslate"><span class="pre">caller</span></code> is.  The
 <code class="docutils literal notranslate"><span class="pre">enter_guild</span></code> node will give you a choice of what to say to the guard. If you try to enter, you will
-end up in different nodes depending on (in this example) if you have the right <a class="reference internal" href="Tags.html"><span class="doc std std-doc">Tag</span></a> set on
+end up in different nodes depending on (in this example) if you have the right <a class="reference internal" href="Tags.html"><span class="std std-doc">Tag</span></a> set on
 yourself or not. Note that since we don’t include any ‘key’s in the option dictionary, you will just
 get to pick between numbers.</p>
 </section>
 <section id="example-set-caller-properties">
-<h3>Example: Set caller properties<a class="headerlink" href="#example-set-caller-properties" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Set caller properties<a class="headerlink" href="#example-set-caller-properties" title="Link to this heading">¶</a></h3>
 <p>Here is an example of passing arguments into the <code class="docutils literal notranslate"><span class="pre">goto</span></code> callable and use that to influence
 which node it should go to next:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
@@ -1094,7 +978,7 @@ even tell it which nodename it should return, so the choices leads to different 
 We could also imagine the helper function analyzing what other choices</p>
 </section>
 <section id="example-get-arbitrary-input">
-<h3>Example: Get arbitrary input<a class="headerlink" href="#example-get-arbitrary-input" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Get arbitrary input<a class="headerlink" href="#example-get-arbitrary-input" title="Link to this heading">¶</a></h3>
 <p>An example of the menu asking the user for input - any input.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="k">def</span><span class="w"> </span><span class="nf">_set_name</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1156,7 +1040,7 @@ without entering anything. By returning <code class="docutils literal notranslat
 previous node, but updating its ingoing kwargs to tell it to display a different text.</p>
 </section>
 <section id="example-storing-data-between-nodes">
-<h3>Example: Storing data between nodes<a class="headerlink" href="#example-storing-data-between-nodes" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Storing data between nodes<a class="headerlink" href="#example-storing-data-between-nodes" title="Link to this heading">¶</a></h3>
 <p>A convenient way to store data is to store it on the <code class="docutils literal notranslate"><span class="pre">caller.ndb._evmenu</span></code> which you can reach from
 every node. The advantage of doing this is that the <code class="docutils literal notranslate"><span class="pre">_evmenu</span></code> NAttribute will be deleted
 automatically when you exit the menu.</p>
@@ -1203,7 +1087,7 @@ when the user exits the menu.</p>
 </div></blockquote>
 </section>
 <section id="example-repeating-the-same-node">
-<h3>Example: Repeating the same node<a class="headerlink" href="#example-repeating-the-same-node" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Repeating the same node<a class="headerlink" href="#example-repeating-the-same-node" title="Link to this heading">¶</a></h3>
 <p>Sometimes you want to make a chain of menu nodes one after another, but you don’t want the user to be able to continue to the next node until you have verified that what they input in the previous node is ok. A common example is a login menu:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="k">def</span><span class="w"> </span><span class="nf">_check_username</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1277,7 +1161,7 @@ password attempts, this will tick up the <code class="docutils literal notransla
 to iteration until too many attempts have been made.</p>
 </section>
 <section id="defining-nodes-in-a-dictionary">
-<h3>Defining nodes in a dictionary<a class="headerlink" href="#defining-nodes-in-a-dictionary" title="Permalink to this headline">¶</a></h3>
+<h3>Defining nodes in a dictionary<a class="headerlink" href="#defining-nodes-in-a-dictionary" title="Link to this heading">¶</a></h3>
 <p>You can also define your nodes directly in a dictionary to feed into the <code class="docutils literal notranslate"><span class="pre">EvMenu</span></code> creator.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mynode</span><span class="p">(</span><span class="n">caller</span><span class="p">):</span>
    <span class="c1"># a normal menu node function</span>
@@ -1312,18 +1196,146 @@ function - for example you can’t use other Python keywords like <code class="d
 <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p>
 <p>Unless you are dealing with a relatively simple dynamic menu, defining menus with lambda’s is
 probably more work than it’s worth: You can create dynamic menus by instead making each node
-function more clever. See the <a class="reference internal" href="../Howtos/Tutorial-NPC-Merchants.html"><span class="doc std std-doc">NPC shop tutorial</span></a> for an example of this.</p>
+function more clever. See the <a class="reference internal" href="../Howtos/Tutorial-NPC-Merchants.html"><span class="std std-doc">NPC shop tutorial</span></a> for an example of this.</p>
 </section>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">EvMenu</a><ul>
+<li><a class="reference internal" href="#launching-the-menu">Launching the menu</a></li>
+<li><a class="reference internal" href="#the-menu-nodes">The Menu nodes</a><ul>
+<li><a class="reference internal" href="#input-arguments-to-the-node">Input arguments to the node</a></li>
+<li><a class="reference internal" href="#return-values-from-the-node">Return values from the node</a><ul>
+<li><a class="reference internal" href="#text">text</a></li>
+<li><a class="reference internal" href="#options">options</a><ul>
+<li><a class="reference internal" href="#option-key-key">option-key ‘key’</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#option-key-desc">option-key ‘desc’</a></li>
+<li><a class="reference internal" href="#option-key-goto">option-key ‘goto’</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#temporary-storage">Temporary storage</a></li>
+<li><a class="reference internal" href="#customizing-menu-formatting">Customizing Menu formatting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evmenu-templating-language">EvMenu templating language</a><ul>
+<li><a class="reference internal" href="#template-options">Template Options</a></li>
+<li><a class="reference internal" href="#templating-example">Templating example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#asking-for-one-line-input">Asking for one-line input</a><ul>
+<li><a class="reference internal" href="#the-yield-way">The <code class="docutils literal notranslate"><span class="pre">yield</span></code> way</a></li>
+<li><a class="reference internal" href="#the-get-input-way">The <code class="docutils literal notranslate"><span class="pre">get_input</span></code> way</a><ul>
+<li><a class="reference internal" href="#example-yes-no-prompt">Example: Yes/No prompt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-list-node-decorator">The <code class="docutils literal notranslate"><span class="pre">&#64;list_node</span></code> decorator</a></li>
+<li><a class="reference internal" href="#example-menus">Example Menus</a><ul>
+<li><a class="reference internal" href="#example-simple-branching-menu">Example: Simple branching menu</a></li>
+<li><a class="reference internal" href="#example-dynamic-goto">Example: Dynamic goto</a></li>
+<li><a class="reference internal" href="#example-set-caller-properties">Example: Set caller properties</a></li>
+<li><a class="reference internal" href="#example-get-arbitrary-input">Example: Get arbitrary input</a></li>
+<li><a class="reference internal" href="#example-storing-data-between-nodes">Example: Storing data between nodes</a></li>
+<li><a class="reference internal" href="#example-repeating-the-same-node">Example: Repeating the same node</a></li>
+<li><a class="reference internal" href="#defining-nodes-in-a-dictionary">Defining nodes in a dictionary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="EvForm.html"
+                          title="previous chapter">EvForm</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="EvMore.html"
+                          title="next chapter">EvMore</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Components/EvMenu.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1338,17 +1350,14 @@ function more clever. See the <a class="reference internal" href="../Howtos/Tuto
         <li class="right" >
           <a href="EvForm.html" title="EvForm"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Components-Overview.html" >Core Components</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">EvMenu</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

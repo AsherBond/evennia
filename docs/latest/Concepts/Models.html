@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>New Models &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Zones" href="Zones.html" />
     <link rel="prev" title="Protocols" href="Protocols.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,100 +33,24 @@
         <li class="right" >
           <a href="Protocols.html" title="Protocols"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Concepts-Overview.html" accesskey="U">Core Concepts</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">New Models</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">New Models</a><ul>
-<li><a class="reference internal" href="#overview-of-database-tables">Overview of database tables</a></li>
-<li><a class="reference internal" href="#adding-a-new-database-table">Adding a new database table</a></li>
-<li><a class="reference internal" href="#defining-your-models">Defining your models</a></li>
-<li><a class="reference internal" href="#referencing-existing-models-and-typeclasses">Referencing existing models and typeclasses</a></li>
-<li><a class="reference internal" href="#creating-a-new-model-instance">Creating a new model instance</a></li>
-<li><a class="reference internal" href="#using-the-sharedmemorymodel-parent">Using the <code class="docutils literal notranslate"><span class="pre">SharedMemoryModel</span></code> parent</a></li>
-<li><a class="reference internal" href="#searching-for-your-models">Searching for your models</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Protocols.html"
-                        title="previous chapter">Protocols</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Zones.html"
-                        title="next chapter">Zones</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Concepts/Models.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Models.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="new-models">
-<h1>New Models<a class="headerlink" href="#new-models" title="Permalink to this headline">¶</a></h1>
+<h1>New Models<a class="headerlink" href="#new-models" title="Link to this heading">¶</a></h1>
 <p><em>Note: This is considered an advanced topic.</em></p>
 <p>Evennia offers many convenient ways to store object data, such as via Attributes or Scripts. This is sufficient for most use cases. But if you aim to build a large stand-alone system, trying to squeeze your storage requirements into those may be more complex than you bargain for. Examples may be to store guild data for guild members to be able to change, tracking the flow of money across a game-wide economic system or implement other custom game systems that requires the storage of custom data in a quickly accessible way.</p>
-<p>Whereas <a class="reference internal" href="../Components/Tags.html"><span class="doc std std-doc">Tags</span></a> or <a class="reference internal" href="../Components/Scripts.html"><span class="doc std std-doc">Scripts</span></a> can handle many situations, sometimes things may be easier to handle by adding your own <em>database model</em>.</p>
+<p>Whereas <a class="reference internal" href="../Components/Tags.html"><span class="std std-doc">Tags</span></a> or <a class="reference internal" href="../Components/Scripts.html"><span class="std std-doc">Scripts</span></a> can handle many situations, sometimes things may be easier to handle by adding your own <em>database model</em>.</p>
 <section id="overview-of-database-tables">
-<h2>Overview of database tables<a class="headerlink" href="#overview-of-database-tables" title="Permalink to this headline">¶</a></h2>
+<h2>Overview of database tables<a class="headerlink" href="#overview-of-database-tables" title="Link to this heading">¶</a></h2>
 <p>SQL-type databases (which is what Evennia supports) are basically highly optimized systems for
 retrieving text stored in tables. A table may look like this</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="nb">id</span> <span class="o">|</span> <span class="n">db_key</span>    <span class="o">|</span> <span class="n">db_typeclass_path</span>          <span class="o">|</span> <span class="n">db_permissions</span>  <span class="o">...</span>
@@ -162,9 +80,9 @@ retrieving text stored in tables. A table may look like this</p>
 <p>Evennia uses <a class="reference external" href="https://docs.djangoproject.com">Django</a>, which abstracts away the database SQL manipulation and allows you to search and manipulate your database entirely in Python. Each database table is in Django represented by a class commonly called a <em>model</em> since it describes the look of the table. In Evennia, Objects, Scripts, Channels etc are examples of Django models that we then extend and build on.</p>
 </section>
 <section id="adding-a-new-database-table">
-<h2>Adding a new database table<a class="headerlink" href="#adding-a-new-database-table" title="Permalink to this headline">¶</a></h2>
+<h2>Adding a new database table<a class="headerlink" href="#adding-a-new-database-table" title="Link to this heading">¶</a></h2>
 <p>Here is how you add your own database table/models:</p>
-<ol>
+<ol class="arabic">
 <li><p>In Django lingo, we will create a new “application” - a subsystem under the main Evennia program. For this example we’ll call it “myapp”. Run the following (you need to have a working Evennia running before you do this, so make sure you have run the steps in [Setup Quickstart](Getting- Started) first):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> evennia startapp myapp
  mv myapp world  (linux)
@@ -185,11 +103,11 @@ retrieving text stored in tables. A table may look like this</p>
 </div>
 </li>
 </ol>
-<p>This will add your new database table to the database. If you have put your game under version control (if not, <a class="reference internal" href="../Coding/Version-Control.html"><span class="doc std std-doc">you should</span></a>), don’t forget to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">myapp/*</span></code> to add all items
+<p>This will add your new database table to the database. If you have put your game under version control (if not, <a class="reference internal" href="../Coding/Version-Control.html"><span class="std std-doc">you should</span></a>), don’t forget to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">myapp/*</span></code> to add all items
 to version control.</p>
 </section>
 <section id="defining-your-models">
-<h2>Defining your models<a class="headerlink" href="#defining-your-models" title="Permalink to this headline">¶</a></h2>
+<h2>Defining your models<a class="headerlink" href="#defining-your-models" title="Link to this heading">¶</a></h2>
 <p>A Django <em>model</em> is the Python representation of a database table. It can be handled like any other Python class. It defines <em>fields</em> on itself, objects of a special type. These become the “columns” of the database table. Finally, you create new instances of the model to add new rows to the database.</p>
 <p>We won’t describe all aspects of Django models here, for that we refer to the vast <a class="reference external" href="https://docs.djangoproject.com/en/4.1/topics/db/models/">Django documentation</a> on the subject. Here is a (very) brief example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.db</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>
@@ -208,7 +126,7 @@ to version control.</p>
 <p>We create four fields: two character fields of limited length and one text field which has no
 maximum length. Finally we create a field containing the current time of us creating this object.</p>
 <blockquote>
-<div><p>The <code class="docutils literal notranslate"><span class="pre">db_date_created</span></code> field, with exactly this name, is <em>required</em> if you want to be able to store instances of your custom model in an Evennia <a class="reference internal" href="../Components/Attributes.html"><span class="doc std std-doc">Attribute</span></a>. It will automatically be set upon creation and can after that not be changed. Having this field will allow you to do e.g. <code class="docutils literal notranslate"><span class="pre">obj.db.myinstance</span> <span class="pre">=</span> <span class="pre">mydatastore</span></code>. If you know you’ll never store your model instances in Attributes the <code class="docutils literal notranslate"><span class="pre">db_date_created</span></code> field is optional.</p>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">db_date_created</span></code> field, with exactly this name, is <em>required</em> if you want to be able to store instances of your custom model in an Evennia <a class="reference internal" href="../Components/Attributes.html"><span class="std std-doc">Attribute</span></a>. It will automatically be set upon creation and can after that not be changed. Having this field will allow you to do e.g. <code class="docutils literal notranslate"><span class="pre">obj.db.myinstance</span> <span class="pre">=</span> <span class="pre">mydatastore</span></code>. If you know you’ll never store your model instances in Attributes the <code class="docutils literal notranslate"><span class="pre">db_date_created</span></code> field is optional.</p>
 </div></blockquote>
 <p>You don’t <em>have</em> to start field names with <code class="docutils literal notranslate"><span class="pre">db_</span></code>, this is an Evennia convention. It’s nevertheless recommended that you do use <code class="docutils literal notranslate"><span class="pre">db_</span></code>, partly for clarity and consistency with Evennia (if you ever want to share your code) and partly for the case of you later deciding to use Evennia’s
 <code class="docutils literal notranslate"><span class="pre">SharedMemoryModel</span></code> parent down the line.</p>
@@ -217,16 +135,16 @@ maximum length. Finally we create a field containing the current time of us crea
 point for your models.</p>
 </section>
 <section id="referencing-existing-models-and-typeclasses">
-<h2>Referencing existing models and typeclasses<a class="headerlink" href="#referencing-existing-models-and-typeclasses" title="Permalink to this headline">¶</a></h2>
+<h2>Referencing existing models and typeclasses<a class="headerlink" href="#referencing-existing-models-and-typeclasses" title="Link to this heading">¶</a></h2>
 <p>You may want to use <code class="docutils literal notranslate"><span class="pre">ForeignKey</span></code> or <code class="docutils literal notranslate"><span class="pre">ManyToManyField</span></code> to relate your new model to existing ones.</p>
 <p>To do this we need to specify the app-path for the root object type we want to store as a string (we must use a string rather than the class directly or you’ll run into problems with models not having been initialized yet).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;objects.ObjectDB&quot;</span></code> for all <a class="reference internal" href="../Components/Objects.html"><span class="doc std std-doc">Objects</span></a> (like exits, rooms, characters etc)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;accounts.AccountDB&quot;</span></code> for <a class="reference internal" href="../Components/Accounts.html"><span class="doc std std-doc">Accounts</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;scripts.ScriptDB&quot;</span></code> for <a class="reference internal" href="../Components/Scripts.html"><span class="doc std std-doc">Scripts</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;comms.ChannelDB&quot;</span></code> for <a class="reference internal" href="../Components/Channels.html"><span class="doc std std-doc">Channels</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;comms.Msg&quot;</span></code> for <a class="reference internal" href="../Components/Msg.html"><span class="doc std std-doc">Msg</span></a> objects.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;help.HelpEntry&quot;</span></code> for <a class="reference internal" href="../Components/Help-System.html"><span class="doc std std-doc">Help Entries</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;objects.ObjectDB&quot;</span></code> for all <a class="reference internal" href="../Components/Objects.html"><span class="std std-doc">Objects</span></a> (like exits, rooms, characters etc)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;accounts.AccountDB&quot;</span></code> for <a class="reference internal" href="../Components/Accounts.html"><span class="std std-doc">Accounts</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;scripts.ScriptDB&quot;</span></code> for <a class="reference internal" href="../Components/Scripts.html"><span class="std std-doc">Scripts</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;comms.ChannelDB&quot;</span></code> for <a class="reference internal" href="../Components/Channels.html"><span class="std std-doc">Channels</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;comms.Msg&quot;</span></code> for <a class="reference internal" href="../Components/Msg.html"><span class="std std-doc">Msg</span></a> objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;help.HelpEntry&quot;</span></code> for <a class="reference internal" href="../Components/Help-System.html"><span class="std std-doc">Help Entries</span></a>.</p></li>
 </ul>
 <p>Here’s an example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.db</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>
@@ -247,7 +165,7 @@ my_character = myspecial.db_character  # still a Character
 <p>While the  <code class="docutils literal notranslate"><span class="pre">db_character</span></code> field fail if you try to store an <code class="docutils literal notranslate"><span class="pre">Account</span></code>, it will gladly accept any instance of a typeclass that inherits from <code class="docutils literal notranslate"><span class="pre">ObjectDB</span></code>, such as rooms, exits or other non-character Objects. It’s up to you to validate that what you store is what you expect it to be.</p>
 </section>
 <section id="creating-a-new-model-instance">
-<h2>Creating a new model instance<a class="headerlink" href="#creating-a-new-model-instance" title="Permalink to this headline">¶</a></h2>
+<h2>Creating a new model instance<a class="headerlink" href="#creating-a-new-model-instance" title="Link to this heading">¶</a></h2>
 <p>To create a new row in your table, you instantiate the model and then call its <code class="docutils literal notranslate"><span class="pre">save()</span></code> method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>     <span class="kn">from</span><span class="w"> </span><span class="nn">evennia.myapp</span><span class="w"> </span><span class="kn">import</span> <span class="n">MyDataStore</span>
 
@@ -268,9 +186,9 @@ my_character = myspecial.db_character  # still a Character
 <p>Evennia’s normal models don’t need to explicitly save, since they are based on <code class="docutils literal notranslate"><span class="pre">SharedMemoryModel</span></code> rather than the raw django model. This is covered in the next section.</p>
 </section>
 <section id="using-the-sharedmemorymodel-parent">
-<h2>Using the <code class="docutils literal notranslate"><span class="pre">SharedMemoryModel</span></code> parent<a class="headerlink" href="#using-the-sharedmemorymodel-parent" title="Permalink to this headline">¶</a></h2>
+<h2>Using the <code class="docutils literal notranslate"><span class="pre">SharedMemoryModel</span></code> parent<a class="headerlink" href="#using-the-sharedmemorymodel-parent" title="Link to this heading">¶</a></h2>
 <p>Evennia doesn’t base most of its models on the raw <code class="docutils literal notranslate"><span class="pre">django.db.models.Model</span></code> but on the Evennia base model <code class="docutils literal notranslate"><span class="pre">evennia.utils.idmapper.models.SharedMemoryModel</span></code>. There are two main reasons for this:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Ease of updating fields without having to explicitly call <code class="docutils literal notranslate"><span class="pre">save()</span></code></p></li>
 <li><p>On-object memory persistence and database caching</p></li>
 </ol>
@@ -308,7 +226,7 @@ reading from disk. The drawback is that this system tends to be more memory hung
 </div>
 </section>
 <section id="searching-for-your-models">
-<h2>Searching for your models<a class="headerlink" href="#searching-for-your-models" title="Permalink to this headline">¶</a></h2>
+<h2>Searching for your models<a class="headerlink" href="#searching-for-your-models" title="Link to this heading">¶</a></h2>
 <p>To search your new custom database table you need to use its database <em>manager</em> to build a <em>query</em>. Note that even if you use <code class="docutils literal notranslate"><span class="pre">SharedMemoryModel</span></code> as described in the previous section, you have to use the actual <em>field names</em> in the query, not the wrapper name (so <code class="docutils literal notranslate"><span class="pre">db_key</span></code> and not just <code class="docutils literal notranslate"><span class="pre">key</span></code>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>     <span class="kn">from</span><span class="w"> </span><span class="nn">world.myapp</span><span class="w"> </span><span class="kn">import</span> <span class="n">MyDataStore</span>
 
@@ -323,17 +241,111 @@ reading from disk. The drawback is that this system tends to be more memory hung
         <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">db_text</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>See the <a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Django-queries.html"><span class="doc std std-doc">Beginner Tutorial lesson on Django querying</span></a> for a lot more information about querying the database.</p>
+<p>See the <a class="reference internal" href="../Howtos/Beginner-Tutorial/Part1/Beginner-Tutorial-Django-queries.html"><span class="std std-doc">Beginner Tutorial lesson on Django querying</span></a> for a lot more information about querying the database.</p>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">New Models</a><ul>
+<li><a class="reference internal" href="#overview-of-database-tables">Overview of database tables</a></li>
+<li><a class="reference internal" href="#adding-a-new-database-table">Adding a new database table</a></li>
+<li><a class="reference internal" href="#defining-your-models">Defining your models</a></li>
+<li><a class="reference internal" href="#referencing-existing-models-and-typeclasses">Referencing existing models and typeclasses</a></li>
+<li><a class="reference internal" href="#creating-a-new-model-instance">Creating a new model instance</a></li>
+<li><a class="reference internal" href="#using-the-sharedmemorymodel-parent">Using the <code class="docutils literal notranslate"><span class="pre">SharedMemoryModel</span></code> parent</a></li>
+<li><a class="reference internal" href="#searching-for-your-models">Searching for your models</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Protocols.html"
+                          title="previous chapter">Protocols</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Zones.html"
+                          title="next chapter">Zones</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Concepts/Models.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -348,17 +360,14 @@ reading from disk. The drawback is that this system tends to be more memory hung
         <li class="right" >
           <a href="Protocols.html" title="Protocols"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Concepts-Overview.html" >Core Concepts</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">New Models</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

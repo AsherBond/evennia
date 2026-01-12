@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.commands.cmdhandler &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.commands.cmdhandler</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="cmdhandler.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -126,7 +71,6 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">copy</span><span class="w"> </span><span class="kn">import</span> <span class="n">copy</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">chain</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">traceback</span><span class="w"> </span><span class="kn">import</span> <span class="n">format_exc</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">weakref</span><span class="w"> </span><span class="kn">import</span> <span class="n">WeakValueDictionary</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">django.conf</span><span class="w"> </span><span class="kn">import</span> <span class="n">settings</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">django.utils.translation</span><span class="w"> </span><span class="kn">import</span> <span class="n">gettext</span> <span class="k">as</span> <span class="n">_</span>
@@ -143,7 +87,7 @@
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;cmdhandler&quot;</span><span class="p">,</span> <span class="s2">&quot;InterruptCommand&quot;</span><span class="p">)</span>
 <span class="n">_GA</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span>
-<span class="n">_CMDSET_MERGE_CACHE</span> <span class="o">=</span> <span class="n">WeakValueDictionary</span><span class="p">()</span>
+<span class="n">_CMDSET_MERGE_CACHE</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># tracks recursive calls by each caller</span>
 <span class="c1"># to avoid infinite loops (commands calling themselves)</span>
@@ -245,10 +189,13 @@
 
 
 <span class="c1"># helper functions</span>
+<div class="viewcode-block" id="err_helper">
+<a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.err_helper">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">err_helper</span><span class="p">(</span><span class="n">raw_string</span><span class="p">,</span> <span class="n">cmdid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">cmdid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">raw_string</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;cmdid&quot;</span><span class="p">:</span> <span class="n">cmdid</span><span class="p">}</span>
-    <span class="k">return</span> <span class="n">raw_string</span>
+    <span class="k">return</span> <span class="n">raw_string</span></div>
+
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_msg_err</span><span class="p">(</span><span class="n">receiver</span><span class="p">,</span> <span class="n">stringtuple</span><span class="p">,</span> <span class="n">cmdid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -353,30 +300,47 @@
 <span class="c1"># custom Exceptions</span>
 
 
+<div class="viewcode-block" id="NoCmdSets">
+<a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.NoCmdSets">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">NoCmdSets</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="s2">&quot;No cmdsets found. Critical error.&quot;</span>
 
-    <span class="k">pass</span>
+    <span class="k">pass</span></div>
 
 
+
+<div class="viewcode-block" id="ExecSystemCommand">
+<a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.ExecSystemCommand">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ExecSystemCommand</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="s2">&quot;Run a system command&quot;</span>
 
+<div class="viewcode-block" id="ExecSystemCommand.__init__">
+<a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.ExecSystemCommand.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">syscmd</span><span class="p">,</span> <span class="n">sysarg</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">syscmd</span><span class="p">,</span> <span class="n">sysarg</span><span class="p">)</span>  <span class="c1"># needed by exception error handling</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">syscmd</span> <span class="o">=</span> <span class="n">syscmd</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sysarg</span> <span class="o">=</span> <span class="n">sysarg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sysarg</span> <span class="o">=</span> <span class="n">sysarg</span></div>
+</div>
 
 
+
+<div class="viewcode-block" id="ErrorReported">
+<a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.ErrorReported">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ErrorReported</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="s2">&quot;Re-raised when a subsructure already reported the error&quot;</span>
 
+<div class="viewcode-block" id="ErrorReported.__init__">
+<a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.ErrorReported.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw_string</span><span class="p">,)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">raw_string</span> <span class="o">=</span> <span class="n">raw_string</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_string</span> <span class="o">=</span> <span class="n">raw_string</span></div>
+</div>
+
 
 
 <span class="c1"># Helper function</span>
+<div class="viewcode-block" id="generate_cmdset_providers">
+<a class="viewcode-back" href="../../../api/evennia.commands.default.building.html#evennia.commands.cmdhandler.generate_cmdset_providers">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_cmdset_providers</span><span class="p">(</span><span class="n">called_by</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">cmdset_providers</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
     <span class="n">cmdset_providers</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">called_by</span><span class="o">.</span><span class="n">get_cmdset_providers</span><span class="p">())</span>
@@ -403,9 +367,12 @@
     <span class="c1"># does not get spammed for errors while preserving character mirroring.</span>
     <span class="n">error_to</span> <span class="o">=</span> <span class="n">cmdset_providers_errors_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-    <span class="k">return</span> <span class="n">cmdset_providers</span><span class="p">,</span> <span class="n">cmdset_providers_list</span><span class="p">,</span> <span class="n">cmdset_providers_errors_list</span><span class="p">,</span> <span class="n">caller</span><span class="p">,</span> <span class="n">error_to</span>
+    <span class="k">return</span> <span class="n">cmdset_providers</span><span class="p">,</span> <span class="n">cmdset_providers_list</span><span class="p">,</span> <span class="n">cmdset_providers_errors_list</span><span class="p">,</span> <span class="n">caller</span><span class="p">,</span> <span class="n">error_to</span></div>
 
 
+
+<div class="viewcode-block" id="get_and_merge_cmdsets">
+<a class="viewcode-back" href="../../../api/evennia.commands.default.building.html#evennia.commands.cmdhandler.get_and_merge_cmdsets">[docs]</a>
 <span class="nd">@inlineCallbacks</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_and_merge_cmdsets</span><span class="p">(</span>
     <span class="n">caller</span><span class="p">,</span> <span class="n">cmdset_providers</span><span class="p">,</span> <span class="n">callertype</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="n">report_to</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmdid</span><span class="o">=</span><span class="kc">None</span>
@@ -586,14 +553,17 @@
         <span class="k">raise</span>
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
         <span class="n">_msg_err</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">_ERROR_CMDSETS</span><span class="p">)</span>
-        <span class="k">raise</span>
+        <span class="k">raise</span></div>
+
         <span class="c1"># raise ErrorReported</span>
 
 
 <span class="c1"># Main command-handler function</span>
 
 
-<div class="viewcode-block" id="cmdhandler"><a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.cmdhandler">[docs]</a><span class="nd">@inlineCallbacks</span>
+<div class="viewcode-block" id="cmdhandler">
+<a class="viewcode-back" href="../../../api/evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.cmdhandler">[docs]</a>
+<span class="nd">@inlineCallbacks</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">cmdhandler</span><span class="p">(</span>
     <span class="n">called_by</span><span class="p">,</span>
     <span class="n">raw_string</span><span class="p">,</span>
@@ -892,14 +862,78 @@
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
         <span class="c1"># This catches exceptions in cmdhandler exceptions themselves</span>
         <span class="n">_msg_err</span><span class="p">(</span><span class="n">error_to</span><span class="p">,</span> <span class="n">_ERROR_CMDHANDLER</span><span class="p">)</span></div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -908,18 +942,15 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.commands.cmdhandler</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

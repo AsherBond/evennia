@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.utils.evmenu &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.utils.evmore" href="evennia.utils.evmore.html" />
     <link rel="prev" title="evennia.utils.evform" href="evennia.utils.evform.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.utils.evform.html" title="evennia.utils.evform"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -49,82 +43,12 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">evennia.utils.evmenu</a><ul>
-<li><a class="reference internal" href="#menu-generation-from-template-string">Menu generation from template string</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.utils.evform.html"
-                        title="previous chapter">evennia.utils.evform</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.utils.evmore.html"
-                        title="next chapter">evennia.utils.evmore</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/api/evennia.utils.evmenu.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="evennia.utils.evmenu.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section id="module-evennia.utils.evmenu">
-<span id="evennia-utils-evmenu"></span><h1>evennia.utils.evmenu<a class="headerlink" href="#module-evennia.utils.evmenu" title="Permalink to this headline">¶</a></h1>
+<span id="evennia-utils-evmenu"></span><h1>evennia.utils.evmenu<a class="headerlink" href="#module-evennia.utils.evmenu" title="Link to this heading">¶</a></h1>
 <p>EvMenu</p>
 <p>This implements a full menu system for Evennia.</p>
 <p>To start the menu, just import the EvMenu class from this module.
@@ -268,7 +192,7 @@ reaching a node without any options.</p>
 <p>For a menu demo, import <strong>CmdTestMenu</strong> from this module and add it to
 your default cmdset. Run it with this module, like <strong>testmenu evennia.utils.evmenu</strong>.</p>
 <section id="menu-generation-from-template-string">
-<h2>Menu generation from template string<a class="headerlink" href="#menu-generation-from-template-string" title="Permalink to this headline">¶</a></h2>
+<h2>Menu generation from template string<a class="headerlink" href="#menu-generation-from-template-string" title="Link to this heading">¶</a></h2>
 <p>In evmenu.py is a helper function <strong>parse_menu_template</strong> that parses a
 template-string and outputs a menu-tree dictionary suitable to pass into
 EvMenu:</p>
@@ -359,17 +283,18 @@ into the callable.</p>
 <p>The &gt; option takes a glob or regex to perform different actions depending
 on user input. Make sure to sort these in increasing order of generality since
 they will be tested in sequence.</p>
+</section>
 <hr class="docutils" />
 <dl class="py exception">
-<dt id="evennia.utils.evmenu.EvMenuError">
-<em class="property">exception </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">EvMenuError</code><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">EvMenuError</span></span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuError" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
 <p>Error raised by menu when facing internal errors.</p>
 </dd></dl>
 
 <dl class="py exception">
-<dt id="evennia.utils.evmenu.EvMenuGotoAbortMessage">
-<em class="property">exception </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">EvMenuGotoAbortMessage</code><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuGotoAbortMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuGotoAbortMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuGotoAbortMessage">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">EvMenuGotoAbortMessage</span></span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuGotoAbortMessage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuGotoAbortMessage" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
 <p>This can be raised by a goto-callable to abort the goto flow.  The message
 stored with the executable will be sent to the caller who will remain on
@@ -380,139 +305,139 @@ re-running the entire node with text and options.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">CmdEvMenuNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdEvMenuNode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.command.html#evennia.commands.command.Command" title="evennia.commands.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.command.Command</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">CmdEvMenuNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdEvMenuNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.command.html#evennia.commands.command.Command" title="evennia.commands.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a></p>
 <p>Command to handle all user input targeted at the menu while the menu is active.</p>
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.key">
-<code class="sig-name descname">key</code><em class="property"> = '__noinput_command'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__noinput_command'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['__nomatch_command']</em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['__nomatch_command']</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.locks">
-<code class="sig-name descname">locks</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.locks" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.locks">
+<span class="sig-name descname"><span class="pre">locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:all()'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.locks" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'menu'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'menu'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.auto_help_display_key">
-<code class="sig-name descname">auto_help_display_key</code><em class="property"> = '&lt;menu commands&gt;'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.auto_help_display_key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.auto_help_display_key">
+<span class="sig-name descname"><span class="pre">auto_help_display_key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&lt;menu</span> <span class="pre">commands&gt;'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.auto_help_display_key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.get_help">
-<code class="sig-name descname">get_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdEvMenuNode.get_help"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.get_help" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.get_help">
+<span class="sig-name descname"><span class="pre">get_help</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdEvMenuNode.get_help"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.get_help" title="Link to this definition">¶</a></dt>
 <dd><p>Return the help message for this command and this caller.</p>
 <p>By default, return self.__doc__ (the docstring just under
 the class definition).  You can override this behavior,
 though, and even customize it depending on the caller, or other
 commands the caller can use.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em><em> or </em><em>Account</em>) – the caller asking for help on the command.</p></li>
-<li><p><strong>cmdset</strong> (<a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><em>CmdSet</em></a>) – the command set (if you need additional commands).</p></li>
+<li><p><strong>cmdset</strong> (<a class="reference internal" href="evennia.commands.cmdhandler.html#evennia.commands.cmdhandler.CmdSet" title="evennia.commands.cmdhandler.CmdSet"><em>CmdSet</em></a>) – the command set (if you need additional commands).</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>docstring (str)</em> – the help text to provide the caller for this command.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdEvMenuNode.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdEvMenuNode.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.func" title="Link to this definition">¶</a></dt>
 <dd><p>Implement all menu commands.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:all()'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdEvMenuNode.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '__nomatch_command', 'category': 'menu', 'key': '__noinput_command', 'no_prefix': ' __nomatch_command', 'tags': '', 'text': '\n    Command to handle all user input targeted at the menu while the menu is active.\n\n    '}</em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdEvMenuNode.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'__nomatch_command',</span> <span class="pre">'category':</span> <span class="pre">'menu',</span> <span class="pre">'key':</span> <span class="pre">'__noinput_command',</span> <span class="pre">'no_prefix':</span> <span class="pre">'</span> <span class="pre">__nomatch_command',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\nCommand</span> <span class="pre">to</span> <span class="pre">handle</span> <span class="pre">all</span> <span class="pre">user</span> <span class="pre">input</span> <span class="pre">targeted</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">menu</span> <span class="pre">while</span> <span class="pre">the</span> <span class="pre">menu</span> <span class="pre">is</span> <span class="pre">active.\n\n'}</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdEvMenuNode.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">EvMenuCmdSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmdsetobj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuCmdSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.cmdset.CmdSet</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">EvMenuCmdSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmdsetobj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuCmdSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmdSet</span></code></a></p>
 <p>The Menu cmdset replaces the current cmdset.</p>
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.key">
-<code class="sig-name descname">key</code><em class="property"> = 'menu_cmdset'</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'menu_cmdset'</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.priority">
-<code class="sig-name descname">priority</code><em class="property"> = 1</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.priority" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.priority" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.mergetype">
-<code class="sig-name descname">mergetype</code><em class="property"> = 'Replace'</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.mergetype" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.mergetype">
+<span class="sig-name descname"><span class="pre">mergetype</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Replace'</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.mergetype" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.no_objs">
-<code class="sig-name descname">no_objs</code><em class="property"> = True</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.no_objs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.no_objs">
+<span class="sig-name descname"><span class="pre">no_objs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.no_objs" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.no_exits">
-<code class="sig-name descname">no_exits</code><em class="property"> = True</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.no_exits" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.no_exits">
+<span class="sig-name descname"><span class="pre">no_exits</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.no_exits" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.no_channels">
-<code class="sig-name descname">no_channels</code><em class="property"> = False</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.no_channels" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.no_channels">
+<span class="sig-name descname"><span class="pre">no_channels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.no_channels" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.at_cmdset_creation">
-<code class="sig-name descname">at_cmdset_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuCmdSet.at_cmdset_creation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.at_cmdset_creation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.at_cmdset_creation">
+<span class="sig-name descname"><span class="pre">at_cmdset_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenuCmdSet.at_cmdset_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.at_cmdset_creation" title="Link to this definition">¶</a></dt>
 <dd><p>Called when creating the set.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenuCmdSet.path">
-<code class="sig-name descname">path</code><em class="property"> = 'evennia.utils.evmenu.EvMenuCmdSet'</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.path" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenuCmdSet.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'evennia.utils.evmenu.EvMenuCmdSet'</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenuCmdSet.path" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.evmenu.EvMenu">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">EvMenu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">menudata</span></em>, <em class="sig-param"><span class="n">startnode</span><span class="o">=</span><span class="default_value">'start'</span></em>, <em class="sig-param"><span class="n">cmdset_mergetype</span><span class="o">=</span><span class="default_value">'Replace'</span></em>, <em class="sig-param"><span class="n">cmdset_priority</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">auto_quit</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_look</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_help</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cmd_on_exit</span><span class="o">=</span><span class="default_value">'look'</span></em>, <em class="sig-param"><span class="n">persistent</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">startnode_input</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">EvMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menudata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'start'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_mergetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_look</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'look'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This object represents an operational menu. It is initialized from
 a menufile.py instruction.</p>
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.EvMenu.node_border_char">
-<code class="sig-name descname">node_border_char</code><em class="property"> = '_'</em><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.node_border_char" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.node_border_char">
+<span class="sig-name descname"><span class="pre">node_border_char</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'_'</span></em><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.node_border_char" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">menudata</span></em>, <em class="sig-param"><span class="n">startnode</span><span class="o">=</span><span class="default_value">'start'</span></em>, <em class="sig-param"><span class="n">cmdset_mergetype</span><span class="o">=</span><span class="default_value">'Replace'</span></em>, <em class="sig-param"><span class="n">cmdset_priority</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">auto_quit</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_look</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">auto_help</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">cmd_on_exit</span><span class="o">=</span><span class="default_value">'look'</span></em>, <em class="sig-param"><span class="n">persistent</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">startnode_input</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.__init__" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menudata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'start'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_mergetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Replace'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmdset_priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_look</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'look'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize the menu tree and start the caller onto the first node.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em><em>, </em><em>Account</em><em> or </em><a class="reference internal" href="evennia.server.session.html#evennia.server.session.Session" title="evennia.server.session.Session"><em>Session</em></a>) – The user of the menu.</p></li>
 <li><p><strong>menudata</strong> (<em>str</em><em>, </em><em>module</em><em> or </em><em>dict</em>) – The full or relative path to the module
@@ -583,7 +508,7 @@ the menu. Deactivate for production use! When the debug flag is active, the
 to be available at run.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#evennia.utils.evmenu.EvMenuError" title="evennia.utils.evmenu.EvMenuError"><strong>EvMenuError</strong></a> – If the start/end node is not found in menu tree.</p>
 </dd>
 </dl>
@@ -600,11 +525,11 @@ non-persistent mode no such restrictions exist.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.goto">
-<code class="sig-name descname">goto</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodename_or_callable</span></em>, <em class="sig-param"><span class="n">raw_string</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.goto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.goto" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.goto">
+<span class="sig-name descname"><span class="pre">goto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodename_or_callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_string</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.goto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.goto" title="Link to this definition">¶</a></dt>
 <dd><p>Run a node by name, optionally dynamically generating that name first.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodename_or_callable</strong> (<em>str</em><em> or </em><em>callable</em>) – Name of node or a callable
 to be called as <strong>function(caller, raw_string, **kwargs)</strong> or
@@ -620,17 +545,17 @@ argument)</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.close_menu">
-<code class="sig-name descname">close_menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.close_menu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.close_menu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.close_menu">
+<span class="sig-name descname"><span class="pre">close_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.close_menu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.close_menu" title="Link to this definition">¶</a></dt>
 <dd><p>Shutdown menu; occurs when reaching the end node or using the quit command.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.print_debug_info">
-<code class="sig-name descname">print_debug_info</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.print_debug_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.print_debug_info" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.print_debug_info">
+<span class="sig-name descname"><span class="pre">print_debug_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.print_debug_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.print_debug_info" title="Link to this definition">¶</a></dt>
 <dd><p>Messages the caller with the current menu state, for debug purposes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – Arg to debug instruction, either nothing, ‘full’ or the name
 of a property to inspect.</p>
 </dd>
@@ -638,13 +563,13 @@ of a property to inspect.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.msg">
-<code class="sig-name descname">msg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">txt</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.msg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.msg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.msg">
+<span class="sig-name descname"><span class="pre">msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">txt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.msg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.msg" title="Link to this definition">¶</a></dt>
 <dd><p>This is a central point for sending return texts to the caller. It
 allows for a central point to add custom messaging when creating custom
 EvMenu overrides.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>txt</strong> (<em>str</em>) – The text to send.</p>
 </dd>
 </dl>
@@ -655,12 +580,12 @@ also send it with a <strong>type=menu</strong> for the benefit of OOB/webclient.
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.parse_input">
-<code class="sig-name descname">parse_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_string</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.parse_input"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.parse_input" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.parse_input">
+<span class="sig-name descname"><span class="pre">parse_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.parse_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.parse_input" title="Link to this definition">¶</a></dt>
 <dd><p>Parses the incoming string from the menu user. This is the entry-point for all input
 into the menu.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>raw_string</strong> (<em>str</em>) – The incoming, unmodified string
 from the user.</p>
 </dd>
@@ -672,76 +597,76 @@ should also report errors directly to the user.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.display_nodetext">
-<code class="sig-name descname">display_nodetext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.display_nodetext"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.display_nodetext" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.display_nodetext">
+<span class="sig-name descname"><span class="pre">display_nodetext</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.display_nodetext"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.display_nodetext" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.display_helptext">
-<code class="sig-name descname">display_helptext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.display_helptext"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.display_helptext" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.display_helptext">
+<span class="sig-name descname"><span class="pre">display_helptext</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.display_helptext"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.display_helptext" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.display_tooltip">
-<code class="sig-name descname">display_tooltip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.display_tooltip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.display_tooltip" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.display_tooltip">
+<span class="sig-name descname"><span class="pre">display_tooltip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.display_tooltip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.display_tooltip" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.nodetext_formatter">
-<code class="sig-name descname">nodetext_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodetext</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.nodetext_formatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.nodetext_formatter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.nodetext_formatter">
+<span class="sig-name descname"><span class="pre">nodetext_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetext</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.nodetext_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.nodetext_formatter" title="Link to this definition">¶</a></dt>
 <dd><p>Format the node text itself.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>nodetext</strong> (<em>str</em>) – The full node text (the text describing the node).</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>nodetext (str)</em> – The formatted node text.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.helptext_formatter">
-<code class="sig-name descname">helptext_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">helptext</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.helptext_formatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.helptext_formatter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.helptext_formatter">
+<span class="sig-name descname"><span class="pre">helptext_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">helptext</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.helptext_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.helptext_formatter" title="Link to this definition">¶</a></dt>
 <dd><p>Format the node’s help text</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>helptext</strong> (<em>str</em>) – The unformatted help text for the node.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>helptext (str)</em> – The formatted help text.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.options_formatter">
-<code class="sig-name descname">options_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">optionlist</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.options_formatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.options_formatter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.options_formatter">
+<span class="sig-name descname"><span class="pre">options_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optionlist</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.options_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.options_formatter" title="Link to this definition">¶</a></dt>
 <dd><p>Formats the option block.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>optionlist</strong> (<em>list</em>) – List of (key, description) tuples for every
 option related to this node.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>options (str)</em> – The formatted option display.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.EvMenu.node_formatter">
-<code class="sig-name descname">node_formatter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodetext</span></em>, <em class="sig-param"><span class="n">optionstext</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.node_formatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.node_formatter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.EvMenu.node_formatter">
+<span class="sig-name descname"><span class="pre">node_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodetext</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optionstext</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#EvMenu.node_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.EvMenu.node_formatter" title="Link to this definition">¶</a></dt>
 <dd><p>Formats the entirety of the node.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodetext</strong> (<em>str</em>) – The node text as returned by <strong>self.nodetext_formatter</strong>.</p></li>
 <li><p><strong>optionstext</strong> (<em>str</em>) – The options display as returned by <strong>self.options_formatter</strong>.</p></li>
 <li><p><strong>caller</strong> (<em>Object</em><em>, </em><em>Account</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – The caller of the node.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>node (str)</em> – The formatted node to display.</p>
 </dd>
 </dl>
@@ -750,12 +675,12 @@ option related to this node.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.evmenu.list_node">
-<code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">list_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">option_generator</span></em>, <em class="sig-param"><span class="n">select</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pagesize</span><span class="o">=</span><span class="default_value">10</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#list_node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.list_node" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.list_node">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">list_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option_generator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pagesize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#list_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.list_node" title="Link to this definition">¶</a></dt>
 <dd><p>Decorator for making an EvMenu node into a multi-page list node. Will add new options,
 prepending those options added in the node.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>option_generator</strong> (<em>callable</em><em> or </em><em>list</em>) – A list of strings indicating the options, or a callable
 that is called as option_generator(caller) to produce such a list.</p></li>
@@ -810,97 +735,97 @@ on the current node page.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.evmenu.CmdGetInput">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">CmdGetInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdGetInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.command.html#evennia.commands.command.Command" title="evennia.commands.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.command.Command</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdGetInput">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">CmdGetInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdGetInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.command.html#evennia.commands.command.Command" title="evennia.commands.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a></p>
 <p>Enter your data and press return.</p>
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdGetInput.key">
-<code class="sig-name descname">key</code><em class="property"> = '__nomatch_command'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdGetInput.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__nomatch_command'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdGetInput.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['__noinput_command']</em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdGetInput.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['__noinput_command']</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.CmdGetInput.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdGetInput.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdGetInput.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdGetInput.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.func" title="Link to this definition">¶</a></dt>
 <dd><p>This is called when user enters anything.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdGetInput.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'general'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdGetInput.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'general'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdGetInput.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all();'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdGetInput.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:all();'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdGetInput.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '__noinput_command', 'category': 'general', 'key': '__nomatch_command', 'no_prefix': ' __noinput_command', 'tags': '', 'text': '\n    Enter your data and press return.\n    '}</em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdGetInput.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'__noinput_command',</span> <span class="pre">'category':</span> <span class="pre">'general',</span> <span class="pre">'key':</span> <span class="pre">'__nomatch_command',</span> <span class="pre">'no_prefix':</span> <span class="pre">'</span> <span class="pre">__noinput_command',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\nEnter</span> <span class="pre">your</span> <span class="pre">data</span> <span class="pre">and</span> <span class="pre">press</span> <span class="pre">return.\n'}</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdGetInput.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.evmenu.InputCmdSet">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">InputCmdSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmdsetobj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#InputCmdSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.cmdset.CmdSet</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">InputCmdSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmdsetobj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#InputCmdSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmdSet</span></code></a></p>
 <p>This stores the input command</p>
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.InputCmdSet.key">
-<code class="sig-name descname">key</code><em class="property"> = 'input_cmdset'</em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'input_cmdset'</span></em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.InputCmdSet.priority">
-<code class="sig-name descname">priority</code><em class="property"> = 1</em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.priority" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.priority" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.InputCmdSet.mergetype">
-<code class="sig-name descname">mergetype</code><em class="property"> = 'Replace'</em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.mergetype" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.mergetype">
+<span class="sig-name descname"><span class="pre">mergetype</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Replace'</span></em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.mergetype" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.InputCmdSet.no_objs">
-<code class="sig-name descname">no_objs</code><em class="property"> = True</em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.no_objs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.no_objs">
+<span class="sig-name descname"><span class="pre">no_objs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.no_objs" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.InputCmdSet.no_exits">
-<code class="sig-name descname">no_exits</code><em class="property"> = True</em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.no_exits" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.no_exits">
+<span class="sig-name descname"><span class="pre">no_exits</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.no_exits" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.InputCmdSet.no_channels">
-<code class="sig-name descname">no_channels</code><em class="property"> = False</em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.no_channels" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.no_channels">
+<span class="sig-name descname"><span class="pre">no_channels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.no_channels" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.InputCmdSet.at_cmdset_creation">
-<code class="sig-name descname">at_cmdset_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#InputCmdSet.at_cmdset_creation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.at_cmdset_creation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.at_cmdset_creation">
+<span class="sig-name descname"><span class="pre">at_cmdset_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#InputCmdSet.at_cmdset_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.at_cmdset_creation" title="Link to this definition">¶</a></dt>
 <dd><p>called once at creation</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.InputCmdSet.path">
-<code class="sig-name descname">path</code><em class="property"> = 'evennia.utils.evmenu.InputCmdSet'</em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.path" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.InputCmdSet.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'evennia.utils.evmenu.InputCmdSet'</span></em><a class="headerlink" href="#evennia.utils.evmenu.InputCmdSet.path" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.evmenu.get_input">
-<code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">get_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">prompt</span></em>, <em class="sig-param"><span class="n">callback</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#get_input"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.get_input" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.get_input">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">get_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#get_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.get_input" title="Link to this definition">¶</a></dt>
 <dd><p>This is a helper function for easily request input from the caller.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Account</em><em> or </em><em>Object</em>) – The entity being asked the question. This
 should usually be an object controlled by a user.</p></li>
@@ -923,7 +848,7 @@ provided.</p></li>
 <li><p><strong>**kwargs</strong> (<em>any</em>) – Extra kwargs to pass to <strong>callback</strong>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> – If the given callback is not callable.</p>
 </dd>
 </dl>
@@ -946,103 +871,103 @@ single question.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">CmdYesNoQuestion</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdYesNoQuestion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.command.html#evennia.commands.command.Command" title="evennia.commands.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.command.Command</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">CmdYesNoQuestion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdYesNoQuestion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.command.html#evennia.commands.command.Command" title="evennia.commands.command.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a></p>
 <p>Handle a prompt for yes or no. Press [return] for the default choice.</p>
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion.key">
-<code class="sig-name descname">key</code><em class="property"> = '__noinput_command'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__noinput_command'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['yes', 'no', 'abort', 'y', '__nomatch_command', 'a', 'n']</em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['abort',</span> <span class="pre">'no',</span> <span class="pre">'__nomatch_command',</span> <span class="pre">'a',</span> <span class="pre">'yes',</span> <span class="pre">'y',</span> <span class="pre">'n']</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion.arg_regex">
-<code class="sig-name descname">arg_regex</code><em class="property"> = re.compile('^$', re.IGNORECASE)</em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.arg_regex" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion.arg_regex">
+<span class="sig-name descname"><span class="pre">arg_regex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">re.compile('^$',</span> <span class="pre">re.IGNORECASE)</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.arg_regex" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdYesNoQuestion.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#CmdYesNoQuestion.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.func" title="Link to this definition">¶</a></dt>
 <dd><p>This is called when user enters anything.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'general'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'general'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all();'</em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:all();'</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.CmdYesNoQuestion.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'yes no abort y __nomatch_command a n', 'category': 'general', 'key': '__noinput_command', 'no_prefix': ' yes no abort y __nomatch_command a n', 'tags': '', 'text': '\n    Handle a prompt for yes or no. Press [return] for the default choice.\n\n    '}</em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.CmdYesNoQuestion.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'abort</span> <span class="pre">no</span> <span class="pre">__nomatch_command</span> <span class="pre">a</span> <span class="pre">yes</span> <span class="pre">y</span> <span class="pre">n',</span> <span class="pre">'category':</span> <span class="pre">'general',</span> <span class="pre">'key':</span> <span class="pre">'__noinput_command',</span> <span class="pre">'no_prefix':</span> <span class="pre">'</span> <span class="pre">abort</span> <span class="pre">no</span> <span class="pre">__nomatch_command</span> <span class="pre">a</span> <span class="pre">yes</span> <span class="pre">y</span> <span class="pre">n',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\nHandle</span> <span class="pre">a</span> <span class="pre">prompt</span> <span class="pre">for</span> <span class="pre">yes</span> <span class="pre">or</span> <span class="pre">no.</span> <span class="pre">Press</span> <span class="pre">[return]</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">default</span> <span class="pre">choice.\n\n'}</span></em><a class="headerlink" href="#evennia.utils.evmenu.CmdYesNoQuestion.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">YesNoQuestionCmdSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmdsetobj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#YesNoQuestionCmdSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.cmdset.CmdSet</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">YesNoQuestionCmdSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmdsetobj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#YesNoQuestionCmdSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmdSet</span></code></a></p>
 <p>This stores the input command</p>
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.key">
-<code class="sig-name descname">key</code><em class="property"> = 'yes_no_question_cmdset'</em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'yes_no_question_cmdset'</span></em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.priority">
-<code class="sig-name descname">priority</code><em class="property"> = 1</em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.priority" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.priority" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.mergetype">
-<code class="sig-name descname">mergetype</code><em class="property"> = 'Replace'</em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.mergetype" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.mergetype">
+<span class="sig-name descname"><span class="pre">mergetype</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Replace'</span></em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.mergetype" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.no_objs">
-<code class="sig-name descname">no_objs</code><em class="property"> = True</em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_objs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.no_objs">
+<span class="sig-name descname"><span class="pre">no_objs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_objs" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.no_exits">
-<code class="sig-name descname">no_exits</code><em class="property"> = True</em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_exits" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.no_exits">
+<span class="sig-name descname"><span class="pre">no_exits</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_exits" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.no_channels">
-<code class="sig-name descname">no_channels</code><em class="property"> = False</em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_channels" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.no_channels">
+<span class="sig-name descname"><span class="pre">no_channels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_channels" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.at_cmdset_creation">
-<code class="sig-name descname">at_cmdset_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#YesNoQuestionCmdSet.at_cmdset_creation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.at_cmdset_creation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.at_cmdset_creation">
+<span class="sig-name descname"><span class="pre">at_cmdset_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#YesNoQuestionCmdSet.at_cmdset_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.at_cmdset_creation" title="Link to this definition">¶</a></dt>
 <dd><p>called once at creation</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.utils.evmenu.YesNoQuestionCmdSet.path">
-<code class="sig-name descname">path</code><em class="property"> = 'evennia.utils.evmenu.YesNoQuestionCmdSet'</em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.path" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.YesNoQuestionCmdSet.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'evennia.utils.evmenu.YesNoQuestionCmdSet'</span></em><a class="headerlink" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.path" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.evmenu.ask_yes_no">
-<code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">ask_yes_no</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">prompt</span><span class="o">=</span><span class="default_value">'Yes or No {options}?'</span></em>, <em class="sig-param"><span class="n">yes_action</span><span class="o">=</span><span class="default_value">'Yes'</span></em>, <em class="sig-param"><span class="n">no_action</span><span class="o">=</span><span class="default_value">'No'</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_abort</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#ask_yes_no"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.ask_yes_no" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.ask_yes_no">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">ask_yes_no</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Yes</span> <span class="pre">or</span> <span class="pre">No</span> <span class="pre">{options}?'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yes_action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Yes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_abort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#ask_yes_no"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.ask_yes_no" title="Link to this definition">¶</a></dt>
 <dd><p>A helper function for asking a simple yes/no question. This will cause
 the system to pause and wait for input from the player.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em>) – The entity being asked.</p></li>
 <li><p><strong>prompt</strong> (<em>str</em>) – The yes/no question to ask. This takes an optional formatting
@@ -1070,7 +995,7 @@ callbacks) through <strong>caller.ndb._yes_no_question.session</strong>.</p></li
 <li><p><strong>**kwargs</strong> – Additional keyword args passed on into callables.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError</strong><strong>, </strong><strong>FooError</strong> – If default and <strong>allow_abort</strong> clashes.</p>
 </dd>
 </dl>
@@ -1086,11 +1011,11 @@ callbacks) through <strong>caller.ndb._yes_no_question.session</strong>.</p></li
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.evmenu.parse_menu_template">
-<code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">parse_menu_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">menu_template</span></em>, <em class="sig-param"><span class="n">goto_callables</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#parse_menu_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.parse_menu_template" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.parse_menu_template">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">parse_menu_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menu_template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goto_callables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#parse_menu_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.parse_menu_template" title="Link to this definition">¶</a></dt>
 <dd><p>Parse menu-template string. The main function of the EvMenu templating system.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em><em> or </em><em>Account</em>) – Entity using the menu.</p></li>
 <li><p><strong>menu_template</strong> (<em>str</em>) – Menu described using the templating format.</p></li>
@@ -1099,20 +1024,20 @@ on the form <strong>callable(caller, raw_string, **kwargs)</strong>. These are w
 available to use in the <strong>menu_template</strong> string.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>dict</em> – A <strong>{“node”: nodefunc}</strong> menutree suitable to pass into EvMenu.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt id="evennia.utils.evmenu.template2menu">
-<code class="sig-prename descclassname">evennia.utils.evmenu.</code><code class="sig-name descname">template2menu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">caller</span></em>, <em class="sig-param"><span class="n">menu_template</span></em>, <em class="sig-param"><span class="n">goto_callables</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">startnode</span><span class="o">=</span><span class="default_value">'start'</span></em>, <em class="sig-param"><span class="n">persistent</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#template2menu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.utils.evmenu.template2menu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.utils.evmenu.template2menu">
+<span class="sig-prename descclassname"><span class="pre">evennia.utils.evmenu.</span></span><span class="sig-name descname"><span class="pre">template2menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caller</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menu_template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goto_callables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startnode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'start'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/utils/evmenu.html#template2menu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.utils.evmenu.template2menu" title="Link to this definition">¶</a></dt>
 <dd><p>Helper function to generate and start an EvMenu based on a menu template
 string. This will internall call <strong>parse_menu_template</strong> and run a default
 EvMenu with its results.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>caller</strong> (<em>Object</em><em> or </em><em>Account</em>) – The entity using the menu.</p></li>
 <li><p><strong>menu_template</strong> (<em>str</em>) – The menu-template string describing the content
@@ -1126,22 +1051,197 @@ Must be on the form <strong>callable(caller, raw_string, **kwargs)</strong>.</p>
 <li><p><strong>**kwargs</strong> – All kwargs will be passed into EvMenu.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>EvMenu</em> – The generated EvMenu.</p>
 </dd>
 </dl>
 </dd></dl>
 
 </section>
-</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.utils.evmenu</a><ul>
+<li><a class="reference internal" href="#menu-generation-from-template-string">Menu generation from template string</a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuError"><code class="docutils literal notranslate"><span class="pre">EvMenuError</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuGotoAbortMessage"><code class="docutils literal notranslate"><span class="pre">EvMenuGotoAbortMessage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.key"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.aliases"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.locks"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.help_category"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.auto_help_display_key"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.auto_help_display_key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.get_help"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.get_help()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.func"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdEvMenuNode.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdEvMenuNode.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.key"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.priority"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.priority</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.mergetype"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.mergetype</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.no_objs"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.no_objs</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.no_exits"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.no_exits</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.no_channels"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.no_channels</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.at_cmdset_creation"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.at_cmdset_creation()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenuCmdSet.path"><code class="docutils literal notranslate"><span class="pre">EvMenuCmdSet.path</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu"><code class="docutils literal notranslate"><span class="pre">EvMenu</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.node_border_char"><code class="docutils literal notranslate"><span class="pre">EvMenu.node_border_char</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.__init__"><code class="docutils literal notranslate"><span class="pre">EvMenu.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.goto"><code class="docutils literal notranslate"><span class="pre">EvMenu.goto()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.close_menu"><code class="docutils literal notranslate"><span class="pre">EvMenu.close_menu()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.print_debug_info"><code class="docutils literal notranslate"><span class="pre">EvMenu.print_debug_info()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.msg"><code class="docutils literal notranslate"><span class="pre">EvMenu.msg()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.parse_input"><code class="docutils literal notranslate"><span class="pre">EvMenu.parse_input()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.display_nodetext"><code class="docutils literal notranslate"><span class="pre">EvMenu.display_nodetext()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.display_helptext"><code class="docutils literal notranslate"><span class="pre">EvMenu.display_helptext()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.display_tooltip"><code class="docutils literal notranslate"><span class="pre">EvMenu.display_tooltip()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.nodetext_formatter"><code class="docutils literal notranslate"><span class="pre">EvMenu.nodetext_formatter()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.helptext_formatter"><code class="docutils literal notranslate"><span class="pre">EvMenu.helptext_formatter()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.options_formatter"><code class="docutils literal notranslate"><span class="pre">EvMenu.options_formatter()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.EvMenu.node_formatter"><code class="docutils literal notranslate"><span class="pre">EvMenu.node_formatter()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.list_node"><code class="docutils literal notranslate"><span class="pre">list_node()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdGetInput"><code class="docutils literal notranslate"><span class="pre">CmdGetInput</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdGetInput.key"><code class="docutils literal notranslate"><span class="pre">CmdGetInput.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdGetInput.aliases"><code class="docutils literal notranslate"><span class="pre">CmdGetInput.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdGetInput.func"><code class="docutils literal notranslate"><span class="pre">CmdGetInput.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdGetInput.help_category"><code class="docutils literal notranslate"><span class="pre">CmdGetInput.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdGetInput.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdGetInput.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdGetInput.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdGetInput.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet"><code class="docutils literal notranslate"><span class="pre">InputCmdSet</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.key"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.priority"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.priority</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.mergetype"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.mergetype</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.no_objs"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.no_objs</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.no_exits"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.no_exits</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.no_channels"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.no_channels</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.at_cmdset_creation"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.at_cmdset_creation()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.InputCmdSet.path"><code class="docutils literal notranslate"><span class="pre">InputCmdSet.path</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.get_input"><code class="docutils literal notranslate"><span class="pre">get_input()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion.key"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion.aliases"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion.arg_regex"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion.arg_regex</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion.func"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion.help_category"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.CmdYesNoQuestion.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdYesNoQuestion.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.key"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.priority"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.priority</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.mergetype"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.mergetype</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_objs"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.no_objs</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_exits"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.no_exits</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.no_channels"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.no_channels</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.at_cmdset_creation"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.at_cmdset_creation()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.YesNoQuestionCmdSet.path"><code class="docutils literal notranslate"><span class="pre">YesNoQuestionCmdSet.path</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.ask_yes_no"><code class="docutils literal notranslate"><span class="pre">ask_yes_no()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.parse_menu_template"><code class="docutils literal notranslate"><span class="pre">parse_menu_template()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.utils.evmenu.template2menu"><code class="docutils literal notranslate"><span class="pre">template2menu()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.utils.evform.html"
+                          title="previous chapter">evennia.utils.evform</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.utils.evmore.html"
+                          title="next chapter">evennia.utils.evmore</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/evennia.utils.evmenu.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1156,7 +1256,7 @@ Must be on the form <strong>callable(caller, raw_string, **kwargs)</strong>.</p>
         <li class="right" >
           <a href="evennia.utils.evform.html" title="evennia.utils.evform"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -1164,12 +1264,9 @@ Must be on the form <strong>callable(caller, raw_string, **kwargs)</strong>.</p>
         <li class="nav-item nav-item-this"><a href="">evennia.utils.evmenu</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

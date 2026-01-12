@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.contrib.base_systems.godotwebsocket.text2bbcode &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.contrib.base_systems.godotwebsocket.webclient" href="evennia.contrib.base_systems.godotwebsocket.webclient.html" />
     <link rel="prev" title="evennia.contrib.base_systems.godotwebsocket.test_webclient" href="evennia.contrib.base_systems.godotwebsocket.test_webclient.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.contrib.base_systems.godotwebsocket.test_webclient.html" title="evennia.contrib.base_systems.godotwebsocket.test_webclient"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -51,29 +45,463 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-evennia.contrib.base_systems.godotwebsocket.text2bbcode">
+<span id="evennia-contrib-base-systems-godotwebsocket-text2bbcode"></span><h1>evennia.contrib.base_systems.godotwebsocket.text2bbcode<a class="headerlink" href="#module-evennia.contrib.base_systems.godotwebsocket.text2bbcode" title="Link to this heading">¶</a></h1>
+<p>Godot Websocket - ChrisLR 2022</p>
+<p>This file contains the necessary code and data to convert text with color tags to bbcode (For godot)</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.COLOR_INDICE_TO_HEX">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">COLOR_INDICE_TO_HEX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'bgcolor-000':</span> <span class="pre">'#000000',</span> <span class="pre">'bgcolor-001':</span> <span class="pre">'#800000',</span> <span class="pre">'bgcolor-002':</span> <span class="pre">'#008000',</span> <span class="pre">'bgcolor-003':</span> <span class="pre">'#808000',</span> <span class="pre">'bgcolor-004':</span> <span class="pre">'#000080',</span> <span class="pre">'bgcolor-005':</span> <span class="pre">'#800080',</span> <span class="pre">'bgcolor-006':</span> <span class="pre">'#008080',</span> <span class="pre">'bgcolor-007':</span> <span class="pre">'#c0c0c0',</span> <span class="pre">'bgcolor-008':</span> <span class="pre">'#808080',</span> <span class="pre">'bgcolor-009':</span> <span class="pre">'#ff0000',</span> <span class="pre">'bgcolor-010':</span> <span class="pre">'#00ff00',</span> <span class="pre">'bgcolor-011':</span> <span class="pre">'#ffff00',</span> <span class="pre">'bgcolor-012':</span> <span class="pre">'#0000ff',</span> <span class="pre">'bgcolor-013':</span> <span class="pre">'#ff00ff',</span> <span class="pre">'bgcolor-014':</span> <span class="pre">'#00ffff',</span> <span class="pre">'bgcolor-015':</span> <span class="pre">'#ffffff',</span> <span class="pre">'bgcolor-016':</span> <span class="pre">'#000000',</span> <span class="pre">'bgcolor-017':</span> <span class="pre">'#00005f',</span> <span class="pre">'bgcolor-018':</span> <span class="pre">'#000087',</span> <span class="pre">'bgcolor-019':</span> <span class="pre">'#0000af',</span> <span class="pre">'bgcolor-020':</span> <span class="pre">'#0000df',</span> <span class="pre">'bgcolor-021':</span> <span class="pre">'#0000ff',</span> <span class="pre">'bgcolor-022':</span> <span class="pre">'#005f00',</span> <span class="pre">'bgcolor-023':</span> <span class="pre">'#005f5f',</span> <span class="pre">'bgcolor-024':</span> <span class="pre">'#005f87',</span> <span class="pre">'bgcolor-025':</span> <span class="pre">'#005faf',</span> <span class="pre">'bgcolor-026':</span> <span class="pre">'#005fdf',</span> <span class="pre">'bgcolor-027':</span> <span class="pre">'#005fff',</span> <span class="pre">'bgcolor-028':</span> <span class="pre">'#008700',</span> <span class="pre">'bgcolor-029':</span> <span class="pre">'#00875f',</span> <span class="pre">'bgcolor-030':</span> <span class="pre">'#008787',</span> <span class="pre">'bgcolor-031':</span> <span class="pre">'#0087af',</span> <span class="pre">'bgcolor-032':</span> <span class="pre">'#0087df',</span> <span class="pre">'bgcolor-033':</span> <span class="pre">'#0087ff',</span> <span class="pre">'bgcolor-034':</span> <span class="pre">'#00af00',</span> <span class="pre">'bgcolor-035':</span> <span class="pre">'#00af5f',</span> <span class="pre">'bgcolor-036':</span> <span class="pre">'#00af87',</span> <span class="pre">'bgcolor-037':</span> <span class="pre">'#00afaf',</span> <span class="pre">'bgcolor-038':</span> <span class="pre">'#00afdf',</span> <span class="pre">'bgcolor-039':</span> <span class="pre">'#00afff',</span> <span class="pre">'bgcolor-040':</span> <span class="pre">'#00df00',</span> <span class="pre">'bgcolor-041':</span> <span class="pre">'#00df5f',</span> <span class="pre">'bgcolor-042':</span> <span class="pre">'#00df87',</span> <span class="pre">'bgcolor-043':</span> <span class="pre">'#00dfaf',</span> <span class="pre">'bgcolor-044':</span> <span class="pre">'#00dfdf',</span> <span class="pre">'bgcolor-045':</span> <span class="pre">'#00dfff',</span> <span class="pre">'bgcolor-046':</span> <span class="pre">'#00ff00',</span> <span class="pre">'bgcolor-047':</span> <span class="pre">'#00ff5f',</span> <span class="pre">'bgcolor-048':</span> <span class="pre">'#00ff87',</span> <span class="pre">'bgcolor-049':</span> <span class="pre">'#00ffaf',</span> <span class="pre">'bgcolor-050':</span> <span class="pre">'#00ffdf',</span> <span class="pre">'bgcolor-051':</span> <span class="pre">'#00ffff',</span> <span class="pre">'bgcolor-052':</span> <span class="pre">'#5f0000',</span> <span class="pre">'bgcolor-053':</span> <span class="pre">'#5f005f',</span> <span class="pre">'bgcolor-054':</span> <span class="pre">'#5f0087',</span> <span class="pre">'bgcolor-055':</span> <span class="pre">'#5f00af',</span> <span class="pre">'bgcolor-056':</span> <span class="pre">'#5f00df',</span> <span class="pre">'bgcolor-057':</span> <span class="pre">'#5f00ff',</span> <span class="pre">'bgcolor-058':</span> <span class="pre">'#5f5f00',</span> <span class="pre">'bgcolor-059':</span> <span class="pre">'#5f5f5f',</span> <span class="pre">'bgcolor-060':</span> <span class="pre">'#5f5f87',</span> <span class="pre">'bgcolor-061':</span> <span class="pre">'#5f5faf',</span> <span class="pre">'bgcolor-062':</span> <span class="pre">'#5f5fdf',</span> <span class="pre">'bgcolor-063':</span> <span class="pre">'#5f5fff',</span> <span class="pre">'bgcolor-064':</span> <span class="pre">'#5f8700',</span> <span class="pre">'bgcolor-065':</span> <span class="pre">'#5f875f',</span> <span class="pre">'bgcolor-066':</span> <span class="pre">'#5f8787',</span> <span class="pre">'bgcolor-067':</span> <span class="pre">'#5f87af',</span> <span class="pre">'bgcolor-068':</span> <span class="pre">'#5f87df',</span> <span class="pre">'bgcolor-069':</span> <span class="pre">'#5f87ff',</span> <span class="pre">'bgcolor-070':</span> <span class="pre">'#5faf00',</span> <span class="pre">'bgcolor-071':</span> <span class="pre">'#5faf5f',</span> <span class="pre">'bgcolor-072':</span> <span class="pre">'#5faf87',</span> <span class="pre">'bgcolor-073':</span> <span class="pre">'#5fafaf',</span> <span class="pre">'bgcolor-074':</span> <span class="pre">'#5fafdf',</span> <span class="pre">'bgcolor-075':</span> <span class="pre">'#5fafff',</span> <span class="pre">'bgcolor-076':</span> <span class="pre">'#5fdf00',</span> <span class="pre">'bgcolor-077':</span> <span class="pre">'#5fdf5f',</span> <span class="pre">'bgcolor-078':</span> <span class="pre">'#5fdf87',</span> <span class="pre">'bgcolor-079':</span> <span class="pre">'#5fdfaf',</span> <span class="pre">'bgcolor-080':</span> <span class="pre">'#5fdfdf',</span> <span class="pre">'bgcolor-081':</span> <span class="pre">'#5fdfff',</span> <span class="pre">'bgcolor-082':</span> <span class="pre">'#5fff00',</span> <span class="pre">'bgcolor-083':</span> <span class="pre">'#5fff5f',</span> <span class="pre">'bgcolor-084':</span> <span class="pre">'#5fff87',</span> <span class="pre">'bgcolor-085':</span> <span class="pre">'#5fffaf',</span> <span class="pre">'bgcolor-086':</span> <span class="pre">'#5fffdf',</span> <span class="pre">'bgcolor-087':</span> <span class="pre">'#5fffff',</span> <span class="pre">'bgcolor-088':</span> <span class="pre">'#870000',</span> <span class="pre">'bgcolor-089':</span> <span class="pre">'#87005f',</span> <span class="pre">'bgcolor-090':</span> <span class="pre">'#870087',</span> <span class="pre">'bgcolor-091':</span> <span class="pre">'#8700af',</span> <span class="pre">'bgcolor-092':</span> <span class="pre">'#8700df',</span> <span class="pre">'bgcolor-093':</span> <span class="pre">'#8700ff',</span> <span class="pre">'bgcolor-094':</span> <span class="pre">'#875f00',</span> <span class="pre">'bgcolor-095':</span> <span class="pre">'#875f5f',</span> <span class="pre">'bgcolor-096':</span> <span class="pre">'#875f87',</span> <span class="pre">'bgcolor-097':</span> <span class="pre">'#875faf',</span> <span class="pre">'bgcolor-098':</span> <span class="pre">'#875fdf',</span> <span class="pre">'bgcolor-099':</span> <span class="pre">'#875fff',</span> <span class="pre">'bgcolor-100':</span> <span class="pre">'#878700',</span> <span class="pre">'bgcolor-101':</span> <span class="pre">'#87875f',</span> <span class="pre">'bgcolor-102':</span> <span class="pre">'#878787',</span> <span class="pre">'bgcolor-103':</span> <span class="pre">'#8787af',</span> <span class="pre">'bgcolor-104':</span> <span class="pre">'#8787df',</span> <span class="pre">'bgcolor-105':</span> <span class="pre">'#8787ff',</span> <span class="pre">'bgcolor-106':</span> <span class="pre">'#87af00',</span> <span class="pre">'bgcolor-107':</span> <span class="pre">'#87af5f',</span> <span class="pre">'bgcolor-108':</span> <span class="pre">'#87af87',</span> <span class="pre">'bgcolor-109':</span> <span class="pre">'#87afaf',</span> <span class="pre">'bgcolor-110':</span> <span class="pre">'#87afdf',</span> <span class="pre">'bgcolor-111':</span> <span class="pre">'#87afff',</span> <span class="pre">'bgcolor-112':</span> <span class="pre">'#87df00',</span> <span class="pre">'bgcolor-113':</span> <span class="pre">'#87df5f',</span> <span class="pre">'bgcolor-114':</span> <span class="pre">'#87df87',</span> <span class="pre">'bgcolor-115':</span> <span class="pre">'#87dfaf',</span> <span class="pre">'bgcolor-116':</span> <span class="pre">'#87dfdf',</span> <span class="pre">'bgcolor-117':</span> <span class="pre">'#87dfff',</span> <span class="pre">'bgcolor-118':</span> <span class="pre">'#87ff00',</span> <span class="pre">'bgcolor-119':</span> <span class="pre">'#87ff5f',</span> <span class="pre">'bgcolor-120':</span> <span class="pre">'#87ff87',</span> <span class="pre">'bgcolor-121':</span> <span class="pre">'#87ffaf',</span> <span class="pre">'bgcolor-122':</span> <span class="pre">'#87ffdf',</span> <span class="pre">'bgcolor-123':</span> <span class="pre">'#87ffff',</span> <span class="pre">'bgcolor-124':</span> <span class="pre">'#af0000',</span> <span class="pre">'bgcolor-125':</span> <span class="pre">'#af005f',</span> <span class="pre">'bgcolor-126':</span> <span class="pre">'#af0087',</span> <span class="pre">'bgcolor-127':</span> <span class="pre">'#af00af',</span> <span class="pre">'bgcolor-128':</span> <span class="pre">'#af00df',</span> <span class="pre">'bgcolor-129':</span> <span class="pre">'#af00ff',</span> <span class="pre">'bgcolor-130':</span> <span class="pre">'#af5f00',</span> <span class="pre">'bgcolor-131':</span> <span class="pre">'#af5f5f',</span> <span class="pre">'bgcolor-132':</span> <span class="pre">'#af5f87',</span> <span class="pre">'bgcolor-133':</span> <span class="pre">'#af5faf',</span> <span class="pre">'bgcolor-134':</span> <span class="pre">'#af5fdf',</span> <span class="pre">'bgcolor-135':</span> <span class="pre">'#af5fff',</span> <span class="pre">'bgcolor-136':</span> <span class="pre">'#af8700',</span> <span class="pre">'bgcolor-137':</span> <span class="pre">'#af875f',</span> <span class="pre">'bgcolor-138':</span> <span class="pre">'#af8787',</span> <span class="pre">'bgcolor-139':</span> <span class="pre">'#af87af',</span> <span class="pre">'bgcolor-140':</span> <span class="pre">'#af87df',</span> <span class="pre">'bgcolor-141':</span> <span class="pre">'#af87ff',</span> <span class="pre">'bgcolor-142':</span> <span class="pre">'#afaf00',</span> <span class="pre">'bgcolor-143':</span> <span class="pre">'#afaf5f',</span> <span class="pre">'bgcolor-144':</span> <span class="pre">'#afaf87',</span> <span class="pre">'bgcolor-145':</span> <span class="pre">'#afafaf',</span> <span class="pre">'bgcolor-146':</span> <span class="pre">'#afafdf',</span> <span class="pre">'bgcolor-147':</span> <span class="pre">'#afafff',</span> <span class="pre">'bgcolor-148':</span> <span class="pre">'#afdf00',</span> <span class="pre">'bgcolor-149':</span> <span class="pre">'#afdf5f',</span> <span class="pre">'bgcolor-150':</span> <span class="pre">'#afdf87',</span> <span class="pre">'bgcolor-151':</span> <span class="pre">'#afdfaf',</span> <span class="pre">'bgcolor-152':</span> <span class="pre">'#afdfdf',</span> <span class="pre">'bgcolor-153':</span> <span class="pre">'#afdfff',</span> <span class="pre">'bgcolor-154':</span> <span class="pre">'#afff00',</span> <span class="pre">'bgcolor-155':</span> <span class="pre">'#afff5f',</span> <span class="pre">'bgcolor-156':</span> <span class="pre">'#afff87',</span> <span class="pre">'bgcolor-157':</span> <span class="pre">'#afffaf',</span> <span class="pre">'bgcolor-158':</span> <span class="pre">'#afffdf',</span> <span class="pre">'bgcolor-159':</span> <span class="pre">'#afffff',</span> <span class="pre">'bgcolor-160':</span> <span class="pre">'#df0000',</span> <span class="pre">'bgcolor-161':</span> <span class="pre">'#df005f',</span> <span class="pre">'bgcolor-162':</span> <span class="pre">'#df0087',</span> <span class="pre">'bgcolor-163':</span> <span class="pre">'#df00af',</span> <span class="pre">'bgcolor-164':</span> <span class="pre">'#df00df',</span> <span class="pre">'bgcolor-165':</span> <span class="pre">'#df00ff',</span> <span class="pre">'bgcolor-166':</span> <span class="pre">'#df5f00',</span> <span class="pre">'bgcolor-167':</span> <span class="pre">'#df5f5f',</span> <span class="pre">'bgcolor-168':</span> <span class="pre">'#df5f87',</span> <span class="pre">'bgcolor-169':</span> <span class="pre">'#df5faf',</span> <span class="pre">'bgcolor-170':</span> <span class="pre">'#df5fdf',</span> <span class="pre">'bgcolor-171':</span> <span class="pre">'#df5fff',</span> <span class="pre">'bgcolor-172':</span> <span class="pre">'#df8700',</span> <span class="pre">'bgcolor-173':</span> <span class="pre">'#df875f',</span> <span class="pre">'bgcolor-174':</span> <span class="pre">'#df8787',</span> <span class="pre">'bgcolor-175':</span> <span class="pre">'#df87af',</span> <span class="pre">'bgcolor-176':</span> <span class="pre">'#df87df',</span> <span class="pre">'bgcolor-177':</span> <span class="pre">'#df87ff',</span> <span class="pre">'bgcolor-178':</span> <span class="pre">'#dfaf00',</span> <span class="pre">'bgcolor-179':</span> <span class="pre">'#dfaf5f',</span> <span class="pre">'bgcolor-180':</span> <span class="pre">'#dfaf87',</span> <span class="pre">'bgcolor-181':</span> <span class="pre">'#dfafaf',</span> <span class="pre">'bgcolor-182':</span> <span class="pre">'#dfafdf',</span> <span class="pre">'bgcolor-183':</span> <span class="pre">'#dfafff',</span> <span class="pre">'bgcolor-184':</span> <span class="pre">'#dfdf00',</span> <span class="pre">'bgcolor-185':</span> <span class="pre">'#dfdf5f',</span> <span class="pre">'bgcolor-186':</span> <span class="pre">'#dfdf87',</span> <span class="pre">'bgcolor-187':</span> <span class="pre">'#dfdfaf',</span> <span class="pre">'bgcolor-188':</span> <span class="pre">'#dfdfdf',</span> <span class="pre">'bgcolor-189':</span> <span class="pre">'#dfdfff',</span> <span class="pre">'bgcolor-190':</span> <span class="pre">'#dfff00',</span> <span class="pre">'bgcolor-191':</span> <span class="pre">'#dfff5f',</span> <span class="pre">'bgcolor-192':</span> <span class="pre">'#dfff87',</span> <span class="pre">'bgcolor-193':</span> <span class="pre">'#dfffaf',</span> <span class="pre">'bgcolor-194':</span> <span class="pre">'#dfffdf',</span> <span class="pre">'bgcolor-195':</span> <span class="pre">'#dfffff',</span> <span class="pre">'bgcolor-196':</span> <span class="pre">'#ff0000',</span> <span class="pre">'bgcolor-197':</span> <span class="pre">'#ff005f',</span> <span class="pre">'bgcolor-198':</span> <span class="pre">'#ff0087',</span> <span class="pre">'bgcolor-199':</span> <span class="pre">'#ff00af',</span> <span class="pre">'bgcolor-200':</span> <span class="pre">'#ff00df',</span> <span class="pre">'bgcolor-201':</span> <span class="pre">'#ff00ff',</span> <span class="pre">'bgcolor-202':</span> <span class="pre">'#ff5f00',</span> <span class="pre">'bgcolor-203':</span> <span class="pre">'#ff5f5f',</span> <span class="pre">'bgcolor-204':</span> <span class="pre">'#ff5f87',</span> <span class="pre">'bgcolor-205':</span> <span class="pre">'#ff5faf',</span> <span class="pre">'bgcolor-206':</span> <span class="pre">'#ff5fdf',</span> <span class="pre">'bgcolor-207':</span> <span class="pre">'#ff5fff',</span> <span class="pre">'bgcolor-208':</span> <span class="pre">'#ff8700',</span> <span class="pre">'bgcolor-209':</span> <span class="pre">'#ff875f',</span> <span class="pre">'bgcolor-210':</span> <span class="pre">'#ff8787',</span> <span class="pre">'bgcolor-211':</span> <span class="pre">'#ff87af',</span> <span class="pre">'bgcolor-212':</span> <span class="pre">'#ff87df',</span> <span class="pre">'bgcolor-213':</span> <span class="pre">'#ff87ff',</span> <span class="pre">'bgcolor-214':</span> <span class="pre">'#ffaf00',</span> <span class="pre">'bgcolor-215':</span> <span class="pre">'#ffaf5f',</span> <span class="pre">'bgcolor-216':</span> <span class="pre">'#ffaf87',</span> <span class="pre">'bgcolor-217':</span> <span class="pre">'#ffafaf',</span> <span class="pre">'bgcolor-218':</span> <span class="pre">'#ffafdf',</span> <span class="pre">'bgcolor-219':</span> <span class="pre">'#ffafff',</span> <span class="pre">'bgcolor-220':</span> <span class="pre">'#ffdf00',</span> <span class="pre">'bgcolor-221':</span> <span class="pre">'#ffdf5f',</span> <span class="pre">'bgcolor-222':</span> <span class="pre">'#ffdf87',</span> <span class="pre">'bgcolor-223':</span> <span class="pre">'#ffdfaf',</span> <span class="pre">'bgcolor-224':</span> <span class="pre">'#ffdfdf',</span> <span class="pre">'bgcolor-225':</span> <span class="pre">'#ffdfff',</span> <span class="pre">'bgcolor-226':</span> <span class="pre">'#ffff00',</span> <span class="pre">'bgcolor-227':</span> <span class="pre">'#ffff5f',</span> <span class="pre">'bgcolor-228':</span> <span class="pre">'#ffff87',</span> <span class="pre">'bgcolor-229':</span> <span class="pre">'#ffffaf',</span> <span class="pre">'bgcolor-230':</span> <span class="pre">'#ffffdf',</span> <span class="pre">'bgcolor-231':</span> <span class="pre">'#ffffff',</span> <span class="pre">'bgcolor-232':</span> <span class="pre">'#080808',</span> <span class="pre">'bgcolor-233':</span> <span class="pre">'#121212',</span> <span class="pre">'bgcolor-234':</span> <span class="pre">'#1c1c1c',</span> <span class="pre">'bgcolor-235':</span> <span class="pre">'#262626',</span> <span class="pre">'bgcolor-236':</span> <span class="pre">'#303030',</span> <span class="pre">'bgcolor-237':</span> <span class="pre">'#3a3a3a',</span> <span class="pre">'bgcolor-238':</span> <span class="pre">'#444444',</span> <span class="pre">'bgcolor-239':</span> <span class="pre">'#4e4e4e',</span> <span class="pre">'bgcolor-240':</span> <span class="pre">'#585858',</span> <span class="pre">'bgcolor-241':</span> <span class="pre">'#606060',</span> <span class="pre">'bgcolor-242':</span> <span class="pre">'#666666',</span> <span class="pre">'bgcolor-243':</span> <span class="pre">'#767676',</span> <span class="pre">'bgcolor-244':</span> <span class="pre">'#808080',</span> <span class="pre">'bgcolor-245':</span> <span class="pre">'#8a8a8a',</span> <span class="pre">'bgcolor-246':</span> <span class="pre">'#949494',</span> <span class="pre">'bgcolor-247':</span> <span class="pre">'#9e9e9e',</span> <span class="pre">'bgcolor-248':</span> <span class="pre">'#a8a8a8',</span> <span class="pre">'bgcolor-249':</span> <span class="pre">'#b2b2b2',</span> <span class="pre">'bgcolor-250':</span> <span class="pre">'#bcbcbc',</span> <span class="pre">'bgcolor-251':</span> <span class="pre">'#c6c6c6',</span> <span class="pre">'bgcolor-252':</span> <span class="pre">'#d0d0d0',</span> <span class="pre">'bgcolor-253':</span> <span class="pre">'#dadada',</span> <span class="pre">'bgcolor-254':</span> <span class="pre">'#e4e4e4',</span> <span class="pre">'bgcolor-255':</span> <span class="pre">'#eeeeee',</span> <span class="pre">'color-000':</span> <span class="pre">'#000000',</span> <span class="pre">'color-001':</span> <span class="pre">'#800000',</span> <span class="pre">'color-002':</span> <span class="pre">'#008000',</span> <span class="pre">'color-003':</span> <span class="pre">'#808000',</span> <span class="pre">'color-004':</span> <span class="pre">'#000080',</span> <span class="pre">'color-005':</span> <span class="pre">'#800080',</span> <span class="pre">'color-006':</span> <span class="pre">'#008080',</span> <span class="pre">'color-007':</span> <span class="pre">'#c0c0c0',</span> <span class="pre">'color-008':</span> <span class="pre">'#808080',</span> <span class="pre">'color-009':</span> <span class="pre">'#ff0000',</span> <span class="pre">'color-010':</span> <span class="pre">'#00ff00',</span> <span class="pre">'color-011':</span> <span class="pre">'#ffff00',</span> <span class="pre">'color-012':</span> <span class="pre">'#0000ff',</span> <span class="pre">'color-013':</span> <span class="pre">'#ff00ff',</span> <span class="pre">'color-014':</span> <span class="pre">'#00ffff',</span> <span class="pre">'color-015':</span> <span class="pre">'#ffffff',</span> <span class="pre">'color-016':</span> <span class="pre">'#000000',</span> <span class="pre">'color-017':</span> <span class="pre">'#00005f',</span> <span class="pre">'color-018':</span> <span class="pre">'#000087',</span> <span class="pre">'color-019':</span> <span class="pre">'#0000af',</span> <span class="pre">'color-020':</span> <span class="pre">'#0000df',</span> <span class="pre">'color-021':</span> <span class="pre">'#0000ff',</span> <span class="pre">'color-022':</span> <span class="pre">'#005f00',</span> <span class="pre">'color-023':</span> <span class="pre">'#005f5f',</span> <span class="pre">'color-024':</span> <span class="pre">'#005f87',</span> <span class="pre">'color-025':</span> <span class="pre">'#005faf',</span> <span class="pre">'color-026':</span> <span class="pre">'#005fdf',</span> <span class="pre">'color-027':</span> <span class="pre">'#005fff',</span> <span class="pre">'color-028':</span> <span class="pre">'#008700',</span> <span class="pre">'color-029':</span> <span class="pre">'#00875f',</span> <span class="pre">'color-030':</span> <span class="pre">'#008787',</span> <span class="pre">'color-031':</span> <span class="pre">'#0087af',</span> <span class="pre">'color-032':</span> <span class="pre">'#0087df',</span> <span class="pre">'color-033':</span> <span class="pre">'#0087ff',</span> <span class="pre">'color-034':</span> <span class="pre">'#00af00',</span> <span class="pre">'color-035':</span> <span class="pre">'#00af5f',</span> <span class="pre">'color-036':</span> <span class="pre">'#00af87',</span> <span class="pre">'color-037':</span> <span class="pre">'#00afaf',</span> <span class="pre">'color-038':</span> <span class="pre">'#00afdf',</span> <span class="pre">'color-039':</span> <span class="pre">'#00afff',</span> <span class="pre">'color-040':</span> <span class="pre">'#00df00',</span> <span class="pre">'color-041':</span> <span class="pre">'#00df5f',</span> <span class="pre">'color-042':</span> <span class="pre">'#00df87',</span> <span class="pre">'color-043':</span> <span class="pre">'#00dfaf',</span> <span class="pre">'color-044':</span> <span class="pre">'#00dfdf',</span> <span class="pre">'color-045':</span> <span class="pre">'#00dfff',</span> <span class="pre">'color-046':</span> <span class="pre">'#00ff00',</span> <span class="pre">'color-047':</span> <span class="pre">'#00ff5f',</span> <span class="pre">'color-048':</span> <span class="pre">'#00ff87',</span> <span class="pre">'color-049':</span> <span class="pre">'#00ffaf',</span> <span class="pre">'color-050':</span> <span class="pre">'#00ffdf',</span> <span class="pre">'color-051':</span> <span class="pre">'#00ffff',</span> <span class="pre">'color-052':</span> <span class="pre">'#5f0000',</span> <span class="pre">'color-053':</span> <span class="pre">'#5f005f',</span> <span class="pre">'color-054':</span> <span class="pre">'#5f0087',</span> <span class="pre">'color-055':</span> <span class="pre">'#5f00af',</span> <span class="pre">'color-056':</span> <span class="pre">'#5f00df',</span> <span class="pre">'color-057':</span> <span class="pre">'#5f00ff',</span> <span class="pre">'color-058':</span> <span class="pre">'#5f5f00',</span> <span class="pre">'color-059':</span> <span class="pre">'#5f5f5f',</span> <span class="pre">'color-060':</span> <span class="pre">'#5f5f87',</span> <span class="pre">'color-061':</span> <span class="pre">'#5f5faf',</span> <span class="pre">'color-062':</span> <span class="pre">'#5f5fdf',</span> <span class="pre">'color-063':</span> <span class="pre">'#5f5fff',</span> <span class="pre">'color-064':</span> <span class="pre">'#5f8700',</span> <span class="pre">'color-065':</span> <span class="pre">'#5f875f',</span> <span class="pre">'color-066':</span> <span class="pre">'#5f8787',</span> <span class="pre">'color-067':</span> <span class="pre">'#5f87af',</span> <span class="pre">'color-068':</span> <span class="pre">'#5f87df',</span> <span class="pre">'color-069':</span> <span class="pre">'#5f87ff',</span> <span class="pre">'color-070':</span> <span class="pre">'#5faf00',</span> <span class="pre">'color-071':</span> <span class="pre">'#5faf5f',</span> <span class="pre">'color-072':</span> <span class="pre">'#5faf87',</span> <span class="pre">'color-073':</span> <span class="pre">'#5fafaf',</span> <span class="pre">'color-074':</span> <span class="pre">'#5fafdf',</span> <span class="pre">'color-075':</span> <span class="pre">'#5fafff',</span> <span class="pre">'color-076':</span> <span class="pre">'#5fdf00',</span> <span class="pre">'color-077':</span> <span class="pre">'#5fdf5f',</span> <span class="pre">'color-078':</span> <span class="pre">'#5fdf87',</span> <span class="pre">'color-079':</span> <span class="pre">'#5fdfaf',</span> <span class="pre">'color-080':</span> <span class="pre">'#5fdfdf',</span> <span class="pre">'color-081':</span> <span class="pre">'#5fdfff',</span> <span class="pre">'color-082':</span> <span class="pre">'#5fff00',</span> <span class="pre">'color-083':</span> <span class="pre">'#5fff5f',</span> <span class="pre">'color-084':</span> <span class="pre">'#5fff87',</span> <span class="pre">'color-085':</span> <span class="pre">'#5fffaf',</span> <span class="pre">'color-086':</span> <span class="pre">'#5fffdf',</span> <span class="pre">'color-087':</span> <span class="pre">'#5fffff',</span> <span class="pre">'color-088':</span> <span class="pre">'#870000',</span> <span class="pre">'color-089':</span> <span class="pre">'#87005f',</span> <span class="pre">'color-090':</span> <span class="pre">'#870087',</span> <span class="pre">'color-091':</span> <span class="pre">'#8700af',</span> <span class="pre">'color-092':</span> <span class="pre">'#8700df',</span> <span class="pre">'color-093':</span> <span class="pre">'#8700ff',</span> <span class="pre">'color-094':</span> <span class="pre">'#875f00',</span> <span class="pre">'color-095':</span> <span class="pre">'#875f5f',</span> <span class="pre">'color-096':</span> <span class="pre">'#875f87',</span> <span class="pre">'color-097':</span> <span class="pre">'#875faf',</span> <span class="pre">'color-098':</span> <span class="pre">'#875fdf',</span> <span class="pre">'color-099':</span> <span class="pre">'#875fff',</span> <span class="pre">'color-100':</span> <span class="pre">'#878700',</span> <span class="pre">'color-101':</span> <span class="pre">'#87875f',</span> <span class="pre">'color-102':</span> <span class="pre">'#878787',</span> <span class="pre">'color-103':</span> <span class="pre">'#8787af',</span> <span class="pre">'color-104':</span> <span class="pre">'#8787df',</span> <span class="pre">'color-105':</span> <span class="pre">'#8787ff',</span> <span class="pre">'color-106':</span> <span class="pre">'#87af00',</span> <span class="pre">'color-107':</span> <span class="pre">'#87af5f',</span> <span class="pre">'color-108':</span> <span class="pre">'#87af87',</span> <span class="pre">'color-109':</span> <span class="pre">'#87afaf',</span> <span class="pre">'color-110':</span> <span class="pre">'#87afdf',</span> <span class="pre">'color-111':</span> <span class="pre">'#87afff',</span> <span class="pre">'color-112':</span> <span class="pre">'#87df00',</span> <span class="pre">'color-113':</span> <span class="pre">'#87df5f',</span> <span class="pre">'color-114':</span> <span class="pre">'#87df87',</span> <span class="pre">'color-115':</span> <span class="pre">'#87dfaf',</span> <span class="pre">'color-116':</span> <span class="pre">'#87dfdf',</span> <span class="pre">'color-117':</span> <span class="pre">'#87dfff',</span> <span class="pre">'color-118':</span> <span class="pre">'#87ff00',</span> <span class="pre">'color-119':</span> <span class="pre">'#87ff5f',</span> <span class="pre">'color-120':</span> <span class="pre">'#87ff87',</span> <span class="pre">'color-121':</span> <span class="pre">'#87ffaf',</span> <span class="pre">'color-122':</span> <span class="pre">'#87ffdf',</span> <span class="pre">'color-123':</span> <span class="pre">'#87ffff',</span> <span class="pre">'color-124':</span> <span class="pre">'#af0000',</span> <span class="pre">'color-125':</span> <span class="pre">'#af005f',</span> <span class="pre">'color-126':</span> <span class="pre">'#af0087',</span> <span class="pre">'color-127':</span> <span class="pre">'#af00af',</span> <span class="pre">'color-128':</span> <span class="pre">'#af00df',</span> <span class="pre">'color-129':</span> <span class="pre">'#af00ff',</span> <span class="pre">'color-130':</span> <span class="pre">'#af5f00',</span> <span class="pre">'color-131':</span> <span class="pre">'#af5f5f',</span> <span class="pre">'color-132':</span> <span class="pre">'#af5f87',</span> <span class="pre">'color-133':</span> <span class="pre">'#af5faf',</span> <span class="pre">'color-134':</span> <span class="pre">'#af5fdf',</span> <span class="pre">'color-135':</span> <span class="pre">'#af5fff',</span> <span class="pre">'color-136':</span> <span class="pre">'#af8700',</span> <span class="pre">'color-137':</span> <span class="pre">'#af875f',</span> <span class="pre">'color-138':</span> <span class="pre">'#af8787',</span> <span class="pre">'color-139':</span> <span class="pre">'#af87af',</span> <span class="pre">'color-140':</span> <span class="pre">'#af87df',</span> <span class="pre">'color-141':</span> <span class="pre">'#af87ff',</span> <span class="pre">'color-142':</span> <span class="pre">'#afaf00',</span> <span class="pre">'color-143':</span> <span class="pre">'#afaf5f',</span> <span class="pre">'color-144':</span> <span class="pre">'#afaf87',</span> <span class="pre">'color-145':</span> <span class="pre">'#afafaf',</span> <span class="pre">'color-146':</span> <span class="pre">'#afafdf',</span> <span class="pre">'color-147':</span> <span class="pre">'#afafff',</span> <span class="pre">'color-148':</span> <span class="pre">'#afdf00',</span> <span class="pre">'color-149':</span> <span class="pre">'#afdf5f',</span> <span class="pre">'color-150':</span> <span class="pre">'#afdf87',</span> <span class="pre">'color-151':</span> <span class="pre">'#afdfaf',</span> <span class="pre">'color-152':</span> <span class="pre">'#afdfdf',</span> <span class="pre">'color-153':</span> <span class="pre">'#afdfff',</span> <span class="pre">'color-154':</span> <span class="pre">'#afff00',</span> <span class="pre">'color-155':</span> <span class="pre">'#afff5f',</span> <span class="pre">'color-156':</span> <span class="pre">'#afff87',</span> <span class="pre">'color-157':</span> <span class="pre">'#afffaf',</span> <span class="pre">'color-158':</span> <span class="pre">'#afffdf',</span> <span class="pre">'color-159':</span> <span class="pre">'#afffff',</span> <span class="pre">'color-160':</span> <span class="pre">'#df0000',</span> <span class="pre">'color-161':</span> <span class="pre">'#df005f',</span> <span class="pre">'color-162':</span> <span class="pre">'#df0087',</span> <span class="pre">'color-163':</span> <span class="pre">'#df00af',</span> <span class="pre">'color-164':</span> <span class="pre">'#df00df',</span> <span class="pre">'color-165':</span> <span class="pre">'#df00ff',</span> <span class="pre">'color-166':</span> <span class="pre">'#df5f00',</span> <span class="pre">'color-167':</span> <span class="pre">'#df5f5f',</span> <span class="pre">'color-168':</span> <span class="pre">'#df5f87',</span> <span class="pre">'color-169':</span> <span class="pre">'#df5faf',</span> <span class="pre">'color-170':</span> <span class="pre">'#df5fdf',</span> <span class="pre">'color-171':</span> <span class="pre">'#df5fff',</span> <span class="pre">'color-172':</span> <span class="pre">'#df8700',</span> <span class="pre">'color-173':</span> <span class="pre">'#df875f',</span> <span class="pre">'color-174':</span> <span class="pre">'#df8787',</span> <span class="pre">'color-175':</span> <span class="pre">'#df87af',</span> <span class="pre">'color-176':</span> <span class="pre">'#df87df',</span> <span class="pre">'color-177':</span> <span class="pre">'#df87ff',</span> <span class="pre">'color-178':</span> <span class="pre">'#dfaf00',</span> <span class="pre">'color-179':</span> <span class="pre">'#dfaf5f',</span> <span class="pre">'color-180':</span> <span class="pre">'#dfaf87',</span> <span class="pre">'color-181':</span> <span class="pre">'#dfafaf',</span> <span class="pre">'color-182':</span> <span class="pre">'#dfafdf',</span> <span class="pre">'color-183':</span> <span class="pre">'#dfafff',</span> <span class="pre">'color-184':</span> <span class="pre">'#dfdf00',</span> <span class="pre">'color-185':</span> <span class="pre">'#dfdf5f',</span> <span class="pre">'color-186':</span> <span class="pre">'#dfdf87',</span> <span class="pre">'color-187':</span> <span class="pre">'#dfdfaf',</span> <span class="pre">'color-188':</span> <span class="pre">'#dfdfdf',</span> <span class="pre">'color-189':</span> <span class="pre">'#dfdfff',</span> <span class="pre">'color-190':</span> <span class="pre">'#dfff00',</span> <span class="pre">'color-191':</span> <span class="pre">'#dfff5f',</span> <span class="pre">'color-192':</span> <span class="pre">'#dfff87',</span> <span class="pre">'color-193':</span> <span class="pre">'#dfffaf',</span> <span class="pre">'color-194':</span> <span class="pre">'#dfffdf',</span> <span class="pre">'color-195':</span> <span class="pre">'#dfffff',</span> <span class="pre">'color-196':</span> <span class="pre">'#ff0000',</span> <span class="pre">'color-197':</span> <span class="pre">'#ff005f',</span> <span class="pre">'color-198':</span> <span class="pre">'#ff0087',</span> <span class="pre">'color-199':</span> <span class="pre">'#ff00af',</span> <span class="pre">'color-200':</span> <span class="pre">'#ff00df',</span> <span class="pre">'color-201':</span> <span class="pre">'#ff00ff',</span> <span class="pre">'color-202':</span> <span class="pre">'#ff5f00',</span> <span class="pre">'color-203':</span> <span class="pre">'#ff5f5f',</span> <span class="pre">'color-204':</span> <span class="pre">'#ff5f87',</span> <span class="pre">'color-205':</span> <span class="pre">'#ff5faf',</span> <span class="pre">'color-206':</span> <span class="pre">'#ff5fdf',</span> <span class="pre">'color-207':</span> <span class="pre">'#ff5fff',</span> <span class="pre">'color-208':</span> <span class="pre">'#ff8700',</span> <span class="pre">'color-209':</span> <span class="pre">'#ff875f',</span> <span class="pre">'color-210':</span> <span class="pre">'#ff8787',</span> <span class="pre">'color-211':</span> <span class="pre">'#ff87af',</span> <span class="pre">'color-212':</span> <span class="pre">'#ff87df',</span> <span class="pre">'color-213':</span> <span class="pre">'#ff87ff',</span> <span class="pre">'color-214':</span> <span class="pre">'#ffaf00',</span> <span class="pre">'color-215':</span> <span class="pre">'#ffaf5f',</span> <span class="pre">'color-216':</span> <span class="pre">'#ffaf87',</span> <span class="pre">'color-217':</span> <span class="pre">'#ffafaf',</span> <span class="pre">'color-218':</span> <span class="pre">'#ffafdf',</span> <span class="pre">'color-219':</span> <span class="pre">'#ffafff',</span> <span class="pre">'color-220':</span> <span class="pre">'#ffdf00',</span> <span class="pre">'color-221':</span> <span class="pre">'#ffdf5f',</span> <span class="pre">'color-222':</span> <span class="pre">'#ffdf87',</span> <span class="pre">'color-223':</span> <span class="pre">'#ffdfaf',</span> <span class="pre">'color-224':</span> <span class="pre">'#ffdfdf',</span> <span class="pre">'color-225':</span> <span class="pre">'#ffdfff',</span> <span class="pre">'color-226':</span> <span class="pre">'#ffff00',</span> <span class="pre">'color-227':</span> <span class="pre">'#ffff5f',</span> <span class="pre">'color-228':</span> <span class="pre">'#ffff87',</span> <span class="pre">'color-229':</span> <span class="pre">'#ffffaf',</span> <span class="pre">'color-230':</span> <span class="pre">'#ffffdf',</span> <span class="pre">'color-231':</span> <span class="pre">'#ffffff',</span> <span class="pre">'color-232':</span> <span class="pre">'#080808',</span> <span class="pre">'color-233':</span> <span class="pre">'#121212',</span> <span class="pre">'color-234':</span> <span class="pre">'#1c1c1c',</span> <span class="pre">'color-235':</span> <span class="pre">'#262626',</span> <span class="pre">'color-236':</span> <span class="pre">'#303030',</span> <span class="pre">'color-237':</span> <span class="pre">'#3a3a3a',</span> <span class="pre">'color-238':</span> <span class="pre">'#444444',</span> <span class="pre">'color-239':</span> <span class="pre">'#4e4e4e',</span> <span class="pre">'color-240':</span> <span class="pre">'#585858',</span> <span class="pre">'color-241':</span> <span class="pre">'#606060',</span> <span class="pre">'color-242':</span> <span class="pre">'#666666',</span> <span class="pre">'color-243':</span> <span class="pre">'#767676',</span> <span class="pre">'color-244':</span> <span class="pre">'#808080',</span> <span class="pre">'color-245':</span> <span class="pre">'#8a8a8a',</span> <span class="pre">'color-246':</span> <span class="pre">'#949494',</span> <span class="pre">'color-247':</span> <span class="pre">'#9e9e9e',</span> <span class="pre">'color-248':</span> <span class="pre">'#a8a8a8',</span> <span class="pre">'color-249':</span> <span class="pre">'#b2b2b2',</span> <span class="pre">'color-250':</span> <span class="pre">'#bcbcbc',</span> <span class="pre">'color-251':</span> <span class="pre">'#c6c6c6',</span> <span class="pre">'color-252':</span> <span class="pre">'#d0d0d0',</span> <span class="pre">'color-253':</span> <span class="pre">'#dadada',</span> <span class="pre">'color-254':</span> <span class="pre">'#e4e4e4',</span> <span class="pre">'color-255':</span> <span class="pre">'#eeeeee'}</span></em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.COLOR_INDICE_TO_HEX" title="Link to this definition">¶</a></dt>
+<dd><p>The classes below exist to properly encapsulate text and other tag classes
+because the order of how tags are opened and closed are important to display in godot.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">RootTag</span></span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#RootTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Root tag class made to contain other tags.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#RootTag.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">ChildTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ChildTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A node made to be contained.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ChildTag.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.set_parent">
+<span class="sig-name descname"><span class="pre">set_parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ChildTag.set_parent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.set_parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">TextTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChildTag</span></code></a></p>
+<p>A BBCodeTag node to output regular text.
+Output: SomeText</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextTag.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.text">
+<span class="sig-name descname"><span class="pre">text</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.text" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">BBCodeTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BBCodeTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChildTag</span></code></a></p>
+<p>Base BBCodeTag node to encapsulate and be encapsulated.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.code" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BBCodeTag.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">UnderlineTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#UnderlineTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BBCodeTag</span></code></a></p>
+<p>A BBCodeTag node for underlined text.
+Output: [u]Underlined Text[/u]</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'u'</span></em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.code" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">BlinkTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BlinkTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BBCodeTag</span></code></a></p>
+<p>A BBCodeTag node for blinking text.
+Output: [blink]Blinking Text[/blink]</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'blink'</span></em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.code" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">ColorTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_hex</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ColorTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BBCodeTag</span></code></a></p>
+<p>A BBCodeTag node for foreground color.
+Output: [fgcolor=#000000]Colorized Text[/fgcolor]</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'color'</span></em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.code" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_hex</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ColorTag.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.color_hex">
+<span class="sig-name descname"><span class="pre">color_hex</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.color_hex" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">BGColorTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_hex</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BGColorTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ColorTag</span></code></a></p>
+<p>A BBCodeTag node for background color.
+Output: [bgcolor=#000000]Colorized Text[/bgcolor]</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bgcolor'</span></em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.code" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.color_hex">
+<span class="sig-name descname"><span class="pre">color_hex</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.color_hex" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">UrlTag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#UrlTag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">BBCodeTag</span></code></a></p>
+<p>A BBCodeTag node used for urls.
+Output: [url=www.example.com]Child Text[/url]</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'url'</span></em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.code" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#UrlTag.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.url_data">
+<span class="sig-name descname"><span class="pre">url_data</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.url_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.parent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.child" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">TextToBBCODEparser</span></span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.utils.text2html.html#evennia.utils.text2html.TextToHTMLparser" title="evennia.utils.text2html.TextToHTMLparser"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextToHTMLparser</span></code></a></p>
+<p>This class describes a parser for converting from ANSI to BBCode.
+It inherits from the TextToHTMLParser and overrides the specifics for bbcode.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.convert_urls">
+<span class="sig-name descname"><span class="pre">convert_urls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.convert_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.convert_urls" title="Link to this definition">¶</a></dt>
+<dd><p>Converts urls within text to bbcode style</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Text to parse</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>text (str)</em> – Processed text</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_links">
+<span class="sig-name descname"><span class="pre">sub_mxp_links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.sub_mxp_links"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_links" title="Link to this definition">¶</a></dt>
+<dd><p>Helper method to be passed to re.sub,
+replaces MXP links with bbcode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>match</strong> (<em>re.Matchobject</em>) – Match for substitution.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>text (str)</em> – Processed text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_urls">
+<span class="sig-name descname"><span class="pre">sub_mxp_urls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.sub_mxp_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_urls" title="Link to this definition">¶</a></dt>
+<dd><p>Helper method to be passed to re.sub,
+replaces MXP links with bbcode.
+:param match: Match for substitution.
+:type match: re.Matchobject</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>text (str)</em> – Processed text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_text">
+<span class="sig-name descname"><span class="pre">sub_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">match</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.sub_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_text" title="Link to this definition">¶</a></dt>
+<dd><p>Helper method to be passed to re.sub,
+for handling all substitutions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>match</strong> (<em>re.Matchobject</em>) – Match for substitution.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>text (str)</em> – Processed text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.format_styles">
+<span class="sig-name descname"><span class="pre">format_styles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.format_styles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.format_styles" title="Link to this definition">¶</a></dt>
+<dd><p>Takes a string with parsed ANSI codes and replaces them with bbcode style tags</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The string to process.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>text (str)</em> – Processed text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_ansi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.parse" title="Link to this definition">¶</a></dt>
+<dd><p>Main access function, converts a text containing ANSI codes
+into html statements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – Text to process.</p></li>
+<li><p><strong>strip_ansi</strong> (<em>bool</em><em>, </em><em>optional</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>text (str)</em> – Parsed text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.parse_to_bbcode">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</span></span><span class="sig-name descname"><span class="pre">parse_to_bbcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_ansi=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parser=&lt;evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#parse_to_bbcode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.parse_to_bbcode" title="Link to this definition">¶</a></dt>
+<dd><p>Parses a string, replace ANSI markup with bbcode</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
             </a></p>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.contrib.base_systems.godotwebsocket.test_webclient.html"
-                        title="previous chapter">evennia.contrib.base_systems.godotwebsocket.test_webclient</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.contrib.base_systems.godotwebsocket.webclient.html"
-                        title="next chapter">evennia.contrib.base_systems.godotwebsocket.webclient</a></p>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.contrib.base_systems.godotwebsocket.text2bbcode</a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.COLOR_INDICE_TO_HEX"><code class="docutils literal notranslate"><span class="pre">COLOR_INDICE_TO_HEX</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag"><code class="docutils literal notranslate"><span class="pre">RootTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.__init__"><code class="docutils literal notranslate"><span class="pre">RootTag.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.child"><code class="docutils literal notranslate"><span class="pre">RootTag.child</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag"><code class="docutils literal notranslate"><span class="pre">ChildTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.__init__"><code class="docutils literal notranslate"><span class="pre">ChildTag.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.set_parent"><code class="docutils literal notranslate"><span class="pre">ChildTag.set_parent()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag"><code class="docutils literal notranslate"><span class="pre">TextTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.__init__"><code class="docutils literal notranslate"><span class="pre">TextTag.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.text"><code class="docutils literal notranslate"><span class="pre">TextTag.text</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.child"><code class="docutils literal notranslate"><span class="pre">TextTag.child</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.parent"><code class="docutils literal notranslate"><span class="pre">TextTag.parent</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="docutils literal notranslate"><span class="pre">BBCodeTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.code"><code class="docutils literal notranslate"><span class="pre">BBCodeTag.code</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.__init__"><code class="docutils literal notranslate"><span class="pre">BBCodeTag.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.child"><code class="docutils literal notranslate"><span class="pre">BBCodeTag.child</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.parent"><code class="docutils literal notranslate"><span class="pre">BBCodeTag.parent</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag"><code class="docutils literal notranslate"><span class="pre">UnderlineTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.code"><code class="docutils literal notranslate"><span class="pre">UnderlineTag.code</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.parent"><code class="docutils literal notranslate"><span class="pre">UnderlineTag.parent</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.child"><code class="docutils literal notranslate"><span class="pre">UnderlineTag.child</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag"><code class="docutils literal notranslate"><span class="pre">BlinkTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.code"><code class="docutils literal notranslate"><span class="pre">BlinkTag.code</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.parent"><code class="docutils literal notranslate"><span class="pre">BlinkTag.parent</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.child"><code class="docutils literal notranslate"><span class="pre">BlinkTag.child</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag"><code class="docutils literal notranslate"><span class="pre">ColorTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.code"><code class="docutils literal notranslate"><span class="pre">ColorTag.code</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.__init__"><code class="docutils literal notranslate"><span class="pre">ColorTag.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.color_hex"><code class="docutils literal notranslate"><span class="pre">ColorTag.color_hex</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.parent"><code class="docutils literal notranslate"><span class="pre">ColorTag.parent</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.child"><code class="docutils literal notranslate"><span class="pre">ColorTag.child</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag"><code class="docutils literal notranslate"><span class="pre">BGColorTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.code"><code class="docutils literal notranslate"><span class="pre">BGColorTag.code</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.parent"><code class="docutils literal notranslate"><span class="pre">BGColorTag.parent</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.child"><code class="docutils literal notranslate"><span class="pre">BGColorTag.child</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.color_hex"><code class="docutils literal notranslate"><span class="pre">BGColorTag.color_hex</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag"><code class="docutils literal notranslate"><span class="pre">UrlTag</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.code"><code class="docutils literal notranslate"><span class="pre">UrlTag.code</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.__init__"><code class="docutils literal notranslate"><span class="pre">UrlTag.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.url_data"><code class="docutils literal notranslate"><span class="pre">UrlTag.url_data</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.parent"><code class="docutils literal notranslate"><span class="pre">UrlTag.parent</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.child"><code class="docutils literal notranslate"><span class="pre">UrlTag.child</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser"><code class="docutils literal notranslate"><span class="pre">TextToBBCODEparser</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.convert_urls"><code class="docutils literal notranslate"><span class="pre">TextToBBCODEparser.convert_urls()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_links"><code class="docutils literal notranslate"><span class="pre">TextToBBCODEparser.sub_mxp_links()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_urls"><code class="docutils literal notranslate"><span class="pre">TextToBBCODEparser.sub_mxp_urls()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_text"><code class="docutils literal notranslate"><span class="pre">TextToBBCODEparser.sub_text()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.format_styles"><code class="docutils literal notranslate"><span class="pre">TextToBBCODEparser.format_styles()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.parse"><code class="docutils literal notranslate"><span class="pre">TextToBBCODEparser.parse()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.parse_to_bbcode"><code class="docutils literal notranslate"><span class="pre">parse_to_bbcode()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.contrib.base_systems.godotwebsocket.test_webclient.html"
+                          title="previous chapter">evennia.contrib.base_systems.godotwebsocket.test_webclient</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.contrib.base_systems.godotwebsocket.webclient.html"
+                          title="next chapter">evennia.contrib.base_systems.godotwebsocket.webclient</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <!--h3>This Page</h3-->
     <ul class="this-page-menu">
@@ -95,387 +523,42 @@
 <h3>Doc Versions</h3>
 <ul>
   
-    <li><a href="evennia.contrib.base_systems.godotwebsocket.text2bbcode.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
   
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
   
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
   
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
   
-
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
 </ul>
 
         </div>
       </div>
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="module-evennia.contrib.base_systems.godotwebsocket.text2bbcode">
-<span id="evennia-contrib-base-systems-godotwebsocket-text2bbcode"></span><h1>evennia.contrib.base_systems.godotwebsocket.text2bbcode<a class="headerlink" href="#module-evennia.contrib.base_systems.godotwebsocket.text2bbcode" title="Permalink to this headline">¶</a></h1>
-<p>Godot Websocket - ChrisLR 2022</p>
-<p>This file contains the necessary code and data to convert text with color tags to bbcode (For godot)</p>
-<dl class="py data">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.COLOR_INDICE_TO_HEX">
-<code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">COLOR_INDICE_TO_HEX</code><em class="property"> = {'bgcolor-000': '#000000', 'bgcolor-001': '#800000', 'bgcolor-002': '#008000', 'bgcolor-003': '#808000', 'bgcolor-004': '#000080', 'bgcolor-005': '#800080', 'bgcolor-006': '#008080', 'bgcolor-007': '#c0c0c0', 'bgcolor-008': '#808080', 'bgcolor-009': '#ff0000', 'bgcolor-010': '#00ff00', 'bgcolor-011': '#ffff00', 'bgcolor-012': '#0000ff', 'bgcolor-013': '#ff00ff', 'bgcolor-014': '#00ffff', 'bgcolor-015': '#ffffff', 'bgcolor-016': '#000000', 'bgcolor-017': '#00005f', 'bgcolor-018': '#000087', 'bgcolor-019': '#0000af', 'bgcolor-020': '#0000df', 'bgcolor-021': '#0000ff', 'bgcolor-022': '#005f00', 'bgcolor-023': '#005f5f', 'bgcolor-024': '#005f87', 'bgcolor-025': '#005faf', 'bgcolor-026': '#005fdf', 'bgcolor-027': '#005fff', 'bgcolor-028': '#008700', 'bgcolor-029': '#00875f', 'bgcolor-030': '#008787', 'bgcolor-031': '#0087af', 'bgcolor-032': '#0087df', 'bgcolor-033': '#0087ff', 'bgcolor-034': '#00af00', 'bgcolor-035': '#00af5f', 'bgcolor-036': '#00af87', 'bgcolor-037': '#00afaf', 'bgcolor-038': '#00afdf', 'bgcolor-039': '#00afff', 'bgcolor-040': '#00df00', 'bgcolor-041': '#00df5f', 'bgcolor-042': '#00df87', 'bgcolor-043': '#00dfaf', 'bgcolor-044': '#00dfdf', 'bgcolor-045': '#00dfff', 'bgcolor-046': '#00ff00', 'bgcolor-047': '#00ff5f', 'bgcolor-048': '#00ff87', 'bgcolor-049': '#00ffaf', 'bgcolor-050': '#00ffdf', 'bgcolor-051': '#00ffff', 'bgcolor-052': '#5f0000', 'bgcolor-053': '#5f005f', 'bgcolor-054': '#5f0087', 'bgcolor-055': '#5f00af', 'bgcolor-056': '#5f00df', 'bgcolor-057': '#5f00ff', 'bgcolor-058': '#5f5f00', 'bgcolor-059': '#5f5f5f', 'bgcolor-060': '#5f5f87', 'bgcolor-061': '#5f5faf', 'bgcolor-062': '#5f5fdf', 'bgcolor-063': '#5f5fff', 'bgcolor-064': '#5f8700', 'bgcolor-065': '#5f875f', 'bgcolor-066': '#5f8787', 'bgcolor-067': '#5f87af', 'bgcolor-068': '#5f87df', 'bgcolor-069': '#5f87ff', 'bgcolor-070': '#5faf00', 'bgcolor-071': '#5faf5f', 'bgcolor-072': '#5faf87', 'bgcolor-073': '#5fafaf', 'bgcolor-074': '#5fafdf', 'bgcolor-075': '#5fafff', 'bgcolor-076': '#5fdf00', 'bgcolor-077': '#5fdf5f', 'bgcolor-078': '#5fdf87', 'bgcolor-079': '#5fdfaf', 'bgcolor-080': '#5fdfdf', 'bgcolor-081': '#5fdfff', 'bgcolor-082': '#5fff00', 'bgcolor-083': '#5fff5f', 'bgcolor-084': '#5fff87', 'bgcolor-085': '#5fffaf', 'bgcolor-086': '#5fffdf', 'bgcolor-087': '#5fffff', 'bgcolor-088': '#870000', 'bgcolor-089': '#87005f', 'bgcolor-090': '#870087', 'bgcolor-091': '#8700af', 'bgcolor-092': '#8700df', 'bgcolor-093': '#8700ff', 'bgcolor-094': '#875f00', 'bgcolor-095': '#875f5f', 'bgcolor-096': '#875f87', 'bgcolor-097': '#875faf', 'bgcolor-098': '#875fdf', 'bgcolor-099': '#875fff', 'bgcolor-100': '#878700', 'bgcolor-101': '#87875f', 'bgcolor-102': '#878787', 'bgcolor-103': '#8787af', 'bgcolor-104': '#8787df', 'bgcolor-105': '#8787ff', 'bgcolor-106': '#87af00', 'bgcolor-107': '#87af5f', 'bgcolor-108': '#87af87', 'bgcolor-109': '#87afaf', 'bgcolor-110': '#87afdf', 'bgcolor-111': '#87afff', 'bgcolor-112': '#87df00', 'bgcolor-113': '#87df5f', 'bgcolor-114': '#87df87', 'bgcolor-115': '#87dfaf', 'bgcolor-116': '#87dfdf', 'bgcolor-117': '#87dfff', 'bgcolor-118': '#87ff00', 'bgcolor-119': '#87ff5f', 'bgcolor-120': '#87ff87', 'bgcolor-121': '#87ffaf', 'bgcolor-122': '#87ffdf', 'bgcolor-123': '#87ffff', 'bgcolor-124': '#af0000', 'bgcolor-125': '#af005f', 'bgcolor-126': '#af0087', 'bgcolor-127': '#af00af', 'bgcolor-128': '#af00df', 'bgcolor-129': '#af00ff', 'bgcolor-130': '#af5f00', 'bgcolor-131': '#af5f5f', 'bgcolor-132': '#af5f87', 'bgcolor-133': '#af5faf', 'bgcolor-134': '#af5fdf', 'bgcolor-135': '#af5fff', 'bgcolor-136': '#af8700', 'bgcolor-137': '#af875f', 'bgcolor-138': '#af8787', 'bgcolor-139': '#af87af', 'bgcolor-140': '#af87df', 'bgcolor-141': '#af87ff', 'bgcolor-142': '#afaf00', 'bgcolor-143': '#afaf5f', 'bgcolor-144': '#afaf87', 'bgcolor-145': '#afafaf', 'bgcolor-146': '#afafdf', 'bgcolor-147': '#afafff', 'bgcolor-148': '#afdf00', 'bgcolor-149': '#afdf5f', 'bgcolor-150': '#afdf87', 'bgcolor-151': '#afdfaf', 'bgcolor-152': '#afdfdf', 'bgcolor-153': '#afdfff', 'bgcolor-154': '#afff00', 'bgcolor-155': '#afff5f', 'bgcolor-156': '#afff87', 'bgcolor-157': '#afffaf', 'bgcolor-158': '#afffdf', 'bgcolor-159': '#afffff', 'bgcolor-160': '#df0000', 'bgcolor-161': '#df005f', 'bgcolor-162': '#df0087', 'bgcolor-163': '#df00af', 'bgcolor-164': '#df00df', 'bgcolor-165': '#df00ff', 'bgcolor-166': '#df5f00', 'bgcolor-167': '#df5f5f', 'bgcolor-168': '#df5f87', 'bgcolor-169': '#df5faf', 'bgcolor-170': '#df5fdf', 'bgcolor-171': '#df5fff', 'bgcolor-172': '#df8700', 'bgcolor-173': '#df875f', 'bgcolor-174': '#df8787', 'bgcolor-175': '#df87af', 'bgcolor-176': '#df87df', 'bgcolor-177': '#df87ff', 'bgcolor-178': '#dfaf00', 'bgcolor-179': '#dfaf5f', 'bgcolor-180': '#dfaf87', 'bgcolor-181': '#dfafaf', 'bgcolor-182': '#dfafdf', 'bgcolor-183': '#dfafff', 'bgcolor-184': '#dfdf00', 'bgcolor-185': '#dfdf5f', 'bgcolor-186': '#dfdf87', 'bgcolor-187': '#dfdfaf', 'bgcolor-188': '#dfdfdf', 'bgcolor-189': '#dfdfff', 'bgcolor-190': '#dfff00', 'bgcolor-191': '#dfff5f', 'bgcolor-192': '#dfff87', 'bgcolor-193': '#dfffaf', 'bgcolor-194': '#dfffdf', 'bgcolor-195': '#dfffff', 'bgcolor-196': '#ff0000', 'bgcolor-197': '#ff005f', 'bgcolor-198': '#ff0087', 'bgcolor-199': '#ff00af', 'bgcolor-200': '#ff00df', 'bgcolor-201': '#ff00ff', 'bgcolor-202': '#ff5f00', 'bgcolor-203': '#ff5f5f', 'bgcolor-204': '#ff5f87', 'bgcolor-205': '#ff5faf', 'bgcolor-206': '#ff5fdf', 'bgcolor-207': '#ff5fff', 'bgcolor-208': '#ff8700', 'bgcolor-209': '#ff875f', 'bgcolor-210': '#ff8787', 'bgcolor-211': '#ff87af', 'bgcolor-212': '#ff87df', 'bgcolor-213': '#ff87ff', 'bgcolor-214': '#ffaf00', 'bgcolor-215': '#ffaf5f', 'bgcolor-216': '#ffaf87', 'bgcolor-217': '#ffafaf', 'bgcolor-218': '#ffafdf', 'bgcolor-219': '#ffafff', 'bgcolor-220': '#ffdf00', 'bgcolor-221': '#ffdf5f', 'bgcolor-222': '#ffdf87', 'bgcolor-223': '#ffdfaf', 'bgcolor-224': '#ffdfdf', 'bgcolor-225': '#ffdfff', 'bgcolor-226': '#ffff00', 'bgcolor-227': '#ffff5f', 'bgcolor-228': '#ffff87', 'bgcolor-229': '#ffffaf', 'bgcolor-230': '#ffffdf', 'bgcolor-231': '#ffffff', 'bgcolor-232': '#080808', 'bgcolor-233': '#121212', 'bgcolor-234': '#1c1c1c', 'bgcolor-235': '#262626', 'bgcolor-236': '#303030', 'bgcolor-237': '#3a3a3a', 'bgcolor-238': '#444444', 'bgcolor-239': '#4e4e4e', 'bgcolor-240': '#585858', 'bgcolor-241': '#606060', 'bgcolor-242': '#666666', 'bgcolor-243': '#767676', 'bgcolor-244': '#808080', 'bgcolor-245': '#8a8a8a', 'bgcolor-246': '#949494', 'bgcolor-247': '#9e9e9e', 'bgcolor-248': '#a8a8a8', 'bgcolor-249': '#b2b2b2', 'bgcolor-250': '#bcbcbc', 'bgcolor-251': '#c6c6c6', 'bgcolor-252': '#d0d0d0', 'bgcolor-253': '#dadada', 'bgcolor-254': '#e4e4e4', 'bgcolor-255': '#eeeeee', 'color-000': '#000000', 'color-001': '#800000', 'color-002': '#008000', 'color-003': '#808000', 'color-004': '#000080', 'color-005': '#800080', 'color-006': '#008080', 'color-007': '#c0c0c0', 'color-008': '#808080', 'color-009': '#ff0000', 'color-010': '#00ff00', 'color-011': '#ffff00', 'color-012': '#0000ff', 'color-013': '#ff00ff', 'color-014': '#00ffff', 'color-015': '#ffffff', 'color-016': '#000000', 'color-017': '#00005f', 'color-018': '#000087', 'color-019': '#0000af', 'color-020': '#0000df', 'color-021': '#0000ff', 'color-022': '#005f00', 'color-023': '#005f5f', 'color-024': '#005f87', 'color-025': '#005faf', 'color-026': '#005fdf', 'color-027': '#005fff', 'color-028': '#008700', 'color-029': '#00875f', 'color-030': '#008787', 'color-031': '#0087af', 'color-032': '#0087df', 'color-033': '#0087ff', 'color-034': '#00af00', 'color-035': '#00af5f', 'color-036': '#00af87', 'color-037': '#00afaf', 'color-038': '#00afdf', 'color-039': '#00afff', 'color-040': '#00df00', 'color-041': '#00df5f', 'color-042': '#00df87', 'color-043': '#00dfaf', 'color-044': '#00dfdf', 'color-045': '#00dfff', 'color-046': '#00ff00', 'color-047': '#00ff5f', 'color-048': '#00ff87', 'color-049': '#00ffaf', 'color-050': '#00ffdf', 'color-051': '#00ffff', 'color-052': '#5f0000', 'color-053': '#5f005f', 'color-054': '#5f0087', 'color-055': '#5f00af', 'color-056': '#5f00df', 'color-057': '#5f00ff', 'color-058': '#5f5f00', 'color-059': '#5f5f5f', 'color-060': '#5f5f87', 'color-061': '#5f5faf', 'color-062': '#5f5fdf', 'color-063': '#5f5fff', 'color-064': '#5f8700', 'color-065': '#5f875f', 'color-066': '#5f8787', 'color-067': '#5f87af', 'color-068': '#5f87df', 'color-069': '#5f87ff', 'color-070': '#5faf00', 'color-071': '#5faf5f', 'color-072': '#5faf87', 'color-073': '#5fafaf', 'color-074': '#5fafdf', 'color-075': '#5fafff', 'color-076': '#5fdf00', 'color-077': '#5fdf5f', 'color-078': '#5fdf87', 'color-079': '#5fdfaf', 'color-080': '#5fdfdf', 'color-081': '#5fdfff', 'color-082': '#5fff00', 'color-083': '#5fff5f', 'color-084': '#5fff87', 'color-085': '#5fffaf', 'color-086': '#5fffdf', 'color-087': '#5fffff', 'color-088': '#870000', 'color-089': '#87005f', 'color-090': '#870087', 'color-091': '#8700af', 'color-092': '#8700df', 'color-093': '#8700ff', 'color-094': '#875f00', 'color-095': '#875f5f', 'color-096': '#875f87', 'color-097': '#875faf', 'color-098': '#875fdf', 'color-099': '#875fff', 'color-100': '#878700', 'color-101': '#87875f', 'color-102': '#878787', 'color-103': '#8787af', 'color-104': '#8787df', 'color-105': '#8787ff', 'color-106': '#87af00', 'color-107': '#87af5f', 'color-108': '#87af87', 'color-109': '#87afaf', 'color-110': '#87afdf', 'color-111': '#87afff', 'color-112': '#87df00', 'color-113': '#87df5f', 'color-114': '#87df87', 'color-115': '#87dfaf', 'color-116': '#87dfdf', 'color-117': '#87dfff', 'color-118': '#87ff00', 'color-119': '#87ff5f', 'color-120': '#87ff87', 'color-121': '#87ffaf', 'color-122': '#87ffdf', 'color-123': '#87ffff', 'color-124': '#af0000', 'color-125': '#af005f', 'color-126': '#af0087', 'color-127': '#af00af', 'color-128': '#af00df', 'color-129': '#af00ff', 'color-130': '#af5f00', 'color-131': '#af5f5f', 'color-132': '#af5f87', 'color-133': '#af5faf', 'color-134': '#af5fdf', 'color-135': '#af5fff', 'color-136': '#af8700', 'color-137': '#af875f', 'color-138': '#af8787', 'color-139': '#af87af', 'color-140': '#af87df', 'color-141': '#af87ff', 'color-142': '#afaf00', 'color-143': '#afaf5f', 'color-144': '#afaf87', 'color-145': '#afafaf', 'color-146': '#afafdf', 'color-147': '#afafff', 'color-148': '#afdf00', 'color-149': '#afdf5f', 'color-150': '#afdf87', 'color-151': '#afdfaf', 'color-152': '#afdfdf', 'color-153': '#afdfff', 'color-154': '#afff00', 'color-155': '#afff5f', 'color-156': '#afff87', 'color-157': '#afffaf', 'color-158': '#afffdf', 'color-159': '#afffff', 'color-160': '#df0000', 'color-161': '#df005f', 'color-162': '#df0087', 'color-163': '#df00af', 'color-164': '#df00df', 'color-165': '#df00ff', 'color-166': '#df5f00', 'color-167': '#df5f5f', 'color-168': '#df5f87', 'color-169': '#df5faf', 'color-170': '#df5fdf', 'color-171': '#df5fff', 'color-172': '#df8700', 'color-173': '#df875f', 'color-174': '#df8787', 'color-175': '#df87af', 'color-176': '#df87df', 'color-177': '#df87ff', 'color-178': '#dfaf00', 'color-179': '#dfaf5f', 'color-180': '#dfaf87', 'color-181': '#dfafaf', 'color-182': '#dfafdf', 'color-183': '#dfafff', 'color-184': '#dfdf00', 'color-185': '#dfdf5f', 'color-186': '#dfdf87', 'color-187': '#dfdfaf', 'color-188': '#dfdfdf', 'color-189': '#dfdfff', 'color-190': '#dfff00', 'color-191': '#dfff5f', 'color-192': '#dfff87', 'color-193': '#dfffaf', 'color-194': '#dfffdf', 'color-195': '#dfffff', 'color-196': '#ff0000', 'color-197': '#ff005f', 'color-198': '#ff0087', 'color-199': '#ff00af', 'color-200': '#ff00df', 'color-201': '#ff00ff', 'color-202': '#ff5f00', 'color-203': '#ff5f5f', 'color-204': '#ff5f87', 'color-205': '#ff5faf', 'color-206': '#ff5fdf', 'color-207': '#ff5fff', 'color-208': '#ff8700', 'color-209': '#ff875f', 'color-210': '#ff8787', 'color-211': '#ff87af', 'color-212': '#ff87df', 'color-213': '#ff87ff', 'color-214': '#ffaf00', 'color-215': '#ffaf5f', 'color-216': '#ffaf87', 'color-217': '#ffafaf', 'color-218': '#ffafdf', 'color-219': '#ffafff', 'color-220': '#ffdf00', 'color-221': '#ffdf5f', 'color-222': '#ffdf87', 'color-223': '#ffdfaf', 'color-224': '#ffdfdf', 'color-225': '#ffdfff', 'color-226': '#ffff00', 'color-227': '#ffff5f', 'color-228': '#ffff87', 'color-229': '#ffffaf', 'color-230': '#ffffdf', 'color-231': '#ffffff', 'color-232': '#080808', 'color-233': '#121212', 'color-234': '#1c1c1c', 'color-235': '#262626', 'color-236': '#303030', 'color-237': '#3a3a3a', 'color-238': '#444444', 'color-239': '#4e4e4e', 'color-240': '#585858', 'color-241': '#606060', 'color-242': '#666666', 'color-243': '#767676', 'color-244': '#808080', 'color-245': '#8a8a8a', 'color-246': '#949494', 'color-247': '#9e9e9e', 'color-248': '#a8a8a8', 'color-249': '#b2b2b2', 'color-250': '#bcbcbc', 'color-251': '#c6c6c6', 'color-252': '#d0d0d0', 'color-253': '#dadada', 'color-254': '#e4e4e4', 'color-255': '#eeeeee'}</em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.COLOR_INDICE_TO_HEX" title="Permalink to this definition">¶</a></dt>
-<dd><p>The classes below exist to properly encapsulate text and other tag classes
-because the order of how tags are opened and closed are important to display in godot.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">RootTag</code><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#RootTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>The Root tag class made to contain other tags.</p>
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#RootTag.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.RootTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">ChildTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ChildTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A node made to be contained.</p>
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ChildTag.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.set_parent">
-<code class="sig-name descname">set_parent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ChildTag.set_parent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag.set_parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">TextTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag</span></code></a></p>
-<p>A BBCodeTag node to output regular text.
-Output: SomeText</p>
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextTag.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.text">
-<code class="sig-name descname">text</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.text" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.parent">
-<code class="sig-name descname">parent</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextTag.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">BBCodeTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BBCodeTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.ChildTag</span></code></a></p>
-<p>Base BBCodeTag node to encapsulate and be encapsulated.</p>
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.code">
-<code class="sig-name descname">code</code><em class="property"> = ''</em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.code" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BBCodeTag.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.parent">
-<code class="sig-name descname">parent</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">UnderlineTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#UnderlineTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag</span></code></a></p>
-<p>A BBCodeTag node for underlined text.
-Output: [u]Underlined Text[/u]</p>
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.code">
-<code class="sig-name descname">code</code><em class="property"> = 'u'</em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.code" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.parent">
-<code class="sig-name descname">parent</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UnderlineTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">BlinkTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BlinkTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag</span></code></a></p>
-<p>A BBCodeTag node for blinking text.
-Output: [blink]Blinking Text[/blink]</p>
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.code">
-<code class="sig-name descname">code</code><em class="property"> = 'blink'</em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.code" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.parent">
-<code class="sig-name descname">parent</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BlinkTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">ColorTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">color_hex</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ColorTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag</span></code></a></p>
-<p>A BBCodeTag node for foreground color.
-Output: [fgcolor=#000000]Colorized Text[/fgcolor]</p>
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.code">
-<code class="sig-name descname">code</code><em class="property"> = 'color'</em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.code" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">color_hex</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#ColorTag.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.color_hex">
-<code class="sig-name descname">color_hex</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.color_hex" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.parent">
-<code class="sig-name descname">parent</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">BGColorTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">color_hex</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#BGColorTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.ColorTag</span></code></a></p>
-<p>A BBCodeTag node for background color.
-Output: [bgcolor=#000000]Colorized Text[/bgcolor]</p>
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.code">
-<code class="sig-name descname">code</code><em class="property"> = 'bgcolor'</em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.code" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.parent">
-<code class="sig-name descname">parent</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.color_hex">
-<code class="sig-name descname">color_hex</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BGColorTag.color_hex" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">UrlTag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">url_data</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#UrlTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag" title="evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.contrib.base_systems.godotwebsocket.text2bbcode.BBCodeTag</span></code></a></p>
-<p>A BBCodeTag node used for urls.
-Output: [url=www.example.com]Child Text[/url]</p>
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.code">
-<code class="sig-name descname">code</code><em class="property"> = 'url'</em><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.code" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">url_data</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#UrlTag.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.url_data">
-<code class="sig-name descname">url_data</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.url_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.parent">
-<code class="sig-name descname">parent</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.parent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.child">
-<code class="sig-name descname">child</code><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.UrlTag.child" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">TextToBBCODEparser</code><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.utils.text2html.html#evennia.utils.text2html.TextToHTMLparser" title="evennia.utils.text2html.TextToHTMLparser"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.utils.text2html.TextToHTMLparser</span></code></a></p>
-<p>This class describes a parser for converting from ANSI to BBCode.
-It inherits from the TextToHTMLParser and overrides the specifics for bbcode.</p>
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.convert_urls">
-<code class="sig-name descname">convert_urls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.convert_urls"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.convert_urls" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts urls within text to bbcode style</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Text to parse</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>text (str)</em> – Processed text</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_links">
-<code class="sig-name descname">sub_mxp_links</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">match</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.sub_mxp_links"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_links" title="Permalink to this definition">¶</a></dt>
-<dd><p>Helper method to be passed to re.sub,
-replaces MXP links with bbcode.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>match</strong> (<em>re.Matchobject</em>) – Match for substitution.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>text (str)</em> – Processed text.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_urls">
-<code class="sig-name descname">sub_mxp_urls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">match</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.sub_mxp_urls"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_mxp_urls" title="Permalink to this definition">¶</a></dt>
-<dd><p>Helper method to be passed to re.sub,
-replaces MXP links with bbcode.
-:param match: Match for substitution.
-:type match: re.Matchobject</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><em>text (str)</em> – Processed text.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_text">
-<code class="sig-name descname">sub_text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">match</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.sub_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.sub_text" title="Permalink to this definition">¶</a></dt>
-<dd><p>Helper method to be passed to re.sub,
-for handling all substitutions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>match</strong> (<em>re.Matchobject</em>) – Match for substitution.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>text (str)</em> – Processed text.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.format_styles">
-<code class="sig-name descname">format_styles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.format_styles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.format_styles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Takes a string with parsed ANSI codes and replaces them with bbcode style tags</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The string to process.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>text (str)</em> – Processed text.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.parse">
-<code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">strip_ansi</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#TextToBBCODEparser.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser.parse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Main access function, converts a text containing ANSI codes
-into html statements.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>text</strong> (<em>str</em>) – Text to process.</p></li>
-<li><p><strong>strip_ansi</strong> (<em>bool</em><em>, </em><em>optional</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>text (str)</em> – Parsed text.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt id="evennia.contrib.base_systems.godotwebsocket.text2bbcode.parse_to_bbcode">
-<code class="sig-prename descclassname">evennia.contrib.base_systems.godotwebsocket.text2bbcode.</code><code class="sig-name descname">parse_to_bbcode</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">strip_ansi=False</em>, <em class="sig-param">parser=&lt;evennia.contrib.base_systems.godotwebsocket.text2bbcode.TextToBBCODEparser object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/base_systems/godotwebsocket/text2bbcode.html#parse_to_bbcode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.base_systems.godotwebsocket.text2bbcode.parse_to_bbcode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parses a string, replace ANSI markup with bbcode</p>
-</dd></dl>
-
-</section>
-
-
-          </div>
-        </div>
-      </div>
-
+      <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -490,7 +573,7 @@ into html statements.</p>
         <li class="right" >
           <a href="evennia.contrib.base_systems.godotwebsocket.test_webclient.html" title="evennia.contrib.base_systems.godotwebsocket.test_webclient"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -500,12 +583,9 @@ into html statements.</p>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.base_systems.godotwebsocket.text2bbcode</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

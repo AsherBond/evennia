@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.game_systems.puzzles.tests &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.game_systems.puzzles.tests</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="tests.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -111,8 +56,12 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">puzzles</span>
 
 
-<div class="viewcode-block" id="TestPuzzles"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TestPuzzles</span><span class="p">(</span><span class="n">BaseEvenniaCommandTest</span><span class="p">):</span>
-<div class="viewcode-block" id="TestPuzzles.setUp"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.setUp">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TestPuzzles">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestPuzzles</span><span class="p">(</span><span class="n">BaseEvenniaCommandTest</span><span class="p">):</span>
+<div class="viewcode-block" id="TestPuzzles.setUp">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.setUp">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">setUp</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">steel</span> <span class="o">=</span> <span class="n">create_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object_typeclass</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;steel&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">flint</span> <span class="o">=</span> <span class="n">create_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object_typeclass</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;flint&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
@@ -123,6 +72,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">flint</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;tag-flint&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s2">&quot;tagcat&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fire</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;tag-fire&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fire</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;tag-fire&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s2">&quot;tagcat&quot;</span><span class="p">)</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_assert_msg_matched</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">regexs</span><span class="p">,</span> <span class="n">re_flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="n">matches</span> <span class="o">=</span> <span class="p">[]</span>
@@ -197,11 +147,16 @@
         <span class="n">msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">puzzles</span><span class="o">.</span><span class="n">CmdArmPuzzle</span><span class="p">(),</span> <span class="n">recipe_dbref</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_assert_msg_matched</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">regexs</span><span class="p">,</span> <span class="n">re_flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
 
-<div class="viewcode-block" id="TestPuzzles.test_cmdset_puzzle"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmdset_puzzle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmdset_puzzle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TestPuzzles.test_cmdset_puzzle">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmdset_puzzle">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmdset_puzzle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;evennia.contrib.game_systems.puzzles.PuzzleSystemCmdSet&quot;</span><span class="p">)</span></div>
+
         <span class="c1"># FIXME: testing nothing, this is just to bump up coverage</span>
 
-<div class="viewcode-block" id="TestPuzzles.test_cmd_puzzle"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmd_puzzle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmd_puzzle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TestPuzzles.test_cmd_puzzle">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmd_puzzle">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmd_puzzle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_assert_no_recipes</span><span class="p">()</span>
 
         <span class="c1"># bad syntax</span>
@@ -250,7 +205,10 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_assert_no_recipes</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TestPuzzles.test_cmd_armpuzzle"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmd_armpuzzle">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmd_armpuzzle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestPuzzles.test_cmd_armpuzzle">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmd_armpuzzle">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmd_armpuzzle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># bad arms</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">call</span><span class="p">(</span>
             <span class="n">puzzles</span><span class="o">.</span><span class="n">CmdArmPuzzle</span><span class="p">(),</span>
@@ -273,11 +231,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_arm</span><span class="p">(</span><span class="n">recipe_dbref</span><span class="p">,</span> <span class="s2">&quot;makefire&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;steel&quot;</span><span class="p">,</span> <span class="s2">&quot;flint&quot;</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_check_room_contents</span><span class="p">({</span><span class="s2">&quot;steel&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;flint&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="n">check_test_tags</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_use</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmdstr</span><span class="p">,</span> <span class="n">expmsg</span><span class="p">):</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">puzzles</span><span class="o">.</span><span class="n">CmdUsePuzzleParts</span><span class="p">(),</span> <span class="n">cmdstr</span><span class="p">,</span> <span class="n">expmsg</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">msg</span>
 
-<div class="viewcode-block" id="TestPuzzles.test_cmd_use"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmd_use">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmd_use</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TestPuzzles.test_cmd_use">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_cmd_use">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_cmd_use</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_use</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Use what?&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_use</span><span class="p">(</span><span class="s2">&quot;something&quot;</span><span class="p">,</span> <span class="s2">&quot;There is no something around.&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_use</span><span class="p">(</span><span class="s2">&quot;steel&quot;</span><span class="p">,</span> <span class="s2">&quot;You have no idea how this can be used&quot;</span><span class="p">)</span>
@@ -366,7 +327,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_use</span><span class="p">(</span><span class="s2">&quot;steel, flint&quot;</span><span class="p">,</span> <span class="s2">&quot;You are a Genius&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_check_room_contents</span><span class="p">({</span><span class="s2">&quot;steel&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;flint&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;fire&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span> <span class="n">check_test_tags</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TestPuzzles.test_puzzleedit"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_puzzleedit">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_puzzleedit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestPuzzles.test_puzzleedit">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_puzzleedit">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_puzzleedit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">recipe_dbref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_good_recipe</span><span class="p">(</span>
             <span class="s2">&quot;makefire&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;steel&quot;</span><span class="p">,</span> <span class="s2">&quot;flint&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;fire&quot;</span><span class="p">],</span> <span class="n">and_destroy_it</span><span class="o">=</span><span class="kc">False</span>
         <span class="p">)</span>
@@ -444,7 +408,10 @@
         <span class="n">_puzzleedit</span><span class="p">(</span><span class="s2">&quot;/delete&quot;</span><span class="p">,</span> <span class="n">recipe_dbref</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;makefire(</span><span class="si">%s</span><span class="s2">) was deleted&quot;</span> <span class="o">%</span> <span class="n">recipe_dbref</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_assert_no_recipes</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="TestPuzzles.test_puzzleedit_add_remove_parts_results"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_puzzleedit_add_remove_parts_results">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_puzzleedit_add_remove_parts_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestPuzzles.test_puzzleedit_add_remove_parts_results">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_puzzleedit_add_remove_parts_results">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_puzzleedit_add_remove_parts_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">recipe_dbref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_good_recipe</span><span class="p">(</span>
             <span class="s2">&quot;makefire&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;steel&quot;</span><span class="p">,</span> <span class="s2">&quot;flint&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;fire&quot;</span><span class="p">],</span> <span class="n">and_destroy_it</span><span class="o">=</span><span class="kc">False</span>
         <span class="p">)</span>
@@ -498,7 +465,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_use</span><span class="p">(</span><span class="s2">&quot;red steel, flint&quot;</span><span class="p">,</span> <span class="s2">&quot;You are a Genius&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_check_room_contents</span><span class="p">({</span><span class="s2">&quot;smoke&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;fire&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="TestPuzzles.test_lspuzzlerecipes_lsarmedpuzzles"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_lspuzzlerecipes_lsarmedpuzzles">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_lspuzzlerecipes_lsarmedpuzzles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestPuzzles.test_lspuzzlerecipes_lsarmedpuzzles">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_lspuzzlerecipes_lsarmedpuzzles">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_lspuzzlerecipes_lsarmedpuzzles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">puzzles</span><span class="o">.</span><span class="n">CmdListPuzzleRecipes</span><span class="p">(),</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_assert_msg_matched</span><span class="p">(</span>
             <span class="n">msg</span><span class="p">,</span> <span class="p">[</span><span class="sa">r</span><span class="s2">&quot;^-+$&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;^Found 0 puzzle\(s\)\.$&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;-+$&quot;</span><span class="p">],</span> <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span>
@@ -554,7 +524,10 @@
             <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="TestPuzzles.test_e2e"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_e2e">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_e2e</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestPuzzles.test_e2e">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_e2e">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_e2e</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">_destroy_objs_in_room</span><span class="p">(</span><span class="n">keys</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">room1</span><span class="o">.</span><span class="n">contents</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
@@ -640,7 +613,10 @@
         <span class="n">expected</span> <span class="o">=</span> <span class="p">{(</span><span class="n">key</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">grp</span><span class="p">)))</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">srs</span><span class="p">)}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_check_room_contents</span><span class="p">(</span><span class="n">expected</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TestPuzzles.test_e2e_accumulative"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_e2e_accumulative">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_e2e_accumulative</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestPuzzles.test_e2e_accumulative">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_e2e_accumulative">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_e2e_accumulative</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">flashlight</span> <span class="o">=</span> <span class="n">create_object</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">object_typeclass</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;flashlight&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="o">.</span><span class="n">location</span>
         <span class="p">)</span>
@@ -953,7 +929,10 @@
             <span class="p">}</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="TestPuzzles.test_e2e_interchangeable_parts_and_results"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_e2e_interchangeable_parts_and_results">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">test_e2e_interchangeable_parts_and_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestPuzzles.test_e2e_interchangeable_parts_and_results">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.puzzles.tests.html#evennia.contrib.game_systems.puzzles.tests.TestPuzzles.test_e2e_interchangeable_parts_and_results">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_e2e_interchangeable_parts_and_results</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># Parts and Results can be used in multiple puzzles</span>
         <span class="n">egg</span> <span class="o">=</span> <span class="n">create_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object_typeclass</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;egg&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
         <span class="n">flour</span> <span class="o">=</span> <span class="n">create_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object_typeclass</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;flour&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">char1</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
@@ -1068,15 +1047,80 @@
         <span class="n">_unbox</span><span class="p">(</span><span class="n">entree_parts</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dough&quot;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_use</span><span class="p">(</span><span class="s2">&quot;boiling water, dough&quot;</span><span class="p">,</span> <span class="s2">&quot;You are a Genius&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_check_room_contents</span><span class="p">({</span><span class="s2">&quot;boiling water&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;pasta&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;boiled egg&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_room_contents</span><span class="p">({</span><span class="s2">&quot;boiling water&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;pasta&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;boiled egg&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1085,18 +1129,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.game_systems.puzzles.tests</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

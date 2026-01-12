@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Parsing command arguments, theory and best practices &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Understanding Color Tags" href="Tutorial-Understanding-Color-Tags.html" />
     <link rel="prev" title="Automatically Tweet game stats" href="Web-Tweeting-Game-Stats.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,106 +33,21 @@
         <li class="right" >
           <a href="Web-Tweeting-Game-Stats.html" title="Automatically Tweet game stats"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" accesskey="U">Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Parsing command arguments, theory and best practices</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Parsing command arguments, theory and best practices</a><ul>
-<li><a class="reference internal" href="#what-are-command-arguments">What are command arguments?</a></li>
-<li><a class="reference internal" href="#working-with-strings">Working with strings</a><ul>
-<li><a class="reference internal" href="#self-args">self.args</a></li>
-<li><a class="reference internal" href="#stripping">Stripping</a></li>
-<li><a class="reference internal" href="#convert-arguments-to-numbers">Convert arguments to numbers</a></li>
-<li><a class="reference internal" href="#working-with-several-arguments">Working with several arguments</a></li>
-<li><a class="reference internal" href="#optional-arguments">Optional arguments</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#evennia-searches">Evennia searches</a><ul>
-<li><a class="reference internal" href="#local-searches">Local searches</a></li>
-<li><a class="reference internal" href="#quiet-searches">Quiet searches</a></li>
-<li><a class="reference internal" href="#global-searches">Global searches</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Web-Tweeting-Game-Stats.html"
-                        title="previous chapter">Automatically Tweet game stats</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Tutorial-Understanding-Color-Tags.html"
-                        title="next chapter">Understanding Color Tags</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Howtos/Tutorial-Parsing-Commands.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Tutorial-Parsing-Commands.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="parsing-command-arguments-theory-and-best-practices">
-<h1>Parsing command arguments, theory and best practices<a class="headerlink" href="#parsing-command-arguments-theory-and-best-practices" title="Permalink to this headline">¶</a></h1>
+<h1>Parsing command arguments, theory and best practices<a class="headerlink" href="#parsing-command-arguments-theory-and-best-practices" title="Link to this heading">¶</a></h1>
 <p>This tutorial will elaborate on the many ways one can parse command arguments.  The first step after
-<a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Adding-Commands.html"><span class="doc std std-doc">adding a command</span></a> usually is to parse its arguments.  There are lots of
+<a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Adding-Commands.html"><span class="std std-doc">adding a command</span></a> usually is to parse its arguments.  There are lots of
 ways to do it, but some are indeed better than others and this tutorial will try to present them.</p>
 <p>If you’re a Python beginner, this tutorial might help you a lot.  If you’re already familiar with
 Python syntax, this tutorial might still contain useful information.  There are still a lot of
@@ -152,7 +61,7 @@ This might be true for others.</p>
 <li><p>Parse argument containing object names.</p></li>
 </ul>
 <section id="what-are-command-arguments">
-<h2>What are command arguments?<a class="headerlink" href="#what-are-command-arguments" title="Permalink to this headline">¶</a></h2>
+<h2>What are command arguments?<a class="headerlink" href="#what-are-command-arguments" title="Link to this heading">¶</a></h2>
 <p>I’m going to talk about command arguments and parsing a lot in this tutorial.  So let’s be sure we
 talk about the same thing before going any further:</p>
 <blockquote>
@@ -181,12 +90,12 @@ need to extract useful information.  We might want to ask the user for a number,
 another character present in the same room.  We’re going to see how to do all that now.</p>
 </section>
 <section id="working-with-strings">
-<h2>Working with strings<a class="headerlink" href="#working-with-strings" title="Permalink to this headline">¶</a></h2>
+<h2>Working with strings<a class="headerlink" href="#working-with-strings" title="Link to this heading">¶</a></h2>
 <p>In object terms, when you write a command in Evennia (when you write the Python class), the
 arguments are stored in the <code class="docutils literal notranslate"><span class="pre">args</span></code> attribute.  Which is to say, inside your <code class="docutils literal notranslate"><span class="pre">func</span></code> method, you can
 access the command arguments in <code class="docutils literal notranslate"><span class="pre">self.args</span></code>.</p>
 <section id="self-args">
-<h3>self.args<a class="headerlink" href="#self-args" title="Permalink to this headline">¶</a></h3>
+<h3>self.args<a class="headerlink" href="#self-args" title="Link to this heading">¶</a></h3>
 <p>To begin with, look at this example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">CmdTest</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 
@@ -219,7 +128,7 @@ parsing:</p>
 you receive from the game server.</p>
 </div></blockquote>
 <p>Notice two things here:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The left space between our command key (“test”, here) and our command argument is not removed.
 That’s why there are two spaces in our output at line 2.  Try entering something like “testok”.</p></li>
 <li><p>Even if you don’t enter command arguments, the command will still be called with an empty string
@@ -262,7 +171,7 @@ read… to debug, anyway.</p>
 Python-specific and could be used in any other project where you have the same need.</p>
 </section>
 <section id="stripping">
-<h3>Stripping<a class="headerlink" href="#stripping" title="Permalink to this headline">¶</a></h3>
+<h3>Stripping<a class="headerlink" href="#stripping" title="Link to this heading">¶</a></h3>
 <p>As you’ve seen, our command arguments are stored with the space.  And the space between the command
 and the arguments is often of no importance.</p>
 <blockquote>
@@ -341,7 +250,7 @@ character, all of them will be stripped from your original string.</p>
 </div></blockquote>
 </section>
 <section id="convert-arguments-to-numbers">
-<h3>Convert arguments to numbers<a class="headerlink" href="#convert-arguments-to-numbers" title="Permalink to this headline">¶</a></h3>
+<h3>Convert arguments to numbers<a class="headerlink" href="#convert-arguments-to-numbers" title="Link to this heading">¶</a></h3>
 <p>As pointed out, <code class="docutils literal notranslate"><span class="pre">self.args</span></code> is a string (of type <code class="docutils literal notranslate"><span class="pre">str</span></code>).  What if we want the user to enter a
 number?</p>
 <p>Let’s take a very simple example: creating a command, <code class="docutils literal notranslate"><span class="pre">roll</span></code>, that allows to roll a six-sided die.
@@ -527,7 +436,7 @@ these two actions are best kept isolated.</p>
 </div></blockquote>
 </section>
 <section id="working-with-several-arguments">
-<h3>Working with several arguments<a class="headerlink" href="#working-with-several-arguments" title="Permalink to this headline">¶</a></h3>
+<h3>Working with several arguments<a class="headerlink" href="#working-with-several-arguments" title="Link to this heading">¶</a></h3>
 <p>Often a command expects several arguments.  So far, in our example with the “roll” command, we only
 expect one argument: a number and just a number.  What if we want the user to specify several
 numbers?  First the number of dice to roll, then the guess?</p>
@@ -701,7 +610,7 @@ as well:</p>
 </div>
 </section>
 <section id="optional-arguments">
-<h3>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h3>
+<h3>Optional arguments<a class="headerlink" href="#optional-arguments" title="Link to this heading">¶</a></h3>
 <p>Sometimes, you’ll come across commands that have optional arguments.  These arguments are not
 necessary but they can be set if more information is needed.  I will not provide the entire command
 code here but just enough code to show the mechanism in Python:</p>
@@ -739,7 +648,7 @@ set parsing however you like.</p>
 </section>
 </section>
 <section id="evennia-searches">
-<h2>Evennia searches<a class="headerlink" href="#evennia-searches" title="Permalink to this headline">¶</a></h2>
+<h2>Evennia searches<a class="headerlink" href="#evennia-searches" title="Link to this heading">¶</a></h2>
 <p>After this quick tour of some <code class="docutils literal notranslate"><span class="pre">str</span></code> methods, we’ll take a look at some Evennia-specific features
 that you won’t find in standard Python.</p>
 <p>One very common task is to convert a <code class="docutils literal notranslate"><span class="pre">str</span></code> into an Evennia object.  Take the previous example:
@@ -747,10 +656,10 @@ having <code class="docutils literal notranslate"><span class="pre">&quot;book&q
 about… what is this <code class="docutils literal notranslate"><span class="pre">&quot;book&quot;</span></code>?</p>
 <p>To get an object from a string, we perform an Evennia search.  Evennia provides a <code class="docutils literal notranslate"><span class="pre">search</span></code> method on
 all typeclassed objects (you will most likely use the one on characters or accounts).  This method
-supports a very wide array of arguments and has <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Searching-Things.html"><span class="doc std std-doc">its own tutorial</span></a>.
+supports a very wide array of arguments and has <a class="reference internal" href="Beginner-Tutorial/Part1/Beginner-Tutorial-Searching-Things.html"><span class="std std-doc">its own tutorial</span></a>.
 Some examples of useful cases follow:</p>
 <section id="local-searches">
-<h3>Local searches<a class="headerlink" href="#local-searches" title="Permalink to this headline">¶</a></h3>
+<h3>Local searches<a class="headerlink" href="#local-searches" title="Link to this heading">¶</a></h3>
 <p>When an account or a character enters a command, the account or character is found in the <code class="docutils literal notranslate"><span class="pre">caller</span></code>
 attribute.  Therefore, <code class="docutils literal notranslate"><span class="pre">self.caller</span></code> will contain an account or a character (or a session if that’s
 a session command, though that’s not as frequent).  The <code class="docutils literal notranslate"><span class="pre">search</span></code> method will be available on this
@@ -787,7 +696,7 @@ return <code class="docutils literal notranslate"><span class="pre">None</span><
 (another character, an object, an exit…).</p>
 </section>
 <section id="quiet-searches">
-<h3>Quiet searches<a class="headerlink" href="#quiet-searches" title="Permalink to this headline">¶</a></h3>
+<h3>Quiet searches<a class="headerlink" href="#quiet-searches" title="Link to this heading">¶</a></h3>
 <p>By default, Evennia will handle the case when more than one match is found in the search.  The user
 will be asked to narrow down and re-enter the command.  You can, however, ask to be returned the
 list of matches and handle this list yourself:</p>
@@ -809,7 +718,7 @@ Notice in this example, <code class="docutils literal notranslate"><span class="
 found, <code class="docutils literal notranslate"><span class="pre">self.obj</span></code> will contain the first one, even if more matches are available.</p>
 </section>
 <section id="global-searches">
-<h3>Global searches<a class="headerlink" href="#global-searches" title="Permalink to this headline">¶</a></h3>
+<h3>Global searches<a class="headerlink" href="#global-searches" title="Link to this heading">¶</a></h3>
 <p>By default, Evennia will perform a local search, that is, a search limited by the location in which
 the caller is.  If you want to perform a global search (search in the entire database), just set the
 <code class="docutils literal notranslate"><span class="pre">global_search</span></code> keyword argument to <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
@@ -821,7 +730,7 @@ the caller is.  If you want to perform a global search (search in the entire dat
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
 <p>Parsing command arguments is vital for most game designers.  If you design “intelligent” commands,
 users should be able to guess how to use them without reading the help, or with a very quick peek at
 said help.  Good commands are intuitive to users.  Better commands do what they’re told to do.  For
@@ -835,12 +744,115 @@ code.</p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parsing command arguments, theory and best practices</a><ul>
+<li><a class="reference internal" href="#what-are-command-arguments">What are command arguments?</a></li>
+<li><a class="reference internal" href="#working-with-strings">Working with strings</a><ul>
+<li><a class="reference internal" href="#self-args">self.args</a></li>
+<li><a class="reference internal" href="#stripping">Stripping</a></li>
+<li><a class="reference internal" href="#convert-arguments-to-numbers">Convert arguments to numbers</a></li>
+<li><a class="reference internal" href="#working-with-several-arguments">Working with several arguments</a></li>
+<li><a class="reference internal" href="#optional-arguments">Optional arguments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia-searches">Evennia searches</a><ul>
+<li><a class="reference internal" href="#local-searches">Local searches</a></li>
+<li><a class="reference internal" href="#quiet-searches">Quiet searches</a></li>
+<li><a class="reference internal" href="#global-searches">Global searches</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Web-Tweeting-Game-Stats.html"
+                          title="previous chapter">Automatically Tweet game stats</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Tutorial-Understanding-Color-Tags.html"
+                          title="next chapter">Understanding Color Tags</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Howtos/Tutorial-Parsing-Commands.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -855,17 +867,14 @@ code.</p>
         <li class="right" >
           <a href="Web-Tweeting-Game-Stats.html" title="Automatically Tweet game stats"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Howtos-Overview.html" >Tutorials and How-To’s</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Parsing command arguments, theory and best practices</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

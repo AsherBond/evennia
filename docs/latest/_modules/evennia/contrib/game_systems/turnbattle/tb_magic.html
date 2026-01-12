@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.contrib.game_systems.turnbattle.tb_magic &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.game_systems.turnbattle.tb_magic</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../../index.html">
-              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="tb_magic.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -189,8 +134,12 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="MagicCombatRules"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MagicCombatRules</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">BasicCombatRules</span><span class="p">):</span>
-<div class="viewcode-block" id="MagicCombatRules.spell_healing"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules.spell_healing">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">spell_healing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caster</span><span class="p">,</span> <span class="n">spell_name</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="MagicCombatRules">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MagicCombatRules</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">BasicCombatRules</span><span class="p">):</span>
+<div class="viewcode-block" id="MagicCombatRules.spell_healing">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules.spell_healing">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">spell_healing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caster</span><span class="p">,</span> <span class="n">spell_name</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Spell that restores HP to a target or targets.</span>
 
@@ -222,7 +171,10 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_in_combat</span><span class="p">(</span><span class="n">caster</span><span class="p">):</span>  <span class="c1"># Spend action if in combat</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">spend_action</span><span class="p">(</span><span class="n">caster</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">action_name</span><span class="o">=</span><span class="s2">&quot;cast&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MagicCombatRules.spell_attack"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules.spell_attack">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">spell_attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caster</span><span class="p">,</span> <span class="n">spell_name</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MagicCombatRules.spell_attack">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules.spell_attack">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">spell_attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caster</span><span class="p">,</span> <span class="n">spell_name</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Spell that deals damage in combat. Similar to resolve_attack.</span>
 
@@ -315,7 +267,10 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_in_combat</span><span class="p">(</span><span class="n">caster</span><span class="p">):</span>  <span class="c1"># Spend action if in combat</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">spend_action</span><span class="p">(</span><span class="n">caster</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">action_name</span><span class="o">=</span><span class="s2">&quot;cast&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MagicCombatRules.spell_conjure"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules.spell_conjure">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">spell_conjure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caster</span><span class="p">,</span> <span class="n">spell_name</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MagicCombatRules.spell_conjure">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.MagicCombatRules.spell_conjure">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">spell_conjure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caster</span><span class="p">,</span> <span class="n">spell_name</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Spell that creates an object.</span>
 
@@ -351,7 +306,9 @@
         <span class="c1"># Message the room to announce the creation of the object</span>
         <span class="n">caster</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span>
             <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> casts </span><span class="si">%s</span><span class="s2">, and </span><span class="si">%s</span><span class="s2"> appears!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">caster</span><span class="p">,</span> <span class="n">spell_name</span><span class="p">,</span> <span class="n">conjured_obj</span><span class="p">)</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
+
 
 
 <span class="n">COMBAT_RULES</span> <span class="o">=</span> <span class="n">MagicCombatRules</span><span class="p">()</span>
@@ -461,7 +418,9 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="TBMagicCharacter"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.TBMagicCharacter">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TBMagicCharacter</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">TBBasicCharacter</span><span class="p">):</span>
+<div class="viewcode-block" id="TBMagicCharacter">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.TBMagicCharacter">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TBMagicCharacter</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">TBBasicCharacter</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A character able to participate in turn-based combat. Has attributes for current</span>
 <span class="sd">    and maximum HP, access to combat commands and magic.</span>
@@ -470,7 +429,9 @@
 
     <span class="n">rules</span> <span class="o">=</span> <span class="n">COMBAT_RULES</span>
 
-<div class="viewcode-block" id="TBMagicCharacter.at_object_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.TBMagicCharacter.at_object_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="TBMagicCharacter.at_object_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.TBMagicCharacter.at_object_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_object_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called once, when this object is first created. This is the</span>
 <span class="sd">        normal hook to overload for most object types.</span>
@@ -485,7 +446,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">hp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_hp</span>  <span class="c1"># Set current HP to maximum</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">spells_known</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Set empty spells known list</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_mp</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Set maximum MP to 20</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">mp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_mp</span>  <span class="c1"># Set current MP to maximum</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">mp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_mp</span>  <span class="c1"># Set current MP to maximum</span></div>
+</div>
+
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -495,7 +458,9 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="TBMagicTurnHandler"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.TBMagicTurnHandler">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">TBMagicTurnHandler</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">TBBasicTurnHandler</span><span class="p">):</span>
+<div class="viewcode-block" id="TBMagicTurnHandler">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.TBMagicTurnHandler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TBMagicTurnHandler</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">TBBasicTurnHandler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the script that handles the progression of combat through turns.</span>
 <span class="sd">    On creation (when a fight is started) it adds all combat-ready characters</span>
@@ -510,6 +475,7 @@
     <span class="n">rules</span> <span class="o">=</span> <span class="n">COMBAT_RULES</span></div>
 
 
+
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">----------------------------------------------------------------------------</span>
 <span class="sd">COMMANDS START HERE</span>
@@ -517,7 +483,9 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="CmdFight"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdFight">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdFight</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdFight</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdFight">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdFight">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdFight</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdFight</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Starts a fight with everyone in the same room as you.</span>
 
@@ -536,7 +504,10 @@
     <span class="n">combat_handler_class</span> <span class="o">=</span> <span class="n">TBMagicTurnHandler</span></div>
 
 
-<div class="viewcode-block" id="CmdAttack"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdAttack">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdAttack</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdAttack</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdAttack">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdAttack">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdAttack</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdAttack</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Attacks another character.</span>
 
@@ -553,7 +524,10 @@
     <span class="n">rules</span> <span class="o">=</span> <span class="n">COMBAT_RULES</span></div>
 
 
-<div class="viewcode-block" id="CmdPass"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdPass">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdPass</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdPass</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdPass">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdPass">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdPass</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdPass</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Passes on your turn.</span>
 
@@ -571,7 +545,10 @@
     <span class="n">rules</span> <span class="o">=</span> <span class="n">COMBAT_RULES</span></div>
 
 
-<div class="viewcode-block" id="CmdDisengage"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdDisengage">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdDisengage</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdDisengage</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdDisengage">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdDisengage">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdDisengage</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdDisengage</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Passes your turn and attempts to end combat.</span>
 
@@ -590,7 +567,10 @@
     <span class="n">rules</span> <span class="o">=</span> <span class="n">COMBAT_RULES</span></div>
 
 
-<div class="viewcode-block" id="CmdLearnSpell"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdLearnSpell">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdLearnSpell</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdLearnSpell">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdLearnSpell">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdLearnSpell</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Learn a magic spell.</span>
 
@@ -619,7 +599,9 @@
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;learnspell&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;magic&quot;</span>
 
-<div class="viewcode-block" id="CmdLearnSpell.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdLearnSpell.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdLearnSpell.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdLearnSpell.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This performs the actual command.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -658,10 +640,14 @@
 <span class="sd">        You will almost definitely want to replace this with your own system</span>
 <span class="sd">        for learning spells, perhaps tied to character advancement or finding</span>
 <span class="sd">        items in the game world that spells can be learned from.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div></div>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdCast"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdCast">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdCast</span><span class="p">(</span><span class="n">MuxCommand</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdCast">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdCast">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdCast</span><span class="p">(</span><span class="n">MuxCommand</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Cast a magic spell that you know, provided you have the MP</span>
 <span class="sd">    to spend on its casting.</span>
@@ -679,7 +665,9 @@
 
     <span class="n">rules</span> <span class="o">=</span> <span class="n">COMBAT_RULES</span>
 
-<div class="viewcode-block" id="CmdCast.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdCast.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdCast.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdCast.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This performs the actual command.</span>
 
@@ -852,10 +840,14 @@
                 <span class="n">caller</span><span class="p">,</span> <span class="n">spell_to_cast</span><span class="p">,</span> <span class="n">spell_targets</span><span class="p">,</span> <span class="n">spelldata</span><span class="p">[</span><span class="s2">&quot;cost&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
             <span class="p">)</span>
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-            <span class="n">log_trace</span><span class="p">(</span><span class="s2">&quot;Error in callback for spell: </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">spell_to_cast</span><span class="p">)</span></div></div>
+            <span class="n">log_trace</span><span class="p">(</span><span class="s2">&quot;Error in callback for spell: </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">spell_to_cast</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdRest"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdRest">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdRest</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdRest">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdRest">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdRest</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Recovers damage and restores MP.</span>
 
@@ -871,7 +863,9 @@
 
     <span class="n">rules</span> <span class="o">=</span> <span class="n">COMBAT_RULES</span>
 
-<div class="viewcode-block" id="CmdRest.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdRest.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdRest.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdRest.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s2">&quot;This performs the actual command.&quot;</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rules</span><span class="o">.</span><span class="n">is_in_combat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">):</span>  <span class="c1"># If you&#39;re in combat</span>
@@ -880,11 +874,15 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">hp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_hp</span>  <span class="c1"># Set current HP to maximum</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">mp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_mp</span>  <span class="c1"># Set current MP to maximum</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> rests to recover HP and MP.&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">msg_contents</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> rests to recover HP and MP.&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="p">)</span></div>
+</div>
+
         <span class="c1"># You&#39;ll probably want to replace this with your own system for recovering HP and MP.</span>
 
 
-<div class="viewcode-block" id="CmdStatus"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdStatus">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdStatus</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdStatus">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdStatus">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdStatus</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Gives combat information.</span>
 
@@ -898,7 +896,9 @@
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;status&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;combat&quot;</span>
 
-<div class="viewcode-block" id="CmdStatus.func"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdStatus.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdStatus.func">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdStatus.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s2">&quot;This performs the actual command.&quot;</span>
         <span class="n">char</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
 
@@ -912,10 +912,14 @@
         <span class="n">char</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span>
             <span class="s2">&quot;You have </span><span class="si">%i</span><span class="s2"> / </span><span class="si">%i</span><span class="s2"> HP and </span><span class="si">%i</span><span class="s2"> / </span><span class="si">%i</span><span class="s2"> MP.&quot;</span>
             <span class="o">%</span> <span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">hp</span><span class="p">,</span> <span class="n">char</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_hp</span><span class="p">,</span> <span class="n">char</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">mp</span><span class="p">,</span> <span class="n">char</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">max_mp</span><span class="p">)</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdCombatHelp"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdCombatHelp">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdCombatHelp</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdCombatHelp</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdCombatHelp">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.CmdCombatHelp">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdCombatHelp</span><span class="p">(</span><span class="n">tb_basic</span><span class="o">.</span><span class="n">CmdCombatHelp</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    View help or a list of topics</span>
 
@@ -929,14 +933,19 @@
 <span class="sd">    &quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="BattleCmdSet"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.BattleCmdSet">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BattleCmdSet</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CharacterCmdSet</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BattleCmdSet">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.BattleCmdSet">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BattleCmdSet</span><span class="p">(</span><span class="n">default_cmds</span><span class="o">.</span><span class="n">CharacterCmdSet</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This command set includes all the commmands used in the battle system.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;DefaultCharacter&quot;</span>
 
-<div class="viewcode-block" id="BattleCmdSet.at_cmdset_creation"><a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.BattleCmdSet.at_cmdset_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BattleCmdSet.at_cmdset_creation">
+<a class="viewcode-back" href="../../../../../api/evennia.contrib.game_systems.turnbattle.tb_magic.html#evennia.contrib.game_systems.turnbattle.tb_magic.BattleCmdSet.at_cmdset_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Populates the cmdset</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -948,15 +957,80 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdCombatHelp</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdLearnSpell</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdCast</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdStatus</span><span class="p">())</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">CmdStatus</span><span class="p">())</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -965,18 +1039,15 @@
         <li class="right" >
           <a href="../../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.game_systems.turnbattle.tb_magic</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

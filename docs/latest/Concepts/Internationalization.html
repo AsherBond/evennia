@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Internationalization &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Text Encodings" href="Text-Encodings.html" />
     <link rel="prev" title="Messages varying per receiver" href="Change-Message-Per-Receiver.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,97 +33,19 @@
         <li class="right" >
           <a href="Change-Message-Per-Receiver.html" title="Messages varying per receiver"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Concepts-Overview.html" accesskey="U">Core Concepts</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Internationalization</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Internationalization</a><ul>
-<li><a class="reference internal" href="#changing-server-language">Changing server language</a></li>
-<li><a class="reference internal" href="#translating-evennia">Translating Evennia</a><ul>
-<li><a class="reference internal" href="#hints-on-translation">Hints on translation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#marking-strings-in-code-for-translation">Marking Strings in Code for Translation</a><ul>
-<li><a class="reference internal" href="#formatting-considerations">Formatting Considerations</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Change-Message-Per-Receiver.html"
-                        title="previous chapter">Messages varying per receiver</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Text-Encodings.html"
-                        title="next chapter">Text Encodings</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Concepts/Internationalization.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Internationalization.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="internationalization">
-<h1>Internationalization<a class="headerlink" href="#internationalization" title="Permalink to this headline">¶</a></h1>
+<h1>Internationalization<a class="headerlink" href="#internationalization" title="Link to this heading">¶</a></h1>
 <p><em>Internationalization</em> (often abbreviated <em>i18n</em> since there are 18 characters
 between the first “i” and the last “n” in that word) allows Evennia’s core
 server to return texts in other languages than English - without anyone having
@@ -139,11 +55,6 @@ depending on when a given language was last updated. Below are all languages
 (besides English) with some level of support. Generally, any language not
 updated after Sept 2022 will be missing some translations.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 43%" />
-<col style="width: 27%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Language Code</p></th>
 <th class="head"><p>Language</p></th>
@@ -201,7 +112,7 @@ updated after Sept 2022 will be missing some translations.</p>
 folder. Read below if you want to help improve an existing translation of
 contribute a new one.</p>
 <section id="changing-server-language">
-<h2>Changing server language<a class="headerlink" href="#changing-server-language" title="Permalink to this headline">¶</a></h2>
+<h2>Changing server language<a class="headerlink" href="#changing-server-language" title="Link to this heading">¶</a></h2>
 <p>Change language by adding the following to your <code class="docutils literal notranslate"><span class="pre">mygame/server/conf/settings.py</span></code>
 file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">USE_I18N</span> <span class="o">=</span> <span class="kc">True</span>
@@ -231,7 +142,7 @@ available on Github as <a class="reference external" href="https://github.com/ml
 </aside>
 </section>
 <section id="translating-evennia">
-<h2>Translating Evennia<a class="headerlink" href="#translating-evennia" title="Permalink to this headline">¶</a></h2>
+<h2>Translating Evennia<a class="headerlink" href="#translating-evennia" title="Link to this heading">¶</a></h2>
 <p>Translations are found in the core <code class="docutils literal notranslate"><span class="pre">evennia/</span></code> library, under
 <code class="docutils literal notranslate"><span class="pre">evennia/evennia/locale/</span></code>. You must make sure to have cloned this repository
 from <a class="reference external" href="https://github.com/evennia/evennia/blob/main/evennia">Evennia’s github</a> before you can proceed.</p>
@@ -240,7 +151,7 @@ has translated it yet.  Alternatively you might have the language but find the
 translation bad … You are welcome to help improve the situation!</p>
 <p>To start a new translation you need to first have cloned the Evennia repository
 with GIT and activated a python virtualenv as described on the
-<a class="reference internal" href="../Setup/Installation.html"><span class="doc std std-doc">Setup Quickstart</span></a> page.</p>
+<a class="reference internal" href="../Setup/Installation.html"><span class="std std-doc">Setup Quickstart</span></a> page.</p>
 <p>Go to <code class="docutils literal notranslate"><span class="pre">evennia/evennia/</span></code> - that is, not your game dir, but inside the <code class="docutils literal notranslate"><span class="pre">evennia/</span></code>
 repo itself. If you see the <code class="docutils literal notranslate"><span class="pre">locale/</span></code> folder you are in the right place.  Make
 sure your <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> is active so the <code class="docutils literal notranslate"><span class="pre">evennia</span></code> command is available. Then run</p>
@@ -280,7 +191,7 @@ header fields and should usually note who did the translation.</p>
 Make a PR against Evennia with the updated <code class="docutils literal notranslate"><span class="pre">django.po</span></code> file. Less ideally (if git is
 not your thing) you can also attach it to a new post in our forums.</p>
 <section id="hints-on-translation">
-<h3>Hints on translation<a class="headerlink" href="#hints-on-translation" title="Permalink to this headline">¶</a></h3>
+<h3>Hints on translation<a class="headerlink" href="#hints-on-translation" title="Link to this heading">¶</a></h3>
 <p>Many of the translation strings use <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> placeholders. This is because they
 are to be used in <code class="docutils literal notranslate"><span class="pre">.format()</span></code> python operations. While you can change the
 <em>order</em>  of these if it makes more sense in your language, you must <em>not</em>
@@ -310,14 +221,14 @@ Swedish:  &quot;Fel medan cmdset laddades: Ingen cmdset-klass med namn &#39;{cla
 </section>
 </section>
 <section id="marking-strings-in-code-for-translation">
-<h2>Marking Strings in Code for Translation<a class="headerlink" href="#marking-strings-in-code-for-translation" title="Permalink to this headline">¶</a></h2>
+<h2>Marking Strings in Code for Translation<a class="headerlink" href="#marking-strings-in-code-for-translation" title="Link to this heading">¶</a></h2>
 <p>If you modify the Python module code, you can mark strings for translation by passing them to the <code class="docutils literal notranslate"><span class="pre">gettext()</span></code> method. In Evennia, this is usually imported as <code class="docutils literal notranslate"><span class="pre">_()</span></code> for convenience:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.utils.translation</span><span class="w"> </span><span class="kn">import</span> <span class="n">gettext</span> <span class="k">as</span> <span class="n">_</span>
 <span class="n">string</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Text to translate&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="formatting-considerations">
-<h3>Formatting Considerations<a class="headerlink" href="#formatting-considerations" title="Permalink to this headline">¶</a></h3>
+<h3>Formatting Considerations<a class="headerlink" href="#formatting-considerations" title="Link to this heading">¶</a></h3>
 <p>When using formatted strings, ensure that you pass the “raw” string to <code class="docutils literal notranslate"><span class="pre">gettext</span></code> for translation first and then format the output. Otherwise, placeholders will be replaced before translation occurs, preventing the correct string from being found in the <code class="docutils literal notranslate"><span class="pre">.po</span></code> file. It’s also recommended to use named placeholders (e.g., <code class="docutils literal notranslate"><span class="pre">{char}</span></code>) instead of positional ones (e.g., <code class="docutils literal notranslate"><span class="pre">{}</span></code>) for better readability and maintainability.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># incorrect:</span>
 <span class="n">string2</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">{char}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">char</span><span class="o">=</span><span class="n">caller</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
@@ -336,12 +247,108 @@ Swedish:  &quot;Fel medan cmdset laddades: Ingen cmdset-klass med namn &#39;{cla
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Internationalization</a><ul>
+<li><a class="reference internal" href="#changing-server-language">Changing server language</a></li>
+<li><a class="reference internal" href="#translating-evennia">Translating Evennia</a><ul>
+<li><a class="reference internal" href="#hints-on-translation">Hints on translation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#marking-strings-in-code-for-translation">Marking Strings in Code for Translation</a><ul>
+<li><a class="reference internal" href="#formatting-considerations">Formatting Considerations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Change-Message-Per-Receiver.html"
+                          title="previous chapter">Messages varying per receiver</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Text-Encodings.html"
+                          title="next chapter">Text Encodings</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Concepts/Internationalization.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -356,17 +363,14 @@ Swedish:  &quot;Fel medan cmdset laddades: Ingen cmdset-klass med namn &#39;{cla
         <li class="right" >
           <a href="Change-Message-Per-Receiver.html" title="Messages varying per receiver"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Concepts-Overview.html" >Core Concepts</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Internationalization</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Traits &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Batch processor examples" href="Contrib-Batchprocessor.html" />
     <link rel="prev" title="Roleplaying base system for Evennia" href="Contrib-RPSystem.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,114 +33,19 @@
         <li class="right" >
           <a href="Contrib-RPSystem.html" title="Roleplaying base system for Evennia"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" accesskey="U">Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Traits</a></li> 
       </ul>
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Traits</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a><ul>
-<li><a class="reference internal" href="#traits-with-traithandler">Traits with TraitHandler</a></li>
-<li><a class="reference internal" href="#traitproperties">TraitProperties</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-traits">Using traits</a><ul>
-<li><a class="reference internal" href="#relating-traits-to-one-another">Relating traits to one another</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#trait-types">Trait types</a><ul>
-<li><a class="reference internal" href="#trait">Trait</a></li>
-<li><a class="reference internal" href="#static-trait">Static trait</a></li>
-<li><a class="reference internal" href="#counter">Counter</a><ul>
-<li><a class="reference internal" href="#descs">.descs</a></li>
-<li><a class="reference internal" href="#rate">.rate</a></li>
-<li><a class="reference internal" href="#percent">.percent()</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#gauge">Gauge</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#expanding-with-your-own-traits">Expanding with your own Traits</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#as-traitproperty">as TraitProperty</a><ul>
-<li><a class="reference internal" href="#adding-additional-traithandlers">Adding additional TraitHandlers</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Contrib-RPSystem.html"
-                        title="previous chapter">Roleplaying base system for Evennia</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Batchprocessor.html"
-                        title="next chapter">Batch processor examples</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Contribs/Contrib-Traits.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Contrib-Traits.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="traits">
-<h1>Traits<a class="headerlink" href="#traits" title="Permalink to this headline">¶</a></h1>
+<h1>Traits<a class="headerlink" href="#traits" title="Link to this heading">¶</a></h1>
 <p>Contribution by Griatch 2020, based on code by Whitenoise and Ainneve contribs, 2014</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">Trait</span></code> represents a modifiable property on (usually) a Character. They can
 be used to represent everything from attributes (str, agi etc) to skills
@@ -158,7 +57,7 @@ healed).</p>
 <p>Traits use Evennia Attributes under the hood, making them persistent (they survive
 a server reload/reboot).</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
 <p>Traits are always added to a typeclass, such as the Character class.</p>
 <p>There are two ways to set up Traits on a typeclass. The first sets up the <code class="docutils literal notranslate"><span class="pre">TraitHandler</span></code>
 as a property <code class="docutils literal notranslate"><span class="pre">.traits</span></code> on your class and you then access traits as e.g. <code class="docutils literal notranslate"><span class="pre">.traits.strength</span></code>.
@@ -166,7 +65,7 @@ The other alternative uses a <code class="docutils literal notranslate"><span cl
 as e.g. <code class="docutils literal notranslate"><span class="pre">.strength</span></code>. This solution also uses the <code class="docutils literal notranslate"><span class="pre">TraitHandler</span></code>, but you don’t need to
 define it explicitly. You can combine both styles if you like.</p>
 <section id="traits-with-traithandler">
-<h3>Traits with TraitHandler<a class="headerlink" href="#traits-with-traithandler" title="Permalink to this headline">¶</a></h3>
+<h3>Traits with TraitHandler<a class="headerlink" href="#traits-with-traithandler" title="Link to this heading">¶</a></h3>
 <p>Here’s an example for adding the TraitHandler to the Character class:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mygame/typeclasses/objects.py</span>
 
@@ -198,7 +97,7 @@ print the trait etc. The <code class="docutils literal notranslate"><span class=
 of trait this is (see below).</p>
 </section>
 <section id="traitproperties">
-<h3>TraitProperties<a class="headerlink" href="#traitproperties" title="Permalink to this headline">¶</a></h3>
+<h3>TraitProperties<a class="headerlink" href="#traitproperties" title="Link to this heading">¶</a></h3>
 <p>Using <code class="docutils literal notranslate"><span class="pre">TraitProperties</span></code> makes the trait available directly on the class, much like Django model
 fields. The drawback is that you must make sure that the name of your Traits don’t collide with any
 other properties/methods on your class.</p>
@@ -231,7 +130,7 @@ the same handler (<code class="docutils literal notranslate"><span class="pre">.
 </section>
 </section>
 <section id="using-traits">
-<h2>Using traits<a class="headerlink" href="#using-traits" title="Permalink to this headline">¶</a></h2>
+<h2>Using traits<a class="headerlink" href="#using-traits" title="Link to this heading">¶</a></h2>
 <p>A trait are entities added to the traithandler (if you use <code class="docutils literal notranslate"><span class="pre">TraitProperty</span></code> the handler is just created under
 the hood) after which one can access it as a property on the handler (similarly to how you can do
 .db.attrname for Attributes in Evennia).</p>
@@ -277,7 +176,7 @@ each other depends on the trait type.</p>
 </pre></div>
 </div>
 <section id="relating-traits-to-one-another">
-<h3>Relating traits to one another<a class="headerlink" href="#relating-traits-to-one-another" title="Permalink to this headline">¶</a></h3>
+<h3>Relating traits to one another<a class="headerlink" href="#relating-traits-to-one-another" title="Link to this heading">¶</a></h3>
 <p>From a trait you can access its own Traithandler as <code class="docutils literal notranslate"><span class="pre">.traithandler</span></code>. You can
 also find another trait on the same handler by using the
 <code class="docutils literal notranslate"><span class="pre">Trait.get_trait(&quot;traitname&quot;)</span></code> method.</p>
@@ -291,11 +190,11 @@ can use this to make traits that depend on each other.</p>
 <p>For example, you could picture making a Trait that is the sum of the values of
 two other traits and capped by the value of a third trait. Such complex
 interactions are common in RPG rule systems but are by definition game specific.</p>
-<p>See an example in the section about <a class="reference internal" href="#expanding-with-your-own-traits"><span class="std std-doc">making your own Trait classes</span></a>.</p>
+<p>See an example in the section about <a class="reference internal" href="#expanding-with-your-own-traits">making your own Trait classes</a>.</p>
 </section>
 </section>
 <section id="trait-types">
-<h2>Trait types<a class="headerlink" href="#trait-types" title="Permalink to this headline">¶</a></h2>
+<h2>Trait types<a class="headerlink" href="#trait-types" title="Link to this heading">¶</a></h2>
 <p>All default traits have a read-only <code class="docutils literal notranslate"><span class="pre">.value</span></code> property that shows the relevant or
 ‘current’ value of the trait. Exactly what this means depends on the type of trait.</p>
 <p>Traits can also be combined to do arithmetic with their .value, if both have a
@@ -319,7 +218,7 @@ all sorts of rule-resolution.</p>
 </pre></div>
 </div>
 <section id="trait">
-<h3>Trait<a class="headerlink" href="#trait" title="Permalink to this headline">¶</a></h3>
+<h3>Trait<a class="headerlink" href="#trait" title="Link to this heading">¶</a></h3>
 <p>A single value of any type.</p>
 <p>This is the ‘base’ Trait, meant to inherit from if you want to invent
 trait-types from scratch (most of the time you’ll probably inherit from some of
@@ -339,7 +238,7 @@ like a glorified Attribute.</p>
 </div>
 </section>
 <section id="static-trait">
-<h3>Static trait<a class="headerlink" href="#static-trait" title="Permalink to this headline">¶</a></h3>
+<h3>Static trait<a class="headerlink" href="#static-trait" title="Link to this heading">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">base</span> <span class="pre">+</span> <span class="pre">mod</span></code></p>
 <p>The static trait has a <code class="docutils literal notranslate"><span class="pre">base</span></code> value and an optional <code class="docutils literal notranslate"><span class="pre">mod</span></code>-ifier. A typical use
 of a static trait would be a Strength stat or Skill value. That is, something
@@ -360,7 +259,7 @@ that varies slowly or not at all, and which may be modified in-place.</p>
 </div>
 </section>
 <section id="counter">
-<h3>Counter<a class="headerlink" href="#counter" title="Permalink to this headline">¶</a></h3>
+<h3>Counter<a class="headerlink" href="#counter" title="Link to this heading">¶</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>min/unset     base    base+mod                       max/unset
 |--------------|--------|---------X--------X------------|
                               current    value
@@ -394,7 +293,7 @@ remove it. A suggested use for a Counter Trait would be to track skill values.</
 </div>
 <p>Counters have some extra properties:</p>
 <section id="descs">
-<h4>.descs<a class="headerlink" href="#descs" title="Permalink to this headline">¶</a></h4>
+<h4>.descs<a class="headerlink" href="#descs" title="Link to this heading">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">descs</span></code> property is a dict <code class="docutils literal notranslate"><span class="pre">{upper_bound:text_description}</span></code>. This allows for easily
 storing a more human-friendly description of the current value in the
 interval. Here is an example for skill values between 0 and 10:</p>
@@ -422,7 +321,7 @@ By calling <code class="docutils literal notranslate"><span class="pre">.desc()<
 </div>
 </section>
 <section id="rate">
-<h4>.rate<a class="headerlink" href="#rate" title="Permalink to this headline">¶</a></h4>
+<h4>.rate<a class="headerlink" href="#rate" title="Link to this heading">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">rate</span></code> property defaults to 0. If set to a value different from 0, it
 allows the trait to change value dynamically. This could be used for example
 for an attribute that was temporarily lowered but will gradually (or abruptly)
@@ -465,7 +364,7 @@ If you want to see the exact <code class="docutils literal notranslate"><span cl
 will then need to use <code class="docutils literal notranslate"><span class="pre">round()</span></code> yourself on the result if you want integers.</p>
 </section>
 <section id="percent">
-<h4>.percent()<a class="headerlink" href="#percent" title="Permalink to this headline">¶</a></h4>
+<h4>.percent()<a class="headerlink" href="#percent" title="Link to this heading">¶</a></h4>
 <p>If both min and max are defined, the <code class="docutils literal notranslate"><span class="pre">.percent()</span></code> method of the trait will
 return the value as a percentage.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">obj</span><span class="o">.</span><span class="n">traits</span><span class="o">.</span><span class="n">hunting</span><span class="o">.</span><span class="n">percent</span><span class="p">()</span>
@@ -478,7 +377,7 @@ return the value as a percentage.</p>
 </section>
 </section>
 <section id="gauge">
-<h3>Gauge<a class="headerlink" href="#gauge" title="Permalink to this headline">¶</a></h3>
+<h3>Gauge<a class="headerlink" href="#gauge" title="Link to this heading">¶</a></h3>
 <p>This emulates a [fuel-] gauge that empties from a base+mod value.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>min/0                                            max=base+mod
  |-----------------------X---------------------------|
@@ -514,7 +413,7 @@ from poison slowly draining your health, to resting gradually increasing it.</p>
 </section>
 </section>
 <section id="expanding-with-your-own-traits">
-<h2>Expanding with your own Traits<a class="headerlink" href="#expanding-with-your-own-traits" title="Permalink to this headline">¶</a></h2>
+<h2>Expanding with your own Traits<a class="headerlink" href="#expanding-with-your-own-traits" title="Link to this heading">¶</a></h2>
 <p>A Trait is a class inhering from <code class="docutils literal notranslate"><span class="pre">evennia.contrib.rpg.traits.Trait</span></code> (or from one of
 the existing Trait classes).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in a file, say, &#39;mygame/world/traits.py&#39;</span>
@@ -562,13 +461,13 @@ the characters’s current STR value times 3, with a max of 100:</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="as-traitproperty">
-<h1>as TraitProperty<a class="headerlink" href="#as-traitproperty" title="Permalink to this headline">¶</a></h1>
+<h1>as TraitProperty<a class="headerlink" href="#as-traitproperty" title="Link to this heading">¶</a></h1>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Character</span><span class="p">(</span><span class="n">DefaultCharacter</span><span class="p">):</span>
     <span class="n">rage</span> <span class="o">=</span> <span class="n">TraitProperty</span><span class="p">(</span><span class="s2">&quot;A dark mood&quot;</span><span class="p">,</span> <span class="n">rage</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">trait_type</span><span class="o">=</span><span class="s1">&#39;rage&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="adding-additional-traithandlers">
-<h2>Adding additional TraitHandlers<a class="headerlink" href="#adding-additional-traithandlers" title="Permalink to this headline">¶</a></h2>
+<h2>Adding additional TraitHandlers<a class="headerlink" href="#adding-additional-traithandlers" title="Link to this heading">¶</a></h2>
 <p>Sometimes, it is easier to top-level classify traits, such as stats, skills, or other categories of traits you want to handle independantly of each other. Here is an example showing an example on the object typeclass, expanding on the first installation example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mygame/typeclasses/objects.py</span>
 
@@ -615,12 +514,125 @@ file will be overwritten, so edit that file rather than this one.</small></p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Traits</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#traits-with-traithandler">Traits with TraitHandler</a></li>
+<li><a class="reference internal" href="#traitproperties">TraitProperties</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-traits">Using traits</a><ul>
+<li><a class="reference internal" href="#relating-traits-to-one-another">Relating traits to one another</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#trait-types">Trait types</a><ul>
+<li><a class="reference internal" href="#trait">Trait</a></li>
+<li><a class="reference internal" href="#static-trait">Static trait</a></li>
+<li><a class="reference internal" href="#counter">Counter</a><ul>
+<li><a class="reference internal" href="#descs">.descs</a></li>
+<li><a class="reference internal" href="#rate">.rate</a></li>
+<li><a class="reference internal" href="#percent">.percent()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gauge">Gauge</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#expanding-with-your-own-traits">Expanding with your own Traits</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#as-traitproperty">as TraitProperty</a><ul>
+<li><a class="reference internal" href="#adding-additional-traithandlers">Adding additional TraitHandlers</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Contrib-RPSystem.html"
+                          title="previous chapter">Roleplaying base system for Evennia</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Contrib-Batchprocessor.html"
+                          title="next chapter">Batch processor examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Contribs/Contrib-Traits.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -635,17 +647,14 @@ file will be overwritten, so edit that file rather than this one.</small></p>
         <li class="right" >
           <a href="Contrib-RPSystem.html" title="Roleplaying base system for Evennia"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Traits</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

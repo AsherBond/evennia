@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>A voice operated elevator using events &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="In-Game Reporting System" href="Contrib-Ingame-Reports.html" />
     <link rel="prev" title="Dialogues in events" href="Contrib-Ingame-Python-Tutorial-Dialogue.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="Contrib-Ingame-Python-Tutorial-Dialogue.html" title="Dialogues in events"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Contrib-Ingame-Python.html" accesskey="U">Evennia in-game Python system</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">A voice operated elevator using events</a></li> 
@@ -47,89 +41,13 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-<h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">A voice operated elevator using events</a><ul>
-<li><a class="reference internal" href="#our-study-case">Our study case</a></li>
-<li><a class="reference internal" href="#creating-the-rooms-and-exits-we-need">Creating the rooms and exits we need</a></li>
-<li><a class="reference internal" href="#our-first-callback-in-the-elevator">Our first callback in the elevator</a></li>
-<li><a class="reference internal" href="#our-entire-callback-in-the-elevator">Our entire callback in the elevator</a></li>
-<li><a class="reference internal" href="#adding-a-pause-in-our-callback">Adding a pause in our callback</a></li>
-<li><a class="reference internal" href="#changing-exit-messages">Changing exit messages</a></li>
-<li><a class="reference internal" href="#tutorial-f-a-q">Tutorial F.A.Q.</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="Contrib-Ingame-Python-Tutorial-Dialogue.html"
-                        title="previous chapter">Dialogues in events</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Contrib-Ingame-Reports.html"
-                        title="next chapter">In-Game Reporting System</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/Contribs/Contrib-Ingame-Python-Tutorial-Elevator.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="Contrib-Ingame-Python-Tutorial-Elevator.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section class="tex2jax_ignore mathjax_ignore" id="a-voice-operated-elevator-using-events">
-<h1>A voice operated elevator using events<a class="headerlink" href="#a-voice-operated-elevator-using-events" title="Permalink to this headline">¶</a></h1>
-<p>This tutorial will walk you through the steps to create a voice-operated elevator, using the <a class="reference internal" href="Contrib-Ingame-Python.html"><span class="doc std std-doc">in-
+<h1>A voice operated elevator using events<a class="headerlink" href="#a-voice-operated-elevator-using-events" title="Link to this heading">¶</a></h1>
+<p>This tutorial will walk you through the steps to create a voice-operated elevator, using the <a class="reference internal" href="Contrib-Ingame-Python.html"><span class="std std-doc">in-
 game Python system</span></a>. This tutorial assumes the in-game Python
 system is installed per the instructions in that doc. <strong>You do not need to read</strong> the entire
 documentation, it’s a good reference, but not the easiest way to learn about it.  Hence these
@@ -149,7 +67,7 @@ will:</p>
 <li><p>Play with variable modification in callbacks.</p></li>
 </ul>
 <section id="our-study-case">
-<h2>Our study case<a class="headerlink" href="#our-study-case" title="Permalink to this headline">¶</a></h2>
+<h2>Our study case<a class="headerlink" href="#our-study-case" title="Link to this heading">¶</a></h2>
 <p>Let’s summarize what we want to achieve first.  We would like to create a room that will represent
 the inside of our elevator.  In this room, a character could just say “1”, “2” or “3”, and the
 elevator will start moving.  The doors will close and open on the new floor (the exits leading in
@@ -158,7 +76,7 @@ and out of the elevator will be modified).</p>
 independent actions can be configured through the in-game Python system.</p>
 </section>
 <section id="creating-the-rooms-and-exits-we-need">
-<h2>Creating the rooms and exits we need<a class="headerlink" href="#creating-the-rooms-and-exits-we-need" title="Permalink to this headline">¶</a></h2>
+<h2>Creating the rooms and exits we need<a class="headerlink" href="#creating-the-rooms-and-exits-we-need" title="Link to this heading">¶</a></h2>
 <p>We’ll create an elevator right in our room (generally called “Limbo”, of ID 2).  You could easily
 adapt the following instructions if you already have some rooms and exits, of course, just remember
 to check the IDs.</p>
@@ -207,14 +125,14 @@ Created room The third floor(#7) of type typeclasses.rooms.Room.
 <p>Add these IDs to your list, we will use them too.</p>
 </section>
 <section id="our-first-callback-in-the-elevator">
-<h2>Our first callback in the elevator<a class="headerlink" href="#our-first-callback-in-the-elevator" title="Permalink to this headline">¶</a></h2>
+<h2>Our first callback in the elevator<a class="headerlink" href="#our-first-callback-in-the-elevator" title="Link to this heading">¶</a></h2>
 <p>Let’s go to the elevator (you could use <code class="docutils literal notranslate"><span class="pre">tel</span> <span class="pre">#3</span></code> if you have the same IDs I have).</p>
 <p>This is our elevator room.  It looks a bit empty, feel free to add a prettier description or other
 things to decorate it a bit.</p>
 <p>But what we want now is to be able to say “1”, “2” or “3” and have the elevator move in that
 direction.</p>
 <p>If you have read
-<a class="reference internal" href="Contrib-Ingame-Python-Tutorial-Dialogue.html"><span class="doc std std-doc">the other in-game Python tutorial about adding dialogues in events</span></a>, you
+<a class="reference internal" href="Contrib-Ingame-Python-Tutorial-Dialogue.html"><span class="std std-doc">the other in-game Python tutorial about adding dialogues in events</span></a>, you
 may remember what we need to do.  If not, here’s a summary: we need to run some code when somebody
 speaks in the room.  So we need to create a callback (the callback will contain our lines of code).
 We just need to know on which event this should be set.  You can enter <code class="docutils literal notranslate"><span class="pre">call</span> <span class="pre">here</span></code> to see the
@@ -225,7 +143,7 @@ the following steps, the way they connect together will become more obvious.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>call/add here = say 1, 2, 3
 </pre></div>
 </div>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We need to add a callback.  A callback contains the code that will be executed at a given time.
 So we use the <code class="docutils literal notranslate"><span class="pre">call/add</span></code> command and switch.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">here</span></code> is our object, the room in which we are.</p></li>
@@ -287,9 +205,9 @@ point, it will make copy/pasting more complicated.</p>
 </div></blockquote>
 </section>
 <section id="our-entire-callback-in-the-elevator">
-<h2>Our entire callback in the elevator<a class="headerlink" href="#our-entire-callback-in-the-elevator" title="Permalink to this headline">¶</a></h2>
+<h2>Our entire callback in the elevator<a class="headerlink" href="#our-entire-callback-in-the-elevator" title="Link to this heading">¶</a></h2>
 <p>So here’s the time to truly code our callback in-game.  Here’s a little reminder:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We have all the IDs of our three rooms and two exits.</p></li>
 <li><p>When we say “1”, “2” or “3”, the elevator should move to the right room, that is change the
 exits.  Remember, we already have the exits, we just need to change their location and destination.</p></li>
@@ -322,7 +240,7 @@ solution right now.  Here’s a possible code that you could paste in the code e
 </pre></div>
 </div>
 <p>Let’s review this longer callback:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We first obtain the objects of both exits and our three floors.  We use the <code class="docutils literal notranslate"><span class="pre">get()</span></code> eventfunc,
 which is a shortcut to obtaining objects.  We usually use it to retrieve specific objects with an
 ID.  We put the floors in a dictionary.  The keys of the dictionary are the floor number (as str),
@@ -349,7 +267,7 @@ are keys.</p>
 <p>You can quit the editor as usual with <code class="docutils literal notranslate"><span class="pre">:wq</span></code> and test it out.</p>
 </section>
 <section id="adding-a-pause-in-our-callback">
-<h2>Adding a pause in our callback<a class="headerlink" href="#adding-a-pause-in-our-callback" title="Permalink to this headline">¶</a></h2>
+<h2>Adding a pause in our callback<a class="headerlink" href="#adding-a-pause-in-our-callback" title="Link to this heading">¶</a></h2>
 <p>Let’s improve our callback.  One thing that’s worth adding would be a pause: for the time being,
 when we say the floor number in the elevator, the doors close and open right away.  It would be
 better to have a pause of several seconds.  More logical.</p>
@@ -422,7 +340,7 @@ new floor.  You can notice a few differences:</p>
 </pre></div>
 </div>
 <p>What changed?</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We added a little test to make sure the elevator wasn’t already moving.  If it is, the
 <code class="docutils literal notranslate"><span class="pre">BACK_EXIT.location</span></code> (the “south” exit leading out of the elevator) should be <code class="docutils literal notranslate"><span class="pre">None</span></code>.  We’ll remove
 the exit while the elevator is moving.</p></li>
@@ -449,7 +367,7 @@ in the room, notice the doors closing, and then type the <code class="docutils l
 in the elevator, waiting to call the <code class="docutils literal notranslate"><span class="pre">chain_1</span></code> event.</p>
 </section>
 <section id="changing-exit-messages">
-<h2>Changing exit messages<a class="headerlink" href="#changing-exit-messages" title="Permalink to this headline">¶</a></h2>
+<h2>Changing exit messages<a class="headerlink" href="#changing-exit-messages" title="Link to this heading">¶</a></h2>
 <p>Here’s another nice little feature of events: you can modify the message of a single exit without
 altering the others.  In this case, when someone goes north into our elevator, we’d like to see
 something like: “someone walks into the elevator.” Something similar for the back exit would be
@@ -504,7 +422,7 @@ use the same exits for every floor, this will be available no matter at what flo
 which is pretty neat!</p>
 </section>
 <section id="tutorial-f-a-q">
-<h2>Tutorial F.A.Q.<a class="headerlink" href="#tutorial-f-a-q" title="Permalink to this headline">¶</a></h2>
+<h2>Tutorial F.A.Q.<a class="headerlink" href="#tutorial-f-a-q" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Q:</strong> what happens if the game reloads or shuts down while a task is waiting to happen?</p></li>
 <li><p><strong>A:</strong> if your game reloads while a task is in pause (like our elevator between floors), when the
@@ -540,12 +458,106 @@ shown in the next tutorial.</p></li>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">A voice operated elevator using events</a><ul>
+<li><a class="reference internal" href="#our-study-case">Our study case</a></li>
+<li><a class="reference internal" href="#creating-the-rooms-and-exits-we-need">Creating the rooms and exits we need</a></li>
+<li><a class="reference internal" href="#our-first-callback-in-the-elevator">Our first callback in the elevator</a></li>
+<li><a class="reference internal" href="#our-entire-callback-in-the-elevator">Our entire callback in the elevator</a></li>
+<li><a class="reference internal" href="#adding-a-pause-in-our-callback">Adding a pause in our callback</a></li>
+<li><a class="reference internal" href="#changing-exit-messages">Changing exit messages</a></li>
+<li><a class="reference internal" href="#tutorial-f-a-q">Tutorial F.A.Q.</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Contrib-Ingame-Python-Tutorial-Dialogue.html"
+                          title="previous chapter">Dialogues in events</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="Contrib-Ingame-Reports.html"
+                          title="next chapter">In-Game Reporting System</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Contribs/Contrib-Ingame-Python-Tutorial-Elevator.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -560,18 +572,15 @@ shown in the next tutorial.</p></li>
         <li class="right" >
           <a href="Contrib-Ingame-Python-Tutorial-Dialogue.html" title="Dialogues in events"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="Contribs-Overview.html" >Contribs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Contrib-Ingame-Python.html" >Evennia in-game Python system</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">A voice operated elevator using events</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

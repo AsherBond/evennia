@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.accounts.accounts &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.accounts.accounts</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../index.html">
-              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="accounts.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -169,12 +114,16 @@
 <span class="p">)</span>
 
 
+<div class="viewcode-block" id="AccountSessionHandler">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.AccountSessionHandler">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AccountSessionHandler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Manages the session(s) attached to an account.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
+<div class="viewcode-block" id="AccountSessionHandler.__init__">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.AccountSessionHandler.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">account</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes the handler.</span>
@@ -183,8 +132,11 @@
 <span class="sd">            account (Account): The Account on which this handler is defined.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">account</span> <span class="o">=</span> <span class="n">account</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">account</span> <span class="o">=</span> <span class="n">account</span></div>
 
+
+<div class="viewcode-block" id="AccountSessionHandler.get">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.AccountSessionHandler.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sessid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the sessions linked to this object.</span>
@@ -201,8 +153,11 @@
         <span class="k">if</span> <span class="n">sessid</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">make_iter</span><span class="p">(</span><span class="n">evennia</span><span class="o">.</span><span class="n">SESSION_HANDLER</span><span class="o">.</span><span class="n">session_from_account</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">account</span><span class="p">,</span> <span class="n">sessid</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">evennia</span><span class="o">.</span><span class="n">SESSION_HANDLER</span><span class="o">.</span><span class="n">sessions_from_account</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">account</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">evennia</span><span class="o">.</span><span class="n">SESSION_HANDLER</span><span class="o">.</span><span class="n">sessions_from_account</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">account</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="AccountSessionHandler.all">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.AccountSessionHandler.all">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Alias to get(), returning all sessions.</span>
@@ -211,8 +166,11 @@
 <span class="sd">            sessions (list): All sessions.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></div>
 
+
+<div class="viewcode-block" id="AccountSessionHandler.count">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.AccountSessionHandler.count">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get amount of sessions connected.</span>
@@ -221,15 +179,21 @@
 <span class="sd">            sesslen (int): Number of sessions handled.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">())</span></div>
+</div>
 
 
+
+<div class="viewcode-block" id="CharactersHandler">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.CharactersHandler">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CharactersHandler</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A simple Handler that lives on DefaultAccount as .characters via @lazy_property used to</span>
 <span class="sd">    wrap access to .db._playable_characters.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+<div class="viewcode-block" id="CharactersHandler.__init__">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.CharactersHandler.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner</span><span class="p">:</span> <span class="s2">&quot;DefaultAccount&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create the CharactersHandler.</span>
@@ -239,7 +203,8 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">owner</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_playable_characters</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_clean</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_clean</span><span class="p">()</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_ensure_playable_characters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -249,6 +214,8 @@
         <span class="c1"># Remove all instances of None from the list.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span> <span class="k">if</span> <span class="n">x</span><span class="p">]</span>
 
+<div class="viewcode-block" id="CharactersHandler.add">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.CharactersHandler.add">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">:</span> <span class="s2">&quot;DefaultCharacter&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a character to this account&#39;s list of playable characters.</span>
@@ -259,8 +226,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_clean</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">character</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">at_post_add_character</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">at_post_add_character</span><span class="p">(</span><span class="n">character</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="CharactersHandler.remove">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.CharactersHandler.remove">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">:</span> <span class="s2">&quot;DefaultCharacter&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove a character from this account&#39;s list of playable characters.</span>
@@ -271,8 +241,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_clean</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">character</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">at_post_remove_character</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">at_post_remove_character</span><span class="p">(</span><span class="n">character</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="CharactersHandler.all">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.CharactersHandler.all">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;DefaultCharacter&quot;</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get all playable characters.</span>
@@ -281,8 +254,11 @@
 <span class="sd">            list[DefaultCharacter]: All playable characters.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_clean</span><span class="p">()</span>
-        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_playable_characters</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="CharactersHandler.count">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.CharactersHandler.count">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the number of playable characters.</span>
@@ -290,15 +266,19 @@
 <span class="sd">        Returns:</span>
 <span class="sd">            int: The number of playable characters.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all</span><span class="p">())</span></div>
+
 
     <span class="fm">__len__</span> <span class="o">=</span> <span class="n">count</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all</span><span class="p">())</span></div>
 
 
-<div class="viewcode-block" id="DefaultAccount"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DefaultAccount</span><span class="p">(</span><span class="n">AccountDB</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">TypeclassBase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultAccount</span><span class="p">(</span><span class="n">AccountDB</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">TypeclassBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the base Typeclass for all Accounts. Accounts represent</span>
 <span class="sd">    the person playing the game and tracks account info, password</span>
@@ -424,23 +404,37 @@
     <span class="p">)</span>
 
     <span class="c1"># properties</span>
-<div class="viewcode-block" id="DefaultAccount.cmdset"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.cmdset">[docs]</a>    <span class="nd">@lazy_property</span>
+<div class="viewcode-block" id="DefaultAccount.cmdset">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.cmdset">[docs]</a>
+    <span class="nd">@lazy_property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">cmdset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">CmdSetHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.scripts"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.scripts">[docs]</a>    <span class="nd">@lazy_property</span>
+
+<div class="viewcode-block" id="DefaultAccount.scripts">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.scripts">[docs]</a>
+    <span class="nd">@lazy_property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">scripts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ScriptHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.nicks"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.nicks">[docs]</a>    <span class="nd">@lazy_property</span>
+
+<div class="viewcode-block" id="DefaultAccount.nicks">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.nicks">[docs]</a>
+    <span class="nd">@lazy_property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">nicks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">NickHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ModelAttributeBackend</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.sessions"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.sessions">[docs]</a>    <span class="nd">@lazy_property</span>
+
+<div class="viewcode-block" id="DefaultAccount.sessions">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.sessions">[docs]</a>
+    <span class="nd">@lazy_property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">sessions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">AccountSessionHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.options"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.options">[docs]</a>    <span class="nd">@lazy_property</span>
+
+<div class="viewcode-block" id="DefaultAccount.options">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.options">[docs]</a>
+    <span class="nd">@lazy_property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">options</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">OptionHandler</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
@@ -451,11 +445,17 @@
             <span class="n">load_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;option&quot;</span><span class="p">},</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.characters"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.characters">[docs]</a>    <span class="nd">@lazy_property</span>
+
+<div class="viewcode-block" id="DefaultAccount.characters">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.characters">[docs]</a>
+    <span class="nd">@lazy_property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">characters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">CharactersHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_cmdset_providers"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_cmdset_providers">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_cmdset_providers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;CmdSetProvider&quot;</span><span class="p">]:</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_cmdset_providers">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_cmdset_providers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_cmdset_providers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;CmdSetProvider&quot;</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Overrideable method which returns a dictionary of every kind of object which</span>
 <span class="sd">        has a cmdsethandler linked to this Account, and should participate in cmdset</span>
@@ -468,7 +468,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;account&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="p">}</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_post_add_character"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_add_character">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_add_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">:</span> <span class="s2">&quot;DefaultCharacter&quot;</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_post_add_character">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_add_character">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_add_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">:</span> <span class="s2">&quot;DefaultCharacter&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called after a character is added to this account&#39;s list of playable characters.</span>
 
@@ -479,7 +482,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_post_remove_character"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_remove_character">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_remove_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">:</span> <span class="s2">&quot;DefaultCharacter&quot;</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_post_remove_character">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_remove_character">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_remove_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">:</span> <span class="s2">&quot;DefaultCharacter&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called after a character is removed from this account&#39;s list of playable characters.</span>
 
@@ -490,7 +496,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.uses_screenreader"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.uses_screenreader">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">uses_screenreader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.uses_screenreader">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.uses_screenreader">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">uses_screenreader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Shortcut to determine if a session uses a screenreader. If no session given,</span>
 <span class="sd">        will return true if any of the sessions use a screenreader.</span>
@@ -506,7 +515,10 @@
                 <span class="n">session</span><span class="o">.</span><span class="n">protocol_flags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;SCREENREADER&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">session</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sessions</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
             <span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_extra_display_name_info"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_extra_display_name_info">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_extra_display_name_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">looker</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_extra_display_name_info">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_extra_display_name_info">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_extra_display_name_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">looker</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Used in .get_display_name() to provide extra information to the looker. We split this</span>
 <span class="sd">        to be consistent with the Object version of this method.</span>
@@ -518,7 +530,10 @@
             <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;(#</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">)&quot;</span>
         <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_display_name"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_display_name">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_display_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">looker</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_display_name">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_display_name">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_display_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">looker</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is used by channels and other OOC communications methods to give a</span>
 <span class="sd">        custom display of this account&#39;s input.</span>
@@ -533,9 +548,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;|c</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="si">}</span><span class="s2">|n&quot;</span></div>
 
+
     <span class="c1"># session-related methods</span>
 
-<div class="viewcode-block" id="DefaultAccount.disconnect_session_from_account"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.disconnect_session_from_account">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">disconnect_session_from_account</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.disconnect_session_from_account">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.disconnect_session_from_account">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">disconnect_session_from_account</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Access method for disconnecting a given session from the</span>
 <span class="sd">        account (connection happens automatically in the</span>
@@ -548,9 +566,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">evennia</span><span class="o">.</span><span class="n">SESSION_HANDLER</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span></div>
 
+
     <span class="c1"># puppeting operations</span>
 
-<div class="viewcode-block" id="DefaultAccount.puppet_object"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.puppet_object">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">puppet_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.puppet_object">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.puppet_object">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">puppet_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Use the given session to control (puppet) the given object (usually</span>
 <span class="sd">        a Character type).</span>
@@ -648,7 +669,10 @@
         <span class="n">obj</span><span class="o">.</span><span class="n">at_post_puppet</span><span class="p">()</span>
         <span class="n">SIGNAL_OBJECT_POST_PUPPET</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="n">obj</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.unpuppet_object"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.unpuppet_object">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">unpuppet_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.unpuppet_object">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.unpuppet_object">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">unpuppet_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Disengage control over an object.</span>
 
@@ -675,14 +699,20 @@
             <span class="n">session</span><span class="o">.</span><span class="n">puppet</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="n">session</span><span class="o">.</span><span class="n">puid</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.unpuppet_all"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.unpuppet_all">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">unpuppet_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.unpuppet_all">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.unpuppet_all">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">unpuppet_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Disconnect all puppets. This is called by server before a</span>
 <span class="sd">        reset/shutdown.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">unpuppet_object</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sessions</span><span class="o">.</span><span class="n">all</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_puppet"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_puppet">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_puppet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_puppet">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_puppet">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_puppet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get an object puppeted by this session through this account. This is</span>
 <span class="sd">        the main method for retrieving the puppeted object from the</span>
@@ -697,7 +727,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">puppet</span> <span class="k">if</span> <span class="n">session</span> <span class="k">else</span> <span class="kc">None</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_all_puppets"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_all_puppets">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_all_puppets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_all_puppets">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_all_puppets">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_all_puppets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get all currently puppeted objects.</span>
 
@@ -707,6 +740,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">puppet</span> <span class="k">for</span> <span class="n">session</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sessions</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="k">if</span> <span class="n">session</span><span class="o">.</span><span class="n">puppet</span><span class="p">))</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">__get_single_puppet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -727,7 +761,9 @@
     <span class="n">puppet</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">__get_single_puppet</span><span class="p">)</span>
 
     <span class="c1"># utility methods</span>
-<div class="viewcode-block" id="DefaultAccount.is_banned"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.is_banned">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="DefaultAccount.is_banned">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.is_banned">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">is_banned</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if a given username or IP is banned.</span>
@@ -757,7 +793,10 @@
 
         <span class="k">return</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_username_validators"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_username_validators">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_username_validators">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_username_validators">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_username_validators</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span> <span class="n">validator_config</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="s2">&quot;AUTH_USERNAME_VALIDATORS&quot;</span><span class="p">,</span> <span class="p">[])</span>
     <span class="p">):</span>
@@ -784,7 +823,10 @@
             <span class="n">objs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">klass</span><span class="p">(</span><span class="o">**</span><span class="n">validator</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;OPTIONS&quot;</span><span class="p">,</span> <span class="p">{})))</span>
         <span class="k">return</span> <span class="n">objs</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.authenticate"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.authenticate">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="DefaultAccount.authenticate">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.authenticate">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">authenticate</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">ip</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks the given username/password against the database to see if the</span>
@@ -868,7 +910,10 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">log_sec</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Authentication Success: </span><span class="si">{</span><span class="n">account</span><span class="si">}</span><span class="s2"> (IP: </span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">account</span><span class="p">,</span> <span class="n">errors</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.normalize_username"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.normalize_username">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="DefaultAccount.normalize_username">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.normalize_username">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">normalize_username</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Django: Applies NFKC Unicode normalization to usernames so that visually</span>
@@ -892,7 +937,10 @@
 
         <span class="k">return</span> <span class="n">username</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.validate_username"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.validate_username">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="DefaultAccount.validate_username">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.validate_username">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">validate_username</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks the given username against the username validator associated with</span>
@@ -930,7 +978,10 @@
 
         <span class="k">return</span> <span class="n">valid</span><span class="p">,</span> <span class="n">errors</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.validate_password"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.validate_password">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="DefaultAccount.validate_password">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.validate_password">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">validate_password</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks the given password against the list of Django validators enabled</span>
@@ -963,7 +1014,10 @@
 
         <span class="k">return</span> <span class="n">valid</span><span class="p">,</span> <span class="n">error</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.set_password"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.set_password">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.set_password">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.set_password">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Applies the given password to the account. Logs and triggers the `at_password_change` hook.</span>
 
@@ -980,7 +1034,10 @@
         <span class="n">logger</span><span class="o">.</span><span class="n">log_sec</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Password successfully changed for </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">at_password_change</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_character_slots"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_character_slots">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_character_slots</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_character_slots">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_character_slots">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_character_slots</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the number of character slots this account has, or</span>
 <span class="sd">        None if there are no limits.</span>
@@ -994,7 +1051,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">settings</span><span class="o">.</span><span class="n">MAX_NR_CHARACTERS</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_available_character_slots"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_available_character_slots">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_available_character_slots</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_available_character_slots">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_available_character_slots">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_available_character_slots</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the number of character slots this account has available, or None if</span>
 <span class="sd">        there are no limits.</span>
@@ -1007,7 +1067,10 @@
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">slots</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">characters</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.check_available_slots"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.check_available_slots">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">check_available_slots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+
+<div class="viewcode-block" id="DefaultAccount.check_available_slots">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.check_available_slots">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_available_slots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Helper method used to determine if an account can create additional characters using</span>
 <span class="sd">        the character slot system.</span>
@@ -1022,7 +1085,10 @@
                     <span class="n">plural</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">max_slots</span> <span class="o">:=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_character_slots</span><span class="p">())</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;s&quot;</span>
                     <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;You may only have a maximum of </span><span class="si">{</span><span class="n">max_slots</span><span class="si">}</span><span class="s2"> character</span><span class="si">{</span><span class="n">plural</span><span class="si">}</span><span class="s2">.&quot;</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.create_character"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.create_character">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.create_character">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.create_character">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a character linked to this account.</span>
 
@@ -1069,7 +1135,10 @@
 
         <span class="k">return</span> <span class="n">character</span><span class="p">,</span> <span class="n">errs</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_post_create_character"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_create_character">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_create_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_post_create_character">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_create_character">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_create_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">character</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        An overloadable hook method that allows for further customization of newly created characters.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1089,7 +1158,10 @@
             <span class="sa">f</span><span class="s2">&quot;Character Created: </span><span class="si">{</span><span class="n">character</span><span class="si">}</span><span class="s2"> (Caller: </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">, IP: </span><span class="si">{</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ip&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">None</span><span class="p">)</span><span class="si">}</span><span class="s2">).&quot;</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.create"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.create">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="DefaultAccount.create">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.create">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates an Account (or Account/Character pair for MULTISESSION_MODE&lt;2)</span>
@@ -1230,7 +1302,10 @@
         <span class="n">SIGNAL_ACCOUNT_POST_CREATE</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="n">account</span><span class="p">,</span> <span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">account</span><span class="p">,</span> <span class="n">errors</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.delete"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.delete">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.delete">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.delete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Deletes the account persistently.</span>
 
@@ -1264,9 +1339,12 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
+
     <span class="c1"># methods inherited from database model</span>
 
-<div class="viewcode-block" id="DefaultAccount.msg"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.msg">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">from_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.msg">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.msg">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">from_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Evennia -&gt; User</span>
 <span class="sd">        This is the main route for sending data back to the user from the</span>
@@ -1320,7 +1398,10 @@
         <span class="k">for</span> <span class="n">session</span> <span class="ow">in</span> <span class="n">sessions</span><span class="p">:</span>
             <span class="n">session</span><span class="o">.</span><span class="n">data_out</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.execute_cmd"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.execute_cmd">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">execute_cmd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.execute_cmd">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.execute_cmd">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">execute_cmd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Do something as this account. This method is never called normally,</span>
 <span class="sd">        but only when the account object itself is supposed to execute the</span>
@@ -1354,9 +1435,12 @@
 
         <span class="k">return</span> <span class="n">_CMDHANDLER</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_string</span><span class="p">,</span> <span class="n">callertype</span><span class="o">=</span><span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
+
     <span class="c1"># channel receive hooks</span>
 
-<div class="viewcode-block" id="DefaultAccount.at_pre_channel_msg"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_pre_channel_msg">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_pre_channel_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">senders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.at_pre_channel_msg">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_pre_channel_msg">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_pre_channel_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">senders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called by the Channel just before passing a message into `channel_msg`.</span>
 <span class="sd">        This allows for tweak messages per-user and also to abort the</span>
@@ -1397,7 +1481,10 @@
 
         <span class="k">return</span> <span class="n">message</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.channel_msg"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.channel_msg">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">channel_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">senders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.channel_msg">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.channel_msg">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">channel_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">senders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This performs the actions of receiving a message to an un-muted</span>
 <span class="sd">        channel.</span>
@@ -1423,7 +1510,10 @@
             <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;from_channel&quot;</span><span class="p">:</span> <span class="n">channel</span><span class="o">.</span><span class="n">id</span><span class="p">},</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_post_channel_msg"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_channel_msg">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_channel_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">senders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_post_channel_msg">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_channel_msg">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_channel_msg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">senders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called by `self.channel_msg` after message was received.</span>
 
@@ -1438,9 +1528,12 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
+
     <span class="c1"># search method</span>
 
-<div class="viewcode-block" id="DefaultAccount.search"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.search">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span>
+<div class="viewcode-block" id="DefaultAccount.search">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.search">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">searchdata</span><span class="p">,</span>
         <span class="n">return_puppet</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -1522,7 +1615,10 @@
                     <span class="k">return</span> <span class="kc">None</span>
         <span class="k">return</span> <span class="n">matches</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.access"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.access">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">access</span><span class="p">(</span>
+
+<div class="viewcode-block" id="DefaultAccount.access">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.access">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">access</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">accessing_obj</span><span class="p">,</span> <span class="n">access_type</span><span class="o">=</span><span class="s2">&quot;read&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">no_superuser_bypass</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1553,6 +1649,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">at_access</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">accessing_obj</span><span class="p">,</span> <span class="n">access_type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span></div>
 
+
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">idle_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1577,7 +1674,9 @@
 
     <span class="c1"># account hooks</span>
 
-<div class="viewcode-block" id="DefaultAccount.basetype_setup"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.basetype_setup">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">basetype_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.basetype_setup">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.basetype_setup">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">basetype_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This sets up the basic properties for an account. Overload this</span>
 <span class="sd">        with at_account_creation rather than changing this method.</span>
@@ -1589,7 +1688,10 @@
         <span class="c1"># The ooc account cmdset</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">add_default</span><span class="p">(</span><span class="n">_CMDSET_ACCOUNT</span><span class="p">,</span> <span class="n">persistent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_account_creation"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_account_creation">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_account_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_account_creation">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_account_creation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_account_creation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is called once, the very first time the account is created</span>
 <span class="sd">        (i.e. first time they register with the game). It&#39;s a good</span>
@@ -1602,7 +1704,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;_playable_characters&quot;</span><span class="p">,</span> <span class="p">[],</span> <span class="n">lockstring</span><span class="o">=</span><span class="n">lockstring</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;_saved_protocol_flags&quot;</span><span class="p">,</span> <span class="p">{},</span> <span class="n">lockstring</span><span class="o">=</span><span class="n">lockstring</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_init"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_init">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_init">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_init">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is always called whenever this object is initiated --</span>
 <span class="sd">        that is, whenever it its typeclass is cached from memory. This</span>
@@ -1615,13 +1720,16 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
+
     <span class="c1"># Note that the hooks below also exist in the character object&#39;s</span>
     <span class="c1"># typeclass. You can often ignore these and rely on the character</span>
     <span class="c1"># ones instead, unless you are implementing a multi-character game</span>
     <span class="c1"># and have some things that should be done regardless of which</span>
     <span class="c1"># character is currently connected to this account.</span>
 
-<div class="viewcode-block" id="DefaultAccount.at_first_save"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_first_save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_first_save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.at_first_save">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_first_save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_first_save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is a generic hook called by Evennia when this object is</span>
 <span class="sd">        saved to the database the very first time.  You generally</span>
@@ -1667,7 +1775,10 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">permissions</span><span class="o">.</span><span class="n">batch_add</span><span class="p">(</span><span class="o">*</span><span class="n">permissions</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_access"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_access">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_access</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">accessing_obj</span><span class="p">,</span> <span class="n">access_type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_access">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_access">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_access</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">accessing_obj</span><span class="p">,</span> <span class="n">access_type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is triggered after an access-call on this Account has</span>
 <span class="sd">            completed.</span>
@@ -1692,7 +1803,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_cmdset_get"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_cmdset_get">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_cmdset_get">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_cmdset_get">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_cmdset_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called just before cmdsets on this object are requested by the</span>
 <span class="sd">        command handler. If changes need to be done on the fly to the</span>
@@ -1709,7 +1823,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.get_cmdsets"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_cmdsets">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_cmdsets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caller</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.get_cmdsets">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.get_cmdsets">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_cmdsets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caller</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called by the CommandHandler to get a list of cmdsets to merge.</span>
 
@@ -1723,7 +1840,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">current</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cmdset</span><span class="o">.</span><span class="n">cmdset_stack</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_first_login"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_first_login">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_first_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_first_login">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_first_login">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_first_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called the very first time this account logs into the game.</span>
 <span class="sd">        Note that this is called *before* at_pre_login, so no session</span>
@@ -1738,7 +1858,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_password_change"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_password_change">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_password_change</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_password_change">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_password_change">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_password_change</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called after a successful password set/modify.</span>
 
@@ -1749,7 +1872,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_pre_login"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_pre_login">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_pre_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_pre_login">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_pre_login">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_pre_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called every time the user logs in, just before the actual</span>
 <span class="sd">        login-state is set.</span>
@@ -1760,6 +1886,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_send_to_connect_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1800,7 +1927,9 @@
         <span class="k">if</span> <span class="n">_CONNECT_CHANNEL</span><span class="p">:</span>
             <span class="n">_CONNECT_CHANNEL</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">now</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="DefaultAccount.at_post_login"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_login">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.at_post_login">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_login">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called at the end of the login process, just before letting</span>
 <span class="sd">        the account loose.</span>
@@ -1838,7 +1967,10 @@
             <span class="c1"># screen. We execute look on the account.</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">at_look</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">characters</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">),</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_failed_login"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_failed_login">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_failed_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_failed_login">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_failed_login">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_failed_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called by the login process if a user account is targeted correctly</span>
 <span class="sd">        but provided with an invalid password. By default it does nothing,</span>
@@ -1851,7 +1983,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_disconnect"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_disconnect">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_disconnect">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_disconnect">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called just before user is disconnected.</span>
 
@@ -1868,7 +2003,10 @@
             <span class="n">_</span><span class="p">(</span><span class="s2">&quot;|R</span><span class="si">{key}</span><span class="s2"> disconnected</span><span class="si">{reason}</span><span class="s2">|n&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="n">reason</span><span class="p">)</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_post_disconnect"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_disconnect">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_post_disconnect">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_post_disconnect">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is called *after* disconnection is complete. No messages</span>
 <span class="sd">        can be relayed to the account from here. After this call, the</span>
@@ -1883,7 +2021,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_msg_receive"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_msg_receive">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_msg_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">from_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_msg_receive">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_msg_receive">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_msg_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">from_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called whenever someone sends a message to this</span>
 <span class="sd">        object using the `msg` method.</span>
@@ -1913,7 +2054,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_msg_send"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_msg_send">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_msg_send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">to_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_msg_send">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_msg_send">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_msg_send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">to_obj</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is a hook that is called when *this* object sends a</span>
 <span class="sd">        message to another object with `obj.msg(text, to_obj=obj)`.</span>
@@ -1933,7 +2077,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_server_reload"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_server_reload">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_server_reload">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_server_reload">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called whenever the server is shutting down for</span>
 <span class="sd">        restart/reboot. If you want to, for example, save</span>
@@ -1942,12 +2089,16 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="DefaultAccount.at_server_shutdown"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_server_shutdown">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultAccount.at_server_shutdown">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_server_shutdown">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This hook is called whenever the server is shutting down fully</span>
 <span class="sd">        (i.e. not for a restart).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
+
 
     <span class="n">ooc_appearance_template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">--------------------------------------------------------------------</span>
@@ -1967,7 +2118,9 @@
 <span class="s2">--------------------------------------------------------------------</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
-<div class="viewcode-block" id="DefaultAccount.at_look"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_look">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_look</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="DefaultAccount.at_look">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultAccount.at_look">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_look</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called when this object executes a look. It allows to customize</span>
 <span class="sd">        just what this means.</span>
@@ -2059,17 +2212,23 @@
             <span class="n">sessions</span><span class="o">=</span><span class="n">txt_sessions</span><span class="p">,</span>
             <span class="n">characters</span><span class="o">=</span><span class="n">txt_characters</span><span class="p">,</span>
             <span class="n">footer</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="DefaultGuest"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DefaultGuest</span><span class="p">(</span><span class="n">DefaultAccount</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultGuest">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultGuest</span><span class="p">(</span><span class="n">DefaultAccount</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This class is used for guest logins. Unlike Accounts, Guests and</span>
 <span class="sd">    their characters are deleted after disconnection.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="DefaultGuest.create"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.create">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="DefaultGuest.create">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.create">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Forwards request to cls.authenticate(); returns a DefaultGuest object</span>
@@ -2078,7 +2237,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultGuest.authenticate"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.authenticate">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="DefaultGuest.authenticate">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.authenticate">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">authenticate</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Gets or creates a Guest account object.</span>
@@ -2152,7 +2314,10 @@
 
         <span class="k">return</span> <span class="n">account</span><span class="p">,</span> <span class="n">errors</span></div>
 
-<div class="viewcode-block" id="DefaultGuest.at_post_login"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.at_post_login">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultGuest.at_post_login">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.at_post_login">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_login</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        By default, Guests only have one character regardless of which</span>
 <span class="sd">        MAX_NR_CHARACTERS we use. They also always auto-puppet a matching</span>
@@ -2167,7 +2332,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_send_to_connect_channel</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;|G</span><span class="si">{key}</span><span class="s2"> connected|n&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">puppet_object</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">_last_puppet</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DefaultGuest.at_server_shutdown"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.at_server_shutdown">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultGuest.at_server_shutdown">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.at_server_shutdown">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_server_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        We repeat the functionality of `at_disconnect()` here just to</span>
 <span class="sd">        be on the safe side.</span>
@@ -2176,7 +2344,10 @@
         <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">characters</span><span class="p">:</span>
             <span class="n">character</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="DefaultGuest.at_post_disconnect"><a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.at_post_disconnect">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DefaultGuest.at_post_disconnect">
+<a class="viewcode-back" href="../../../api/evennia.accounts.accounts.html#evennia.accounts.accounts.DefaultGuest.at_post_disconnect">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">at_post_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Once having disconnected, destroy the guest&#39;s characters and</span>
 
@@ -2188,15 +2359,80 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">at_post_disconnect</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">characters</span><span class="p">:</span>
             <span class="n">character</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -2205,18 +2441,15 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.accounts.accounts</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.commands.default.admin &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.commands.default.admin</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../index.html">
-              <img class="logo" src="../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="admin.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -124,7 +69,9 @@
 <span class="p">)</span>
 
 
-<div class="viewcode-block" id="CmdBoot"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBoot">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdBoot</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdBoot">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBoot">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdBoot</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    kick an account from the server.</span>
 
@@ -144,7 +91,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(boot) or perm(Admin)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Admin&quot;</span>
 
-<div class="viewcode-block" id="CmdBoot.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBoot.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdBoot.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBoot.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implementing the function&quot;&quot;&quot;</span>
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
         <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span>
@@ -202,13 +151,17 @@
         <span class="k">if</span> <span class="n">pobj</span> <span class="ow">and</span> <span class="n">boot_list</span><span class="p">:</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">log_sec</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;Booted: </span><span class="si">{</span><span class="n">pobj</span><span class="si">}</span><span class="s2"> (Reason: </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2">, Caller: </span><span class="si">{</span><span class="n">caller</span><span class="si">}</span><span class="s2">, IP: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">address</span><span class="si">}</span><span class="s2">).&quot;</span>
-            <span class="p">)</span></div></div>
+            <span class="p">)</span></div>
+</div>
+
 
 
 <span class="c1"># regex matching IP addresses with wildcards, eg. 233.122.4.*</span>
 <span class="n">IPREGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[0-9*]{1,3}\.[0-9*]{1,3}\.[0-9*]{1,3}\.[0-9*]{1,3}&quot;</span><span class="p">)</span>
 
 
+<div class="viewcode-block" id="list_bans">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.list_bans">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">list_bans</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">banlist</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Helper function to display a list of active bans. Input argument</span>
@@ -224,10 +177,13 @@
     <span class="n">table</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">styled_table</span><span class="p">(</span><span class="s2">&quot;|wid&quot;</span><span class="p">,</span> <span class="s2">&quot;|wname/ip&quot;</span><span class="p">,</span> <span class="s2">&quot;|wdate&quot;</span><span class="p">,</span> <span class="s2">&quot;|wreason&quot;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">inum</span><span class="p">,</span> <span class="n">ban</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">banlist</span><span class="p">):</span>
         <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">inum</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">ban</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">ban</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">ban</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ban</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">ban</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;|wActive bans:|n</span><span class="se">\n</span><span class="si">{</span><span class="n">table</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;|wActive bans:|n</span><span class="se">\n</span><span class="si">{</span><span class="n">table</span><span class="si">}</span><span class="s2">&quot;</span></div>
 
 
-<div class="viewcode-block" id="CmdBan"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBan">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdBan</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdBan">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBan">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdBan</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    ban an account from the server</span>
 
@@ -266,7 +222,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(ban) or perm(Developer)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Admin&quot;</span>
 
-<div class="viewcode-block" id="CmdBan.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBan.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdBan.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdBan.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Bans are stored in a serverconf db object as a list of</span>
 <span class="sd">        dictionaries:</span>
@@ -322,10 +280,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2">-ban &#39;|w</span><span class="si">{</span><span class="n">ban</span><span class="si">}</span><span class="s2">|n&#39; was added. Use |wunban|n to reinstate.&quot;</span><span class="p">)</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">log_sec</span><span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;Banned </span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">ban</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2"> (Caller: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="si">}</span><span class="s2">, IP: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">address</span><span class="si">}</span><span class="s2">).&quot;</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdUnban"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdUnban">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdUnban</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdUnban">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdUnban">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdUnban</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    remove a ban from an account</span>
 
@@ -343,7 +305,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(unban) or perm(Developer)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Admin&quot;</span>
 
-<div class="viewcode-block" id="CmdUnban.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdUnban.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdUnban.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdUnban.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implement unbanning&quot;&quot;&quot;</span>
 
         <span class="n">banlist</span> <span class="o">=</span> <span class="n">ServerConfig</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">conf</span><span class="p">(</span><span class="s2">&quot;server_bans&quot;</span><span class="p">)</span>
@@ -377,10 +341,14 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cleared ban </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">: &#39;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">log_sec</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;Unbanned: </span><span class="si">{</span><span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2"> (Caller: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="si">}</span><span class="s2">, IP: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">address</span><span class="si">}</span><span class="s2">).&quot;</span>
-            <span class="p">)</span></div></div>
+            <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdEmit"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdEmit">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdEmit</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdEmit">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdEmit">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdEmit</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    admin command for emitting message to multiple objects</span>
 
@@ -407,7 +375,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(emit) or perm(Builder)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Admin&quot;</span>
 
-<div class="viewcode-block" id="CmdEmit.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdEmit.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdEmit.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdEmit.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implement the command&quot;&quot;&quot;</span>
 
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
@@ -458,10 +428,14 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Emitted to </span><span class="si">{</span><span class="n">objname</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You are not allowed to emit to </span><span class="si">{</span><span class="n">objname</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span></div></div>
+                <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You are not allowed to emit to </span><span class="si">{</span><span class="n">objname</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdNewPassword"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdNewPassword">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdNewPassword</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdNewPassword">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdNewPassword">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdNewPassword</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    change the password of an account</span>
 
@@ -475,7 +449,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(newpassword) or perm(Admin)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Admin&quot;</span>
 
-<div class="viewcode-block" id="CmdNewPassword.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdNewPassword.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdNewPassword.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdNewPassword.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implement the function.&quot;&quot;&quot;</span>
 
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
@@ -506,10 +482,14 @@
             <span class="n">account</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">caller</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> has changed your password to &#39;</span><span class="si">{</span><span class="n">newpass</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">log_sec</span><span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;Password Changed: </span><span class="si">{</span><span class="n">account</span><span class="si">}</span><span class="s2"> (Caller: </span><span class="si">{</span><span class="n">caller</span><span class="si">}</span><span class="s2">, IP: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">address</span><span class="si">}</span><span class="s2">).&quot;</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdPerm"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdPerm">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdPerm</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdPerm">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdPerm">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdPerm</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    set the permissions of an account/object</span>
 
@@ -531,7 +511,9 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(perm) or perm(Developer)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Admin&quot;</span>
 
-<div class="viewcode-block" id="CmdPerm.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdPerm.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdPerm.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdPerm.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implement function&quot;&quot;&quot;</span>
 
         <span class="n">caller</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span>
@@ -632,10 +614,14 @@
 
         <span class="n">caller</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">caller_result</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">target_result</span><span class="p">:</span>
-            <span class="n">obj</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">target_result</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></div></div>
+            <span class="n">obj</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">target_result</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdWall"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdWall">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdWall</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdWall">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdWall">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdWall</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    make an announcement to all</span>
 
@@ -650,17 +636,23 @@
     <span class="n">locks</span> <span class="o">=</span> <span class="s2">&quot;cmd:perm(wall) or perm(Admin)&quot;</span>
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Admin&quot;</span>
 
-<div class="viewcode-block" id="CmdWall.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdWall.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdWall.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdWall.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implements command&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Usage: wall &lt;message&gt;&quot;</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> shouts &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Announcing to all connected sessions ...&quot;</span><span class="p">)</span>
-        <span class="n">evennia</span><span class="o">.</span><span class="n">SESSION_HANDLER</span><span class="o">.</span><span class="n">announce_all</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></div></div>
+        <span class="n">evennia</span><span class="o">.</span><span class="n">SESSION_HANDLER</span><span class="o">.</span><span class="n">announce_all</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="CmdForce"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdForce">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CmdForce</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CmdForce">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdForce">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CmdForce</span><span class="p">(</span><span class="n">COMMAND_DEFAULT_CLASS</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    forces an object to execute a command</span>
 
@@ -676,7 +668,9 @@
     <span class="n">help_category</span> <span class="o">=</span> <span class="s2">&quot;Building&quot;</span>
     <span class="n">perm_used</span> <span class="o">=</span> <span class="s2">&quot;edit&quot;</span>
 
-<div class="viewcode-block" id="CmdForce.func"><a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdForce.func">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CmdForce.func">
+<a class="viewcode-back" href="../../../../api/evennia.commands.default.admin.html#evennia.commands.default.admin.CmdForce.func">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Implements the force command&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">lhs</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;You must provide a target and a command string to execute.&quot;</span><span class="p">)</span>
@@ -688,15 +682,80 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You don&#39;t have permission to force </span><span class="si">{</span><span class="n">targ</span><span class="si">}</span><span class="s2"> to execute commands.&quot;</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="n">targ</span><span class="o">.</span><span class="n">execute_cmd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You have forced </span><span class="si">{</span><span class="n">targ</span><span class="si">}</span><span class="s2"> to: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You have forced </span><span class="si">{</span><span class="n">targ</span><span class="si">}</span><span class="s2"> to: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rhs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -705,18 +764,15 @@
         <li class="right" >
           <a href="../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.commands.default.admin</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

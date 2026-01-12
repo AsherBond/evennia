@@ -1,27 +1,21 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evennia.server.portal.amp &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=e4a91a55" />
+    <script src="../../../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -30,7 +24,7 @@
         <li class="right" >
           <a href="../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../evennia.html" accesskey="U">evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.server.portal.amp</a></li> 
@@ -38,56 +32,7 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../../../../index.html">
-              <img class="logo" src="../../../../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="amp.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
@@ -179,12 +124,18 @@
 <span class="c1"># Helper functions for pickling.</span>
 
 
-<div class="viewcode-block" id="dumps"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.dumps">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="dumps">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.dumps">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="loads"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.loads">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">loads</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="loads">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.loads">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">loads</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_get_logger</span><span class="p">():</span>
@@ -219,7 +170,9 @@
 <span class="c1"># AMP Communication Command types</span>
 
 
-<div class="viewcode-block" id="Compressed"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.Compressed">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Compressed</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">String</span><span class="p">):</span>
+<div class="viewcode-block" id="Compressed">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.Compressed">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Compressed</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">String</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is a custom AMP command Argument that both handles too-long</span>
 <span class="sd">    sends as well as uses zlib for compression across the wire. The</span>
@@ -228,7 +181,9 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="Compressed.fromBox"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.Compressed.fromBox">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">fromBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">strings</span><span class="p">,</span> <span class="n">objects</span><span class="p">,</span> <span class="n">proto</span><span class="p">):</span>
+<div class="viewcode-block" id="Compressed.fromBox">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.Compressed.fromBox">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fromBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">strings</span><span class="p">,</span> <span class="n">objects</span><span class="p">,</span> <span class="n">proto</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Converts from box string representation to python. We read back too-long batched data and</span>
 <span class="sd">        put it back together here.</span>
@@ -245,7 +200,10 @@
             <span class="n">value</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fromStringProto</span><span class="p">(</span><span class="n">chunk</span><span class="p">,</span> <span class="n">proto</span><span class="p">))</span>
         <span class="n">objects</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Compressed.toBox"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.Compressed.toBox">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">toBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">strings</span><span class="p">,</span> <span class="n">objects</span><span class="p">,</span> <span class="n">proto</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Compressed.toBox">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.Compressed.toBox">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">toBox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">strings</span><span class="p">,</span> <span class="n">objects</span><span class="p">,</span> <span class="n">proto</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert from python object to string box representation.</span>
 <span class="sd">        we break up too-long data snippets into multiple batches here.</span>
@@ -265,7 +223,10 @@
                 <span class="k">break</span>
             <span class="n">strings</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">.</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">counter</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">toStringProto</span><span class="p">(</span><span class="n">chunk</span><span class="p">,</span> <span class="n">proto</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Compressed.toString"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.Compressed.toString">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">toString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inObject</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Compressed.toString">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.Compressed.toString">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">toString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inObject</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert to send as a bytestring on the wire, with compression.</span>
 
@@ -274,15 +235,22 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">zlib</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">toString</span><span class="p">(</span><span class="n">inObject</span><span class="p">),</span> <span class="mi">9</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Compressed.fromString"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.Compressed.fromString">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">fromString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inString</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Compressed.fromString">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.Compressed.fromString">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fromString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inString</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert (decompress) from the string-representation on the wire to Python.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">fromString</span><span class="p">(</span><span class="n">zlib</span><span class="o">.</span><span class="n">decompress</span><span class="p">(</span><span class="n">inString</span><span class="p">))</span></div></div>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">fromString</span><span class="p">(</span><span class="n">zlib</span><span class="o">.</span><span class="n">decompress</span><span class="p">(</span><span class="n">inString</span><span class="p">))</span></div>
+</div>
 
 
-<div class="viewcode-block" id="MsgLauncher2Portal"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.MsgLauncher2Portal">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MsgLauncher2Portal</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MsgLauncher2Portal">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.MsgLauncher2Portal">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MsgLauncher2Portal</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Message Launcher -&gt; Portal</span>
 
@@ -294,7 +262,10 @@
     <span class="n">response</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 
-<div class="viewcode-block" id="MsgPortal2Server"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.MsgPortal2Server">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MsgPortal2Server</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MsgPortal2Server">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.MsgPortal2Server">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MsgPortal2Server</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Message Portal -&gt; Server</span>
 
@@ -306,7 +277,10 @@
     <span class="n">response</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 
-<div class="viewcode-block" id="MsgServer2Portal"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.MsgServer2Portal">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MsgServer2Portal</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MsgServer2Portal">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.MsgServer2Portal">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MsgServer2Portal</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Message Server -&gt; Portal</span>
 
@@ -318,7 +292,10 @@
     <span class="n">response</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 
-<div class="viewcode-block" id="AdminPortal2Server"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AdminPortal2Server">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AdminPortal2Server</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AdminPortal2Server">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AdminPortal2Server">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AdminPortal2Server</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Administration Portal -&gt; Server</span>
 
@@ -333,7 +310,10 @@
     <span class="n">response</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 
-<div class="viewcode-block" id="AdminServer2Portal"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AdminServer2Portal">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AdminServer2Portal</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AdminServer2Portal">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AdminServer2Portal">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AdminServer2Portal</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Administration Server -&gt; Portal</span>
 
@@ -348,7 +328,10 @@
     <span class="n">response</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 
-<div class="viewcode-block" id="MsgStatus"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.MsgStatus">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MsgStatus</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MsgStatus">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.MsgStatus">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MsgStatus</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Check Status between AMP services</span>
 
@@ -360,7 +343,10 @@
     <span class="n">response</span> <span class="o">=</span> <span class="p">[(</span><span class="sa">b</span><span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="n">amp</span><span class="o">.</span><span class="n">String</span><span class="p">())]</span></div>
 
 
-<div class="viewcode-block" id="FunctionCall"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.FunctionCall">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">FunctionCall</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
+
+<div class="viewcode-block" id="FunctionCall">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.FunctionCall">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">FunctionCall</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">Command</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Bidirectional Server &lt;-&gt; Portal</span>
 
@@ -380,12 +366,15 @@
     <span class="n">response</span> <span class="o">=</span> <span class="p">[(</span><span class="sa">b</span><span class="s2">&quot;result&quot;</span><span class="p">,</span> <span class="n">amp</span><span class="o">.</span><span class="n">String</span><span class="p">())]</span></div>
 
 
+
 <span class="c1"># -------------------------------------------------------------</span>
 <span class="c1"># Core AMP protocol for communication Server &lt;-&gt; Portal</span>
 <span class="c1"># -------------------------------------------------------------</span>
 
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">AMPMultiConnectionProtocol</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">AMP</span><span class="p">):</span>
+<div class="viewcode-block" id="AMPMultiConnectionProtocol">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AMPMultiConnectionProtocol</span><span class="p">(</span><span class="n">amp</span><span class="o">.</span><span class="n">AMP</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    AMP protocol that safely handle multiple connections to the same</span>
 <span class="sd">    server without dropping old ones - new clients will receive</span>
@@ -396,7 +385,9 @@
 
     <span class="c1"># helper methods</span>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.__init__"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.__init__">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.__init__">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize protocol with some things that need to be in place</span>
 <span class="sd">        already before connecting both on portal and server.</span>
@@ -409,6 +400,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">multibatches</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="c1"># later twisted amp has its own __init__</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_commandReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">box</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -453,7 +445,9 @@
             <span class="n">deferred</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_safeEmit</span><span class="p">)</span>
         <span class="n">deferred</span><span class="o">.</span><span class="n">addErrback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">unhandledError</span><span class="p">)</span>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.stringReceived"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.stringReceived">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">stringReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.stringReceived">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.stringReceived">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stringReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Overrides the base stringReceived of twisted in order to handle</span>
 <span class="sd">        the strange error reported in https://github.com/evennia/evennia/issues/2053,</span>
@@ -495,7 +489,10 @@
                     <span class="s2">&quot;https://github.com/evennia/evennia/issues/2053)&quot;</span>
                 <span class="p">)</span></div>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.dataReceived"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.dataReceived">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">dataReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.dataReceived">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.dataReceived">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dataReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Handle non-AMP messages, such as HTTP communication.</span>
 
@@ -529,7 +526,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">loseConnection</span><span class="p">()</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HTTP received (the AMP port should not receive http, only AMP!) </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">data</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.makeConnection"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.makeConnection">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">makeConnection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transport</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.makeConnection">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.makeConnection">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">makeConnection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transport</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Swallow connection log message here. Copied from original</span>
 <span class="sd">        in the amp protocol.</span>
@@ -542,7 +542,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_transportHost</span> <span class="o">=</span> <span class="n">transport</span><span class="o">.</span><span class="n">getHost</span><span class="p">()</span>
         <span class="n">amp</span><span class="o">.</span><span class="n">BinaryBoxProtocol</span><span class="o">.</span><span class="n">makeConnection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transport</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.connectionMade"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.connectionMade">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">connectionMade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.connectionMade">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.connectionMade">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">connectionMade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is called when an AMP connection is (re-)established. AMP calls it on both sides.</span>
 
@@ -550,7 +553,10 @@
         <span class="c1"># print(&quot;connectionMade: {}&quot;.format(self))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">factory</span><span class="o">.</span><span class="n">broadcasts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.connectionLost"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.connectionLost">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">connectionLost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.connectionLost">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.connectionLost">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">connectionLost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        We swallow connection errors here. The reason is that during a</span>
 <span class="sd">        normal reload/shutdown there will almost always be cases where</span>
@@ -567,9 +573,12 @@
         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
             <span class="k">pass</span></div>
 
+
     <span class="c1"># Error handling</span>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.errback"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.errback">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">errback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.errback">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.errback">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">errback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Error callback.</span>
 <span class="sd">        Handles errors to avoid dropping connections on server tracebacks.</span>
@@ -586,7 +595,10 @@
             <span class="p">)</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.data_in"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.data_in">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">data_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packed_data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.data_in">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.data_in">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">data_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packed_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Process incoming packed data.</span>
 
@@ -599,7 +611,10 @@
         <span class="n">msg</span> <span class="o">=</span> <span class="n">loads</span><span class="p">(</span><span class="n">packed_data</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">msg</span></div>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.broadcast"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.broadcast">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">broadcast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">sessid</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.broadcast">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.broadcast">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">broadcast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">sessid</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Send data across the wire to all connections.</span>
 
@@ -625,9 +640,12 @@
 
         <span class="k">return</span> <span class="n">DeferredList</span><span class="p">(</span><span class="n">deferreds</span><span class="p">)</span></div>
 
+
     <span class="c1"># generic function send/recvs</span>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.send_FunctionCall"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.send_FunctionCall">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">send_FunctionCall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modulepath</span><span class="p">,</span> <span class="n">functionname</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.send_FunctionCall">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.send_FunctionCall">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_FunctionCall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modulepath</span><span class="p">,</span> <span class="n">functionname</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Access method called by either process. This will call an arbitrary</span>
 <span class="sd">        function on the other process (On Portal if calling from Server and</span>
@@ -655,7 +673,10 @@
             <span class="o">.</span><span class="n">addErrback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">errback</span><span class="p">,</span> <span class="s2">&quot;FunctionCall&quot;</span><span class="p">)</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="AMPMultiConnectionProtocol.receive_functioncall"><a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.amp_client.AMPMultiConnectionProtocol.receive_functioncall">[docs]</a>    <span class="nd">@FunctionCall</span><span class="o">.</span><span class="n">responder</span>
+
+<div class="viewcode-block" id="AMPMultiConnectionProtocol.receive_functioncall">
+<a class="viewcode-back" href="../../../../api/evennia.server.portal.amp.html#evennia.server.portal.amp.AMPMultiConnectionProtocol.receive_functioncall">[docs]</a>
+    <span class="nd">@FunctionCall</span><span class="o">.</span><span class="n">responder</span>
     <span class="nd">@catch_traceback</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">receive_functioncall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">function</span><span class="p">,</span> <span class="n">func_args</span><span class="p">,</span> <span class="n">func_kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -684,15 +705,80 @@
             <span class="n">result</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">dumps</span><span class="p">(</span><span class="n">r</span><span class="p">)})</span>
             <span class="k">return</span> <span class="n">result</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">dumps</span><span class="p">(</span><span class="n">result</span><span class="p">)}</span></div></div>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="n">dumps</span><span class="p">(</span><span class="n">result</span><span class="p">)}</span></div>
+</div>
+
 </pre></div>
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -701,18 +787,15 @@
         <li class="right" >
           <a href="../../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../index.html" >Module code</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../../evennia.html" >evennia</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">evennia.server.portal.amp</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>

@@ -1,30 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>evennia.contrib.grid.extended_room.extended_room &#8212; Evennia latest documentation</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=e4a91a55" />
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="evennia.contrib.grid.extended_room.tests" href="evennia.contrib.grid.extended_room.tests.html" />
     <link rel="prev" title="evennia.contrib.grid.extended_room" href="evennia.contrib.grid.extended_room.html" /> 
   </head><body>
-
-     
-
-
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,7 +33,7 @@
         <li class="right" >
           <a href="evennia.contrib.grid.extended_room.html" title="evennia.contrib.grid.extended_room"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -51,74 +45,12 @@
     </div>  
 
     <div class="document">
-
       <div class="documentwrapper">
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="../index.html">
-              <img class="logo" src="../_static/evennia_logo.png" alt="Logo"/>
-            </a></p>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="evennia.contrib.grid.extended_room.html"
-                        title="previous chapter">evennia.contrib.grid.extended_room</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="evennia.contrib.grid.extended_room.tests.html"
-                        title="next chapter">evennia.contrib.grid.extended_room.tests</a></p>
-  <div role="note" aria-label="source link">
-    <!--h3>This Page</h3-->
-    <ul class="this-page-menu">
-      <li><a href="../_sources/api/evennia.contrib.grid.extended_room.extended_room.md.txt"
-            rel="nofollow">Show Page Source</a></li>
-    </ul>
-   </div><h3>Links</h3>
-<ul>
-  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
-  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
-  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
-  <li><a href="http://games.evennia.com">Game Index</a> </li>
-  <li>
-    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
-     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
-      <a href="https://evennia.blogspot.com/">Blog</a>
-  </li>
-</ul>
-<h3>Doc Versions</h3>
-<ul>
-  
-    <li><a href="evennia.contrib.grid.extended_room.extended_room.html">latest (main branch)</a></li>
-
-    <li><a href="../5.x/index.html">v5.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../4.x/index.html">v4.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../3.x/index.html">v3.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../2.x/index.html">v2.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../1.x/index.html">v1.0.0 branch (outdated)</a></li>
-  
-    <li><a href="../0.x/index.html">v0.9.5 branch (outdated)</a></li>
-  
-
-</ul>
-
-        </div>
-      </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
   <section id="module-evennia.contrib.grid.extended_room.extended_room">
-<span id="evennia-contrib-grid-extended-room-extended-room"></span><h1>evennia.contrib.grid.extended_room.extended_room<a class="headerlink" href="#module-evennia.contrib.grid.extended_room.extended_room" title="Permalink to this headline">¶</a></h1>
+<span id="evennia-contrib-grid-extended-room-extended-room"></span><h1>evennia.contrib.grid.extended_room.extended_room<a class="headerlink" href="#module-evennia.contrib.grid.extended_room.extended_room" title="Link to this heading">¶</a></h1>
 <p>Extended Room</p>
 <p>Evennia Contribution - Griatch 2012, vincent-lg 2019, Griatch 2023</p>
 <p>This is an extended Room typeclass for Evennia, supporting descriptions that vary
@@ -151,20 +83,20 @@ self.add(extended_room.ExtendedRoomCmdSet)  # &lt;—</p>
 on rooms with the <strong>ExtendedRoom</strong> typeclass. Create new rooms with the correct
 typeclass or use the <strong>typeclass</strong> command to swap existing rooms.</p>
 <dl class="py function">
-<dt id="evennia.contrib.grid.extended_room.extended_room.func_state">
-<code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">func_state</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">roomstate</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">looker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">room</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#func_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.func_state" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.func_state">
+<span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">func_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roomstate</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">looker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">room</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#func_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.func_state" title="Link to this definition">¶</a></dt>
 <dd><p>Usage: $state(roomstate, text)</p>
 <p>Funcparser callable for ExtendedRoom. This is called by the FuncParser when it
 returns the description of the room. Use ‘default’ for a default text when no
 other states are set.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>roomstate</strong> (<em>str</em>) – A roomstate, like “morning”, “raining”. This is case insensitive.</p></li>
 <li><p><strong>*args</strong> – All these will be combined into one string separated by commas.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Keyword Arguments</dt>
+<dt class="field-even">Keyword Arguments<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>looker</strong> (<em>Object</em>) – The object looking at the room. Unused by default.</p></li>
 <li><p><strong>room</strong> (<a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom" title="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom"><em>ExtendedRoom</em></a>) – The room being looked at.</p></li>
@@ -179,9 +111,9 @@ argument. That way, one may be able to get away without using quotes.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">ExtendedRoom</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultRoom" title="evennia.objects.objects.DefaultRoom"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.objects.objects.DefaultRoom</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">ExtendedRoom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultRoom" title="evennia.objects.objects.DefaultRoom"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultRoom</span></code></a></p>
 <p>An Extended Room</p>
 <dl class="simple">
 <dt>Room states:</dt><dd><p>A room state is set as a Tag with category “roomstate” and tagkey “on_fire” or “flooded”
@@ -213,138 +145,138 @@ to add an actual database object for it. The <strong>detail</strong> command is 
 <div><p>echoed to the room at the given rate.</p>
 </div></blockquote>
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.fallback_desc">
-<code class="sig-name descname">fallback_desc</code><em class="property"> = 'You see nothing special.'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.fallback_desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.fallback_desc">
+<span class="sig-name descname"><span class="pre">fallback_desc</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'You</span> <span class="pre">see</span> <span class="pre">nothing</span> <span class="pre">special.'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.fallback_desc" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_state_tag_category">
-<code class="sig-name descname">room_state_tag_category</code><em class="property"> = 'room_state'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_state_tag_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_state_tag_category">
+<span class="sig-name descname"><span class="pre">room_state_tag_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'room_state'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_state_tag_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.months_per_year">
-<code class="sig-name descname">months_per_year</code><em class="property"> = 12</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.months_per_year" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.months_per_year">
+<span class="sig-name descname"><span class="pre">months_per_year</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.months_per_year" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.hours_per_day">
-<code class="sig-name descname">hours_per_day</code><em class="property"> = 24</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.hours_per_day" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.hours_per_day">
+<span class="sig-name descname"><span class="pre">hours_per_day</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.hours_per_day" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.seasons_per_year">
-<code class="sig-name descname">seasons_per_year</code><em class="property"> = {'autumn': (0.75, 1.0), 'spring': (0.25, 0.5), 'summer': (0.5, 0.75), 'winter': (1.0, 0.25)}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.seasons_per_year" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.seasons_per_year">
+<span class="sig-name descname"><span class="pre">seasons_per_year</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'autumn':</span> <span class="pre">(0.75,</span> <span class="pre">1.0),</span> <span class="pre">'spring':</span> <span class="pre">(0.25,</span> <span class="pre">0.5),</span> <span class="pre">'summer':</span> <span class="pre">(0.5,</span> <span class="pre">0.75),</span> <span class="pre">'winter':</span> <span class="pre">(1.0,</span> <span class="pre">0.25)}</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.seasons_per_year" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_spring">
-<code class="sig-name descname">desc_spring</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_spring" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_spring">
+<span class="sig-name descname"><span class="pre">desc_spring</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_spring" title="Link to this definition">¶</a></dt>
 <dd><p>AttributeProperty.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_summer">
-<code class="sig-name descname">desc_summer</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_summer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_summer">
+<span class="sig-name descname"><span class="pre">desc_summer</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_summer" title="Link to this definition">¶</a></dt>
 <dd><p>AttributeProperty.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_autumn">
-<code class="sig-name descname">desc_autumn</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_autumn" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_autumn">
+<span class="sig-name descname"><span class="pre">desc_autumn</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_autumn" title="Link to this definition">¶</a></dt>
 <dd><p>AttributeProperty.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_winter">
-<code class="sig-name descname">desc_winter</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_winter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_winter">
+<span class="sig-name descname"><span class="pre">desc_winter</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_winter" title="Link to this definition">¶</a></dt>
 <dd><p>AttributeProperty.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.times_of_day">
-<code class="sig-name descname">times_of_day</code><em class="property"> = {'afternoon': (0.5, 0.75), 'evening': (0.75, 0), 'morning': (0.25, 0.5), 'night': (0, 0.25)}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.times_of_day" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.times_of_day">
+<span class="sig-name descname"><span class="pre">times_of_day</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'afternoon':</span> <span class="pre">(0.5,</span> <span class="pre">0.75),</span> <span class="pre">'evening':</span> <span class="pre">(0.75,</span> <span class="pre">0),</span> <span class="pre">'morning':</span> <span class="pre">(0.25,</span> <span class="pre">0.5),</span> <span class="pre">'night':</span> <span class="pre">(0,</span> <span class="pre">0.25)}</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.times_of_day" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc">
-<code class="sig-name descname">desc</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc">
+<span class="sig-name descname"><span class="pre">desc</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc" title="Link to this definition">¶</a></dt>
 <dd><p>AttributeProperty.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.details">
-<code class="sig-name descname">details</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.details" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.details">
+<span class="sig-name descname"><span class="pre">details</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.details" title="Link to this definition">¶</a></dt>
 <dd><p>AttributeProperty.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_message_rate">
-<code class="sig-name descname">room_message_rate</code><em class="property"> = 0</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_message_rate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_message_rate">
+<span class="sig-name descname"><span class="pre">room_message_rate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_message_rate" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_messages">
-<code class="sig-name descname">room_messages</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_messages" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_messages">
+<span class="sig-name descname"><span class="pre">room_messages</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_messages" title="Link to this definition">¶</a></dt>
 <dd><p>AttributeProperty.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.at_init">
-<code class="sig-name descname">at_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.at_init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.at_init" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.at_init">
+<span class="sig-name descname"><span class="pre">at_init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.at_init"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.at_init" title="Link to this definition">¶</a></dt>
 <dd><p>Evennia hook. Start up repeating function whenever object loads into memory.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.start_repeat_broadcast_messages">
-<code class="sig-name descname">start_repeat_broadcast_messages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.start_repeat_broadcast_messages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.start_repeat_broadcast_messages" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.start_repeat_broadcast_messages">
+<span class="sig-name descname"><span class="pre">start_repeat_broadcast_messages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.start_repeat_broadcast_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.start_repeat_broadcast_messages" title="Link to this definition">¶</a></dt>
 <dd><p>Start repeating the broadcast messages. Only needs to be called if adding messages
 and not having reloaded the server.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.repeat_broadcast_message_to_room">
-<code class="sig-name descname">repeat_broadcast_message_to_room</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.repeat_broadcast_message_to_room"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.repeat_broadcast_message_to_room" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.repeat_broadcast_message_to_room">
+<span class="sig-name descname"><span class="pre">repeat_broadcast_message_to_room</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.repeat_broadcast_message_to_room"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.repeat_broadcast_message_to_room" title="Link to this definition">¶</a></dt>
 <dd><p>Send a message to the room at room_message_rate. By default
 we will randomize which one to send.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_time_of_day">
-<code class="sig-name descname">get_time_of_day</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_time_of_day"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_time_of_day" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_time_of_day">
+<span class="sig-name descname"><span class="pre">get_time_of_day</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_time_of_day"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_time_of_day" title="Link to this definition">¶</a></dt>
 <dd><p>Get the current time of day.</p>
 <p>Override to customize.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>str</em> – The time of day, such as ‘morning’, ‘afternoon’, ‘evening’ or ‘night’.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_season">
-<code class="sig-name descname">get_season</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_season"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_season" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_season">
+<span class="sig-name descname"><span class="pre">get_season</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_season"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_season" title="Link to this definition">¶</a></dt>
 <dd><p>Get the current season.</p>
 <p>Override to customize.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>str</em> – The season, such as ‘spring’, ‘summer’, ‘autumn’ or ‘winter’.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_states">
-<em class="property">property </em><code class="sig-name descname">room_states</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_states" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_states">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">room_states</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_states" title="Link to this definition">¶</a></dt>
 <dd><p>Get all room_states set on this room.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_room_state">
-<code class="sig-name descname">add_room_state</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">room_states</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.add_room_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_room_state" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_room_state">
+<span class="sig-name descname"><span class="pre">add_room_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">room_states</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.add_room_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_room_state" title="Link to this definition">¶</a></dt>
 <dd><p>Set a room-state or room-states to the room.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>*room_state</strong> (<em>str</em>) – A room state like ‘on_fire’ or ‘flooded’. This will affect
 what <strong>desc_*</strong> and <strong>roomstate_*</strong> descriptions/inlines are used. You can add
 more than one at a time.</p>
@@ -358,34 +290,34 @@ the state to let the current game time determine this type of states.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_room_state">
-<code class="sig-name descname">remove_room_state</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">room_states</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.remove_room_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_room_state" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_room_state">
+<span class="sig-name descname"><span class="pre">remove_room_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">room_states</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.remove_room_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_room_state" title="Link to this definition">¶</a></dt>
 <dd><p>Remove a roomstate from the room.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>*room_state</strong> (<em>str</em>) – A roomstate like ‘on_fire’ or ‘flooded’. If the</p></li>
-<li><p><strong>did not have this state</strong> (<em>room</em>) – </p></li>
-<li><p><strong>happens.You can remove more than one at a time.</strong> (<em>nothing</em>) – </p></li>
+<li><p><strong>state</strong> (<em>room did not have this</em>)</p></li>
+<li><p><strong>time.</strong> (<em>nothing happens.You can remove more than one at a</em>)</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.clear_room_state">
-<code class="sig-name descname">clear_room_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.clear_room_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.clear_room_state" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.clear_room_state">
+<span class="sig-name descname"><span class="pre">clear_room_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.clear_room_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.clear_room_state" title="Link to this definition">¶</a></dt>
 <dd><p>Clear all room states.</p>
 <p>Note that fallback time-of-day and seasonal states are not affected by this, only
 custom states added with <strong>.add_room_state()</strong>.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_desc">
-<code class="sig-name descname">add_desc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">desc</span></em>, <em class="sig-param"><span class="n">room_state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.add_desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_desc">
+<span class="sig-name descname"><span class="pre">add_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">desc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">room_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.add_desc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_desc" title="Link to this definition">¶</a></dt>
 <dd><p>Add a custom description, matching a particular room state.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>desc</strong> (<em>str</em>) – The description to use when this roomstate is active.</p></li>
 <li><p><strong>roomstate</strong> (<em>str</em><em>, </em><em>None</em>) – The roomstate to match, like ‘on_fire’, ‘flooded’, or “spring”.
@@ -396,22 +328,22 @@ If <strong>None</strong>, set the default <strong>desc</strong> fallback.</p></l
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_desc">
-<code class="sig-name descname">remove_desc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">room_state</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.remove_desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_desc">
+<span class="sig-name descname"><span class="pre">remove_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">room_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.remove_desc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_desc" title="Link to this definition">¶</a></dt>
 <dd><p>Remove a custom description.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>room_state</strong> (<em>str</em>) – The room-state description to remove.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.all_desc">
-<code class="sig-name descname">all_desc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.all_desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.all_desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.all_desc">
+<span class="sig-name descname"><span class="pre">all_desc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.all_desc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.all_desc" title="Link to this definition">¶</a></dt>
 <dd><p>Get all available descriptions.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><p><em>dict</em> –</p>
 <dl class="simple">
 <dt>A mapping of roomstate to description. The <strong>None</strong> key indicates the</dt><dd><p>base subscription (stored in the <strong>desc</strong> Attribute).</p>
@@ -423,11 +355,11 @@ If <strong>None</strong>, set the default <strong>desc</strong> fallback.</p></l
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_stateful_desc">
-<code class="sig-name descname">get_stateful_desc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_stateful_desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_stateful_desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_stateful_desc">
+<span class="sig-name descname"><span class="pre">get_stateful_desc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_stateful_desc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_stateful_desc" title="Link to this definition">¶</a></dt>
 <dd><p>Get the currently active room description based on the current roomstate.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>str</em> – The current description.</p>
 </dd>
 </dl>
@@ -451,16 +383,16 @@ Attribute is used.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.replace_legacy_time_of_day_markup">
-<code class="sig-name descname">replace_legacy_time_of_day_markup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">desc</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.replace_legacy_time_of_day_markup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.replace_legacy_time_of_day_markup" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.replace_legacy_time_of_day_markup">
+<span class="sig-name descname"><span class="pre">replace_legacy_time_of_day_markup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">desc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.replace_legacy_time_of_day_markup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.replace_legacy_time_of_day_markup" title="Link to this definition">¶</a></dt>
 <dd><p>Filter description by legacy markup like <strong>&lt;morning&gt;…&lt;/morning&gt;</strong>. Filter
 out all such markings that does not match the current time. Supports
 ‘morning’, ‘afternoon’, ‘evening’ and ‘night’.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>desc</strong> (<em>str</em>) – The unmodified description.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>str</em> – A possibly modified description.</p>
 </dd>
 </dl>
@@ -469,29 +401,29 @@ out all such markings that does not match the current time. Supports
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_display_desc">
-<code class="sig-name descname">get_display_desc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">looker</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_display_desc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_display_desc" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_display_desc">
+<span class="sig-name descname"><span class="pre">get_display_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">looker</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_display_desc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_display_desc" title="Link to this definition">¶</a></dt>
 <dd><p>Evennia standard hook. Dynamically get the ‘desc’ component of the object description. This
 is called by the return_appearance method and in turn by the ‘look’ command.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>looker</strong> (<em>Object</em>) – Object doing the looking (unused by default).</p></li>
 <li><p><strong>**kwargs</strong> – Arbitrary data for use when overriding.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>str</em> – The desc display string.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_detail">
-<code class="sig-name descname">add_detail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">description</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.add_detail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_detail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_detail">
+<span class="sig-name descname"><span class="pre">add_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.add_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_detail" title="Link to this definition">¶</a></dt>
 <dd><p>This sets a new detail, using an Attribute “details”.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>detailkey</strong> (<em>str</em>) – The detail identifier to add (for
 aliases you need to add multiple keys to the
@@ -504,11 +436,11 @@ at the given detailkey. This can contain funcparser directives.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.set_detail">
-<code class="sig-name descname">set_detail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">description</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.set_detail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.set_detail">
+<span class="sig-name descname"><span class="pre">set_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.set_detail" title="Link to this definition">¶</a></dt>
 <dd><p>This sets a new detail, using an Attribute “details”.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>detailkey</strong> (<em>str</em>) – The detail identifier to add (for
 aliases you need to add multiple keys to the
@@ -521,11 +453,11 @@ at the given detailkey. This can contain funcparser directives.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_detail">
-<code class="sig-name descname">remove_detail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.remove_detail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_detail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_detail">
+<span class="sig-name descname"><span class="pre">remove_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.remove_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_detail" title="Link to this definition">¶</a></dt>
 <dd><p>Delete a detail.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>str</em>) – the detail to remove (case-insensitive).</p></li>
 <li><p><strong>*args</strong> – Unused (backwards compatibility)</p></li>
@@ -538,11 +470,11 @@ the detail doesn’t exist in this room.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.del_detail">
-<code class="sig-name descname">del_detail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.del_detail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.del_detail">
+<span class="sig-name descname"><span class="pre">del_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.del_detail" title="Link to this definition">¶</a></dt>
 <dd><p>Delete a detail.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>str</em>) – the detail to remove (case-insensitive).</p></li>
 <li><p><strong>*args</strong> – Unused (backwards compatibility)</p></li>
@@ -555,19 +487,19 @@ the detail doesn’t exist in this room.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_detail">
-<code class="sig-name descname">get_detail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">looker</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_detail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_detail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_detail">
+<span class="sig-name descname"><span class="pre">get_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">looker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoom.get_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_detail" title="Link to this definition">¶</a></dt>
 <dd><p>This will attempt to match a “detail” to look for in the room.
 This will do a lower-case match followed by a startsby match. This
 is called by the new <strong>look</strong> Command.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>str</em>) – A detail identifier.</p></li>
 <li><p><strong>looker</strong> (<em>Object</em><em>, </em><em>optional</em>) – The one looking.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>detail (str or None)</em> – A detail matching the given key, or <strong>None</strong> if
 it was not found.</p>
 </dd>
@@ -582,19 +514,19 @@ finding the target.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.return_detail">
-<code class="sig-name descname">return_detail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">looker</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.return_detail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.return_detail">
+<span class="sig-name descname"><span class="pre">return_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">looker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.return_detail" title="Link to this definition">¶</a></dt>
 <dd><p>This will attempt to match a “detail” to look for in the room.
 This will do a lower-case match followed by a startsby match. This
 is called by the new <strong>look</strong> Command.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>key</strong> (<em>str</em>) – A detail identifier.</p></li>
 <li><p><strong>looker</strong> (<em>Object</em><em>, </em><em>optional</em>) – The one looking.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><em>detail (str or None)</em> – A detail matching the given key, or <strong>None</strong> if
 it was not found.</p>
 </dd>
@@ -609,33 +541,33 @@ finding the target.</p>
 </dd></dl>
 
 <dl class="py exception">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.DoesNotExist">
-<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.DoesNotExist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultRoom.DoesNotExist" title="evennia.objects.objects.DefaultRoom.DoesNotExist"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.objects.objects.DefaultRoom.DoesNotExist</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.DoesNotExist" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultRoom.DoesNotExist" title="evennia.objects.objects.DefaultRoom.DoesNotExist"><code class="xref py py-class docutils literal notranslate"><span class="pre">DoesNotExist</span></code></a></p>
 </dd></dl>
 
 <dl class="py exception">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.MultipleObjectsReturned">
-<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultRoom.MultipleObjectsReturned" title="evennia.objects.objects.DefaultRoom.MultipleObjectsReturned"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.objects.objects.DefaultRoom.MultipleObjectsReturned</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.MultipleObjectsReturned" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.objects.objects.html#evennia.objects.objects.DefaultRoom.MultipleObjectsReturned" title="evennia.objects.objects.DefaultRoom.MultipleObjectsReturned"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.path">
-<code class="sig-name descname">path</code><em class="property"> = 'evennia.contrib.grid.extended_room.extended_room.ExtendedRoom'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.path" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'evennia.contrib.grid.extended_room.extended_room.ExtendedRoom'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.path" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.typename">
-<code class="sig-name descname">typename</code><em class="property"> = 'ExtendedRoom'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.typename" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.typename">
+<span class="sig-name descname"><span class="pre">typename</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ExtendedRoom'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.typename" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">CmdExtendedRoomLook</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomLook"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.general.html#evennia.commands.default.general.CmdLook" title="evennia.commands.default.general.CmdLook"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.general.CmdLook</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">CmdExtendedRoomLook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomLook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.general.html#evennia.commands.default.general.CmdLook" title="evennia.commands.default.general.CmdLook"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmdLook</span></code></a></p>
 <p>look</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>look
@@ -646,48 +578,48 @@ look <a href="#id1"><span class="problematic" id="id2">*</span></a>&lt;account&g
 </dl>
 <p>Observes your location, details at your location or objects in your vicinity.</p>
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.look_detail">
-<code class="sig-name descname">look_detail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomLook.look_detail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.look_detail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.look_detail">
+<span class="sig-name descname"><span class="pre">look_detail</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomLook.look_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.look_detail" title="Link to this definition">¶</a></dt>
 <dd><p>Look for detail on room.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomLook.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomLook.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.func" title="Link to this definition">¶</a></dt>
 <dd><p>Handle the looking.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = ['l', 'ls']</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['ls',</span> <span class="pre">'l']</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'general'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'general'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.key">
-<code class="sig-name descname">key</code><em class="property"> = 'look'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'look'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:all()'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': 'l ls', 'category': 'general', 'key': 'look', 'no_prefix': ' l ls', 'tags': '', 'text': '\n    look\n\n    Usage:\n      look\n      look &lt;obj&gt;\n      look &lt;room detail&gt;\n      look *&lt;account&gt;\n\n    Observes your location, details at your location or objects in your vicinity.\n    '}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'ls</span> <span class="pre">l',</span> <span class="pre">'category':</span> <span class="pre">'general',</span> <span class="pre">'key':</span> <span class="pre">'look',</span> <span class="pre">'no_prefix':</span> <span class="pre">'</span> <span class="pre">ls</span> <span class="pre">l',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\nlook\n\nUsage:\n</span>&#160; <span class="pre">look\n</span>&#160; <span class="pre">look</span> <span class="pre">&lt;obj&gt;\n</span>&#160; <span class="pre">look</span> <span class="pre">&lt;room</span> <span class="pre">detail&gt;\n</span>&#160; <span class="pre">look</span> <span class="pre">*&lt;account&gt;\n\nObserves</span> <span class="pre">your</span> <span class="pre">location,</span> <span class="pre">details</span> <span class="pre">at</span> <span class="pre">your</span> <span class="pre">location</span> <span class="pre">or</span> <span class="pre">objects</span> <span class="pre">in</span> <span class="pre">your</span> <span class="pre">vicinity.\n'}</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">CmdExtendedRoomDesc</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.building.html#evennia.commands.default.building.CmdDesc" title="evennia.commands.default.building.CmdDesc"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.building.CmdDesc</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">CmdExtendedRoomDesc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.building.html#evennia.commands.default.building.CmdDesc" title="evennia.commands.default.building.CmdDesc"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmdDesc</span></code></a></p>
 <p>describe an object or the current room.</p>
 <dl>
 <dt>Usage:</dt><dd><p>&#64;desc[/switch] [&lt;obj&gt; =] &lt;description&gt;</p>
@@ -713,28 +645,28 @@ states only work with rooms.</p>
 <p>Rooms will automatically change season as the in-game time changes. You can
 set a specific room-state with the <a href="#id3"><span class="problematic" id="id4">|</span></a>wroomstate|n command.</p>
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.key">
-<code class="sig-name descname">key</code><em class="property"> = '&#64;desc'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&#64;desc'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.switch_options">
-<code class="sig-name descname">switch_options</code><em class="property"> = None</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.switch_options" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.switch_options">
+<span class="sig-name descname"><span class="pre">switch_options</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.switch_options" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.locks">
-<code class="sig-name descname">locks</code><em class="property"> = 'cmd:perm(desc) or perm(Builder)'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.locks" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.locks">
+<span class="sig-name descname"><span class="pre">locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:perm(desc)</span> <span class="pre">or</span> <span class="pre">perm(Builder)'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.locks" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'building'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.parse">
-<code class="sig-name descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.parse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.parse" title="Link to this definition">¶</a></dt>
 <dd><p>This method is called by the cmdhandler once the command name
 has been identified. It creates a new set of member variables
 that can be later accessed from self.func() (see below)</p>
@@ -806,42 +738,42 @@ strings, but case is preserved.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.edit_handler">
-<code class="sig-name descname">edit_handler</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.edit_handler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.edit_handler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.edit_handler">
+<span class="sig-name descname"><span class="pre">edit_handler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.edit_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.edit_handler" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.show_stateful_descriptions">
-<code class="sig-name descname">show_stateful_descriptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.show_stateful_descriptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.show_stateful_descriptions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.show_stateful_descriptions">
+<span class="sig-name descname"><span class="pre">show_stateful_descriptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.show_stateful_descriptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.show_stateful_descriptions" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.func" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDesc.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.func" title="Link to this definition">¶</a></dt>
 <dd><p>Define command</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = []</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:perm(desc) or perm(Builder)'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:perm(desc)</span> <span class="pre">or</span> <span class="pre">perm(Builder)'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '', 'category': 'building', 'key': '&#64;desc', 'no_prefix': 'desc ', 'tags': '', 'text': '\n    describe an object or the current room.\n\n    Usage:\n      &#64;desc[/switch] [&lt;obj&gt; =] &lt;description&gt;\n\n    Switches:\n      edit - Open up a line editor for more advanced editing.\n      del - Delete the description of an object. If another state is given, its description\n        will be deleted.\n      spring||summer||autumn||winter - room description to use in respective in-game season\n      &lt;other&gt; - room description to use with an arbitrary room state.\n\n    Sets the description an object. If an object is not given,\n    describe the current room, potentially showing any additional stateful descriptions. The room\n    states only work with rooms.\n\n    Examples:\n        &#64;desc/winter A cold winter scene.\n        &#64;desc/edit/summer\n        &#64;desc/burning This room is burning!\n        &#64;desc A normal room with no state.\n        &#64;desc/del/burning\n\n    Rooms will automatically change season as the in-game time changes. You can\n    set a specific room-state with the |wroomstate|n command.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'',</span> <span class="pre">'category':</span> <span class="pre">'building',</span> <span class="pre">'key':</span> <span class="pre">'&#64;desc',</span> <span class="pre">'no_prefix':</span> <span class="pre">'desc</span> <span class="pre">',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\ndescribe</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">or</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">room.\n\nUsage:\n</span>&#160; <span class="pre">&#64;desc[/switch]</span> <span class="pre">[&lt;obj&gt;</span> <span class="pre">=]</span> <span class="pre">&lt;description&gt;\n\nSwitches:\n</span>&#160; <span class="pre">edit</span> <span class="pre">-</span> <span class="pre">Open</span> <span class="pre">up</span> <span class="pre">a</span> <span class="pre">line</span> <span class="pre">editor</span> <span class="pre">for</span> <span class="pre">more</span> <span class="pre">advanced</span> <span class="pre">editing.\n</span>&#160; <span class="pre">del</span> <span class="pre">-</span> <span class="pre">Delete</span> <span class="pre">the</span> <span class="pre">description</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">object.</span> <span class="pre">If</span> <span class="pre">another</span> <span class="pre">state</span> <span class="pre">is</span> <span class="pre">given,</span> <span class="pre">its</span> <span class="pre">description\n</span>&#160;&#160;&#160; <span class="pre">will</span> <span class="pre">be</span> <span class="pre">deleted.\n</span>&#160; <span class="pre">spring||summer||autumn||winter</span> <span class="pre">-</span> <span class="pre">room</span> <span class="pre">description</span> <span class="pre">to</span> <span class="pre">use</span> <span class="pre">in</span> <span class="pre">respective</span> <span class="pre">in-game</span> <span class="pre">season\n</span>&#160; <span class="pre">&lt;other&gt;</span> <span class="pre">-</span> <span class="pre">room</span> <span class="pre">description</span> <span class="pre">to</span> <span class="pre">use</span> <span class="pre">with</span> <span class="pre">an</span> <span class="pre">arbitrary</span> <span class="pre">room</span> <span class="pre">state.\n\nSets</span> <span class="pre">the</span> <span class="pre">description</span> <span class="pre">an</span> <span class="pre">object.</span> <span class="pre">If</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">given,\ndescribe</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">room,</span> <span class="pre">potentially</span> <span class="pre">showing</span> <span class="pre">any</span> <span class="pre">additional</span> <span class="pre">stateful</span> <span class="pre">descriptions.</span> <span class="pre">The</span> <span class="pre">room\nstates</span> <span class="pre">only</span> <span class="pre">work</span> <span class="pre">with</span> <span class="pre">rooms.\n\nExamples:\n</span>&#160;&#160;&#160; <span class="pre">&#64;desc/winter</span> <span class="pre">A</span> <span class="pre">cold</span> <span class="pre">winter</span> <span class="pre">scene.\n</span>&#160;&#160;&#160; <span class="pre">&#64;desc/edit/summer\n</span>&#160;&#160;&#160; <span class="pre">&#64;desc/burning</span> <span class="pre">This</span> <span class="pre">room</span> <span class="pre">is</span> <span class="pre">burning!\n</span>&#160;&#160;&#160; <span class="pre">&#64;desc</span> <span class="pre">A</span> <span class="pre">normal</span> <span class="pre">room</span> <span class="pre">with</span> <span class="pre">no</span> <span class="pre">state.\n</span>&#160;&#160;&#160; <span class="pre">&#64;desc/del/burning\n\nRooms</span> <span class="pre">will</span> <span class="pre">automatically</span> <span class="pre">change</span> <span class="pre">season</span> <span class="pre">as</span> <span class="pre">the</span> <span class="pre">in-game</span> <span class="pre">time</span> <span class="pre">changes.</span> <span class="pre">You</span> <span class="pre">can\nset</span> <span class="pre">a</span> <span class="pre">specific</span> <span class="pre">room-state</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">|wroomstate|n</span> <span class="pre">command.\n\n'}</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">CmdExtendedRoomDetail</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.muxcommand.MuxCommand</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">CmdExtendedRoomDetail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDetail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">MuxCommand</span></code></a></p>
 <p>sets a detail on a room</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>&#64;detail[/del] &lt;key&gt; [= &lt;description&gt;]
@@ -862,49 +794,51 @@ and the description.  You can assign the same description to several
 details using the alias syntax (replace key by alias1;alias2;alias3;…).
 To remove one or several details, use the &#64;detail/del switch.</p>
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.key">
-<code class="sig-name descname">key</code><em class="property"> = '&#64;detail'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&#64;detail'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.locks">
-<code class="sig-name descname">locks</code><em class="property"> = 'cmd:perm(Builder)'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.locks" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.locks">
+<span class="sig-name descname"><span class="pre">locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:perm(Builder)'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.locks" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'building'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDetail.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.func" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the hook function that actually does all the work. It is called
-by the cmdhandler right after self.parser() finishes, and so has access
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomDetail.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.func" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This is the hook function that actually does all the work. It is called</dt><dd><p>by the cmdhandler right after self.parser() finishes, and so has access
 to all the variables defined therein.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = []</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:perm(Builder)'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:perm(Builder)'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '', 'category': 'building', 'key': '&#64;detail', 'no_prefix': 'detail ', 'tags': '', 'text': '\n    sets a detail on a room\n\n    Usage:\n        &#64;detail[/del] &lt;key&gt; [= &lt;description&gt;]\n        &#64;detail &lt;key&gt;;&lt;alias&gt;;... = description\n\n    Example:\n        &#64;detail\n        &#64;detail walls = The walls are covered in ...\n        &#64;detail castle;ruin;tower = The distant ruin ...\n        &#64;detail/del wall\n        &#64;detail/del castle;ruin;tower\n\n    This command allows to show the current room details if you enter it\n    without any argument.  Otherwise, sets or deletes a detail on the current\n    room, if this room supports details like an extended room. To add new\n    detail, just use the &#64;detail command, specifying the key, an equal sign\n    and the description.  You can assign the same description to several\n    details using the alias syntax (replace key by alias1;alias2;alias3;...).\n    To remove one or several details, use the &#64;detail/del switch.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'',</span> <span class="pre">'category':</span> <span class="pre">'building',</span> <span class="pre">'key':</span> <span class="pre">'&#64;detail',</span> <span class="pre">'no_prefix':</span> <span class="pre">'detail</span> <span class="pre">',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\nsets</span> <span class="pre">a</span> <span class="pre">detail</span> <span class="pre">on</span> <span class="pre">a</span> <span class="pre">room\n\nUsage:\n</span>&#160;&#160;&#160; <span class="pre">&#64;detail[/del]</span> <span class="pre">&lt;key&gt;</span> <span class="pre">[=</span> <span class="pre">&lt;description&gt;]\n</span>&#160;&#160;&#160; <span class="pre">&#64;detail</span> <span class="pre">&lt;key&gt;;&lt;alias&gt;;...</span> <span class="pre">=</span> <span class="pre">description\n\nExample:\n</span>&#160;&#160;&#160; <span class="pre">&#64;detail\n</span>&#160;&#160;&#160; <span class="pre">&#64;detail</span> <span class="pre">walls</span> <span class="pre">=</span> <span class="pre">The</span> <span class="pre">walls</span> <span class="pre">are</span> <span class="pre">covered</span> <span class="pre">in</span> <span class="pre">...\n</span>&#160;&#160;&#160; <span class="pre">&#64;detail</span> <span class="pre">castle;ruin;tower</span> <span class="pre">=</span> <span class="pre">The</span> <span class="pre">distant</span> <span class="pre">ruin</span> <span class="pre">...\n</span>&#160;&#160;&#160; <span class="pre">&#64;detail/del</span> <span class="pre">wall\n</span>&#160;&#160;&#160; <span class="pre">&#64;detail/del</span> <span class="pre">castle;ruin;tower\n\nThis</span> <span class="pre">command</span> <span class="pre">allows</span> <span class="pre">to</span> <span class="pre">show</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">room</span> <span class="pre">details</span> <span class="pre">if</span> <span class="pre">you</span> <span class="pre">enter</span> <span class="pre">it\nwithout</span> <span class="pre">any</span> <span class="pre">argument.</span>&#160; <span class="pre">Otherwise,</span> <span class="pre">sets</span> <span class="pre">or</span> <span class="pre">deletes</span> <span class="pre">a</span> <span class="pre">detail</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">current\nroom,</span> <span class="pre">if</span> <span class="pre">this</span> <span class="pre">room</span> <span class="pre">supports</span> <span class="pre">details</span> <span class="pre">like</span> <span class="pre">an</span> <span class="pre">extended</span> <span class="pre">room.</span> <span class="pre">To</span> <span class="pre">add</span> <span class="pre">new\ndetail,</span> <span class="pre">just</span> <span class="pre">use</span> <span class="pre">the</span> <span class="pre">&#64;detail</span> <span class="pre">command,</span> <span class="pre">specifying</span> <span class="pre">the</span> <span class="pre">key,</span> <span class="pre">an</span> <span class="pre">equal</span> <span class="pre">sign\nand</span> <span class="pre">the</span> <span class="pre">description.</span>&#160; <span class="pre">You</span> <span class="pre">can</span> <span class="pre">assign</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">description</span> <span class="pre">to</span> <span class="pre">several\ndetails</span> <span class="pre">using</span> <span class="pre">the</span> <span class="pre">alias</span> <span class="pre">syntax</span> <span class="pre">(replace</span> <span class="pre">key</span> <span class="pre">by</span> <span class="pre">alias1;alias2;alias3;...).\nTo</span> <span class="pre">remove</span> <span class="pre">one</span> <span class="pre">or</span> <span class="pre">several</span> <span class="pre">details,</span> <span class="pre">use</span> <span class="pre">the</span> <span class="pre">&#64;detail/del</span> <span class="pre">switch.\n\n'}</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">CmdExtendedRoomState</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.muxcommand.MuxCommand</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">CmdExtendedRoomState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">MuxCommand</span></code></a></p>
 <p>Toggle and view room state for the current room.</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>&#64;roomstate [&lt;roomstate&gt;]</p>
@@ -917,23 +851,23 @@ to all the variables defined therein.</p>
 <p>If the roomstate was already set, it will be disabled. Use
 without arguments to see the roomstates on the current room.</p>
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.key">
-<code class="sig-name descname">key</code><em class="property"> = '&#64;roomstate'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&#64;roomstate'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.locks">
-<code class="sig-name descname">locks</code><em class="property"> = 'cmd:perm(Builder)'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.locks" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.locks">
+<span class="sig-name descname"><span class="pre">locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:perm(Builder)'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.locks" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'building'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.parse">
-<code class="sig-name descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomState.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.parse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomState.parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.parse" title="Link to this definition">¶</a></dt>
 <dd><p>This method is called by the cmdhandler once the command name
 has been identified. It creates a new set of member variables
 that can be later accessed from self.func() (see below)</p>
@@ -1005,34 +939,36 @@ strings, but case is preserved.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomState.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.func" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the hook function that actually does all the work. It is called
-by the cmdhandler right after self.parser() finishes, and so has access
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomState.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.func" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This is the hook function that actually does all the work. It is called</dt><dd><p>by the cmdhandler right after self.parser() finishes, and so has access
 to all the variables defined therein.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = []</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:perm(Builder)'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:perm(Builder)'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '', 'category': 'building', 'key': '&#64;roomstate', 'no_prefix': 'roomstate ', 'tags': '', 'text': '\n    Toggle and view room state for the current room.\n\n    Usage:\n        &#64;roomstate [&lt;roomstate&gt;]\n\n    Examples:\n        &#64;roomstate spring\n        &#64;roomstate burning\n        &#64;roomstate burning      (a second time toggles it off)\n\n    If the roomstate was already set, it will be disabled. Use\n    without arguments to see the roomstates on the current room.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'',</span> <span class="pre">'category':</span> <span class="pre">'building',</span> <span class="pre">'key':</span> <span class="pre">'&#64;roomstate',</span> <span class="pre">'no_prefix':</span> <span class="pre">'roomstate</span> <span class="pre">',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\nToggle</span> <span class="pre">and</span> <span class="pre">view</span> <span class="pre">room</span> <span class="pre">state</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">room.\n\nUsage:\n</span>&#160;&#160;&#160; <span class="pre">&#64;roomstate</span> <span class="pre">[&lt;roomstate&gt;]\n\nExamples:\n</span>&#160;&#160;&#160; <span class="pre">&#64;roomstate</span> <span class="pre">spring\n</span>&#160;&#160;&#160; <span class="pre">&#64;roomstate</span> <span class="pre">burning\n</span>&#160;&#160;&#160; <span class="pre">&#64;roomstate</span> <span class="pre">burning</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">(a</span> <span class="pre">second</span> <span class="pre">time</span> <span class="pre">toggles</span> <span class="pre">it</span> <span class="pre">off)\n\nIf</span> <span class="pre">the</span> <span class="pre">roomstate</span> <span class="pre">was</span> <span class="pre">already</span> <span class="pre">set,</span> <span class="pre">it</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">disabled.</span> <span class="pre">Use\nwithout</span> <span class="pre">arguments</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">the</span> <span class="pre">roomstates</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">room.\n\n'}</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">CmdExtendedRoomGameTime</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomGameTime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.default.muxcommand.MuxCommand</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">CmdExtendedRoomGameTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomGameTime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.default.muxcommand.html#evennia.commands.default.muxcommand.MuxCommand" title="evennia.commands.default.muxcommand.MuxCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">MuxCommand</span></code></a></p>
 <p>Check the game time.</p>
 <dl class="simple">
 <dt>Usage:</dt><dd><p>time</p>
@@ -1040,23 +976,23 @@ to all the variables defined therein.</p>
 </dl>
 <p>Shows the current in-game time and season.</p>
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.key">
-<code class="sig-name descname">key</code><em class="property"> = 'time'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'time'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.key" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.locks">
-<code class="sig-name descname">locks</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.locks" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.locks">
+<span class="sig-name descname"><span class="pre">locks</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:all()'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.locks" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.help_category">
-<code class="sig-name descname">help_category</code><em class="property"> = 'general'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.help_category" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.help_category">
+<span class="sig-name descname"><span class="pre">help_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'general'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.help_category" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.parse">
-<code class="sig-name descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomGameTime.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.parse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomGameTime.parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.parse" title="Link to this definition">¶</a></dt>
 <dd><p>This method is called by the cmdhandler once the command name
 has been identified. It creates a new set of member variables
 that can be later accessed from self.func() (see below)</p>
@@ -1128,46 +1064,48 @@ strings, but case is preserved.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.func">
-<code class="sig-name descname">func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomGameTime.func"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.func" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the hook function that actually does all the work. It is called
-by the cmdhandler right after self.parser() finishes, and so has access
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.func">
+<span class="sig-name descname"><span class="pre">func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#CmdExtendedRoomGameTime.func"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.func" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This is the hook function that actually does all the work. It is called</dt><dd><p>by the cmdhandler right after self.parser() finishes, and so has access
 to all the variables defined therein.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.aliases">
-<code class="sig-name descname">aliases</code><em class="property"> = []</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.aliases" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.aliases">
+<span class="sig-name descname"><span class="pre">aliases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.aliases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.lock_storage">
-<code class="sig-name descname">lock_storage</code><em class="property"> = 'cmd:all()'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.lock_storage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.lock_storage">
+<span class="sig-name descname"><span class="pre">lock_storage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cmd:all()'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.lock_storage" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.search_index_entry">
-<code class="sig-name descname">search_index_entry</code><em class="property"> = {'aliases': '', 'category': 'general', 'key': 'time', 'no_prefix': ' ', 'tags': '', 'text': '\n    Check the game time.\n\n    Usage:\n        time\n\n    Shows the current in-game time and season.\n\n    '}</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.search_index_entry" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.search_index_entry">
+<span class="sig-name descname"><span class="pre">search_index_entry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aliases':</span> <span class="pre">'',</span> <span class="pre">'category':</span> <span class="pre">'general',</span> <span class="pre">'key':</span> <span class="pre">'time',</span> <span class="pre">'no_prefix':</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'tags':</span> <span class="pre">'',</span> <span class="pre">'text':</span> <span class="pre">'\nCheck</span> <span class="pre">the</span> <span class="pre">game</span> <span class="pre">time.\n\nUsage:\n</span>&#160;&#160;&#160; <span class="pre">time\n\nShows</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">in-game</span> <span class="pre">time</span> <span class="pre">and</span> <span class="pre">season.\n\n'}</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.search_index_entry" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet">
-<em class="property">class </em><code class="sig-prename descclassname">evennia.contrib.grid.extended_room.extended_room.</code><code class="sig-name descname">ExtendedRoomCmdSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmdsetobj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoomCmdSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">evennia.commands.cmdset.CmdSet</span></code></a></p>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">evennia.contrib.grid.extended_room.extended_room.</span></span><span class="sig-name descname"><span class="pre">ExtendedRoomCmdSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmdsetobj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoomCmdSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="evennia.commands.cmdset.html#evennia.commands.cmdset.CmdSet" title="evennia.commands.cmdset.CmdSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">CmdSet</span></code></a></p>
 <p>Groups the extended-room commands.</p>
 <dl class="py method">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.at_cmdset_creation">
-<code class="sig-name descname">at_cmdset_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoomCmdSet.at_cmdset_creation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.at_cmdset_creation" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.at_cmdset_creation">
+<span class="sig-name descname"><span class="pre">at_cmdset_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/evennia/contrib/grid/extended_room/extended_room.html#ExtendedRoomCmdSet.at_cmdset_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.at_cmdset_creation" title="Link to this definition">¶</a></dt>
 <dd><p>Hook method - this should be overloaded in the inheriting
 class, and should take care of populating the cmdset by use of
 self.add().</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.path">
-<code class="sig-name descname">path</code><em class="property"> = 'evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet'</em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.path" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet'</span></em><a class="headerlink" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.path" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1175,12 +1113,203 @@ self.add().</p>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
-
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/evennia_logo.png" alt="Logo of Evennia"/>
+            </a></p>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+<h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">evennia.contrib.grid.extended_room.extended_room</a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.func_state"><code class="docutils literal notranslate"><span class="pre">func_state()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.fallback_desc"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.fallback_desc</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_state_tag_category"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.room_state_tag_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.months_per_year"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.months_per_year</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.hours_per_day"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.hours_per_day</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.seasons_per_year"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.seasons_per_year</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_spring"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.desc_spring</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_summer"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.desc_summer</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_autumn"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.desc_autumn</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc_winter"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.desc_winter</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.times_of_day"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.times_of_day</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.desc"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.desc</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.details"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.details</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_message_rate"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.room_message_rate</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_messages"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.room_messages</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.at_init"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.at_init()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.start_repeat_broadcast_messages"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.start_repeat_broadcast_messages()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.repeat_broadcast_message_to_room"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.repeat_broadcast_message_to_room()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_time_of_day"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.get_time_of_day()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_season"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.get_season()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.room_states"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.room_states</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_room_state"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.add_room_state()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_room_state"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.remove_room_state()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.clear_room_state"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.clear_room_state()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_desc"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.add_desc()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_desc"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.remove_desc()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.all_desc"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.all_desc()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_stateful_desc"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.get_stateful_desc()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.replace_legacy_time_of_day_markup"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.replace_legacy_time_of_day_markup()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_display_desc"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.get_display_desc()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.add_detail"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.add_detail()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.set_detail"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.set_detail()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.remove_detail"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.remove_detail()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.del_detail"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.del_detail()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.get_detail"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.get_detail()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.return_detail"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.return_detail()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.path"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.path</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoom.typename"><code class="docutils literal notranslate"><span class="pre">ExtendedRoom.typename</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.look_detail"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook.look_detail()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.func"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.aliases"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.help_category"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.key"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomLook.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomLook.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.key"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.switch_options"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.switch_options</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.locks"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.help_category"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.parse"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.parse()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.edit_handler"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.edit_handler()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.show_stateful_descriptions"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.show_stateful_descriptions()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.func"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.aliases"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDesc.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDesc.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.key"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.locks"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail.locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.help_category"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.func"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.aliases"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomDetail.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomDetail.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.key"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.locks"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.help_category"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.parse"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.parse()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.func"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.aliases"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomState.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomState.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.key"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.key</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.locks"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.locks</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.help_category"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.help_category</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.parse"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.parse()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.func"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.func()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.aliases"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.aliases</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.lock_storage"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.lock_storage</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.CmdExtendedRoomGameTime.search_index_entry"><code class="docutils literal notranslate"><span class="pre">CmdExtendedRoomGameTime.search_index_entry</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet"><code class="docutils literal notranslate"><span class="pre">ExtendedRoomCmdSet</span></code></a><ul>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.at_cmdset_creation"><code class="docutils literal notranslate"><span class="pre">ExtendedRoomCmdSet.at_cmdset_creation()</span></code></a></li>
+<li><a class="reference internal" href="#evennia.contrib.grid.extended_room.extended_room.ExtendedRoomCmdSet.path"><code class="docutils literal notranslate"><span class="pre">ExtendedRoomCmdSet.path</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="evennia.contrib.grid.extended_room.html"
+                          title="previous chapter">evennia.contrib.grid.extended_room</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="evennia.contrib.grid.extended_room.tests.html"
+                          title="next chapter">evennia.contrib.grid.extended_room.tests</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <!--h3>This Page</h3-->
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/evennia.contrib.grid.extended_room.extended_room.md.txt"
+            rel="nofollow">Show Page Source</a></li>
+    </ul>
+   </div><h3>Links</h3>
+<ul>
+  <li><a href="https://www.evennia.com/docs/latest/index.html">Documentation Top</a> </li>
+  <li><a href="https://www.evennia.com">Evennia Home</a> </li>
+  <li><a href="https://github.com/evennia/evennia">Github</a> </li>
+  <li><a href="http://games.evennia.com">Game Index</a> </li>
+  <li>
+    <a href="https://discord.gg/AJJpcRUhtF">Discord</a> -
+     <a href="https://github.com/evennia/evennia/discussions">Discussions</a> -
+      <a href="https://evennia.blogspot.com/">Blog</a>
+  </li>
+</ul>
+<h3>Doc Versions</h3>
+<ul>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/latest/index.html">latest (main branch)</a>
+    </li>
+  
+  
+    <li>
+      <a href="https://www.evennia.com/docs/5.x/index.html">v5.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/4.x/index.html">v4.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/3.x/index.html">v3.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/2.x/index.html">v2.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/1.x/index.html">v1.0.0 branch (outdated)</a>
+    </li>
+  
+    <li>
+      <a href="https://www.evennia.com/docs/0.x/index.html">v0.9.5 branch (outdated)</a>
+    </li>
+  
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1195,7 +1324,7 @@ self.add().</p>
         <li class="right" >
           <a href="evennia.contrib.grid.extended_room.html" title="evennia.contrib.grid.extended_room"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Evennia latest</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Evennia</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../Evennia-API.html" >API Summary</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="evennia-api.html" >evennia</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="evennia.html" >evennia</a> &#187;</li>
@@ -1205,12 +1334,9 @@ self.add().</p>
         <li class="nav-item nav-item-this"><a href="">evennia.contrib.grid.extended_room.extended_room</a></li> 
       </ul>
     </div>
-
-     
-
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2024, The Evennia developer community.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    &#169; Copyright 2024, The Evennia developer community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>
